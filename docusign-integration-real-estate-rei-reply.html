@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Docusign Integration for HighLevel — for Real Estate teams</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0B1220;--ink-2:#475467;--ink-3:#667085;--line:#E7E9EE;--line-2:#EEF0F4;
+  --bg:#fff;--bg-soft:#F7F8FB;--bg-tint:#F5F7FF;
+  --brand:#3047C0;--brand-press:#283BA6;
+  --ai:#6938EF;--ai-bg:#F5F3FF;--ai-line:#DDD6FE;--ai-fg:#5925DC;
+  --amber:#F59E0B;--amber-fg:#B54708;--amber-bg:#FFFAEB;--amber-line:#FEC84B;
+  --green:#16A34A;--green-fg:#067647;--green-bg:#ECFDF3;--green-line:#ABEFC6;
+  --blue:#2E90FA;--blue-fg:#175CD3;--blue-bg:#EFF8FF;
+  --hlblue:#1E5BC6;
+  --shadow:0 1px 2px rgba(16,24,40,.05);--shadow-lg:0 24px 50px -12px rgba(16,24,40,.20);
+  --maxw:1140px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;line-height:1.55}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+a{color:inherit;text-decoration:none}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;padding:13px 22px;border-radius:11px;border:1px solid transparent;cursor:pointer;transition:.18s;white-space:nowrap}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:0 1px 2px rgba(48,71,192,.2)}
+.btn-primary:hover{background:var(--brand-press)}
+.btn-ghost{background:#fff;color:var(--ink);border-color:var(--line)}
+.btn-ghost:hover{background:var(--bg-soft)}
+.btn-lg{padding:16px 28px;font-size:16px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:600;color:var(--brand);background:var(--bg-tint);border:1px solid #DfE3F7;padding:6px 13px;border-radius:999px}
+.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--brand)}
+
+/* nav */
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-2)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:11px}
+.brand .tile{width:34px;height:34px;border-radius:9px;background:var(--ai);color:#fff;display:flex;align-items:center;justify-content:center}
+.brand .tile svg{width:20px;height:20px}
+.brand .nm{font-weight:800;font-size:17px;letter-spacing:-.02em;line-height:1.1}
+.brand .by{font-size:11.5px;color:var(--ink-3);font-weight:600}
+.brand .for{font-weight:600;font-size:13px;color:var(--ink-3);border-left:1px solid var(--line);padding-left:11px;margin-left:3px}
+.nav-cta{display:flex;align-items:center;gap:14px}
+@media(max-width:720px){.nav-cta .btn-ghost{display:none}.brand .for{display:none}}
+
+/* hero */
+.hero{padding:72px 0 30px;background:radial-gradient(1200px 480px at 50% -10%,#EEF2FF 0%,rgba(238,242,255,0) 62%),var(--bg);text-align:center}
+.hero h1{font-size:52px;line-height:1.03;letter-spacing:-.03em;font-weight:800;max-width:880px;margin:20px auto 18px}
+.hero h1 .hl{background:linear-gradient(120deg,var(--brand),var(--ai));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{font-size:19px;line-height:1.55;color:var(--ink-2);max-width:660px;margin:0 auto 28px}
+.hero-cta{display:flex;align-items:center;gap:14px;justify-content:center;flex-wrap:wrap}
+@media(max-width:560px){.hero h1{font-size:35px}}
+
+/* hero shot (HighLevel context) */
+.shot{position:relative;margin-top:48px}
+.shot-cap{display:flex;align-items:center;justify-content:center;gap:9px;font-size:13.5px;color:var(--ink-3);margin-top:18px;max-width:720px;margin-left:auto;margin-right:auto}
+.shot-cap svg{width:16px;height:16px;color:var(--brand);flex:0 0 auto}
+.pin{position:absolute;z-index:4;top:-14px;right:34px;background:var(--ai);color:#fff;font-size:12.5px;font-weight:600;padding:7px 14px;border-radius:999px;box-shadow:0 8px 20px rgba(105,56,239,.35);display:flex;align-items:center;gap:7px}
+.pin svg{width:14px;height:14px}
+@media(max-width:760px){.pin{right:16px;top:-12px;font-size:11.5px;padding:6px 11px}}
+
+.hl-frame{overflow-x:auto;border-radius:16px;-webkit-overflow-scrolling:touch}
+.hlw{width:1048px;margin:0 auto;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow-lg);background:#fff}
+.hl-top{height:36px;background:#FCFCFE;border-bottom:1px solid var(--line-2);display:flex;align-items:center;gap:7px;padding:0 14px}
+.hl-top i{width:10px;height:10px;border-radius:50%;background:#E2E5EC}
+.hl-top .tt{margin-left:10px;font-size:11.5px;color:var(--ink-3);font-weight:500}
+.hl-body{display:flex;height:516px}
+.hl-col{flex:0 0 auto;border-right:1px solid var(--line-2)}
+
+/* HL nav */
+.hn{width:158px;padding:13px 11px;display:flex;flex-direction:column}
+.hn .ws{display:flex;align-items:center;gap:8px;margin-bottom:15px}
+.hn .ws .cr{width:27px;height:27px;border-radius:7px;background:var(--hlblue);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.hn .ws b{font-size:12.5px;line-height:1.1}
+.hn .ws span{font-size:9.5px;color:var(--ink-3);display:block}
+.hn .it{display:flex;align-items:center;gap:9px;padding:7px 9px;border-radius:8px;font-size:12.5px;color:#3A4252;font-weight:500;margin-bottom:1px}
+.hn .it svg{width:15px;height:15px;color:#8A92A5;flex:0 0 auto}
+.hn .it.on{background:#EAF1FE;color:var(--hlblue)}.hn .it.on svg{color:var(--hlblue)}
+.hn .app{margin-top:auto;border:1px solid var(--ai-line);background:var(--ai-bg);border-radius:10px;padding:9px;display:flex;align-items:center;gap:8px;position:relative}
+.hn .app .tile{width:27px;height:27px;border-radius:7px;background:var(--ai);color:#fff;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.hn .app .tile svg{width:16px;height:16px}
+.hn .app .lbl{font-size:8px;font-weight:700;letter-spacing:.05em;color:var(--ai-fg);text-transform:uppercase}
+.hn .app .nm{font-size:11.5px;font-weight:700;line-height:1.15}
+.hn .app .bdg{position:absolute;top:-6px;right:-6px;min-width:17px;height:17px;border-radius:999px;background:var(--amber);color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;padding:0 4px}
+
+/* HL contact */
+.hc{width:226px;padding:14px 13px;font-size:12px}
+.hc .ch{display:flex;align-items:center;justify-content:space-between;color:var(--ink-2);font-weight:600;font-size:12.5px;margin-bottom:13px}
+.hc .ch .pg{font-size:10.5px;color:var(--ink-3);font-weight:500}
+.hc .who{display:flex;align-items:center;gap:9px;margin-bottom:14px}
+.hc .who .av{width:34px;height:34px;border-radius:50%;background:#6D55E0;color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.hc .who b{font-size:14px}
+.hc .fl{margin-bottom:11px}
+.hc .fl .k{font-size:10.5px;color:var(--ink-3);margin-bottom:3px}
+.hc .fl .v{font-size:12px;font-weight:500;display:flex;align-items:center;gap:6px}
+.hc .fl .v .vmark{width:14px;height:14px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.hc .fl .v .vmark svg{width:8px;height:8px}
+.hc .pillrow{display:flex;gap:6px;flex-wrap:wrap}
+.hc .tag{font-size:10.5px;font-weight:500;background:var(--bg-soft);border:1px solid var(--line);border-radius:6px;padding:3px 8px}
+
+/* HL conversation */
+.hco{width:208px;padding:14px 13px;display:flex;flex-direction:column;gap:9px;background:#FCFCFE}
+.hco .cvh{font-size:12.5px;font-weight:600;color:var(--ink-2);margin-bottom:3px}
+.bub{font-size:11.5px;line-height:1.45;padding:8px 10px;border-radius:12px;max-width:92%}
+.bub.me{background:#EAF1FE;color:#1A2A4A;align-self:flex-end;border-bottom-right-radius:3px}
+.bub.them{background:#fff;border:1px solid var(--line);align-self:flex-start;border-bottom-left-radius:3px}
+.hco .stamp{font-size:9.5px;color:var(--ink-3);align-self:center;margin:2px 0}
+
+/* HL pane (star) */
+.hp{flex:1;min-width:0;background:#fff;display:flex;flex-direction:column}
+.hp-head{display:flex;align-items:center;gap:9px;padding:13px 14px;border-bottom:1px solid var(--line-2)}
+.hp-head .g{width:27px;height:27px;border-radius:7px;background:var(--ai);color:#fff;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.hp-head .g svg{width:16px;height:16px}
+.hp-head b{font-size:14.5px}
+.hp-head .ct{font-size:12px;color:var(--ink-3);font-weight:500}
+.hp-head .x{margin-left:auto;color:var(--ink-3)}
+.hp-body{padding:13px;overflow:hidden}
+.ag{border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.ag+.ag{margin-top:8px}
+.ag.open{box-shadow:var(--shadow)}
+.ag-row{display:flex;align-items:center;gap:9px;padding:11px 12px}
+.ag-row .di{width:30px;height:30px;border-radius:7px;background:var(--bg-soft);display:flex;align-items:center;justify-content:center;color:var(--ink-3);flex:0 0 auto}
+.ag-row .di svg{width:15px;height:15px}
+.ag-row .nm{font-weight:600;font-size:13px;line-height:1.2}
+.ag-row .mt{font-size:11px;color:var(--ink-3);margin-top:2px}
+.ag-row .mt b{color:var(--amber-fg)}
+.ag-row .chev{color:var(--ink-3);margin-left:4px}.ag-row .chev svg{width:15px;height:15px}
+.badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:600;padding:4px 9px;border-radius:7px;border:1px solid transparent;white-space:nowrap}
+.badge .d{width:6px;height:6px;border-radius:50%}
+.b-amber{background:var(--amber-bg);color:var(--amber-fg);border-color:var(--amber-line)}.b-amber .d{background:var(--amber)}
+.b-green{background:var(--green-bg);color:var(--green-fg);border-color:var(--green-line)}.b-green .d{background:var(--green)}
+.b-blue{background:var(--blue-bg);color:var(--blue-fg)}.b-blue .d{background:var(--blue)}
+.ag-exp{padding:0 13px 13px;border-top:1px solid var(--line-2)}
+.parties{display:flex;align-items:center;gap:8px;padding:12px 0 4px}
+.party{display:flex;align-items:center;gap:7px;flex:1;min-width:0}
+.party .pav{width:26px;height:26px;border-radius:50%;color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.party .pn{font-size:11.5px;font-weight:600;display:flex;align-items:center;gap:5px;line-height:1.1}
+.party .pr{font-size:10px;color:var(--ink-3)}
+.holding{font-size:8.5px;font-weight:700;letter-spacing:.03em;color:var(--amber-fg);background:var(--amber-bg);border:1px solid var(--amber-line);border-radius:4px;padding:1px 4px}
+/* timeline */
+.tl{display:flex;align-items:center;padding:13px 2px 0}
+.tl .n{width:16px;height:16px;border-radius:50%;border:2px solid var(--line);background:#fff;flex:0 0 auto;display:flex;align-items:center;justify-content:center}
+.tl .n svg{width:8px;height:8px;color:#fff}
+.tl .n.dn{background:var(--green);border-color:var(--green)}
+.tl .n.cu{border-color:var(--amber)}
+.tl .n.cu .pp{width:7px;height:7px;border-radius:50%;background:var(--amber);animation:pp 1.6s ease-in-out infinite}
+.tl .br{height:2px;flex:1;background:var(--line);margin:0 3px}.tl .br.dn{background:var(--green)}
+@keyframes pp{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.55);opacity:.5}}
+.tl-l{display:flex;justify-content:space-between;padding:7px 0 0}
+.tl-l span{font-size:9.5px;color:var(--ink-3);text-align:center;width:19%;line-height:1.2}
+.tl-l span.h{color:var(--amber-fg);font-weight:600}
+.tl-l span b{display:block;color:var(--ink-2);font-weight:600;font-size:9px}
+/* ai */
+.aib{display:flex;gap:9px;background:var(--ai-bg);border:1px solid var(--ai-line);border-radius:11px;padding:11px 12px;margin-top:13px;position:relative;overflow:hidden}
+.aib::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.5) 50%,transparent 70%);transform:translateX(-100%);animation:sh 3.8s ease-in-out infinite}
+@keyframes sh{0%,55%{transform:translateX(-100%)}82%,100%{transform:translateX(120%)}}
+.aib .sp{color:var(--ai);flex:0 0 auto}.aib .sp svg{width:15px;height:15px}
+.aib .k{font-size:9.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ai-fg);margin-bottom:2px}
+.aib .tx{font-size:12px;line-height:1.5}
+.ag-actions{margin-top:12px}
+.btn-send{width:100%;justify-content:center;background:#2563EB;color:#fff;border:none;height:40px;border-radius:9px;display:flex;align-items:center;gap:7px;font-weight:600;font-size:13px}
+.btn-send svg{width:15px;height:15px}
+.subact{display:flex;gap:8px;margin-top:8px}
+.subact .b{flex:1;justify-content:center;display:flex;align-items:center;gap:6px;height:36px;border:1px solid var(--line);border-radius:9px;font-size:12px;font-weight:600;color:var(--ink-2)}
+.subact .b svg{width:13px;height:13px}
+.trail{display:flex;align-items:center;justify-content:center;gap:6px;font-size:11.5px;color:var(--ink-3);font-weight:500;margin-top:11px}
+.trail svg{width:13px;height:13px}
+
+/* HL rail */
+.hr{width:46px;flex:0 0 auto;background:#FCFCFE;display:flex;flex-direction:column;align-items:center;gap:17px;padding:15px 0}
+.hr .ri{width:19px;height:19px;color:#1A2233;opacity:.62}
+.hr .launch{width:34px;height:34px;border-radius:9px;background:var(--ai);color:#fff;display:flex;align-items:center;justify-content:center;position:relative;box-shadow:0 3px 8px rgba(105,56,239,.4)}
+.hr .launch svg{width:19px;height:19px}
+.hr .launch .b{position:absolute;top:-5px;right:-5px;min-width:15px;height:15px;border-radius:999px;background:var(--amber);color:#fff;font-size:9px;font-weight:700;display:flex;align-items:center;justify-content:center}
+
+/* sections */
+section{padding:90px 0}
+.sec-head{text-align:center;max-width:700px;margin:0 auto 56px}
+.sec-head .eyebrow{margin-bottom:16px}
+.sec-head h2{font-size:38px;line-height:1.1;letter-spacing:-.025em;font-weight:800;margin-bottom:14px}
+.sec-head p{font-size:18px;color:var(--ink-2)}
+.problem{background:var(--ink);color:#fff}
+.problem h2{color:#fff;font-size:34px;line-height:1.15;letter-spacing:-.02em;font-weight:800;max-width:780px}
+.problem p{font-size:18.5px;line-height:1.6;color:#AEB6C7;max-width:730px;margin-top:18px}
+.pstats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+@media(max-width:760px){.pstats{grid-template-columns:1fr}}
+.pstat{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:22px}
+.pstat .n{font-size:15px;font-weight:700;margin-bottom:6px}
+.pstat .d{font-size:14px;color:#9AA3B5;line-height:1.5}
+
+/* features */
+.steps{display:flex;justify-content:center;gap:10px;margin-bottom:50px;flex-wrap:wrap}
+.stepchip{display:inline-flex;align-items:center;gap:9px;font-size:15px;font-weight:700;color:var(--ink);background:var(--bg-soft);border:1px solid var(--line);padding:10px 18px;border-radius:999px}
+.stepchip .nb{width:22px;height:22px;border-radius:50%;background:var(--brand);color:#fff;font-size:12px;display:flex;align-items:center;justify-content:center}
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+.feat+.feat{margin-top:96px}
+.feat.rev .ftext{order:2}
+@media(max-width:940px){.feat,.feat.rev{grid-template-columns:1fr;gap:30px}.feat.rev .ftext{order:0}}
+.fnum{font-size:13px;font-weight:700;color:var(--brand);letter-spacing:.04em}
+.ftext h3{font-size:30px;line-height:1.12;letter-spacing:-.02em;font-weight:800;margin:12px 0 14px}
+.ftext p{font-size:17px;color:var(--ink-2);line-height:1.6;max-width:480px}
+.fchecks{margin-top:20px;display:flex;flex-direction:column;gap:10px}
+.fcheck{display:flex;align-items:center;gap:10px;font-size:14.5px;font-weight:500}
+.fcheck svg{width:18px;height:18px;color:var(--green);flex:0 0 auto}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow-lg);overflow:hidden}
+.card-bar{display:flex;align-items:center;gap:7px;padding:11px 14px;border-bottom:1px solid var(--line-2);background:#FCFCFE}
+.card-bar i{width:9px;height:9px;border-radius:50%;background:#E2E5EC}
+.card-bar .t{margin-left:8px;font-size:11.5px;color:var(--ink-3);font-weight:500}
+
+/* worklist mock */
+.wl-tabs{display:flex;align-items:center;gap:4px;padding:10px 14px 0;border-bottom:1px solid var(--line-2)}
+.wl-tabs .tab{font-size:12.5px;font-weight:600;color:var(--ink-3);padding:8px 12px;border-bottom:2px solid transparent;margin-bottom:-1px}
+.wl-tabs .tab.on{color:var(--brand);border-color:var(--brand)}
+.wl-sub{display:flex;align-items:center;gap:18px;padding:12px 16px 4px}
+.wl-sub .s{font-size:13px;font-weight:600;color:var(--ink-3);display:flex;align-items:center;gap:7px}
+.wl-sub .s.on{color:var(--ink)}
+.wl-sub .s .c{font-size:11px;font-weight:700;background:var(--bg-soft);border:1px solid var(--line);border-radius:6px;padding:1px 7px}
+.wl-sub .s.on .c{background:var(--amber-bg);color:var(--amber-fg);border-color:var(--amber-line)}
+.wl-body{padding:14px 16px 18px}
+.wl-ai{display:flex;gap:11px;background:var(--ai-bg);border:1px solid var(--ai-line);border-radius:13px;padding:14px 16px;margin-bottom:18px}
+.wl-ai .sp{color:var(--ai);flex:0 0 auto}.wl-ai .sp svg{width:18px;height:18px}
+.wl-ai .k{font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ai-fg);margin-bottom:4px}
+.wl-ai .tx{font-size:13.5px;line-height:1.55}
+.wl-ai .tx b{color:var(--green-fg)}
+.wl-meta{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.wl-meta .l{font-size:11.5px;color:var(--ink-3);font-weight:500}
+.wl-meta .r{font-size:11.5px;color:var(--ink-3);font-weight:500}
+.wl-group{font-size:12.5px;font-weight:700;color:var(--ink-2);margin:16px 0 8px;display:flex;align-items:center;gap:8px}
+.wl-group .c{font-size:11px;color:var(--amber-fg);background:var(--amber-bg);border:1px solid var(--amber-line);border-radius:6px;padding:1px 7px}
+.wl-row{display:flex;align-items:flex-start;gap:11px;padding:13px;border:1px solid var(--line);border-radius:12px}
+.wl-row+.wl-row{margin-top:8px}
+.wl-row .av{width:34px;height:34px;border-radius:50%;color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.wl-row .main{flex:1;min-width:0}
+.wl-row .top{display:flex;align-items:center;gap:8px}
+.wl-row .nm{font-weight:700;font-size:14px}
+.wl-row .co{font-size:12.5px;color:var(--ink-3)}
+.wl-row .doc{font-size:13px;font-weight:500;margin-top:3px}
+.wl-row .doc .vc{color:var(--ink-3);font-weight:400}
+.wl-row .air{display:flex;gap:7px;margin-top:7px;font-size:12px;color:var(--ink-2);line-height:1.5}
+.wl-row .air svg{width:13px;height:13px;color:var(--ai);flex:0 0 auto;margin-top:2px}
+.wl-row .side{display:flex;flex-direction:column;align-items:flex-end;gap:9px;flex:0 0 auto}
+.wl-row .age{font-size:11px;font-weight:600;color:var(--amber-fg);background:var(--amber-bg);border:1px solid var(--amber-line);border-radius:6px;padding:3px 8px}
+.wl-nudge{display:inline-flex;align-items:center;gap:6px;background:#2563EB;color:#fff;font-size:12.5px;font-weight:600;padding:8px 14px;border-radius:9px}
+.wl-nudge svg{width:14px;height:14px}
+
+/* nudge composer */
+.composer{padding:4px}
+.cm-head{font-size:13px;color:var(--ink-3);padding:8px 8px 12px}
+.cm-head b{color:var(--ink)}
+.seg{display:inline-flex;background:var(--bg-soft);border-radius:9px;padding:3px;gap:2px;margin:0 8px 12px}
+.seg button{font:inherit;font-size:13px;font-weight:600;color:var(--ink-3);background:none;border:none;padding:6px 14px;border-radius:7px;display:inline-flex;gap:6px;align-items:center}
+.seg button.on{background:#fff;color:var(--ink);box-shadow:var(--shadow)}
+.seg svg{width:14px;height:14px}
+.cm-msg{background:var(--ai-bg);border:1px solid var(--ai-line);border-radius:11px;padding:12px;margin:0 8px;font-size:13.5px;line-height:1.55}
+.cm-msg .k{font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ai-fg);margin-bottom:5px;display:flex;align-items:center;gap:6px}
+.cm-msg .k svg{width:13px;height:13px}
+.cm-from{font-size:12px;color:var(--ink-3);padding:11px 8px 6px}
+.cm-from b{color:var(--ink)}
+.send-wrap{padding:6px 8px 8px;position:relative;height:54px}
+.send-btn{position:absolute;left:8px;right:8px;top:6px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;gap:8px;font-weight:600;font-size:14.5px;color:#fff}
+.send-a{background:#2563EB;animation:sa 4.4s ease-in-out infinite}
+.send-b{background:var(--green);animation:sb 4.4s ease-in-out infinite}
+.send-btn svg{width:17px;height:17px}
+@keyframes sa{0%,42%{opacity:1}50%,92%{opacity:0}100%{opacity:1}}
+@keyframes sb{0%,42%{opacity:0}50%,92%{opacity:1}100%{opacity:0}}
+
+/* why */
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:760px){.why-grid{grid-template-columns:1fr}}
+.why-card{border:1px solid var(--line);border-radius:16px;padding:26px;background:#fff}
+.why-card h4{font-size:17px;font-weight:700;margin-bottom:8px;display:flex;align-items:center;gap:9px}
+.why-card h4 .ic{width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center}
+.why-card p{font-size:14.5px;color:var(--ink-2);line-height:1.6}
+.why-x .ic{background:#FEF3F2;color:#D92D20}.why-y .ic{background:var(--green-bg);color:var(--green-fg)}
+
+/* pricing */
+.pricing{background:var(--bg-soft)}
+.price-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:30px;align-items:center;max-width:960px;margin:0 auto}
+@media(max-width:820px){.price-grid{grid-template-columns:1fr;gap:24px}}
+.price-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:34px;box-shadow:var(--shadow-lg);position:relative}
+.price-tag{position:absolute;top:-13px;left:34px;background:var(--ai);color:#fff;font-size:12px;font-weight:700;padding:5px 12px;border-radius:999px}
+.price-amt{display:flex;align-items:baseline;gap:8px;margin:6px 0 4px}
+.price-amt .big{font-size:48px;font-weight:800;letter-spacing:-.03em}
+.price-amt .per{font-size:15px;color:var(--ink-3);font-weight:500}
+.price-alt{font-size:14px;color:var(--ink-2);margin-bottom:22px}.price-alt b{color:var(--green-fg)}
+.price-list{display:flex;flex-direction:column;gap:12px;margin-bottom:26px}
+.price-list .li{display:flex;align-items:flex-start;gap:10px;font-size:14.5px}
+.price-list .li svg{width:18px;height:18px;color:var(--green);flex:0 0 auto;margin-top:1px}
+.price-side h3{font-size:30px;font-weight:800;letter-spacing:-.02em;line-height:1.15;margin-bottom:14px}
+.price-side p{font-size:16.5px;color:var(--ink-2);line-height:1.6;margin-bottom:10px}
+
+/* cta/form */
+.cta{background:linear-gradient(150deg,#10162B 0%,#1B2444 60%,#241B52 100%);color:#fff}
+.cta-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+@media(max-width:880px){.cta-grid{grid-template-columns:1fr;gap:34px}}
+.cta h2{font-size:38px;line-height:1.08;letter-spacing:-.025em;font-weight:800}
+.cta p{font-size:18px;color:#B9C0D2;line-height:1.6;margin-top:16px}
+.cta .pts{margin-top:24px;display:flex;flex-direction:column;gap:12px}
+.cta .pt{display:flex;align-items:center;gap:11px;font-size:15px;color:#E6E9F2}
+.cta .pt svg{width:19px;height:19px;color:#A9F0C6;flex:0 0 auto}
+.form{background:#fff;border-radius:20px;padding:30px;box-shadow:var(--shadow-lg)}
+.form h3{font-size:20px;font-weight:800;color:var(--ink);margin-bottom:4px}
+.form .fp{font-size:13.5px;color:var(--ink-3);margin-bottom:20px}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:13px;font-weight:600;color:var(--ink-2);margin-bottom:6px}
+.field input,.field select{width:100%;height:44px;padding:0 13px;font:inherit;font-size:14.5px;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:10px}
+.field input:focus,.field select:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px rgba(48,71,192,.14)}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.form .btn-primary{width:100%;justify-content:center;margin-top:6px}
+.form .legal{font-size:12px;color:var(--ink-3);text-align:center;margin-top:12px}
+.thanks{display:none;text-align:center;padding:30px 10px}
+.thanks .ic{width:52px;height:52px;border-radius:14px;background:var(--green-bg);color:var(--green-fg);display:inline-flex;align-items:center;justify-content:center;margin-bottom:14px}
+.thanks h3{font-size:21px;font-weight:800;color:var(--ink);margin-bottom:8px}
+.thanks p{font-size:15px;color:var(--ink-2)}
+
+/* footer */
+footer{background:#0B1120;color:#9AA3B8;padding:54px 0 38px}
+.ft-top{display:flex;justify-content:space-between;gap:34px;flex-wrap:wrap;align-items:flex-start;padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,.08)}
+.ft-brand{max-width:360px}
+.ft-lock{display:inline-flex;align-items:center;gap:10px;color:#fff;text-decoration:none;margin-bottom:14px}
+.ft-mark{width:32px;height:32px;border-radius:9px;background:linear-gradient(135deg,#3047C0,#6938EF);display:flex;align-items:center;justify-content:center}
+.ft-mark svg{width:19px;height:19px;color:#fff}
+.ft-wm{font-weight:800;font-size:18px;letter-spacing:-.02em}
+.ft-tag{font-size:14px;color:#9AA3B8;line-height:1.6;margin:0}
+.ft-links{display:flex;gap:56px;flex-wrap:wrap}
+.ft-col h4{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:#fff;margin:0 0 14px;font-weight:700}
+.ft-col a{display:block;font-size:14.5px;margin-bottom:10px;color:#9AA3B8;text-decoration:none;transition:color .15s}
+.ft-col a:hover{color:#fff}
+.ft-legal{margin-top:24px;font-size:12.5px;line-height:1.7;color:#6B7488;max-width:780px}
+.ft-bottom{margin-top:16px;font-size:12.5px;color:#6B7488}
+@media(max-width:680px){.ft-top{flex-direction:column;gap:28px}.ft-links{gap:40px}}
+
+
+
+
+
+
+
+
+.chase{margin:96px 0}
+.chase-head{text-align:center;max-width:700px;margin:0 auto 40px}
+.chase-head .fnum{font-size:13px;font-weight:700;color:var(--brand);letter-spacing:.04em}
+.chase-head h3{font-size:32px;line-height:1.12;letter-spacing:-.02em;font-weight:800;margin:12px 0 14px}
+.chase-head p{font-size:17px;color:var(--ink-2);line-height:1.6}
+.chase-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start}
+@media(max-width:940px){.chase-grid{grid-template-columns:1fr;gap:34px}}
+.surface-lbl{display:flex;align-items:center;gap:10px;margin-bottom:14px;flex-wrap:wrap}
+.surface-lbl .nb{width:24px;height:24px;border-radius:50%;background:var(--brand);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.surface-lbl b{font-size:15.5px;font-weight:700}
+.surface-lbl .sub{font-size:13px;color:var(--ink-3);font-weight:500}
+.wl-more{text-align:center;font-size:12px;color:var(--ink-3);font-weight:500;margin-top:12px;padding-top:12px;border-top:1px solid var(--line-2)}
+.wl-more b{color:var(--brand)}
+.surface-note{font-size:13px;color:var(--ink-3);line-height:1.55;margin-top:14px;padding:0 2px}
+
+.bg-soft-sec{background:var(--bg-soft)}
+.price-amt .was{font-size:22px;font-weight:600;color:var(--ink-3);text-decoration:line-through}
+.trig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:860px){.trig-grid{grid-template-columns:1fr}}
+.trig-card{border:1px solid var(--line);border-radius:14px;padding:20px;background:#fff}
+.trig-when{display:flex;align-items:center;gap:9px;font-weight:700;font-size:15.5px;margin-bottom:9px}
+.trig-when .d{width:9px;height:9px;border-radius:50%;flex:0 0 auto}
+.trig-card .ex{font-size:14px;color:var(--ink-2);line-height:1.55;display:flex;gap:8px}
+.trig-card .ex svg{width:16px;height:16px;color:var(--brand);flex:0 0 auto;margin-top:2px}
+.trig-foot{text-align:center;margin-top:28px;font-size:14.5px;color:var(--ink-3)}
+.trig-foot b{color:var(--ink)}
+.road-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:start}
+@media(max-width:860px){.road-grid{grid-template-columns:1fr}}
+.road-col{border:1px solid var(--line);border-radius:16px;padding:24px;background:#fff}
+.road-tag{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:18px}
+.road-tag.now{background:var(--bg-tint);color:var(--brand)}
+.road-tag.next{background:var(--amber-bg);color:var(--amber-fg)}
+.road-tag.later{background:var(--bg-soft);color:var(--ink-3)}
+.road-item{display:flex;gap:10px;font-size:14.5px;line-height:1.5;margin-bottom:12px}
+.road-item svg{width:17px;height:17px;flex:0 0 auto;margin-top:2px}
+.road-item.d-now svg{color:var(--brand)}
+.road-item.d-next svg{color:var(--amber)}
+.road-item.d-later svg{color:var(--ink-3)}
+.road-note{text-align:center;margin-top:30px;font-size:15.5px;color:var(--ink-2)}
+.road-note b{color:var(--ink)}
+
+.brand-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:760px){.brand-grid{grid-template-columns:1fr}}
+.skin{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;box-shadow:var(--shadow)}
+.skin-bar{display:flex;align-items:center;gap:9px;padding:12px 14px;border-bottom:1px solid var(--line-2)}
+.skin-tile{width:28px;height:28px;border-radius:7px;background:var(--a);color:#fff;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.skin-tile svg{width:16px;height:16px}
+.skin-bar b{font-size:14px;font-weight:700}
+.skin-body{padding:14px}
+.skin-row{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.skin-doc{width:30px;height:30px;border-radius:7px;background:var(--bg-soft);display:flex;align-items:center;justify-content:center;color:var(--ink-3);flex:0 0 auto}
+.skin-doc svg{width:15px;height:15px}
+.skin-nm{font-size:13px;font-weight:600;line-height:1.2}
+.skin-meta{font-size:11px;color:var(--ink-3)}
+.skin-badge{margin-left:auto;font-size:10.5px;font-weight:600;color:var(--amber-fg);background:var(--amber-bg);border:1px solid var(--amber-line);border-radius:6px;padding:3px 8px;white-space:nowrap}
+.skin-btn{height:36px;border-radius:9px;background:var(--a);color:#fff;display:flex;align-items:center;justify-content:center;gap:7px;font-size:13px;font-weight:600}
+.skin-btn svg{width:14px;height:14px}
+.brand-cap{text-align:center;font-size:12px;color:var(--ink-3);margin-top:14px}
+.brand-checks{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 26px;margin-top:26px}
+.brand-check{display:flex;align-items:center;gap:8px;font-size:14.5px;font-weight:500}
+.brand-check svg{width:18px;height:18px;color:var(--green);flex:0 0 auto}
+
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:saturate(140%) blur(12px);-webkit-backdrop-filter:saturate(140%) blur(12px);border-bottom:1px solid var(--line)}
+.nav-links{display:flex;align-items:center;gap:26px}
+.nav-links a{font-size:14.5px;font-weight:500;color:var(--ink-2);text-decoration:none;transition:color .15s;white-space:nowrap}
+.nav-links a:hover{color:var(--ink)}
+@media(max-width:860px){.nav-links{display:none}}
+.fhelp{font-size:12.5px;color:var(--ink-3);margin:-2px 0 8px;line-height:1.45}
+.fhelp a{color:var(--brand);text-decoration:none;font-weight:600}
+.fhelp a:hover{text-decoration:underline}
+</style>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%233047C0%27%2F%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%236938EF%27%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%2724%27%20height%3D%2724%27%20rx%3D%276%27%20fill%3D%27url%28%23g%29%27%2F%3E%3Cg%20fill%3D%27none%27%20stroke%3D%27white%27%20stroke-width%3D%271.6%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20d%3D%27M4%2015v-3%27%2F%3E%3Cpath%20d%3D%27M20%2015v-3%27%2F%3E%3Cpath%20d%3D%27M4%2012c0-3%203.5-4.5%208-4.5s8%201.5%208%204.5%27%2F%3E%3Cpath%20d%3D%27M7.5%2012v3%27%2F%3E%3Cpath%20d%3D%27M12%2010.5v4.5%27%2F%3E%3Cpath%20d%3D%27M16.5%2012v3%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+<meta name="description" content="Give your real estate customers live Docusign tracking inside your HighLevel platform — embedded, fully white-labeled, in your brand. A founding-partner integration from LCBridge.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Docusign Integration for HighLevel — for Real Estate teams">
+<meta property="og:description" content="Give your real estate customers live Docusign tracking inside your HighLevel platform — embedded, fully white-labeled, in your brand. A founding-partner integration from LCBridge.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Docusign Integration for HighLevel — for Real Estate teams">
+<meta name="twitter:description" content="Give your real estate customers live Docusign tracking inside your HighLevel platform — embedded, fully white-labeled, in your brand. A founding-partner integration from LCBridge.">
+</head>
+<body>
+
+<nav><div class="wrap nav-in">
+  <div class="brand">
+    <span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="1.7" opacity="0.55"><path d="M11 2.5H5.5A1.5 1.5 0 0 0 4 4v11"/><path d="M11 2.5V6h3.5"/></g><g stroke-width="1.9"><circle cx="13.5" cy="11.5" r="5.5"/><path d="M10.6 11.5c.5-.9 1.1-.9 1.6 0s1.1.9 1.6 0 1-.8 1.5-.2"/><path d="M9.8 16.4l-1.2 4.6 4.9-2.3 4.9 2.3-1.2-4.6"/></g></svg></span>
+    <div><div class="nm">Docusign Integration</div><div class="by">by LCBridge</div></div>
+    <span class="for">for HighLevel platforms</span>
+  </div>
+  <div class="nav-links"><a href="#how">How it works</a><a href="#brand">Your brand</a><a href="#automation">Automation</a><a href="#roadmap">Roadmap</a><a href="#pricing">Pricing</a></div>
+  <div class="nav-cta"><a href="#apply" class="btn btn-primary">Shape the roadmap</a></div>
+</div></nav>
+
+<!-- HERO -->
+<header class="hero"><div class="wrap">
+  <span class="eyebrow"><span class="dot"></span>For HighLevel platforms serving real estate</span>
+  <h1>Give your customers live Docusign tracking — <span class="hl">inside your platform, in your brand.</span></h1>
+  <p class="sub">Your real estate customers live in your CRM — but to chase a Docusign signature, they leave it. We embed live envelope status, a stall worklist, and one-tap follow-up right inside your white-labeled HighLevel platform. Fully your brand, with nothing for you to build.</p>
+  <div class="hero-cta">
+    <a href="#apply" class="btn btn-primary btn-lg">Shape the roadmap with us</a>
+    <a href="#how" class="btn btn-ghost btn-lg">See how it works</a>
+  </div>
+
+  <div class="shot">
+    <div class="pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Embedded inside your CRM</div>
+    <div class="hl-frame">
+      <div class="hlw">
+        <div class="hl-top"><i></i><i></i><i></i><span class="tt">Coastal Realty · HighLevel</span></div>
+        <div class="hl-body">
+
+          <!-- HL nav -->
+          <div class="hl-col hn">
+            <div class="ws"><span class="cr">CR</span><div><b>Coastal Realty</b><span>Workspace</span></div></div>
+            <div class="it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>Dashboard</div>
+            <div class="it on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="7" r="3"/><path d="M3 21v-1a6 6 0 0 1 12 0v1"/><circle cx="17" cy="8" r="2.5"/><path d="M16 14a5 5 0 0 1 5 5v1"/></svg>Contacts</div>
+            <div class="it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12 7.7L3 21l1.8-6A8.5 8.5 0 1 1 21 11.5z"/></svg>Conversations</div>
+            <div class="it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg>Opportunities</div>
+            <div class="it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4" stroke-linecap="round"/></svg>Calendars</div>
+            <div class="it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20" stroke-linecap="round"/></svg>Payments</div>
+            <div class="it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg>Automation</div>
+            <div class="app">
+              <span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="1.7" opacity="0.55"><path d="M11 2.5H5.5A1.5 1.5 0 0 0 4 4v11"/><path d="M11 2.5V6h3.5"/></g><g stroke-width="1.9"><circle cx="13.5" cy="11.5" r="5.5"/><path d="M10.6 11.5c.5-.9 1.1-.9 1.6 0s1.1.9 1.6 0 1-.8 1.5-.2"/><path d="M9.8 16.4l-1.2 4.6 4.9-2.3 4.9 2.3-1.2-4.6"/></g></svg></span>
+              <div><div class="lbl">Installed app</div><div class="nm">Docusign Integration</div></div>
+              <span class="bdg">6</span>
+            </div>
+          </div>
+
+          <!-- HL contact -->
+          <div class="hl-col hc">
+            <div class="ch">Contact Details <span class="pg">1 / 12</span></div>
+            <div class="who"><span class="av">JH</span><b>John Henderson</b></div>
+            <div class="fl"><div class="k">Owner</div><div class="v">Yvette Andersson</div></div>
+            <div class="fl"><div class="k">Tags</div><div class="pillrow"><span class="tag">Buyer</span><span class="tag">Real estate</span></div></div>
+            <div class="fl"><div class="k">Email</div><div class="v">john.henderson@…<span class="vmark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg></span></div></div>
+            <div class="fl"><div class="k">Phone</div><div class="v">(415) 555-0142</div></div>
+            <div class="fl"><div class="k">Contact source</div><div class="v">Referral</div></div>
+          </div>
+
+          <!-- HL conversation -->
+          <div class="hl-col hco">
+            <div class="cvh">John Henderson</div>
+            <div class="bub me">Hi John — just sent over the buyer rep for 412 Marina Bay. Take a look when you can.</div>
+            <div class="bub them">Thanks Yvette. Reviewing it now — I may have a question on the commission section.</div>
+            <div class="stamp">Today · 2:14 PM</div>
+            <div class="bub me">Of course — happy to walk through it.</div>
+          </div>
+
+          <!-- HL pane (Docusign Integration) -->
+          <div class="hp">
+            <div class="hp-head">
+              <span class="g"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="1.7" opacity="0.55"><path d="M11 2.5H5.5A1.5 1.5 0 0 0 4 4v11"/><path d="M11 2.5V6h3.5"/></g><g stroke-width="1.9"><circle cx="13.5" cy="11.5" r="5.5"/><path d="M10.6 11.5c.5-.9 1.1-.9 1.6 0s1.1.9 1.6 0 1-.8 1.5-.2"/><path d="M9.8 16.4l-1.2 4.6 4.9-2.3 4.9 2.3-1.2-4.6"/></g></svg></span>
+              <b>Docusign Integration</b><span class="ct">3 agreements</span>
+              <span class="x"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span>
+            </div>
+            <div class="hp-body">
+              <div class="ag open">
+                <div class="ag-row">
+                  <span class="di"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></span>
+                  <div style="flex:1;min-width:0"><div class="nm">Buyer Representation Agreement</div><div class="mt"><b>Viewed 4×</b> · last 2h ago</div></div>
+                  <span class="badge b-amber"><span class="d"></span>Stalled 2d</span>
+                </div>
+                <div class="ag-exp">
+                  <div class="parties">
+                    <div class="party"><span class="pav" style="background:#6D55E0">JH</span><div><div class="pn">John Henderson <span class="holding">HOLDING</span></div><div class="pr">Signer</div></div></div>
+                    <div class="party"><span class="pav" style="background:#0B6E5B">YA</span><div><div class="pn">Yvette Andersson</div><div class="pr">Counter-signer</div></div></div>
+                  </div>
+                  <div class="tl">
+                    <span class="n dn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg></span><span class="br dn"></span>
+                    <span class="n dn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg></span><span class="br dn"></span>
+                    <span class="n cu"><span class="pp"></span></span><span class="br"></span>
+                    <span class="n"></span><span class="br"></span><span class="n"></span>
+                  </div>
+                  <div class="tl-l"><span>Sent<b>Jun 10</b></span><span>Delivered<b>2d ago</b></span><span class="h">Viewed<b>2h ago</b></span><span>Signed</span><span>Completed</span></div>
+                  <div class="aib"><span class="sp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3z"/></svg></span><div><div class="k">AI Read</div><div class="tx">Viewed repeatedly without signing — likely a question on terms. Try a call.</div></div></div>
+                  <div class="ag-actions">
+                    <button class="btn-send"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>Send reminder</button>
+                    <div class="subact"><span class="b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>Copy link</span><span class="b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/></svg>View in Docusign</span></div>
+                    <div class="trail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>Show activity trail · 7 events</div>
+                  </div>
+                </div>
+              </div>
+              <div class="ag"><div class="ag-row"><span class="di"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></span><div style="flex:1"><div class="nm">Referral Agreement</div><div class="mt">Viewed · 6h ago</div></div><span class="badge b-blue"><span class="d"></span>Viewed</span><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></div></div>
+              <div class="ag"><div class="ag-row"><span class="di"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></span><div style="flex:1"><div class="nm">Listing Agreement</div><div class="mt">Completed · 2 days ago</div></div><span class="badge b-green"><span class="d"></span>Completed</span><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></div></div>
+            </div>
+          </div>
+
+          <!-- HL rail -->
+          <div class="hr">
+            <svg class="ri" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 4v4h-4"/><path d="M12 8v4l2.5 1.5"/></svg>
+            <svg class="ri" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.4"/><circle cx="18" cy="6" r="2.4"/><circle cx="12" cy="18" r="2.4"/><path d="M8 7.5l8 0M7.5 8l3.5 8M16.5 8L13 16"/></svg>
+            <span class="launch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="1.7" opacity="0.55"><path d="M11 2.5H5.5A1.5 1.5 0 0 0 4 4v11"/><path d="M11 2.5V6h3.5"/></g><g stroke-width="1.9"><circle cx="13.5" cy="11.5" r="5.5"/><path d="M10.6 11.5c.5-.9 1.1-.9 1.6 0s1.1.9 1.6 0 1-.8 1.5-.2"/><path d="M9.8 16.4l-1.2 4.6 4.9-2.3 4.9 2.3-1.2-4.6"/></g></svg><span class="b">1</span></span>
+            <svg class="ri" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 9h16M9 3v4M15 3v4"/></svg>
+            <svg class="ri" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M14.5 9a2.5 2.5 0 0 0-2.5-1.6c-1.5 0-2.5.8-2.5 2s1 1.6 2.5 2 2.5.8 2.5 2-1 2-2.5 2A2.5 2.5 0 0 1 9.5 15M12 6v1.5M12 16.5V18"/></svg>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="shot-cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>Shown inside a standard HighLevel contact. In production it's embedded in your platform and matched to your brand — your colors, your name, your icons — so your customers see your product, not ours.</div>
+  </div>
+</div></header>
+
+<!-- PROBLEM -->
+<section class="problem"><div class="wrap">
+  <h2>Your customers are chasing signatures outside your CRM.</h2>
+  <p>Every agency on your platform runs on Docusign — but the moment they send one, they tab out of your CRM to check "did they sign yet?" It's the gap your customers feel every day, and the one thing a white-labeled HighLevel platform can't show them natively. The signing isn't the hard part. The chasing is — and right now it happens outside your product.</p>
+  <div class="pstats">
+    <div class="pstat"><div class="n">Your customers leave your CRM</div><div class="d">To check a signature, they tab out to Docusign — time spent outside the product you want them living in.</div></div>
+    <div class="pstat"><div class="n">A blind spot in your platform</div><div class="d">HighLevel can't surface Docusign envelope status on its own, so your CRM has a gap your customers run into daily.</div></div>
+    <div class="pstat"><div class="n">A reason to look elsewhere</div><div class="d">Every workflow that happens outside your platform is a crack a competitor's add-on can pry open.</div></div>
+  </div>
+</div></section>
+
+<!-- HOW / FEATURES -->
+<section id="how"><div class="wrap">
+  <div class="sec-head">
+    <span class="eyebrow"><span class="dot"></span>How it works</span>
+    <h2>See it. Chase it. Close it.</h2>
+    <p>Three steps that turn "sent" into "signed" for your customers — chasing from a single worklist or right on the contact, every step inside your platform.</p>
+  </div>
+  <div class="steps">
+    <span class="stepchip"><span class="nb">1</span>See it</span>
+    <span class="stepchip"><span class="nb">2</span>Chase it</span>
+    <span class="stepchip"><span class="nb">3</span>Close it</span>
+  </div>
+
+  <!-- F1 See it -->
+  <div class="feat">
+    <div class="ftext">
+      <div class="fnum">01 — SEE IT</div>
+      <h3>Every agreement, live on the contact.</h3>
+      <p>Sent, viewed, signed — Docusign status shows up on the HighLevel contact in real time, with the full signing timeline, who's holding it up, and an AI read of what's going on.</p>
+      <div class="fchecks">
+        <div class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Real-time status, right where your customers already work</div>
+        <div class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>The full timeline and signer status on every agreement</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-bar"><i></i><i></i><i></i><span class="t">On the contact · John Henderson</span></div>
+      <div style="padding:14px">
+        <div class="ag open" style="box-shadow:none">
+          <div class="ag-row"><span class="di"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></span><div style="flex:1;min-width:0"><div class="nm">Buyer Representation Agreement</div><div class="mt"><b>Viewed 4×</b> · last 2h ago</div></div><span class="badge b-amber"><span class="d"></span>Stalled 2d</span></div>
+          <div class="ag-exp">
+            <div class="parties"><div class="party"><span class="pav" style="background:#6D55E0">JH</span><div><div class="pn">John Henderson <span class="holding">HOLDING</span></div><div class="pr">Signer</div></div></div><div class="party"><span class="pav" style="background:#0B6E5B">YA</span><div><div class="pn">Yvette Andersson</div><div class="pr">Counter-signer</div></div></div></div>
+            <div class="tl"><span class="n dn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg></span><span class="br dn"></span><span class="n dn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg></span><span class="br dn"></span><span class="n cu"><span class="pp"></span></span><span class="br"></span><span class="n"></span><span class="br"></span><span class="n"></span></div>
+            <div class="tl-l"><span>Sent<b>Jun 10</b></span><span>Delivered<b>2d ago</b></span><span class="h">Viewed<b>2h ago</b></span><span>Signed</span><span>Completed</span></div>
+            <div class="aib"><span class="sp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3z"/></svg></span><div><div class="k">AI Read</div><div class="tx">Viewed repeatedly without signing — likely a question on terms. Try a call.</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- F2 Chase it · two surfaces -->
+  <div class="chase">
+    <div class="chase-head">
+      <div class="fnum">02 — CHASE IT</div>
+      <h3>Two places to chase. One source of truth.</h3>
+      <p>Every stalled agreement shows up in both — so your customers can sweep a whole worklist at once, or act on a single deal right from the contact record.</p>
+    </div>
+    <div class="chase-grid">
+      <div class="surface">
+        <div class="surface-lbl"><span class="nb">1</span><b>The worklist</b><span class="sub">· sweep everything stuck</span></div>
+        <div class="card">
+          <div class="card-bar"><i></i><i></i><i></i><span class="t">Docusign Integration · Worklist</span></div>
+          <div class="wl-tabs"><span class="tab on">Worklist</span><span class="tab">All agreements</span><span class="tab">Review queue</span><span class="tab">Settings</span></div>
+          <div class="wl-sub"><span class="s on">Needs attention <span class="c">6</span></span><span class="s">All agreements <span class="c" style="background:var(--bg-soft);color:var(--ink-3);border-color:var(--line)">19</span></span></div>
+          <div class="wl-body">
+            <div class="wl-ai"><span class="sp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3z"/></svg></span><div><div class="k">AI Summary</div><div class="tx">6 agreements need attention. 3 were viewed without signing, 2 were never opened, 1 expires tomorrow. <b>About $123,000 in pipeline is waiting on a signature.</b></div></div></div>
+            <div class="wl-meta"><span class="l">Sorted by AI priority</span><span class="r">6 to act on</span></div>
+            <div class="wl-group">Viewed, not signed <span class="c">3</span></div>
+            <div class="wl-row"><span class="av" style="background:#6D55E0">JH</span><div class="main"><div class="top"><span class="nm">John Henderson</span></div><div class="doc">Buyer Representation Agreement <span class="vc">· Viewed 4×</span></div><div class="air"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3z"/></svg>Viewed repeatedly without signing — likely a question on terms. Try a call.</div></div><div class="side"><span class="age">2d</span><span class="wl-nudge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>Nudge</span></div></div>
+            <div class="wl-group">Sent, not opened <span class="c">2</span></div>
+            <div class="wl-row"><span class="av" style="background:#2E90FA">DO</span><div class="main"><div class="top"><span class="nm">David Okafor</span></div><div class="doc">Purchase Agreement <span class="vc">· Not opened yet</span></div><div class="air"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3z"/></svg>Sent 2 days ago and never opened. A text usually gets a faster open than another email.</div></div><div class="side"><span class="age">2d</span><span class="wl-nudge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>Nudge</span></div></div>
+            <div class="wl-more">Showing 2 of 6 · <b>View all</b></div>
+          </div>
+        </div>
+      </div>
+      <div class="surface">
+        <div class="surface-lbl"><span class="nb">2</span><b>On the contact</b><span class="sub">· act on one deal in context</span></div>
+        <div class="card">
+          <div class="card-bar"><i></i><i></i><i></i><span class="t">On the contact · John Henderson</span></div>
+          <div style="padding:14px">
+            <div class="ag open" style="box-shadow:none">
+              <div class="ag-row"><span class="di"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></span><div style="flex:1;min-width:0"><div class="nm">Buyer Representation Agreement</div><div class="mt"><b>Viewed 4×</b> · last 2h ago</div></div><span class="badge b-amber"><span class="d"></span>Stalled 2d</span></div>
+              <div class="ag-exp">
+                <div class="aib"><span class="sp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3z"/></svg></span><div><div class="k">AI Read</div><div class="tx">Viewed repeatedly without signing — likely a question on terms. Try a call.</div></div></div>
+                <div class="ag-actions">
+                  <button class="btn-send"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>Send reminder</button>
+                  <div class="subact"><span class="b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>Copy link</span><span class="b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/></svg>View in Docusign</span></div>
+                </div>
+              </div>
+            </div>
+            <p class="surface-note">Open any contact and the stalled agreement is right there — with the same AI read and the reminder one tap away, next to the conversation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- F3 Close it (nudge) -->
+  <div class="feat">
+    <div class="ftext">
+      <div class="fnum">03 — CLOSE IT</div>
+      <h3>Close it in one tap — from either place.</h3>
+      <p>Tap "Nudge" in the worklist or "Send reminder" on the contact — either way, AI drafts a reminder that sends from your own number and logs to the conversation. The buyer hears from <em>you</em>, not a Docusign address.</p>
+      <div class="fchecks">
+        <div class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Sent from your brand and your number</div>
+        <div class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Drafted by AI, logged to the contact's conversation</div>
+      </div>
+    </div>
+    <div class="card"><div class="card-bar"><i></i><i></i><i></i><span class="t">Send reminder — John Henderson</span></div>
+      <div class="composer">
+        <div class="cm-head">Reminder to <b>John Henderson</b> · Buyer Representation Agreement · <span style="color:var(--amber-fg);font-weight:600">stalled 2 days</span></div>
+        <div class="seg"><button class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>SMS</button><button><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>Email</button></div>
+        <div class="cm-msg"><div class="k"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3z"/></svg>Drafted by AI</div>Hi John — just circling back on the buyer representation agreement for 412 Marina Bay. Happy to walk through the commission section if any of it is unclear. Takes about two minutes to sign.</div>
+        <div class="cm-from">From: <b>Coastal Realty · (415) 555-0142</b> · logged to conversation</div>
+        <div class="send-wrap"><div class="send-btn send-a"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>Send reminder</div><div class="send-btn send-b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Sent via SMS</div></div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- WHITE LABEL -->
+<section class="bg-soft-sec" id="brand"><div class="wrap">
+  <div class="sec-head">
+    <span class="eyebrow"><span class="dot"></span>Fully white-labeled</span>
+    <h2>It looks like you built it.</h2>
+    <p>Your brand is everything — so this isn't a third-party app bolted onto your platform. We work with you to match your colors, type, naming, and icons, so it feels like a native part of your white-labeled CRM. Your customers see your product, start to finish.</p>
+  </div>
+  <div class="brand-grid">
+    <div class="skin" style="--a:#0E9488"><div class="skin-bar"><span class="skin-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="1.7" opacity="0.55"><path d="M11 2.5H5.5A1.5 1.5 0 0 0 4 4v11"/><path d="M11 2.5V6h3.5"/></g><g stroke-width="1.9"><circle cx="13.5" cy="11.5" r="5.5"/><path d="M10.6 11.5c.5-.9 1.1-.9 1.6 0s1.1.9 1.6 0 1-.8 1.5-.2"/><path d="M9.8 16.4l-1.2 4.6 4.9-2.3 4.9 2.3-1.2-4.6"/></g></svg></span><b>Northbound</b></div><div class="skin-body"><div class="skin-row"><span class="skin-doc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></span><div><div class="skin-nm">Listing Agreement</div><div class="skin-meta">Viewed 4×</div></div><span class="skin-badge">Stalled 2d</span></div><div class="skin-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>Send reminder</div></div></div>
+    <div class="skin" style="--a:#E11D74"><div class="skin-bar"><span class="skin-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="1.7" opacity="0.55"><path d="M11 2.5H5.5A1.5 1.5 0 0 0 4 4v11"/><path d="M11 2.5V6h3.5"/></g><g stroke-width="1.9"><circle cx="13.5" cy="11.5" r="5.5"/><path d="M10.6 11.5c.5-.9 1.1-.9 1.6 0s1.1.9 1.6 0 1-.8 1.5-.2"/><path d="M9.8 16.4l-1.2 4.6 4.9-2.3 4.9 2.3-1.2-4.6"/></g></svg></span><b>Cadence</b></div><div class="skin-body"><div class="skin-row"><span class="skin-doc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></span><div><div class="skin-nm">Engagement Letter</div><div class="skin-meta">Viewed 4×</div></div><span class="skin-badge">Stalled 2d</span></div><div class="skin-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>Send reminder</div></div></div>
+    <div class="skin" style="--a:#2563EB"><div class="skin-bar"><span class="skin-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="1.7" opacity="0.55"><path d="M11 2.5H5.5A1.5 1.5 0 0 0 4 4v11"/><path d="M11 2.5V6h3.5"/></g><g stroke-width="1.9"><circle cx="13.5" cy="11.5" r="5.5"/><path d="M10.6 11.5c.5-.9 1.1-.9 1.6 0s1.1.9 1.6 0 1-.8 1.5-.2"/><path d="M9.8 16.4l-1.2 4.6 4.9-2.3 4.9 2.3-1.2-4.6"/></g></svg></span><b>Beacon</b></div><div class="skin-body"><div class="skin-row"><span class="skin-doc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></span><div><div class="skin-nm">Service Agreement</div><div class="skin-meta">Viewed 4×</div></div><span class="skin-badge">Stalled 2d</span></div><div class="skin-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>Send reminder</div></div></div>
+  </div>
+  <div class="brand-cap">Example brand themes — in production, it's matched to yours.</div>
+  <div class="brand-checks">
+    <div class="brand-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Your colors &amp; fonts</div>
+    <div class="brand-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Your product name</div>
+    <div class="brand-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Your icon &amp; launcher</div>
+    <div class="brand-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>No third-party branding, anywhere your customers look</div>
+  </div>
+</div></section>
+
+<!-- TRIGGERS -->
+<section id="automation"><div class="wrap">
+  <div class="sec-head">
+    <span class="eyebrow"><span class="dot"></span>Built for automation</span>
+    <h2>Turn every signing event into a HighLevel workflow.</h2>
+    <p>Every status change fires a native HighLevel trigger — so your customers can automate what happens next inside the workflows your platform already runs.</p>
+  </div>
+  <div class="trig-grid">
+    <div class="trig-card"><div class="trig-when"><span class="d" style="background:#16A34A"></span>Agreement signed</div><div class="ex"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Advance the opportunity, kick off onboarding, and notify the team.</div></div>
+    <div class="trig-card"><div class="trig-when"><span class="d" style="background:#F59E0B"></span>Agreement stalled</div><div class="ex"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Auto-start a follow-up sequence once it sits unsigned too long.</div></div>
+    <div class="trig-card"><div class="trig-when"><span class="d" style="background:#DC2626"></span>Agreement declined</div><div class="ex"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Create a task and alert the deal owner right away.</div></div>
+    <div class="trig-card"><div class="trig-when"><span class="d" style="background:#2E90FA"></span>Agreement viewed</div><div class="ex"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Flag engaged buyers so an agent can call while it's hot.</div></div>
+    <div class="trig-card"><div class="trig-when"><span class="d" style="background:#2E90FA"></span>Agreement sent</div><div class="ex"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Tag the contact and begin a 'waiting on signature' nurture.</div></div>
+    <div class="trig-card"><div class="trig-when"><span class="d" style="background:#98A2B3"></span>Agreement expired</div><div class="ex"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Re-send or re-engage before the lead goes cold.</div></div>
+  </div>
+  <div class="trig-foot">Every trigger is <b>native to HighLevel</b> — so they slot straight into the workflows and snapshots your platform already ships. No Zapier in the middle.</div>
+</div></section>
+
+<!-- WHY -->
+<section style="padding-top:24px"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow"><span class="dot"></span>Why this</span><h2>Not a Zap. Not a swap.</h2><p>Why your customers can't solve this themselves — and why it belongs in your platform.</p></div>
+  <div class="why-grid">
+    <div class="why-card why-x"><h4><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span>Zapier &amp; middleware</h4><p>A Zap fires once and vanishes — no status on the contact, no worklist, no way to nudge. And it pushes your customers into a third tool, out of your platform.</p></div>
+    <div class="why-card why-x"><h4><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span>Switching off Docusign</h4><p>Your customers' carriers, brokers, and clients already run on Docusign. Asking them to re-paper onto another tool is a non-starter — and not something your platform should force.</p></div>
+  </div>
+  <div class="why-card why-y" style="margin-top:20px"><h4><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg></span>Docusign, embedded in your platform</h4><p>Your customers keep Docusign exactly as they use it today. You just give them the visibility and chase loop inside your CRM — embedded, branded as yours, with nothing for them (or you) to rebuild.</p></div>
+</div></section>
+
+<!-- ROADMAP -->
+<section id="roadmap"><div class="wrap">
+  <div class="sec-head">
+    <span class="eyebrow"><span class="dot"></span>The roadmap</span>
+    <h2>We started with the chase. This is the foundation, not the finish.</h2>
+    <p>Seeing and chasing signatures is the most expensive daily pain your customers feel — so that's the MVP. But it's the first step, not the last. Here's where we're headed.</p>
+  </div>
+  <div class="road-grid">
+    <div class="road-col">
+      <span class="road-tag now">In development · the MVP</span>
+      <div class="road-item d-now"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Real-time Docusign status on every contact</div>
+      <div class="road-item d-now"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>The stall worklist with AI reads</div>
+      <div class="road-item d-now"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>One-tap reminders from your number</div>
+      <div class="road-item d-now"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Native HighLevel workflow triggers</div>
+    </div>
+    <div class="road-col">
+      <span class="road-tag next">Next</span>
+      <div class="road-item d-next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Send agreements right from the contact</div>
+      <div class="road-item d-next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Reusable templates &amp; field mapping</div>
+      <div class="road-item d-next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Signed data written back into HighLevel fields</div>
+      <div class="road-item d-next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Bulk send to a whole list</div>
+    </div>
+    <div class="road-col">
+      <span class="road-tag later">Later</span>
+      <div class="road-item d-later"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8"/></svg>Embedded signing inside your funnels</div>
+      <div class="road-item d-later"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8"/></svg>Collect payments at signing</div>
+      <div class="road-item d-later"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8"/></svg>ID verification for high-stakes documents</div>
+      <div class="road-item d-later"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8"/></svg>Agency-wide template library</div>
+    </div>
+  </div>
+  <div class="road-note"><b>Platform partners help decide what ships next.</b> That's the point of building this together, early.</div>
+</div></section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow"><span class="dot"></span>Founding pricing</span><h2>Simple pricing. Locked in for founders.</h2><p>One simple rate per active sub-account — and you decide how it's packaged for your customers.</p></div>
+  <div class="price-grid">
+    <div class="price-card">
+      <div class="price-tag">Founding partner · 64% off</div>
+      <div style="font-size:15px;font-weight:700;color:var(--brand)">Docusign Integration</div>
+      <div class="price-amt"><span class="was">$24.95</span><span class="big">$8.95</span><span class="per">/ mo per active sub-account</span></div>
+      <div class="price-alt">64% off our $24.95 standard rate — locked for the life of the partnership.</div>
+      <div class="price-list">
+        <div class="li"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Real-time Docusign status on every contact</div>
+        <div class="li"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Daily "needs attention" worklist with AI reads</div>
+        <div class="li"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>One-tap reminders from your own number</div>
+        <div class="li"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Auto-import — connect once, no setup</div>
+      </div>
+      <a href="#apply" class="btn btn-primary" style="width:100%;justify-content:center">Shape the roadmap with us</a>
+    </div>
+    <div class="price-side">
+      <h3>Package it however fits your platform.</h3>
+      <p>Founding partners pay <b>$8.95 per active sub-account</b> — down from our $24.95 standard rate — locked for the life of the partnership. How you package it for your customers is up to you: bundle it into a plan, sell it as a paid add-on, or include it in a premium tier.</p>
+      <p>We'll work out the model that fits your platform — per-seat wholesale, a flat license, or revenue share. Let's figure it out together.</p>
+    </div>
+  </div>
+</div></section>
+
+<!-- CTA -->
+<section class="cta" id="apply">
+  <div class="wrap cta-grid">
+    <div>
+      <h2>You won't just use it — you'll shape it.</h2>
+      <p>We're taking on only a handful of platform partners to begin with, and what we build next will be driven by what you tell us your customers need. Founding partners help set the priorities, get the white-label and pricing shaped around how they work, and lock in the founding rate for the life of the partnership.</p>
+      <div class="pts">
+        <div class="pt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Your priorities set what ships next</div>
+        <div class="pt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Fully white-labeled to match your platform</div>
+        <div class="pt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Founding rate — $8.95 per active sub-account (64% off), locked for life</div>
+        <div class="pt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>A direct line to the founders</div>
+      </div>
+    </div>
+    <div>
+      <div class="form">
+        <h3>Grab a time with us</h3>
+        <div class="fp">A quick, no-pressure call to see if it's a fit — and to hear what your customers need next.</div>
+        <iframe src="https://api.leadconnectorhq.com/widget/booking/CwWPut2pYcgUSqeozTVA" style="width:100%;border:none;min-height:700px;overflow:hidden;border-radius:10px" scrolling="no" id="CwWPut2pYcgUSqeozTVA_inline"></iframe>
+        <div class="legal">Calendar not loading? <a href="https://api.leadconnectorhq.com/widget/booking/CwWPut2pYcgUSqeozTVA" target="_blank" rel="noopener" style="color:var(--brand);font-weight:600">Open it in a new tab ↗</a></div>
+      </div>
+    </div>
+  </div>
+  <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
+</section>
+
+<footer><div class="wrap">
+  <div class="ft-top">
+    <div class="ft-brand">
+      <a class="ft-lock" href="lcbridge.html"><span class="ft-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16v-4"/><path d="M21 16v-4"/><path d="M3 12c0-4 4-6 9-6s9 2 9 6"/><path d="M7 12v4"/><path d="M12 10v6"/><path d="M17 12v4"/></svg></span><span class="ft-wm">LCBridge</span></a>
+      <p class="ft-tag">Deep, white-labeled integrations for the HighLevel ecosystem — built by people who helped build the platform.</p>
+    </div>
+    <div class="ft-links">
+      <div class="ft-col">
+        <h4>Company</h4>
+        <a href="lcbridge.html">About LCBridge</a>
+        <a href="lcbridge.html#why">Why us</a>
+        <a href="lcbridge.html#build">What we build</a>
+        <a href="lcbridge.html#products">Products</a>
+      </div>
+      <div class="ft-col">
+        <h4>Get in touch</h4>
+        <a href="mailto:hello@leadconnectorbridge.com">hello@leadconnectorbridge.com</a>
+        <a href="#apply">Book a call</a>
+      </div>
+    </div>
+  </div>
+  <p class="ft-legal">Docusign Integration is built by LCBridge — we build white-labeled integrations that HighLevel platforms embed as their own. An independent product that works with Docusign® and HighLevel®, and is not affiliated with, endorsed by, or sponsored by either. All trademarks are the property of their respective owners.</p>
+  <p class="ft-bottom">© 2026 LCBridge. All rights reserved.</p>
+</div></footer>
+
+
+</body>
+</html>
