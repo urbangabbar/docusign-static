@@ -1,0 +1,152 @@
+/* ============================================================
+   LC Bridge — marketing design system  ·  "Refined Cobalt"
+   Single source of truth for tokens + core components.
+   Pages opt in with: <link rel="stylesheet" href="/assets/brand.css">
+   Note: the PRODUCT is a white-label chameleon (inherits each agency's
+   HighLevel branding). This identity is for the LC BRIDGE marketing site
+   only — it never needs to match the product UI.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root{
+  /* ---- Surfaces ---- */
+  --lcb-canvas:#FFFFFF;
+  --lcb-soft:#F5F7FA;        /* section tint */
+  --lcb-tint:#EEF1FE;        /* cobalt wash (icon tiles, subtle fills) */
+  --lcb-dark:#0B1120;        /* hero / footer ground */
+
+  /* ---- Ink ---- */
+  --lcb-ink:#0B1220;
+  --lcb-ink-2:#475467;
+  --lcb-ink-3:#667085;
+  --lcb-on-dark:#EAEDF5;
+  --lcb-on-dark-mut:#9AA3B8;
+
+  /* ---- Lines ---- */
+  --lcb-line:#EAECF2;
+  --lcb-line-2:#E2E5EC;
+
+  /* ---- Brand (cobalt) ---- */
+  --lcb-primary:#2A41D8;
+  --lcb-primary-press:#2235B5;
+  --lcb-on-primary:#FFFFFF;
+  /* Restraint: the only sanctioned gradient. Logo mark ONLY. */
+  --lcb-logo-grad:linear-gradient(135deg,#2A41D8,#6938EF);
+
+  /* ---- AI accent (violet) — AI moments ONLY, always labelled ---- */
+  --lcb-ai:#6938EF;
+  --lcb-ai-fg:#5925DC;
+  --lcb-ai-bg:#F5F3FF;
+  --lcb-ai-line:#DDD6FE;
+
+  /* ---- Status (shared verbatim with the product DS) ---- */
+  --lcb-ok-fg:#027A48;    --lcb-ok-bg:#ECFDF3;    --lcb-ok-dot:#17B26A;    --lcb-ok-line:#ABEFC6;
+  --lcb-track-fg:#175CD3; --lcb-track-bg:#EFF8FF; --lcb-track-dot:#2E90FA; --lcb-track-line:#B2DDFF;
+  --lcb-attn-fg:#B54708;  --lcb-attn-bg:#FFFAEB;  --lcb-attn-dot:#F79009;  --lcb-attn-line:#FEC84B;
+  --lcb-decl-fg:#B42318;  --lcb-decl-bg:#FEF3F2;  --lcb-decl-dot:#F04438;  --lcb-decl-line:#FECDCA;
+  --lcb-draft-fg:#344054; --lcb-draft-bg:#F2F4F7; --lcb-draft-dot:#98A2B3; --lcb-draft-line:#EAECF0;
+
+  /* ---- Type ---- */
+  --lcb-font-display:'Inter Tight',system-ui,sans-serif;
+  --lcb-font-text:'Inter',system-ui,sans-serif;
+  --lcb-font-mono:'JetBrains Mono',ui-monospace,monospace;
+
+  /* ---- Radii ---- */
+  --lcb-r-sm:7px; --lcb-r-md:11px; --lcb-r-lg:14px; --lcb-r-xl:18px; --lcb-r-pill:999px;
+
+  /* ---- Elevation ---- */
+  --lcb-shadow-sm:0 1px 2px rgba(11,18,32,.06);
+  --lcb-shadow-md:0 12px 30px -14px rgba(11,18,32,.20);
+  --lcb-shadow-lg:0 30px 70px -30px rgba(11,18,32,.32);
+
+  /* ---- Layout / motion ---- */
+  --lcb-maxw:1140px;
+  --lcb-ease:cubic-bezier(.4,0,.2,1);
+  --lcb-dur:180ms;
+}
+
+/* ---- Base (only pages that link this file) ---- */
+.lcb-body{
+  margin:0;font-family:var(--lcb-font-text);color:var(--lcb-ink);
+  background:var(--lcb-canvas);-webkit-font-smoothing:antialiased;
+  line-height:1.55;font-size:16px;
+}
+.lcb-body *{box-sizing:border-box}
+.lcb-body h1,.lcb-body h2,.lcb-body h3,.lcb-body h4{
+  font-family:var(--lcb-font-display);font-weight:700;letter-spacing:-.025em;
+  line-height:1.1;margin:0;
+}
+.lcb-body a{color:inherit;text-decoration:none}
+.lcb-body p{margin:0}
+
+/* ---- Layout ---- */
+.lcb-wrap{max-width:var(--lcb-maxw);margin:0 auto;padding:0 24px}
+.lcb-section{padding:clamp(64px,8vw,104px) 0}
+.lcb-section--soft{background:var(--lcb-soft)}
+.lcb-section--dark{background:var(--lcb-dark);color:var(--lcb-on-dark)}
+
+/* ---- Eyebrow (mono kicker) ---- */
+.lcb-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--lcb-font-mono);font-size:12px;font-weight:600;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--lcb-primary);
+}
+.lcb-eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--lcb-primary)}
+.lcb-section--dark .lcb-eyebrow{color:#8E9BFF}
+.lcb-section--dark .lcb-eyebrow .dot{background:#8E9BFF}
+
+/* ---- Typography helpers ---- */
+.lcb-display{font-family:var(--lcb-font-display);font-weight:700;letter-spacing:-.03em;line-height:1.05;font-size:clamp(2.2rem,4.6vw,3.4rem)}
+.lcb-h2{font-family:var(--lcb-font-display);font-weight:700;letter-spacing:-.025em;line-height:1.12;font-size:clamp(1.7rem,3.2vw,2.4rem)}
+.lcb-lede{font-size:clamp(1.05rem,1.5vw,1.2rem);color:var(--lcb-ink-2);line-height:1.6}
+.lcb-num{font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1}
+
+/* ---- Buttons ---- */
+.lcb-btn{
+  display:inline-flex;align-items:center;gap:8px;cursor:pointer;white-space:nowrap;
+  font-family:var(--lcb-font-text);font-weight:600;font-size:15px;
+  padding:12px 20px;border-radius:var(--lcb-r-md);border:1px solid transparent;
+  transition:background var(--lcb-dur) var(--lcb-ease),border-color var(--lcb-dur) var(--lcb-ease),color var(--lcb-dur) var(--lcb-ease),transform var(--lcb-dur) var(--lcb-ease);
+}
+.lcb-btn svg{width:17px;height:17px}
+.lcb-btn--lg{padding:15px 26px;font-size:16px}
+.lcb-btn--primary{background:var(--lcb-primary);color:var(--lcb-on-primary);box-shadow:0 1px 2px rgba(42,65,216,.25)}
+.lcb-btn--primary:hover{background:var(--lcb-primary-press)}
+.lcb-btn--ghost{background:var(--lcb-canvas);border-color:var(--lcb-line-2);color:var(--lcb-ink)}
+.lcb-btn--ghost:hover{background:var(--lcb-soft)}
+.lcb-section--dark .lcb-btn--ghost{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.18);color:#fff}
+.lcb-section--dark .lcb-btn--ghost:hover{background:rgba(255,255,255,.12)}
+
+/* ---- Status badge (never colour-alone: hue + label + dot) ---- */
+.lcb-badge{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:600;padding:5px 11px;border-radius:var(--lcb-r-sm);border:1px solid transparent}
+.lcb-badge .dot{width:7px;height:7px;border-radius:50%}
+.lcb-badge.is-completed{background:var(--lcb-ok-bg);color:var(--lcb-ok-fg);border-color:var(--lcb-ok-line)}    .lcb-badge.is-completed .dot{background:var(--lcb-ok-dot)}
+.lcb-badge.is-ontrack{background:var(--lcb-track-bg);color:var(--lcb-track-fg);border-color:var(--lcb-track-line)} .lcb-badge.is-ontrack .dot{background:var(--lcb-track-dot)}
+.lcb-badge.is-attention{background:var(--lcb-attn-bg);color:var(--lcb-attn-fg);border-color:var(--lcb-attn-line)}  .lcb-badge.is-attention .dot{background:var(--lcb-attn-dot)}
+.lcb-badge.is-declined{background:var(--lcb-decl-bg);color:var(--lcb-decl-fg);border-color:var(--lcb-decl-line)}  .lcb-badge.is-declined .dot{background:var(--lcb-decl-dot)}
+.lcb-badge.is-draft{background:var(--lcb-draft-bg);color:var(--lcb-draft-fg);border-color:var(--lcb-draft-line)}  .lcb-badge.is-draft .dot{background:var(--lcb-draft-dot)}
+
+/* ---- AI chip (violet, always labelled) ---- */
+.lcb-ai{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:600;padding:5px 11px;border-radius:var(--lcb-r-sm);background:var(--lcb-ai-bg);color:var(--lcb-ai-fg);border:1px solid var(--lcb-ai-line)}
+.lcb-ai svg{width:14px;height:14px}
+
+/* ---- Card ---- */
+.lcb-card{background:var(--lcb-canvas);border:1px solid var(--lcb-line);border-radius:var(--lcb-r-xl);padding:26px;box-shadow:var(--lcb-shadow-sm);transition:transform var(--lcb-dur) var(--lcb-ease),box-shadow var(--lcb-dur) var(--lcb-ease),border-color var(--lcb-dur) var(--lcb-ease)}
+.lcb-card--hover:hover{transform:translateY(-3px);box-shadow:var(--lcb-shadow-md);border-color:var(--lcb-line-2)}
+.lcb-card .ic{width:44px;height:44px;border-radius:var(--lcb-r-md);background:var(--lcb-tint);color:var(--lcb-primary);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.lcb-card .ic svg{width:23px;height:23px}
+
+/* ---- Logo lockup ---- */
+.lcb-logo{display:inline-flex;align-items:center;gap:11px;color:var(--lcb-ink)}
+.lcb-logo .mark{width:36px;height:36px;border-radius:10px;background:var(--lcb-logo-grad);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 16px -8px rgba(42,65,216,.6)}
+.lcb-logo .mark svg{width:21px;height:21px;color:#fff}
+.lcb-logo .wm{font-family:var(--lcb-font-display);font-weight:700;font-size:20px;letter-spacing:-.02em}
+.lcb-section--dark .lcb-logo{color:#fff}
+
+/* ---- A11y / motion ---- */
+.lcb-body :focus-visible{outline:2px solid var(--lcb-primary);outline-offset:3px;border-radius:6px}
+@media(prefers-reduced-motion:reduce){
+  .lcb-body *{transition:none!important;animation:none!important;scroll-behavior:auto!important}
+  .lcb-card--hover:hover{transform:none}
+}
