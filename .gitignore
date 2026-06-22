@@ -2,3 +2,6 @@
 .playwright-mcp/
 *-desktop.png
 *-mobile.png
+pillar-*.png
+showcase-*.png
+brand-guidelines-*.png
