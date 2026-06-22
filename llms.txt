@@ -1,0 +1,24 @@
+# LC Bridge (Lead Connector Bridge)
+
+> LC Bridge builds white-label integrations that run inside the HighLevel (GoHighLevel) CRM — connecting tools like DocuSign and Google Sheets directly to LeadConnector workflows.
+
+LC Bridge, legally Lead Connector Bridge, is an integration vendor for the HighLevel / GoHighLevel CRM ecosystem (also searched as "LeadConnector"). Products are white-label add-ons that agencies and businesses install into their HighLevel sub-accounts. Built by a team that helped build HighLevel's API and App Marketplace.
+
+## Products
+
+- [DocuSign Integration for HighLevel](https://leadconnectorbridge.com/docusign/): Send, track, and sync DocuSign e-signature envelopes from inside HighLevel/LeadConnector workflows. Auto-fills documents from contact fields; signed status triggers workflows. White-label, no code.
+- [Google Sheets Integration for HighLevel](https://leadconnectorbridge.com/google-sheets/): Two-way real-time sync between HighLevel contacts/records and Google Sheets. Launching soon; early access open.
+
+## Industry guides
+
+- [DocuSign for Insurance](https://leadconnectorbridge.com/docusign/insurance): E-signature workflows for insurance agencies running on HighLevel (applications, ACORD-style forms).
+- [DocuSign for Real Estate](https://leadconnectorbridge.com/docusign/real-estate): E-signature workflows for real estate teams running on HighLevel (listing and buyer agreements).
+
+## About
+
+- [Homepage](https://leadconnectorbridge.com/): Company overview, product lineup, and contact.
+- Contact: hello@leadconnectorbridge.com
+
+## Optional
+
+- [Sitemap](https://leadconnectorbridge.com/sitemap.xml): Full list of indexable URLs.

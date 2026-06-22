@@ -1,0 +1,276 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "LC Bridge DocuSign Integration" [ref=e4] [cursor=pointer]:
+        - /url: /docusign/
+        - img [ref=e6]
+        - generic [ref=e14]:
+          - generic [ref=e15]: DocuSign Integration
+          - generic [ref=e16]: by LC Bridge
+      - link "Book a call" [ref=e18] [cursor=pointer]:
+        - /url: "#apply"
+  - navigation "Breadcrumb" [ref=e19]:
+    - list [ref=e20]:
+      - listitem [ref=e21]:
+        - link "Home" [ref=e22] [cursor=pointer]:
+          - /url: /
+      - listitem [ref=e23]: /
+      - listitem [ref=e24]: DocuSign Integration
+  - banner [ref=e25]:
+    - generic [ref=e26]:
+      - generic [ref=e27]:
+        - generic [ref=e28]: DocuSign × HighLevel · white-label
+        - heading "HighLevel DocuSign integration — send, sign, and track agreements without leaving HighLevel." [level=1] [ref=e30]
+        - paragraph [ref=e31]: Trigger DocuSign envelopes straight from your HighLevel workflows. Contact details fill the contract automatically, and signed documents update the CRM — no coding, no copy-paste.
+        - generic [ref=e32]:
+          - link "Book a call" [ref=e33] [cursor=pointer]:
+            - /url: "#apply"
+            - text: Book a call
+            - img [ref=e34]
+          - link "See how it works" [ref=e36] [cursor=pointer]:
+            - /url: "#how"
+        - generic [ref=e37]:
+          - img [ref=e38]
+          - text: Runs inside your HighLevel sub-account · fully white-labeled to your brand
+      - generic [ref=e41]:
+        - generic [ref=e46]: Your CRM · Contact
+        - generic [ref=e47]:
+          - generic [ref=e48]:
+            - generic [ref=e49]: DM
+            - generic [ref=e50]:
+              - generic [ref=e51]: Dana Morales
+              - generic [ref=e52]: Service Agreement.pdf · DocuSign
+            - generic [ref=e53]: Signed
+          - generic [ref=e55]:
+            - img [ref=e57]
+            - img [ref=e61]
+            - img [ref=e65]
+            - img [ref=e69]
+          - generic [ref=e71]:
+            - generic [ref=e72]: Sent
+            - generic [ref=e73]: Viewed
+            - generic [ref=e74]: Signed
+            - generic [ref=e75]: Workflow
+          - generic [ref=e76]:
+            - img [ref=e78]
+            - generic [ref=e81]:
+              - generic [ref=e82]: Workflow triggered
+              - generic [ref=e83]: Signed → pipeline moved to Won, onboarding sequence started.
+  - generic [ref=e85]:
+    - generic [ref=e86]:
+      - img [ref=e87]
+      - text: HighLevel / GoHighLevel
+    - generic [ref=e92]:
+      - img [ref=e93]
+      - text: DocuSign
+    - generic [ref=e96]:
+      - img [ref=e97]
+      - text: LeadConnector workflows
+    - generic [ref=e99]:
+      - img [ref=e100]
+      - text: Legally binding · ESIGN & UETA
+  - generic [ref=e105]:
+    - heading "What is the HighLevel DocuSign integration?" [level=2] [ref=e106]
+    - paragraph [ref=e107]: The HighLevel DocuSign integration by LC Bridge connects your DocuSign account to the HighLevel (GoHighLevel) CRM. It lets you send DocuSign envelopes directly from your HighLevel workflows, auto-fills each document from your contact fields, and writes the signed status back to the contact record — so a completed signature can trigger your next automated step. It installs as a white-label add-on inside your sub-account, with no code required.
+  - generic [ref=e109]:
+    - generic [ref=e110]:
+      - generic [ref=e111]: Why teams add it
+      - heading "Signatures that live inside your CRM." [level=2] [ref=e113]
+      - paragraph [ref=e114]: No tabbing out to chase a document. The whole signature loop happens where your team already works.
+    - generic [ref=e115]:
+      - generic [ref=e116]:
+        - img [ref=e118]
+        - heading "Send without leaving HighLevel" [level=3] [ref=e121]
+        - paragraph [ref=e122]: Fire off a DocuSign envelope from a workflow, a contact, or a pipeline stage — your team never opens a second tab.
+      - generic [ref=e123]:
+        - img [ref=e125]
+        - heading "The contract fills itself" [level=3] [ref=e128]
+        - paragraph [ref=e129]: Contact fields map straight into the template. No retyping names, addresses, or policy numbers — and no copy-paste mistakes.
+      - generic [ref=e130]:
+        - img [ref=e132]
+        - heading "Signed = your next step fires" [level=3] [ref=e135]
+        - paragraph [ref=e136]: A completed signature writes back to the contact and triggers the workflow you choose — move the deal, send the welcome, start onboarding.
+  - generic [ref=e138]:
+    - generic [ref=e139]:
+      - generic [ref=e140]: How it works
+      - heading "Pick a trigger. We do the rest." [level=2] [ref=e142]
+      - paragraph [ref=e143]: If you can build a HighLevel workflow, you can run e-signatures. It is the same when-this-then-that you already know.
+    - generic [ref=e144]:
+      - generic [ref=e145]:
+        - generic [ref=e146]: "1"
+        - heading "Pick a HighLevel trigger" [level=3] [ref=e147]
+        - paragraph [ref=e148]: A new lead, a stage change, a form submission — any HighLevel event can kick off a signature request.
+        - generic [ref=e149]:
+          - img [ref=e150]
+          - text: "When: stage → \"Proposal sent\""
+      - generic [ref=e152]:
+        - generic [ref=e153]: "2"
+        - heading "We map your fields in" [level=3] [ref=e154]
+        - paragraph [ref=e155]: Your contact details flow into the right DocuSign template automatically — you choose the template per funnel.
+        - generic [ref=e156]:
+          - img [ref=e157]
+          - text: "Then: fill & send envelope"
+      - generic [ref=e159]:
+        - generic [ref=e160]: "3"
+        - heading "Signed updates the contact" [level=3] [ref=e161]
+        - paragraph [ref=e162]: Status writes back to the record and fires your next workflow — no one has to check DocuSign manually.
+        - generic [ref=e163]:
+          - img [ref=e164]
+          - text: "Then: move deal · notify · onboard"
+    - paragraph [ref=e166]: No code, no Zapier, no API keys. Connect DocuSign once and it lives in your platform.
+  - generic [ref=e168]:
+    - generic [ref=e169]:
+      - generic [ref=e170]: What's inside
+      - heading "The parts agents actually asked for." [level=2] [ref=e172]
+      - paragraph [ref=e173]: Built around how HighLevel teams really use documents — not a generic bolt-on.
+    - generic [ref=e174]:
+      - generic [ref=e175]:
+        - img [ref=e177]
+        - heading "Field & merge mapping" [level=3] [ref=e179]
+        - paragraph [ref=e180]: Map HighLevel contact fields to DocuSign tabs once. Data flows in on send and back on signature — both directions.
+      - generic [ref=e181]:
+        - img [ref=e183]
+        - heading "Template per funnel" [level=3] [ref=e186]
+        - paragraph [ref=e187]: Each funnel or pipeline can send its own document. Listing agreement here, ACORD-style form there — you decide.
+      - generic [ref=e188]:
+        - img [ref=e190]
+        - heading "Live status write-back" [level=3] [ref=e193]
+        - paragraph [ref=e194]: Sent, viewed, signed, declined — every state lands on the contact in real time and is ready to trigger automations.
+  - generic [ref=e196]:
+    - generic [ref=e197]:
+      - generic [ref=e198]: Built for your business
+      - heading "Pick the guide for your world." [level=2] [ref=e200]
+      - paragraph [ref=e201]: Same integration, tuned for how your industry sends documents.
+    - generic [ref=e202]:
+      - link "DocuSign for Insurance Send applications and ACORD-style forms, chase stalled signings, and keep every policy document moving — inside your platform. DocuSign for insurance agents" [ref=e203] [cursor=pointer]:
+        - /url: /docusign/insurance
+        - img [ref=e205]
+        - heading "DocuSign for Insurance" [level=3] [ref=e207]
+        - paragraph [ref=e208]: Send applications and ACORD-style forms, chase stalled signings, and keep every policy document moving — inside your platform.
+        - generic [ref=e209]:
+          - text: DocuSign for insurance agents
+          - img [ref=e210]
+      - link "DocuSign for Real Estate Get listing and buyer agreements signed faster, with status on every contact and follow-up that fires itself. DocuSign for real estate teams" [ref=e212] [cursor=pointer]:
+        - /url: /docusign/real-estate
+        - img [ref=e214]
+        - heading "DocuSign for Real Estate" [level=3] [ref=e218]
+        - paragraph [ref=e219]: Get listing and buyer agreements signed faster, with status on every contact and follow-up that fires itself.
+        - generic [ref=e220]:
+          - text: DocuSign for real estate teams
+          - img [ref=e221]
+  - generic [ref=e224]:
+    - generic [ref=e225]:
+      - generic [ref=e226]: For HighLevel agencies
+      - heading "Offer e-signatures to every sub-account — under your brand." [level=2] [ref=e228]
+      - paragraph [ref=e229]: Roll DocuSign out across your client sub-accounts as your own white-labeled feature. Your colors, your name, your pricing — a new line of recurring revenue, and one more reason clients stay.
+      - generic [ref=e230]:
+        - generic [ref=e231]:
+          - img [ref=e232]
+          - text: Fully white-labeled — it looks like you built it
+        - generic [ref=e234]:
+          - img [ref=e235]
+          - text: Mark it up and resell to sub-accounts
+        - generic [ref=e237]:
+          - img [ref=e238]
+          - text: Built by a team that helped build HighLevel
+    - generic [ref=e240]:
+      - generic [ref=e241]: Founding partner rate
+      - generic [ref=e242]: $8.95 / active sub-account
+      - generic [ref=e243]: Locked for the life of the partnership. We're taking on a small group of founding partners who help shape what ships next.
+      - link "Talk about agency pricing" [ref=e244] [cursor=pointer]:
+        - /url: "#apply"
+  - generic [ref=e246]:
+    - img [ref=e248]
+    - heading "Live in minutes. No developer needed." [level=2] [ref=e251]
+    - paragraph [ref=e252]: Connect your DocuSign account, pick a template, choose a trigger — and you're sending signatures from HighLevel. It's plug-and-play, the way it should be.
+    - link "Book a setup call" [ref=e253] [cursor=pointer]:
+      - /url: "#apply"
+      - text: Book a setup call
+      - img [ref=e254]
+  - generic [ref=e257]:
+    - generic [ref=e258]:
+      - generic [ref=e259]: Questions
+      - heading "HighLevel DocuSign integration FAQ" [level=2] [ref=e261]
+      - paragraph [ref=e262]: The things teams ask before they connect.
+    - generic [ref=e263]:
+      - group [ref=e264]:
+        - generic "Can I use DocuSign with HighLevel (GoHighLevel)?" [ref=e265] [cursor=pointer]:
+          - text: Can I use DocuSign with HighLevel (GoHighLevel)?
+          - img [ref=e267]
+      - group [ref=e269]:
+        - generic "Do I need any coding or technical setup?" [ref=e270] [cursor=pointer]:
+          - text: Do I need any coding or technical setup?
+          - img [ref=e272]
+      - group [ref=e274]:
+        - generic "Will my HighLevel contact fields fill in the document automatically?" [ref=e275] [cursor=pointer]:
+          - text: Will my HighLevel contact fields fill in the document automatically?
+          - img [ref=e277]
+      - group [ref=e279]:
+        - generic "Are DocuSign e-signatures legally binding?" [ref=e280] [cursor=pointer]:
+          - text: Are DocuSign e-signatures legally binding?
+          - img [ref=e282]
+      - group [ref=e284]:
+        - generic "Can signing a document trigger a HighLevel workflow?" [ref=e285] [cursor=pointer]:
+          - text: Can signing a document trigger a HighLevel workflow?
+          - img [ref=e287]
+      - group [ref=e289]:
+        - generic "Does this work for real estate and insurance agents specifically?" [ref=e290] [cursor=pointer]:
+          - text: Does this work for real estate and insurance agents specifically?
+          - img [ref=e292]
+      - group [ref=e294]:
+        - generic "Do I need my own DocuSign account, and how much does it cost?" [ref=e295] [cursor=pointer]:
+          - text: Do I need my own DocuSign account, and how much does it cost?
+          - img [ref=e297]
+      - group [ref=e299]:
+        - generic "Can agencies offer this to their sub-accounts under their own brand?" [ref=e300] [cursor=pointer]:
+          - text: Can agencies offer this to their sub-accounts under their own brand?
+          - img [ref=e302]
+  - generic [ref=e305]:
+    - generic [ref=e306]:
+      - heading "Start your HighLevel DocuSign integration." [level=2] [ref=e307]
+      - paragraph [ref=e308]: A quick, no-pressure call to see if it's a fit — and to hear what your customers need next. We're early, hands-on, and we answer our own email.
+      - generic [ref=e309]:
+        - generic [ref=e310]:
+          - img [ref=e311]
+          - text: Fully white-labeled to your platform
+        - generic [ref=e313]:
+          - img [ref=e314]
+          - text: Founding rate, locked for the partnership
+        - generic [ref=e316]:
+          - img [ref=e317]
+          - text: A direct line to the founders
+    - generic [ref=e320]:
+      - heading "Grab a time with us" [level=3] [ref=e321]
+      - generic [ref=e322]: See it working inside a HighLevel account in 15 minutes.
+      - generic [ref=e323]:
+        - text: Calendar not loading?
+        - link "Open it in a new tab ↗" [ref=e324] [cursor=pointer]:
+          - /url: https://api.leadconnectorhq.com/widget/booking/CwWPut2pYcgUSqeozTVA
+  - contentinfo [ref=e325]:
+    - generic [ref=e326]:
+      - generic [ref=e327]:
+        - generic [ref=e328]:
+          - link "LC Bridge" [ref=e329] [cursor=pointer]:
+            - /url: /
+            - img [ref=e331]
+            - generic [ref=e333]: LC Bridge
+          - paragraph [ref=e334]: Deep, white-labeled integrations for the HighLevel ecosystem — built by people who helped build the platform.
+        - generic [ref=e335]:
+          - generic [ref=e336]:
+            - heading "DocuSign" [level=4] [ref=e337]
+            - link "Overview" [ref=e338] [cursor=pointer]:
+              - /url: /docusign/
+            - link "For insurance" [ref=e339] [cursor=pointer]:
+              - /url: /docusign/insurance
+            - link "For real estate" [ref=e340] [cursor=pointer]:
+              - /url: /docusign/real-estate
+          - generic [ref=e341]:
+            - heading "Company" [level=4] [ref=e342]
+            - link "About LC Bridge" [ref=e343] [cursor=pointer]:
+              - /url: /
+            - link "Google Sheets integration" [ref=e344] [cursor=pointer]:
+              - /url: /google-sheets/
+            - link "hello@leadconnectorbridge.com" [ref=e345] [cursor=pointer]:
+              - /url: mailto:hello@leadconnectorbridge.com
+      - paragraph [ref=e346]: DocuSign Integration is built by LC Bridge (Lead Connector Bridge) — we build white-labeled integrations that HighLevel platforms embed as their own. An independent product that works with DocuSign® and HighLevel®, and is not affiliated with, endorsed by, or sponsored by either. All trademarks are the property of their respective owners.
+      - paragraph [ref=e347]: © 2026 LC Bridge. All rights reserved.

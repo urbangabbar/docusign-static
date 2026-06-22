@@ -1,0 +1,35 @@
+# robots.txt — leadconnectorbridge.com (LC Bridge / Lead Connector Bridge)
+# Stance: allow all crawlers, including AI — we want AEO citations.
+
+User-agent: *
+Allow: /
+
+# --- AI crawlers explicitly welcomed (training + citation) ---
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://leadconnectorbridge.com/sitemap.xml
