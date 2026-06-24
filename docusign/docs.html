@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Documentation — DocuSign Integration by LCBridge</title>
-<meta name="description" content="Getting started and how-to guide for the DocuSign Integration for HighLevel by LCBridge — connect DocuSign, set up templates, send agreements, track signing status, and chase stalls without leaving HighLevel.">
+<meta name="description" content="Getting started and how-to guide for the DocuSign Integration for LeadConnector by LCBridge — connect DocuSign, set up templates, send agreements, track signing status, and chase stalls without leaving LeadConnector.">
 <link rel="canonical" href="https://leadconnectorbridge.com/docusign/docs">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -67,6 +67,11 @@
   .status li{display:inline-flex;align-items:center;gap:7px;font-size:13.5px;font-weight:600;color:var(--ink-2);border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 12px;margin:0}
   .status .sw{width:8px;height:8px;border-radius:50%;flex:0 0 auto}
 
+  figure{margin:18px 0}
+  figure img{max-width:100%;height:auto;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);display:block;margin:18px auto}
+  figcaption{font-size:13px;color:var(--ink-3);text-align:center;margin-top:8px}
+  .flow-svg{width:100%;max-width:720px;height:auto;display:block;margin:18px auto}
+
   table{width:100%;border-collapse:collapse;margin:6px 0 18px;font-size:14.5px}
   th,td{text-align:left;vertical-align:top;padding:11px 14px;border-bottom:1px solid var(--line-2)}
   thead th{font-size:12px;font-weight:700;letter-spacing:.02em;color:var(--ink-3);text-transform:uppercase;border-bottom:1px solid var(--line);background:var(--bg-soft)}
@@ -97,7 +102,7 @@
     <a class="brand" href="/docusign/">
       <span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="1.7" opacity="0.55"><path d="M11 2.5H5.5A1.5 1.5 0 0 0 4 4v11"/><path d="M11 2.5V6h3.5"/></g><g stroke-width="1.9"><circle cx="13.5" cy="11.5" r="5.5"/><path d="M10.6 11.5c.5-.9 1.1-.9 1.6 0s1.1.9 1.6 0 1-.8 1.5-.2"/><path d="M9.8 16.4l-1.2 4.6 4.9-2.3 4.9 2.3-1.2-4.6"/></g></svg></span>
       <div><div class="nm">Docusign Integration</div><div class="by">by LCBridge</div></div>
-      <span class="for">for HighLevel platforms</span>
+      <span class="for">for LeadConnector platforms</span>
     </a>
     <div class="nav-links">
       <a class="ghost" href="/docusign/">Home</a>
@@ -111,12 +116,12 @@
   <header class="page">
     <span class="eyebrow"><span class="dot"></span>Documentation</span>
     <h1>Getting started with the DocuSign Integration</h1>
-    <p class="subtitle">Connect DocuSign to HighLevel, set up templates once, then send agreements and chase stalls in a couple of clicks — without leaving your CRM.</p>
+    <p class="subtitle">Connect DocuSign to LeadConnector, set up templates once, then send agreements and chase stalls in a couple of clicks — without leaving your CRM.</p>
     <p class="updated">Last updated: June 24, 2026</p>
   </header>
 
   <div class="callout">
-    <p>LCBridge is an independent third-party integration. DocuSign and HighLevel are trademarks of their respective owners; LCBridge is not affiliated with or endorsed by them.</p>
+    <p>LCBridge is an independent third-party integration. DocuSign and LeadConnector are trademarks of their respective owners; LCBridge is not affiliated with or endorsed by them.</p>
   </div>
 
   <nav class="toc" aria-label="On this page">
@@ -135,7 +140,7 @@
   </nav>
 
   <h2 id="overview">Overview</h2>
-  <p>The <strong>DocuSign Integration</strong> by LCBridge runs inside the HighLevel (GoHighLevel) CRM. It connects your DocuSign account to your CRM so you can send agreements for signature, track signing status, and chase stalled agreements — all without leaving HighLevel.</p>
+  <p>The <strong>DocuSign Integration</strong> by LCBridge runs inside the LeadConnector CRM. It connects your DocuSign account to your CRM so you can send agreements for signature, track signing status, and chase stalled agreements — all without leaving LeadConnector.</p>
   <p>In practice, the integration does three things: it sends agreements through your connected DocuSign account, it watches DocuSign and keeps signing status current in your CRM, and it surfaces the agreements that have stalled so you can nudge the signer in one tap.</p>
   <p>There are two audiences, and the work splits cleanly between them:</p>
   <ul>
@@ -144,10 +149,61 @@
   </ul>
   <p>This guide walks through the full path: connecting DocuSign, preparing a template, sending an agreement, and tracking it to completion.</p>
 
+  <figure>
+    <svg class="flow-svg" viewBox="0 0 720 140" role="img" aria-label="Four-step flow: Connect DocuSign, Set up a template, Send for signature, Track and chase" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="flow-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+          <path d="M0 0 L10 5 L0 10 z" fill="var(--brand)"/>
+        </marker>
+      </defs>
+      <!-- connectors -->
+      <line x1="150" y1="58" x2="186" y2="58" stroke="var(--brand)" stroke-width="2" marker-end="url(#flow-arrow)"/>
+      <line x1="330" y1="58" x2="366" y2="58" stroke="var(--brand)" stroke-width="2" marker-end="url(#flow-arrow)"/>
+      <line x1="510" y1="58" x2="546" y2="58" stroke="var(--brand)" stroke-width="2" marker-end="url(#flow-arrow)"/>
+
+      <!-- node 1 -->
+      <g>
+        <rect x="8" y="24" width="142" height="70" rx="12" fill="var(--bg-soft)" stroke="var(--line)"/>
+        <circle cx="30" cy="46" r="11" fill="var(--ai)"/>
+        <text x="30" y="50" text-anchor="middle" style="font-family:inherit" font-size="12" font-weight="700" fill="#fff">1</text>
+        <text x="50" y="50" style="font-family:inherit" font-size="15" font-weight="700" fill="var(--ink)">Connect</text>
+        <text x="79" y="78" text-anchor="middle" style="font-family:inherit" font-size="12" fill="var(--ink-3)">DocuSign</text>
+      </g>
+
+      <!-- node 2 -->
+      <g>
+        <rect x="188" y="24" width="142" height="70" rx="12" fill="var(--bg-soft)" stroke="var(--line)"/>
+        <circle cx="210" cy="46" r="11" fill="var(--ai)"/>
+        <text x="210" y="50" text-anchor="middle" style="font-family:inherit" font-size="12" font-weight="700" fill="#fff">2</text>
+        <text x="230" y="50" style="font-family:inherit" font-size="15" font-weight="700" fill="var(--ink)">Set up</text>
+        <text x="259" y="78" text-anchor="middle" style="font-family:inherit" font-size="12" fill="var(--ink-3)">a template</text>
+      </g>
+
+      <!-- node 3 -->
+      <g>
+        <rect x="368" y="24" width="142" height="70" rx="12" fill="var(--bg-soft)" stroke="var(--line)"/>
+        <circle cx="390" cy="46" r="11" fill="var(--ai)"/>
+        <text x="390" y="50" text-anchor="middle" style="font-family:inherit" font-size="12" font-weight="700" fill="#fff">3</text>
+        <text x="410" y="50" style="font-family:inherit" font-size="15" font-weight="700" fill="var(--ink)">Send</text>
+        <text x="439" y="78" text-anchor="middle" style="font-family:inherit" font-size="12" fill="var(--ink-3)">for signature</text>
+      </g>
+
+      <!-- node 4 -->
+      <g>
+        <rect x="548" y="24" width="142" height="70" rx="12" fill="var(--bg-soft)" stroke="var(--line)"/>
+        <circle cx="570" cy="46" r="11" fill="var(--ai)"/>
+        <text x="570" y="50" text-anchor="middle" style="font-family:inherit" font-size="12" font-weight="700" fill="#fff">4</text>
+        <text x="590" y="50" style="font-family:inherit" font-size="15" font-weight="700" fill="var(--ink)">Track</text>
+        <text x="619" y="78" text-anchor="middle" style="font-family:inherit" font-size="12" fill="var(--ink-3)">&amp; chase</text>
+      </g>
+    </svg>
+    <figcaption><em>How it works, end to end.</em></figcaption>
+  </figure>
+
   <h2 id="before-you-begin">Before you begin</h2>
   <p>To use the integration you need two things in place:</p>
   <ol>
-    <li>A <strong>HighLevel account</strong> with the DocuSign Integration app installed in your location (sub-account).</li>
+    <li>A <strong>LeadConnector account</strong> with the DocuSign Integration app installed in your location (sub-account).</li>
     <li>A <strong>DocuSign account with API access</strong>. You connect your own DocuSign account — the integration acts on your behalf, it does not provide DocuSign for you.</li>
   </ol>
   <div class="callout">
@@ -158,13 +214,17 @@
   <h2 id="connect">Connect your DocuSign account</h2>
   <p>Connecting uses DocuSign's standard OAuth flow, so you never share your DocuSign password with the integration. You connect <strong>your own</strong> DocuSign account once, and it stays connected until you disconnect it.</p>
   <ol>
-    <li>In HighLevel, open the <strong>DocuSign Integration</strong> page in your location.</li>
+    <li>In LeadConnector, open the <strong>DocuSign Integration</strong> page in your location.</li>
     <li>Click <strong>Connect DocuSign</strong>.</li>
     <li>You're sent to DocuSign to sign in and authorize the integration.</li>
     <li>Approve the requested access — sending agreements on your behalf and reading their signing status.</li>
-    <li>You're returned to HighLevel, and the integration now shows <strong>Connected</strong>.</li>
+    <li>You're returned to LeadConnector, and the integration now shows <strong>Connected</strong>.</li>
   </ol>
   <p>The integration stores the connection securely. Your DocuSign OAuth tokens are encrypted at rest, and you can disconnect at any time to revoke the integration's access. For details on what is stored and how, see the <a class="inline" href="/docusign/privacy">Privacy Policy</a>.</p>
+  <figure>
+    <img src="img/connection.png" loading="lazy" alt="The DocuSign Connected status chip shown after OAuth authorization">
+    <figcaption><em>Once authorized, the integration shows DocuSign · Connected.</em></figcaption>
+  </figure>
   <div class="callout tip">
     <p class="ck">Tip</p>
     <p>If the connection fails — for example with an <code>invalid_client</code> error — the most common cause is a DocuSign plan without API access. Confirm your DocuSign account has API access enabled, then try connecting again.</p>
@@ -179,6 +239,10 @@
     <li>Save the template as <strong>send-ready</strong>.</li>
   </ol>
   <p>Once a template is saved as send-ready, it appears for reps in the send flow. Templates that are not yet saved as send-ready stay hidden from reps, so they can't accidentally send a half-configured agreement.</p>
+  <figure>
+    <img src="img/templates.png" loading="lazy" alt="The Templates screen showing a send-ready DocuSign template with Edit and Enable controls">
+    <figcaption><em>A send-ready template in the Templates screen.</em></figcaption>
+  </figure>
   <div class="callout">
     <p class="ck">Note</p>
     <p>Map every field a recipient is expected to have filled. Required fields that aren't mapped will be caught later by the pre-flight check at send time, but mapping them now keeps the send clean.</p>
@@ -214,6 +278,10 @@
     <li><span class="sw" style="background:#F04438"></span>Declined</li>
     <li><span class="sw" style="background:#98A2B3"></span>Draft</li>
   </ul>
+  <figure>
+    <img src="img/agreements.png" loading="lazy" alt="The All-agreements list showing the five status pills and a status table">
+    <figcaption><em>The All-agreements list, color-coded by the five statuses.</em></figcaption>
+  </figure>
   <div class="callout">
     <p class="ck">Note</p>
     <p>Status updates flow in automatically. Where DocuSign Connect webhooks are available, updates arrive in near real time; otherwise the integration polls DocuSign on a schedule — still automatic, just slightly slower to update.</p>
