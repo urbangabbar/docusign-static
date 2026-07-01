@@ -8,25 +8,39 @@
 <link rel="canonical" href="https://leadconnectorbridge.com/google-sheets/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/brand.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
+  /* ===== Google Sheets brand theme — overrides Refined Cobalt tokens on this page only ===== */
+  :root{
+    --lcb-primary:#0F9D58; --lcb-primary-press:#0B8043; --lcb-on-primary:#FFFFFF;
+    --lcb-tint:#E6F4EA; --lcb-dark:#0B3D2E;
+    --lcb-logo-grad:linear-gradient(135deg,#16A34A,#0F9D58);
+  }
+  .lcb-section--dark .lcb-eyebrow{color:#86EFAC}
+  .lcb-section--dark .lcb-eyebrow .dot{background:#86EFAC}
+  .ft-mark{background:linear-gradient(135deg,#2A41D8,#6938EF)}
 :root{
-  --ink:#0B1220;--ink-2:#475467;--ink-3:#667085;--line:#E7E9EE;--line-2:#EEF0F4;
-  --bg:#fff;--bg-soft:#F7F8FB;--bg-tint:#F5F7FF;
-  --brand:#3047C0;--brand-press:#283BA6;
-  --ai:#6938EF;--ai-bg:#F5F3FF;--ai-line:#DDD6FE;--ai-fg:#5925DC;
-  --green:#16A34A;--green-fg:#067647;--green-bg:#ECFDF3;--green-line:#ABEFC6;
+  /* Refined Cobalt — aliased to the brand system in /assets/brand.css */
+  --ink:var(--lcb-ink);--ink-2:var(--lcb-ink-2);--ink-3:var(--lcb-ink-3);--line:var(--lcb-line);--line-2:var(--lcb-line-2);
+  --bg:var(--lcb-canvas);--bg-soft:var(--lcb-soft);--bg-tint:var(--lcb-tint);
+  --brand:var(--lcb-primary);--brand-press:var(--lcb-primary-press);
+  --ai:var(--lcb-ai);--ai-bg:var(--lcb-ai-bg);--ai-line:var(--lcb-ai-line);--ai-fg:var(--lcb-ai-fg);
+  /* LC Bridge chrome accent: was a generic green, now cobalt (single brand colour) */
+  --green:var(--lcb-primary);--green-fg:var(--lcb-primary);--green-bg:var(--lcb-tint);--green-line:#D7DEFB;
   --amber:#F59E0B;--amber-fg:#B54708;--amber-bg:#FFFAEB;--amber-line:#FEC84B;
-  --shadow:0 1px 2px rgba(16,24,40,.05);--shadow-lg:0 24px 50px -12px rgba(16,24,40,.20);
+  --shadow:var(--lcb-shadow-sm);--shadow-lg:var(--lcb-shadow-md);
+  --font-display:var(--lcb-font-display);--font-body:var(--lcb-font-text);--font-mono:var(--lcb-font-mono);
   --maxw:1140px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:88px}
-body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;line-height:1.55}
+body{font-family:var(--font-body);color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;line-height:1.55}
+h1,h2,h3,h4{font-family:var(--font-display)}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
 a{color:inherit;text-decoration:none}
 .btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;padding:13px 22px;border-radius:11px;border:1px solid transparent;cursor:pointer;transition:.18s;white-space:nowrap}
-.btn-primary{background:var(--brand);color:#fff;box-shadow:0 1px 2px rgba(48,71,192,.2)}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:0 1px 2px rgba(15,157,88,.25)}
 .btn-primary:hover{background:var(--brand-press)}
 .btn-ghost{background:#fff;color:var(--ink);border-color:var(--line)}
 .btn-ghost:hover{background:var(--bg-soft)}
@@ -56,11 +70,11 @@ nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-f
 .crumb li[aria-current]{color:var(--ink);font-weight:600}
 .crumb .sep{color:var(--line)}
 
-.hero{padding:36px 0 20px;background:radial-gradient(1200px 480px at 50% -12%,#ECFDF3 0%,rgba(236,253,243,0) 60%),var(--bg)}
+.hero{padding:36px 0 20px;background:radial-gradient(1200px 480px at 50% -12%,#E6F4EA 0%,rgba(230,244,234,0) 60%),var(--bg)}
 .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center}
 @media(max-width:940px){.hero-grid{grid-template-columns:1fr;gap:36px}}
 .hero h1{font-size:48px;line-height:1.05;letter-spacing:-.03em;font-weight:800;margin:18px 0 16px}
-.hero h1 .hl{background:linear-gradient(120deg,var(--green),var(--brand));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero h1 .hl{color:var(--brand)}
 .hero .sub{font-size:19px;line-height:1.55;color:var(--ink-2);max-width:560px;margin-bottom:26px}
 .hero-cta{display:flex;align-items:center;gap:13px;flex-wrap:wrap}
 .hero .trust-line{margin-top:20px;font-size:13px;color:var(--ink-3);display:flex;align-items:center;gap:8px}
@@ -132,14 +146,14 @@ section{padding:84px 0}
 .faq .a{padding:0 22px 20px;font-size:15.5px;color:var(--ink-2);line-height:1.65}
 .faq .a a{color:var(--brand);font-weight:600}
 
-.cta{background:linear-gradient(150deg,#0B2018 0%,#13352A 55%,#10162B 100%);color:#fff}
+.cta{background:var(--lcb-dark);color:#fff}
 .cta-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
 @media(max-width:880px){.cta-grid{grid-template-columns:1fr;gap:34px}}
 .cta h2{font-size:38px;line-height:1.08;letter-spacing:-.025em;font-weight:800}
 .cta p{font-size:18px;color:#B9C0D2;line-height:1.6;margin-top:16px}
 .cta .pts{margin-top:24px;display:flex;flex-direction:column;gap:12px}
 .cta .pt{display:flex;align-items:center;gap:11px;font-size:15px;color:#E6E9F2}
-.cta .pt svg{width:19px;height:19px;color:#A9F0C6;flex:0 0 auto}
+.cta .pt svg{width:19px;height:19px;color:#86EFAC;flex:0 0 auto}
 .form{background:#fff;border-radius:20px;padding:22px;box-shadow:var(--shadow-lg)}
 .form h3{font-size:20px;font-weight:800;color:var(--ink);margin-bottom:4px}
 .form .fp{font-size:13.5px;color:var(--ink-3);margin-bottom:14px}
@@ -149,7 +163,7 @@ footer{background:#0B1120;color:#9AA3B8;padding:54px 0 38px}
 .ft-top{display:flex;justify-content:space-between;gap:34px;flex-wrap:wrap;align-items:flex-start;padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,.08)}
 .ft-brand{max-width:360px}
 .ft-lock{display:inline-flex;align-items:center;gap:10px;color:#fff;margin-bottom:14px}
-.ft-mark{width:32px;height:32px;border-radius:9px;background:linear-gradient(135deg,#3047C0,#6938EF);display:flex;align-items:center;justify-content:center}
+.ft-mark{width:32px;height:32px;border-radius:9px;background:var(--lcb-logo-grad);display:flex;align-items:center;justify-content:center}
 .ft-mark svg{width:19px;height:19px;color:#fff}
 .ft-wm{font-weight:800;font-size:18px;letter-spacing:-.02em}
 .ft-tag{font-size:14px;color:#9AA3B8;line-height:1.6}
@@ -163,7 +177,7 @@ footer{background:#0B1120;color:#9AA3B8;padding:54px 0 38px}
 :focus-visible{outline:2px solid var(--green);outline-offset:2px;border-radius:6px}
 </style>
 
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%233047C0%27%2F%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%236938EF%27%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%2724%27%20height%3D%2724%27%20rx%3D%276%27%20fill%3D%27url%28%23g%29%27%2F%3E%3Cg%20fill%3D%27none%27%20stroke%3D%27white%27%20stroke-width%3D%271.6%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20d%3D%27M4%2015v-3%27%2F%3E%3Cpath%20d%3D%27M20%2015v-3%27%2F%3E%3Cpath%20d%3D%27M4%2012c0-3%203.5-4.5%208-4.5s8%201.5%208%204.5%27%2F%3E%3Cpath%20d%3D%27M7.5%2012v3%27%2F%3E%3Cpath%20d%3D%27M12%2010.5v4.5%27%2F%3E%3Cpath%20d%3D%27M16.5%2012v3%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%3E%3Crect%20width%3D%2724%27%20height%3D%2724%27%20rx%3D%276%27%20fill%3D%27%230F9D58%27%2F%3E%3Cpath%20d%3D%27M15%203.2H7.6A1.4%201.4%200%200%200%206.2%204.6V19.4A1.4%201.4%200%200%200%207.6%2020.8H16.4A1.4%201.4%200%200%200%2017.8%2019.4V6z%27%20fill%3D%27white%27%20opacity%3D%270.16%27%2F%3E%3Cpath%20d%3D%27M15%203.2%2017.8%206h-2.8z%27%20fill%3D%27white%27%20opacity%3D%270.5%27%2F%3E%3Crect%20x%3D%278.2%27%20y%3D%2710.6%27%20width%3D%277.6%27%20height%3D%277%27%20rx%3D%270.7%27%20fill%3D%27none%27%20stroke%3D%27white%27%20stroke-width%3D%271.15%27%2F%3E%3Cpath%20d%3D%27M8.2%2012.93h7.6M8.2%2015.27h7.6M10.73%2010.6v7M13.27%2010.6v7%27%20stroke%3D%27white%27%20stroke-width%3D%271.15%27%2F%3E%3C%2Fsvg%3E">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://leadconnectorbridge.com/google-sheets/">
 <meta property="og:title" content="HighLevel Google Sheets Integration — Two-Way Sync | LC Bridge">
@@ -242,9 +256,9 @@ footer{background:#0B1120;color:#9AA3B8;padding:54px 0 38px}
 <body>
 
 <nav><div class="wrap nav-in">
-  <a class="brand" href="/google-sheets/" aria-label="LC Bridge Google Sheets Integration">
-    <span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 9h16M4 15h16M10 3v18"/></svg></span>
-    <div><div class="nm">Google Sheets Integration</div><div class="by">by LC Bridge</div></div>
+  <a class="brand" href="/google-sheets/" aria-label="Google Sheets integration by LC Bridge">
+    <span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path stroke-width="1.6" d="M14.5 3.2H7.6A1.4 1.4 0 0 0 6.2 4.6V19.4A1.4 1.4 0 0 0 7.6 20.8H16.4A1.4 1.4 0 0 0 17.8 19.4V6.4z"/><path stroke-width="1.6" d="M14.3 3.2V6.6H17.6"/><rect x="8.4" y="10.8" width="7.2" height="6.6" rx="0.6" stroke-width="1.3"/><path stroke-width="1.3" d="M8.4 13h7.2M8.4 15.2h7.2M10.8 10.8v6.6M13.2 10.8v6.6"/></svg></span>
+    <div><div class="nm">Google Sheets</div><div class="by">integration · by LC Bridge</div></div>
     <span class="for">for HighLevel</span>
   </a>
   <div class="nav-links"><a href="#how">How it works</a><a href="#capabilities">What you can do</a><a href="#faq">FAQ</a></div>
@@ -337,14 +351,14 @@ footer{background:#0B1120;color:#9AA3B8;padding:54px 0 38px}
 <!-- HOW -->
 <section class="how" id="how"><div class="wrap">
   <div class="sec-head">
-    <span class="eyebrow" style="background:rgba(22,163,74,.18);border-color:rgba(171,239,198,.4);color:#A9F0C6"><span class="dot" style="background:#A9F0C6"></span>How it works</span>
+    <span class="eyebrow" style="background:rgba(15,157,88,.20);border-color:rgba(134,239,172,.4);color:#86EFAC"><span class="dot" style="background:#86EFAC"></span>How it works</span>
     <h2>Connect once. Stay in sync.</h2>
     <p>Three steps, no code — the same plug-and-play setup as the rest of LC Bridge.</p>
   </div>
   <div class="steps">
-    <div class="step"><span class="nb">1</span><h3>Connect Google</h3><p>Authorize your Google account and pick the sheet you want to keep in sync.</p><span style="display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;color:#fff;background:rgba(22,163,74,.22);border:1px solid rgba(171,239,198,.35);border-radius:7px;padding:4px 9px;margin-top:14px">Connect → pick sheet</span></div>
-    <div class="step"><span class="nb">2</span><h3>Map your fields</h3><p>Match HighLevel fields to columns once. You choose what syncs and which way.</p><span style="display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;color:#fff;background:rgba(22,163,74,.22);border:1px solid rgba(171,239,198,.35);border-radius:7px;padding:4px 9px;margin-top:14px">Map fields → choose direction</span></div>
-    <div class="step"><span class="nb">3</span><h3>Work anywhere</h3><p>Edit in HighLevel or in the sheet — both stay current, and changes can fire workflows.</p><span style="display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;color:#fff;background:rgba(22,163,74,.22);border:1px solid rgba(171,239,198,.35);border-radius:7px;padding:4px 9px;margin-top:14px">Row changes → fire workflow</span></div>
+    <div class="step"><span class="nb">1</span><h3>Connect Google</h3><p>Authorize your Google account and pick the sheet you want to keep in sync.</p><span style="display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;color:#fff;background:rgba(15,157,88,.26);border:1px solid rgba(134,239,172,.32);border-radius:7px;padding:4px 9px;margin-top:14px">Connect → pick sheet</span></div>
+    <div class="step"><span class="nb">2</span><h3>Map your fields</h3><p>Match HighLevel fields to columns once. You choose what syncs and which way.</p><span style="display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;color:#fff;background:rgba(15,157,88,.26);border:1px solid rgba(134,239,172,.32);border-radius:7px;padding:4px 9px;margin-top:14px">Map fields → choose direction</span></div>
+    <div class="step"><span class="nb">3</span><h3>Work anywhere</h3><p>Edit in HighLevel or in the sheet — both stay current, and changes can fire workflows.</p><span style="display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;color:#fff;background:rgba(15,157,88,.26);border:1px solid rgba(134,239,172,.32);border-radius:7px;padding:4px 9px;margin-top:14px">Row changes → fire workflow</span></div>
   </div>
   <p class="how-foot"><b>No code, no Zapier, no API keys.</b> Built by the team that helped build HighLevel.</p>
 </div></section>
@@ -405,7 +419,7 @@ footer{background:#0B1120;color:#9AA3B8;padding:54px 0 38px}
 <footer><div class="wrap">
   <div class="ft-top">
     <div class="ft-brand">
-      <a class="ft-lock" href="/"><span class="ft-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16v-4"/><path d="M21 16v-4"/><path d="M3 12c0-4 4-6 9-6s9 2 9 6"/><path d="M7 12v4"/><path d="M12 10v6"/><path d="M17 12v4"/></svg></span><span class="ft-wm">LC Bridge</span></a>
+      <a class="ft-lock" href="/"><span class="ft-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path stroke-width="1.7" d="M14 2.75H6.5A1.5 1.5 0 0 0 5 4.25V19.75A1.5 1.5 0 0 0 6.5 21.25H17.5A1.5 1.5 0 0 0 19 19.75V7.75Z"/><path stroke-width="1.7" d="M14 2.75V7.75H19"/><path stroke-width="2" d="M7.9 15.5c.9-1.9 1.9-1.6 2.3.1c.3 1.3 1 1.3 1.4-.1c.5-1.6 1.6-1.4 2.1.3"/><path stroke-width="1.7" d="M8.2 18.5h7.6"/></svg></span><span class="ft-wm">LC Bridge</span></a>
       <p class="ft-tag">Deep, white-labeled integrations for the HighLevel ecosystem — built by people who helped build the platform.</p>
     </div>
     <div class="ft-links">

@@ -1,0 +1,23 @@
+<!-- LC Bridge — brand logo. The bridge mark on the cobalt->violet brand
+     gradient (linear-gradient(135deg,#3047C0,#6938EF)), exactly as shown on
+     leadconnectorbridge.com's home page. Social-media ready: copy-paste this
+     SVG, or use the matching raster lcbridge-logo.png (1024x1024, transparent).
+     This is the corporate brand logo, distinct from the DocuSign product icon
+     (docusign-icon.svg). Do not redraw the glyph. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="512" height="512" role="img" aria-label="LCBridge">
+  <defs>
+    <linearGradient id="lcb-brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3047C0"/>
+      <stop offset="1" stop-color="#6938EF"/>
+    </linearGradient>
+  </defs>
+  <rect width="24" height="24" rx="6" fill="url(#lcb-brand)"/>
+  <g fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 15v-3"/>
+    <path d="M20 15v-3"/>
+    <path d="M4 12c0-3 3.5-4.5 8-4.5s8 1.5 8 4.5"/>
+    <path d="M7.5 12v3"/>
+    <path d="M12 10.5v4.5"/>
+    <path d="M16.5 12v3"/>
+  </g>
+</svg>
