@@ -5,3 +5,10 @@
 pillar-*.png
 showcase-*.png
 brand-guidelines-*.png
+
+# QA screenshots (headless captures — never deploy)
+ds-*.png
+gs-*.png
+gsheets-*.png
+benchmark-*.png
+docusign-pillar-*.png
