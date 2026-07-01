@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page not found — LC Bridge</title>
+<meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/brand.css">
+<style>
+:root{
+  /* Refined Cobalt — aliased to the brand system in /assets/brand.css */
+  --ink:var(--lcb-ink);--ink-2:var(--lcb-ink-2);--ink-3:var(--lcb-ink-3);
+  --brand:var(--lcb-primary);--brand-press:var(--lcb-primary-press);
+  --line:var(--lcb-line);--bg-soft:var(--lcb-soft);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--lcb-font-text);color:var(--ink);background:radial-gradient(900px 480px at 50% -10%,var(--lcb-tint),#fff 60%);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center}
+.box{max-width:520px}
+.mark{width:46px;height:46px;border-radius:12px;background:var(--lcb-logo-grad);display:inline-flex;align-items:center;justify-content:center;margin-bottom:24px}
+.mark svg{width:26px;height:26px;color:#fff}
+.code{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--brand)}
+h1{font-family:var(--lcb-font-display);font-size:34px;font-weight:700;letter-spacing:-.02em;margin:12px 0 12px}
+p{font-size:17px;color:var(--ink-2);line-height:1.6;margin-bottom:28px}
+.links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;padding:12px 20px;border-radius:11px;border:1px solid transparent;transition:.18s;text-decoration:none}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:0 1px 2px rgba(42,65,216,.25)}
+.btn-primary:hover{background:var(--brand-press)}
+.btn-ghost{background:#fff;color:var(--ink);border-color:var(--line)}
+.btn-ghost:hover{background:var(--bg-soft)}
+.more{margin-top:22px;font-size:14px;color:var(--ink-3)}
+.more a{color:var(--brand);font-weight:600;text-decoration:none}
+</style>
+</head>
+<body>
+<div class="box">
+  <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16v-4"/><path d="M21 16v-4"/><path d="M3 12c0-4 4-6 9-6s9 2 9 6"/><path d="M7 12v4"/><path d="M12 10v6"/><path d="M17 12v4"/></svg></span>
+  <div class="code">404</div>
+  <h1>This page took a detour.</h1>
+  <p>We couldn't find what you were looking for. Head back home, or jump straight to one of our integrations.</p>
+  <div class="links">
+    <a class="btn btn-primary" href="/">Back to LC Bridge</a>
+    <a class="btn btn-ghost" href="/docusign/">DocuSign integration</a>
+  </div>
+  <p class="more">Looking for the <a href="/google-sheets/">Google Sheets integration</a>? It's launching soon.</p>
+</div>
+</body>
+</html>

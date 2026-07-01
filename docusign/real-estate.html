@@ -3,43 +3,64 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Docusign Integration for HighLevel — for Real Estate teams</title>
+<title>DocuSign Integration for HighLevel — for Real Estate teams</title>
 <link rel="canonical" href="https://leadconnectorbridge.com/docusign/real-estate">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/brand.css">
 <style>
+  /* ===== DocuSign brand theme — overrides Refined Cobalt tokens on this page only ===== */
+  :root{
+    --lcb-primary:#4C00FF; --lcb-primary-press:#3A00C2; --lcb-on-primary:#FFFFFF;
+    --lcb-tint:#EEE9FF; --lcb-dark:#130032;
+    --lcb-logo-grad:linear-gradient(135deg,#4C00FF,#7A2BFF);
+    --ds-accent:#FF5252;
+  }
+  .lcb-eyebrow .dot{background:var(--ds-accent)}
+  .lcb-section--dark .lcb-eyebrow{color:#CBC2FF}
+  .lcb-section--dark .lcb-eyebrow .dot{background:var(--ds-accent)}
+  /* keep the LC Bridge corporate mark cobalt in the footer byline */
+  .ft-brand .ft-mark{background:linear-gradient(135deg,#2A41D8,#6938EF)}
+
 :root{
-  --ink:#0B1220;--ink-2:#475467;--ink-3:#667085;--line:#E7E9EE;--line-2:#EEF0F4;
-  --bg:#fff;--bg-soft:#F7F8FB;--bg-tint:#F5F7FF;
-  --brand:#3047C0;--brand-press:#283BA6;
-  --ai:#6938EF;--ai-bg:#F5F3FF;--ai-line:#DDD6FE;--ai-fg:#5925DC;
-  --amber:#F59E0B;--amber-fg:#B54708;--amber-bg:#FFFAEB;--amber-line:#FEC84B;
-  --green:#16A34A;--green-fg:#067647;--green-bg:#ECFDF3;--green-line:#ABEFC6;
-  --blue:#2E90FA;--blue-fg:#175CD3;--blue-bg:#EFF8FF;
+  /* Refined Cobalt — aliased to the brand system in /assets/brand.css */
+  --ink:var(--lcb-ink);--ink-2:var(--lcb-ink-2);--ink-3:var(--lcb-ink-3);--line:var(--lcb-line);--line-2:var(--lcb-line-2);
+  --bg:var(--lcb-canvas);--bg-soft:var(--lcb-soft);--bg-tint:var(--lcb-tint);
+  --brand:var(--lcb-primary);--brand-press:var(--lcb-primary-press);
+  /* cobalt product glyph (white-icon tiles + launcher) — the prominent single product mark */
+  --glyph:var(--lcb-primary);
+  /* AI accent (violet) — AI moments ONLY, always labelled */
+  --ai:var(--lcb-ai);--ai-bg:var(--lcb-ai-bg);--ai-line:var(--lcb-ai-line);--ai-fg:var(--lcb-ai-fg);
+  --amber:var(--lcb-attn-dot);--amber-fg:var(--lcb-attn-fg);--amber-bg:var(--lcb-attn-bg);--amber-line:var(--lcb-attn-line);
+  --green:#16A34A;--green-fg:var(--lcb-ok-fg);--green-bg:var(--lcb-ok-bg);--green-line:var(--lcb-ok-line);
+  --blue:var(--lcb-track-dot);--blue-fg:var(--lcb-track-fg);--blue-bg:var(--lcb-track-bg);
   --hlblue:#1E5BC6;
-  --shadow:0 1px 2px rgba(16,24,40,.05);--shadow-lg:0 24px 50px -12px rgba(16,24,40,.20);
+  --grad:var(--lcb-logo-grad);
+  --font-display:var(--lcb-font-display);--font-body:var(--lcb-font-text);--font-mono:var(--lcb-font-mono);
+  --shadow:var(--lcb-shadow-sm);--shadow-lg:0 24px 50px -12px rgba(16,24,40,.20);
   --maxw:1140px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:88px}
-body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;line-height:1.55}
+body{font-family:var(--font-body);color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;line-height:1.55}
+h1,h2,h3,h4{font-family:var(--font-display);letter-spacing:-.025em}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
 a{color:inherit;text-decoration:none}
-.btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;padding:13px 22px;border-radius:11px;border:1px solid transparent;cursor:pointer;transition:.18s;white-space:nowrap}
-.btn-primary{background:var(--brand);color:#fff;box-shadow:0 1px 2px rgba(48,71,192,.2)}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-body);font-weight:600;font-size:15px;padding:13px 22px;border-radius:11px;border:1px solid transparent;cursor:pointer;transition:.18s;white-space:nowrap}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:0 1px 2px rgba(76,0,255,.25)}
 .btn-primary:hover{background:var(--brand-press)}
 .btn-ghost{background:#fff;color:var(--ink);border-color:var(--line)}
 .btn-ghost:hover{background:var(--bg-soft)}
 .btn-lg{padding:16px 28px;font-size:16px}
-.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:600;color:var(--brand);background:var(--bg-tint);border:1px solid #DfE3F7;padding:6px 13px;border-radius:999px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:600;color:var(--brand);background:var(--bg-tint);border:1px solid #D6DCFB;padding:6px 13px;border-radius:999px}
 .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--brand)}
 
 /* nav */
 nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-2)}
 .nav-in{display:flex;align-items:center;justify-content:space-between;height:68px}
 .brand{display:flex;align-items:center;gap:11px}
-.brand .tile{width:34px;height:34px;border-radius:9px;background:var(--ai);color:#fff;display:flex;align-items:center;justify-content:center}
+.brand .tile{width:34px;height:34px;border-radius:9px;background:var(--glyph);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 16px -8px rgba(76,0,255,.5)}
 .brand .tile svg{width:20px;height:20px}
 .brand .nm{font-weight:800;font-size:17px;letter-spacing:-.02em;line-height:1.1}
 .brand .by{font-size:11.5px;color:var(--ink-3);font-weight:600}
@@ -48,9 +69,9 @@ nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdrop-f
 @media(max-width:720px){.nav-cta .btn-ghost{display:none}.brand .for{display:none}}
 
 /* hero */
-.hero{padding:72px 0 30px;background:radial-gradient(1200px 480px at 50% -10%,#EEF2FF 0%,rgba(238,242,255,0) 62%),var(--bg);text-align:center}
-.hero h1{font-size:52px;line-height:1.03;letter-spacing:-.03em;font-weight:800;max-width:880px;margin:20px auto 18px}
-.hero h1 .hl{background:linear-gradient(120deg,var(--brand),var(--ai));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero{padding:72px 0 30px;background:radial-gradient(1200px 480px at 50% -10%,#EEE9FF 0%,rgba(238,241,254,0) 62%),var(--bg);text-align:center}
+.hero h1{font-size:52px;line-height:1.03;letter-spacing:-.03em;font-weight:700;max-width:880px;margin:20px auto 18px}
+.hero h1 .hl{color:var(--brand)}
 .hero .sub{font-size:19px;line-height:1.55;color:var(--ink-2);max-width:660px;margin:0 auto 28px}
 .hero-cta{display:flex;align-items:center;gap:14px;justify-content:center;flex-wrap:wrap}
 @media(max-width:560px){.hero h1{font-size:35px}}
@@ -59,7 +80,7 @@ nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdrop-f
 .shot{position:relative;margin-top:48px}
 .shot-cap{display:flex;align-items:center;justify-content:center;gap:9px;font-size:13.5px;color:var(--ink-3);margin-top:18px;max-width:720px;margin-left:auto;margin-right:auto}
 .shot-cap svg{width:16px;height:16px;color:var(--brand);flex:0 0 auto}
-.pin{position:absolute;z-index:4;top:-14px;right:34px;background:var(--ai);color:#fff;font-size:12.5px;font-weight:600;padding:7px 14px;border-radius:999px;box-shadow:0 8px 20px rgba(105,56,239,.35);display:flex;align-items:center;gap:7px}
+.pin{position:absolute;z-index:4;top:-14px;right:34px;background:var(--glyph);color:#fff;font-size:12.5px;font-weight:600;padding:7px 14px;border-radius:999px;box-shadow:0 8px 20px -10px rgba(76,0,255,.45);display:flex;align-items:center;gap:7px}
 .pin svg{width:14px;height:14px}
 @media(max-width:760px){.pin{right:16px;top:-12px;font-size:11.5px;padding:6px 11px}}
 
@@ -80,10 +101,10 @@ nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdrop-f
 .hn .it{display:flex;align-items:center;gap:9px;padding:7px 9px;border-radius:8px;font-size:12.5px;color:#3A4252;font-weight:500;margin-bottom:1px}
 .hn .it svg{width:15px;height:15px;color:#8A92A5;flex:0 0 auto}
 .hn .it.on{background:#EAF1FE;color:var(--hlblue)}.hn .it.on svg{color:var(--hlblue)}
-.hn .app{margin-top:auto;border:1px solid var(--ai-line);background:var(--ai-bg);border-radius:10px;padding:9px;display:flex;align-items:center;gap:8px;position:relative}
-.hn .app .tile{width:27px;height:27px;border-radius:7px;background:var(--ai);color:#fff;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.hn .app{margin-top:auto;border:1px solid #D6DCFB;background:var(--bg-tint);border-radius:10px;padding:9px;display:flex;align-items:center;gap:8px;position:relative}
+.hn .app .tile{width:27px;height:27px;border-radius:7px;background:var(--glyph);color:#fff;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
 .hn .app .tile svg{width:16px;height:16px}
-.hn .app .lbl{font-size:8px;font-weight:700;letter-spacing:.05em;color:var(--ai-fg);text-transform:uppercase}
+.hn .app .lbl{font-size:8px;font-weight:700;letter-spacing:.05em;color:var(--brand);text-transform:uppercase}
 .hn .app .nm{font-size:11.5px;font-weight:700;line-height:1.15}
 .hn .app .bdg{position:absolute;top:-6px;right:-6px;min-width:17px;height:17px;border-radius:999px;background:var(--amber);color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;padding:0 4px}
 
@@ -113,7 +134,7 @@ nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdrop-f
 /* HL pane (star) */
 .hp{flex:1;min-width:0;background:#fff;display:flex;flex-direction:column}
 .hp-head{display:flex;align-items:center;gap:9px;padding:13px 14px;border-bottom:1px solid var(--line-2)}
-.hp-head .g{width:27px;height:27px;border-radius:7px;background:var(--ai);color:#fff;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.hp-head .g{width:27px;height:27px;border-radius:7px;background:var(--glyph);color:#fff;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
 .hp-head .g svg{width:16px;height:16px}
 .hp-head b{font-size:14.5px}
 .hp-head .ct{font-size:12px;color:var(--ink-3);font-weight:500}
@@ -162,7 +183,7 @@ nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdrop-f
 .aib .k{font-size:9.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ai-fg);margin-bottom:2px}
 .aib .tx{font-size:12px;line-height:1.5}
 .ag-actions{margin-top:12px}
-.btn-send{width:100%;justify-content:center;background:#2563EB;color:#fff;border:none;height:40px;border-radius:9px;display:flex;align-items:center;gap:7px;font-weight:600;font-size:13px}
+.btn-send{width:100%;justify-content:center;background:var(--brand);color:#fff;border:none;height:40px;border-radius:9px;display:flex;align-items:center;gap:7px;font-weight:600;font-size:13px}
 .btn-send svg{width:15px;height:15px}
 .subact{display:flex;gap:8px;margin-top:8px}
 .subact .b{flex:1;justify-content:center;display:flex;align-items:center;gap:6px;height:36px;border:1px solid var(--line);border-radius:9px;font-size:12px;font-weight:600;color:var(--ink-2)}
@@ -173,7 +194,7 @@ nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdrop-f
 /* HL rail */
 .hr{width:46px;flex:0 0 auto;background:#FCFCFE;display:flex;flex-direction:column;align-items:center;gap:17px;padding:15px 0}
 .hr .ri{width:19px;height:19px;color:#1A2233;opacity:.62}
-.hr .launch{width:34px;height:34px;border-radius:9px;background:var(--ai);color:#fff;display:flex;align-items:center;justify-content:center;position:relative;box-shadow:0 3px 8px rgba(105,56,239,.4)}
+.hr .launch{width:34px;height:34px;border-radius:9px;background:var(--glyph);color:#fff;display:flex;align-items:center;justify-content:center;position:relative;box-shadow:0 3px 8px -2px rgba(76,0,255,.5)}
 .hr .launch svg{width:19px;height:19px}
 .hr .launch .b{position:absolute;top:-5px;right:-5px;min-width:15px;height:15px;border-radius:999px;background:var(--amber);color:#fff;font-size:9px;font-weight:700;display:flex;align-items:center;justify-content:center}
 
@@ -244,7 +265,7 @@ section{padding:90px 0}
 .wl-row .air svg{width:13px;height:13px;color:var(--ai);flex:0 0 auto;margin-top:2px}
 .wl-row .side{display:flex;flex-direction:column;align-items:flex-end;gap:9px;flex:0 0 auto}
 .wl-row .age{font-size:11px;font-weight:600;color:var(--amber-fg);background:var(--amber-bg);border:1px solid var(--amber-line);border-radius:6px;padding:3px 8px}
-.wl-nudge{display:inline-flex;align-items:center;gap:6px;background:#2563EB;color:#fff;font-size:12.5px;font-weight:600;padding:8px 14px;border-radius:9px}
+.wl-nudge{display:inline-flex;align-items:center;gap:6px;background:var(--brand);color:#fff;font-size:12.5px;font-weight:600;padding:8px 14px;border-radius:9px}
 .wl-nudge svg{width:14px;height:14px}
 
 /* nudge composer */
@@ -262,7 +283,7 @@ section{padding:90px 0}
 .cm-from b{color:var(--ink)}
 .send-wrap{padding:6px 8px 8px;position:relative;height:54px}
 .send-btn{position:absolute;left:8px;right:8px;top:6px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;gap:8px;font-weight:600;font-size:14.5px;color:#fff}
-.send-a{background:#2563EB;animation:sa 4.4s ease-in-out infinite}
+.send-a{background:var(--brand);animation:sa 4.4s ease-in-out infinite}
 .send-b{background:var(--green);animation:sb 4.4s ease-in-out infinite}
 .send-btn svg{width:17px;height:17px}
 @keyframes sa{0%,42%{opacity:1}50%,92%{opacity:0}100%{opacity:1}}
@@ -282,7 +303,7 @@ section{padding:90px 0}
 .price-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:30px;align-items:center;max-width:960px;margin:0 auto}
 @media(max-width:820px){.price-grid{grid-template-columns:1fr;gap:24px}}
 .price-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:34px;box-shadow:var(--shadow-lg);position:relative}
-.price-tag{position:absolute;top:-13px;left:34px;background:var(--ai);color:#fff;font-size:12px;font-weight:700;padding:5px 12px;border-radius:999px}
+.price-tag{position:absolute;top:-13px;left:34px;background:var(--brand);color:#fff;font-size:12px;font-weight:700;padding:5px 12px;border-radius:999px}
 .price-amt{display:flex;align-items:baseline;gap:8px;margin:6px 0 4px}
 .price-amt .big{font-size:48px;font-weight:800;letter-spacing:-.03em}
 .price-amt .per{font-size:15px;color:var(--ink-3);font-weight:500}
@@ -294,7 +315,7 @@ section{padding:90px 0}
 .price-side p{font-size:16.5px;color:var(--ink-2);line-height:1.6;margin-bottom:10px}
 
 /* cta/form */
-.cta{background:linear-gradient(150deg,#10162B 0%,#1B2444 60%,#241B52 100%);color:#fff}
+.cta{background:linear-gradient(150deg,#0B1120 0%,#101A3A 60%,#16245C 100%);color:#fff}
 .cta-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
 @media(max-width:880px){.cta-grid{grid-template-columns:1fr;gap:34px}}
 .cta h2{font-size:38px;line-height:1.08;letter-spacing:-.025em;font-weight:800}
@@ -308,7 +329,7 @@ section{padding:90px 0}
 .field{margin-bottom:14px}
 .field label{display:block;font-size:13px;font-weight:600;color:var(--ink-2);margin-bottom:6px}
 .field input,.field select{width:100%;height:44px;padding:0 13px;font:inherit;font-size:14.5px;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:10px}
-.field input:focus,.field select:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px rgba(48,71,192,.14)}
+.field input:focus,.field select:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px rgba(76,0,255,.14)}
 .frow{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .form .btn-primary{width:100%;justify-content:center;margin-top:6px}
 .form .legal{font-size:12px;color:var(--ink-3);text-align:center;margin-top:12px}
@@ -322,7 +343,7 @@ footer{background:#0B1120;color:#9AA3B8;padding:54px 0 38px}
 .ft-top{display:flex;justify-content:space-between;gap:34px;flex-wrap:wrap;align-items:flex-start;padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,.08)}
 .ft-brand{max-width:360px}
 .ft-lock{display:inline-flex;align-items:center;gap:10px;color:#fff;text-decoration:none;margin-bottom:14px}
-.ft-mark{width:32px;height:32px;border-radius:9px;background:linear-gradient(135deg,#3047C0,#6938EF);display:flex;align-items:center;justify-content:center}
+.ft-mark{width:32px;height:32px;border-radius:9px;background:var(--grad);display:flex;align-items:center;justify-content:center}
 .ft-mark svg{width:19px;height:19px;color:#fff}
 .ft-wm{font-weight:800;font-size:18px;letter-spacing:-.02em}
 .ft-tag{font-size:14px;color:#9AA3B8;line-height:1.6;margin:0}
@@ -413,32 +434,69 @@ nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-f
 .fhelp a:hover{text-decoration:underline}
 </style>
 
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%233047C0%27%2F%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%236938EF%27%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%2724%27%20height%3D%2724%27%20rx%3D%276%27%20fill%3D%27url%28%23g%29%27%2F%3E%3Cg%20fill%3D%27none%27%20stroke%3D%27white%27%20stroke-width%3D%271.6%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20d%3D%27M4%2015v-3%27%2F%3E%3Cpath%20d%3D%27M20%2015v-3%27%2F%3E%3Cpath%20d%3D%27M4%2012c0-3%203.5-4.5%208-4.5s8%201.5%208%204.5%27%2F%3E%3Cpath%20d%3D%27M7.5%2012v3%27%2F%3E%3Cpath%20d%3D%27M12%2010.5v4.5%27%2F%3E%3Cpath%20d%3D%27M16.5%2012v3%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
-<meta name="description" content="Give your real estate customers live Docusign tracking inside your HighLevel platform — embedded, fully white-labeled, in your brand. A founding-partner integration from LCBridge.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%234C00FF%27%2F%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%237A2BFF%27%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%2724%27%20height%3D%2724%27%20rx%3D%276%27%20fill%3D%27url%28%23g%29%27%2F%3E%3Cg%20fill%3D%27none%27%20stroke%3D%27white%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20stroke-width%3D%271.9%27%20d%3D%27M21%2011.1V12a9%209%200%201%201-5.3-8.2%27%2F%3E%3Cpath%20stroke-width%3D%272.3%27%20d%3D%27M7.8%2011.6l3.4%203.4L21%205.2%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+<meta name="description" content="Give your real estate customers live DocuSign tracking inside your HighLevel platform — embedded, fully white-labeled, in your brand. A founding-partner integration from LC Bridge.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Docusign Integration for HighLevel — for Real Estate teams">
-<meta property="og:description" content="Give your real estate customers live Docusign tracking inside your HighLevel platform — embedded, fully white-labeled, in your brand. A founding-partner integration from LCBridge.">
+<meta property="og:title" content="DocuSign Integration for HighLevel — for Real Estate teams">
+<meta property="og:description" content="Give your real estate customers live DocuSign tracking inside your HighLevel platform — embedded, fully white-labeled, in your brand. A founding-partner integration from LC Bridge.">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Docusign Integration for HighLevel — for Real Estate teams">
-<meta name="twitter:description" content="Give your real estate customers live Docusign tracking inside your HighLevel platform — embedded, fully white-labeled, in your brand. A founding-partner integration from LCBridge.">
+<meta name="twitter:title" content="DocuSign Integration for HighLevel — for Real Estate teams">
+<meta name="twitter:description" content="Give your real estate customers live DocuSign tracking inside your HighLevel platform — embedded, fully white-labeled, in your brand. A founding-partner integration from LC Bridge.">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {"@type":"Organization","@id":"https://leadconnectorbridge.com/#organization","name":"LC Bridge","legalName":"Lead Connector Bridge","url":"https://leadconnectorbridge.com/"},
+    {
+      "@type":"SoftwareApplication",
+      "@id":"https://leadconnectorbridge.com/docusign/real-estate#app",
+      "name":"LC Bridge DocuSign Integration for HighLevel — Real Estate",
+      "applicationCategory":"BusinessApplication",
+      "applicationSubCategory":"CRM Integration",
+      "operatingSystem":"Web (HighLevel / GoHighLevel CRM)",
+      "url":"https://leadconnectorbridge.com/docusign/real-estate",
+      "description":"White-label DocuSign e-signature integration for real estate teams running on the HighLevel (GoHighLevel) CRM. Get listing and buyer agreements signed faster, with status on every contact.",
+      "isPartOf":{"@id":"https://leadconnectorbridge.com/docusign/#app"},
+      "publisher":{"@id":"https://leadconnectorbridge.com/#organization"}
+    },
+    {
+      "@type":"BreadcrumbList",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Home","item":"https://leadconnectorbridge.com/"},
+        {"@type":"ListItem","position":2,"name":"DocuSign Integration","item":"https://leadconnectorbridge.com/docusign/"},
+        {"@type":"ListItem","position":3,"name":"Real Estate","item":"https://leadconnectorbridge.com/docusign/real-estate"}
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
 <nav><div class="wrap nav-in">
-  <div class="brand">
-    <span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="1.7" opacity="0.55"><path d="M11 2.5H5.5A1.5 1.5 0 0 0 4 4v11"/><path d="M11 2.5V6h3.5"/></g><g stroke-width="1.9"><circle cx="13.5" cy="11.5" r="5.5"/><path d="M10.6 11.5c.5-.9 1.1-.9 1.6 0s1.1.9 1.6 0 1-.8 1.5-.2"/><path d="M9.8 16.4l-1.2 4.6 4.9-2.3 4.9 2.3-1.2-4.6"/></g></svg></span>
-    <div><div class="nm">Docusign Integration</div><div class="by">by LCBridge</div></div>
+  <div class="brand" aria-label="DocuSign integration by LC Bridge">
+    <span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path stroke-width="1.9" d="M21 11.1V12a9 9 0 1 1-5.3-8.2"/><path stroke-width="2.3" d="M7.8 11.6l3.4 3.4L21 5.2"/></svg></span>
+    <div><div class="nm">DocuSign</div><div class="by">integration · by LC Bridge</div></div>
     <span class="for">for HighLevel platforms</span>
   </div>
   <div class="nav-links"><a href="#how">How it works</a><a href="#brand">Your brand</a><a href="#automation">Automation</a><a href="#roadmap">Roadmap</a><a href="#pricing">Pricing</a></div>
   <div class="nav-cta"><a href="#apply" class="btn btn-primary">Shape the roadmap</a></div>
 </div></nav>
 
+<style>.crumb{max-width:1140px;margin:0 auto;padding:16px 24px 0}.crumb ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:13px;color:var(--ink-3)}.crumb a{color:var(--ink-3);font-weight:500;text-decoration:none}.crumb a:hover{color:var(--brand)}.crumb li[aria-current]{color:var(--ink);font-weight:600}.crumb .sep{color:#C9CDD6}</style>
+<nav class="crumb" aria-label="Breadcrumb"><ol>
+<li><a href="/">Home</a></li>
+<li class="sep" aria-hidden="true">/</li>
+<li><a href="/docusign/">DocuSign Integration</a></li>
+<li class="sep" aria-hidden="true">/</li>
+<li aria-current="page">Real Estate</li>
+</ol></nav>
+
 <!-- HERO -->
 <header class="hero"><div class="wrap">
   <span class="eyebrow"><span class="dot"></span>For HighLevel platforms serving real estate</span>
-  <h1>Give your customers live Docusign tracking — <span class="hl">inside your platform, in your brand.</span></h1>
-  <p class="sub">Your real estate customers live in your CRM — but to chase a Docusign signature, they leave it. We embed live envelope status, a stall worklist, and one-tap follow-up right inside your white-labeled HighLevel platform. Fully your brand, with nothing for you to build.</p>
+  <h1>DocuSign for real estate, inside HighLevel — <span class="hl">agreements signed faster.</span></h1>
+  <p class="sub">Your real estate customers live in your CRM — but to chase a DocuSign signature, they leave it. We embed live envelope status, a stall worklist, and one-tap follow-up right inside your white-labeled HighLevel platform. Fully your brand, with nothing for you to build.</p>
   <div class="hero-cta">
     <a href="#apply" class="btn btn-primary btn-lg">Shape the roadmap with us</a>
     <a href="#how" class="btn btn-ghost btn-lg">See how it works</a>
@@ -463,7 +521,7 @@ nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-f
             <div class="it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg>Automation</div>
             <div class="app">
               <span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="1.7" opacity="0.55"><path d="M11 2.5H5.5A1.5 1.5 0 0 0 4 4v11"/><path d="M11 2.5V6h3.5"/></g><g stroke-width="1.9"><circle cx="13.5" cy="11.5" r="5.5"/><path d="M10.6 11.5c.5-.9 1.1-.9 1.6 0s1.1.9 1.6 0 1-.8 1.5-.2"/><path d="M9.8 16.4l-1.2 4.6 4.9-2.3 4.9 2.3-1.2-4.6"/></g></svg></span>
-              <div><div class="lbl">Installed app</div><div class="nm">Docusign Integration</div></div>
+              <div><div class="lbl">Installed app</div><div class="nm">DocuSign Integration</div></div>
               <span class="bdg">6</span>
             </div>
           </div>
@@ -488,11 +546,11 @@ nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-f
             <div class="bub me">Of course — happy to walk through it.</div>
           </div>
 
-          <!-- HL pane (Docusign Integration) -->
+          <!-- HL pane (DocuSign Integration) -->
           <div class="hp">
             <div class="hp-head">
               <span class="g"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="1.7" opacity="0.55"><path d="M11 2.5H5.5A1.5 1.5 0 0 0 4 4v11"/><path d="M11 2.5V6h3.5"/></g><g stroke-width="1.9"><circle cx="13.5" cy="11.5" r="5.5"/><path d="M10.6 11.5c.5-.9 1.1-.9 1.6 0s1.1.9 1.6 0 1-.8 1.5-.2"/><path d="M9.8 16.4l-1.2 4.6 4.9-2.3 4.9 2.3-1.2-4.6"/></g></svg></span>
-              <b>Docusign Integration</b><span class="ct">3 agreements</span>
+              <b>DocuSign Integration</b><span class="ct">3 agreements</span>
               <span class="x"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span>
             </div>
             <div class="hp-body">
@@ -517,7 +575,7 @@ nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-f
                   <div class="aib"><span class="sp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3z"/></svg></span><div><div class="k">AI Read</div><div class="tx">Viewed repeatedly without signing — likely a question on terms. Try a call.</div></div></div>
                   <div class="ag-actions">
                     <button class="btn-send"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>Send reminder</button>
-                    <div class="subact"><span class="b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>Copy link</span><span class="b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/></svg>View in Docusign</span></div>
+                    <div class="subact"><span class="b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>Copy link</span><span class="b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/></svg>View in DocuSign</span></div>
                     <div class="trail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>Show activity trail · 7 events</div>
                   </div>
                 </div>
@@ -543,13 +601,23 @@ nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-f
   </div>
 </div></header>
 
+<!-- DEFINITION (AEO) -->
+<section style="background:var(--bg-soft);padding:64px 0">
+  <div class="wrap">
+    <div style="max-width:880px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:18px;padding:32px 34px;box-shadow:var(--shadow)">
+      <h2 style="font-size:23px;font-weight:800;letter-spacing:-.02em;line-height:1.2;margin-bottom:12px">What is DocuSign for real estate on HighLevel?</h2>
+      <p style="font-size:17px;line-height:1.6;color:var(--ink-2)"><b style="color:var(--ink)">DocuSign for real estate by LC Bridge</b> brings DocuSign e-signatures into the HighLevel (GoHighLevel) CRM for real estate teams. Send listing agreements, buyer representation, and disclosure packets straight from your workflows, auto-fill them from the contact record, and track live signing status on every deal — so your agents close without leaving the platform. It installs white-labeled inside your sub-account, with no code. See also <a href="/docusign/insurance" style="color:var(--brand);font-weight:600">DocuSign for insurance</a> and the <a href="/docusign/" style="color:var(--brand);font-weight:600">DocuSign integration overview</a>.</p>
+    </div>
+  </div>
+</section>
+
 <!-- PROBLEM -->
 <section class="problem"><div class="wrap">
   <h2>Your customers are chasing signatures outside your CRM.</h2>
-  <p>Every agency on your platform runs on Docusign — but the moment they send one, they tab out of your CRM to check "did they sign yet?" It's the gap your customers feel every day, and the one thing a white-labeled HighLevel platform can't show them natively. The signing isn't the hard part. The chasing is — and right now it happens outside your product.</p>
+  <p>Every agency on your platform runs on DocuSign — but the moment they send one, they tab out of your CRM to check "did they sign yet?" It's the gap your customers feel every day, and the one thing a white-labeled HighLevel platform can't show them natively. The signing isn't the hard part. The chasing is — and right now it happens outside your product.</p>
   <div class="pstats">
-    <div class="pstat"><div class="n">Your customers leave your CRM</div><div class="d">To check a signature, they tab out to Docusign — time spent outside the product you want them living in.</div></div>
-    <div class="pstat"><div class="n">A blind spot in your platform</div><div class="d">HighLevel can't surface Docusign envelope status on its own, so your CRM has a gap your customers run into daily.</div></div>
+    <div class="pstat"><div class="n">Your customers leave your CRM</div><div class="d">To check a signature, they tab out to DocuSign — time spent outside the product you want them living in.</div></div>
+    <div class="pstat"><div class="n">A blind spot in your platform</div><div class="d">HighLevel can't surface DocuSign envelope status on its own, so your CRM has a gap your customers run into daily.</div></div>
     <div class="pstat"><div class="n">A reason to look elsewhere</div><div class="d">Every workflow that happens outside your platform is a crack a competitor's add-on can pry open.</div></div>
   </div>
 </div></section>
@@ -572,7 +640,7 @@ nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-f
     <div class="ftext">
       <div class="fnum">01 — SEE IT</div>
       <h3>Every agreement, live on the contact.</h3>
-      <p>Sent, viewed, signed — Docusign status shows up on the HighLevel contact in real time, with the full signing timeline, who's holding it up, and an AI read of what's going on.</p>
+      <p>Sent, viewed, signed — DocuSign status shows up on the HighLevel contact in real time, with the full signing timeline, who's holding it up, and an AI read of what's going on.</p>
       <div class="fchecks">
         <div class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Real-time status, right where your customers already work</div>
         <div class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>The full timeline and signer status on every agreement</div>
@@ -605,7 +673,7 @@ nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-f
       <div class="surface">
         <div class="surface-lbl"><span class="nb">1</span><b>The worklist</b><span class="sub">· sweep everything stuck</span></div>
         <div class="card">
-          <div class="card-bar"><i></i><i></i><i></i><span class="t">Docusign Integration · Worklist</span></div>
+          <div class="card-bar"><i></i><i></i><i></i><span class="t">DocuSign Integration · Worklist</span></div>
           <div class="wl-tabs"><span class="tab on">Worklist</span><span class="tab">All agreements</span><span class="tab">Review queue</span><span class="tab">Settings</span></div>
           <div class="wl-sub"><span class="s on">Needs attention <span class="c">6</span></span><span class="s">All agreements <span class="c" style="background:var(--bg-soft);color:var(--ink-3);border-color:var(--line)">19</span></span></div>
           <div class="wl-body">
@@ -630,7 +698,7 @@ nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-f
                 <div class="aib"><span class="sp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3z"/></svg></span><div><div class="k">AI Read</div><div class="tx">Viewed repeatedly without signing — likely a question on terms. Try a call.</div></div></div>
                 <div class="ag-actions">
                   <button class="btn-send"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>Send reminder</button>
-                  <div class="subact"><span class="b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>Copy link</span><span class="b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/></svg>View in Docusign</span></div>
+                  <div class="subact"><span class="b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>Copy link</span><span class="b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/></svg>View in DocuSign</span></div>
                 </div>
               </div>
             </div>
@@ -646,7 +714,7 @@ nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-f
     <div class="ftext">
       <div class="fnum">03 — CLOSE IT</div>
       <h3>Close it in one tap — from either place.</h3>
-      <p>Tap "Nudge" in the worklist or "Send reminder" on the contact — either way, AI drafts a reminder that sends from your own number and logs to the conversation. The buyer hears from <em>you</em>, not a Docusign address.</p>
+      <p>Tap "Nudge" in the worklist or "Send reminder" on the contact — either way, AI drafts a reminder that sends from your own number and logs to the conversation. The buyer hears from <em>you</em>, not a DocuSign address.</p>
       <div class="fchecks">
         <div class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Sent from your brand and your number</div>
         <div class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Drafted by AI, logged to the contact's conversation</div>
@@ -708,9 +776,9 @@ nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-f
   <div class="sec-head"><span class="eyebrow"><span class="dot"></span>Why this</span><h2>Not a Zap. Not a swap.</h2><p>Why your customers can't solve this themselves — and why it belongs in your platform.</p></div>
   <div class="why-grid">
     <div class="why-card why-x"><h4><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span>Zapier &amp; middleware</h4><p>A Zap fires once and vanishes — no status on the contact, no worklist, no way to nudge. And it pushes your customers into a third tool, out of your platform.</p></div>
-    <div class="why-card why-x"><h4><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span>Switching off Docusign</h4><p>Your customers' carriers, brokers, and clients already run on Docusign. Asking them to re-paper onto another tool is a non-starter — and not something your platform should force.</p></div>
+    <div class="why-card why-x"><h4><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span>Switching off DocuSign</h4><p>Your customers' carriers, brokers, and clients already run on DocuSign. Asking them to re-paper onto another tool is a non-starter — and not something your platform should force.</p></div>
   </div>
-  <div class="why-card why-y" style="margin-top:20px"><h4><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg></span>Docusign, embedded in your platform</h4><p>Your customers keep Docusign exactly as they use it today. You just give them the visibility and chase loop inside your CRM — embedded, branded as yours, with nothing for them (or you) to rebuild.</p></div>
+  <div class="why-card why-y" style="margin-top:20px"><h4><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg></span>DocuSign, embedded in your platform</h4><p>Your customers keep DocuSign exactly as they use it today. You just give them the visibility and chase loop inside your CRM — embedded, branded as yours, with nothing for them (or you) to rebuild.</p></div>
 </div></section>
 
 <!-- ROADMAP -->
@@ -723,7 +791,7 @@ nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-f
   <div class="road-grid">
     <div class="road-col">
       <span class="road-tag now">In development · the MVP</span>
-      <div class="road-item d-now"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Real-time Docusign status on every contact</div>
+      <div class="road-item d-now"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Real-time DocuSign status on every contact</div>
       <div class="road-item d-now"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>The stall worklist with AI reads</div>
       <div class="road-item d-now"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>One-tap reminders from your number</div>
       <div class="road-item d-now"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Native HighLevel workflow triggers</div>
@@ -752,11 +820,11 @@ nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-f
   <div class="price-grid">
     <div class="price-card">
       <div class="price-tag">Founding partner · 64% off</div>
-      <div style="font-size:15px;font-weight:700;color:var(--brand)">Docusign Integration</div>
+      <div style="font-size:15px;font-weight:700;color:var(--brand)">DocuSign Integration</div>
       <div class="price-amt"><span class="was">$24.95</span><span class="big">$8.95</span><span class="per">/ mo per active sub-account</span></div>
       <div class="price-alt">64% off our $24.95 standard rate — locked for the life of the partnership.</div>
       <div class="price-list">
-        <div class="li"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Real-time Docusign status on every contact</div>
+        <div class="li"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Real-time DocuSign status on every contact</div>
         <div class="li"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Daily "needs attention" worklist with AI reads</div>
         <div class="li"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>One-tap reminders from your own number</div>
         <div class="li"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Auto-import — connect once, no setup</div>
@@ -799,26 +867,30 @@ nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-f
 <footer><div class="wrap">
   <div class="ft-top">
     <div class="ft-brand">
-      <a class="ft-lock" href="/lcbridge.html"><span class="ft-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16v-4"/><path d="M21 16v-4"/><path d="M3 12c0-4 4-6 9-6s9 2 9 6"/><path d="M7 12v4"/><path d="M12 10v6"/><path d="M17 12v4"/></svg></span><span class="ft-wm">LCBridge</span></a>
+      <a class="ft-lock" href="/"><span class="ft-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path stroke-width="1.7" d="M14 2.75H6.5A1.5 1.5 0 0 0 5 4.25V19.75A1.5 1.5 0 0 0 6.5 21.25H17.5A1.5 1.5 0 0 0 19 19.75V7.75Z"/><path stroke-width="1.7" d="M14 2.75V7.75H19"/><path stroke-width="2" d="M7.9 15.5c.9-1.9 1.9-1.6 2.3.1c.3 1.3 1 1.3 1.4-.1c.5-1.6 1.6-1.4 2.1.3"/><path stroke-width="1.7" d="M8.2 18.5h7.6"/></svg></span><span class="ft-wm">LC Bridge</span></a>
       <p class="ft-tag">Deep, white-labeled integrations for the HighLevel ecosystem — built by people who helped build the platform.</p>
     </div>
     <div class="ft-links">
       <div class="ft-col">
-        <h4>Company</h4>
-        <a href="/lcbridge.html">About LCBridge</a>
-        <a href="/lcbridge.html#why">Why us</a>
-        <a href="/lcbridge.html#build">What we build</a>
-        <a href="/lcbridge.html#products">Products</a>
+        <h4>Products</h4>
+        <a href="/docusign/">DocuSign integration</a>
+        <a href="/google-sheets/">Google Sheets integration</a>
       </div>
       <div class="ft-col">
-        <h4>Get in touch</h4>
+        <h4>DocuSign</h4>
+        <a href="/docusign/insurance">For insurance</a>
+        <a href="/docusign/real-estate">For real estate</a>
+      </div>
+      <div class="ft-col">
+        <h4>Company</h4>
+        <a href="/">About LC Bridge</a>
         <a href="mailto:hello@leadconnectorbridge.com">hello@leadconnectorbridge.com</a>
         <a href="#apply">Book a call</a>
       </div>
     </div>
   </div>
-  <p class="ft-legal">Docusign Integration is built by LCBridge — we build white-labeled integrations that HighLevel platforms embed as their own. An independent product that works with Docusign® and HighLevel®, and is not affiliated with, endorsed by, or sponsored by either. All trademarks are the property of their respective owners.</p>
-  <p class="ft-bottom">© 2026 LCBridge. All rights reserved.</p>
+  <p class="ft-legal">DocuSign Integration is built by LC Bridge — we build white-labeled integrations that HighLevel platforms embed as their own. An independent product that works with DocuSign® and HighLevel®, and is not affiliated with, endorsed by, or sponsored by either. All trademarks are the property of their respective owners.</p>
+  <p class="ft-bottom">© 2026 LC Bridge. All rights reserved.</p>
 </div></footer>
 
 
