@@ -165,7 +165,8 @@ footer{background:#080B16;color:var(--on-dark-mut);padding:56px 0 40px}
 .foot-social a{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:10px;border:1px solid rgba(255,255,255,.12);color:var(--on-dark-mut);transition:color .15s,border-color .15s,background .15s}
 .foot-social a:hover{color:#fff;border-color:rgba(255,255,255,.28);background:rgba(255,255,255,.06)}
 .foot-social svg{width:17px;height:17px}
-.foot-links{display:flex;gap:54px;flex-wrap:wrap}
+.foot-links{display:flex;gap:54px;flex-wrap:wrap;text-align:right}
+@media(max-width:640px){.foot-links{text-align:center;justify-content:center;width:100%}}
 .foot-col h4{font-family:var(--font-mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:#fff;margin:0 0 14px;font-weight:500}
 .foot-col a,.foot-col span{display:block;font-size:14.5px;margin-bottom:9px;color:var(--on-dark-mut);transition:color .15s}
 .foot-col a:hover{color:#fff}
@@ -270,7 +271,7 @@ a.prod-card:hover .plink{gap:10px}
     <span class="wm">LC Bridge</span>
   </a>
   <div class="nav-links">
-    <a href="#why">Why us</a>
+    <a href="#why">About Us</a>
     <a href="/product/">Products</a>
     <a href="/blog/">Blog</a>
     <a href="#contact">Contact</a>
@@ -441,12 +442,7 @@ a.prod-card:hover .plink{gap:10px}
       </div>
       <div class="foot-col">
         <h4>Resources</h4>
-        <a href="/blog/gohighlevel-integrations/">GoHighLevel integrations</a>
-      </div>
-      <div class="foot-col">
-        <h4>Company</h4>
-        <a href="#why">Why us</a>
-        <a href="/product/">Products</a>
+        <a href="/blog/">Blog</a>
       </div>
       <div class="foot-col">
         <h4>Get in touch</h4>
