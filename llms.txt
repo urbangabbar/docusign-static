@@ -14,6 +14,12 @@ LC Bridge, legally Lead Connector Bridge, is an integration vendor for the HighL
 - [DocuSign for Insurance](https://leadconnectorbridge.com/product/docusign-integration/insurance): E-signature workflows for insurance agencies running on HighLevel (applications, ACORD-style forms).
 - [DocuSign for Real Estate](https://leadconnectorbridge.com/product/docusign-integration/real-estate): E-signature workflows for real estate teams running on HighLevel (listing and buyer agreements).
 
+## Guides
+
+- [GoHighLevel Integrations: The Complete Guide](https://leadconnectorbridge.com/blog/gohighlevel-integrations/): What GoHighLevel integrations are, native vs Zapier, and the full LC Bridge integration directory for the HighLevel CRM.
+- [The 4 Levels of CRM Integration](https://leadconnectorbridge.com/blog/four-levels-of-integration/): A See–Know–Do framework for telling a deep, native integration from a Zapier bolt-on. Covers native integration vs Zapier and integration depth.
+- [An AI Agent Can't Chase a Signature It Can't See](https://leadconnectorbridge.com/blog/ai-agents-need-deep-integrations/): Why AI-agent readiness (agentic CRM, GoHighLevel AI agent) depends on how deep your CRM integrations go.
+
 ## About
 
 - [Homepage](https://leadconnectorbridge.com/): Company overview, product lineup, and contact.
