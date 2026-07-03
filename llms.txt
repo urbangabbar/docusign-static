@@ -6,13 +6,13 @@ LC Bridge, legally Lead Connector Bridge, is an integration vendor for the HighL
 
 ## Products
 
-- [DocuSign Integration for HighLevel](https://leadconnectorbridge.com/docusign/): Send, track, and sync DocuSign e-signature envelopes from inside HighLevel/LeadConnector workflows. Auto-fills documents from contact fields; signed status triggers workflows. White-label, no code.
-- [Google Sheets Integration for HighLevel](https://leadconnectorbridge.com/google-sheets/): Two-way real-time sync between HighLevel contacts/records and Google Sheets. Launching soon; early access open.
+- [DocuSign Integration for HighLevel](https://leadconnectorbridge.com/product/docusign-integration/): Send, track, and sync DocuSign e-signature envelopes from inside HighLevel/LeadConnector workflows. Auto-fills documents from contact fields; signed status triggers workflows. White-label, no code.
+- [Google Sheets Integration for HighLevel](https://leadconnectorbridge.com/product/google-sheets-integration/): Two-way real-time sync between HighLevel contacts/records and Google Sheets. Launching soon; early access open.
 
 ## Industry guides
 
-- [DocuSign for Insurance](https://leadconnectorbridge.com/docusign/insurance): E-signature workflows for insurance agencies running on HighLevel (applications, ACORD-style forms).
-- [DocuSign for Real Estate](https://leadconnectorbridge.com/docusign/real-estate): E-signature workflows for real estate teams running on HighLevel (listing and buyer agreements).
+- [DocuSign for Insurance](https://leadconnectorbridge.com/product/docusign-integration/insurance): E-signature workflows for insurance agencies running on HighLevel (applications, ACORD-style forms).
+- [DocuSign for Real Estate](https://leadconnectorbridge.com/product/docusign-integration/real-estate): E-signature workflows for real estate teams running on HighLevel (listing and buyer agreements).
 
 ## About
 
