@@ -7,7 +7,7 @@
    only — it never needs to match the product UI.
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 :root{
   /* ---- Surfaces ---- */
@@ -48,7 +48,7 @@
   --lcb-draft-fg:#344054; --lcb-draft-bg:#F2F4F7; --lcb-draft-dot:#98A2B3; --lcb-draft-line:#EAECF0;
 
   /* ---- Type ---- */
-  --lcb-font-display:'Inter Tight',system-ui,sans-serif;
+  --lcb-font-display:'Poppins',system-ui,sans-serif;
   --lcb-font-text:'Inter',system-ui,sans-serif;
   --lcb-font-mono:'JetBrains Mono',ui-monospace,monospace;
 
