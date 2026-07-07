@@ -27,15 +27,14 @@
     }
 
     var frame = modal.querySelector(".modal-frame");
-    var loaded = false;
+    var baseSrc = frame.getAttribute("data-src") || "";
     var lastFocus = null;
 
-    function open(e) {
+    function open(e, trigger) {
       if (e) e.preventDefault();
-      if (!loaded) {
-        var src = frame.getAttribute("data-src");
-        if (src) { frame.src = src; loaded = true; }
-      }
+      var intent = trigger && trigger.getAttribute("data-intent");
+      var src = baseSrc + (intent ? (baseSrc.indexOf("?") > -1 ? "&" : "?") + "intent=" + encodeURIComponent(intent) : "");
+      if (baseSrc && frame.getAttribute("src") !== src) { frame.src = src; }
       lastFocus = document.activeElement;
       modal.classList.add("open");
       modal.setAttribute("aria-hidden", "false");
@@ -53,7 +52,7 @@
 
     document.addEventListener("click", function (e) {
       var trigger = e.target.closest("[data-book]");
-      if (trigger) { open(e); return; }
+      if (trigger) { open(e, trigger); return; }
       if (e.target.closest("[data-book-close]")) { close(); return; }
       if (e.target === modal) { close(); }
     });
