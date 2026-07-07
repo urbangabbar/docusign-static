@@ -271,6 +271,20 @@
   .ft-col a{display:block;font-size:14.5px;margin-bottom:9px;color:var(--lcb-on-dark-mut)}.ft-col a:hover{color:#fff}
   .ft-legal{margin-top:24px;font-size:12.5px;line-height:1.7;color:#6B7488;max-width:820px}
   .ft-bot{margin-top:14px;font-size:12.5px;color:#6B7488}
+
+  /* native vs middleware comparison */
+  .cmp-wrap{overflow-x:auto;margin-top:36px;border:1px solid var(--lcb-line);border-radius:16px}
+  .cmp{width:100%;min-width:660px;border-collapse:collapse;font-size:15px;background:var(--lcb-canvas)}
+  .cmp th,.cmp td{text-align:left;padding:15px 18px;border-bottom:1px solid var(--lcb-line);vertical-align:top;line-height:1.5}
+  .cmp thead th{font-family:var(--lcb-font-display);font-weight:700;font-size:13.5px;letter-spacing:-.01em;background:var(--lcb-soft);color:var(--lcb-ink)}
+  .cmp thead .cmp-us{color:var(--lcb-primary)}
+  .cmp tbody th{font-weight:600;color:var(--lcb-ink);width:26%}
+  .cmp tbody td{color:var(--lcb-ink-2)}
+  .cmp tbody td:nth-child(2){background:color-mix(in srgb,var(--lcb-primary) 6%,var(--lcb-canvas));color:var(--lcb-ink);font-weight:500}
+  .cmp tr:last-child th,.cmp tr:last-child td{border-bottom:0}
+  .cmp-note{max-width:720px;margin-top:22px;font-size:15px;color:var(--lcb-ink-3);line-height:1.65}
+  .cmp-note a{color:var(--lcb-primary);font-weight:600}
+  @media(max-width:560px){.cmp{font-size:14px}.cmp th,.cmp td{padding:12px 13px}}
 </style>
 </head>
 <body class="lcb-body">
@@ -556,6 +570,35 @@
     <div class="sm">Locked for the life of the partnership. We're taking on a small group of founding partners who help shape what ships next.</div>
     <a href="#apply" class="lcb-btn lcb-btn--primary" style="width:100%;justify-content:center">Talk about agency pricing</a>
   </div>
+</div></section>
+
+<!-- COMPARISON: native vs middleware -->
+<section class="lcb-section lcb-section--soft" id="native-vs-middleware"><div class="lcb-wrap">
+  <div class="sh" style="max-width:760px">
+    <span class="lcb-eyebrow"><span class="dot"></span>Native vs middleware</span>
+    <h2 class="lcb-h2">Why a native HighLevel DocuSign integration beats a Zapier bolt-on.</h2>
+    <p class="lcb-lede">You can wire DocuSign to HighLevel with Zapier, Make, or Pabbly — but that is a one-way sync: it passes a single field between two apps and stops. A native HighLevel DocuSign integration keeps two-way, real-time state on the contact record and inside your workflows, so a signed document actually moves the deal. Here is the difference, line by line.</p>
+  </div>
+  <div class="cmp-wrap">
+    <table class="cmp">
+      <thead>
+        <tr>
+          <th scope="col" class="cmp-dim">What matters</th>
+          <th scope="col" class="cmp-us">LC Bridge &mdash; native</th>
+          <th scope="col" class="cmp-them">Zapier-style middleware</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">Where it lives</th><td>On the HighLevel contact record &amp; inside your workflows</td><td>An external tool, outside HighLevel</td></tr>
+        <tr><th scope="row">When a document is signed</th><td>Advances the pipeline, sends follow-ups, and starts onboarding automatically</td><td>Passes the event to another app &mdash; no workflow state on the record</td></tr>
+        <tr><th scope="row">Data sync</th><td>Two-way, real-time sync &mdash; signed status writes back to the contact</td><td>One-way, one-step sync &mdash; passes a field, not workflow state</td></tr>
+        <tr><th scope="row">Branding</th><td>Fully white-labeled to your brand</td><td>Your customers can see the third-party tool</td></tr>
+        <tr><th scope="row">Pricing</th><td>Flat, per active sub-account</td><td>Metered per task / operation &mdash; grows with volume</td></tr>
+        <tr><th scope="row">Setup &amp; upkeep</th><td>Installs in your sub-account, no code</td><td>Build a scenario per workflow, then keep it running</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="cmp-note">The hidden cost of the bolt-on approach: teams toggle between apps about <a href="https://hbr.org/2022/08/how-much-time-and-energy-do-we-waste-toggling-between-applications" target="_blank" rel="noopener">1,200 times a day</a> (Harvard Business Review). A native <strong>DocuSign integration for GoHighLevel</strong> ends the toggle &mdash; signing happens on the record your team already works from.</p>
 </div></section>
 
 <!-- FAQ -->

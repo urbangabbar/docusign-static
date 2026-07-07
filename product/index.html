@@ -198,6 +198,21 @@ a.prod-card:hover .plink{gap:10px}
 .prod-all .plink{font-size:16px}
 .prod-all-note{font-size:14.5px;color:var(--ink-3)}
 .prod-all-note a{color:var(--brand);font-weight:600}
+
+/* products header redesign */
+.prodhead{display:grid;grid-template-columns:1.4fr 1fr;gap:52px;align-items:center;max-width:1080px}
+@media(max-width:980px){.prodhead{grid-template-columns:1fr;gap:34px}}
+.prodhead-h1{color:#fff;font-size:clamp(1.5rem,2.7vw,1.9rem);margin-top:14px;font-weight:700;letter-spacing:-.015em;line-height:1.12;white-space:nowrap}
+@media(max-width:980px){.prodhead-h1{white-space:normal}}
+.hl-blue{color:#8E9BFF}
+.prodhead-sub{color:#fff;margin-top:18px;font-size:1.1rem;font-weight:500;line-height:1.5;max-width:520px}
+.prodhead-sub2{color:var(--on-dark-mut);margin-top:8px;font-size:.98rem;line-height:1.55;max-width:520px}
+.prodhead-r-h{display:block;font-family:var(--font-mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:#8E9BFF;margin-bottom:8px}
+.callout{display:flex;gap:13px;align-items:flex-start;padding:15px 0;border-top:1px solid rgba(255,255,255,.1)}
+.callout-ic{width:36px;height:36px;flex:0 0 auto;border-radius:10px;background:rgba(142,155,255,.14);border:1px solid rgba(142,155,255,.25);display:flex;align-items:center;justify-content:center;color:#8E9BFF}
+.callout-ic svg{width:18px;height:18px}
+.callout b{display:block;color:#fff;font-size:14.5px;font-weight:600;margin-bottom:3px}
+.callout span{display:block;color:var(--on-dark-mut);font-size:13px;line-height:1.5}
 </style>
 </head>
 <body>
@@ -217,10 +232,19 @@ a.prod-card:hover .plink{gap:10px}
 </div></nav>
 
 <header class="section section--dark on-dark section--contact" style="padding-top:132px">
-  <div class="wrap section-head" style="max-width:760px;position:relative;z-index:1">
-    <span class="eyebrow eyebrow--light">Products</span>
-    <h1 style="color:#fff;font-size:clamp(2.1rem,4.6vw,3.2rem);margin-top:14px;font-weight:700;letter-spacing:-.02em;line-height:1.08">Integrations that live inside HighLevel.</h1>
-    <p class="lede" style="color:var(--on-dark-mut)">We build deep, white-labeled integrations for the HighLevel ecosystem — so your customers act on everything without leaving the CRM. Two are underway; more on the way.</p>
+  <div class="wrap prodhead" style="position:relative;z-index:1">
+    <div class="prodhead-l">
+      <span class="eyebrow eyebrow--light">Products</span>
+      <h1 class="prodhead-h1">Integrations that live inside <span class="hl-blue">HighLevel</span>.</h1>
+      <p class="prodhead-sub">LC Bridge builds native, white-label integrations for the HighLevel CRM.</p>
+      <p class="prodhead-sub2">Installed in your sub-account, working right on the contact record, and triggered by your workflows.</p>
+    </div>
+    <div class="prodhead-r">
+      <span class="prodhead-r-h">The native difference</span>
+      <div class="callout"><span class="callout-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2z"/><path d="m9 14 2 2 4-4"/></svg></span><div><b>On the contact record</b><span>Status and actions live where your team already works &mdash; never a separate tab.</span></div></div>
+      <div class="callout"><span class="callout-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m17 2 4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></span><div><b>Two-way, real-time sync</b><span>Data moves both directions instantly, and signed events fire your workflows.</span></div></div>
+      <div class="callout"><span class="callout-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41 13.42 20.58a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><circle cx="7.5" cy="7.5" r="1.2"/></svg></span><div><b>White-labeled to your brand</b><span>Your colors, naming, and icons &mdash; your customers never see us.</span></div></div>
+    </div>
   </div>
 </header>
 
