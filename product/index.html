@@ -87,7 +87,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:60;background:rgba(11,17,32,.72)
 .bridgeart{animation:artIn .9s .15s ease both}
 
 /* SECTIONS */
-.section{padding:clamp(66px,9vw,108px) 0}
+.section{padding:clamp(52px,6.5vw,84px) 0}
 .section--soft{background:var(--soft)}
 .section--dark{background:var(--dark);color:var(--on-dark)}
 .section-head{max-width:680px}
@@ -202,17 +202,32 @@ a.prod-card:hover .plink{gap:10px}
 /* products header redesign */
 .prodhead{display:grid;grid-template-columns:1.4fr 1fr;gap:52px;align-items:center;max-width:1080px}
 @media(max-width:980px){.prodhead{grid-template-columns:1fr;gap:34px}}
-.prodhead-h1{color:#fff;font-size:clamp(1.5rem,2.7vw,1.9rem);margin-top:14px;font-weight:700;letter-spacing:-.015em;line-height:1.12;white-space:nowrap}
+.prodhead-h1{color:#fff;font-size:clamp(2.1rem,3.8vw,2.95rem);font-weight:700;letter-spacing:-.02em;line-height:1.1}
 @media(max-width:980px){.prodhead-h1{white-space:normal}}
 .hl-blue{color:#8E9BFF}
 .prodhead-sub{color:#fff;margin-top:18px;font-size:1.1rem;font-weight:500;line-height:1.5;max-width:520px}
 .prodhead-sub2{color:var(--on-dark-mut);margin-top:8px;font-size:.98rem;line-height:1.55;max-width:520px}
 .prodhead-r-h{display:block;font-family:var(--font-mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:#8E9BFF;margin-bottom:8px}
-.callout{display:flex;gap:13px;align-items:flex-start;padding:15px 0;border-top:1px solid rgba(255,255,255,.1)}
-.callout-ic{width:36px;height:36px;flex:0 0 auto;border-radius:10px;background:rgba(142,155,255,.14);border:1px solid rgba(142,155,255,.25);display:flex;align-items:center;justify-content:center;color:#8E9BFF}
-.callout-ic svg{width:18px;height:18px}
-.callout b{display:block;color:#fff;font-size:14.5px;font-weight:600;margin-bottom:3px}
-.callout span{display:block;color:var(--on-dark-mut);font-size:13px;line-height:1.5}
+.callout{display:flex;gap:12px;align-items:flex-start;padding:13px 0;border-top:1px solid rgba(255,255,255,.1)}
+.callout-ic{flex:0 0 auto;display:flex;align-items:center;justify-content:center;color:#8E9BFF;margin-top:1px}
+.callout-ic svg{width:21px;height:21px}
+.callout b{display:block;color:#fff;font-size:14px;font-weight:600;margin-bottom:3px}
+.callout span{display:block;color:var(--on-dark-mut);font-size:12.5px;line-height:1.5}
+
+/* products page — card layout + status + de-flatten header */
+.prod-top{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.prod-card{padding:26px}
+.prod-glyph{width:48px;height:48px;flex:0 0 auto}
+.prod-glyph svg{width:26px;height:26px}
+.prod-card h3{margin:0;font-size:1.3rem}
+.prod-hd{display:flex;flex-direction:column;gap:4px}
+.prod-status{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;font-weight:600}
+.prod-status .d{width:7px;height:7px;border-radius:50%}
+.prod-status.live{color:#067647}
+.prod-status.live .d{background:#12B76A;box-shadow:0 0 0 3px rgba(18,183,106,.18)}
+.prod-status.soon{color:#B45309}
+.prod-status.soon .d{background:#F59E0B;box-shadow:0 0 0 3px rgba(245,158,11,.18)}
+.section--dark.section--contact::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.6;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:44px 44px;-webkit-mask-image:radial-gradient(95% 85% at 50% 15%,#000,transparent 72%);mask-image:radial-gradient(95% 85% at 50% 15%,#000,transparent 72%)}
 </style>
 </head>
 <body>
@@ -228,20 +243,18 @@ a.prod-card:hover .plink{gap:10px}
     <a href="/blog/">Blog</a>
     <a href="/#contact">Contact</a>
   </div>
-  <div><a href="/#contact" class="btn btn-primary">Book a call</a></div>
+  <div><a href="/#contact" class="btn btn-primary" data-book>Book a call</a></div>
 </div></nav>
 
 <header class="section section--dark on-dark section--contact" style="padding-top:132px">
   <div class="wrap prodhead" style="position:relative;z-index:1">
     <div class="prodhead-l">
-      <span class="eyebrow eyebrow--light">Products</span>
-      <h1 class="prodhead-h1">Integrations that live inside <span class="hl-blue">HighLevel</span>.</h1>
-      <p class="prodhead-sub">LC Bridge builds native, white-label integrations for the HighLevel CRM.</p>
-      <p class="prodhead-sub2">Installed in your sub-account, working right on the contact record, and triggered by your workflows.</p>
+      <h1 class="prodhead-h1">Integrations that live inside <span class="hl-blue">HighLevel</span></h1>
+      <p class="prodhead-sub">Installed in your sub-account, embedded on the contact record, and triggered by your workflows.</p>
     </div>
     <div class="prodhead-r">
       <span class="prodhead-r-h">The native difference</span>
-      <div class="callout"><span class="callout-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2z"/><path d="m9 14 2 2 4-4"/></svg></span><div><b>On the contact record</b><span>Status and actions live where your team already works &mdash; never a separate tab.</span></div></div>
+      <div class="callout"><span class="callout-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-8 0v2"/><circle cx="12" cy="7" r="4"/></svg></span><div><b>On the contact record</b><span>Status and actions live where your team already works &mdash; never a separate tab.</span></div></div>
       <div class="callout"><span class="callout-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m17 2 4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></span><div><b>Two-way, real-time sync</b><span>Data moves both directions instantly, and signed events fire your workflows.</span></div></div>
       <div class="callout"><span class="callout-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41 13.42 20.58a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><circle cx="7.5" cy="7.5" r="1.2"/></svg></span><div><b>White-labeled to your brand</b><span>Your colors, naming, and icons &mdash; your customers never see us.</span></div></div>
     </div>
@@ -249,41 +262,34 @@ a.prod-card:hover .plink{gap:10px}
 </header>
 
 <section class="section"><div class="wrap">
+  <div class="section-head reveal" style="margin-bottom:40px;text-align:center;margin-left:auto;margin-right:auto"><span class="eyebrow">Our integrations</span><h2>Explore what we&rsquo;ve built</h2></div>
   <div class="prod-teaser">
     <a class="prod-card reveal" href="/product/docusign-integration/">
-      <div style="display:flex;align-items:center;justify-content:space-between;gap:14px">
-        <span class="prod-glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="1.7" opacity="0.55"><path d="M11 2.5H5.5A1.5 1.5 0 0 0 4 4v11"/><path d="M11 2.5V6h3.5"/></g><g stroke-width="1.9"><circle cx="13.5" cy="11.5" r="5.5"/><path d="M10.6 11.5c.5-.9 1.1-.9 1.6 0s1.1.9 1.6 0 1-.8 1.5-.2"/><path d="M9.8 16.4l-1.2 4.6 4.9-2.3 4.9 2.3-1.2-4.6"/></g></svg></span>
-        <span class="badge-dev"><span class="d"></span>In development</span>
+      <div class="prod-top">
+        <span class="prod-glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2z"/><path d="m9 14 2 2 4-4"/></svg></span>
+        <div class="prod-hd"><h3>DocuSign Integration</h3><span class="prod-status live"><span class="d"></span>Live</span></div>
       </div>
-      <h3>DocuSign Integration</h3>
-      <p class="pdesc">Real-time signing status, a stall worklist, and one-tap follow-up — embedded in HighLevel and fully white-labeled to your brand. Your customers stop tabbing out to chase signatures, and start closing inside your platform.</p>
+      <p class="pdesc">Real-time signing status, a stall worklist, and one-tap follow-up &mdash; embedded in HighLevel and fully white-labeled to your brand. Your customers stop tabbing out to chase signatures, and start closing inside your platform.</p>
       <span class="plink" style="margin-top:20px">Explore DocuSign<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
     </a>
 
     <a class="prod-card reveal" href="/product/google-sheets-integration/">
-      <div style="display:flex;align-items:center;justify-content:space-between;gap:14px">
-        <span class="prod-glyph" style="background:#0F9D58;box-shadow:0 8px 20px -10px rgba(15,157,88,.5)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 9h16"/><path d="M4 15h16"/><path d="M10 3v18"/></svg></span>
-        <span class="badge-dev"><span class="d"></span>Launching soon</span>
+      <div class="prod-top">
+        <span class="prod-glyph" style="background:#0F9D58;box-shadow:0 8px 20px -10px rgba(15,157,88,.5)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 9h16M4 15h16M10 3v18"/></svg></span>
+        <div class="prod-hd"><h3>Google Sheets Integration</h3><span class="prod-status soon"><span class="d"></span>Launching soon</span></div>
       </div>
-      <h3>Google Sheets Integration</h3>
-      <p class="pdesc">Two-way sync between HighLevel and Google Sheets — contacts, custom fields, and opportunities, always in step. No exports, no manual copy-paste, no drift between systems.</p>
+      <p class="pdesc">Two-way sync between HighLevel and Google Sheets &mdash; contacts, custom fields, and opportunities, always in step. No exports, no manual copy-paste, no drift between systems.</p>
       <span class="plink" style="margin-top:20px">Explore Google Sheets<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
     </a>
-  </div>
-
-  <div class="prod-all reveal" style="justify-content:center">
-    <span class="prod-all-note">Have something else in mind? <a href="mailto:hello@leadconnectorbridge.com?subject=Integration%20idea">Suggest an integration →</a></span>
   </div>
 </div></section>
 
 <section class="section section--dark on-dark section--contact" id="cta">
   <div class="wrap" style="text-align:center;max-width:720px;margin-inline:auto;position:relative;z-index:1">
-    <span class="eyebrow eyebrow--light">Let's talk</span>
-    <h2 style="color:#fff;margin-top:14px;font-size:clamp(1.8rem,3.4vw,2.5rem)">Want one built into your platform?</h2>
-    <p style="color:var(--on-dark-mut);margin-top:16px;font-size:1.08rem">Whether it's DocuSign, Google Sheets, or a tool your customers keep asking for — we're early, hands-on, and we answer our own email.</p>
+    <span class="eyebrow eyebrow--light">Support &amp; sales</span>
+    <h2 style="color:#fff;margin-top:14px;font-size:clamp(1.8rem,3.4vw,2.5rem)">Need help with installation, or want to talk to sales?</h2>
     <div style="margin-top:28px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
-      <a class="btn btn-primary" href="/#contact">Book a call<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-      <a class="btn btn-ghost" href="mailto:hello@leadconnectorbridge.com">Email us</a>
+      <a class="btn btn-primary" href="/#contact" data-book>Book a call now<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
     </div>
   </div>
 </section>
@@ -311,7 +317,7 @@ a.prod-card:hover .plink{gap:10px}
       <div class="foot-col">
         <h4>Get in touch</h4>
         <a href="mailto:hello@leadconnectorbridge.com">hello@leadconnectorbridge.com</a>
-        <a href="/#contact">Book a call</a>
+        <a href="/#contact" data-book>Book a call</a>
       </div>
     </div>
   </div>
@@ -329,5 +335,6 @@ a.prod-card:hover .plink{gap:10px}
   els.forEach(function(e){ io.observe(e); });
 })();
 </script>
+<script src="/assets/book-modal.js" defer></script>
 </body>
 </html>
