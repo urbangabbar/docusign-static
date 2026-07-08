@@ -149,15 +149,16 @@
   .wf{position:relative;min-height:430px}
   .wf-steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:18px}
   .wf-step{display:flex;gap:14px;align-items:center;background:var(--lcb-canvas);border:1px solid var(--lcb-line);border-radius:14px;padding:17px 20px;box-shadow:var(--lcb-shadow-sm)}
-  .wf-step:nth-child(1){width:60%;margin-left:0}
-  .wf-step:nth-child(2){width:60%;margin-left:13%}
-  .wf-step:nth-child(3){width:60%;margin-left:26%}
-  .wf-step:nth-child(4){width:60%;margin-left:40%}
+  .wf-step:nth-child(1){width:56%;margin-left:0}
+  .wf-step:nth-child(2){width:56%;margin-left:9%}
+  .wf-step:nth-child(3){width:56%;margin-left:18%}
+  .wf-step:nth-child(4){width:56%;margin-left:27%}
   .wf-ic{width:46px;height:46px;border-radius:12px;background:var(--lcb-tint);color:var(--lcb-primary);display:flex;align-items:center;justify-content:center;flex:0 0 auto}
   .wf-ic svg{width:24px;height:24px}
   .wf-n{display:block;font-weight:700;font-size:16px;line-height:1.15;color:var(--lcb-ink)}
   .wf-d{display:block;font-size:12.5px;color:var(--lcb-ink-3);line-height:1.35;margin-top:2px}
-  .wf-glance{position:absolute;top:58px;right:0;width:232px;transform:scale(.54);transform-origin:top right;z-index:4;box-shadow:var(--lcb-shadow-lg);border-radius:14px}
+  .wf-glance{position:absolute;top:56px;right:0;width:232px;transform:scale(.6);transform-origin:top right;z-index:4;box-shadow:var(--lcb-shadow-lg);border-radius:14px}
+  .wf-trust{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:22px}
   @media(max-width:940px){.wf{min-height:0}.wf-step{width:82%}.wf-step:nth-child(2){margin-left:7%}.wf-step:nth-child(3){margin-left:13%}.wf-step:nth-child(4){margin-left:18%}.wf-glance{position:static;transform:none;width:86%;margin:16px 0 0 auto}}
   /* trustbar */
   .tb{border-top:1px solid var(--lcb-line);border-bottom:1px solid var(--lcb-line);background:var(--lcb-soft)}
@@ -419,7 +420,7 @@
     <span class="wm">DocuSign</span><span class="nav-by">integration · by LC Bridge</span>
   </a>
   <div class="nav-links">
-    <a href="#what">How it works</a><a href="#white-label">White-label</a><a href="#setup">Setup</a><a href="#capabilities">Capabilities</a><a href="#industries">Industries</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a>
+    <a href="#pricing">Pricing</a><a href="#capabilities">Capabilities</a><a href="#white-label">White-label</a><a href="#industries">Industries</a><a href="#faq">FAQ</a>
   </div>
   <a href="#apply" class="lcb-btn lcb-btn--primary">Book a call</a>
 </div></nav>
@@ -446,6 +447,7 @@
       <li class="wf-step"><span class="wf-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19h18"/><path d="M4 15c2.5-6 4.2-9 6-9 1.6 0 1 6 3 6s3-7 5-7"/></svg></span><div><span class="wf-n">3 &middot; Signed</span><span class="wf-d">They sign under your brand</span></div></li>
       <li class="wf-step"><span class="wf-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg></span><div><span class="wf-n">4 &middot; Workflow fires</span><span class="wf-d">Deal moves to Won automatically</span></div></li>
     </ol>
+    <div class="wf-trust"><span class="def2-chip ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>Legally binding &middot; ESIGN &amp; UETA</span><span class="def2-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>No code &middot; white-label</span></div>
     <div class="glance wf-glance">
       <div class="bar"><i></i><i></i><i></i><span class="t">Your CRM · Contact</span></div>
       <div class="b">
@@ -461,108 +463,81 @@
   </div>
 </div></header>
 
-<!-- WHAT IT IS — definition + signal-flow infographic (AEO) -->
-<section class="lcb-section lcb-section--soft" id="what"><div class="lcb-wrap">
-  <div class="def2-head">
-    <span class="lcb-eyebrow"><span class="dot"></span>What is the HighLevel DocuSign integration?</span>
-    <h2 class="lcb-h2">One integration, on the contact record — a signed document moves the deal.</h2>
-    <p class="lcb-lede">The <b>HighLevel DocuSign integration by LC Bridge</b> is a native e-signature integration that runs inside your GoHighLevel sub-account, built on HighLevel's own API. A signed document doesn't just sync a field — it moves the deal.</p>
+<!-- PRICING -->
+<section class="lcb-section" id="pricing"><div class="lcb-wrap">
+  <div class="sh" style="max-width:720px;margin:0 0 34px;text-align:left">
+    <span class="lcb-eyebrow"><span class="dot"></span>Pricing</span>
+    <h2 class="lcb-h2">Simple pricing that scales with your sub-accounts.</h2>
+    <p class="lcb-lede">Pay per active sub-account, or go flat-rate as you grow. Every plan is fully white-labeled and starts with a 14-day free trial.</p>
   </div>
 
-  <ol class="flow4" aria-label="How a signature moves through HighLevel">
-    <li class="flow4-node">
-      <span class="flow4-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg></span>
-      <span class="n">Step 1</span><b>Trigger</b>
-      <span class="d">A new lead, stage change, or form starts the request.</span>
-    </li>
-    <li class="flow4-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></li>
-    <li class="flow4-node">
-      <span class="flow4-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M5 3h9l5 5v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path d="M9 13h6M9 17h4"/></svg></span>
-      <span class="n">Step 2</span><b>Auto-fill &amp; send</b>
-      <span class="d">Contact fields fill the DocuSign envelope automatically.</span>
-    </li>
-    <li class="flow4-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></li>
-    <li class="flow4-node">
-      <span class="flow4-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19h18"/><path d="M4 15c2.5-6 4.2-9 6-9 1.6 0 1 6 3 6s3-7 5-7"/></svg></span>
-      <span class="n">Step 3</span><b>Signed</b>
-      <span class="d">Your client signs under your brand — status writes back.</span>
-    </li>
-    <li class="flow4-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></li>
-    <li class="flow4-node">
-      <span class="flow4-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg></span>
-      <span class="n">Step 4</span><b>Workflow fires</b>
-      <span class="d">Pipeline moves, follow-ups send, onboarding starts.</span>
-    </li>
-  </ol>
-
-  <div class="def2-trust">
-    <span class="def2-chip ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>Legally binding · ESIGN &amp; UETA</span>
-    <span class="def2-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>No code · white-label</span>
-  </div>
-</div></section>
-
-<!-- WHITE-LABEL SHOWCASE -->
-<section class="lcb-section" id="white-label"><div class="lcb-wrap">
-  <div class="wl-head">
-    <span class="lcb-eyebrow"><span class="dot"></span>White-label</span>
-    <h2 class="lcb-h2">Looks like your CRM, not ours.</h2>
-    <p class="lcb-lede">It inherits your HighLevel white-label branding — logo and colors — so signing looks native to your platform. No theming, no setup.</p>
-  </div>
-
-  <div class="wl-pills" role="tablist" aria-label="Choose an agency brand">
-    <button class="wl-pill is-on" data-go="brightline" aria-selected="true"><span class="lg">B</span>Brightline Insurance</button>
-    <button class="wl-pill" data-go="coastal" aria-selected="false"><span class="lg">C</span>Coastal Realty</button>
-    <button class="wl-pill" data-go="summit" aria-selected="false"><span class="lg">S</span>Summit Home Services</button>
-  </div>
-
-  <div class="wl-stage" data-brand="brightline">
-    <div class="crm">
-      <aside class="crm-side">
-        <div class="crm-brand"><span class="crm-logo" data-logo>B</span><span class="crm-name" data-name>Brightline</span></div>
-        <div class="crm-side-nav">
-          <div class="it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Dashboard</div>
-          <div class="it on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-8 0v2"/><circle cx="12" cy="7" r="4"/></svg>Contacts</div>
-          <div class="it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>Pipelines</div>
-          <div class="it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m13 2-3 7h6l-3 7"/><path d="M5 13H3l9-11"/></svg>Automations</div>
-        </div>
-      </aside>
-      <main class="crm-main">
-        <div class="crm-top">Contacts › John Henderson</div>
-        <div class="crm-card">
-          <div class="crm-who"><span class="crm-ava">JH</span><div><div style="font-weight:700;font-size:14px">John Henderson</div><div style="font-size:12px;color:var(--lcb-ink-3)">john@email.com · (415) 555-0198</div></div></div>
-          <div class="crm-fld">Stage · <b>Proposal sent</b></div>
-          <div class="crm-fld">Owner · <b>Yvette A.</b></div>
-          <div class="crm-fld">Source · <b>Website form</b></div>
-        </div>
-      </main>
-      <aside class="crm-pane" aria-label="DocuSign integration panel">
-        <div class="pane-h"><span class="pane-lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M5 3h9l5 5v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path d="M9 13c.5-.8 1-.8 1.5 0s1 .8 1.5 0 .9-.7 1.4-.2"/></svg></span><b>Documents</b><span class="ct">2</span></div>
-        <div class="pane-doc">
-          <div class="nm">Buyer Representation Agreement</div>
-          <div class="mt">Viewed 4× · not signed</div>
-          <div class="pane-mini"><span class="s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span class="ln"></span><span class="s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span class="ln"></span><span class="s cur"></span><span class="ln"></span><span class="s" style="background:var(--lcb-line-2)"></span></div>
-          <div style="margin-bottom:12px"><span class="lcb-badge is-attention"><span class="dot"></span>Needs attention</span></div>
-          <button class="pane-btn">Send reminder</button>
-        </div>
-      </aside>
+  <div class="pr-toggle">
+    <div class="pr-seg" role="group" aria-label="Billing period">
+      <button type="button" data-mode="m" class="on" aria-pressed="true">Monthly</button>
+      <button type="button" data-mode="a" aria-pressed="false">Annual</button>
     </div>
-    <p class="wl-cap"><b>Same integration. Three agencies. Zero configuration.</b> The logo, colors, and the panel all follow each agency's HighLevel brand.</p>
+    <span class="pr-save">Save 20% annually</span>
   </div>
-</div></section>
 
-<!-- SETUP -->
-<section class="lcb-section lcb-section--soft" id="setup"><div class="lcb-wrap">
-  <div class="sh">
-    <span class="lcb-eyebrow"><span class="dot"></span>Setup</span>
-    <h2 class="lcb-h2">Live in your account on one call.</h2>
-    <p class="lcb-lede">No developer, no API keys, nothing to maintain. We connect your existing DocuSign account and map your first template with you, live.</p>
+  <div class="pr-grid">
+
+    <article class="pr-card">
+      <div class="pr-name">Starter</div>
+      <div class="pr-tagline">For a single business or a few locations running their own HighLevel.</div>
+      <div class="pr-price"><span class="pr-amt" data-m="$14" data-a="$11">$14</span><span class="pr-per">/ sub-account / mo</span></div>
+      <div class="pr-sub" data-m="Billed monthly" data-a="Billed annually &middot; save 20%">Billed monthly</div>
+      <div class="pr-cap">Pay per active sub-account</div>
+      <a href="#apply" class="lcb-btn lcb-btn--ghost pr-btn">Start 14-day free trial</a>
+      <ul class="pr-feat">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>The full DocuSign integration, in your sub-account</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Envelope status live on the contact record</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Auto-fill from contact fields + signed write-back</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Signed &rarr; workflow triggers: pipeline, follow-ups, onboarding</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Stall Worklist with AI ranking + one-tap nudges</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Send from a contact &amp; bulk send from Smart Lists</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Fully white-labeled to your brand</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Email support</li>
+      </ul>
+    </article>
+
+    <article class="pr-card pop">
+      <span class="pr-badge">Most popular</span>
+      <div class="pr-name">Agency</div>
+      <div class="pr-tagline">For agencies rolling it out across a book of client sub-accounts.</div>
+      <div class="pr-price"><span class="pr-amt" data-m="$249" data-a="$199">$249</span><span class="pr-per">/ mo</span></div>
+      <div class="pr-sub" data-m="Billed monthly" data-a="Billed annually &middot; save 20%">Billed monthly</div>
+      <div class="pr-cap">Up to 250 sub-accounts &middot; ~$1 each at scale</div>
+      <a href="#apply" class="lcb-btn lcb-btn--primary pr-btn">Start 14-day free trial</a>
+      <ul class="pr-feat">
+        <li class="pr-lead">Everything in Starter, plus</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Up to 250 sub-accounts under one flat rate</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Resell &amp; rebill clients via HighLevel SaaS mode &mdash; keep your markup</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Agency-wide white-label &amp; brand controls</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Bulk rollout across sub-accounts</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Priority support</li>
+      </ul>
+    </article>
+
+    <article class="pr-card">
+      <div class="pr-name">Scale</div>
+      <div class="pr-tagline">For large agencies and SaaS resellers past 250 sub-accounts.</div>
+      <div class="pr-price"><span class="pr-amt" data-m="$497" data-a="$398">$497</span><span class="pr-per">/ mo</span></div>
+      <div class="pr-sub" data-m="Billed monthly" data-a="Billed annually &middot; save 20%">Billed monthly</div>
+      <div class="pr-cap">Unlimited sub-accounts</div>
+      <a href="#apply" class="lcb-btn lcb-btn--ghost pr-btn">Talk to us</a>
+      <ul class="pr-feat">
+        <li class="pr-lead">Everything in Agency, plus</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Unlimited sub-accounts</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Dedicated onboarding &amp; client-rollout help</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Higher API &amp; volume limits</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Priority partner support &middot; dedicated channel</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Early access to new integrations + roadmap input</li>
+      </ul>
+    </article>
+
   </div>
-  <div class="ind" style="grid-template-columns:repeat(3,1fr)">
-    <div class="lcb-card"><span class="ic" style="background:var(--lcb-tint);color:var(--lcb-primary)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 17H7A5 5 0 0 1 7 7h2"/><path d="M15 7h2a5 5 0 0 1 0 10h-2"/><path d="M8 12h8"/></svg></span><h3 style="font-size:1.15rem">1 · Connect DocuSign</h3><p>Secure OAuth links your existing DocuSign account to your HighLevel sub-account. Read-only to start.</p></div>
-    <div class="lcb-card"><span class="ic" style="background:var(--lcb-tint);color:var(--lcb-primary)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg></span><h3 style="font-size:1.15rem">2 · Map your first template</h3><p>We map your DocuSign fields to HighLevel contact fields together — once. Every send after that fills itself.</p></div>
-    <div class="lcb-card"><span class="ic" style="background:var(--lcb-tint);color:var(--lcb-primary)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg></span><h3 style="font-size:1.15rem">3 · Go live</h3><p>Send from a workflow, a Smart List, or the contact record — and let a completed signature drive the next step.</p></div>
-  </div>
-  <p style="text-align:center;margin-top:30px;color:var(--lcb-ink-2);font-size:15px"><b>One 15-minute call and you're sending.</b> It installs in your sub-account and inherits your white-label brand.</p>
+
+  <p class="pr-foot"><b>Every plan requires your own DocuSign account</b> &mdash; LC Bridge is the integration layer that brings it into HighLevel. 14-day free trial on all plans, no card to start &middot; prices in USD &middot; annual billing saves 20%.</p>
 </div></section>
 
 <!-- CAPABILITIES (story) -->
@@ -742,6 +717,55 @@
   </div>
 </div></section>
 
+<!-- WHITE-LABEL SHOWCASE -->
+<section class="lcb-section" id="white-label"><div class="lcb-wrap">
+  <div class="wl-head">
+    <span class="lcb-eyebrow"><span class="dot"></span>White-label</span>
+    <h2 class="lcb-h2">Looks like your CRM, not ours.</h2>
+    <p class="lcb-lede">It inherits your HighLevel white-label branding — logo and colors — so signing looks native to your platform. No theming, no setup.</p>
+  </div>
+
+  <div class="wl-pills" role="tablist" aria-label="Choose an agency brand">
+    <button class="wl-pill is-on" data-go="brightline" aria-selected="true"><span class="lg">B</span>Brightline Insurance</button>
+    <button class="wl-pill" data-go="coastal" aria-selected="false"><span class="lg">C</span>Coastal Realty</button>
+    <button class="wl-pill" data-go="summit" aria-selected="false"><span class="lg">S</span>Summit Home Services</button>
+  </div>
+
+  <div class="wl-stage" data-brand="brightline">
+    <div class="crm">
+      <aside class="crm-side">
+        <div class="crm-brand"><span class="crm-logo" data-logo>B</span><span class="crm-name" data-name>Brightline</span></div>
+        <div class="crm-side-nav">
+          <div class="it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Dashboard</div>
+          <div class="it on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-8 0v2"/><circle cx="12" cy="7" r="4"/></svg>Contacts</div>
+          <div class="it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>Pipelines</div>
+          <div class="it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m13 2-3 7h6l-3 7"/><path d="M5 13H3l9-11"/></svg>Automations</div>
+        </div>
+      </aside>
+      <main class="crm-main">
+        <div class="crm-top">Contacts › John Henderson</div>
+        <div class="crm-card">
+          <div class="crm-who"><span class="crm-ava">JH</span><div><div style="font-weight:700;font-size:14px">John Henderson</div><div style="font-size:12px;color:var(--lcb-ink-3)">john@email.com · (415) 555-0198</div></div></div>
+          <div class="crm-fld">Stage · <b>Proposal sent</b></div>
+          <div class="crm-fld">Owner · <b>Yvette A.</b></div>
+          <div class="crm-fld">Source · <b>Website form</b></div>
+        </div>
+      </main>
+      <aside class="crm-pane" aria-label="DocuSign integration panel">
+        <div class="pane-h"><span class="pane-lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M5 3h9l5 5v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path d="M9 13c.5-.8 1-.8 1.5 0s1 .8 1.5 0 .9-.7 1.4-.2"/></svg></span><b>Documents</b><span class="ct">2</span></div>
+        <div class="pane-doc">
+          <div class="nm">Buyer Representation Agreement</div>
+          <div class="mt">Viewed 4× · not signed</div>
+          <div class="pane-mini"><span class="s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span class="ln"></span><span class="s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span class="ln"></span><span class="s cur"></span><span class="ln"></span><span class="s" style="background:var(--lcb-line-2)"></span></div>
+          <div style="margin-bottom:12px"><span class="lcb-badge is-attention"><span class="dot"></span>Needs attention</span></div>
+          <button class="pane-btn">Send reminder</button>
+        </div>
+      </aside>
+    </div>
+    <p class="wl-cap"><b>Same integration. Three agencies. Zero configuration.</b> The logo, colors, and the panel all follow each agency's HighLevel brand.</p>
+  </div>
+</div></section>
+
 <!-- INDUSTRIES -->
 <section class="lcb-section lcb-section--soft" id="industries"><div class="lcb-wrap">
   <div class="sh">
@@ -763,103 +787,6 @@
       <span class="go">DocuSign for real estate teams <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
     </a>
   </div>
-</div></section>
-
-<!-- AGENCY -->
-<section class="lcb-section lcb-section--dark" id="agencies"><div class="lcb-wrap agency">
-  <div>
-    <span class="lcb-eyebrow"><span class="dot"></span>For HighLevel agencies</span>
-    <h2 class="lcb-h2" style="color:#fff;margin:14px 0 14px">Offer e-signatures to every sub-account — under your brand.</h2>
-    <p class="lcb-lede" style="color:var(--lcb-on-dark-mut)">Roll DocuSign out across your client sub-accounts as your own white-labeled feature. It inherits each agency's HighLevel branding automatically — your colors, your name — a new line of recurring revenue, and one more reason clients stay.</p>
-    <div class="pts">
-      <div class="pt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Inherits your white-label branding — zero config</div>
-      <div class="pt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Mark it up and resell to sub-accounts</div>
-      <div class="pt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Built natively on HighLevel's own API and UI</div>
-    </div>
-  </div>
-  <div class="price">
-    <div class="k">Agency plan</div>
-    <div class="big">$249<span style="font-size:1rem;font-weight:500;color:var(--lcb-on-dark-mut)"> / mo &middot; up to 250 sub-accounts</span></div>
-    <div class="sm">Roll it out to every client under your brand for one flat rate &mdash; about $1 per sub-account at scale &mdash; and rebill through HighLevel SaaS mode. Or start at just $14 per active sub-account.</div>
-    <a href="#pricing" class="lcb-btn lcb-btn--primary" style="width:100%;justify-content:center">See plans &amp; pricing</a>
-  </div>
-</div></section>
-
-<!-- PRICING -->
-<section class="lcb-section" id="pricing"><div class="lcb-wrap">
-  <div class="sh" style="max-width:720px;margin:0 0 34px;text-align:left">
-    <span class="lcb-eyebrow"><span class="dot"></span>Pricing</span>
-    <h2 class="lcb-h2">Simple pricing that scales with your sub-accounts.</h2>
-    <p class="lcb-lede">Pay per active sub-account, or go flat-rate as you grow. Every plan is fully white-labeled and starts with a 14-day free trial.</p>
-  </div>
-
-  <div class="pr-toggle">
-    <div class="pr-seg" role="group" aria-label="Billing period">
-      <button type="button" data-mode="m" class="on" aria-pressed="true">Monthly</button>
-      <button type="button" data-mode="a" aria-pressed="false">Annual</button>
-    </div>
-    <span class="pr-save">Save 20% annually</span>
-  </div>
-
-  <div class="pr-grid">
-
-    <article class="pr-card">
-      <div class="pr-name">Starter</div>
-      <div class="pr-tagline">For a single business or a few locations running their own HighLevel.</div>
-      <div class="pr-price"><span class="pr-amt" data-m="$14" data-a="$11">$14</span><span class="pr-per">/ sub-account / mo</span></div>
-      <div class="pr-sub" data-m="Billed monthly" data-a="Billed annually &middot; save 20%">Billed monthly</div>
-      <div class="pr-cap">Pay per active sub-account</div>
-      <a href="#apply" class="lcb-btn lcb-btn--ghost pr-btn">Start 14-day free trial</a>
-      <ul class="pr-feat">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>The full DocuSign integration, in your sub-account</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Envelope status live on the contact record</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Auto-fill from contact fields + signed write-back</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Signed &rarr; workflow triggers: pipeline, follow-ups, onboarding</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Stall Worklist with AI ranking + one-tap nudges</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Send from a contact &amp; bulk send from Smart Lists</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Fully white-labeled to your brand</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Email support</li>
-      </ul>
-    </article>
-
-    <article class="pr-card pop">
-      <span class="pr-badge">Most popular</span>
-      <div class="pr-name">Agency</div>
-      <div class="pr-tagline">For agencies rolling it out across a book of client sub-accounts.</div>
-      <div class="pr-price"><span class="pr-amt" data-m="$249" data-a="$199">$249</span><span class="pr-per">/ mo</span></div>
-      <div class="pr-sub" data-m="Billed monthly" data-a="Billed annually &middot; save 20%">Billed monthly</div>
-      <div class="pr-cap">Up to 250 sub-accounts &middot; ~$1 each at scale</div>
-      <a href="#apply" class="lcb-btn lcb-btn--primary pr-btn">Start 14-day free trial</a>
-      <ul class="pr-feat">
-        <li class="pr-lead">Everything in Starter, plus</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Up to 250 sub-accounts under one flat rate</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Resell &amp; rebill clients via HighLevel SaaS mode &mdash; keep your markup</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Agency-wide white-label &amp; brand controls</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Bulk rollout across sub-accounts</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Priority support</li>
-      </ul>
-    </article>
-
-    <article class="pr-card">
-      <div class="pr-name">Scale</div>
-      <div class="pr-tagline">For large agencies and SaaS resellers past 250 sub-accounts.</div>
-      <div class="pr-price"><span class="pr-amt" data-m="$497" data-a="$398">$497</span><span class="pr-per">/ mo</span></div>
-      <div class="pr-sub" data-m="Billed monthly" data-a="Billed annually &middot; save 20%">Billed monthly</div>
-      <div class="pr-cap">Unlimited sub-accounts</div>
-      <a href="#apply" class="lcb-btn lcb-btn--ghost pr-btn">Talk to us</a>
-      <ul class="pr-feat">
-        <li class="pr-lead">Everything in Agency, plus</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Unlimited sub-accounts</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Dedicated onboarding &amp; client-rollout help</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Higher API &amp; volume limits</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Priority partner support &middot; dedicated channel</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Early access to new integrations + roadmap input</li>
-      </ul>
-    </article>
-
-  </div>
-
-  <p class="pr-foot"><b>Every plan requires your own DocuSign account</b> &mdash; LC Bridge is the integration layer that brings it into HighLevel. 14-day free trial on all plans, no card to start &middot; prices in USD &middot; annual billing saves 20%.</p>
 </div></section>
 
 <!-- COMPARISON: native vs middleware -->
