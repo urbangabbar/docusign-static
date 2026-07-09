@@ -1,4 +1,4 @@
-# robots.txt — leadconnectorbridge.com (LC Bridge / Lead Connector Bridge)
+# robots.txt — lcbridge.app (LC Bridge / Lead Connector Bridge)
 # Stance: allow all crawlers, including AI — we want AEO citations.
 
 User-agent: *
@@ -32,4 +32,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://leadconnectorbridge.com/sitemap.xml
+Sitemap: https://lcbridge.app/sitemap.xml

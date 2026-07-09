@@ -6,25 +6,25 @@ LC Bridge, legally Lead Connector Bridge, is an integration vendor for the HighL
 
 ## Products
 
-- [DocuSign Integration for HighLevel](https://leadconnectorbridge.com/product/docusign-integration/): Send, track, and sync DocuSign e-signature envelopes from inside HighLevel/LeadConnector workflows. Auto-fills documents from contact fields; signed status triggers workflows. White-label, no code.
-- [Google Sheets Integration for HighLevel](https://leadconnectorbridge.com/product/google-sheets-integration/): Two-way real-time sync between HighLevel contacts/records and Google Sheets. Launching soon; early access open.
+- [DocuSign Integration for HighLevel](https://lcbridge.app/product/docusign-integration/): Send, track, and sync DocuSign e-signature envelopes from inside HighLevel/LeadConnector workflows. Auto-fills documents from contact fields; signed status triggers workflows. White-label, no code.
+- [Google Sheets Integration for HighLevel](https://lcbridge.app/product/google-sheets-integration/): Two-way real-time sync between HighLevel contacts/records and Google Sheets. Launching soon; early access open.
 
 ## Industry guides
 
-- [DocuSign for Insurance](https://leadconnectorbridge.com/product/docusign-integration/insurance): E-signature workflows for insurance agencies running on HighLevel (applications, ACORD-style forms).
-- [DocuSign for Real Estate](https://leadconnectorbridge.com/product/docusign-integration/real-estate): E-signature workflows for real estate teams running on HighLevel (listing and buyer agreements).
+- [DocuSign for Insurance](https://lcbridge.app/product/docusign-integration/insurance): E-signature workflows for insurance agencies running on HighLevel (applications, ACORD-style forms).
+- [DocuSign for Real Estate](https://lcbridge.app/product/docusign-integration/real-estate): E-signature workflows for real estate teams running on HighLevel (listing and buyer agreements).
 
 ## Guides
 
-- [GoHighLevel Integrations: The Complete Guide](https://leadconnectorbridge.com/blog/gohighlevel-integrations/): What GoHighLevel integrations are, native vs Zapier, and the full LC Bridge integration directory for the HighLevel CRM.
-- [The 4 Levels of CRM Integration](https://leadconnectorbridge.com/blog/four-levels-of-integration/): A See–Know–Do framework for telling a deep, native integration from a Zapier bolt-on. Covers native integration vs Zapier and integration depth.
-- [An AI Agent Can't Chase a Signature It Can't See](https://leadconnectorbridge.com/blog/ai-agents-need-deep-integrations/): Why AI-agent readiness (agentic CRM, GoHighLevel AI agent) depends on how deep your CRM integrations go.
+- [GoHighLevel Integrations: The Complete Guide](https://lcbridge.app/blog/gohighlevel-integrations/): What GoHighLevel integrations are, native vs Zapier, and the full LC Bridge integration directory for the HighLevel CRM.
+- [The 4 Levels of CRM Integration](https://lcbridge.app/blog/four-levels-of-integration/): A See–Know–Do framework for telling a deep, native integration from a Zapier bolt-on. Covers native integration vs Zapier and integration depth.
+- [An AI Agent Can't Chase a Signature It Can't See](https://lcbridge.app/blog/ai-agents-need-deep-integrations/): Why AI-agent readiness (agentic CRM, GoHighLevel AI agent) depends on how deep your CRM integrations go.
 
 ## About
 
-- [Homepage](https://leadconnectorbridge.com/): Company overview, product lineup, and contact.
-- Contact: hello@leadconnectorbridge.com
+- [Homepage](https://lcbridge.app/): Company overview, product lineup, and contact.
+- Contact: hello@lcbridge.app
 
 ## Optional
 
-- [Sitemap](https://leadconnectorbridge.com/sitemap.xml): Full list of indexable URLs.
+- [Sitemap](https://lcbridge.app/sitemap.xml): Full list of indexable URLs.
