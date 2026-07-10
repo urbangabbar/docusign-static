@@ -4,8 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — DocuSign Integration by LCBridge</title>
-<meta name="description" content="Privacy Policy for the DocuSign Integration for HighLevel by LCBridge — what data we collect, how we use it, sub-processors, retention, security, and your rights.">
+<meta name="description" content="Privacy Policy for the DocuSign Integration for HighLevel by LCBridge — our processor/controller roles, what data we process, sub-processors, retention, security, international transfers, and your CCPA/GDPR rights.">
 <link rel="canonical" href="https://lcbridge.app/product/docusign-integration/privacy">
+<meta name="robots" content="index,follow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -40,8 +41,9 @@
   .updated{color:var(--ink-3);font-size:14px;margin:0}
 
   h2{color:var(--ink);font-size:22px;font-weight:700;margin-top:36px;margin-bottom:10px;letter-spacing:-.01em}
+  h3{color:var(--ink);font-size:16.5px;font-weight:700;margin-top:22px;margin-bottom:6px}
   p{color:var(--ink-2);margin:0 0 14px}
-  ul{color:var(--ink-2);padding-left:22px;margin:0 0 14px}
+  ul,ol{color:var(--ink-2);padding-left:22px;margin:0 0 14px}
   li{margin:6px 0}
   strong{color:var(--ink);font-weight:600}
   a.inline{color:var(--brand);text-decoration:none}
@@ -51,6 +53,21 @@
   .callout p{margin:0 0 10px}
   .callout p:last-child{margin-bottom:0}
   .callout ul{margin:0;font-size:14.5px}
+  .callout.ai{border-color:var(--ai-line);background:var(--ai-bg)}
+  .callout.ai strong{color:var(--ai-fg)}
+
+  .table-scroll{overflow-x:auto;margin:8px 0 20px;border:1px solid var(--line);border-radius:12px}
+  table{width:100%;border-collapse:collapse;font-size:14px;min-width:560px}
+  th,td{text-align:left;vertical-align:top;padding:11px 14px;border-bottom:1px solid var(--line-2)}
+  th{background:var(--bg-soft);color:var(--ink);font-weight:600;font-size:12.5px;letter-spacing:.01em}
+  td{color:var(--ink-2)}
+  tr:last-child td{border-bottom:none}
+
+  .toc{border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin:20px 0 8px;background:#fff}
+  .toc p{font-weight:700;color:var(--ink);margin:0 0 8px;font-size:13px;text-transform:uppercase;letter-spacing:.04em}
+  .toc ol{columns:2;column-gap:28px;margin:0;padding-left:18px;font-size:13.5px}
+  .toc a{color:var(--ink-2);text-decoration:none}
+  .toc a:hover{color:var(--brand)}
 
   footer{margin-top:56px;border-top:1px solid var(--line-2);padding:28px 0 48px;font-size:13px;color:var(--ink-3)}
   footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;align-items:center}
@@ -61,6 +78,7 @@
   @media (max-width:720px){
     .nav-links{display:none}
     h1{font-size:30px}
+    .toc ol{columns:1}
   }
 </style>
 </head>
@@ -75,6 +93,7 @@
     <div class="nav-links">
       <a class="ghost" href="/product/docusign-integration/">Home</a>
       <a class="ghost" href="terms.html">Terms</a>
+      <a class="ghost" href="refund.html">Refund</a>
       <a class="ghost" href="docs.html">Docs</a>
     </div>
   </div>
@@ -84,85 +103,168 @@
   <header class="page">
     <span class="eyebrow"><span class="dot"></span>Legal</span>
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: June 24, 2026</p>
+    <p class="updated">Last updated: July 10, 2026 &nbsp;·&nbsp; Effective: July 10, 2026</p>
   </header>
 
   <div class="callout">
-    <p>LCBridge is an independent third-party integration. DocuSign and HighLevel are trademarks of their respective owners; LCBridge is not affiliated with or endorsed by them.</p>
-    <p>This document is a template and should be reviewed by qualified legal counsel before production use.</p>
+    <p>LCBridge is an independent, third-party integration. DocuSign and HighLevel (GoHighLevel / LeadConnector) are trademarks of their respective owners; LCBridge is not affiliated with, endorsed by, sponsored by, or operated by them.</p>
   </div>
 
-  <h2>1. Introduction &amp; scope</h2>
-  <p>LCBridge provides the <strong>DocuSign Integration</strong> (the "Service"), an integration that runs inside the HighLevel (GoHighLevel) CRM and connects your DocuSign account to your CRM so you can send agreements for signature, track signing status, and surface stalled agreements for follow-up.</p>
-  <p>This Privacy Policy explains what information the Service collects, how we use and share it, how long we keep it, and the choices and rights you have. It applies to your use of the Service as installed within HighLevel and connected to your DocuSign account. It does not cover the separate practices of DocuSign or HighLevel, which are governed by their own privacy policies.</p>
+  <div class="toc">
+    <p>On this page</p>
+    <ol>
+      <li><a href="#scope">Introduction &amp; scope</a></li>
+      <li><a href="#roles">Our roles: controller &amp; processor</a></li>
+      <li><a href="#collect">Information we process</a></li>
+      <li><a href="#use">How we use information</a></li>
+      <li><a href="#ai">AI &amp; automated processing</a></li>
+      <li><a href="#share">Sub-processors &amp; sharing</a></li>
+      <li><a href="#docusign">DocuSign &amp; CRM API data use</a></li>
+      <li><a href="#retention">Data retention &amp; deletion</a></li>
+      <li><a href="#security">Security</a></li>
+      <li><a href="#intl">International data transfers</a></li>
+      <li><a href="#us">U.S. state privacy rights (CCPA)</a></li>
+      <li><a href="#gdpr">GDPR / UK rights</a></li>
+      <li><a href="#rights">Exercising your rights</a></li>
+      <li><a href="#dpa">Data Processing Addendum</a></li>
+      <li><a href="#children">Children's privacy</a></li>
+      <li><a href="#changes">Changes to this policy</a></li>
+      <li><a href="#contact">Contact us</a></li>
+    </ol>
+  </div>
 
-  <h2>2. Information we collect</h2>
-  <p>The Service collects and processes only the information needed to send agreements, keep their status current in your CRM, and operate securely. This includes:</p>
+  <h2 id="scope">1. Introduction &amp; scope</h2>
+  <p>LCBridge provides the <strong>DocuSign Integration</strong> (also referred to as "SignBridge," the "Service"), an integration that runs inside the HighLevel (GoHighLevel / LeadConnector) CRM and connects your DocuSign account to your CRM so you can send agreements for signature, keep signing status current on your contacts, chase stalled signatures, and file completed documents automatically.</p>
+  <p>This Privacy Policy explains what personal information the Service processes, the roles we play, how we use and share it, how long we keep it, how we secure it, and the choices and rights you have. It applies to your use of the Service as installed within HighLevel and connected to your DocuSign account. It does <strong>not</strong> cover the independent practices of DocuSign or HighLevel, which are governed by their own privacy policies.</p>
+  <p>In this policy, "you" means the LCBridge customer (typically a HighLevel agency or sub-account business) and its authorized users. "Signers" and "contacts" means the individuals whose information flows through your CRM and the agreements you send.</p>
+
+  <h2 id="roles">2. Our roles: controller &amp; processor</h2>
+  <p>We handle personal information in two distinct roles, and your rights and our obligations differ depending on which applies:</p>
   <ul>
-    <li><strong>HighLevel CRM data accessed</strong> — contact and opportunity data such as names, email addresses, and deal information, used to populate and send agreements.</li>
-    <li><strong>DocuSign account information</strong> — your DocuSign account identifier, account base URI, and user id, used to call DocuSign on your behalf.</li>
-    <li><strong>OAuth tokens</strong> — the access and refresh tokens issued when you connect your DocuSign account, stored encrypted and used to authenticate API calls.</li>
-    <li><strong>Envelope status &amp; metadata</strong> — signing status and related metadata synced back into your CRM so you can track progress.</li>
-    <li><strong>Usage and log data</strong> — operational logs and diagnostic information generated as the Service runs, used to operate, secure, and troubleshoot the Service.</li>
+    <li><strong>As a processor (and sub-processor).</strong> For the personal information of <em>your contacts and signers</em> that we process to send and track agreements on your behalf, you are the <strong>controller</strong> and LCBridge acts as a <strong>processor</strong> — or a <strong>sub-processor</strong> where you are yourself a processor acting for your own clients. We process that data only on your documented instructions, which are your configuration and use of the Service.</li>
+    <li><strong>As a controller.</strong> For information about your account, your connection, and your use of the Service — such as your DocuSign and HighLevel account identifiers, connection credentials, settings, and operational logs — LCBridge acts as the <strong>controller</strong>.</li>
   </ul>
-  <div class="callout">
-    <p><strong>Key data points at a glance</strong></p>
-    <ul>
-      <li>HighLevel contact/opportunity data (names, emails, deal info)</li>
-      <li>DocuSign account id, base URI, and user id</li>
-      <li>Encrypted DocuSign OAuth tokens</li>
-      <li>Envelope status and metadata</li>
-      <li>Usage and log data</li>
-    </ul>
-  </div>
-  <p>The Service does not store the contents of signed documents beyond the status information DocuSign provides, and it does not sell personal data.</p>
 
-  <h2>3. How we use information</h2>
-  <p>We use the information described above to deliver and maintain the Service. Specifically, we use it to:</p>
+  <h2 id="collect">3. Information we process</h2>
+  <p>The Service processes only the information needed to send agreements, keep their status current in your CRM, follow up on stalled agreements, and operate securely. It does not require, and we do not ask for, more than that.</p>
+
+  <h3>a. Contact &amp; agreement data (we act as processor)</h3>
+  <ul>
+    <li><strong>CRM contact &amp; opportunity data</strong> accessed from HighLevel — such as names, email addresses, phone numbers, business/location names, and deal/opportunity details — used to populate, address, and send agreements and to link signing activity back to the right record.</li>
+    <li><strong>Recipient &amp; envelope data</strong> — the names, email addresses, and signing status of each agreement recipient; envelope subject lines and template names; and event timestamps (sent, delivered, signed, declined, including a decline reason where DocuSign provides one).</li>
+    <li><strong>Follow-up message content</strong> — the body of the reminder ("nudge") messages that are sent to signers through your connected HighLevel account, retained as an audit record of what was sent.</li>
+    <li><strong>Matching data</strong> — the recipient email/name we use to match a signer to a CRM contact, and the candidate contact records considered for that match.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Signed documents are not stored by us.</strong> The Service does <strong>not</strong> store the contents of your agreements or signed PDFs in our database. When an agreement completes, the combined signed PDF and certificate of completion are retrieved from DocuSign and filed into <em>your</em> HighLevel media library; we retain only a link or reference to that document, together with envelope status and metadata. We never receive document contents through the DocuSign webhook — that payload is limited to recipient and status data.</p>
+  </div>
+
+  <h3>b. Account, connection &amp; operational data (we act as controller)</h3>
+  <ul>
+    <li><strong>DocuSign account information</strong> — your DocuSign account identifier, account base URI, user id, environment (demo/production), authorized scopes, and plan/capability information, used to call DocuSign on your behalf.</li>
+    <li><strong>Connection credentials</strong> — the OAuth access and refresh tokens issued when you connect your DocuSign and HighLevel accounts, and the DocuSign Connect signing-key secrets used to verify webhooks. These are stored <strong>encrypted</strong> and are used only to authenticate API calls and validate events.</li>
+    <li><strong>Settings &amp; configuration</strong> — your field mappings, templates, automation preferences, and similar configuration.</li>
+    <li><strong>Usage &amp; log data</strong> — operational logs and diagnostic information generated as the Service runs, used to operate, secure, monitor, and troubleshoot the Service.</li>
+  </ul>
+  <p>We do not knowingly collect government-identifiers, financial account numbers, or special-category (sensitive) personal data through the Service, and we ask that you do not send such data in agreement fields or contact records where it is not needed.</p>
+
+  <h2 id="use">4. How we use information</h2>
+  <p>We use the information above only to deliver and maintain the Service. Specifically, to:</p>
   <ul>
     <li>Send agreements for signature from your CRM through your connected DocuSign account.</li>
-    <li>Sync envelope status back into the CRM so signing progress stays current.</li>
-    <li>Surface stalled or follow-up agreements so you can act on them.</li>
-    <li>Operate, secure, monitor, and troubleshoot the Service.</li>
+    <li>Sync envelope status back into the CRM so signing progress stays current on the contact.</li>
+    <li>Surface stalled or follow-up agreements and help you send reminder messages.</li>
+    <li>File completed documents into your HighLevel media library and, where you have enabled it, advance the linked opportunity's pipeline stage.</li>
+    <li>Operate, secure, monitor, debug, and improve the Service, and provide support.</li>
+    <li>Comply with law and enforce our Terms.</li>
   </ul>
-  <p>We do not use your data for advertising, and we do not sell it.</p>
+  <p>We do <strong>not</strong> use your data or your contacts' data for advertising, and we do <strong>not</strong> sell or share it (as those terms are defined under U.S. state privacy laws). We do not use the personal data we process on your behalf to train general-purpose AI models.</p>
 
-  <h2>4. How information is shared</h2>
-  <p>We share data only with the sub-processors necessary to deliver the Service:</p>
+  <h2 id="ai">5. AI &amp; automated processing</h2>
+  <div class="callout ai">
+    <p><strong>Optional AI assistance (nudge drafts).</strong> If your administrator enables it, the Service can use a third-party AI model (Google Gemini) to <em>draft</em> a suggested follow-up message for a stalled agreement. Only limited context is sent to the model — a signer's first name, the document subject/type, the sending agent and business name, days elapsed, and status. Full email addresses and phone numbers are <strong>not</strong> sent to the AI. Drafts are always suggestions you can edit; a human sends the message. If AI assistance is not enabled, no data is sent to the AI provider and the Service uses fixed message templates instead.</p>
+  </div>
+  <p>The Service also performs limited <strong>rules-based automation</strong> on your CRM data at your configuration: automatically matching a signer's email to a CRM contact, writing status notes/tags to the contact timeline, filing completed documents, and — where enabled — advancing a linked opportunity to a "Won" pipeline stage when an agreement completes. These are routine operational actions you control in Settings, not decisions that produce legal or similarly significant effects about an individual within the meaning of GDPR Article 22.</p>
+
+  <h2 id="share">6. Sub-processors &amp; sharing</h2>
+  <p>We share data only with the sub-processors necessary to deliver the Service. We do not sell personal data and do not share it for cross-context behavioral advertising. Our current sub-processors are:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Sub-processor</th><th>Purpose</th><th>Data involved</th></tr></thead>
+      <tbody>
+        <tr><td><strong>DocuSign</strong><br>(DocuSign, Inc.)</td><td>Create and send envelopes; receive signing status; retrieve completed documents (e-signature).</td><td>Recipient name &amp; email, document subject/template, envelope status.</td></tr>
+        <tr><td><strong>HighLevel / LeadConnector</strong><br>(HighLevel)</td><td>The host CRM the Service runs inside; source of contact/opportunity data and destination for status, notes, media, and reminder messages.</td><td>Contact/opportunity data, envelope status, documents filed to your media library, reminder message content.</td></tr>
+        <tr><td><strong>Railway</strong><br>(cloud hosting, United States)</td><td>Hosts the Service and provides its managed PostgreSQL database and Redis queue. All data we store resides here.</td><td>All stored data described in Section 3(b) and the metadata in 3(a).</td></tr>
+        <tr><td><strong>Google (Gemini)</strong><br><em>optional — only if AI assistance is enabled</em></td><td>Generate suggested follow-up message drafts.</td><td>Limited context only: signer first name, document subject/type, agent &amp; business name, status. No full emails/phones.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>We use hosting in the <strong>United States</strong>. We may engage new sub-processors as the Service evolves; when we do, we will update this list. If you have a Data Processing Addendum with us (see Section 14), we will provide advance notice of new sub-processors and a means to object as described there.</p>
+  <p>We may also disclose information where required by law, to comply with legal process, or to protect the rights, safety, property, and security of our users, the public, or the Service. If we are involved in a merger, acquisition, or sale of assets, we will require the successor to honor this policy.</p>
+
+  <h2 id="docusign">7. DocuSign &amp; CRM API data use</h2>
+  <p>We access DocuSign and HighLevel data solely to provide the integration to you, on an individual, transactional basis. We do not extract, aggregate, resell, or repurpose DocuSign or CRM data beyond what is necessary to support the Service, and we do not use it for advertising or to build independent profiles. This commitment reflects the data-use requirements of the platforms we integrate with, including DocuSign's developer terms.</p>
+
+  <h2 id="retention">8. Data retention &amp; deletion</h2>
   <ul>
-    <li><strong>DocuSign</strong> — to create and send envelopes and receive signing status (e-signature).</li>
-    <li><strong>HighLevel / LeadConnector</strong> — the host CRM where the Service runs and where contact, opportunity, and status data live.</li>
-    <li><strong>Our hosting and infrastructure providers</strong> — to run, store, and secure the Service.</li>
+    <li><strong>Connection credentials.</strong> Your DocuSign and HighLevel OAuth tokens are usable only while the integration is connected. When you disconnect or uninstall, the Service can no longer act on your behalf.</li>
+    <li><strong>Tenant data.</strong> When you uninstall the Service (or a sub-account is uninstalled), we deactivate the connection immediately and then <strong>permanently delete all associated data — envelope records, recipient data, matching records, follow-up message records, settings, and credentials — within 30 days</strong>. Reconnecting before the purge restores your workspace.</li>
+    <li><strong>Logs.</strong> Operational and diagnostic logs are kept only for the limited period needed to operate, secure, and troubleshoot the Service, and are then discarded or minimized.</li>
+    <li><strong>Legal holds.</strong> We may retain limited information for longer where required to comply with legal obligations, resolve disputes, or enforce our agreements.</li>
   </ul>
-  <p>We do <strong>not</strong> sell personal data. We may also disclose information where required by law or to protect the rights, safety, and security of our users and the Service.</p>
+  <p>You can disconnect at any time to revoke the Service's access to your DocuSign account. To request earlier deletion of data we hold, contact us at <a class="inline" href="mailto:hello@lcbridge.app">hello@lcbridge.app</a>.</p>
 
-  <h2>5. Data retention &amp; deletion</h2>
-  <p>We retain your DocuSign OAuth tokens only while the integration is connected. When you disconnect the integration or your account is deleted, the associated tokens are revoked and deleted.</p>
-  <p>You can disconnect at any time to revoke the Service's access to your DocuSign account. To request deletion of data we hold, contact us at <a class="inline" href="mailto:support@lcbridge.app">support@lcbridge.app</a>.</p>
-
-  <h2>6. Security</h2>
-  <p>We take reasonable measures to protect your data. OAuth tokens and secrets are encrypted at rest using <strong>AES-256-GCM</strong>. Inbound DocuSign Connect webhooks are HMAC-verified before they are processed, so we only act on authentic events. We apply access controls to limit who and what can reach stored credentials and data.</p>
-
-  <h2>7. Your rights &amp; choices</h2>
-  <p>You have control over the Service's access to your data. You can:</p>
+  <h2 id="security">9. Security</h2>
+  <p>We maintain technical and organizational measures appropriate to the data we handle, including:</p>
   <ul>
-    <li><strong>Access</strong> — request information about the data we hold related to your use of the Service.</li>
-    <li><strong>Delete</strong> — request deletion of that data.</li>
-    <li><strong>Disconnect</strong> — disconnect the integration at any time to revoke access and stop further processing.</li>
+    <li><strong>Encryption in transit</strong> — traffic to and from the Service and the platforms it integrates with is protected with TLS.</li>
+    <li><strong>Encryption at rest for credentials</strong> — OAuth tokens and webhook signing secrets are encrypted using <strong>AES-256-GCM</strong> before they are stored.</li>
+    <li><strong>Authenticated webhooks</strong> — inbound DocuSign Connect events are verified with HMAC-SHA256 signatures (and HighLevel events with their platform signatures) before processing; unverified events are rejected, and verification "fails closed."</li>
+    <li><strong>Access controls &amp; least privilege</strong> — we limit who and what can reach stored credentials and data, and we request only the OAuth scopes the Service needs.</li>
+    <li><strong>U.S. hosting</strong> — the Service and its data are hosted with a U.S. cloud provider.</li>
   </ul>
-  <p>To exercise any of these, contact <a class="inline" href="mailto:support@lcbridge.app">support@lcbridge.app</a>.</p>
+  <p>No method of transmission or storage is completely secure, and we cannot guarantee absolute security. If we become aware of a personal-data breach affecting your data, we will notify affected customers <strong>without undue delay and, where feasible, no later than 72 hours</strong> after becoming aware, consistent with applicable law.</p>
 
-  <h2>8. International users</h2>
-  <p>Depending on where you are located, you may have rights under laws such as the GDPR or CCPA, including the right to access, correct, or delete personal data, and to object to or restrict certain processing. We honor applicable rights regardless of location. You can exercise these rights by contacting <a class="inline" href="mailto:support@lcbridge.app">support@lcbridge.app</a>.</p>
+  <h2 id="intl">10. International data transfers</h2>
+  <p>We are based in, and host the Service in, the <strong>United States</strong>, and most of our customers are in the United States. If you or your contacts are located in the European Economic Area, the United Kingdom, or Switzerland, your personal data will be transferred to and processed in the United States. Where such transfers are subject to GDPR or UK data-protection law, we rely on the European Commission's <strong>Standard Contractual Clauses</strong> (and the UK International Data Transfer Addendum), and/or another lawful transfer mechanism, as set out in our Data Processing Addendum (Section 14).</p>
 
-  <h2>9. Children's privacy</h2>
-  <p>The Service is not directed to individuals under the age of 16, and we do not knowingly collect personal data from them. If you believe a child's data has been provided to us, contact us and we will delete it.</p>
+  <h2 id="us">11. U.S. state privacy rights (CCPA/CPRA &amp; others)</h2>
+  <p>If you are a California resident, the California Consumer Privacy Act (as amended by the CPRA) gives you rights over your personal information. Residents of other U.S. states with comprehensive privacy laws (including Virginia, Colorado, Connecticut, Utah, and Texas, among others) have comparable rights. Subject to those laws, you may:</p>
+  <ul>
+    <li><strong>Know / access</strong> the categories and specific pieces of personal information we hold about you;</li>
+    <li><strong>Delete</strong> personal information we hold about you;</li>
+    <li><strong>Correct</strong> inaccurate personal information;</li>
+    <li><strong>Opt out</strong> of any "sale" or "sharing" of personal information and of targeted advertising; and</li>
+    <li><strong>Not be discriminated against</strong> for exercising these rights.</li>
+  </ul>
+  <p><strong>We do not sell or share your personal information, and we have not done so.</strong> Where we process your contacts' personal information to provide the Service, we act as a <strong>service provider</strong> (processor) under a written contract that prohibits us from retaining, using, or disclosing that information for any purpose other than performing the Service. When you exercise a right with respect to information we process on behalf of a customer (controller), we will refer your request to that customer or assist them in responding.</p>
 
-  <h2>10. Changes to this policy</h2>
-  <p>We may update this Privacy Policy from time to time. When we make material changes, we will note them here and update the "Last updated" date above. Your continued use of the Service after changes take effect constitutes acceptance of the updated policy.</p>
+  <h2 id="gdpr">12. GDPR / UK rights &amp; lawful bases</h2>
+  <p>Where the GDPR or UK GDPR applies, our lawful bases for processing the data for which we are a controller are: <strong>performance of a contract</strong> (to provide the Service you request), our <strong>legitimate interests</strong> (to secure, operate, and improve the Service, balanced against your rights), and <strong>consent</strong> where required (for example, enabling optional AI assistance). Subject to applicable law, you have the right to access, rectify, erase, restrict, and object to processing, and to data portability. You also have the right to lodge a complaint with your local supervisory authority. For personal data we process on a customer's behalf, please direct requests to that customer as the controller; we will assist them as their processor.</p>
 
-  <h2>11. Contact us</h2>
-  <p>If you have questions about this Privacy Policy or how we handle your data, contact us at <a class="inline" href="mailto:support@lcbridge.app">support@lcbridge.app</a>.</p>
+  <h2 id="rights">13. Exercising your rights</h2>
+  <p>To exercise any right, or to disconnect the Service and stop further processing, you can:</p>
+  <ul>
+    <li><strong>Disconnect / uninstall</strong> the integration at any time from within HighLevel to revoke access and begin deletion (see Section 8); or</li>
+    <li><strong>Contact us</strong> at <a class="inline" href="mailto:hello@lcbridge.app">hello@lcbridge.app</a>. We may need to verify your identity or your relationship to the relevant account before acting, and we will respond within the timeframes required by applicable law. You may use an authorized agent where the law permits.</li>
+  </ul>
+
+  <h2 id="dpa">14. Data Processing Addendum</h2>
+  <p>For customers who require one, we make available a <strong>Data Processing Addendum (DPA)</strong> that incorporates the EU Standard Contractual Clauses (and the UK Addendum) and describes our processor obligations, sub-processor commitments, security measures, and breach-notification duties. To request our DPA, contact <a class="inline" href="mailto:hello@lcbridge.app">hello@lcbridge.app</a>.</p>
+
+  <h2 id="children">15. Children's privacy</h2>
+  <p>The Service is a business tool and is not directed to individuals under the age of 16, and we do not knowingly collect personal data from them. If you believe a child's data has been provided to us, contact us and we will delete it.</p>
+
+  <h2 id="changes">16. Changes to this policy</h2>
+  <p>We may update this Privacy Policy from time to time. When we make material changes, we will note them here and update the "Last updated" date above; where required, we will provide additional notice. Your continued use of the Service after changes take effect constitutes acceptance of the updated policy.</p>
+
+  <h2 id="contact">17. Contact us</h2>
+  <p>If you have questions about this Privacy Policy or how we handle your data, contact us at:</p>
+  <div class="callout">
+    <p><strong>LCBridge</strong> — DocuSign Integration for HighLevel<br>
+    Email: <a class="inline" href="mailto:hello@lcbridge.app">hello@lcbridge.app</a></p>
+  </div>
 </main>
 
 <footer>
@@ -171,6 +273,7 @@
     <span class="flinks">
       <a href="privacy.html">Privacy</a>
       <a href="terms.html">Terms</a>
+      <a href="refund.html">Refund</a>
       <a href="docs.html">Docs</a>
       <a href="/product/docusign-integration/">Home</a>
     </span>
