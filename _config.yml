@@ -1,0 +1,17 @@
+# Jekyll config for GitHub Pages. The site is hand-written static HTML — this file
+# exists only to keep internal files out of the published build.
+#
+# Note: setting `exclude` REPLACES Jekyll's default list, so the defaults are
+# repeated here.
+exclude:
+  - HANDOFF.md
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
