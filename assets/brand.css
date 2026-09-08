@@ -77,7 +77,11 @@
   font-family:var(--lcb-font-display);font-weight:700;letter-spacing:-.025em;
   line-height:1.1;margin:0;
 }
-.lcb-body a{color:inherit;text-decoration:none}
+/* Buttons are excluded: `.lcb-body a` (0,1,1) outranks `.lcb-btn--primary` (0,1,0),
+   so without the :not() every anchor-button inherits body ink instead of its own
+   on-colour — white-on-cobalt silently became near-black-on-cobalt at 2.4:1. */
+.lcb-body a:not(.lcb-btn){color:inherit;text-decoration:none}
+.lcb-body a.lcb-btn{text-decoration:none}
 .lcb-body p{margin:0}
 
 /* ---- Layout ---- */
@@ -113,8 +117,8 @@
 .lcb-btn--lg{padding:15px 26px;font-size:16px}
 .lcb-btn--primary{background:var(--lcb-primary);color:var(--lcb-on-primary);box-shadow:0 1px 2px rgba(42,65,216,.25)}
 .lcb-btn--primary:hover{background:var(--lcb-primary-press)}
-.lcb-btn--trial{background:#0E9F6E;color:#fff;box-shadow:0 1px 2px rgba(14,159,110,.28)}
-.lcb-btn--trial:hover{background:#0B8A5F}
+.lcb-btn--trial{background:#09855C;color:#fff;box-shadow:0 1px 2px rgba(9,133,92,.28)}
+.lcb-btn--trial:hover{background:#076E4C}
 .lcb-btn--ghost{background:var(--lcb-canvas);border-color:var(--lcb-line-2);color:var(--lcb-ink)}
 .lcb-btn--ghost:hover{background:var(--lcb-soft)}
 .lcb-section--dark .lcb-btn--ghost{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.18);color:#fff}

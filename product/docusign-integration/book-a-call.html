@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a call — DocuSign Integration for HighLevel | LC Bridge</title>
+<meta name="description" content="Book a 30-minute call with Arun, founder of LC Bridge. A working session on your HighLevel setup and the DocuSign integration — not a scripted demo.">
+<link rel="canonical" href="https://lcbridge.app/product/docusign-integration/book-a-call">
+<link rel="stylesheet" href="/assets/brand.css">
+<link rel="preconnect" href="https://api.leadconnectorhq.com">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%234C00FF%27%2F%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%237A2BFF%27%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%2724%27%20height%3D%2724%27%20rx%3D%276%27%20fill%3D%27url%28%23g%29%27%2F%3E%3Cg%20fill%3D%27none%27%20stroke%3D%27white%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20stroke-width%3D%271.9%27%20d%3D%27M21%2011.1V12a9%209%200%201%201-5.3-8.2%27%2F%3E%3Cpath%20stroke-width%3D%272.3%27%20d%3D%27M7.8%2011.6l3.4%203.4L21%205.2%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lcbridge.app/product/docusign-integration/book-a-call">
+<meta property="og:title" content="Book a call with the founder — LC Bridge">
+<meta property="og:description" content="30 minutes with Arun, founder of LC Bridge. Your HighLevel setup, the DocuSign integration, and whether it actually fits.">
+<meta property="og:image" content="https://lcbridge.app/assets/og-docusign.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Book a call with the founder — LC Bridge">
+<meta name="twitter:description" content="30 minutes with the founder. Not an SDR, not a scripted demo.">
+<meta name="twitter:image" content="https://lcbridge.app/assets/og-docusign.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://lcbridge.app/#organization",
+      "name": "LC Bridge",
+      "legalName": "Lead Connector Bridge",
+      "url": "https://lcbridge.app/",
+      "email": "hello@lcbridge.app"
+    },
+    {
+      "@type": "ContactPage",
+      "@id": "https://lcbridge.app/product/docusign-integration/book-a-call#page",
+      "url": "https://lcbridge.app/product/docusign-integration/book-a-call",
+      "name": "Book a call — DocuSign Integration for HighLevel",
+      "description": "Book a 30-minute call with the founder of LC Bridge about the HighLevel DocuSign integration.",
+      "isPartOf": { "@id": "https://lcbridge.app/#organization" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://lcbridge.app/" },
+        { "@type": "ListItem", "position": 2, "name": "DocuSign Integration", "item": "https://lcbridge.app/product/docusign-integration/" },
+        { "@type": "ListItem", "position": 3, "name": "Book a call", "item": "https://lcbridge.app/product/docusign-integration/book-a-call" }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+  /* ===== DocuSign brand theme — overrides Refined Cobalt tokens on this page only ===== */
+  :root{
+    --lcb-primary:#4C00FF; --lcb-primary-press:#3A00C2; --lcb-on-primary:#FFFFFF;
+    --lcb-tint:#EEE9FF; --lcb-dark:#130032;
+    --lcb-logo-grad:linear-gradient(135deg,#4C00FF,#7A2BFF);
+    --ds-accent:#FF5252;
+  }
+  .lcb-eyebrow .dot{background:var(--ds-accent)}
+  .ft-brand .lcb-logo .mark{background:linear-gradient(135deg,#2A41D8,#6938EF)}
+
+  html{scroll-behavior:smooth;scroll-padding-top:80px}
+
+  /* nav */
+  .nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.86);backdrop-filter:saturate(140%) blur(12px);-webkit-backdrop-filter:saturate(140%) blur(12px);border-bottom:1px solid var(--lcb-line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .nav .lcb-logo .wm{font-size:18px}
+  .nav-by{font-size:11px;color:var(--lcb-ink-3);font-weight:600;border-left:1px solid var(--lcb-line-2);padding-left:10px;margin-left:2px}
+  .nav-links{display:flex;align-items:center;gap:24px}
+  .nav-links a{font-size:14.5px;font-weight:500;color:var(--lcb-ink-2)}
+  .nav-links a:hover{color:var(--lcb-ink)}
+  @media(max-width:940px){.nav-links{display:none}.nav-by{display:none}}
+
+  /* breadcrumb */
+  .crumb{padding:16px 0 0}
+  .crumb ol{list-style:none;display:flex;gap:8px;font-size:13px;color:var(--lcb-ink-3);margin:0;padding:0}
+  .crumb a:hover{color:var(--lcb-primary)} .crumb [aria-current]{color:var(--lcb-ink);font-weight:600}
+
+  /* ---- booking hero: the calendar is the one job of this page ---- */
+  .bk{padding:34px 0 clamp(56px,7vw,88px);
+    background:radial-gradient(1100px 460px at 12% -12%,#EEE9FF 0,rgba(238,241,254,0) 62%)}
+  /* Areas, not columns: on mobile the calendar slots straight after the host card,
+     so trust and action sit together and the detail follows instead of blocking it. */
+  /* rows auto/1fr so the calendar's extra height pools below the copy
+     instead of being shared out as a gap between the two text blocks */
+  .bk-grid{display:grid;grid-template-columns:.86fr 1.14fr;column-gap:52px;row-gap:0;
+    grid-template-areas:"top cal" "bot cal";grid-template-rows:auto 1fr;align-items:start}
+  .bk-top{grid-area:top}
+  .bk-bot{grid-area:bot}
+  .cal{grid-area:cal}
+  @media(max-width:980px){
+    .bk-grid{grid-template-columns:1fr;grid-template-areas:"top" "cal" "bot";row-gap:32px}
+  }
+  .bk h1{margin:16px 0 14px;font-size:clamp(2rem,3.4vw,2.85rem);text-wrap:balance}
+  .bk .sub{font-size:17.5px;line-height:1.6;color:var(--lcb-ink-2);max-width:520px}
+
+  /* host card — the trust anchor */
+  .host{display:flex;gap:18px;align-items:center;margin:28px 0 26px;
+    background:var(--lcb-canvas);border:1px solid var(--lcb-line);border-radius:var(--lcb-r-xl);
+    padding:18px 20px;box-shadow:var(--lcb-shadow-md)}
+  .host-photo{width:92px;height:92px;border-radius:50%;object-fit:cover;flex:0 0 auto;
+    border:3px solid #fff;box-shadow:0 0 0 2px var(--lcb-tint),var(--lcb-shadow-sm)}
+  .host-nm{font-family:var(--lcb-font-display);font-weight:700;font-size:1.15rem;color:var(--lcb-ink);line-height:1.2}
+  .host-role{font-size:13px;color:var(--lcb-primary);font-weight:600;margin-top:3px}
+  .host-say{font-size:13.5px;color:var(--lcb-ink-3);line-height:1.55;margin-top:8px}
+  @media(max-width:420px){.host{flex-direction:column;align-items:flex-start;gap:14px}}
+
+  /* what we'll cover */
+  .cov{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:13px}
+  .cov li{display:flex;gap:11px;align-items:flex-start;font-size:14.5px;color:var(--lcb-ink-2);line-height:1.5}
+  .cov li svg{width:18px;height:18px;color:var(--lcb-ok-dot);flex:0 0 auto;margin-top:2px}
+  .cov li b{color:var(--lcb-ink);font-weight:600}
+  .cov-h{font-family:var(--lcb-font-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+    font-weight:600;color:var(--lcb-ink);margin:0 0 14px}
+
+  .bk-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+  .meta-chip{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;
+    color:var(--lcb-ink-2);background:var(--lcb-canvas);border:1px solid var(--lcb-line-2);
+    border-radius:var(--lcb-r-pill);padding:8px 14px}
+  .meta-chip svg{width:15px;height:15px;color:var(--lcb-ink-3)}
+
+  /* calendar card */
+  .cal{background:var(--lcb-canvas);border:1px solid var(--lcb-line);border-radius:var(--lcb-r-xl);
+    padding:20px;box-shadow:var(--lcb-shadow-lg);position:sticky;top:88px}
+  @media(max-width:980px){.cal{position:static}}
+  .cal-h{font-family:var(--lcb-font-display);font-size:1.2rem;font-weight:700;color:var(--lcb-ink);margin:0 0 3px}
+  .cal-p{font-size:13.5px;color:var(--lcb-ink-3);margin:0 0 16px}
+  .cal iframe{width:100%;border:none;min-height:700px;overflow:hidden;border-radius:12px;
+    background:var(--lcb-soft);display:block}
+  .cal-fb{font-size:12.5px;color:var(--lcb-ink-3);text-align:center;margin-top:12px}
+  .cal-fb a{color:var(--lcb-primary);font-weight:600}
+
+  /* ---- cross-links ---- */
+  .xl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media(max-width:900px){.xl-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.xl-grid{grid-template-columns:1fr}}
+  .xl{display:block;background:var(--lcb-canvas);border:1px solid var(--lcb-line);
+    border-radius:var(--lcb-r-lg);padding:20px;box-shadow:var(--lcb-shadow-sm);
+    transition:transform var(--lcb-dur) var(--lcb-ease),box-shadow var(--lcb-dur) var(--lcb-ease),border-color var(--lcb-dur) var(--lcb-ease)}
+  .xl:hover{transform:translateY(-2px);box-shadow:var(--lcb-shadow-md);border-color:var(--lcb-line-2)}
+  .xl-ic{width:38px;height:38px;border-radius:10px;background:var(--lcb-tint);color:var(--lcb-primary);
+    display:flex;align-items:center;justify-content:center;margin-bottom:13px}
+  .xl-ic svg{width:20px;height:20px}
+  .xl-t{font-weight:700;font-size:15.5px;color:var(--lcb-ink);display:flex;align-items:center;gap:6px}
+  .xl-t svg{width:15px;height:15px;color:var(--lcb-ink-3)}
+  .xl-d{font-size:13.5px;color:var(--lcb-ink-3);line-height:1.5;margin-top:5px}
+
+  /* ---- faq ---- */
+  .faq{max-width:760px}
+  .faq details{border-bottom:1px solid var(--lcb-line)}
+  /* padding lives on the summary so the whole row is the tap target, not just the text */
+  .faq summary{cursor:pointer;font-weight:600;font-size:15.5px;color:var(--lcb-ink);list-style:none;
+    display:flex;justify-content:space-between;align-items:center;gap:16px;padding:17px 0;min-height:44px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";font-size:20px;color:var(--lcb-ink-3);font-weight:400;line-height:1}
+  .faq details[open] summary::after{content:"−"}
+  .faq p{margin:0 0 17px;font-size:14.5px;color:var(--lcb-ink-2);line-height:1.65}
+
+  .sh{max-width:720px;margin:0 0 34px}
+  .sh .lcb-eyebrow{margin-bottom:14px}
+  .sh h2{margin-bottom:12px}
+  .sh p{font-size:16.5px;color:var(--lcb-ink-2);line-height:1.6}
+
+  /* footer */
+  .ft{background:#080B16;color:var(--lcb-on-dark-mut);padding:52px 0 36px}
+  .ft-top{display:flex;justify-content:space-between;gap:34px;flex-wrap:wrap;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.08)}
+  .ft-brand{max-width:340px} .ft-brand .lcb-logo{margin-bottom:13px}
+  .ft-tag{font-size:14px;line-height:1.6}
+  .ft-links{display:flex;gap:54px;flex-wrap:wrap}
+  .ft-col h4{font-family:var(--lcb-font-mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:#fff;margin:0 0 13px;font-weight:600}
+  .ft-col a{display:block;font-size:14.5px;margin-bottom:9px;color:var(--lcb-on-dark-mut)}.ft-col a:hover{color:#fff}
+  .ft-legal{margin-top:24px;font-size:12.5px;line-height:1.7;color:#767F94;max-width:820px}
+  .ft-bot{margin-top:14px;font-size:12.5px;color:#767F94}
+</style>
+</head>
+<body class="lcb-body">
+
+<nav class="nav"><div class="lcb-wrap nav-in">
+  <a class="lcb-logo" href="/product/docusign-integration/" aria-label="DocuSign integration by LC Bridge">
+    <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path stroke-width="1.9" d="M21 11.1V12a9 9 0 1 1-5.3-8.2"/><path stroke-width="2.3" d="M7.8 11.6l3.4 3.4L21 5.2"/></svg></span>
+    <span class="wm">DocuSign</span><span class="nav-by">integration · by LC Bridge</span>
+  </a>
+  <div class="nav-links">
+    <a href="/product/docusign-integration/pricing">Pricing</a><a href="/product/docusign-integration/#capabilities">Capabilities</a><a href="/product/docusign-integration/#white-label">White-label</a><a href="/product/docusign-integration/docs">Docs</a><a href="/product/docusign-integration/#faq">FAQ</a>
+  </div>
+  <a href="/product/docusign-integration/#apply" class="lcb-btn lcb-btn--trial">Start 14-day trial</a>
+</div></nav>
+
+<nav class="crumb lcb-wrap" aria-label="Breadcrumb"><ol>
+  <li><a href="/">Home</a></li><li aria-hidden="true">/</li>
+  <li><a href="/product/docusign-integration/">DocuSign Integration</a></li><li aria-hidden="true">/</li>
+  <li aria-current="page">Book a call</li>
+</ol></nav>
+
+<!-- BOOKING -->
+<header class="bk"><div class="lcb-wrap bk-grid">
+  <div class="bk-top">
+    <span class="lcb-eyebrow"><span class="dot"></span>Book a call</span>
+    <h1 class="lcb-display">Talk to the person who built it</h1>
+    <p class="sub">Thirty minutes with Arun, founder of LC Bridge. Not an SDR, not a scripted demo — a working session on your HighLevel setup and whether this integration actually fits it.</p>
+
+    <div class="host">
+      <img class="host-photo" src="/assets/arun-headshot.jpg" width="512" height="512"
+           alt="Arun, founder of LC Bridge" fetchpriority="high">
+      <div>
+        <div class="host-nm">Arun</div>
+        <div class="host-role">Founder &amp; CEO · LC Bridge</div>
+        <p class="host-say">Builds the DocuSign and Google Sheets integrations that HighLevel agencies ship under their own brand.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bk-bot">
+    <p class="cov-h">What we'll cover</p>
+    <ul class="cov">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Your setup.</b> Sub-accounts, workflows, and where signatures stall today.</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>A live walkthrough</b> of envelopes being sent, tracked, and synced inside a real sub-account.</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>White-label details.</b> Your logo, your domain, what your clients see when they sign.</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>An honest answer</b> on pricing for your account count — and if it isn't a fit, I'll tell you.</span></li>
+    </ul>
+
+    <div class="bk-meta">
+      <span class="meta-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>30 minutes</span>
+      <span class="meta-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Straight to the founder</span>
+      <span class="meta-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>No card, no obligation</span>
+    </div>
+  </div>
+
+  <div class="cal">
+    <h2 class="cal-h">Pick a time</h2>
+    <p class="cal-p">Choose any slot that works for you. You'll get a calendar invite straight away.</p>
+    <iframe src="https://api.leadconnectorhq.com/widget/booking/VbUUZSpipvw56s9pRtNs"
+            title="Book a call with LC Bridge" scrolling="no" id="VbUUZSpipvw56s9pRtNs_book"></iframe>
+    <p class="cal-fb">Calendar not loading? <a href="https://api.leadconnectorhq.com/widget/booking/VbUUZSpipvw56s9pRtNs" target="_blank" rel="noopener">Open it in a new tab ↗</a> or email <a href="mailto:hello@lcbridge.app">hello@lcbridge.app</a></p>
+  </div>
+</div></header>
+
+<!-- CROSS-LINKS -->
+<section class="lcb-section lcb-section--soft" id="explore"><div class="lcb-wrap">
+  <div class="sh">
+    <span class="lcb-eyebrow"><span class="dot"></span>Rather look first?</span>
+    <h2 class="lcb-h2">Everything you'd ask on the call, in writing.</h2>
+    <p>No call needed to evaluate this. The pages below cover pricing, architecture, and the two industries we see most.</p>
+  </div>
+  <div class="xl-grid">
+    <a class="xl" href="/product/docusign-integration/pricing">
+      <span class="xl-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
+      <span class="xl-t">Pricing <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+      <span class="xl-d">Three plans, monthly or annual. Priced per sub-account, with a 14-day trial.</span>
+    </a>
+    <a class="xl" href="/product/docusign-integration/">
+      <span class="xl-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M5 3h9l5 5v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path d="M9 13h6M9 17h4"/></svg></span>
+      <span class="xl-t">Product overview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+      <span class="xl-d">Watch the 70-second demo and see why native beats a Zapier bolt-on.</span>
+    </a>
+    <a class="xl" href="/product/docusign-integration/docs">
+      <span class="xl-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span>
+      <span class="xl-t">Documentation <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+      <span class="xl-d">Setup, triggers, field mapping, and how the white-label layer works.</span>
+    </a>
+    <a class="xl" href="/product/docusign-integration/real-estate">
+      <span class="xl-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 9-7 9 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></span>
+      <span class="xl-t">For real estate <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+      <span class="xl-d">Buyer representation agreements, stalled signatures, and one-tap follow-up.</span>
+    </a>
+    <a class="xl" href="/product/docusign-integration/insurance">
+      <span class="xl-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+      <span class="xl-t">For insurance <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+      <span class="xl-d">Applications and policy paperwork signed without leaving the contact record.</span>
+    </a>
+    <a class="xl" href="/blog/gohighlevel-integrations/">
+      <span class="xl-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span>
+      <span class="xl-t">Guides <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+      <span class="xl-d">The complete guide to HighLevel integrations, and the four levels of depth.</span>
+    </a>
+  </div>
+</div></section>
+
+<!-- FAQ -->
+<section class="lcb-section" id="call-faq"><div class="lcb-wrap">
+  <div class="sh">
+    <span class="lcb-eyebrow"><span class="dot"></span>Before you book</span>
+    <h2 class="lcb-h2">Straight answers about the call.</h2>
+  </div>
+  <div class="faq">
+    <details open>
+      <summary>Who will I actually be speaking with?</summary>
+      <p>Arun, who founded LC Bridge and builds the integration. There is no sales team to hand you off to, so you can ask implementation questions and get a real answer on the call rather than a follow-up email.</p>
+    </details>
+    <details>
+      <summary>Do I need a DocuSign account before we talk?</summary>
+      <p>No. Bring your HighLevel setup and the paperwork you send most often. If you don't have DocuSign yet, we'll cover what plan you'd need and whether it's worth it for your volume.</p>
+    </details>
+    <details>
+      <summary>Is this a sales pitch?</summary>
+      <p>It's a working session. If your volume is low enough that the integration won't pay for itself, or you'd be better served by something simpler, you'll hear that on the call.</p>
+    </details>
+    <details>
+      <summary>I only have one quick question.</summary>
+      <p>Then don't book a slot — email <a href="mailto:hello@lcbridge.app" style="color:var(--lcb-primary);font-weight:600">hello@lcbridge.app</a> and you'll get a reply. The <a href="/product/docusign-integration/docs" style="color:var(--lcb-primary);font-weight:600">documentation</a> also covers most setup questions.</p>
+    </details>
+    <details>
+      <summary>Can I just start a trial instead?</summary>
+      <p>Yes. The <a href="/product/docusign-integration/pricing" style="color:var(--lcb-primary);font-weight:600">14-day trial</a> needs no card and no call. Book a slot only if you'd rather have someone walk your setup with you.</p>
+    </details>
+  </div>
+</div></section>
+
+<footer class="ft"><div class="lcb-wrap">
+  <div class="ft-top">
+    <div class="ft-brand">
+      <a class="lcb-logo" href="/" style="color:#fff"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path stroke-width="1.7" d="M14 2.75H6.5A1.5 1.5 0 0 0 5 4.25V19.75A1.5 1.5 0 0 0 6.5 21.25H17.5A1.5 1.5 0 0 0 19 19.75V7.75Z"/><path stroke-width="1.7" d="M14 2.75V7.75H19"/><path stroke-width="2" d="M7.9 15.5c.9-1.9 1.9-1.6 2.3.1c.3 1.3 1 1.3 1.4-.1c.5-1.6 1.6-1.4 2.1.3"/><path stroke-width="1.7" d="M8.2 18.5h7.6"/></svg></span><span class="wm">LC Bridge</span></a>
+      <p class="ft-tag">Deep, white-labeled integrations for the HighLevel ecosystem.</p>
+    </div>
+    <div class="ft-links">
+      <div class="ft-col"><h4>Products</h4><a href="/product/docusign-integration/">DocuSign integration</a><a href="/product/google-sheets-integration/">Google Sheets integration</a></div>
+      <div class="ft-col"><h4>DocuSign</h4><a href="/product/docusign-integration/insurance">For insurance</a><a href="/product/docusign-integration/real-estate">For real estate</a><a href="/product/docusign-integration/docs">Documentation</a></div>
+      <div class="ft-col"><h4>Guides</h4><a href="/blog/gohighlevel-integrations/">GoHighLevel integrations</a><a href="/blog/four-levels-of-integration/">The 4 levels of integration</a><a href="/blog/ai-agents-need-deep-integrations/">AI agents &amp; integration depth</a></div>
+      <div class="ft-col"><h4>Company</h4><a href="/">About LC Bridge</a><a href="mailto:hello@lcbridge.app">hello@lcbridge.app</a><a href="/product/docusign-integration/book-a-call">Book a call</a></div>
+    </div>
+  </div>
+  <p class="ft-legal">DocuSign Integration is built by LC Bridge (Lead Connector Bridge) — we build white-labeled integrations that HighLevel platforms embed as their own. An independent product that works with DocuSign® and HighLevel®, and is not affiliated with, endorsed by, or sponsored by either. DocuSign, HighLevel, Zapier, Make, and Pabbly are trademarks of their respective owners.</p>
+  <p class="foot-legal-links" style="margin:0 0 12px;font-size:13px;opacity:.9"><a href="/product/docusign-integration/pricing">Pricing</a> &middot; <a href="/product/docusign-integration/privacy">Privacy</a> &middot; <a href="/product/docusign-integration/terms">Terms</a> &middot; <a href="/product/docusign-integration/refund">Refund</a></p>
+  <p class="ft-bot">© 2026 LC Bridge. All rights reserved.</p>
+</div></footer>
+
+<script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
+</body>
+</html>

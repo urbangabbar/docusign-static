@@ -7,6 +7,9 @@
 <meta name="description" content="The HighLevel DocuSign integration by LC Bridge — native e-signatures inside GoHighLevel. Not middleware, not Zapier: a signed contract moves the deal.">
 <link rel="canonical" href="https://lcbridge.app/product/docusign-integration/">
 <link rel="stylesheet" href="/assets/brand.css">
+<!-- the hero poster is the LCP element and comes from ytimg; warm the connections early -->
+<link rel="preconnect" href="https://i.ytimg.com" crossorigin>
+<link rel="preconnect" href="https://www.youtube-nocookie.com">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%234C00FF%27%2F%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%237A2BFF%27%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%2724%27%20height%3D%2724%27%20rx%3D%276%27%20fill%3D%27url%28%23g%29%27%2F%3E%3Cg%20fill%3D%27none%27%20stroke%3D%27white%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20stroke-width%3D%271.9%27%20d%3D%27M21%2011.1V12a9%209%200%201%201-5.3-8.2%27%2F%3E%3Cpath%20stroke-width%3D%272.3%27%20d%3D%27M7.8%2011.6l3.4%203.4L21%205.2%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://lcbridge.app/product/docusign-integration/">
@@ -118,10 +121,20 @@
   .crumb a:hover{color:var(--lcb-primary)} .crumb [aria-current]{color:var(--lcb-ink);font-weight:600}
   /* hero */
   .hero{padding:40px 0 14px;background:radial-gradient(1100px 460px at 50% -14%,#EEE9FF 0,rgba(238,241,254,0) 60%)}
-  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
-  @media(max-width:940px){.hero-grid{grid-template-columns:1fr;gap:34px}}
-  .hero h1{margin:18px 0 16px}
-  .hero .sub{margin-bottom:26px;max-width:560px}
+  /* Areas, not columns, so mobile can slot the demo between the headline and the
+     CTAs — otherwise the copy block alone eats the whole phone viewport. */
+  .hero-grid{display:grid;grid-template-columns:1fr 1.06fr;column-gap:44px;row-gap:0;
+    grid-template-areas:"top vid" "bot vid";align-content:center}
+  .hero-top{grid-area:top}
+  .hero-bot{grid-area:bot}
+  .hero .vid{grid-area:vid;align-self:center}
+  @media(max-width:940px){
+    .hero-grid{grid-template-columns:1fr;grid-template-areas:"top" "vid" "bot";row-gap:26px}
+    .hero h1{margin-bottom:0}
+  }
+  /* the demo now shares the fold, so the display type steps down a notch */
+  .hero h1{margin:18px 0 16px;font-size:clamp(2rem,3.5vw,3rem);text-wrap:balance}
+  .hero .sub{font-size:18px;line-height:1.55;color:var(--lcb-ink-2);margin-bottom:26px;max-width:560px}
   .hero-cta{display:flex;gap:13px;flex-wrap:wrap}
   .hero .tl{margin-top:20px;font-size:13px;color:var(--lcb-ink-3);display:flex;align-items:center;gap:8px}
   .hero .tl svg{width:15px;height:15px;color:var(--lcb-ok-dot)}
@@ -145,21 +158,58 @@
   .gl-ai svg{width:16px;height:16px;color:var(--lcb-ai);flex:0 0 auto;margin-top:1px}
   .gl-ai .k{font-family:var(--lcb-font-mono);font-size:9.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--lcb-ai-fg);margin-bottom:3px}
   .gl-ai .x{font-size:12.5px;color:var(--lcb-ink-2);line-height:1.5} .gl-ai .x b{color:var(--lcb-ink)}
-  /* hero waterfall */
-  .wf{position:relative;min-height:430px}
-  .wf-steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:18px}
-  .wf-step{display:flex;gap:14px;align-items:center;background:var(--lcb-canvas);border:1px solid var(--lcb-line);border-radius:14px;padding:17px 20px;box-shadow:var(--lcb-shadow-sm)}
-  .wf-step:nth-child(1){width:56%;margin-left:0}
-  .wf-step:nth-child(2){width:56%;margin-left:9%}
-  .wf-step:nth-child(3){width:56%;margin-left:18%}
-  .wf-step:nth-child(4){width:56%;margin-left:27%}
-  .wf-ic{width:46px;height:46px;border-radius:12px;background:var(--lcb-tint);color:var(--lcb-primary);display:flex;align-items:center;justify-content:center;flex:0 0 auto}
-  .wf-ic svg{width:24px;height:24px}
-  .wf-n{display:block;font-weight:700;font-size:16px;line-height:1.15;color:var(--lcb-ink)}
+  /* ---- hero demo video ---- */
+  .vid{position:relative}
+  .vid-shell{position:relative;aspect-ratio:16/9;border-radius:var(--lcb-r-xl);overflow:hidden;
+    background:#0B1120;border:1px solid var(--lcb-line);box-shadow:var(--lcb-shadow-lg)}
+  .vid-shell>iframe,.vid-poster{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+  .vid-poster{object-fit:cover}
+  /* centred play affordance — the no-JS and reduced-motion state */
+  .vid-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:3;
+    width:76px;height:76px;border-radius:50%;background:rgba(11,17,32,.72);
+    -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+    border:1.5px solid rgba(255,255,255,.34);color:#fff;
+    display:flex;align-items:center;justify-content:center;
+    transition:transform var(--lcb-dur) var(--lcb-ease),background var(--lcb-dur) var(--lcb-ease)}
+  .vid-play svg{width:30px;height:30px;margin-left:4px}
+  .vid-play:hover{background:var(--lcb-primary);transform:translate(-50%,-50%) scale(1.06)}
+  /* full-surface tap target: while muted, a click anywhere turns sound on */
+  .vid-hit{position:absolute;inset:0;z-index:2;border:0;background:transparent;cursor:pointer;padding:0}
+  /* unmute pill — top-right: clear of YouTube's title bar (top-left) and of the
+     burnt-in captions (bottom-centre), which is where a bottom-left pill collides */
+  .vid-sound{position:absolute;right:14px;top:14px;z-index:4;
+    display:inline-flex;align-items:center;gap:9px;padding:14px 18px;/* keeps the tap target >=44px */
+    border:0;border-radius:var(--lcb-r-pill);cursor:pointer;
+    background:rgba(11,17,32,.84);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+    color:#fff;font-family:var(--lcb-font-text);font-size:13.5px;font-weight:600;line-height:1;
+    transition:background var(--lcb-dur) var(--lcb-ease),padding var(--lcb-dur) var(--lcb-ease)}
+  .vid-sound:hover{background:var(--lcb-primary)}
+  .vid-sound svg{width:17px;height:17px;flex:0 0 auto}
+  /* attention ring — pulls the eye to the pill without covering the video */
+  .vid-sound::after{content:"";position:absolute;inset:-3px;border-radius:inherit;pointer-events:none;
+    border:2px solid rgba(255,255,255,.6);animation:vidPulse 2.4s var(--lcb-ease) infinite}
+  @keyframes vidPulse{0%{transform:scale(1);opacity:.85}70%{transform:scale(1.13);opacity:0}100%{opacity:0}}
+  /* state machine: poster -> muted -> on. The pill only exists to solve muted
+     autoplay; once sound is on, YouTube's own controls take over and it retires. */
+  .vid[data-state="poster"] .vid-sound,
+  .vid[data-state="poster"] .vid-hit,
+  .vid[data-state="on"] .vid-sound,
+  .vid[data-state="on"] .vid-hit{display:none}
+  .vid:not([data-state="poster"]) .vid-play{display:none}
+  @media(prefers-reduced-motion:reduce){.vid-sound::after{animation:none}}
+  .vid .wf-trust{margin-top:16px}
+
+  /* ---- how it works band (moved out of the hero to make room for the demo) ---- */
+  .how-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+  @media(max-width:940px){.how-grid{grid-template-columns:1fr;gap:30px}}
+  .wf-steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}
+  .wf-step{display:flex;gap:14px;align-items:center;background:var(--lcb-canvas);border:1px solid var(--lcb-line);border-radius:14px;padding:16px 19px;box-shadow:var(--lcb-shadow-sm)}
+  .wf-ic{width:44px;height:44px;border-radius:12px;background:var(--lcb-tint);color:var(--lcb-primary);display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+  .wf-ic svg{width:23px;height:23px}
+  .wf-n{display:block;font-weight:700;font-size:15.5px;line-height:1.15;color:var(--lcb-ink)}
   .wf-d{display:block;font-size:12.5px;color:var(--lcb-ink-3);line-height:1.35;margin-top:2px}
-  .wf-glance{position:absolute;top:56px;right:0;width:232px;transform:scale(.6);transform-origin:top right;z-index:4;box-shadow:var(--lcb-shadow-lg);border-radius:14px}
-  .wf-trust{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:22px}
-  @media(max-width:940px){.wf{min-height:0}.wf-step{width:82%}.wf-step:nth-child(2){margin-left:7%}.wf-step:nth-child(3){margin-left:13%}.wf-step:nth-child(4){margin-left:18%}.wf-glance{position:static;transform:none;width:86%;margin:16px 0 0 auto}}
+  .wf-glance{width:100%}
+  .wf-trust{display:flex;flex-wrap:wrap;gap:10px}
   /* trustbar */
   .tb{border-top:1px solid var(--lcb-line);border-bottom:1px solid var(--lcb-line);background:var(--lcb-soft)}
   .tb-in{display:flex;align-items:center;justify-content:center;gap:14px 28px;flex-wrap:wrap;padding:16px 24px;font-size:14px;font-weight:600;color:var(--lcb-ink-2)}
@@ -368,8 +418,8 @@
   .ft-links{display:flex;gap:54px;flex-wrap:wrap}
   .ft-col h4{font-family:var(--lcb-font-mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:#fff;margin:0 0 13px;font-weight:600}
   .ft-col a{display:block;font-size:14.5px;margin-bottom:9px;color:var(--lcb-on-dark-mut)}.ft-col a:hover{color:#fff}
-  .ft-legal{margin-top:24px;font-size:12.5px;line-height:1.7;color:#6B7488;max-width:820px}
-  .ft-bot{margin-top:14px;font-size:12.5px;color:#6B7488}
+  .ft-legal{margin-top:24px;font-size:12.5px;line-height:1.7;color:#767F94;max-width:820px}
+  .ft-bot{margin-top:14px;font-size:12.5px;color:#767F94}
 
   /* native vs middleware comparison */
   .cmp-wrap{overflow-x:auto;margin-top:36px;border:1px solid var(--lcb-line);border-radius:16px}
@@ -422,7 +472,7 @@
   <div class="nav-links">
     <a href="#pricing">Pricing</a><a href="#capabilities">Capabilities</a><a href="#white-label">White-label</a><a href="#industries">Industries</a><a href="#faq">FAQ</a>
   </div>
-  <a href="#apply" class="lcb-btn lcb-btn--primary">Book a call</a>
+  <a href="/product/docusign-integration/book-a-call" class="lcb-btn lcb-btn--primary">Book a call</a>
 </div></nav>
 
 <nav class="crumb lcb-wrap" aria-label="Breadcrumb"><ol>
@@ -431,23 +481,52 @@
 
 <!-- HERO -->
 <header class="hero"><div class="lcb-wrap hero-grid">
-  <div>
+  <div class="hero-top">
     <span class="lcb-eyebrow"><span class="dot"></span>HighLevel DocuSign integration</span>
     <h1 class="lcb-display">Send, sign, and track agreements without ever leaving your CRM</h1>
+  </div>
+  <div class="hero-bot">
+    <p class="sub">Watch the 70-second demo: a HighLevel workflow sends the envelope, your client signs under your brand, and the signature moves the deal itself. No tab switch, no Zapier.</p>
     <div class="hero-cta">
       <a href="#apply" class="lcb-btn lcb-btn--trial lcb-btn--lg">Start your 14-day trial <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
       <a href="#pricing" class="lcb-btn lcb-btn--ghost lcb-btn--lg">Choose the right plan</a>
     </div>
     <div class="tl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Runs inside your HighLevel sub-account · fully white-labeled, so your clients sign under your brand</div>
   </div>
-  <div class="wf">
+  <div class="vid" id="demo" data-state="poster">
+    <div class="vid-shell">
+      <img class="vid-poster" src="https://i.ytimg.com/vi/zlcTA-YnBUo/maxresdefault.jpg"
+           onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/zlcTA-YnBUo/hqdefault.jpg'"
+           width="1280" height="720" fetchpriority="high"
+           alt="A DocuSign envelope being sent, tracked, and signed inside a white-labeled HighLevel sub-account">
+      <a class="vid-play" href="https://www.youtube.com/watch?v=zlcTA-YnBUo" rel="noopener" aria-label="Play the DocuSign and HighLevel integration demo">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.14v13.72L19 12z"/></svg>
+      </a>
+      <button class="vid-hit" type="button" tabindex="-1" aria-hidden="true"></button>
+      <button class="vid-sound" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4z"/><line x1="22" y1="9" x2="16" y2="15"/><line x1="16" y1="9" x2="22" y2="15"/></svg>
+        <span class="vid-lbl">Tap for sound</span>
+      </button>
+    </div>
+    <div class="wf-trust"><span class="def2-chip ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>Legally binding &middot; ESIGN &amp; UETA</span></div>
+  </div>
+</div></header>
+
+<!-- HOW IT WORKS -->
+<section class="lcb-section lcb-section--soft" id="how"><div class="lcb-wrap">
+  <div class="sh" style="max-width:720px;margin:0 0 34px;text-align:left">
+    <span class="lcb-eyebrow"><span class="dot"></span>How it works</span>
+    <h2 class="lcb-h2">How a signature moves through HighLevel.</h2>
+  </div>
+  <div class="how-grid">
+    <div>
     <ol class="wf-steps" aria-label="How a signature moves through HighLevel">
       <li class="wf-step"><span class="wf-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg></span><div><span class="wf-n">1 &middot; Trigger</span><span class="wf-d">A stage change or form starts it</span></div></li>
       <li class="wf-step"><span class="wf-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M5 3h9l5 5v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path d="M9 13h6M9 17h4"/></svg></span><div><span class="wf-n">2 &middot; Auto-fill &amp; send</span><span class="wf-d">Contact fields fill the envelope</span></div></li>
       <li class="wf-step"><span class="wf-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19h18"/><path d="M4 15c2.5-6 4.2-9 6-9 1.6 0 1 6 3 6s3-7 5-7"/></svg></span><div><span class="wf-n">3 &middot; Signed</span><span class="wf-d">They sign under your brand</span></div></li>
       <li class="wf-step"><span class="wf-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg></span><div><span class="wf-n">4 &middot; Workflow fires</span><span class="wf-d">Deal moves to Won automatically</span></div></li>
     </ol>
-    <div class="wf-trust"><span class="def2-chip ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>Legally binding &middot; ESIGN &amp; UETA</span><span class="def2-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>No code &middot; white-label</span></div>
+    </div>
     <div class="glance wf-glance">
       <div class="bar"><i></i><i></i><i></i><span class="t">Your CRM · Contact</span></div>
       <div class="b">
@@ -461,7 +540,7 @@
       </div>
     </div>
   </div>
-</div></header>
+</div></section>
 
 <!-- PRICING -->
 <section class="lcb-section" id="pricing"><div class="lcb-wrap">
@@ -851,8 +930,8 @@
     <div class="form">
       <h3>Book a 15-minute setup call</h3>
       <div class="fp">See it working inside a HighLevel account in 15 minutes.</div>
-      <iframe src="https://api.leadconnectorhq.com/widget/booking/CwWPut2pYcgUSqeozTVA" style="width:100%;border:none;min-height:700px;overflow:hidden;border-radius:10px;background:var(--lcb-soft)" scrolling="no" id="CwWPut2pYcgUSqeozTVA_pillar"></iframe>
-      <div class="lg2">Calendar not loading? <a href="https://api.leadconnectorhq.com/widget/booking/CwWPut2pYcgUSqeozTVA" target="_blank" rel="noopener" style="color:var(--lcb-primary);font-weight:600">Open it in a new tab ↗</a></div>
+      <iframe src="https://api.leadconnectorhq.com/widget/booking/VbUUZSpipvw56s9pRtNs" style="width:100%;border:none;min-height:700px;overflow:hidden;border-radius:10px;background:var(--lcb-soft)" scrolling="no" id="VbUUZSpipvw56s9pRtNs_pillar"></iframe>
+      <div class="lg2">Calendar not loading? <a href="https://api.leadconnectorhq.com/widget/booking/VbUUZSpipvw56s9pRtNs" target="_blank" rel="noopener" style="color:var(--lcb-primary);font-weight:600">Open it in a new tab ↗</a></div>
     </div>
   </div>
 </div>
@@ -870,11 +949,11 @@
       <div class="ft-col"><h4>Products</h4><a href="/product/docusign-integration/">DocuSign integration</a><a href="/product/google-sheets-integration/">Google Sheets integration</a></div>
       <div class="ft-col"><h4>DocuSign</h4><a href="/product/docusign-integration/insurance">For insurance</a><a href="/product/docusign-integration/real-estate">For real estate</a></div>
       <div class="ft-col"><h4>Guides</h4><a href="/blog/gohighlevel-integrations/">GoHighLevel integrations</a><a href="/blog/four-levels-of-integration/">The 4 levels of integration</a><a href="/blog/ai-agents-need-deep-integrations/">AI agents &amp; integration depth</a></div>
-      <div class="ft-col"><h4>Company</h4><a href="/">About LC Bridge</a><a href="mailto:hello@lcbridge.app">hello@lcbridge.app</a><a href="#apply">Book a call</a></div>
+      <div class="ft-col"><h4>Company</h4><a href="/">About LC Bridge</a><a href="mailto:hello@lcbridge.app">hello@lcbridge.app</a><a href="/product/docusign-integration/book-a-call">Book a call</a></div>
     </div>
   </div>
   <p class="ft-legal">DocuSign Integration is built by LC Bridge (Lead Connector Bridge) — we build white-labeled integrations that HighLevel platforms embed as their own. An independent product that works with DocuSign® and HighLevel®, and is not affiliated with, endorsed by, or sponsored by either. DocuSign, HighLevel, Zapier, Make, and Pabbly are trademarks of their respective owners.</p>
-  <p class="foot-legal-links" style="margin:0 0 12px;font-size:13px;opacity:.9"><a href="/pricing">Pricing</a> &middot; <a href="/product/docusign-integration/privacy">Privacy</a> &middot; <a href="/product/docusign-integration/terms">Terms</a> &middot; <a href="/product/docusign-integration/refund">Refund</a></p>
+  <p class="foot-legal-links" style="margin:0 0 12px;font-size:13px;opacity:.9"><a href="/product/docusign-integration/pricing">Pricing</a> &middot; <a href="/product/docusign-integration/privacy">Privacy</a> &middot; <a href="/product/docusign-integration/terms">Terms</a> &middot; <a href="/product/docusign-integration/refund">Refund</a></p>
   <p class="ft-bot">© 2026 LC Bridge. All rights reserved.</p>
 </div></footer>
 
@@ -910,6 +989,57 @@
   }
   btns.forEach(function(b){ b.addEventListener('click',function(){ apply(b.getAttribute('data-mode')); }); });
   apply('m');
+})();
+</script>
+
+<script>
+/* Hero demo: muted autoplay (the only kind every browser allows), with an
+   obvious one-tap route to sound. Poster ships in the HTML so the LCP is an
+   image, not a 1MB player; the iframe is grafted on afterwards. */
+(function(){
+  var v=document.getElementById('demo'); if(!v) return;
+  var ID='zlcTA-YnBUo';
+  var shell=v.querySelector('.vid-shell'),
+      pill=v.querySelector('.vid-sound'),
+      hit=v.querySelector('.vid-hit'),
+      play=v.querySelector('.vid-play'),
+      frame=null, at=0;
+
+  /* Muted phase runs chrome-free (controls=0) so the hero stays clean; turning
+     sound on remounts with real controls, resuming at the same second. */
+  function mount(muted,start){
+    if(frame) frame.remove();
+    var f=document.createElement('iframe');
+    f.src='https://www.youtube-nocookie.com/embed/'+ID+
+          '?autoplay=1&playsinline=1&rel=0&cc_load_policy=1&enablejsapi=1'+
+          '&mute='+(muted?1:0)+'&controls='+(muted?0:1)+
+          (start?'&start='+Math.floor(start):'')+
+          '&origin='+encodeURIComponent(location.origin);
+    f.title='DocuSign + GoHighLevel integration demo';
+    f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';
+    f.setAttribute('allowfullscreen','');
+    f.addEventListener('load',function(){
+      f.contentWindow.postMessage('{"event":"listening","id":1,"channel":"widget"}','*');
+    });
+    shell.appendChild(f);
+    frame=f;
+    v.dataset.state=muted?'muted':'on';
+  }
+
+  /* the player reports playhead position back; we keep the last one to resume from */
+  window.addEventListener('message',function(e){
+    if(!frame||e.source!==frame.contentWindow||typeof e.data!=='string') return;
+    try{ var d=JSON.parse(e.data); if(d.info&&d.info.currentTime) at=d.info.currentTime; }catch(_){}
+  });
+
+  function sound(){ mount(false,at); }   /* the click is the gesture that buys us audio */
+
+  pill.addEventListener('click',sound);
+  hit.addEventListener('click',sound);
+  play.addEventListener('click',function(e){ e.preventDefault(); mount(false,0); });
+
+  /* Reduced motion keeps the still poster; everyone else gets muted autoplay. */
+  if(!matchMedia('(prefers-reduced-motion: reduce)').matches) mount(true,0);
 })();
 </script>
 </body>
