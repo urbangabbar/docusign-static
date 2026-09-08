@@ -111,10 +111,15 @@
   .nav-in{display:flex;align-items:center;justify-content:space-between;height:68px}
   .nav .lcb-logo .wm{font-size:18px}
   .nav-by{font-size:11px;color:var(--lcb-ink-3);font-weight:600;border-left:1px solid var(--lcb-line-2);padding-left:10px;margin-left:2px}
+.nav-lock{display:inline-flex;align-items:center}
+.nav-by{display:inline-flex;align-items:center;gap:7px;font-size:11.5px;color:var(--lcb-ink-3);font-weight:600;border-left:1px solid var(--lcb-line-2);padding-left:11px;margin-left:3px;text-decoration:none;white-space:nowrap}
+.nav-by:hover{color:var(--lcb-ink)}
+.nav-by .by-lock{height:18px;width:auto;display:block}
+.nav-by:hover .by-lock{opacity:.82}
   .nav-links{display:flex;align-items:center;gap:24px}
   .nav-links a{font-size:14.5px;font-weight:500;color:var(--lcb-ink-2)}
   .nav-links a:hover{color:var(--lcb-ink)}
-  @media(max-width:940px){.nav-links{display:none}.nav-by{display:none}}
+  @media(max-width:940px){.nav-links{display:none}}
   /* breadcrumb */
   .crumb{padding:16px 0 0}
   .crumb ol{list-style:none;display:flex;gap:8px;font-size:13px;color:var(--lcb-ink-3)}
@@ -460,14 +465,14 @@
   .pr-feat li.pr-lead{font-family:var(--lcb-font-mono);font-size:11px;letter-spacing:.07em;text-transform:uppercase;font-weight:600;color:var(--lcb-ink)}
   .pr-foot{max-width:720px;margin:36px 0 0;text-align:left;font-size:13.5px;color:var(--lcb-ink-3);line-height:1.7}
   .pr-foot b{color:var(--lcb-ink-2)}
+
+@media(max-width:820px){.by-txt{display:none}}
 </style>
 </head>
 <body class="lcb-body">
 
 <nav class="nav"><div class="lcb-wrap nav-in">
-  <a class="lcb-logo" href="/docusign-integration/" aria-label="Docusign integration by LC Bridge">
-    <img src="/assets/docusign-logo.svg" alt="Docusign" width="139" height="28" style="height:28px;width:auto;display:block"><span class="nav-by">integration · by LC Bridge</span>
-  </a>
+  <span class="nav-lock"><a class="lcb-logo" href="/docusign-integration/" aria-label="Docusign Integration home"><img src="/assets/docusign-logo.svg" alt="Docusign" width="139" height="28" style="height:28px;width:auto;display:block"></a><a class="nav-by" href="/" aria-label="LC Bridge home"><span class="by-txt">integration by</span><img src="/assets/lcbridge-lockup-black.svg" alt="LC Bridge" width="180" height="60" class="by-lock"></a></span>
   <div class="nav-links">
     <a href="#pricing">Pricing</a><a href="#capabilities">Capabilities</a><a href="#white-label">White-label</a><a href="#industries">Industries</a><a href="#faq">FAQ</a>
   </div>
