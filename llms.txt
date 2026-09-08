@@ -15,7 +15,8 @@ LC Bridge, legally Lead Connector Bridge, is an integration vendor for the HighL
 - [Pricing](https://lcbridge.app/docusign-integration/pricing): Three plans priced per HighLevel sub-account, monthly or annual, with a 14-day trial.
 - [Book a call](https://lcbridge.app/book-a-call/): Book a 30-minute call with Arun, founder of LC Bridge — about any of the integrations.
 - [Book a call](https://lcbridge.app/docusign-integration/book-a-call): Book a 30-minute call with the founder about your HighLevel setup.
-- [Documentation](https://lcbridge.app/docusign-integration/docs): Setup, triggers, field mapping, and how the white-label layer works.
+- [Documentation](https://lcbridge.app/docusign-integration/docs/): Setup, triggers, field mapping, and how the white-label layer works.
+- [Getting started guide](https://lcbridge.app/docusign-integration/docs/getting-started/): Six-minute video walkthrough plus written steps — connect DocuSign, map a template, send an agreement, track it to signature.
 
 ## Industry guides
 

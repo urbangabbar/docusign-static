@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Documentation — DocuSign Integration by LCBridge</title>
-<meta name="description" content="Getting started and how-to guide for the DocuSign Integration for LeadConnector by LCBridge — connect DocuSign, set up templates, send agreements, track signing status, and chase stalls without leaving LeadConnector.">
-<link rel="canonical" href="https://lcbridge.app/docusign-integration/docs">
+<title>Getting started — DocuSign Integration docs | LC Bridge</title>
+<meta name="description" content="Watch the 6-minute walkthrough or read the guide: connect DocuSign, map a template once, and send your first agreement for signature from inside LeadConnector.">
+<link rel="canonical" href="https://lcbridge.app/docusign-integration/docs/getting-started/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -94,6 +94,31 @@
     td:first-child{padding-top:12px}
     tr{border-bottom:1px solid var(--line-2);padding:8px 0}
   }
+
+  .vid{margin:26px 0 6px;border-radius:14px;overflow:hidden;border:1px solid var(--line);
+    box-shadow:0 20px 50px -28px rgba(15,23,42,.5);background:#000;position:relative;aspect-ratio:16/9}
+  .vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+  .vid-cap{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin:12px 0 0;font-size:13px;color:var(--ink-3)}
+  .vid-cap .m{display:inline-flex;align-items:center;gap:6px;font-weight:600}
+  .vid-cap a{color:var(--brand);font-weight:600}
+  .tldr{background:var(--bg-soft);border:1px solid var(--line);border-radius:14px;padding:24px 26px;margin:30px 0 8px}
+  .tldr h2{margin:0 0 4px;font-size:1.05rem;border:0;padding:0}
+  .tldr .sub{font-size:13.5px;color:var(--ink-3);margin-bottom:18px}
+  .tldr ol{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media(max-width:780px){.tldr ol{grid-template-columns:1fr}}
+  .tldr li{background:#fff;border:1px solid var(--line);border-radius:11px;padding:16px 17px}
+  .tldr .who{font-family:var(--font-mono);font-size:10px;letter-spacing:.11em;text-transform:uppercase;
+    font-weight:700;color:var(--brand);margin-bottom:8px;display:block}
+  .tldr .who.rep{color:#0B8043}
+  .tldr b{display:block;font-size:14.5px;margin-bottom:5px}
+  .tldr p{margin:0;font-size:13.5px;color:var(--ink-2);line-height:1.5}
+  .tldr .t{font-family:var(--font-mono);font-size:11px;color:var(--ink-3);margin-top:9px;display:block}
+  .done{display:flex;gap:11px;align-items:flex-start;background:#F0FAF4;border:1px solid #C3E9D2;
+    border-left:3px solid #0B8043;border-radius:10px;padding:13px 16px;margin:18px 0 0}
+  .done svg{width:17px;height:17px;color:#0B8043;flex:0 0 auto;margin-top:2px}
+  .done p{margin:0;font-size:14px;color:#14532D;line-height:1.5}
+  .done b{font-weight:700}
+  .done a{color:#0B8043;font-weight:700}
 </style>
 </head>
 <body>
@@ -114,12 +139,57 @@
 </nav>
 
 <main class="wrap">
+  <nav aria-label="Breadcrumb" style="font-size:13px;color:var(--ink-3);margin:0 0 6px">
+    <a href="/docusign-integration/" style="color:inherit">DocuSign Integration</a>
+    <span aria-hidden="true"> / </span>
+    <a href="/docusign-integration/docs/" style="color:inherit">Docs</a>
+    <span aria-hidden="true"> / </span>
+    <span style="color:var(--ink);font-weight:600">Getting started</span>
+  </nav>
   <header class="page">
     <span class="eyebrow"><span class="dot"></span>Documentation</span>
     <h1>Getting started with the DocuSign Integration</h1>
     <p class="subtitle">Connect DocuSign to LeadConnector, set up templates once, then send agreements and chase stalls in a couple of clicks — without leaving your CRM.</p>
     <p class="updated">Last updated: June 24, 2026</p>
   </header>
+
+  <div class="vid">
+    <iframe src="https://www.youtube-nocookie.com/embed/fZ4Qpj5K-Lo?rel=0&amp;modestbranding=1"
+            title="How to Integrate DocuSign with LC Bridge — full app demo and walkthrough"
+            loading="lazy" allowfullscreen
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+  </div>
+  <p class="vid-cap">
+    <span class="m"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:15px;height:15px"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>6 minutes</span>
+    <span class="m">The whole path, from connecting to a signed agreement</span>
+    <a href="https://www.youtube.com/watch?v=fZ4Qpj5K-Lo" target="_blank" rel="noopener">Watch on YouTube &#8599;</a>
+  </p>
+
+  <div class="tldr">
+    <h2>The short version</h2>
+    <p class="sub">Two of these you do once. The third you do every time you need something signed.</p>
+    <ol>
+      <li>
+        <span class="who">Admin &middot; once</span>
+        <b>Connect DocuSign</b>
+        <p>Authorize your own DocuSign account through its own sign-in screen. No password is shared.</p>
+        <span class="t">about 2 minutes</span>
+      </li>
+      <li>
+        <span class="who">Admin &middot; once per template</span>
+        <b>Map a template</b>
+        <p>Tell the integration which CRM field fills which part of the agreement, then save it send-ready.</p>
+        <span class="t">about 5 minutes</span>
+      </li>
+      <li>
+        <span class="who rep">Rep &middot; every send</span>
+        <b>Send and track</b>
+        <p>Open a contact, pick the template, send. The Worklist then tells you who to chase.</p>
+        <span class="t">about 2 clicks</span>
+      </li>
+    </ol>
+  </div>
 
   <div class="callout">
     <p>LCBridge is an independent third-party integration. DocuSign and LeadConnector are trademarks of their respective owners; LCBridge is not affiliated with or endorsed by them.</p>
@@ -223,9 +293,11 @@
   </ol>
   <p>The integration stores the connection securely. Your DocuSign OAuth tokens are encrypted at rest, and you can disconnect at any time to revoke the integration's access. For details on what is stored and how, see the <a class="inline" href="/docusign-integration/privacy">Privacy Policy</a>.</p>
   <figure>
-    <img src="img/connection.png" loading="lazy" alt="The DocuSign Connected status chip shown after OAuth authorization">
+    <img src="/docusign-integration/img/connection.png" loading="lazy" alt="The DocuSign Connected status chip shown after OAuth authorization">
     <figcaption><em>Once authorized, the integration shows DocuSign · Connected.</em></figcaption>
   </figure>
+
+  <div class="done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><p><b>You're done when</b> the page reads <b>DocuSign &middot; Connected</b>. If it doesn't, go straight to <a href="#troubleshooting">Troubleshooting</a> &mdash; nearly every failure at this step is a DocuSign plan without API access.</p></div>
   <div class="callout tip">
     <p class="ck">Tip</p>
     <p>If the connection fails — for example with an <code>invalid_client</code> error — the most common cause is a DocuSign plan without API access. Confirm your DocuSign account has API access enabled, then try connecting again.</p>
@@ -241,9 +313,11 @@
   </ol>
   <p>Once a template is saved as send-ready, it appears for reps in the send flow. Templates that are not yet saved as send-ready stay hidden from reps, so they can't accidentally send a half-configured agreement.</p>
   <figure>
-    <img src="img/templates.png" loading="lazy" alt="The Templates screen showing a send-ready DocuSign template with Edit and Enable controls">
+    <img src="/docusign-integration/img/templates.png" loading="lazy" alt="The Templates screen showing a send-ready DocuSign template with Edit and Enable controls">
     <figcaption><em>A send-ready template in the Templates screen.</em></figcaption>
   </figure>
+
+  <div class="done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><p><b>You're done when</b> the template shows as <b>send-ready</b>. Only send-ready templates appear to reps, so a half-mapped agreement can't go out by accident.</p></div>
   <div class="callout">
     <p class="ck">Note</p>
     <p>Map every field a recipient is expected to have filled. Required fields that aren't mapped will be caught later by the pre-flight check at send time, but mapping them now keeps the send clean.</p>
@@ -260,7 +334,7 @@
   </ol>
   <p>For many recipients at once, use the <strong>bulk launch</strong> from a Smart List: select the contacts, pick the template, review, and send the whole batch in one go.</p>
   <figure>
-    <img src="img/bulksend.png" loading="lazy" alt="The Bulk send run history showing a completed send">
+    <img src="/docusign-integration/img/bulksend.png" loading="lazy" alt="The Bulk send run history showing a completed send">
     <figcaption><em>Bulk send tracks every run — recipients, sent, failed, and completion.</em></figcaption>
   </figure>
   <div class="callout tip">
@@ -276,11 +350,13 @@
     <li><strong>Nudge</strong> a stalled signer in one tap to send a reminder.</li>
   </ul>
   <figure>
-    <img src="img/worklist.png" loading="lazy" alt="The Worklist showing agreements that need attention with AI summary and nudge buttons">
+    <img src="/docusign-integration/img/worklist.png" loading="lazy" alt="The Worklist showing agreements that need attention with AI summary and nudge buttons">
     <figcaption><em>The Worklist surfaces agreements that need attention, sorted by urgency, with one-tap nudge.</em></figcaption>
   </figure>
+
+  <div class="done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><p><b>You're done when</b> your first agreement is in the Worklist with a live status. From here you stop going to look for it &mdash; it surfaces itself when it stalls.</p></div>
   <figure>
-    <img src="img/nudge.png" loading="lazy" style="max-width:380px" alt="The nudge composer with an AI-drafted message and SMS/email channel options">
+    <img src="/docusign-integration/img/nudge.png" loading="lazy" style="max-width:min(380px,100%)" alt="The nudge composer with an AI-drafted message and SMS/email channel options">
     <figcaption><em>Nudging a signer — pick SMS or email, send the AI-drafted message, or write your own.</em></figcaption>
   </figure>
   <p>Each agreement shows one of five states, so status is readable at a glance:</p>
@@ -292,7 +368,7 @@
     <li><span class="sw" style="background:#98A2B3"></span>Draft</li>
   </ul>
   <figure>
-    <img src="img/agreements.png" loading="lazy" alt="The All-agreements list showing the five status pills and a status table">
+    <img src="/docusign-integration/img/agreements.png" loading="lazy" alt="The All-agreements list showing the five status pills and a status table">
     <figcaption><em>The All-agreements list, color-coded by the five statuses.</em></figcaption>
   </figure>
   <div class="callout">
@@ -309,7 +385,7 @@
   </ul>
   <p>When you disconnect, the integration can no longer send agreements or read status on your behalf until you reconnect. For details on how connection data is stored, retained, and deleted, see the <a class="inline" href="/docusign-integration/privacy">Privacy Policy</a>.</p>
   <figure>
-    <img src="img/unmatched.png" loading="lazy" alt="The Unmatched screen showing all envelopes matched automatically">
+    <img src="/docusign-integration/img/unmatched.png" loading="lazy" alt="The Unmatched screen showing all envelopes matched automatically">
     <figcaption><em>Unmatched shows envelopes that couldn't auto-link to a contact — here, everything matched automatically.</em></figcaption>
   </figure>
 

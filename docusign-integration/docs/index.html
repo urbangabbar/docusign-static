@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Documentation — DocuSign Integration | LC Bridge</title>
+<meta name="description" content="Guides for the DocuSign Integration by LC Bridge — connecting DocuSign, mapping templates, sending agreements, and tracking signing status inside LeadConnector.">
+<link rel="canonical" href="https://lcbridge.app/docusign-integration/docs/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0B1220; --ink-2:#475467; --ink-3:#667085; --line:#E7E9EE; --line-2:#EEF0F4;
+    --bg:#fff; --bg-soft:#F7F8FB; --bg-tint:#F5F7FF;
+    --brand:#3047C0; --brand-press:#283BA6;
+    --ai:#6938EF; --ai-bg:#F5F3FF; --ai-line:#DDD6FE; --ai-fg:#5925DC;
+    --shadow:0 1px 2px rgba(16,24,40,.05); --maxw:820px;
+  }
+  *{box-sizing:border-box}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;margin:0;background:var(--bg)}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+  nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.85);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line-2)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .brand{display:flex;align-items:center;gap:11px;text-decoration:none}
+  .brand .tile{width:34px;height:34px;border-radius:9px;background:var(--ai);color:#fff;display:flex;align-items:center;justify-content:center}
+  .brand .tile svg{width:20px;height:20px}
+  .brand .nm{font-weight:800;font-size:17px;letter-spacing:-.02em;line-height:1.1}
+  .brand .by{font-size:11.5px;color:var(--ink-3);font-weight:600}
+  .brand .for{font-weight:600;font-size:13px;color:var(--ink-3);border-left:1px solid var(--line);padding-left:11px;margin-left:3px}
+  .nav-links{display:flex;align-items:center;gap:6px;margin-left:auto}
+  .ghost{color:var(--ink-2);text-decoration:none;font-weight:600;font-size:14px;padding:8px 12px;border-radius:8px}
+  .ghost:hover{background:var(--bg-soft)}
+
+  header.page{padding-top:48px;padding-bottom:8px}
+  .eyebrow{display:inline-flex;align-items:center;gap:6px;color:var(--brand);background:var(--bg-tint);font-size:12.5px;font-weight:600;padding:5px 11px;border-radius:999px}
+  .eyebrow .dot{width:6px;height:6px;background:var(--brand);border-radius:50%}
+  h1{font-size:40px;font-weight:800;letter-spacing:-.02em;margin:14px 0 6px;color:var(--ink)}
+  .subtitle{color:var(--ink-2);font-size:17px;margin:0 0 6px;max-width:64ch}
+  .updated{color:var(--ink-3);font-size:14px;margin:0}
+
+  h2{color:var(--ink);font-size:22px;font-weight:700;margin-top:36px;margin-bottom:10px;letter-spacing:-.01em;scroll-margin-top:84px}
+  h3{color:var(--ink);font-size:16px;font-weight:700;margin-top:22px;margin-bottom:6px}
+  p{color:var(--ink-2);margin:0 0 14px}
+  ul,ol{color:var(--ink-2);padding-left:22px;margin:0 0 14px}
+  li{margin:6px 0}
+  strong{color:var(--ink);font-weight:600}
+  a.inline{color:var(--brand);text-decoration:none}
+  a.inline:hover{text-decoration:underline}
+
+  .toc{border:1px solid var(--line);background:var(--bg-soft);border-radius:12px;padding:18px 20px;margin:24px 0 8px}
+  .toc .toc-h{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);margin:0 0 10px}
+  .toc ol{list-style:none;padding:0;margin:0;columns:2;column-gap:28px}
+  .toc li{margin:5px 0;break-inside:avoid}
+  .toc a{color:var(--brand);text-decoration:none;font-weight:600;font-size:14px}
+  .toc a:hover{text-decoration:underline}
+
+  .callout{border:1px solid var(--line);background:var(--bg-soft);border-radius:12px;padding:18px;margin:18px 0;font-size:14.5px;color:var(--ink-2)}
+  .callout p{margin:0 0 10px}
+  .callout p:last-child{margin-bottom:0}
+  .callout ul,.callout ol{margin:0;font-size:14.5px}
+  .callout .ck{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ai-fg);margin:0 0 6px}
+  .callout.tip{border-color:var(--ai-line);background:var(--ai-bg)}
+
+  .status{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 14px;padding:0;list-style:none}
+  .status li{display:inline-flex;align-items:center;gap:7px;font-size:13.5px;font-weight:600;color:var(--ink-2);border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 12px;margin:0}
+  .status .sw{width:8px;height:8px;border-radius:50%;flex:0 0 auto}
+
+  figure{margin:18px 0}
+  figure img{max-width:100%;height:auto;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);display:block;margin:18px auto}
+  figcaption{font-size:13px;color:var(--ink-3);text-align:center;margin-top:8px}
+  .flow-svg{width:100%;max-width:720px;height:auto;display:block;margin:18px auto}
+
+  table{width:100%;border-collapse:collapse;margin:6px 0 18px;font-size:14.5px}
+  th,td{text-align:left;vertical-align:top;padding:11px 14px;border-bottom:1px solid var(--line-2)}
+  thead th{font-size:12px;font-weight:700;letter-spacing:.02em;color:var(--ink-3);text-transform:uppercase;border-bottom:1px solid var(--line);background:var(--bg-soft)}
+  td:first-child{color:var(--ink);font-weight:600;white-space:nowrap}
+  td code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;background:var(--bg-tint);color:var(--brand);padding:1px 6px;border-radius:5px}
+
+  footer{margin-top:56px;border-top:1px solid var(--line-2);padding:28px 0 48px;font-size:13px;color:var(--ink-3)}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;align-items:center}
+  footer .flinks{display:flex;gap:18px;flex-wrap:wrap}
+  footer a{color:var(--ink-3);text-decoration:none}
+  footer a:hover{color:var(--ink-2)}
+
+  @media (max-width:720px){
+    .nav-links{display:none}
+    h1{font-size:30px}
+    .toc ol{columns:1}
+    table,thead,tbody,th,td,tr{display:block}
+    thead{display:none}
+    td{border:none;padding:2px 0}
+    td:first-child{padding-top:12px}
+    tr{border-bottom:1px solid var(--line-2);padding:8px 0}
+  }
+
+  .vid{margin:26px 0 6px;border-radius:14px;overflow:hidden;border:1px solid var(--line);
+    box-shadow:0 20px 50px -28px rgba(15,23,42,.5);background:#000;position:relative;aspect-ratio:16/9}
+  .vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+  .vid-cap{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin:12px 0 0;font-size:13px;color:var(--ink-3)}
+  .vid-cap .m{display:inline-flex;align-items:center;gap:6px;font-weight:600}
+  .vid-cap a{color:var(--brand);font-weight:600}
+  .tldr{background:var(--bg-soft);border:1px solid var(--line);border-radius:14px;padding:24px 26px;margin:30px 0 8px}
+  .tldr h2{margin:0 0 4px;font-size:1.05rem;border:0;padding:0}
+  .tldr .sub{font-size:13.5px;color:var(--ink-3);margin-bottom:18px}
+  .tldr ol{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media(max-width:780px){.tldr ol{grid-template-columns:1fr}}
+  .tldr li{background:#fff;border:1px solid var(--line);border-radius:11px;padding:16px 17px}
+  .tldr .who{font-family:var(--font-mono);font-size:10px;letter-spacing:.11em;text-transform:uppercase;
+    font-weight:700;color:var(--brand);margin-bottom:8px;display:block}
+  .tldr .who.rep{color:#0B8043}
+  .tldr b{display:block;font-size:14.5px;margin-bottom:5px}
+  .tldr p{margin:0;font-size:13.5px;color:var(--ink-2);line-height:1.5}
+  .tldr .t{font-family:var(--font-mono);font-size:11px;color:var(--ink-3);margin-top:9px;display:block}
+  .done{display:flex;gap:11px;align-items:flex-start;background:#F0FAF4;border:1px solid #C3E9D2;
+    border-left:3px solid #0B8043;border-radius:10px;padding:13px 16px;margin:18px 0 0}
+  .done svg{width:17px;height:17px;color:#0B8043;flex:0 0 auto;margin-top:2px}
+  .done p{margin:0;font-size:14px;color:#14532D;line-height:1.5}
+  .done b{font-weight:700}
+  .done a{color:#0B8043;font-weight:700}
+
+  .guides{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:6px}
+  @media(max-width:780px){.guides{grid-template-columns:1fr}}
+  .guide{display:block;background:#fff;border:1px solid var(--line);border-radius:14px;padding:0;
+    overflow:hidden;text-decoration:none;transition:transform .18s,box-shadow .18s,border-color .18s}
+  .guide:hover{transform:translateY(-2px);box-shadow:0 16px 36px -22px rgba(15,23,42,.4);border-color:var(--line-2,#dfe3ea)}
+  .guide .thumb{aspect-ratio:16/9;background:#0F172A center/cover no-repeat;position:relative;display:block}
+  .guide .play{position:absolute;inset:0;display:grid;place-items:center}
+  .guide .play span{width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.94);
+    display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.35)}
+  .guide .play svg{width:20px;height:20px;color:#0F172A;margin-left:3px}
+  .guide .gb{padding:20px 22px}
+  .guide .tag{font-family:var(--font-mono);font-size:10px;letter-spacing:.11em;text-transform:uppercase;
+    font-weight:700;color:var(--brand);display:block;margin-bottom:8px}
+  .guide h3{margin:0 0 6px;font-size:1.05rem;color:var(--ink)}
+  .guide p{margin:0;font-size:14px;color:var(--ink-2);line-height:1.55}
+  .guide .meta{margin-top:12px;font-family:var(--font-mono);font-size:11px;color:var(--ink-3)}
+  .guide--soon{opacity:.62;pointer-events:none}
+  .guide--soon .gb{padding-top:22px}
+  .reflist{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+  .reflist a{font-size:14px;font-weight:600;color:var(--ink-2);background:var(--bg-soft);
+    border:1px solid var(--line);border-radius:999px;padding:9px 16px;text-decoration:none}
+  .reflist a:hover{color:var(--ink);border-color:var(--line-2,#dfe3ea)}
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap">
+    <a class="brand" href="/docusign-integration/">
+      <img src="/assets/docusign-logo.svg" alt="Docusign" width="139" height="28" style="height:28px;width:auto;display:block">
+      <div class="by">integration · by LCBridge</div>
+      <span class="for">for LeadConnector platforms</span>
+    </a>
+    <div class="nav-links">
+      <a class="ghost" href="/docusign-integration/">Home</a>
+      <a class="ghost" href="/docusign-integration/privacy">Privacy</a>
+      <a class="ghost" href="/docusign-integration/terms">Terms</a>
+      <a class="ghost" href="/docusign-integration/refund">Refund</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap">
+  <nav aria-label="Breadcrumb" style="font-size:13px;color:var(--ink-3);margin:0 0 6px">
+    <a href="/docusign-integration/" style="color:inherit">DocuSign Integration</a>
+    <span aria-hidden="true"> / </span>
+    <span style="color:var(--ink);font-weight:600">Docs</span>
+  </nav>
+
+  <header class="page">
+    <span class="eyebrow"><span class="dot"></span>Documentation</span>
+    <h1>DocuSign Integration documentation</h1>
+    <p class="subtitle">Everything you need to connect DocuSign to LeadConnector and get agreements signed without leaving the CRM. Start with the walkthrough &mdash; it covers the whole path in six minutes.</p>
+  </header>
+
+  <div class="callout">
+    <p>LCBridge is an independent third-party integration. DocuSign and LeadConnector are trademarks of their respective owners; LCBridge is not affiliated with or endorsed by them.</p>
+  </div>
+
+  <h2 id="guides">Guides</h2>
+
+  <div class="guides">
+    <a class="guide" href="/docusign-integration/docs/getting-started/">
+      <span class="thumb" style="background-image:url('https://i.ytimg.com/vi/fZ4Qpj5K-Lo/hqdefault.jpg')">
+        <span class="play"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></span>
+      </span>
+      <span class="gb">
+        <span class="tag">Start here</span>
+        <h3>Getting started</h3>
+        <p>Connect your DocuSign account, map a template once, send your first agreement, and track it to signature. Video walkthrough plus the written steps.</p>
+        <span class="meta">6-min video &middot; ~10 min to first send</span>
+      </span>
+    </a>
+
+    <span class="guide guide--soon">
+      <span class="gb">
+        <span class="tag">Coming soon</span>
+        <h3>Workflows &amp; automation</h3>
+        <p>Firing sends from a HighLevel Workflow, moving a pipeline stage when an agreement is signed, and the triggers available on each event.</p>
+        <span class="meta">In writing</span>
+      </span>
+    </span>
+  </div>
+
+  <h2 id="reference">Reference</h2>
+  <p>The policies that govern the Service, and where to get a human.</p>
+  <div class="reflist">
+    <a href="/docusign-integration/docs/getting-started/#troubleshooting">Troubleshooting</a>
+    <a href="mailto:support@lcbridge.app">Email support</a>
+    <a href="/docusign-integration/privacy">Privacy Policy</a>
+    <a href="/docusign-integration/terms">Terms of Service</a>
+    <a href="/docusign-integration/refund">Refund Policy</a>
+    <a href="/docusign-integration/pricing">Pricing</a>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 LCBridge</span>
+    <span class="flinks">
+      <a href="/docusign-integration/privacy">Privacy</a>
+      <a href="/docusign-integration/terms">Terms</a>
+      <a href="/docusign-integration/refund">Refund</a>
+      <a href="/docusign-integration/">Home</a>
+    </span>
+  </div>
+</footer>
+</body>
+</html>
