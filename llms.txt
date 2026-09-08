@@ -30,7 +30,7 @@ LC Bridge, legally Lead Connector Bridge, is an integration vendor for the HighL
 ## About
 
 - [Homepage](https://lcbridge.app/): Company overview, product lineup, and contact.
-- Contact: hello@lcbridge.app
+- Contact: arun@lcbridge.app
 
 ## Optional
 
