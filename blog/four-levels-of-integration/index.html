@@ -113,6 +113,11 @@
   .postcta h2{color:#fff;font-size:clamp(1.5rem,3vw,2rem)}
   .postcta p{color:var(--lcb-on-dark-mut);font-size:1.05rem;max-width:560px;margin-top:12px}
   .postcta .btns{display:flex;gap:13px;flex-wrap:wrap;margin-top:24px}
+  /* narrow screens: let the CTA buttons stack and wrap instead of overflowing */
+  @media(max-width:430px){
+    .postcta .btns{flex-direction:column;align-items:stretch}
+    .postcta .btns .lcb-btn{white-space:normal;justify-content:center;text-align:center}
+  }
   /* footer */
   .ft{background:#080B16;color:var(--lcb-on-dark-mut);padding:52px 0 36px}
   .ft-top{display:flex;justify-content:space-between;gap:34px;flex-wrap:wrap;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.08)}
@@ -244,7 +249,7 @@
       <p class="ft-tag">Deep, white-labeled integrations for the HighLevel ecosystem.</p>
     </div>
     <div class="ft-links">
-      <div class="ft-col"><h4>Guides</h4><a href="/blog/gohighlevel-integrations/">GoHighLevel integrations</a><a href="/blog/four-levels-of-integration/">The 4 levels of integration</a><a href="/blog/ai-agents-need-deep-integrations/">AI agents &amp; integration depth</a></div>
+      <div class="ft-col"><h4>Guides</h4><a href="/blog/gohighlevel-esignature-legally-binding/">Is GHL e-sign legally binding?</a><a href="/blog/gohighlevel-integrations/">GoHighLevel integrations</a><a href="/blog/four-levels-of-integration/">The 4 levels of integration</a><a href="/blog/ai-agents-need-deep-integrations/">AI agents &amp; integration depth</a></div>
       <div class="ft-col"><h4>Products</h4><a href="/docusign-integration/">DocuSign integration</a><a href="/google-sheets-integration/">Google Sheets integration</a><a href="/community-agents/">Community Agents</a></div>
       <div class="ft-col"><h4>Company</h4><a href="/">About LC Bridge</a><a href="mailto:arun@lcbridge.app">arun@lcbridge.app</a><a href="/book-a-call/">Book a call</a></div>
     </div>

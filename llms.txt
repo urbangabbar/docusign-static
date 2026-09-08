@@ -25,6 +25,7 @@ LC Bridge, legally Lead Connector Bridge, is an integration vendor for the HighL
 
 ## Guides
 
+- [Is a GoHighLevel e-signature legally binding?](https://lcbridge.app/blog/gohighlevel-esignature-legally-binding/): What ESIGN and UETA actually require, the difference between a binding signature and a defensible one (Ruiz v. Moss Bros. vs Espejo), what HighLevel's native signature certificate does and does not capture, and the three situations where a dedicated e-signature platform is genuinely warranted.
 - [GoHighLevel Integrations: The Complete Guide](https://lcbridge.app/blog/gohighlevel-integrations/): What GoHighLevel integrations are, native vs Zapier, and the full LC Bridge integration directory for the HighLevel CRM.
 - [The 4 Levels of CRM Integration](https://lcbridge.app/blog/four-levels-of-integration/): A See–Know–Do framework for telling a deep, native integration from a Zapier bolt-on. Covers native integration vs Zapier and integration depth.
 - [An AI Agent Can't Chase a Signature It Can't See](https://lcbridge.app/blog/ai-agents-need-deep-integrations/): Why AI-agent readiness (agentic CRM, GoHighLevel AI agent) depends on how deep your CRM integrations go.
