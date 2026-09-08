@@ -22,7 +22,10 @@
 {
   "@context": "https://schema.org",
   "@graph": [
-    { "@type": "Organization", "@id": "https://lcbridge.app/#organization", "name": "LC Bridge", "legalName": "Lead Connector Bridge", "url": "https://lcbridge.app/", "knowsAbout": ["CRM integration", "GoHighLevel integrations", "HighLevel CRM", "native integrations", "DocuSign e-signature automation"] },
+    { "@type": "Organization", "@id": "https://lcbridge.app/#organization", "name": "LC Bridge", "legalName": "GoCSM Innovations Private Limited",
+      "alternateName": ["LCBridge", "Lead Connector Bridge", "LC Bridge (Lead Connector Bridge)"],
+      "sameAs": ["https://www.linkedin.com/company/lc-bridge/"],
+      "logo": {"@type": "ImageObject", "url": "https://lcbridge.app/assets/lcbridge-lockup-black.png"}, "url": "https://lcbridge.app/", "knowsAbout": ["CRM integration", "GoHighLevel integrations", "HighLevel CRM", "native integrations", "DocuSign e-signature automation"] },
     { "@type": "BlogPosting", "@id": "https://lcbridge.app/blog/four-levels-of-integration/#article", "headline": "The 4 Levels of CRM Integration (and Why a Zap Isn't One)", "description": "'CRM integration' hides four very different things — from a Zapier bolt-on to a native integration that runs inside your CRM. The See–Know–Do test tells them apart.", "datePublished": "2026-07-03", "dateModified": "2026-07-03", "author": { "@id": "https://lcbridge.app/#organization" }, "publisher": { "@id": "https://lcbridge.app/#organization" }, "mainEntityOfPage": "https://lcbridge.app/blog/four-levels-of-integration/", "keywords": "CRM integration, native integration vs Zapier, deep integration, workflow automation, iPaaS", "about": ["CRM integration", "native integration", "Zapier"] },
     { "@type": "DefinedTermSet", "@id": "https://lcbridge.app/blog/four-levels-of-integration/#levels", "name": "The 4 Levels of Integration", "hasDefinedTerm": [
       { "@type": "DefinedTerm", "name": "Level 1 — Manual", "description": "You copy data between tools by hand; you are the integration." },
