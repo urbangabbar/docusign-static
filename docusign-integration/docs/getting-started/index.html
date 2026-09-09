@@ -12,6 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/brand.css">
 <style>
   :root{
     --ink:#0B1220; --ink-2:#475467; --ink-3:#667085; --line:#E7E9EE; --line-2:#EEF0F4;
@@ -36,7 +37,7 @@
 .by .by-lock{height:18px;width:auto;display:block}
 .by:hover .by-lock{opacity:.82}
   .brand .for{font-weight:600;font-size:13px;color:var(--ink-3);border-left:1px solid var(--line);padding-left:11px;margin-left:3px}
-  .nav-links{display:flex;align-items:center;gap:6px;margin-left:auto}
+  @media(min-width:941px){.nav-links{display:flex;align-items:center;gap:6px;margin-left:auto}}
   .ghost{color:var(--ink-2);text-decoration:none;font-weight:600;font-size:14px;padding:8px 12px;border-radius:8px}
   .ghost:hover{background:var(--bg-soft)}
 
@@ -92,7 +93,7 @@
   footer a:hover{color:var(--ink-2)}
 
   @media (max-width:720px){
-    .nav-links{display:none}
+    
     h1{font-size:30px}
     .toc ol{columns:1}
     table,thead,tbody,th,td,tr{display:block}
@@ -140,12 +141,13 @@
       <a class="by" href="/" aria-label="LC Bridge home"><span class="by-txt">integration by</span><img src="/assets/lcbridge-lockup-black.svg" alt="LC Bridge" width="180" height="60" class="by-lock"></a>
       <span class="for">for LeadConnector platforms</span>
     </span>
-    <div class="nav-links">
+    <div class="nav-links" id="navmenu">
       <a class="ghost" href="/docusign-integration/">Home</a>
       <a class="ghost" href="/docusign-integration/privacy">Privacy</a>
       <a class="ghost" href="/docusign-integration/terms">Terms</a>
       <a class="ghost" href="/docusign-integration/refund">Refund</a>
     </div>
+      <button class="lcb-navtoggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navmenu"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
@@ -447,5 +449,48 @@
     </span>
   </div>
 </footer>
+<script>
+/* Mobile nav — shared behaviour (see .lcb-navtoggle in /assets/brand.css). */
+document.documentElement.classList.add('has-navjs');
+document.querySelectorAll('.lcb-navtoggle').forEach(function(btn){
+  var menu = document.getElementById(btn.getAttribute('aria-controls'));
+  if(!menu) return;
+  var nav = btn.closest('nav'), bar = btn.parentElement;
+  /* Below 480px the bar has no room for the CTA, so a copy lives in the panel. */
+  var cta = bar.querySelector('.nav-cta');
+  if(!cta){
+    cta = Array.prototype.filter.call(bar.children, function(el){
+      return el !== menu && !menu.contains(el) && !el.contains(menu) &&
+             (el.classList.contains('lcb-btn') || el.classList.contains('btn'));
+    }).pop();
+  }
+  if(cta && !menu.querySelector('.nav-cta-mobile') && !menu.classList.contains('nav-cta-mobile')){
+    cta.classList.add('nav-bar-cta');
+    var clone = cta.cloneNode(true);
+    clone.classList.remove('nav-bar-cta');
+    clone.classList.add('nav-cta-mobile');
+    clone.removeAttribute('id');
+    clone.querySelectorAll('[id]').forEach(function(n){ n.removeAttribute('id'); });
+    /* Pin each button's own text colour: the panel's link rules would
+       otherwise repaint white-on-brand button text to body ink. */
+    var src = cta.classList.contains('lcb-btn') || cta.classList.contains('btn')
+      ? [cta] : cta.querySelectorAll('.lcb-btn,.btn');
+    var dst = clone.classList.contains('lcb-btn') || clone.classList.contains('btn')
+      ? [clone] : clone.querySelectorAll('.lcb-btn,.btn');
+    Array.prototype.forEach.call(dst, function(el, i){
+      if(src[i]) el.style.color = getComputedStyle(src[i]).color;
+    });
+    menu.appendChild(clone);
+  }
+  function setOpen(open){
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    menu.classList.toggle('is-open', open);
+    if(nav) nav.classList.toggle('is-navopen', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  menu.addEventListener('click', function(e){ if(e.target.closest('a')) setOpen(false); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') setOpen(false); });
+});
+</script>
 </body>
 </html>

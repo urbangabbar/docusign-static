@@ -50,10 +50,10 @@
   .nav-in{display:flex;align-items:center;justify-content:space-between;height:68px}
   .nav .lcb-logo .wm{font-size:18px}
   .nav-by{font-size:11px;color:var(--lcb-ink-3);font-weight:600;border-left:1px solid var(--lcb-line-2);padding-left:10px;margin-left:2px}
-  .nav-links{display:flex;align-items:center;gap:24px}
+  @media(min-width:941px){.nav-links{display:flex;align-items:center;gap:24px}}
   .nav-links a{font-size:14.5px;font-weight:500;color:var(--lcb-ink-2)}
   .nav-links a:hover{color:var(--lcb-ink)}
-  @media(max-width:940px){.nav-links{display:none}.nav-by{display:none}}
+  @media(max-width:940px){.nav-by{display:none}}
   /* breadcrumb */
   .crumb{padding:20px 0 0}
   .crumb ol{list-style:none;display:flex;flex-wrap:wrap;gap:8px;font-size:13px;color:var(--lcb-ink-3);margin:0;padding:0}
@@ -134,10 +134,12 @@
     <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16v-4"/><path d="M21 16v-4"/><path d="M3 12c0-4 4-6 9-6s9 2 9 6"/><path d="M7 12v4"/><path d="M12 10v6"/><path d="M17 12v4"/></svg></span>
     <span class="wm">LC Bridge</span><span class="nav-by">Guides</span>
   </a>
-  <div class="nav-links">
+  <div class="nav-links" id="navmenu">
     <a href="/blog/gohighlevel-integrations/">Integrations guide</a><a href="/docusign-integration/">DocuSign</a><a href="/#contact">Contact</a>
   </div>
   <a href="/book-a-call/" class="lcb-btn lcb-btn--primary">Book a call</a>
+
+  <button class="lcb-navtoggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navmenu"><span></span><span></span><span></span></button>
 </div></nav>
 
 <nav class="crumb lcb-wrap" aria-label="Breadcrumb"><ol>
@@ -243,5 +245,48 @@
   <p class="ft-legal">Published by LC Bridge (Lead Connector Bridge) — we build white-labeled integrations that HighLevel platforms embed as their own. An independent company that works with DocuSign&reg; and HighLevel&reg;, and is not affiliated with, endorsed by, or sponsored by either. All trademarks are the property of their respective owners.</p>
   <p class="ft-bot">&copy; 2026 LC Bridge. All rights reserved.</p>
 </div></footer>
+<script>
+/* Mobile nav — shared behaviour (see .lcb-navtoggle in /assets/brand.css). */
+document.documentElement.classList.add('has-navjs');
+document.querySelectorAll('.lcb-navtoggle').forEach(function(btn){
+  var menu = document.getElementById(btn.getAttribute('aria-controls'));
+  if(!menu) return;
+  var nav = btn.closest('nav'), bar = btn.parentElement;
+  /* Below 480px the bar has no room for the CTA, so a copy lives in the panel. */
+  var cta = bar.querySelector('.nav-cta');
+  if(!cta){
+    cta = Array.prototype.filter.call(bar.children, function(el){
+      return el !== menu && !menu.contains(el) && !el.contains(menu) &&
+             (el.classList.contains('lcb-btn') || el.classList.contains('btn'));
+    }).pop();
+  }
+  if(cta && !menu.querySelector('.nav-cta-mobile') && !menu.classList.contains('nav-cta-mobile')){
+    cta.classList.add('nav-bar-cta');
+    var clone = cta.cloneNode(true);
+    clone.classList.remove('nav-bar-cta');
+    clone.classList.add('nav-cta-mobile');
+    clone.removeAttribute('id');
+    clone.querySelectorAll('[id]').forEach(function(n){ n.removeAttribute('id'); });
+    /* Pin each button's own text colour: the panel's link rules would
+       otherwise repaint white-on-brand button text to body ink. */
+    var src = cta.classList.contains('lcb-btn') || cta.classList.contains('btn')
+      ? [cta] : cta.querySelectorAll('.lcb-btn,.btn');
+    var dst = clone.classList.contains('lcb-btn') || clone.classList.contains('btn')
+      ? [clone] : clone.querySelectorAll('.lcb-btn,.btn');
+    Array.prototype.forEach.call(dst, function(el, i){
+      if(src[i]) el.style.color = getComputedStyle(src[i]).color;
+    });
+    menu.appendChild(clone);
+  }
+  function setOpen(open){
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    menu.classList.toggle('is-open', open);
+    if(nav) nav.classList.toggle('is-navopen', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  menu.addEventListener('click', function(e){ if(e.target.closest('a')) setOpen(false); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') setOpen(false); });
+});
+</script>
 </body>
 </html>

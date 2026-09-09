@@ -60,10 +60,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:60;background:rgba(11,17,32,.72)
 .brand .mark{width:34px;height:34px;border-radius:9px;background:var(--grad);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 16px -8px rgba(42,65,216,.6)}
 .brand .mark svg{width:20px;height:20px;color:#fff}
 .brand .wm{font-family:var(--font-display);font-weight:700;font-size:19px;letter-spacing:-.02em}
-.nav-links{display:flex;align-items:center;gap:28px}
+@media(min-width:941px){.nav-links{display:flex;align-items:center;gap:28px}}
 .nav-links a{font-size:14.5px;font-weight:500;color:var(--on-dark-mut);transition:color .15s}
 .nav-links a:hover{color:#fff}
-@media(max-width:840px){.nav-links{display:none}}
+@media(max-width:840px){}
 
 /* HERO */
 .hero{position:relative;background:var(--dark);color:var(--on-dark);overflow:hidden;padding:142px 0 96px}
@@ -236,7 +236,8 @@ a.prod-card:hover .plink{gap:10px}
 .btn-trial{background:#09855C;color:#fff;border-color:transparent;box-shadow:0 1px 2px rgba(9,133,92,.28)}
 .btn-trial:hover{transform:translateY(-1px);background:#076E4C;box-shadow:0 8px 20px -10px rgba(9,133,92,.5)}
 .nav-cta{display:flex;gap:10px;align-items:center}
-@media(max-width:600px){.nav-cta .btn-trial{display:none}}
+/* The trial CTA stays reachable at every width: it is in the bar down to
+   480px and inside the menu panel below that (see /assets/brand.css). */
 /* multi-action product card */
 .prod-card--multi{display:flex;flex-direction:column;transition:transform .2s,box-shadow .25s,border-color .2s}
 .prod-card--multi:hover{transform:translateY(-3px);box-shadow:0 18px 40px -22px rgba(11,17,32,.28);border-color:#dfe2ea}
@@ -252,13 +253,15 @@ a.prod-card:hover .plink{gap:10px}
     <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16v-4"/><path d="M21 16v-4"/><path d="M3 12c0-4 4-6 9-6s9 2 9 6"/><path d="M7 12v4"/><path d="M12 10v6"/><path d="M17 12v4"/></svg></span>
     <span class="wm">LC Bridge</span>
   </a>
-  <div class="nav-links">
+  <div class="nav-links" id="navmenu">
     <a href="/#about">About Us</a>
     <a href="/products/">Products</a>
     <a href="/blog/">Blog</a>
     <a href="/#contact">Contact</a>
   </div>
   <div class="nav-cta"><a href="/docusign-integration/#apply" class="btn btn-trial">Start free trial</a><a href="/book-a-call/" class="btn btn-primary">Book a call</a></div>
+
+  <button class="lcb-navtoggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navmenu"><span></span><span></span><span></span></button>
 </div></nav>
 
 <header class="section section--dark on-dark section--contact" style="padding-top:132px">
@@ -370,6 +373,49 @@ a.prod-card:hover .plink{gap:10px}
   }, {threshold:0.12, rootMargin:'0px 0px -8% 0px'});
   els.forEach(function(e){ io.observe(e); });
 })();
+</script>
+<script>
+/* Mobile nav — shared behaviour (see .lcb-navtoggle in /assets/brand.css). */
+document.documentElement.classList.add('has-navjs');
+document.querySelectorAll('.lcb-navtoggle').forEach(function(btn){
+  var menu = document.getElementById(btn.getAttribute('aria-controls'));
+  if(!menu) return;
+  var nav = btn.closest('nav'), bar = btn.parentElement;
+  /* Below 480px the bar has no room for the CTA, so a copy lives in the panel. */
+  var cta = bar.querySelector('.nav-cta');
+  if(!cta){
+    cta = Array.prototype.filter.call(bar.children, function(el){
+      return el !== menu && !menu.contains(el) && !el.contains(menu) &&
+             (el.classList.contains('lcb-btn') || el.classList.contains('btn'));
+    }).pop();
+  }
+  if(cta && !menu.querySelector('.nav-cta-mobile') && !menu.classList.contains('nav-cta-mobile')){
+    cta.classList.add('nav-bar-cta');
+    var clone = cta.cloneNode(true);
+    clone.classList.remove('nav-bar-cta');
+    clone.classList.add('nav-cta-mobile');
+    clone.removeAttribute('id');
+    clone.querySelectorAll('[id]').forEach(function(n){ n.removeAttribute('id'); });
+    /* Pin each button's own text colour: the panel's link rules would
+       otherwise repaint white-on-brand button text to body ink. */
+    var src = cta.classList.contains('lcb-btn') || cta.classList.contains('btn')
+      ? [cta] : cta.querySelectorAll('.lcb-btn,.btn');
+    var dst = clone.classList.contains('lcb-btn') || clone.classList.contains('btn')
+      ? [clone] : clone.querySelectorAll('.lcb-btn,.btn');
+    Array.prototype.forEach.call(dst, function(el, i){
+      if(src[i]) el.style.color = getComputedStyle(src[i]).color;
+    });
+    menu.appendChild(clone);
+  }
+  function setOpen(open){
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    menu.classList.toggle('is-open', open);
+    if(nav) nav.classList.toggle('is-navopen', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  menu.addEventListener('click', function(e){ if(e.target.closest('a')) setOpen(false); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') setOpen(false); });
+});
 </script>
 </body>
 </html>

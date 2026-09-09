@@ -96,6 +96,10 @@
   }
 
   /* ---- hero ---- */
+  /* Cobalt on the dark hero measures 2.6:1. Same light cobalt the dark
+     manifesto panel and .lcb-section--dark already use: 7.5:1. */
+  .hero .lcb-eyebrow{color:#8E9BFF}
+  .hero .lcb-eyebrow .dot{background:#8E9BFF}
   .hero{background:var(--lcb-dark);color:var(--lcb-on-dark);padding:clamp(56px,7vw,92px) 0 clamp(60px,7vw,96px);position:relative;overflow:hidden}
   .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(900px 420px at 78% 8%,rgba(42,65,216,.30),transparent 70%);pointer-events:none}
   .hero-in{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,1fr);gap:clamp(30px,5vw,64px);align-items:center;position:relative}
@@ -462,13 +466,42 @@
 </div></footer>
 
 <script>
-/* Mobile nav — shared behaviour. The button is the control; .nav-links is the panel. */
+/* Mobile nav — shared behaviour (see .lcb-navtoggle in /assets/brand.css). */
+document.documentElement.classList.add('has-navjs');
 document.querySelectorAll('.lcb-navtoggle').forEach(function(btn){
   var menu = document.getElementById(btn.getAttribute('aria-controls'));
   if(!menu) return;
+  var nav = btn.closest('nav'), bar = btn.parentElement;
+  /* Below 480px the bar has no room for the CTA, so a copy lives in the panel. */
+  var cta = bar.querySelector('.nav-cta');
+  if(!cta){
+    cta = Array.prototype.filter.call(bar.children, function(el){
+      return el !== menu && !menu.contains(el) && !el.contains(menu) &&
+             (el.classList.contains('lcb-btn') || el.classList.contains('btn'));
+    }).pop();
+  }
+  if(cta && !menu.querySelector('.nav-cta-mobile') && !menu.classList.contains('nav-cta-mobile')){
+    cta.classList.add('nav-bar-cta');
+    var clone = cta.cloneNode(true);
+    clone.classList.remove('nav-bar-cta');
+    clone.classList.add('nav-cta-mobile');
+    clone.removeAttribute('id');
+    clone.querySelectorAll('[id]').forEach(function(n){ n.removeAttribute('id'); });
+    /* Pin each button's own text colour: the panel's link rules would
+       otherwise repaint white-on-brand button text to body ink. */
+    var src = cta.classList.contains('lcb-btn') || cta.classList.contains('btn')
+      ? [cta] : cta.querySelectorAll('.lcb-btn,.btn');
+    var dst = clone.classList.contains('lcb-btn') || clone.classList.contains('btn')
+      ? [clone] : clone.querySelectorAll('.lcb-btn,.btn');
+    Array.prototype.forEach.call(dst, function(el, i){
+      if(src[i]) el.style.color = getComputedStyle(src[i]).color;
+    });
+    menu.appendChild(clone);
+  }
   function setOpen(open){
     btn.setAttribute('aria-expanded', open ? 'true' : 'false');
     menu.classList.toggle('is-open', open);
+    if(nav) nav.classList.toggle('is-navopen', open);
   }
   btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
   menu.addEventListener('click', function(e){ if(e.target.closest('a')) setOpen(false); });

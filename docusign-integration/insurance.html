@@ -366,7 +366,15 @@ footer{background:#0B1120;color:#9AA3B8;padding:54px 0 38px}
 .chase-head h3{font-size:32px;line-height:1.12;letter-spacing:-.02em;font-weight:800;margin:12px 0 14px}
 .chase-head p{font-size:17px;color:var(--ink-2);line-height:1.6}
 .chase-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start}
-@media(max-width:940px){.chase-grid{grid-template-columns:1fr;gap:34px}}
+@media(max-width:940px){.chase-grid{grid-template-columns:minmax(0,1fr);gap:34px}}
+/* A 1fr track defaults to min-width:auto, so the mock UI's tab row (its
+   min-content is ~390px) pushed the whole page sideways on a phone.
+   The track may now be narrower than its content; the rows that can
+   outgrow it scroll inside the card instead. */
+.surface{min-width:0}
+.wl-tabs,.wl-sub{overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.wl-tabs::-webkit-scrollbar,.wl-sub::-webkit-scrollbar{display:none}
+.wl-tabs .tab,.wl-sub .s{flex:0 0 auto;white-space:nowrap}
 .surface-lbl{display:flex;align-items:center;gap:10px;margin-bottom:14px;flex-wrap:wrap}
 .surface-lbl .nb{width:24px;height:24px;border-radius:50%;background:var(--brand);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
 .surface-lbl b{font-size:15.5px;font-weight:700}
@@ -423,10 +431,10 @@ footer{background:#0B1120;color:#9AA3B8;padding:54px 0 38px}
 .brand-check svg{width:18px;height:18px;color:var(--green);flex:0 0 auto}
 
 nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:saturate(140%) blur(12px);-webkit-backdrop-filter:saturate(140%) blur(12px);border-bottom:1px solid var(--line)}
-.nav-links{display:flex;align-items:center;gap:26px}
+@media(min-width:941px){.nav-links{display:flex;align-items:center;gap:26px}}
 .nav-links a{font-size:14.5px;font-weight:500;color:var(--ink-2);text-decoration:none;transition:color .15s;white-space:nowrap}
 .nav-links a:hover{color:var(--ink)}
-@media(max-width:860px){.nav-links{display:none}}
+@media(max-width:860px){}
 .fhelp{font-size:12.5px;color:var(--ink-3);margin:-2px 0 8px;line-height:1.45}
 .fhelp a{color:var(--brand);text-decoration:none;font-weight:600}
 .fhelp a:hover{text-decoration:underline}
@@ -488,8 +496,10 @@ nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-f
     <a class="by" href="/" aria-label="LC Bridge home"><span class="by-txt">integration by</span><img src="/assets/lcbridge-lockup-black.svg" alt="LC Bridge" width="180" height="60" class="by-lock"></a>
     <span class="for">for HighLevel platforms</span>
   </div>
-  <div class="nav-links"><a href="#how">How it works</a><a href="#brand">Your brand</a><a href="#automation">Automation</a><a href="#roadmap">Roadmap</a><a href="#pricing">Pricing</a></div>
+  <div class="nav-links" id="navmenu"><a href="#how">How it works</a><a href="#brand">Your brand</a><a href="#automation">Automation</a><a href="#roadmap">Roadmap</a><a href="#pricing">Pricing</a></div>
   <div class="nav-cta"><a href="/docusign-integration/book-a-call" class="btn btn-primary">Book a call</a></div>
+
+  <button class="lcb-navtoggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navmenu"><span></span><span></span><span></span></button>
 </div></nav>
 
 <style>.crumb{max-width:1140px;margin:0 auto;padding:16px 24px 0}.crumb ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:13px;color:#667085}.crumb a{color:#667085;font-weight:500;text-decoration:none}.crumb a:hover{color:#4C00FF}.crumb li[aria-current]{color:#0B1220;font-weight:600}.crumb .sep{color:#C9CDD6}</style>
@@ -904,5 +914,48 @@ nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-f
 </div></footer>
 
 
+<script>
+/* Mobile nav — shared behaviour (see .lcb-navtoggle in /assets/brand.css). */
+document.documentElement.classList.add('has-navjs');
+document.querySelectorAll('.lcb-navtoggle').forEach(function(btn){
+  var menu = document.getElementById(btn.getAttribute('aria-controls'));
+  if(!menu) return;
+  var nav = btn.closest('nav'), bar = btn.parentElement;
+  /* Below 480px the bar has no room for the CTA, so a copy lives in the panel. */
+  var cta = bar.querySelector('.nav-cta');
+  if(!cta){
+    cta = Array.prototype.filter.call(bar.children, function(el){
+      return el !== menu && !menu.contains(el) && !el.contains(menu) &&
+             (el.classList.contains('lcb-btn') || el.classList.contains('btn'));
+    }).pop();
+  }
+  if(cta && !menu.querySelector('.nav-cta-mobile') && !menu.classList.contains('nav-cta-mobile')){
+    cta.classList.add('nav-bar-cta');
+    var clone = cta.cloneNode(true);
+    clone.classList.remove('nav-bar-cta');
+    clone.classList.add('nav-cta-mobile');
+    clone.removeAttribute('id');
+    clone.querySelectorAll('[id]').forEach(function(n){ n.removeAttribute('id'); });
+    /* Pin each button's own text colour: the panel's link rules would
+       otherwise repaint white-on-brand button text to body ink. */
+    var src = cta.classList.contains('lcb-btn') || cta.classList.contains('btn')
+      ? [cta] : cta.querySelectorAll('.lcb-btn,.btn');
+    var dst = clone.classList.contains('lcb-btn') || clone.classList.contains('btn')
+      ? [clone] : clone.querySelectorAll('.lcb-btn,.btn');
+    Array.prototype.forEach.call(dst, function(el, i){
+      if(src[i]) el.style.color = getComputedStyle(src[i]).color;
+    });
+    menu.appendChild(clone);
+  }
+  function setOpen(open){
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    menu.classList.toggle('is-open', open);
+    if(nav) nav.classList.toggle('is-navopen', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  menu.addEventListener('click', function(e){ if(e.target.closest('a')) setOpen(false); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') setOpen(false); });
+});
+</script>
 </body>
 </html>

@@ -216,23 +216,61 @@ body.modal-lock{overflow:hidden}
 
 @media(max-width:940px){
   .lcb-navtoggle{display:inline-flex}
-  .nav-in{position:relative}
+  .nav-in, nav > .wrap{position:relative}
+  /* The panel lives inside <nav>, so it can only paint above the sticky
+     sub-bars and hero links below it if <nav> itself is raised while open. */
+  nav.is-navopen{z-index:200}
   /* the link row becomes a panel dropped under the bar */
   .nav-links{
-    display:none; position:absolute; left:0; right:0; top:calc(100% + 8px);
+    display:none; position:absolute; left:0; right:0; top:100%;
     flex-direction:column; align-items:stretch; gap:0;
     background:var(--lcb-canvas); color:var(--lcb-ink);
-    border:1px solid var(--lcb-line); border-radius:var(--lcb-r-lg);
+    border:1px solid var(--lcb-line); border-top:0;
+    border-radius:0 0 var(--lcb-r-lg) var(--lcb-r-lg);
     box-shadow:var(--lcb-shadow-lg); padding:6px 18px 10px; z-index:60;
   }
   .nav-links.is-open{display:flex}
-  .nav-links a{
+  .nav-links a:not(.lcb-btn):not(.btn){
     display:block; padding:14px 2px; font-size:16px; font-weight:500;
-    color:var(--lcb-ink); border-bottom:1px solid var(--lcb-line);
+    border-bottom:1px solid var(--lcb-line);
   }
-  .nav-links a:last-child{border-bottom:0}
-  .nav-links a:hover{color:var(--lcb-primary)}
+  /* On a dark bar the pages colour their links for the dark ground. In the
+     panel that ground is white, so the open panel restates the colour at a
+     specificity the pages' own rules cannot undercut. */
+  .nav-links.is-open a:not(.lcb-btn):not(.btn){color:var(--lcb-ink)}
+  .nav-links.is-open a:not(.lcb-btn):not(.btn):hover{color:var(--lcb-primary)}
+  .nav-links a:not(.lcb-btn):not(.btn):last-of-type{border-bottom:0}
   /* keep one CTA in the bar; the rest live in the panel */
   .nav-cta .btn + .btn, .nav-cta .lcb-btn + .lcb-btn{display:none}
+}
+
+/* Below 480px the bar cannot hold a logo, a CTA and a toggle without
+   overflowing — the widest lockups (DocuSign + "integration by LC Bridge")
+   and the longest labels ("Join the waitlist") need ~434px on their own.
+   So the CTA moves INTO the panel, full width, where it is a bigger tap
+   target than the squeezed pill it replaces. The nav script clones the bar
+   CTA in and marks the original .nav-bar-cta; .has-navjs gates the hide so
+   a page without JS keeps the CTA it has. */
+/* Two selectors, because the pages' own .nav-cta{display:flex} loads after
+   this file and would otherwise reveal the clone in the desktop bar. */
+.nav-links .nav-cta-mobile, .nav-links a.nav-cta-mobile{display:none}
+@media(max-width:480px){
+  .has-navjs .nav-bar-cta{display:none}
+  .nav-links div.nav-cta-mobile{
+    display:block; border-top:1px solid var(--lcb-line);
+    margin-top:2px; padding:12px 0 4px;
+  }
+  /* Two-selector specificity so neither the panel's own link rules nor the
+     pages' can repaint a button that carries its brand colour. */
+  .nav-links a.nav-cta-mobile,
+  .nav-links .nav-cta-mobile a{
+    display:flex; width:100%; box-sizing:border-box;
+    align-items:center; justify-content:center;
+    margin-top:12px; padding:13px 16px;
+    font-size:15px; font-weight:600; border-bottom:0;
+  }
+  .nav-links div.nav-cta-mobile a{margin-top:0}
+  nav .lcb-wrap, nav > .wrap{padding-left:16px; padding-right:16px}
+  .lcb-navtoggle{width:40px; margin-left:0}
 }
 @media(prefers-reduced-motion:reduce){.lcb-navtoggle span{transition:none}}
