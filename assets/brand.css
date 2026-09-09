@@ -190,3 +190,49 @@ body.modal-lock{overflow:hidden}
 .modal-close:hover{transform:scale(1.06);color:var(--lcb-primary)}
 @media(max-width:560px){.modal-close{top:-10px;right:-10px;width:36px;height:36px;font-size:22px}}
 @media(prefers-reduced-motion:reduce){.modal-box{animation:none}}
+
+/* =========================================================================
+   Mobile navigation — shared
+   Before this, .nav-links was simply display:none below each page's own
+   breakpoint (six different values across the site) with nothing in its
+   place, so on a phone there was no navigation at all. Pages opt in by
+   adding .lcb-navtoggle to the nav row and giving .nav-links an id that
+   the button's aria-controls points at.
+   ========================================================================= */
+.lcb-navtoggle{
+  display:none; width:44px; height:44px; padding:0; margin-left:4px;
+  align-items:center; justify-content:center; flex-direction:column;
+  background:none; border:0; cursor:pointer; color:inherit;
+  border-radius:var(--lcb-r-sm); flex:0 0 auto;
+}
+.lcb-navtoggle span{
+  display:block; width:20px; height:2px; background:currentColor; border-radius:2px;
+  transition:transform var(--lcb-dur) var(--lcb-ease), opacity var(--lcb-dur) var(--lcb-ease);
+}
+.lcb-navtoggle span + span{margin-top:5px}
+.lcb-navtoggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.lcb-navtoggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.lcb-navtoggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+@media(max-width:940px){
+  .lcb-navtoggle{display:inline-flex}
+  .nav-in{position:relative}
+  /* the link row becomes a panel dropped under the bar */
+  .nav-links{
+    display:none; position:absolute; left:0; right:0; top:calc(100% + 8px);
+    flex-direction:column; align-items:stretch; gap:0;
+    background:var(--lcb-canvas); color:var(--lcb-ink);
+    border:1px solid var(--lcb-line); border-radius:var(--lcb-r-lg);
+    box-shadow:var(--lcb-shadow-lg); padding:6px 18px 10px; z-index:60;
+  }
+  .nav-links.is-open{display:flex}
+  .nav-links a{
+    display:block; padding:14px 2px; font-size:16px; font-weight:500;
+    color:var(--lcb-ink); border-bottom:1px solid var(--lcb-line);
+  }
+  .nav-links a:last-child{border-bottom:0}
+  .nav-links a:hover{color:var(--lcb-primary)}
+  /* keep one CTA in the bar; the rest live in the panel */
+  .nav-cta .btn + .btn, .nav-cta .lcb-btn + .lcb-btn{display:none}
+}
+@media(prefers-reduced-motion:reduce){.lcb-navtoggle span{transition:none}}
