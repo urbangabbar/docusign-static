@@ -124,6 +124,8 @@
   .nav-links{display:flex;align-items:center;gap:24px}
   .nav-links a{font-size:14.5px;font-weight:500;color:var(--lcb-ink-2)}
   .nav-links a:hover{color:var(--lcb-ink)}
+  /* 6 nav items need a tighter row just above the 940px collapse point */
+  @media(max-width:1040px){.nav-links{gap:17px}.nav-links a{font-size:13.8px}}
   @media(max-width:940px){.nav-links{display:none}}
   /* breadcrumb */
   .crumb{padding:16px 0 0}
@@ -479,7 +481,7 @@
 <nav class="nav"><div class="lcb-wrap nav-in">
   <span class="nav-lock"><a class="lcb-logo" href="/docusign-integration/" aria-label="Docusign Integration home"><img src="/assets/docusign-logo.svg" alt="Docusign" width="139" height="28" style="height:28px;width:auto;display:block"></a><a class="nav-by" href="/" aria-label="LC Bridge home"><span class="by-txt">integration by</span><img src="/assets/lcbridge-lockup-black.svg" alt="LC Bridge" width="180" height="60" class="by-lock"></a></span>
   <div class="nav-links">
-    <a href="#pricing">Pricing</a><a href="#capabilities">Capabilities</a><a href="#white-label">White-label</a><a href="#industries">Industries</a><a href="#faq">FAQ</a>
+    <a href="#pricing">Pricing</a><a href="#capabilities">Capabilities</a><a href="#white-label">White-label</a><a href="#industries">Industries</a><a href="/docusign-integration/docs/">Docs</a><a href="#faq">FAQ</a>
   </div>
   <a href="/docusign-integration/book-a-call" class="lcb-btn lcb-btn--primary">Book a call</a>
 </div></nav>
@@ -962,7 +964,7 @@
     </div>
     <div class="ft-links">
       <div class="ft-col"><h4>Products</h4><a href="/docusign-integration/">DocuSign integration</a><a href="/google-sheets-integration/">Google Sheets integration</a><a href="/community-agents/">Community Agents</a></div>
-      <div class="ft-col"><h4>DocuSign</h4><a href="/docusign-integration/insurance">For insurance</a><a href="/docusign-integration/real-estate">For real estate</a></div>
+      <div class="ft-col"><h4>DocuSign</h4><a href="/docusign-integration/insurance">For insurance</a><a href="/docusign-integration/real-estate">For real estate</a><a href="/docusign-integration/docs/">Documentation</a></div>
       <div class="ft-col"><h4>Guides</h4><a href="/blog/gohighlevel-esignature-legally-binding/">Is GHL e-sign legally binding?</a><a href="/blog/gohighlevel-integrations/">GoHighLevel integrations</a><a href="/blog/four-levels-of-integration/">The 4 levels of integration</a><a href="/blog/ai-agents-need-deep-integrations/">AI agents &amp; integration depth</a></div>
       <div class="ft-col"><h4>Company</h4><a href="/">About LC Bridge</a><a href="mailto:arun@lcbridge.app">arun@lcbridge.app</a><a href="/docusign-integration/book-a-call">Book a call</a></div>
     </div>
