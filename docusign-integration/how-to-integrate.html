@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Integrate DocuSign with HighLevel (GoHighLevel) — 3 Ways Compared</title>
+<link rel="canonical" href="https://lcbridge.app/docusign-integration/how-to-integrate">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/brand.css">
+<style>
+  :root{
+    --lcb-primary:#4C00FF; --lcb-primary-press:#3A00C2; --lcb-on-primary:#FFFFFF;
+    --lcb-tint:#EEE9FF; --lcb-dark:#130032;
+    --lcb-logo-grad:linear-gradient(135deg,#4C00FF,#7A2BFF);
+    --ds-accent:#FF5252;
+  }
+  .lcb-eyebrow .dot{background:var(--ds-accent)}
+  .lcb-section--dark .lcb-eyebrow{color:#CBC2FF}
+  .lcb-section--dark .lcb-eyebrow .dot{background:var(--ds-accent)}
+  .ft-mark{background:linear-gradient(135deg,#2A41D8,#6938EF)}
+:root{
+  --ink:var(--lcb-ink);--ink-2:var(--lcb-ink-2);--ink-3:var(--lcb-ink-3);--line:var(--lcb-line);--line-2:var(--lcb-line-2);
+  --bg:var(--lcb-canvas);--bg-soft:var(--lcb-soft);--bg-tint:var(--lcb-tint);
+  --brand:var(--lcb-primary);--brand-press:var(--lcb-primary-press);
+  --ai:var(--lcb-ai);--ai-bg:var(--lcb-ai-bg);--ai-line:var(--lcb-ai-line);--ai-fg:var(--lcb-ai-fg);
+  --amber:var(--lcb-attn-dot);--amber-fg:var(--lcb-attn-fg);--amber-bg:var(--lcb-attn-bg);--amber-line:var(--lcb-attn-line);
+  --green:var(--lcb-ok-dot);--green-fg:var(--lcb-ok-fg);--green-bg:var(--lcb-ok-bg);--green-line:var(--lcb-ok-line);
+  --blue:var(--lcb-track-dot);--blue-fg:var(--lcb-track-fg);--blue-bg:var(--lcb-track-bg);
+  --hlblue:#1E5BC6;
+  --grad:var(--lcb-logo-grad);
+  --shadow:var(--lcb-shadow-sm);--shadow-lg:var(--lcb-shadow-lg);
+  --maxw:1140px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{font-family:var(--lcb-font-text);color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;line-height:1.55}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+a{color:inherit;text-decoration:none}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;padding:13px 22px;border-radius:11px;border:1px solid transparent;cursor:pointer;transition:.18s;white-space:nowrap}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:0 1px 2px rgba(76,0,255,.25)}
+.btn-primary:hover{background:var(--brand-press)}
+.btn-ghost{background:#fff;color:var(--ink);border-color:var(--line)}
+.btn-ghost:hover{background:var(--bg-soft)}
+.btn-lg{padding:16px 28px;font-size:16px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:600;color:var(--brand);background:var(--bg-tint);border:1px solid #D6DCFB;padding:6px 13px;border-radius:999px}
+.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--brand)}
+
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:saturate(140%) blur(12px);-webkit-backdrop-filter:saturate(140%) blur(12px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:11px}
+.brand .nm{font-weight:800;font-size:17px;letter-spacing:-.02em;line-height:1.1}
+.by{display:inline-flex;align-items:center;gap:7px;font-size:11.5px;color:var(--ink-3);font-weight:600;text-decoration:none;white-space:nowrap}
+.by:hover{color:var(--ink)}
+.by .by-lock{height:18px;width:auto;display:block}
+.by:hover .by-lock{opacity:.82}
+.brand .for{font-weight:600;font-size:13px;color:var(--ink-3);border-left:1px solid var(--line);padding-left:11px;margin-left:3px}
+.nav-cta{display:flex;align-items:center;gap:14px}
+.nav-links{display:flex;align-items:center;gap:26px}
+.nav-links a{font-size:14.5px;font-weight:500;color:var(--ink-2);text-decoration:none;transition:color .15s;white-space:nowrap}
+.nav-links a:hover{color:var(--ink)}
+@media(max-width:860px){.nav-links{display:none}}
+@media(max-width:720px){.nav-cta .btn-ghost{display:none}.brand .for{display:none}}
+@media(max-width:820px){.by-txt{display:none}}
+@media(max-width:430px){.nav-in .btn{padding:9px 12px;font-size:13px}}
+
+.crumb{max-width:1140px;margin:0 auto;padding:16px 24px 0}.crumb ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:13px;color:#667085}.crumb a{color:#667085;font-weight:500;text-decoration:none}.crumb a:hover{color:#4C00FF}.crumb li[aria-current]{color:#0B1220;font-weight:600}.crumb .sep{color:#C9CDD6}
+
+.hero{padding:72px 0 30px;background:radial-gradient(1200px 480px at 50% -10%,#EEE9FF 0%,rgba(238,241,254,0) 62%),var(--bg);text-align:center}
+.hero h1{font-size:50px;line-height:1.05;letter-spacing:-.03em;font-weight:800;max-width:900px;margin:20px auto 18px}
+.hero h1 .hl{color:var(--brand)}
+.hero .sub{font-size:19px;line-height:1.55;color:var(--ink-2);max-width:680px;margin:0 auto 28px}
+.hero .sub b{color:var(--ink)}
+.hero-cta{display:flex;align-items:center;gap:14px;justify-content:center;flex-wrap:wrap}
+@media(max-width:560px){.hero h1{font-size:33px}.hero .sub{font-size:16.5px}}
+
+section{padding:80px 0}
+.sec-head{text-align:center;max-width:720px;margin:0 auto 52px}
+.sec-head .eyebrow{margin-bottom:16px}
+.sec-head h2{font-size:36px;line-height:1.1;letter-spacing:-.025em;font-weight:800;margin-bottom:14px}
+.sec-head p{font-size:17.5px;color:var(--ink-2)}
+.bg-soft-sec{background:var(--bg-soft)}
+
+/* AEO definition block */
+.def-block{max-width:880px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:18px;padding:32px 34px;box-shadow:var(--shadow)}
+.def-block h2{font-size:23px;font-weight:800;letter-spacing:-.02em;line-height:1.2;margin-bottom:12px}
+.def-block p{font-size:17px;line-height:1.65;color:var(--ink-2)}
+.def-block p b{color:var(--ink)}
+.def-block p a{color:var(--brand);font-weight:600}
+
+/* method cards */
+.method-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:940px){.method-grid{grid-template-columns:1fr}}
+.method-card{border:1px solid var(--line);border-radius:16px;padding:26px;background:#fff;display:flex;flex-direction:column}
+.method-card.rec{border-color:var(--brand);box-shadow:0 8px 24px -8px rgba(76,0,255,.25)}
+.method-card .mnum{display:inline-flex;align-self:flex-start;align-items:center;gap:7px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:5px 12px;margin-bottom:14px}
+.method-card .mnum.rec{background:var(--brand);color:#fff}
+.method-card .mnum.alt{background:var(--bg-soft);color:var(--ink-3)}
+.method-card h3{font-size:20px;font-weight:800;letter-spacing:-.02em;line-height:1.2;margin-bottom:10px}
+.method-card p{font-size:14.5px;color:var(--ink-2);line-height:1.6}
+.method-card .verdict{margin-top:auto;padding-top:16px;font-size:14px;line-height:1.5;border-top:1px solid var(--line-2)}
+.method-card .verdict b{color:var(--green-fg)}
+.method-card .verdict.warn b{color:var(--amber-fg)}
+
+/* comparison table */
+.tbl-wrap{max-width:960px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow-lg);overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:640px}
+th,td{text-align:left;padding:14px 18px;border-bottom:1px solid var(--line-2);vertical-align:top;line-height:1.45}
+th{font-size:13px;letter-spacing:.02em;text-transform:uppercase;color:var(--ink-3);font-weight:700;background:var(--bg-soft)}
+td:first-child{font-weight:600;color:var(--ink);white-space:nowrap}
+tr:last-child td{border-bottom:none}
+td .ok{color:var(--green-fg);font-weight:600}
+td .no{color:#9AA3B5}
+.tbl-note{text-align:center;font-size:14.5px;color:var(--ink-3);margin-top:20px}
+.tbl-note a{color:var(--brand);font-weight:600}
+
+/* steps */
+.step-list{max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+.step-item{display:flex;gap:16px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 24px}
+.step-item .nb{width:30px;height:30px;border-radius:50%;background:var(--brand);color:#fff;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center;flex:0 0 auto;margin-top:2px}
+.step-item h3{font-size:17.5px;font-weight:700;letter-spacing:-.01em;margin-bottom:5px}
+.step-item p{font-size:15px;color:var(--ink-2);line-height:1.6}
+.step-item p b{color:var(--ink)}
+
+/* faq */
+.faq-list{max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+.faq-item{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 26px}
+.faq-item h3{font-size:16.5px;font-weight:700;letter-spacing:-.01em;margin-bottom:8px}
+.faq-item p{font-size:15px;color:var(--ink-2);line-height:1.65}
+.faq-item p b{color:var(--ink)}
+.faq-item p a{color:var(--brand);font-weight:600}
+
+/* cta */
+.cta{background:var(--lcb-dark);color:#fff}
+.cta .inner{text-align:center;max-width:720px;margin:0 auto}
+.cta h2{font-size:36px;line-height:1.08;letter-spacing:-.025em;font-weight:800}
+.cta p{font-size:17.5px;color:#B9C0D2;line-height:1.6;margin-top:16px}
+.cta .btn{margin-top:26px}
+
+footer{background:#0B1120;color:#9AA3B8;padding:54px 0 38px}
+.ft-top{display:flex;justify-content:space-between;gap:34px;flex-wrap:wrap;align-items:flex-start;padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,.08)}
+.ft-brand{max-width:360px}
+.ft-lock{display:inline-flex;align-items:center;gap:10px;color:#fff;text-decoration:none;margin-bottom:14px}
+.ft-mark{width:32px;height:32px;border-radius:9px;background:var(--grad);display:flex;align-items:center;justify-content:center}
+.ft-mark svg{width:19px;height:19px;color:#fff}
+.ft-wm{font-weight:800;font-size:18px;letter-spacing:-.02em}
+.ft-tag{font-size:14px;color:#9AA3B8;line-height:1.6;margin:0}
+.ft-links{display:flex;gap:56px;flex-wrap:wrap}
+.ft-col h4{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:#fff;margin:0 0 14px;font-weight:700}
+.ft-col a{display:block;font-size:14.5px;margin-bottom:10px;color:#9AA3B8;text-decoration:none;transition:color .15s}
+.ft-col a:hover{color:#fff}
+.ft-legal{margin-top:24px;font-size:12.5px;line-height:1.7;color:#767F94;max-width:780px}
+.ft-bottom{margin-top:16px;font-size:12.5px;color:#767F94}
+@media(max-width:680px){.ft-top{flex-direction:column;gap:28px}.ft-links{gap:40px}}
+</style>
+
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="HighLevel doesn't connect to DocuSign natively. Compare the three ways to integrate DocuSign with HighLevel (GoHighLevel) — a native integration app, Zapier, or manual — with setup steps, costs, and what each method can't do.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="How to Integrate DocuSign with HighLevel (GoHighLevel)">
+<meta property="og:description" content="Compare the three ways to connect DocuSign to HighLevel — native integration app, Zapier, or manual — with setup steps and costs.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How to Integrate DocuSign with HighLevel (GoHighLevel)">
+<meta name="twitter:description" content="Compare the three ways to connect DocuSign to HighLevel — native integration app, Zapier, or manual — with setup steps and costs.">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {"@type":"Organization","@id":"https://lcbridge.app/#organization","name":"LC Bridge","legalName":"GoCSM Innovations Private Limited",
+      "alternateName":["LCBridge","Lead Connector Bridge","LC Bridge (Lead Connector Bridge)"],
+      "sameAs":["https://www.linkedin.com/company/lc-bridge/"],
+      "logo":{"@type":"ImageObject","url":"https://lcbridge.app/assets/lcbridge-lockup-black.png"},"url":"https://lcbridge.app/"},
+    {
+      "@type":"SoftwareApplication",
+      "@id":"https://lcbridge.app/docusign-integration/#app",
+      "name":"LC Bridge DocuSign Integration for HighLevel",
+      "applicationCategory":"BusinessApplication",
+      "applicationSubCategory":"CRM Integration",
+      "operatingSystem":"Web (HighLevel / GoHighLevel CRM)",
+      "url":"https://lcbridge.app/docusign-integration/",
+      "description":"White-label DocuSign e-signature integration for the HighLevel (GoHighLevel) CRM. Send agreements from workflows, track live envelope status on the contact, and trigger HighLevel automations from signing events.",
+      "publisher":{"@id":"https://lcbridge.app/#organization"}
+    },
+    {
+      "@type":"BreadcrumbList",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Home","item":"https://lcbridge.app/"},
+        {"@type":"ListItem","position":2,"name":"DocuSign Integration","item":"https://lcbridge.app/docusign-integration/"},
+        {"@type":"ListItem","position":3,"name":"How to integrate","item":"https://lcbridge.app/docusign-integration/how-to-integrate"}
+      ]
+    },
+    {
+      "@type":"FAQPage",
+      "mainEntity":[
+        {"@type":"Question","name":"Does HighLevel have a native DocuSign integration?","acceptedAnswer":{"@type":"Answer","text":"No. HighLevel's built-in signature tool is its own native e-signature feature, not DocuSign. To use DocuSign with HighLevel you connect them through an integration app (such as LC Bridge's DocuSign Integration), through Zapier or middleware, or manually by downloading and attaching signed documents."}},
+        {"@type":"Question","name":"Can I connect DocuSign to GoHighLevel with Zapier?","acceptedAnswer":{"@type":"Answer","text":"Yes. Zapier can push a DocuSign envelope when something happens in HighLevel, and vice versa. But a Zap fires once and disappears — envelope status never shows on the contact record, there is no signing timeline, no stalled-agreement view, and no one-tap reminders. It also adds a third tool and per-task cost to the stack."}},
+        {"@type":"Question","name":"How much does a DocuSign integration for HighLevel cost?","acceptedAnswer":{"@type":"Answer","text":"LC Bridge's DocuSign Integration starts at $14 per active HighLevel sub-account per month, with flat Agency and Scale plans for larger books, plus your existing DocuSign plan. The 14-day trial is free. Zapier adds its own subscription on top, and the manual method costs staff time every time a document needs chasing."}},
+        {"@type":"Question","name":"Do my clients need a DocuSign account to sign?","acceptedAnswer":{"@type":"Answer","text":"No. Signers open the agreement from the email or SMS you send, sign it, and done — they never need a DocuSign account. Only your team needs a DocuSign account, which the integration connects to."}},
+        {"@type":"Question","name":"Does the integration work with white-labeled HighLevel platforms?","acceptedAnswer":{"@type":"Answer","text":"Yes. LC Bridge's DocuSign Integration is built for white-label HighLevel platforms: it embeds in your sub-account, matches your colors, name and icons, and sends reminders from your own number — so your customers see your product, not a third-party app."}},
+        {"@type":"Question","name":"Is a DocuSign signature legally binding?","acceptedAnswer":{"@type":"Answer","text":"Yes. DocuSign signatures comply with the US ESIGN Act and UETA, and carry a certificate of completion and tamper-evident audit trail — stronger evidence than a basic embedded signature. See our guide on when a GoHighLevel e-signature is legally binding."}}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav><div class="wrap nav-in">
+  <div class="brand">
+    <a href="/docusign-integration/" aria-label="Docusign Integration home"><img src="/assets/docusign-logo.svg" alt="Docusign" width="139" height="28" style="height:28px;width:auto;display:block"></a>
+    <a class="by" href="/" aria-label="LC Bridge home"><span class="by-txt">integration by</span><img src="/assets/lcbridge-lockup-black.svg" alt="LC Bridge" width="180" height="60" class="by-lock"></a>
+    <span class="for">for HighLevel platforms</span>
+  </div>
+  <div class="nav-links"><a href="#methods">3 ways</a><a href="#compare">Compare</a><a href="#setup">Setup</a><a href="#faq">FAQ</a><a href="/docusign-integration/pricing">Pricing</a></div>
+  <div class="nav-cta"><a href="/docusign-integration/book-a-call" class="btn btn-primary">Book a call</a></div>
+</div></nav>
+
+<nav class="crumb" aria-label="Breadcrumb"><ol>
+<li><a href="/">Home</a></li>
+<li class="sep" aria-hidden="true">/</li>
+<li><a href="/docusign-integration/">DocuSign Integration</a></li>
+<li class="sep" aria-hidden="true">/</li>
+<li aria-current="page">How to integrate</li>
+</ol></nav>
+
+<!-- HERO -->
+<header class="hero"><div class="wrap">
+  <span class="eyebrow"><span class="dot"></span>DocuSign &times; HighLevel (GoHighLevel)</span>
+  <h1>How to integrate DocuSign with HighLevel — <span class="hl">3 ways, honestly compared.</span></h1>
+  <p class="sub"><b>Short answer: HighLevel doesn't connect to DocuSign natively.</b> You connect them with an integration app, through Zapier, or by hand. Here's exactly how each method works, what it costs, and what it can't do — so you can pick in five minutes.</p>
+  <div class="hero-cta">
+    <a href="#setup" class="btn btn-primary btn-lg">Jump to setup steps</a>
+    <a href="/docusign-integration/" class="btn btn-ghost btn-lg">See the integration</a>
+  </div>
+</div></header>
+
+<!-- AEO DEFINITION -->
+<section style="background:var(--bg-soft);padding:64px 0">
+  <div class="wrap">
+    <div class="def-block">
+      <h2>How do you integrate DocuSign with HighLevel?</h2>
+      <p><b>DocuSign integrates with HighLevel (GoHighLevel) through a third-party integration app</b> — such as the <a href="/docusign-integration/">LC Bridge DocuSign Integration</a> — which connects your DocuSign account to your HighLevel sub-account. Once connected, agreements sent from HighLevel workflows show live envelope status on the contact record, and signed, viewed, or stalled statuses fire native HighLevel workflow triggers. Two alternatives exist: connecting via Zapier (works, but no status on the contact and no reminders), or handling documents manually outside the CRM (works, but nothing is tracked). There is no first-party DocuSign integration built into HighLevel itself.</p>
+    </div>
+  </div>
+</section>
+
+<!-- METHODS -->
+<section id="methods"><div class="wrap">
+  <div class="sec-head">
+    <span class="eyebrow"><span class="dot"></span>The 3 ways</span>
+    <h2>Three ways to connect DocuSign to HighLevel.</h2>
+    <p>All three work. Two of them stop working the moment a signature stalls — which is when it actually matters.</p>
+  </div>
+  <div class="method-grid">
+    <div class="method-card rec">
+      <span class="mnum rec">Way 1 — Recommended</span>
+      <h3>Native integration app</h3>
+      <p>An integration app connects your DocuSign account directly to your HighLevel sub-account. Agreements auto-fill from the contact record, live envelope status shows on the contact, and every signing event fires a native HighLevel workflow trigger — no middleware.</p>
+      <div class="verdict"><b>Verdict:</b> the only method where tracking, reminders, and automation live inside your CRM. <a href="/docusign-integration/" style="color:var(--brand);font-weight:600">See how it works &rarr;</a></div>
+    </div>
+    <div class="method-card">
+      <span class="mnum alt">Way 2</span>
+      <h3>Zapier / middleware</h3>
+      <p>A Zap watches HighLevel (or DocuSign) and fires the other side — e.g. "new contact → send DocuSign envelope". It connects the tools, but a Zap fires once and vanishes: there's no status back on the contact, no stalled view, no one-tap nudge.</p>
+      <div class="verdict warn"><b>Verdict:</b> fine for one-way fires; a dead end for chasing signatures. Adds Zapier cost on top of both tools.</div>
+    </div>
+    <div class="method-card">
+      <span class="mnum alt">Way 3</span>
+      <h3>Manual (outside the CRM)</h3>
+      <p>Send from DocuSign directly, then download the signed PDF and attach it to the contact by hand. Nothing is automated, status lives wherever someone remembers to check, and follow-ups depend on someone keeping a list.</p>
+      <div class="verdict warn"><b>Verdict:</b> free, and exactly as reliable as the person doing it. Fine at 2 documents a month — painful at 20 a day.</div>
+    </div>
+  </div>
+</div></section>
+
+<!-- COMPARISON TABLE -->
+<section class="bg-soft-sec" id="compare"><div class="wrap">
+  <div class="sec-head">
+    <span class="eyebrow"><span class="dot"></span>Side by side</span>
+    <h2>What each method actually gives you.</h2>
+    <p>The differences that matter show up after you press send — when someone doesn't sign.</p>
+  </div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th scope="col"></th><th scope="col">Native integration app</th><th scope="col">Zapier</th><th scope="col">Manual</th></tr></thead>
+      <tbody>
+        <tr><td>Live status on the contact</td><td><span class="ok">Yes — real-time</span></td><td><span class="no">No</span></td><td><span class="no">No</span></td></tr>
+        <tr><td>Auto-fill from contact fields</td><td><span class="ok">Yes</span></td><td><span class="no">No</span></td><td><span class="no">No — copy-paste</span></td></tr>
+        <tr><td>Fires HighLevel workflow triggers</td><td><span class="ok">Yes — native</span></td><td><span class="no">One-way only</span></td><td><span class="no">No</span></td></tr>
+        <tr><td>One-tap reminders from your number</td><td><span class="ok">Yes</span></td><td><span class="no">No</span></td><td><span class="no">No — from DocuSign</span></td></tr>
+        <tr><td>Stalled-agreement worklist</td><td><span class="ok">Yes — with AI reads</span></td><td><span class="no">No</span></td><td><span class="no">No</span></td></tr>
+        <tr><td>White-label friendly</td><td><span class="ok">Yes — fully</span></td><td><span class="no">No</span></td><td><span class="no">No</span></td></tr>
+        <tr><td>Extra subscriptions</td><td>None beyond the integration</td><td>Zapier plan</td><td>Staff time</td></tr>
+        <tr><td>Setup effort</td><td>Connect once, map a template</td><td>Build &amp; maintain zaps</td><td>None — and no payoff</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="tbl-note">Full capability list on the <a href="/docusign-integration/">DocuSign Integration product page</a> &middot; <a href="/blog/four-levels-of-integration/">why integration depth matters</a></p>
+</div></section>
+
+<!-- SETUP STEPS -->
+<section id="setup"><div class="wrap">
+  <div class="sec-head">
+    <span class="eyebrow"><span class="dot"></span>Step by step</span>
+    <h2>Setting up the native integration.</h2>
+    <p>Five steps from nothing to a signed agreement tracked on the contact. Most platforms go live the same week.</p>
+  </div>
+  <div class="step-list">
+    <div class="step-item"><span class="nb">1</span><div><h3>Install the integration in your sub-account</h3><p>The <a href="/docusign-integration/" style="color:var(--brand);font-weight:600">LC Bridge DocuSign Integration</a> is provisioned into your HighLevel sub-account — <a href="/docusign-integration/book-a-call" style="color:var(--brand);font-weight:600">book a call</a> and we set it up with you. White-label platforms get it branded as their own.</p></div></div>
+    <div class="step-item"><span class="nb">2</span><div><h3>Connect your DocuSign account</h3><p>One OAuth connection to your existing DocuSign account. Your customers' DocuSign setup stays exactly as it is — nothing to migrate, nothing to re-paper.</p></div></div>
+    <div class="step-item"><span class="nb">3</span><div><h3>Map a DocuSign template to contact fields</h3><p>Pick a DocuSign template and map its fields to HighLevel contact fields — name, email, and anything custom. Every agreement sent from that template auto-fills from the record.</p></div></div>
+    <div class="step-item"><span class="nb">4</span><div><h3>Send agreements from workflows or the contact</h3><p>Send from a HighLevel workflow (so it slots into your existing automation), from the contact record, or by bulk-send to a list. The signer gets your document — no DocuSign account needed.</p></div></div>
+    <div class="step-item"><span class="nb">5</span><div><h3>Track live status and let signed events fire automations</h3><p>Sent, delivered, viewed, signed, completed — status updates on the contact in real time. Stalled agreements surface in a daily worklist with one-tap reminders from your number, and every status change fires a native HighLevel trigger.</p></div></div>
+  </div>
+</div></section>
+
+<!-- FAQ -->
+<section class="bg-soft-sec" id="faq"><div class="wrap">
+  <div class="sec-head">
+    <span class="eyebrow"><span class="dot"></span>FAQ</span>
+    <h2>Questions agencies ask before integrating.</h2>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item"><h3>Does HighLevel have a native DocuSign integration?</h3><p>No. HighLevel's built-in signature tool is its own native e-signature feature — it isn't DocuSign. To use DocuSign with HighLevel you connect them through an integration app like LC Bridge's, via Zapier, or manually.</p></div>
+    <div class="faq-item"><h3>Can I connect DocuSign to GoHighLevel with Zapier?</h3><p>Yes — a Zap can push an envelope when something happens in HighLevel, and vice versa. But a Zap fires once and disappears: no status on the contact record, no signing timeline, no stalled view, no one-tap reminders. It also adds a third tool and a Zapier subscription to the stack.</p></div>
+    <div class="faq-item"><h3>How much does a DocuSign integration for HighLevel cost?</h3><p>LC Bridge's DocuSign Integration starts at <b>$14 per active sub-account per month</b>, with flat-rate <a href="/docusign-integration/pricing" style="color:var(--brand);font-weight:600">Agency and Scale plans</a> for larger books — plus whatever you already pay DocuSign. The 14-day trial is free.</p></div>
+    <div class="faq-item"><h3>Do my clients need a DocuSign account to sign?</h3><p>No. Signers open the agreement from the email or SMS you send and sign — they never need a DocuSign account. Only your team's DocuSign account is connected.</p></div>
+    <div class="faq-item"><h3>Does it work with white-labeled HighLevel platforms?</h3><p>Yes — it's built for exactly that. The integration embeds in your sub-account, matches your colors, naming and icons, and sends reminders from your own number, so your customers see your product end to end.</p></div>
+    <div class="faq-item"><h3>Is a DocuSign signature legally binding?</h3><p>Yes. DocuSign signatures comply with the US ESIGN Act and UETA, and every completed envelope carries a certificate of completion and tamper-evident audit trail. For the nuances — binding vs. defensible, and when HighLevel's native certificate falls short — see <a href="/blog/gohighlevel-esignature-legally-binding/">is a GoHighLevel e-signature legally binding?</a></p></div>
+  </div>
+</div></section>
+
+<!-- CTA -->
+<section class="cta"><div class="wrap">
+  <div class="inner">
+    <h2>Want the native route set up for you?</h2>
+    <p>A quick, no-pressure call. We connect your existing DocuSign account, map your first template with you, and you go live inside your HighLevel platform — usually the same week. Or keep reading: the <a href="/docusign-integration/" style="color:#fff;text-decoration:underline">product overview</a> and <a href="/docusign-integration/docs/" style="color:#fff;text-decoration:underline">documentation</a> cover everything in detail.</p>
+    <a href="/docusign-integration/book-a-call" class="btn btn-primary btn-lg">Book a call</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="ft-top">
+    <div class="ft-brand">
+      <a class="ft-lock" href="/"><img src="/assets/lcbridge-lockup-white.svg" alt="LC Bridge" width="180" height="60" style="height:42px;width:auto;display:block"></a>
+      <p class="ft-tag">Deep, white-labeled integrations for the HighLevel ecosystem.</p>
+    </div>
+    <div class="ft-links">
+      <div class="ft-col">
+        <h4>Products</h4>
+        <a href="/docusign-integration/">DocuSign integration</a>
+        <a href="/google-sheets-integration/">Google Sheets integration</a><a href="/community-agents/">Community Agents</a>
+      </div>
+      <div class="ft-col">
+        <h4>DocuSign</h4>
+        <a href="/docusign-integration/how-to-integrate">How to integrate</a>
+        <a href="/docusign-integration/vs-native-signature">DocuSign vs native signature</a>
+        <a href="/docusign-integration/insurance">For insurance</a>
+        <a href="/docusign-integration/real-estate">For real estate</a>
+      <a href="/docusign-integration/docs/">Documentation</a>
+      </div>
+      <div class="ft-col">
+        <h4>Company</h4>
+        <a href="/">About LC Bridge</a>
+        <a href="mailto:arun@lcbridge.app">arun@lcbridge.app</a>
+        <a href="/docusign-integration/book-a-call">Book a call</a>
+      </div>
+    </div>
+  </div>
+  <p class="ft-legal">DocuSign Integration is built by LC Bridge — we build white-labeled integrations that HighLevel platforms embed as their own. An independent product that works with DocuSign® and HighLevel®, and is not affiliated with, endorsed by, or sponsored by either. All trademarks are the property of their respective owners.</p>
+  <p class="foot-legal-links" style="margin:0 0 12px;font-size:13px;opacity:.9"><a href="/docusign-integration/pricing">Pricing</a> &middot; <a href="/docusign-integration/privacy">Privacy</a> &middot; <a href="/docusign-integration/terms">Terms</a> &middot; <a href="/docusign-integration/refund">Refund</a></p>
+  <p class="ft-bottom">© 2026 LC Bridge. All rights reserved.</p>
+</div></footer>
+
+</body>
+</html>

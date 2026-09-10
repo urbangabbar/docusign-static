@@ -23,6 +23,11 @@ LC Bridge, legally Lead Connector Bridge, is an integration vendor for the HighL
 - [DocuSign for Insurance](https://lcbridge.app/docusign-integration/insurance): E-signature workflows for insurance agencies running on HighLevel (applications, ACORD-style forms).
 - [DocuSign for Real Estate](https://lcbridge.app/docusign-integration/real-estate): E-signature workflows for real estate teams running on HighLevel (listing and buyer agreements).
 
+## How-to & comparisons
+
+- [How to Integrate DocuSign with HighLevel](https://lcbridge.app/docusign-integration/how-to-integrate): The three ways to connect DocuSign to HighLevel/GoHighLevel — native integration app (recommended), Zapier, or manual — compared side by side, with five setup steps and an FAQ covering cost, Zapier limits, white-label compatibility, and legality.
+- [DocuSign vs HighLevel's Built-in E-signature](https://lcbridge.app/docusign-integration/vs-native-signature): When to use HighLevel's native signature vs DocuSign in a GoHighLevel sub-account — compared across cost, audit trail, templates, live tracking, reminders, and workflow triggers.
+
 ## Guides
 
 - [Is a GoHighLevel e-signature legally binding?](https://lcbridge.app/blog/gohighlevel-esignature-legally-binding/): What ESIGN and UETA actually require, the difference between a binding signature and a defensible one (Ruiz v. Moss Bros. vs Espejo), what HighLevel's native signature certificate does and does not capture, and the three situations where a dedicated e-signature platform is genuinely warranted.

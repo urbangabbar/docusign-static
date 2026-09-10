@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DocuSign vs HighLevel's Built-in E-signature — Which to Use in GoHighLevel</title>
+<link rel="canonical" href="https://lcbridge.app/docusign-integration/vs-native-signature">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/brand.css">
+<style>
+  :root{
+    --lcb-primary:#4C00FF; --lcb-primary-press:#3A00C2; --lcb-on-primary:#FFFFFF;
+    --lcb-tint:#EEE9FF; --lcb-dark:#130032;
+    --lcb-logo-grad:linear-gradient(135deg,#4C00FF,#7A2BFF);
+    --ds-accent:#FF5252;
+  }
+  .lcb-eyebrow .dot{background:var(--ds-accent)}
+  .lcb-section--dark .lcb-eyebrow{color:#CBC2FF}
+  .lcb-section--dark .lcb-eyebrow .dot{background:var(--ds-accent)}
+  .ft-mark{background:linear-gradient(135deg,#2A41D8,#6938EF)}
+:root{
+  --ink:var(--lcb-ink);--ink-2:var(--lcb-ink-2);--ink-3:var(--lcb-ink-3);--line:var(--lcb-line);--line-2:var(--lcb-line-2);
+  --bg:var(--lcb-canvas);--bg-soft:var(--lcb-soft);--bg-tint:var(--lcb-tint);
+  --brand:var(--lcb-primary);--brand-press:var(--lcb-primary-press);
+  --ai:var(--lcb-ai);--ai-bg:var(--lcb-ai-bg);--ai-line:var(--lcb-ai-line);--ai-fg:var(--lcb-ai-fg);
+  --amber:var(--lcb-attn-dot);--amber-fg:var(--lcb-attn-fg);--amber-bg:var(--lcb-attn-bg);--amber-line:var(--lcb-attn-line);
+  --green:var(--lcb-ok-dot);--green-fg:var(--lcb-ok-fg);--green-bg:var(--lcb-ok-bg);--green-line:var(--lcb-ok-line);
+  --blue:var(--lcb-track-dot);--blue-fg:var(--lcb-track-fg);--blue-bg:var(--lcb-track-bg);
+  --hlblue:#1E5BC6;
+  --grad:var(--lcb-logo-grad);
+  --shadow:var(--lcb-shadow-sm);--shadow-lg:var(--lcb-shadow-lg);
+  --maxw:1140px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{font-family:var(--lcb-font-text);color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;line-height:1.55}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+a{color:inherit;text-decoration:none}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;padding:13px 22px;border-radius:11px;border:1px solid transparent;cursor:pointer;transition:.18s;white-space:nowrap}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:0 1px 2px rgba(76,0,255,.25)}
+.btn-primary:hover{background:var(--brand-press)}
+.btn-ghost{background:#fff;color:var(--ink);border-color:var(--line)}
+.btn-ghost:hover{background:var(--bg-soft)}
+.btn-lg{padding:16px 28px;font-size:16px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:600;color:var(--brand);background:var(--bg-tint);border:1px solid #D6DCFB;padding:6px 13px;border-radius:999px}
+.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--brand)}
+
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:saturate(140%) blur(12px);-webkit-backdrop-filter:saturate(140%) blur(12px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:11px}
+.brand .nm{font-weight:800;font-size:17px;letter-spacing:-.02em;line-height:1.1}
+.by{display:inline-flex;align-items:center;gap:7px;font-size:11.5px;color:var(--ink-3);font-weight:600;text-decoration:none;white-space:nowrap}
+.by:hover{color:var(--ink)}
+.by .by-lock{height:18px;width:auto;display:block}
+.by:hover .by-lock{opacity:.82}
+.brand .for{font-weight:600;font-size:13px;color:var(--ink-3);border-left:1px solid var(--line);padding-left:11px;margin-left:3px}
+.nav-cta{display:flex;align-items:center;gap:14px}
+.nav-links{display:flex;align-items:center;gap:26px}
+.nav-links a{font-size:14.5px;font-weight:500;color:var(--ink-2);text-decoration:none;transition:color .15s;white-space:nowrap}
+.nav-links a:hover{color:var(--ink)}
+@media(max-width:860px){.nav-links{display:none}}
+@media(max-width:720px){.nav-cta .btn-ghost{display:none}.brand .for{display:none}}
+@media(max-width:820px){.by-txt{display:none}}
+@media(max-width:430px){.nav-in .btn{padding:9px 12px;font-size:13px}}
+
+.crumb{max-width:1140px;margin:0 auto;padding:16px 24px 0}.crumb ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:13px;color:#667085}.crumb a{color:#667085;font-weight:500;text-decoration:none}.crumb a:hover{color:#4C00FF}.crumb li[aria-current]{color:#0B1220;font-weight:600}.crumb .sep{color:#C9CDD6}
+
+.hero{padding:72px 0 30px;background:radial-gradient(1200px 480px at 50% -10%,#EEE9FF 0%,rgba(238,241,254,0) 62%),var(--bg);text-align:center}
+.hero h1{font-size:50px;line-height:1.05;letter-spacing:-.03em;font-weight:800;max-width:900px;margin:20px auto 18px}
+.hero h1 .hl{color:var(--brand)}
+.hero .sub{font-size:19px;line-height:1.55;color:var(--ink-2);max-width:680px;margin:0 auto 28px}
+.hero .sub b{color:var(--ink)}
+.hero-cta{display:flex;align-items:center;gap:14px;justify-content:center;flex-wrap:wrap}
+@media(max-width:560px){.hero h1{font-size:33px}.hero .sub{font-size:16.5px}}
+
+section{padding:80px 0}
+.sec-head{text-align:center;max-width:720px;margin:0 auto 52px}
+.sec-head .eyebrow{margin-bottom:16px}
+.sec-head h2{font-size:36px;line-height:1.1;letter-spacing:-.025em;font-weight:800;margin-bottom:14px}
+.sec-head p{font-size:17.5px;color:var(--ink-2)}
+.bg-soft-sec{background:var(--bg-soft)}
+
+.def-block{max-width:880px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:18px;padding:32px 34px;box-shadow:var(--shadow)}
+.def-block h2{font-size:23px;font-weight:800;letter-spacing:-.02em;line-height:1.2;margin-bottom:12px}
+.def-block p{font-size:17px;line-height:1.65;color:var(--ink-2)}
+.def-block p b{color:var(--ink)}
+.def-block p a{color:var(--brand);font-weight:600}
+
+.tbl-wrap{max-width:960px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow-lg);overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:640px}
+th,td{text-align:left;padding:14px 18px;border-bottom:1px solid var(--line-2);vertical-align:top;line-height:1.45}
+th{font-size:13px;letter-spacing:.02em;text-transform:uppercase;color:var(--ink-3);font-weight:700;background:var(--bg-soft)}
+td:first-child{font-weight:600;color:var(--ink);white-space:nowrap}
+tr:last-child td{border-bottom:none}
+td .ok{color:var(--green-fg);font-weight:600}
+td .mid{color:var(--amber-fg);font-weight:600}
+td .no{color:#9AA3B5}
+.tbl-note{text-align:center;font-size:14.5px;color:var(--ink-3);margin-top:20px}
+.tbl-note a{color:var(--brand);font-weight:600}
+
+.when-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:820px){.when-grid{grid-template-columns:1fr}}
+.when-card{border:1px solid var(--line);border-radius:16px;padding:28px;background:#fff}
+.when-card.win{border-color:var(--brand)}
+.when-card h3{font-size:19px;font-weight:800;letter-spacing:-.02em;margin-bottom:6px;display:flex;align-items:center;gap:9px}
+.when-card h3 .ic{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.when-card .sub{font-size:14px;color:var(--ink-3);font-weight:500;margin-bottom:16px}
+.when-card ul{list-style:none;display:flex;flex-direction:column;gap:11px}
+.when-card li{display:flex;gap:10px;font-size:14.5px;color:var(--ink-2);line-height:1.55}
+.when-card li svg{width:17px;height:17px;flex:0 0 auto;margin-top:3px}
+.when-card .native .ic{background:var(--bg-soft);color:var(--ink-2)}
+.when-card.win h3 .ic{background:var(--bg-tint);color:var(--brand)}
+
+.honest{max-width:820px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px 28px}
+.honest h3{font-size:16.5px;font-weight:700;margin-bottom:8px}
+.honest p{font-size:15px;color:var(--ink-2);line-height:1.65}
+.honest p b{color:var(--ink)}
+.honest p a{color:var(--brand);font-weight:600}
+
+.cta{background:var(--lcb-dark);color:#fff}
+.cta .inner{text-align:center;max-width:720px;margin:0 auto}
+.cta h2{font-size:36px;line-height:1.08;letter-spacing:-.025em;font-weight:800}
+.cta p{font-size:17.5px;color:#B9C0D2;line-height:1.6;margin-top:16px}
+.cta p a{color:#fff;text-decoration:underline}
+.cta .btn{margin-top:26px}
+
+footer{background:#0B1120;color:#9AA3B8;padding:54px 0 38px}
+.ft-top{display:flex;justify-content:space-between;gap:34px;flex-wrap:wrap;align-items:flex-start;padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,.08)}
+.ft-brand{max-width:360px}
+.ft-lock{display:inline-flex;align-items:center;gap:10px;color:#fff;text-decoration:none;margin-bottom:14px}
+.ft-mark{width:32px;height:32px;border-radius:9px;background:var(--grad);display:flex;align-items:center;justify-content:center}
+.ft-mark svg{width:19px;height:19px;color:#fff}
+.ft-wm{font-weight:800;font-size:18px;letter-spacing:-.02em}
+.ft-tag{font-size:14px;color:#9AA3B8;line-height:1.6;margin:0}
+.ft-links{display:flex;gap:56px;flex-wrap:wrap}
+.ft-col h4{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:#fff;margin:0 0 14px;font-weight:700}
+.ft-col a{display:block;font-size:14.5px;margin-bottom:10px;color:#9AA3B8;text-decoration:none;transition:color .15s}
+.ft-col a:hover{color:#fff}
+.ft-legal{margin-top:24px;font-size:12.5px;line-height:1.7;color:#767F94;max-width:780px}
+.ft-bottom{margin-top:16px;font-size:12.5px;color:#767F94}
+@media(max-width:680px){.ft-top{flex-direction:column;gap:28px}.ft-links{gap:40px}}
+</style>
+
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="HighLevel's built-in e-signature vs DocuSign compared: cost, audit trail, templates, tracking, and reminders — and when each is the right choice for a GoHighLevel sub-account.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="DocuSign vs HighLevel's Built-in E-signature">
+<meta property="og:description" content="HighLevel's native signature vs DocuSign compared: cost, audit trail, templates, tracking, and reminders — and when each is the right choice.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="DocuSign vs HighLevel's Built-in E-signature">
+<meta name="twitter:description" content="HighLevel's native signature vs DocuSign compared: cost, audit trail, templates, tracking, and reminders — and when each is the right choice.">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {"@type":"Organization","@id":"https://lcbridge.app/#organization","name":"LC Bridge","legalName":"GoCSM Innovations Private Limited",
+      "alternateName":["LCBridge","Lead Connector Bridge","LC Bridge (Lead Connector Bridge)"],
+      "sameAs":["https://www.linkedin.com/company/lc-bridge/"],
+      "logo":{"@type":"ImageObject","url":"https://lcbridge.app/assets/lcbridge-lockup-black.png"},"url":"https://lcbridge.app/"},
+    {
+      "@type":"BreadcrumbList",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Home","item":"https://lcbridge.app/"},
+        {"@type":"ListItem","position":2,"name":"DocuSign Integration","item":"https://lcbridge.app/docusign-integration/"},
+        {"@type":"ListItem","position":3,"name":"DocuSign vs native signature","item":"https://lcbridge.app/docusign-integration/vs-native-signature"}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav><div class="wrap nav-in">
+  <div class="brand">
+    <a href="/docusign-integration/" aria-label="Docusign Integration home"><img src="/assets/docusign-logo.svg" alt="Docusign" width="139" height="28" style="height:28px;width:auto;display:block"></a>
+    <a class="by" href="/" aria-label="LC Bridge home"><span class="by-txt">integration by</span><img src="/assets/lcbridge-lockup-black.svg" alt="LC Bridge" width="180" height="60" class="by-lock"></a>
+    <span class="for">for HighLevel platforms</span>
+  </div>
+  <div class="nav-links"><a href="#compare">Compare</a><a href="#when">When to use each</a><a href="/docusign-integration/pricing">Pricing</a><a href="/docusign-integration/docs/">Docs</a></div>
+  <div class="nav-cta"><a href="/docusign-integration/book-a-call" class="btn btn-primary">Book a call</a></div>
+</div></nav>
+
+<nav class="crumb" aria-label="Breadcrumb"><ol>
+<li><a href="/">Home</a></li>
+<li class="sep" aria-hidden="true">/</li>
+<li><a href="/docusign-integration/">DocuSign Integration</a></li>
+<li class="sep" aria-hidden="true">/</li>
+<li aria-current="page">DocuSign vs native signature</li>
+</ol></nav>
+
+<!-- HERO -->
+<header class="hero"><div class="wrap">
+  <span class="eyebrow"><span class="dot"></span>DocuSign &times; HighLevel (GoHighLevel)</span>
+  <h1>DocuSign vs HighLevel's built-in signature — <span class="hl">which one should you use?</span></h1>
+  <p class="sub"><b>Short answer: use HighLevel's native signature for quick internal forms — use DocuSign when the contract matters or the counterparty expects DocuSign.</b> Here's the honest comparison across cost, audit trail, tracking, and chasing.</p>
+  <div class="hero-cta">
+    <a href="#compare" class="btn btn-primary btn-lg">See the comparison</a>
+    <a href="/docusign-integration/" class="btn btn-ghost btn-lg">See the integration</a>
+  </div>
+</div></header>
+
+<!-- AEO DEFINITION -->
+<section style="background:var(--bg-soft);padding:64px 0">
+  <div class="wrap">
+    <div class="def-block">
+      <h2>What's the difference between DocuSign and HighLevel's native e-signature?</h2>
+      <p><b>HighLevel's built-in e-signature is a lightweight signing tool for simple documents; DocuSign is a dedicated e-signature platform.</b> HighLevel's native tool is included in your CRM and works well for quick one-party forms — but it offers limited template management, basic audit evidence, and no chasing layer: a document that stalls sits invisible in the CRM. DocuSign adds template libraries, multi-party routing, a certificate of completion and tamper-evident audit trail, and — with the <a href="/docusign-integration/">LC Bridge integration</a> — live envelope status on the HighLevel contact record plus one-tap reminders from your own number. Many platforms use both, each for what it's best at.</p>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON TABLE -->
+<section id="compare"><div class="wrap">
+  <div class="sec-head">
+    <span class="eyebrow"><span class="dot"></span>Side by side</span>
+    <h2>HighLevel native signature vs DocuSign + LC Bridge.</h2>
+    <p>Both are legally valid ways to get a signature. The difference is everything around the signature.</p>
+  </div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th scope="col"></th><th scope="col">HighLevel native signature</th><th scope="col">DocuSign + LC Bridge</th></tr></thead>
+      <tbody>
+        <tr><td>Included in CRM cost</td><td><span class="ok">Yes — included</span></td><td><span class="no">No — from $14/sub-account + DocuSign plan</span></td></tr>
+        <tr><td>Legally binding</td><td><span class="mid">Yes — ESIGN/UETA, basic evidence</span></td><td><span class="ok">Yes — with certificate &amp; audit trail</span></td></tr>
+        <tr><td>Tamper-evident audit trail</td><td><span class="no">Basic</span></td><td><span class="ok">Full — certificate of completion</span></td></tr>
+        <tr><td>Template library &amp; field mapping</td><td><span class="mid">Limited</span></td><td><span class="ok">Full — mapped to contact fields</span></td></tr>
+        <tr><td>Multi-party / ordered routing</td><td><span class="no">Limited</span></td><td><span class="ok">Yes</span></td></tr>
+        <tr><td>Live status on the contact record</td><td><span class="mid">Basic</span></td><td><span class="ok">Real-time, with signing timeline</span></td></tr>
+        <tr><td>Chasing stalled documents</td><td><span class="no">Manual — no worklist</span></td><td><span class="ok">Worklist + one-tap reminders, AI reads</span></td></tr>
+        <tr><td>Workflow triggers from signing events</td><td><span class="mid">Some</span></td><td><span class="ok">Full — sent/viewed/signed/stalled/expired</span></td></tr>
+        <tr><td>Counterparties who expect DocuSign</td><td><span class="no">May not accept it</span></td><td><span class="ok">Native — they keep their workflow</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="tbl-note">Deep-dive on the legal side: <a href="/blog/gohighlevel-esignature-legally-binding/">is a GoHighLevel e-signature legally binding?</a></p>
+</div></section>
+
+<!-- WHEN EACH -->
+<section class="bg-soft-sec" id="when"><div class="wrap">
+  <div class="sec-head">
+    <span class="eyebrow"><span class="dot"></span>The honest answer</span>
+    <h2>When each one is the right call.</h2>
+    <p>It's not DocuSign vs the CRM's tool — it's which document goes through which lane.</p>
+  </div>
+  <div class="when-grid">
+    <div class="when-card">
+      <h3><span class="ic native"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Native signature is fine for…</h3>
+      <p class="sub">Quick, internal, low-stakes</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Internal forms, opt-ins, and simple one-off consents</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Documents where the counterparty doesn't care what tool signs them</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>High volume, tiny dollar value, no audit requirements</li>
+      </ul>
+    </div>
+    <div class="when-card win">
+      <h3><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg></span>DocuSign (via LC Bridge) wins when…</h3>
+      <p class="sub">High-stakes, contractual, chase-sensitive</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Contracts, applications, and agreements that must hold up under scrutiny — certificate and tamper-evident trail included</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>The counterparty — a client, carrier, broker, or legal team — already runs on DocuSign</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Revenue waits on the signature — you need live status on the contact and a one-tap chase, not a folder of "sent" PDFs</li>
+      </ul>
+    </div>
+  </div>
+  <div class="honest" style="margin-top:24px">
+    <h3>Using both is the norm, not a compromise</h3>
+    <p>Most serious teams on HighLevel keep the native tool for internal paperwork and route revenue documents through DocuSign. The <a href="/docusign-integration/">LC Bridge integration</a> makes the DocuSign lane visible inside HighLevel — status on the contact, a stalled-agreement worklist, and one-tap reminders from your own number — while <a href="/docusign-integration/how-to-integrate">connecting DocuSign to HighLevel</a> takes one OAuth connection and a template mapping.</p>
+  </div>
+</div></section>
+
+<!-- CTA -->
+<section class="cta"><div class="wrap">
+  <div class="inner">
+    <h2>Keep DocuSign. Make it visible in HighLevel.</h2>
+    <p>A quick, no-pressure call. We connect your existing DocuSign account, map your first template with you, and you go live inside your HighLevel platform — usually the same week.</p>
+    <a href="/docusign-integration/book-a-call" class="btn btn-primary btn-lg">Book a call</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="ft-top">
+    <div class="ft-brand">
+      <a class="ft-lock" href="/"><img src="/assets/lcbridge-lockup-white.svg" alt="LC Bridge" width="180" height="60" style="height:42px;width:auto;display:block"></a>
+      <p class="ft-tag">Deep, white-labeled integrations for the HighLevel ecosystem.</p>
+    </div>
+    <div class="ft-links">
+      <div class="ft-col">
+        <h4>Products</h4>
+        <a href="/docusign-integration/">DocuSign integration</a>
+        <a href="/google-sheets-integration/">Google Sheets integration</a><a href="/community-agents/">Community Agents</a>
+      </div>
+      <div class="ft-col">
+        <h4>DocuSign</h4>
+        <a href="/docusign-integration/how-to-integrate">How to integrate</a>
+        <a href="/docusign-integration/vs-native-signature">DocuSign vs native signature</a>
+        <a href="/docusign-integration/insurance">For insurance</a>
+        <a href="/docusign-integration/real-estate">For real estate</a>
+      <a href="/docusign-integration/docs/">Documentation</a>
+      </div>
+      <div class="ft-col">
+        <h4>Company</h4>
+        <a href="/">About LC Bridge</a>
+        <a href="mailto:arun@lcbridge.app">arun@lcbridge.app</a>
+        <a href="/docusign-integration/book-a-call">Book a call</a>
+      </div>
+    </div>
+  </div>
+  <p class="ft-legal">DocuSign Integration is built by LC Bridge — we build white-labeled integrations that HighLevel platforms embed as their own. An independent product that works with DocuSign® and HighLevel®, and is not affiliated with, endorsed by, or sponsored by either. All trademarks are the property of their respective owners.</p>
+  <p class="foot-legal-links" style="margin:0 0 12px;font-size:13px;opacity:.9"><a href="/docusign-integration/pricing">Pricing</a> &middot; <a href="/docusign-integration/privacy">Privacy</a> &middot; <a href="/docusign-integration/terms">Terms</a> &middot; <a href="/docusign-integration/refund">Refund</a></p>
+  <p class="ft-bottom">© 2026 LC Bridge. All rights reserved.</p>
+</div></footer>
+
+</body>
+</html>
