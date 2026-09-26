@@ -17,6 +17,7 @@ LC Bridge, legally Lead Connector Bridge, is an integration vendor for the HighL
 - [Book a call](https://lcbridge.app/docusign-integration/book-a-call): Book a 30-minute call with the founder about your HighLevel setup.
 - [Documentation](https://lcbridge.app/docusign-integration/docs/): Setup, triggers, field mapping, and how the white-label layer works.
 - [Getting started guide](https://lcbridge.app/docusign-integration/docs/getting-started/): Six-minute video walkthrough plus written steps — connect DocuSign, map a template, send an agreement, track it to signature.
+- [Multiple signers guide](https://lcbridge.app/docusign-integration/docs/multiple-signers/): Assign each signer role to a HighLevel contact, map document fields across contacts, preview values, and write completed values back.
 
 ## Industry guides
 
