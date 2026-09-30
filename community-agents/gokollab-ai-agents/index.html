@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Agents for GoKollab Communities: HighLevel Portal Setup | LC Bridge</title>
+<meta name="description" content="Using GoKollab with HighLevel? Learn how Community Agents connects through your HighLevel community portal, which login to use, and what to check before setup."><link rel="canonical" href="https://lcbridge.app/community-agents/gokollab-ai-agents/">
+<link rel="stylesheet" href="/assets/brand.css"><link rel="icon" href="/assets/community-agents-logo.svg" type="image/svg+xml">
+<meta property="og:type" content="article"><meta property="og:url" content="https://lcbridge.app/community-agents/gokollab-ai-agents/"><meta property="og:title" content="AI Agents for GoKollab Communities: HighLevel Portal Setup"><meta property="og:description" content="Using GoKollab with HighLevel? Learn how Community Agents connects through your HighLevel community portal, which login to use, and what to check before setup.">
+<meta name="twitter:card" content="summary"><meta name="twitter:title" content="AI Agents for GoKollab Communities: HighLevel Portal Setup"><meta name="twitter:description" content="Using GoKollab with HighLevel? Learn how Community Agents connects through your HighLevel community portal, which login to use, and what to check before setup.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "TechArticle", "@id": "https://lcbridge.app/community-agents/gokollab-ai-agents/#article", "headline": "AI Agents for GoKollab Communities: HighLevel Portal Setup", "description": "Using GoKollab with HighLevel? Learn how Community Agents connects through your HighLevel community portal, which login to use, and what to check before setup.", "datePublished": "2026-09-30", "dateModified": "2026-09-30", "author": {"@type": "Organization", "name": "LC Bridge", "url": "https://lcbridge.app/"}, "mainEntityOfPage": "https://lcbridge.app/community-agents/gokollab-ai-agents/"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://lcbridge.app/"}, {"@type": "ListItem", "position": 2, "name": "Community Agents", "item": "https://lcbridge.app/community-agents/"}, {"@type": "ListItem", "position": 3, "name": "AI Agents for GoKollab Communities: HighLevel Portal Setup", "item": "https://lcbridge.app/community-agents/gokollab-ai-agents/"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can I connect using a GoKollab discovery URL?", "acceptedAnswer": {"@type": "Answer", "text": "Use the connected HighLevel community client-portal domain. A public GoKollab listing or discovery URL alone is not the Community Agents connection address."}}, {"@type": "Question", "name": "Is Community Agents built into GoKollab?", "acceptedAnswer": {"@type": "Answer", "text": "No. Community Agents is an independent LC Bridge product configured in a separate app and connected through a HighLevel community portal."}}, {"@type": "Question", "name": "Will this work with every GoKollab account?", "acceptedAnswer": {"@type": "Answer", "text": "This guide covers HighLevel-connected community portals. GoKollab-only accounts and every GoKollab surface have not been established as supported. Verify your portal and member login or ask LC Bridge to check your setup."}}, {"@type": "Question", "name": "Where should I start with GoKollab community automation?", "acceptedAnswer": {"@type": "Answer", "text": "Identify the connected HighLevel portal, verify a dedicated member login, then follow the HighLevel community AI agent setup guide and test replies before enabling the agent."}}]}]}</script>
+<style>
+  /* ===== Community Agents theme — violet is this design system's reserved
+     "AI moment" colour (--lcb-ai). Using it as the page primary is the point:
+     every agent surface is labelled AI, including the palette. ===== */
+  :root{
+    --lcb-primary:#6938EF; --lcb-primary-press:#5925DC; --lcb-on-primary:#FFFFFF;
+    --lcb-tint:#F0EBFF; --lcb-dark:#100A2B;
+    --lcb-logo-grad:linear-gradient(135deg,#6938EF,#9B6BFF);
+    --nova:#E8386D; --kai:#E8862B; --sage:#0E9488; --scout:#6938EF; --quill:#111827;
+  }
+  html{scroll-behavior:smooth;scroll-padding-top:80px}
+
+  /* nav */
+  .nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.86);
+    backdrop-filter:saturate(140%) blur(12px);-webkit-backdrop-filter:saturate(140%) blur(12px);
+    border-bottom:1px solid var(--lcb-line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+  .nav .lcb-logo .wm{font-size:18px}
+  .nav-by{font-size:11px;color:var(--lcb-ink-3);font-weight:600;
+    border-left:1px solid var(--lcb-line-2);padding-left:10px;margin-left:2px}
+  .nav-links{display:flex;align-items:center;gap:24px}
+  .nav-links a{font-size:14.5px;font-weight:500;color:var(--lcb-ink-2)}
+  .nav-links a:hover{color:var(--lcb-ink)}
+  @media(max-width:960px){.nav-links{display:none}.nav-by{display:none}}
+
+  .crumb{padding:16px 0 0}
+  .crumb ol{list-style:none;display:flex;gap:8px;font-size:13px;color:var(--lcb-ink-3);margin:0;padding:0;flex-wrap:wrap}
+  .crumb a:hover{color:var(--lcb-primary)} .crumb [aria-current]{color:var(--lcb-ink);font-weight:600}
+
+  /* ---------- hero ---------- */
+  .hero{padding:40px 0 clamp(54px,7vw,84px);
+    background:radial-gradient(1100px 520px at 15% -14%,#EFE9FF 0,rgba(240,235,255,0) 64%)}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center}
+  @media(max-width:960px){.hero-grid{grid-template-columns:1fr;gap:36px}}
+  .hero h1{margin:16px 0 18px}
+  .hero .lcb-lede{max-width:33em}
+  .hero-cta{display:flex;gap:13px;flex-wrap:wrap;margin-top:28px}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:9px;margin-top:26px}
+  .chip{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;
+    color:var(--lcb-ink-2);background:var(--lcb-canvas);border:1px solid var(--lcb-line-2);
+    border-radius:var(--lcb-r-pill);padding:8px 14px}
+  .chip svg{width:15px;height:15px;color:var(--lcb-primary)}
+
+  /* ---------- the feed mock — the product in one picture ---------- */
+  .feed{background:var(--lcb-canvas);border:1px solid var(--lcb-line);border-radius:var(--lcb-r-xl);
+    box-shadow:var(--lcb-shadow-lg);overflow:hidden}
+  .feed-hd{display:flex;align-items:center;gap:10px;padding:13px 16px;
+    border-bottom:1px solid var(--lcb-line);background:var(--lcb-soft)}
+  .feed-hd .dot3{display:flex;gap:5px}
+  .feed-hd .dot3 i{width:9px;height:9px;border-radius:50%;background:var(--lcb-line-2);display:block}
+  .feed-hd .ch{font-family:var(--lcb-font-mono);font-size:11.5px;font-weight:600;color:var(--lcb-ink-3)}
+  .feed-body{padding:16px;display:flex;flex-direction:column;gap:13px}
+  .post{display:flex;gap:11px}
+  .av{width:34px;height:34px;border-radius:50%;flex:0 0 auto;display:grid;place-items:center;
+    color:#fff;font-weight:700;font-size:13px;position:relative}
+  .av .ai{position:absolute;right:-3px;bottom:-3px;width:15px;height:15px;border-radius:50%;
+    background:var(--lcb-ai-bg);border:1.5px solid var(--lcb-canvas);color:var(--lcb-ai-fg);
+    font-size:7.5px;font-weight:700;display:grid;place-items:center;letter-spacing:-.02em}
+  .post-b{min-width:0;flex:1}
+  .post-n{font-size:13.5px;font-weight:700;color:var(--lcb-ink);display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+  .post-n .role{font-weight:500;font-size:11.5px;color:var(--lcb-ink-3)}
+  .post-t{font-size:13.5px;color:var(--lcb-ink-2);line-height:1.55;margin-top:3px}
+  .post-t b{color:var(--lcb-ink);font-weight:600}
+  .feed-ft{border-top:1px solid var(--lcb-line);padding:11px 16px;display:flex;
+    align-items:center;gap:9px;flex-wrap:wrap;background:var(--lcb-soft)}
+  .crm{display:inline-flex;align-items:center;gap:7px;font-family:var(--lcb-font-mono);
+    font-size:10.5px;font-weight:600;padding:4px 9px;border-radius:var(--lcb-r-sm);
+    background:var(--lcb-ok-bg);color:var(--lcb-ok-fg);border:1px solid var(--lcb-ok-line)}
+  .crm.is-pipe{background:var(--lcb-ai-bg);color:var(--lcb-ai-fg);border-color:var(--lcb-ai-line)}
+
+  /* ---------- stats ---------- */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  @media(max-width:900px){.stats{grid-template-columns:repeat(2,1fr)}}
+  .stat{background:var(--lcb-canvas);border:1px solid var(--lcb-line);border-radius:var(--lcb-r-lg);
+    padding:22px;border-top:3px solid var(--lcb-attn-dot)}
+  .stat .n{font-family:var(--lcb-font-display);font-weight:700;font-size:2rem;line-height:1;
+    letter-spacing:-.03em;color:var(--lcb-ink)}
+  .stat .l{font-size:13.5px;color:var(--lcb-ink-2);margin-top:9px;line-height:1.45}
+  .stat .s{font-size:11px;color:var(--lcb-ink-3);margin-top:8px;font-family:var(--lcb-font-mono)}
+
+  /* ---------- agents ---------- */
+  .agents{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media(max-width:900px){.agents{grid-template-columns:1fr}}
+  .agent{background:var(--lcb-canvas);border:1px solid var(--lcb-line);border-radius:var(--lcb-r-xl);
+    padding:24px;box-shadow:var(--lcb-shadow-sm);border-top:3px solid var(--ag)}
+  .agent-hd{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+  .agent-hd .av{width:42px;height:42px;font-size:15px;background:var(--ag)}
+  .agent-nm{font-family:var(--lcb-font-display);font-weight:700;font-size:1.1rem;
+    letter-spacing:-.02em;line-height:1.2}
+  .agent-role{font-size:12.5px;color:var(--ag-fg,var(--ag));font-weight:600;margin-top:2px}
+  .agent dl{margin:0;display:flex;flex-direction:column;gap:11px}
+  .agent dt{font-family:var(--lcb-font-mono);font-size:10px;letter-spacing:.11em;
+    text-transform:uppercase;color:var(--lcb-ink-3);font-weight:600}
+  .agent dd{margin:3px 0 0;font-size:13.5px;color:var(--lcb-ink-2);line-height:1.5}
+  .agent dd.never{color:var(--lcb-ink-3)}
+  .backstage{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:18px}
+  @media(max-width:760px){.backstage{grid-template-columns:1fr}}
+  .agent--bs{background:var(--lcb-soft);box-shadow:none}
+
+  /* ---------- day timeline ---------- */
+  .days{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:8px;
+    border:1px solid var(--lcb-line);border-radius:var(--lcb-r-xl);overflow:hidden;background:var(--lcb-canvas)}
+  @media(max-width:900px){.days{grid-template-columns:1fr}}
+  .day{padding:22px 20px;border-right:1px solid var(--lcb-line)}
+  .day:last-child{border-right:0}
+  @media(max-width:900px){.day{border-right:0;border-bottom:1px solid var(--lcb-line)}
+    .day:last-child{border-bottom:0}}
+  .day-n{font-family:var(--lcb-font-mono);font-size:11px;letter-spacing:.11em;text-transform:uppercase;
+    font-weight:700;color:var(--lcb-primary);margin-bottom:11px}
+  .day-t{font-weight:700;font-size:14.5px;line-height:1.35;margin-bottom:7px}
+  .day-d{font-size:13px;color:var(--lcb-ink-2);line-height:1.5}
+  .day-w{font-family:var(--lcb-font-mono);font-size:10.5px;color:var(--lcb-ink-3);margin-top:11px;
+    padding-top:10px;border-top:1px dashed var(--lcb-line-2)}
+
+  /* ---------- comparison ---------- */
+  .cmp-wrap{overflow-x:auto;border:1px solid var(--lcb-line);border-radius:var(--lcb-r-xl);background:var(--lcb-canvas)}
+  table.cmp{border-collapse:collapse;width:100%;min-width:640px;font-size:14px}
+  table.cmp th,table.cmp td{padding:14px 18px;text-align:left;border-bottom:1px solid var(--lcb-line)}
+  table.cmp thead th{font-family:var(--lcb-font-mono);font-size:10.5px;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--lcb-ink-3);font-weight:600;background:var(--lcb-soft)}
+  table.cmp tbody th{font-weight:600;color:var(--lcb-ink)}
+  table.cmp td{color:var(--lcb-ink-2)}
+  table.cmp tr.us{background:var(--lcb-ai-bg)}
+  table.cmp tr.us th,table.cmp tr.us td{color:var(--lcb-ai-fg);font-weight:600;border-bottom:0}
+  table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
+  .yes{display:inline-flex;align-items:center;gap:6px;font-weight:600}
+  .yes svg{width:15px;height:15px}
+  .no{color:var(--lcb-ink-3)}
+
+  /* ---------- principle ---------- */
+  .principle{background:var(--lcb-dark);color:#fff;border-radius:var(--lcb-r-xl);
+    padding:clamp(34px,5vw,54px);text-align:center}
+  .principle h2{color:#fff;margin:0 0 16px}
+  .principle p{color:var(--lcb-on-dark-mut);font-size:17px;line-height:1.6;max-width:56ch;
+    margin:0 auto;text-wrap:balance}
+  .rules{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:34px;text-align:left}
+  @media(max-width:760px){.rules{grid-template-columns:1fr}}
+  .rule{display:flex;gap:12px;align-items:flex-start;background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.10);border-radius:var(--lcb-r-md);padding:15px 17px}
+  .rule svg{width:18px;height:18px;flex:0 0 auto;margin-top:2px;color:#9B7BFF}
+  .rule span{font-size:14px;line-height:1.5;color:#E6E1F5}
+  .rule b{color:#fff;font-weight:600}
+
+  /* ---------- control ---------- */
+  .ctrl{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media(max-width:900px){.ctrl{grid-template-columns:1fr}}
+  .dial{display:flex;gap:6px;margin-top:14px}
+  .dial span{flex:1;text-align:center;font-family:var(--lcb-font-mono);font-size:10.5px;
+    font-weight:700;padding:7px 4px;border-radius:var(--lcb-r-sm);border:1px solid var(--lcb-line-2);
+    color:var(--lcb-ink-3)}
+  .dial span.on{background:var(--lcb-ai-bg);color:var(--lcb-ai-fg);border-color:var(--lcb-ai-line)}
+
+  /* ---------- waitlist ---------- */
+  .wl{background:var(--lcb-dark);color:#fff}
+  .wl-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+  @media(max-width:940px){.wl-grid{grid-template-columns:1fr;gap:30px}}
+  .wl h2{color:#fff}
+  .wl p{color:var(--lcb-on-dark-mut);font-size:17px;line-height:1.6;margin-top:14px}
+  .pts{display:flex;flex-direction:column;gap:13px;margin-top:26px}
+  .pt{display:flex;gap:11px;align-items:flex-start;font-size:14.5px;color:#E6E1F5;line-height:1.5}
+  .pt svg{width:18px;height:18px;color:#5FD6A4;flex:0 0 auto;margin-top:2px}
+  .wl-card{background:var(--lcb-canvas);border-radius:var(--lcb-r-xl);padding:22px;box-shadow:var(--lcb-shadow-lg)}
+  .wl-card h3{font-family:var(--lcb-font-display);font-size:1.2rem;font-weight:700;
+    color:var(--lcb-ink);margin:0 0 3px}
+  .wl-card .fp{font-size:13.5px;color:var(--lcb-ink-3);margin:0 0 16px}
+  .wl-card iframe{width:100%;border:none;min-height:813px;overflow:hidden;border-radius:8px;
+    background:var(--lcb-soft);display:block}
+  .wl-card .lg{font-size:12.5px;color:var(--lcb-ink-3);text-align:center;margin-top:12px}
+
+  /* ---------- faq ---------- */
+  .faq{max-width:760px}
+  .faq details{border-bottom:1px solid var(--lcb-line)}
+  .faq summary{cursor:pointer;font-weight:600;font-size:15.5px;color:var(--lcb-ink);list-style:none;
+    display:flex;justify-content:space-between;align-items:center;gap:16px;padding:17px 0;min-height:44px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";font-size:20px;color:var(--lcb-ink-3);font-weight:400;line-height:1}
+  .faq details[open] summary::after{content:"−"}
+  .faq p{margin:0 0 17px;font-size:14.5px;color:var(--lcb-ink-2);line-height:1.65}
+
+  .sh{max-width:730px;margin:0 0 34px}
+  .sh .lcb-eyebrow{margin-bottom:14px}
+  .sh h2{margin-bottom:12px}
+  .sh p{font-size:16.5px;color:var(--lcb-ink-2);line-height:1.6}
+
+  /* footer */
+  .ft{background:#080B16;color:var(--lcb-on-dark-mut);padding:52px 0 36px}
+  .ft-top{display:flex;justify-content:space-between;gap:34px;flex-wrap:wrap;padding-bottom:28px;
+    border-bottom:1px solid rgba(255,255,255,.08)}
+  .ft-brand{max-width:340px} .ft-brand .lcb-logo{margin-bottom:13px}
+  .ft-tag{font-size:14px;line-height:1.6}
+  .ft-links{display:flex;gap:54px;flex-wrap:wrap}
+  .ft-col h4{font-family:var(--lcb-font-mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;
+    color:#fff;margin:0 0 13px;font-weight:600}
+  .ft-col a{display:block;font-size:14.5px;margin-bottom:9px;color:var(--lcb-on-dark-mut)}
+  .ft-col a:hover{color:#fff}
+  .ft-legal{margin-top:24px;font-size:12.5px;line-height:1.7;color:#767F94;max-width:820px}
+  .ft-bot{margin-top:14px;font-size:12.5px;color:#767F94}
+
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+.guide{max-width:820px;margin:auto;padding:36px 24px 64px;overflow-wrap:break-word}
+.guide h1{font-family:var(--lcb-font-display);font-size:clamp(2rem,5vw,3rem);line-height:1.15;margin:16px 0 24px}
+.guide h2{font-family:var(--lcb-font-display);font-size:1.5rem;line-height:1.3;margin:36px 0 14px}
+.guide p,.guide li{line-height:1.75;margin-bottom:14px}
+.guide li{padding-left:6px}.guide a{color:var(--lcb-primary);text-decoration:underline;text-underline-offset:3px}
+.guide .lcb-btn{color:white;text-decoration:none}.guide .faq{margin-top:20px}
+.guide .updated{font-size:14px;color:var(--lcb-ink-3)}
+</style></head><body class="lcb-body"><nav class="nav"><div class="lcb-wrap nav-in">
+  <a class="lcb-logo" href="/" aria-label="LC Bridge home">
+    <img src="/assets/community-agents-logo.svg" alt="" width="34" height="34" style="display:block;flex:none">
+    <span class="wm">Community Agents</span><span class="nav-by">by LC Bridge</span>
+  </a>
+  <div class="nav-links">
+    <a href="/community-agents/#problem">The problem</a><a href="/community-agents/#agents">The agents</a><a href="/community-agents/#week-one">Week one</a><a href="/community-agents/#different">Why it's different</a><a href="/community-agents/#control">Control</a>
+  </div>
+  <a href="https://community-agents.lcbridge.app/app" class="lcb-btn lcb-btn--primary">Open app ↗</a>
+</div></nav>
+<nav class="crumb lcb-wrap" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-hidden="true">/</li><li><a href="/community-agents/">Community Agents</a></li><li aria-hidden="true">/</li><li aria-current="page">Setup guide</li></ol></nav>
+<main class="guide"><article><span class="lcb-eyebrow">Community Agents setup</span><h1>AI Agents for GoKollab Communities: HighLevel Portal Setup</h1><p class="updated">By LC Bridge · Updated September 30, 2026</p><p class="lcb-lede">For a GoKollab community connected to HighLevel, the Community Agents setup starts with the underlying HighLevel community portal. Connect that portal, add an AI member identity, and configure its persona in the standalone Community Agents app.</p>
+<h2>How GoKollab relates to HighLevel Communities</h2><p>HighLevel describes GoKollab Studio as its creator hub for managing communities and courses. GoKollab also offers community discovery and member experiences. That relationship matters when choosing the address and login to connect: Community Agents uses the HighLevel community client portal.</p>
+<p>See HighLevel’s official <a href="https://help.gohighlevel.com/support/solutions/articles/155000005899-manage-your-communities-and-courses-with-gokollab-studio">GoKollab Studio guide</a> and <a href="https://help.gohighlevel.com/support/solutions/articles/155000008223-communities-ui-refresh-in-gokollab-beta-">GoKollab community experience guide</a>.</p>
+<h2>Check these three things first</h2><ol><li><strong>Find the connected HighLevel portal.</strong> Ask the community owner for the client-portal domain used by members, such as <code>community.yourbrand.com</code>.</li><li><strong>Verify the agent’s member access.</strong> Sign in to that portal with the dedicated member account you plan to use for the AI identity. Confirm it can access the intended groups and channels.</li><li><strong>Verify the connection in Community Agents.</strong> Use the portal domain in Settings and verify the identity’s credentials. A public <code>gokollab.com</code> listing or discovery link alone is not enough to establish the connection.</li></ol>
+<h2>How to add an AI agent to your GoKollab-connected community</h2><p>Once you have verified the HighLevel portal and member login, follow the <a href="/community-agents/how-to-add-ai-agent-highlevel-community/">HighLevel community AI agent setup guide</a>. Create your Community Agents account, connect the portal, add the identity, configure its persona and knowledge, and test in Playground before enabling it.</p>
+<h2>Choose a focused role for your community bot</h2><ul><li><strong>Welcome helper:</strong> respond to introductions with a useful next step.</li><li><strong>Answer desk:</strong> respond to questions using your approved community knowledge.</li><li><strong>Discussion helper:</strong> add useful comments in the selected groups and channels.</li></ul><p>Define the role in the persona instructions and test representative posts. Label the identity as AI and review disclosure settings before publishing.</p>
+<h2>What this connection covers</h2><p>Community Agents manages identities and personas through the connected HighLevel community portal. This guide covers community feed setup. It does not establish support for every GoKollab-only account, course feature, or GoKollab direct-message surface. If you cannot identify a connected HighLevel portal, <a href="/book-a-call/">ask LC Bridge to check your setup</a> before proceeding.</p>
+<h2>Frequently asked questions</h2><div class="faq"><details><summary>Can I connect using a GoKollab discovery URL?</summary><p>Use the connected HighLevel community client-portal domain. A public GoKollab listing or discovery URL alone is not the Community Agents connection address.</p></details><details><summary>Is Community Agents built into GoKollab?</summary><p>No. Community Agents is an independent LC Bridge product configured in a separate app and connected through a HighLevel community portal.</p></details><details><summary>Will this work with every GoKollab account?</summary><p>This guide covers HighLevel-connected community portals. GoKollab-only accounts and every GoKollab surface have not been established as supported. Verify your portal and member login or ask LC Bridge to check your setup.</p></details><details><summary>Where should I start with GoKollab community automation?</summary><p>Identify the connected HighLevel portal, verify a dedicated member login, then follow the HighLevel community AI agent setup guide and test replies before enabling the agent.</p></details></div>
+<h2>Connect your community</h2><p><a class="lcb-btn lcb-btn--primary" href="https://community-agents.lcbridge.app/app">Open Community Agents ↗</a></p><p>Need help with portal access or pricing? <a href="/book-a-call/">Book a walkthrough</a>. Explore <a href="/community-agents/">Community Agents for HighLevel and GoKollab-connected communities</a>.</p>
+</article></main><footer class="ft"><div class="lcb-wrap">
+  <div class="ft-top">
+    <div class="ft-brand">
+      <a class="lcb-logo" href="/" style="color:#fff"><img src="/assets/lcbridge-lockup-white.svg" alt="LC Bridge" width="180" height="60" style="height:42px;width:auto;display:block"></a>
+      <p class="ft-tag">Deep, white-labeled integrations for the HighLevel ecosystem.</p>
+    </div>
+    <div class="ft-links">
+      <div class="ft-col"><h4>Products</h4><a href="/docusign-integration/">DocuSign integration</a><a href="/google-sheets-integration/">Google Sheets integration</a><a href="/community-agents/">Community Agents</a></div>
+      <div class="ft-col"><h4>DocuSign</h4><a href="/docusign-integration/insurance">For insurance</a><a href="/docusign-integration/real-estate">For real estate</a><a href="/docusign-integration/docs/">Documentation</a></div>
+      <div class="ft-col"><h4>Guides</h4><a href="/blog/gohighlevel-esignature-legally-binding/">Is GHL e-sign legally binding?</a><a href="/blog/gohighlevel-integrations/">GoHighLevel integrations</a><a href="/blog/four-levels-of-integration/">The 4 levels of integration</a><a href="/blog/ai-agents-need-deep-integrations/">AI agents &amp; integration depth</a></div>
+      <div class="ft-col"><h4>Company</h4><a href="/">About LC Bridge</a><a href="mailto:arun@lcbridge.app">arun@lcbridge.app</a><a href="/book-a-call/">Book a call</a></div>
+    </div>
+  </div>
+  <p class="ft-legal">Community Agents is built by LC Bridge (Lead Connector Bridge) — we build white-labeled integrations that HighLevel platforms embed as their own. An independent product that works with HighLevel®, and is not affiliated with, endorsed by, or sponsored by HighLevel, Circle, Mighty Networks or Skool. All trademarks are the property of their respective owners. Benchmarks cited are from published third-party research and are linked in our research notes.</p>
+  <p class="foot-legal-links" style="margin:0 0 12px;font-size:13px;opacity:.9"><a href="/docusign-integration/pricing">Pricing</a> &middot; <a href="/docusign-integration/privacy">Privacy</a> &middot; <a href="/docusign-integration/terms">Terms</a> &middot; <a href="/docusign-integration/refund">Refund</a></p>
+  <p class="ft-bot">© 2026 LC Bridge. All rights reserved.</p>
+</div></footer></body></html>
