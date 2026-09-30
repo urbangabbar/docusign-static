@@ -42,7 +42,7 @@
 .home-icon{display:flex;align-items:center;justify-content:center;flex-shrink:0;width:44px;height:44px;border-radius:12px}
 .home-icon svg{width:25px;height:25px}
 .icon-docusign{background:#fff;border:1px solid #e1e5ee}
-.icon-agents{background:#efeafe;color:#6938ef}
+.icon-agents{background:transparent}
 .icon-sheets{background:#e4f5ed;color:#0f9d58}
 .collection-name{min-width:0}
 .collection-name strong{display:block;color:#e8ecf6;font-size:13px;font-weight:600}
@@ -120,3 +120,5 @@
 .products-page .prod-actions{margin-top:auto;padding-top:24px}
 .products-page .prod-actions .plink{font-size:12px}
 @media(max-width:920px){.products-page .prod-teaser{grid-template-columns:1fr}}
+
+.home-icon.icon-agents img{width:100%;height:100%;object-fit:contain}
