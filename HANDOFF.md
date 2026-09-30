@@ -1,7 +1,3 @@
-## September 30, 2026 website update
-
-The homepage, products listing, and Community Agents page use `/assets/playful.css` and a Slush-inspired pastel/sticker design. Other product pages retain their existing brand stylesheet. Community Agents is released, with signup and setup in its standalone app. The Community Agents waitlist form has been removed; `#waitlist` remains an anchor alias for old links. Google Sheets remains pre-launch. The app setup flow is portal connection, agent identities, and persona management, rather than the previous speculative workflow/contact-record marketing copy.
-
 # HANDOFF — lcbridge.app
 
 Marketing site for **LC Bridge** (legal entity: GoCSM Innovations Private Limited,
@@ -83,7 +79,7 @@ docusign-integration/                       PRODUCT 1 (live, sellable)
   img/*.png                                   7 product screenshots used by docs
 
 google-sheets-integration/index.html        PRODUCT 2 (pre-launch, waitlist)
-community-agents/index.html                 PRODUCT 3 (released, standalone app)
+community-agents/index.html                 PRODUCT 3 (in build, waitlist)
 
 assets/                                     see below
 sitemap.xml  robots.txt  llms.txt  CNAME
@@ -247,8 +243,8 @@ URL.
   docs, and Paddle-compliant legal pages.
 - **Google Sheets Integration** — pre-launch. Page is live, CTA is "Join the
   waitlist" everywhere.
-- **Community Agents** — released. Full marketing page live at `/community-agents/`,
-  linking to the standalone app at `https://community-app-production-e460.up.railway.app/app`. Built from two research PDFs in `~/Downloads/` (not in the repo):
+- **Community Agents** — in build. Full marketing page live at `/community-agents/`,
+  waitlist open. Built from two research PDFs in `~/Downloads/` (not in the repo):
   `Community Agents Phase 1 Research.pdf` and `Community Agent Demo Design.pdf`.
   Those are the source of truth for the product's claims — the page cites
   third-party benchmarks (63.3% Hivebrite, 5.8% RetentionCheck, 1-in-50 FeverBee)
