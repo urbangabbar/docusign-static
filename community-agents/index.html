@@ -118,6 +118,18 @@
     .ca-setup a:hover {border-color:var(--lcb-ai-line);box-shadow:var(--lcb-shadow-md)}
     .ca-setup strong {display:block;margin-bottom:7px;font:700 17px var(--lcb-font-display)}
     .ca-setup span {color:var(--lcb-ink-2);font-size:14px}
+    .ca-pricing {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:start}
+    .ca-plan {padding:clamp(24px,4vw,40px);border:1px solid var(--lcb-ai-line);border-radius:var(--lcb-r-xl);background:#fff;box-shadow:var(--lcb-shadow-sm)}
+    .ca-plan h3 {font-size:22px;margin:0 0 15px}
+    .ca-price {font:700 48px/1.15 var(--lcb-font-display);letter-spacing:-.04em;color:var(--lcb-ink)}
+    .ca-price span {font:500 16px/1.5 var(--lcb-font-body);letter-spacing:0;color:var(--lcb-ink-2)}
+    .ca-plan p,.ca-pricing-info p {color:var(--lcb-ink-2);font-size:14px}
+    .ca-plan ul {padding-left:20px;margin:22px 0;display:grid;gap:12px;font-size:15px;color:var(--lcb-ink-2)}
+    .ca-plan .ca-plan-terms {margin-top:16px;font-size:13px}
+    .ca-pricing-info {display:grid;gap:18px}
+    .ca-pricing-info article {padding:24px;border:1px solid var(--lcb-line-2);border-radius:var(--lcb-r-lg);background:#fff}
+    .ca-pricing-info h3 {font-size:18px;margin:0 0 9px}
+    @media(max-width:700px) {.ca-pricing {grid-template-columns:1fr}}
     .ca-faq {max-width:780px;margin:0 auto}
     .ca-faq h2 {font-size:clamp(1.75rem,3vw,2.2rem);margin:12px 0 20px}
     .ca-faq details {border-bottom:1px solid var(--lcb-line)}
@@ -189,7 +201,7 @@
       <img src="../assets/community-agents-logo.svg" alt="" width="36" height="36">
       <span class="name">Community Agents</span><span class="by">by LC Bridge</span>
     </a>
-    <div class="ca-nav-links"><a href="#benefits">Benefits</a><a href="#how-it-works">How it works</a><a href="#insights">Member Insights</a><a href="#faq">FAQ</a></div>
+    <div class="ca-nav-links"><a href="#benefits">Benefits</a><a href="#how-it-works">How it works</a><a href="#insights">Member Insights</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a></div>
     <a class="lcb-btn lcb-btn--primary" href="https://community-agents.lcbridge.app/app">Create account <span aria-hidden="true">↗</span></a>
   </div></nav>
 
@@ -259,6 +271,29 @@
     <section class="ca-section"><div class="lcb-wrap">
       <div class="ca-section-head"><span class="lcb-eyebrow"><span class="dot"></span>Setup guides</span><h2>Get your first agent ready.</h2><p>Connect through your HighLevel community portal, then configure an AI identity, knowledge, and response settings.</p></div>
       <div class="ca-setup"><a href="https://lcbridge.app/community-agents/how-to-add-ai-agent-highlevel-community/"><strong>HighLevel community setup ↗</strong><span>Follow the portal connection, identity, knowledge, and testing steps.</span></a><a href="https://lcbridge.app/community-agents/gokollab-ai-agents/"><strong>Using GoKollab? ↗</strong><span>Check your connected HighLevel portal and member access before setup.</span></a></div>
+    </div></section>
+
+    <section class="ca-section ca-section--soft" id="pricing"><div class="lcb-wrap">
+      <div class="ca-section-head"><span class="lcb-eyebrow"><span class="dot"></span>Pricing</span><h2>One plan. Credit included every month.</h2><p>Try five private AI previews before adding a card. Choose the Standard plan when you are ready to launch.</p></div>
+      <div class="ca-pricing">
+        <article class="ca-plan">
+          <h3>Standard</h3>
+          <div class="ca-price">$47 <span>USD / month</span></div>
+          <ul>
+            <li>$47 in AI usage credit with each successful monthly payment.</li>
+            <li>Seven-day free trial with $3 in AI starter credit.</li>
+            <li>Live agents and full buying-interest insights after trial activation.</li>
+            <li>Wallet transaction history and optional auto top-up.</li>
+          </ul>
+          <a class="lcb-btn lcb-btn--primary" href="https://community-agents.lcbridge.app/app">Create account <span aria-hidden="true">↗</span></a>
+          <p class="ca-plan-terms">A payment card is required to start the trial and launch live agents. $0 today; then $47/month plus applicable taxes unless canceled before the seven-day trial ends. Cancel future renewals in billing.</p>
+        </article>
+        <div class="ca-pricing-info">
+          <article><h3>Monthly credit refreshes each billing period</h3><p>Each successful monthly payment replaces your subscription allowance with $47. Unused subscription credit does not roll over. Trial credit expires when the trial ends.</p></article>
+          <article><h3>Purchased credit carries over</h3><p>Add extra AI credit from $2 when you need it. Purchased top-ups do not expire and remain separate from your monthly allowance. Usage spends expiring subscription credit first.</p></article>
+          <article><h3>Stay in control of top-ups</h3><p>Auto top-up is off by default. You can enable it in billing and choose your balance threshold, top-up amount, and monthly spending limit. Additional credit purchases are charged separately.</p></article>
+        </div>
+      </div>
     </div></section>
 
     <section class="ca-section ca-section--soft" id="faq"><div class="lcb-wrap ca-faq">
