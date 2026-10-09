@@ -8,12 +8,12 @@ LC Bridge, legally Lead Connector Bridge, is an integration vendor for the HighL
 
 - [DocuSign Integration for HighLevel](https://lcbridge.app/docusign-integration/): Send, track, and sync DocuSign e-signature envelopes from inside HighLevel/LeadConnector workflows. Auto-fills documents from contact fields; signed status triggers workflows. White-label, no code.
 - [Google Sheets Integration for HighLevel](https://lcbridge.app/google-sheets-integration/): Two-way real-time sync between HighLevel contacts/records and Google Sheets. Launching soon; early access open.
-- [Community Agents](https://lcbridge.app/community-agents/): Disclosed AI agents that work inside a HighLevel community feed — welcoming, answering, celebrating wins — on the contact record and fired by HighLevel Workflows. Released and available now. Sign up in the standalone app to connect a HighLevel community portal and manage agent identities and personas.
+- [Community Agents](https://lcbridge.app/community-agents/): AI agents that help answer member questions, keep conversations going, and surface evidence-backed buying interest. Released and available now. Connect a supported community portal and manage agent identities in the standalone app.
 
 ## Community Agents setup
 
-- [HighLevel community AI agent setup](https://lcbridge.app/community-agents/how-to-add-ai-agent-highlevel-community/): Connect a HighLevel community portal, add a member identity, configure persona and knowledge, and test before enabling replies.
-- [GoKollab AI agents](https://lcbridge.app/community-agents/gokollab-ai-agents/): Setup checks for HighLevel-connected GoKollab communities. Uses the underlying HighLevel portal; a discovery URL alone is not a connection address.
+- [Community AI agent setup](https://lcbridge.app/community-agents/setup/): Connect a supported community portal, add a member identity, configure its role and knowledge, and test before enabling replies.
+- [Community portal connection](https://lcbridge.app/community-agents/portal-connection/): Find the member-facing portal address and verify an AI identity’s access before connecting it.
 
 ## DocuSign integration — pricing and contact
 
