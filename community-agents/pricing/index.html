@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Agents pricing | $47/month | LC Bridge</title>
+  <meta name="description" content="Community Agents Standard is $47/month with $47 in monthly AI usage credit. Seven-day free trial with $3 starter credit. Extra top-ups from $2.">
+  <link rel="canonical" href="https://lcbridge.app/community-agents/pricing/">
+  <link rel="stylesheet" href="/assets/brand.css">
+  <link rel="icon" href="/assets/community-agents-logo.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Community Agents pricing | LC Bridge">
+  <meta property="og:url" content="https://lcbridge.app/community-agents/pricing/">
+  <meta property="og:description" content="$47/month with $47 in monthly AI usage credit. Seven-day free trial with $3 starter credit.">
+  <style>
+    :root {
+      --lcb-primary:#6938EF;--lcb-primary-press:#5925DC;--lcb-on-primary:#fff;
+      --lcb-tint:#F0EBFF;--lcb-dark:#100A2B;
+      --lcb-logo-grad:linear-gradient(135deg,#6938EF,#9B6BFF);
+    }
+    html {scroll-behavior:smooth;scroll-padding-top:82px}
+    .ca-nav {position:sticky;top:0;z-index:30;background:rgba(255,255,255,.96);border-bottom:1px solid var(--lcb-line)}
+    .ca-nav-inner {min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .ca-brand {display:inline-flex;align-items:center;gap:10px;min-width:0}
+    .ca-brand img {display:block;width:36px;height:36px;object-fit:contain;flex:none}
+    .ca-brand .name {font:700 18px/1.1 var(--lcb-font-display);letter-spacing:-.03em;white-space:nowrap}
+    .ca-brand .by {border-left:1px solid var(--lcb-line-2);padding-left:11px;margin-left:4px;color:var(--lcb-ink-3);font-size:11px;font-weight:600;white-space:nowrap}
+    .ca-nav-links {display:flex;align-items:center;gap:24px;margin-left:auto;font-size:13px;font-weight:600;color:var(--lcb-ink-2)}
+    .ca-nav-links a:hover,.ca-footer a:hover {color:var(--lcb-primary)}
+    .ca-nav .lcb-btn {min-height:45px;justify-content:center}
+    .ca-hero {padding:clamp(45px,6vw,78px) 0 64px;background:linear-gradient(180deg,#fff 0%,#FBFAFF 100%)}
+    .ca-hero-grid {display:grid;grid-template-columns:minmax(0,.96fr) minmax(0,1.04fr);gap:clamp(35px,5vw,68px);align-items:center}
+    .ca-status {display:inline-flex;align-items:center;gap:8px;padding:6px 11px;border:1px solid var(--lcb-ai-line);border-radius:var(--lcb-r-pill);background:#fff;color:var(--lcb-ai-fg);font:600 11px/1.3 var(--lcb-font-mono);letter-spacing:.02em}
+    .ca-status::before {content:"";width:7px;height:7px;border-radius:50%;background:var(--lcb-primary)}
+    .ca-hero h1 {font-size:clamp(2.25rem,3.2vw,2.9rem);line-height:1.13;margin:19px 0 19px;max-width:680px}
+    .ca-hero h1 span {color:var(--lcb-primary)}
+    .ca-hero .lcb-lede {max-width:650px}
+    .ca-actions {display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin-top:29px}
+    .ca-actions .lcb-btn {min-height:50px;justify-content:center}
+    .ca-next {margin-top:13px;color:var(--lcb-ink-3);font-size:12px}
+    .ca-proof {display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+    .ca-proof span {padding:7px 11px;border:1px solid var(--lcb-line-2);border-radius:var(--lcb-r-pill);background:#fff;color:var(--lcb-ink-2);font-size:12px;font-weight:600}
+    .ca-video {overflow:hidden;border:1px solid var(--lcb-line-2);border-radius:var(--lcb-r-xl);background:#fff;box-shadow:var(--lcb-shadow-lg)}
+    .ca-video-top {display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px 18px;border-bottom:1px solid var(--lcb-line);font-size:12px;font-weight:700}
+    .ca-video-top span:last-child {color:var(--lcb-ink-3);font-size:11px;font-weight:500}
+    .ca-video-screen {position:relative;aspect-ratio:16/9;overflow:hidden;background:#F1EEFF}
+    .ca-video-screen iframe {position:absolute;inset:0;z-index:1;width:100%;height:100%;border:0}
+    .ca-video-poster {position:absolute;inset:0;padding:3% 9% 20%;display:grid;place-items:center;background:radial-gradient(circle at 18% 12%,#fff 0,#F6F4FF 44%,#EBE6FF 100%)}
+    .ca-poster-window {width:100%;max-width:460px;border:1px solid #D9D3F7;border-radius:13px;background:#fff;box-shadow:0 18px 35px rgba(44,24,102,.12);overflow:hidden;transform:rotate(-2deg)}
+    .ca-poster-bar {display:flex;align-items:center;gap:6px;padding:9px 12px;border-bottom:1px solid var(--lcb-line);background:#F8F7FC}
+    .ca-poster-bar i {width:6px;height:6px;border-radius:50%;background:#D3D5DE}
+    .ca-poster-bar small {margin-left:auto;color:var(--lcb-ink-3);font:500 10px var(--lcb-font-mono)}
+    .ca-poster-body {padding:16px 18px 19px;font-size:12px;line-height:1.45}
+    .ca-poster-question {display:flex;gap:9px;align-items:flex-start;margin-bottom:12px}
+    .ca-poster-avatar {flex:none;display:grid;place-items:center;width:25px;height:25px;border-radius:50%;background:#E9EDF4;color:var(--lcb-ink);font-weight:700;font-size:11px}
+    .ca-poster-answer {margin-left:34px;padding:11px 13px;border-left:3px solid var(--lcb-primary);border-radius:0 8px 8px 0;background:#F6F3FF;color:var(--lcb-ink-2)}
+    .ca-poster-answer strong {color:var(--lcb-ink)}
+    .ca-play {position:absolute;inset:0;z-index:3;display:flex;align-items:flex-end;justify-content:center;padding-bottom:5%;border:0;background:transparent;cursor:pointer}
+    .ca-play > span {display:inline-flex;align-items:center;gap:10px;padding:13px 20px;border-radius:var(--lcb-r-pill);background:var(--lcb-primary);color:#fff;box-shadow:0 12px 30px rgba(64,31,153,.24);font:700 14px var(--lcb-font-text)}
+    .ca-play:hover > span {background:var(--lcb-primary-press)}
+    .ca-play:focus-visible {outline:3px solid var(--lcb-primary);outline-offset:-4px}
+    .ca-hit {position:absolute;inset:0;z-index:2;border:0;background:transparent;cursor:pointer}
+    .ca-sound {position:absolute;right:12px;top:12px;z-index:4;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:10px 15px;border:0;border-radius:var(--lcb-r-pill);background:rgba(11,17,32,.85);color:#fff;cursor:pointer;font:600 13px var(--lcb-font-text)}
+    .ca-sound:hover {background:var(--lcb-primary)}
+    .ca-sound svg {width:17px;height:17px;flex:none}
+    .ca-video[data-state="poster"] .ca-hit,.ca-video[data-state="poster"] .ca-sound,.ca-video[data-state="on"] .ca-hit,.ca-video[data-state="on"] .ca-sound,.ca-video:not([data-state="poster"]) .ca-play {display:none}
+    .ca-video-foot {display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:5px 16px;padding:13px 18px;color:var(--lcb-ink-3);font-size:11px}
+    .ca-video-foot a {color:var(--lcb-primary)!important;font-weight:700}
+    .ca-video-foot a:hover {text-decoration:underline!important}
+    .ca-section {padding:clamp(62px,7vw,90px) 0}
+    .ca-section--soft {background:#F8F8FC}
+    .ca-section-head {max-width:760px;margin-bottom:31px}
+    .ca-section-head h2 {font-size:clamp(1.85rem,3.2vw,2.55rem);margin:13px 0 12px}
+    .ca-section-head p {color:var(--lcb-ink-2);font-size:16px}
+    .ca-pillar-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+    .ca-pillar {display:flex;flex-direction:column;padding:23px;border:1px solid var(--lcb-line-2);border-radius:var(--lcb-r-xl);background:#fff;box-shadow:var(--lcb-shadow-sm)}
+    .ca-pillar-number {color:var(--lcb-primary);font:600 12px var(--lcb-font-mono)}
+    .ca-pillar h3 {font-size:19px;margin:13px 0 9px}
+    .ca-pillar > p {color:var(--lcb-ink-2);font-size:14px}
+    .ca-example {margin-top:auto;padding-top:22px}
+    .ca-example small {display:block;margin-bottom:7px;color:var(--lcb-ink-3);font-size:11px}
+    .ca-example blockquote {margin:0;padding:13px;border:1px solid var(--lcb-line);border-radius:var(--lcb-r-md);background:var(--lcb-soft);font-size:13px;line-height:1.5}
+    .ca-example-answer {margin-top:7px!important;background:#F5F3FF!important;border-color:var(--lcb-ai-line)!important}
+    .ca-example-answer strong {color:var(--lcb-ink)}
+    .ca-examples-note {margin-top:13px;color:var(--lcb-ink-3);font-size:11px}
+    .ca-insights {display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,60px);align-items:center;padding:clamp(25px,4vw,47px);border:1px solid var(--lcb-ai-line);border-radius:var(--lcb-r-xl);background:#F5F3FF}
+    .ca-insights h2 {font-size:clamp(1.85rem,3vw,2.4rem);margin:13px 0}
+    .ca-insights p {color:var(--lcb-ink-2)}
+    .ca-insight-card {padding:22px;border:1px solid var(--lcb-ai-line);border-radius:var(--lcb-r-lg);background:#fff;box-shadow:var(--lcb-shadow-sm)}
+    .ca-insight-card-head {display:flex;justify-content:space-between;gap:12px;color:var(--lcb-ink-3);font-size:11px}
+    .ca-insight-card-head strong {color:var(--lcb-ai-fg)}
+    .ca-insight-card blockquote {margin:18px 0;font:600 17px/1.45 var(--lcb-font-display)}
+    .ca-insight-card p {border-top:1px solid var(--lcb-line);padding-top:13px;font-size:13px}
+    .ca-insight-card p strong {color:var(--lcb-ink)}
+    .ca-steps {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+    .ca-step {padding-top:17px;border-top:1px solid var(--lcb-line-2)}
+    .ca-step span {color:var(--lcb-primary);font:600 12px var(--lcb-font-mono)}
+    .ca-step h3 {font-size:18px;margin:11px 0 8px}
+    .ca-step p {color:var(--lcb-ink-2);font-size:14px}
+    .ca-control {display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+    .ca-control h2 {font-size:clamp(1.8rem,3vw,2.35rem);margin:13px 0}
+    .ca-control p {color:var(--lcb-ink-2)}
+    .ca-control-list {display:grid;gap:12px}
+    .ca-control-item {padding:17px 19px;border:1px solid var(--lcb-line-2);border-radius:var(--lcb-r-lg);background:#fff}
+    .ca-control-item strong {display:block;margin-bottom:3px;font-size:14px}
+    .ca-control-item span {color:var(--lcb-ink-2);font-size:13px}
+    .ca-setup {display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    .ca-setup a {display:block;padding:21px 23px;border:1px solid var(--lcb-line-2);border-radius:var(--lcb-r-xl);background:#fff;box-shadow:var(--lcb-shadow-sm)}
+    .ca-setup a:hover {border-color:var(--lcb-ai-line);box-shadow:var(--lcb-shadow-md)}
+    .ca-setup strong {display:block;margin-bottom:7px;font:700 17px var(--lcb-font-display)}
+    .ca-setup span {color:var(--lcb-ink-2);font-size:14px}
+    .ca-pricing {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:start}
+    .ca-plan {padding:clamp(24px,4vw,40px);border:1px solid var(--lcb-ai-line);border-radius:var(--lcb-r-xl);background:#fff;box-shadow:var(--lcb-shadow-sm)}
+    .ca-plan h3 {font-size:22px;margin:0 0 15px}
+    .ca-price {font:700 48px/1.15 var(--lcb-font-display);letter-spacing:-.04em;color:var(--lcb-ink)}
+    .ca-price span {font-family:inherit;font-size:16px;font-weight:500;line-height:1.5;letter-spacing:0;color:var(--lcb-ink-2)}
+    .ca-plan p,.ca-pricing-info p {color:var(--lcb-ink-2);font-size:14px}
+    .ca-plan ul {padding-left:20px;margin:22px 0;display:grid;gap:12px;font-size:15px;color:var(--lcb-ink-2)}
+    .ca-plan .ca-plan-terms {margin-top:16px;font-size:13px}
+    .ca-pricing-info {display:grid;gap:18px}
+    .ca-pricing-info article {padding:24px;border:1px solid var(--lcb-line-2);border-radius:var(--lcb-r-lg);background:#fff}
+    .ca-pricing-info h3 {font-size:18px;margin:0 0 9px}
+    @media(max-width:700px) {.ca-pricing {grid-template-columns:1fr}}
+    .ca-faq {max-width:780px;margin:0 auto}
+    .ca-faq h2 {font-size:clamp(1.75rem,3vw,2.2rem);margin:12px 0 20px}
+    .ca-faq details {border-bottom:1px solid var(--lcb-line)}
+    .ca-faq summary {display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:58px;padding:14px 0;cursor:pointer;list-style:none;font-weight:600}
+    .ca-faq summary::-webkit-details-marker {display:none}
+    .ca-faq summary::after {content:"+";color:var(--lcb-ink-3);font-size:22px;font-weight:400}
+    .ca-faq details[open] summary::after {content:"−"}
+    .ca-faq details p {padding:0 0 18px;color:var(--lcb-ink-2);font-size:14px}
+    .ca-close {padding:43px 0;background:var(--lcb-dark);color:#fff}
+    .ca-close-inner {display:flex;align-items:center;justify-content:space-between;gap:28px}
+    .ca-close h2 {font-size:clamp(1.7rem,3vw,2.35rem);margin-bottom:8px}
+    .ca-close p {color:#C9C1E1}
+    .ca-close .lcb-btn {flex:none;justify-content:center}
+    .ca-footer {padding:31px 0;background:#0B1120;color:var(--lcb-on-dark-mut)}
+    .ca-footer-inner {display:flex;align-items:start;justify-content:space-between;gap:30px}
+    .ca-footer img {display:block;width:142px;height:auto;margin-bottom:12px}
+    .ca-footer p {max-width:550px;font-size:12px;line-height:1.6}
+    .ca-footer a {color:var(--lcb-on-dark)!important}
+    .ca-footer-links {display:flex;flex-wrap:wrap;gap:17px;font-size:12px}
+    .ca-mobile-cta {display:none}
+    @media(max-width:1000px) {
+      .ca-nav-links {display:none}
+      .ca-hero-grid {grid-template-columns:1fr;gap:30px}
+      .ca-hero-copy {max-width:780px}
+      .ca-video {max-width:760px;width:100%}
+      .ca-pillar-grid {grid-template-columns:1fr 1fr}
+      .ca-pillar:last-child {grid-column:1/-1}
+    }
+    @media(max-width:700px) {
+      .ca-nav-inner {min-height:66px;gap:12px}
+      .ca-brand .by {display:none}
+      .ca-brand .name {font-size:16px}
+      .ca-brand img {width:32px;height:32px}
+      .ca-nav .lcb-btn {font-size:12px;padding:10px 12px;min-height:42px}
+      .ca-hero {padding:37px 0 48px}
+      .ca-hero h1 {font-size:clamp(2rem,8vw,2.75rem)}
+      .ca-actions .lcb-btn {width:100%;justify-content:center}
+      .ca-video-poster {padding:2% 7% 19%}
+      .ca-poster-bar {padding:6px 9px}
+      .ca-poster-body {padding:8px 10px 10px;font-size:10px}
+      .ca-poster-question {margin-bottom:6px}
+      .ca-poster-answer {padding:7px 9px}
+      .ca-play {padding-bottom:3%}
+      .ca-play > span {padding:10px 15px;font-size:12px}
+      .ca-video-foot {font-size:10px}
+      .ca-pillar-grid,.ca-steps,.ca-insights,.ca-control,.ca-setup {grid-template-columns:1fr}
+      .ca-pillar:last-child {grid-column:auto}
+      .ca-control {gap:22px}
+      .ca-close-inner,.ca-footer-inner {flex-direction:column;align-items:stretch}
+      .ca-close .lcb-btn {width:100%}
+      .ca-mobile-cta {display:flex;position:fixed;left:0;right:0;bottom:0;z-index:50;padding:10px 20px;padding-bottom:max(10px,env(safe-area-inset-bottom));border-top:1px solid var(--lcb-line);background:rgba(255,255,255,.98);box-shadow:0 -8px 24px rgba(11,18,32,.08)}
+      .ca-mobile-cta .lcb-btn {width:100%;justify-content:center;min-height:44px}
+      .lcb-body {padding-bottom:68px}
+    }
+    @media(max-width:380px) {
+      .ca-nav .lcb-btn {display:none}
+      .ca-brand .name {font-size:14px}
+      .ca-video-top span:last-child {display:none}
+      .ca-poster-question {margin-bottom:7px}
+      .ca-poster-answer {margin-left:0}
+    }
+    @media(prefers-reduced-motion:reduce) {html {scroll-behavior:auto}}
+  </style>
+  <style>.ca-section-head h1 {font-size:clamp(2rem,4vw,3rem);line-height:1.15;margin:16px 0}.ca-pricing-legal {margin-top:32px;color:var(--lcb-ink-2);font-size:14px}.lcb-body {padding-bottom:0}@media(max-width:700px){.ca-nav-links{display:none}}</style>
+<script src="https://community-agents.lcbridge.app/meta-pixel.js" defer></script>
+</head>
+<body class="lcb-body">
+  <nav class="ca-nav" aria-label="Main navigation"><div class="lcb-wrap ca-nav-inner">
+    <a class="ca-brand" href="/community-agents/" aria-label="LC Bridge home">
+      <img src="/assets/community-agents-logo.svg" alt="" width="36" height="36">
+      <span class="name">Community Agents</span><span class="by">by LC Bridge</span>
+    </a>
+    <div class="ca-nav-links"><a href="/community-agents/">Product</a><a href="/community-agents/setup/">Setup guide</a><a href="/community-agents/pricing/" aria-current="page">Pricing</a></div>
+    <a class="lcb-btn lcb-btn--primary" href="https://community-agents.lcbridge.app/app">Create account <span aria-hidden="true">↗</span></a>
+  </div></nav>
+
+  <main>
+    <section class="ca-section ca-section--soft" id="pricing"><div class="lcb-wrap">
+      <div class="ca-section-head"><span class="lcb-eyebrow"><span class="dot"></span>Pricing</span><h1>One plan. Credit included every month.</h1><p>Try five private AI previews before adding a card. Choose the Standard plan when you are ready to launch.</p></div>
+      <div class="ca-pricing">
+        <article class="ca-plan">
+          <h3>Standard</h3>
+          <div class="ca-price">$47 <span>USD / month</span></div>
+          <ul>
+            <li>$47 in AI usage credit with each successful monthly payment.</li>
+            <li>Seven-day free trial with $3 in AI starter credit.</li>
+            <li>Live agents and full buying-interest insights after trial activation.</li>
+            <li>Wallet transaction history and optional auto top-up.</li>
+          </ul>
+          <a class="lcb-btn lcb-btn--primary" href="https://agents.lcbridge.app/app">Create account <span aria-hidden="true">↗</span></a>
+          <p class="ca-plan-terms">A payment card is required to start the trial and launch live agents. $0 today; then $47/month plus applicable taxes unless canceled before the seven-day trial ends. Cancel future renewals in billing.</p>
+        </article>
+        <div class="ca-pricing-info">
+          <article><h3>Monthly credit refreshes each billing period</h3><p>Each successful monthly payment replaces your subscription allowance with $47. Unused subscription credit does not roll over. Trial credit expires when the trial ends.</p></article>
+          <article><h3>Purchased credit carries over</h3><p>Add extra AI credit from $2 when you need it. Purchased top-ups do not expire and remain separate from your monthly allowance. Usage spends expiring subscription credit first.</p></article>
+          <article><h3>Stay in control of top-ups</h3><p>Auto top-up is off by default. You can enable it in billing and choose your balance threshold, top-up amount, and monthly spending limit. Additional credit purchases are charged separately.</p></article>
+        </div>
+      </div>
+    </div></section>
+
+    <section class="ca-section"><div class="lcb-wrap ca-faq"><h2>Before you subscribe</h2><p>Five private AI previews are available without a card. Starting the seven-day trial requires a payment card. The subscription renews automatically at $47 USD per month, plus applicable taxes, unless canceled. Manage cancellation in the app’s billing settings.</p><p class="ca-pricing-legal">AI usage is deducted from your available credit at the rates shown in the app. Monthly credit expires at the end of its billing period. Purchased credit is only for Community Agents usage and cannot be withdrawn or transferred. Additional credit is purchased separately; auto top-up requires your opt-in.</p></div></section>
+  </main>
+  <footer class="ca-footer"><div class="lcb-wrap ca-footer-inner"><div><a href="/" aria-label="LC Bridge home"><img src="/assets/lcbridge-lockup-white.svg" alt="LC Bridge" width="142" height="48"></a><p>Community Agents by LC Bridge. Questions about plans or billing? <a href="mailto:support@lcbridge.app">Contact support@lcbridge.app</a>.</p></div><div class="ca-footer-links"><a href="/community-agents/">Community Agents</a><a href="mailto:support@lcbridge.app">Billing support</a></div></div></footer>
+</body>
+</html>
