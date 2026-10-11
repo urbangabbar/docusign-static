@@ -1,7 +1,9 @@
-# robots.txt — lcbridge.app (LC Bridge / Lead Connector Bridge)
-# Stance: allow all crawlers, including AI — we want AEO citations.
+# robots.txt — lcbridge.app
+# Allow search engines and AI crawlers to access every public page.
+# Discover canonical, indexable pages through the sitemap below.
 
 User-agent: *
+Disallow:
 Allow: /
 
 # --- AI crawlers explicitly welcomed (training + citation) ---
