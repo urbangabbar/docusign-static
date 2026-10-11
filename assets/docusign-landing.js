@@ -31,43 +31,80 @@
       closeMenu(); menu.focus();
     }
   });
-  const video = one('#product-video');
+  let video = one('#product-video');
+  const soundButton = one('.demo-sound');
+  const demo = one('#demo');
+  const videoId = video.dataset.videoId;
+  let currentTime = 0;
+  let lastTime = null;
+  let playerState = -1;
   let demoStarted = false;
   const milestones = new Set();
+  const watchedRanges = [];
+  function watchedSeconds() {
+    const merged = [];
+    watchedRanges.sort((a, b) => a[0] - b[0]).forEach((range) => {
+      const last = merged[merged.length - 1];
+      if (last && range[0] <= last[1]) last[1] = Math.max(last[1], range[1]);
+      else merged.push([...range]);
+    });
+    return merged.reduce((total, range) => total + range[1] - range[0], 0);
+  }
+  function mountDemo(muted, start = 0) {
+    const next = video.cloneNode(false);
+    const url = new URL('https://www.youtube-nocookie.com/embed/' + videoId);
+    url.search = new URLSearchParams({ autoplay: '1', playsinline: '1', rel: '0',
+      cc_load_policy: '1', enablejsapi: '1', mute: muted ? '1' : '0',
+      controls: muted ? '0' : '1', origin: location.origin }).toString();
+    if (start > 0) url.searchParams.set('start', String(Math.floor(start)));
+    next.src = url.href;
+    next.hidden = false;
+    next.addEventListener('load', () => {
+      next.contentWindow.postMessage(JSON.stringify({ event: 'listening', id: 1, channel: 'widget' }), url.origin);
+    });
+    video.replaceWith(next);
+    video = next;
+    lastTime = null;
+    playerState = -1;
+    one('.demo-cover').hidden = true;
+    soundButton.hidden = !muted;
+    demo.dataset.state = muted ? 'muted' : 'on';
+    if (!muted) video.focus({ preventScroll: true });
+  }
   function playDemo(event) {
     event.preventDefault();
-    if (!video.getAttribute('src')) {
-      video.poster = video.dataset.poster;
-      video.src = video.dataset.src;
-      const captions = video.querySelector('track');
-      captions.src = captions.dataset.src;
-      one('.demo-cover').hidden = true;
-      video.hidden = false;
-      video.load();
-    }
-    video.focus({ preventScroll: true });
-    video.play().catch(() => { /* Native controls remain available. */ });
+    mountDemo(false, currentTime);
   }
   all('[data-play-demo]').forEach((button) => button.addEventListener('click', playDemo));
-  video.addEventListener('play', () => {
-    if (!demoStarted) { track('demo_started'); demoStarted = true; }
-  });
-  video.addEventListener('timeupdate', () => {
-    if (!video.duration || !Number.isFinite(video.duration)) return;
-    let watched = 0;
-    for (let i = 0; i < video.played.length; i++) watched += video.played.end(i) - video.played.start(i);
-    const progress = watched / video.duration * 100;
-    [25, 50, 75].forEach((percent) => {
-      if (progress >= percent && !milestones.has(percent)) {
-        milestones.add(percent); track('demo_progress', { percent });
+  soundButton.addEventListener('click', playDemo);
+  window.addEventListener('message', (event) => {
+    if (event.source !== video.contentWindow || event.origin !== 'https://www.youtube-nocookie.com' || typeof event.data !== 'string') return;
+    let data;
+    try { data = JSON.parse(event.data); } catch (_) { return; }
+    const info = data.info && typeof data.info === 'object' ? data.info : {};
+    if (Number.isFinite(info.playerState)) playerState = info.playerState;
+    if (data.event === 'onStateChange' && Number.isFinite(data.info)) playerState = data.info;
+    if (playerState === 1 && !demoStarted) { track('demo_started'); demoStarted = true; }
+    if (Number.isFinite(info.currentTime)) {
+      currentTime = info.currentTime;
+      const delta = currentTime - lastTime;
+      if (playerState === 1 && lastTime !== null && delta > 0 && delta <= 2) watchedRanges.push([lastTime, currentTime]);
+      lastTime = currentTime;
+    }
+    if (Number.isFinite(info.duration) && info.duration > 0) {
+      const progress = watchedSeconds() / info.duration * 100;
+      [25, 50, 75].forEach((percent) => {
+        if (progress >= percent && !milestones.has(percent)) {
+          milestones.add(percent); track('demo_progress', { percent });
+        }
+      });
+      if (playerState === 0 && progress >= 90 && !milestones.has(100)) {
+        milestones.add(100); track('demo_completed');
       }
-    });
+    }
   });
-  video.addEventListener('ended', () => {
-    let watched = 0;
-    for (let i = 0; i < video.played.length; i++) watched += video.played.end(i) - video.played.start(i);
-    if (watched >= video.duration * 0.9 && !milestones.has(100)) { milestones.add(100); track('demo_completed'); }
-  });
+  // Respect reduced motion; otherwise start silently and let a user gesture enable sound.
+  if (!reduced.matches) mountDemo(true);
   one('a[href="#transcript"]').addEventListener('click', () => {
     one('#transcript details').open = true;
   });
