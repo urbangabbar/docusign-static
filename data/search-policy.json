@@ -1,0 +1,20 @@
+{
+  "baseUrl": "https://lcbridge.app",
+  "property": "sc-domain:lcbridge.app",
+  "internalPaths": {
+    "404.html": "Error page, not a search destination",
+    "brand/*": "Internal brand reference",
+    "output/*": "Private audit evidence and working files",
+    "docs/*": "Internal engineering documentation",
+    "scripts/*": "Maintenance tools",
+    "data/*": "Internal product facts and publishing policy",
+    "skills/*": "Agent maintenance instructions",
+    "blog-drafts/*": "Unpublished drafts",
+    "Claude outputs/*": "Working drafts",
+    "_site/*": "Generated build output",
+    "node_modules/*": "Build dependencies",
+    "vendor/*": "Build dependencies",
+    ".*": "Repository and local tooling metadata"
+  },
+  "aiCrawlers": ["GPTBot", "OAI-SearchBot", "ChatGPT-User", "ClaudeBot", "Claude-SearchBot", "Claude-User", "PerplexityBot", "Perplexity-User", "Google-Extended"]
+}

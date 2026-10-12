@@ -18,3 +18,5 @@ docusign-pillar-*.png
 /output/
 /docs/
 /Claude outputs/
+__pycache__/
+_site/

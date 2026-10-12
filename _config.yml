@@ -4,6 +4,10 @@
 # Note: setting `exclude` REPLACES Jekyll's default list, so the defaults are
 # repeated here.
 exclude:
+  - AGENTS.md
+  - skills/
+  - data/
+  - brand/
   - HANDOFF.md
   - HIGHLEVEL_DEVELOPMENT.md
   - .sass-cache/
