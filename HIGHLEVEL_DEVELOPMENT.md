@@ -6,50 +6,30 @@ Conversion: qualified project-fit conversations, followed by proposals and won v
 
 ## Project inquiry form
 
-`#inquiry-form` now contains a custom HTML form, handled by
-`assets/project-inquiry.js`. Required: full name, email, project description.
-Company is optional. Button: “Send project brief”. An email fallback remains.
+`#inquiry-form` contains the user-supplied native HighLevel form,
+“Custom Dev | Discuss your project”, ID `clx0Tvu6Bdx27ZtZRnQg`.
+The iframe uses the supplied widget URL, layout and cookie-consent attributes.
+HighLevel's official `form_embed.js` handles iframe resizing. The wrapper reserves
+723 pixels while loading and permits the form to grow at narrower widths.
+An email fallback remains below the embed.
 
-The account-specific External Tracking script was copied from the signed-in
-**LC Bridge** subaccount (`flpYHSWVNQelGFMZvj48`) → Settings → External Tracking.
-The public tracking ID is `tk_164784dde1924bafbe68a7a157d77220`; it is not an API
-credential. The script loads only after a valid inquiry submission. Its standard
-form capture retains page and campaign attribution, including unmapped fields.
-No CRM credentials or direct authenticated API calls are added to the website.
+Fields, validation, consent and confirmation are configured in HighLevel.
+The old custom HTML form and `assets/project-inquiry.js` adapter are retired;
+this page no longer loads the External Tracking capture script. Verify native
+form submissions and follow-up workflows against this new form ID rather than
+the former External Forms identifier `lcbridge-custom-development`.
 
-The form ID is `lcbridge-custom-development`. HighLevel uses this identifier for
-External Forms and workflow filters. Keep inquiry follow-up separate from
-marketing subscriptions; this form grants no newsletter/SMS opt-in.
-
-The vendor currently provides no success callback. A narrowly scoped fetch
-observer detects successful HTTP acknowledgement of this form's vendor-generated
-submission without changing its payload, transport, or retries. Invalid submit
-button clicks are blocked before vendor capture. Repeated submissions are blocked
-while sending. Errors preserve the brief; no success message appears before an
-acknowledgement. A delayed response keeps the form locked to avoid duplicates.
-Maintain this adapter if the vendor changes its endpoint, event schema, or retry
-count (currently four attempts). HTTP acceptance does not by itself establish that
-CRM contact mapping or downstream workflows succeeded.
-
-Verify external-form field mapping in HighLevel and exclude the clearly labelled
-`lcbridge-form-test-20261012@example.com` test inquiry from pipeline reporting.
-Production attribution should be rechecked after deployment on lcbridge.app;
-localhost test attribution is not a production landing-page source.
-
-Verified on October 12, 2026: a valid local test received the success message,
-and HighLevel External Forms recorded one inquiry containing full name, email,
-company, the complete project description, timezone and page URL. Name/email
-were mapped to the contact; company also appeared as Business Name. The brief
-is retained as external submission data. Empty forms did not load the tracker.
-Blocking the script showed the connection error and preserved the entered brief.
+Earlier test inquiries (12 October 2026) belong to the retired external form
+and do not verify this replacement. Keep clearly labelled test inquiries out
+of pipeline reporting.
 
 ## Measurement
 
 The shared analytics adapter is present, with no GA4 measurement ID configured.
-The inquiry code records only allowlisted form-start, error, and HTTP-acceptance
-events. No field values or inferred CRM conversions enter analytics. Transmission
-uses the shared consent-controlled adapter; no GA4 ID is configured.
-Use confirmed HighLevel submissions and CRM stages as the conversion source of truth. Establish a baseline before setting rate targets.
+CTA clicks remain intent signals. The website does not inspect cross-origin form
+fields or infer submissions from iframe loads. Use confirmed native HighLevel
+submissions and CRM stages as the conversion source of truth. Establish a baseline
+before setting rate targets and verify native-form attribution in HighLevel.
 
 Monthly, review Search Console impressions/clicks and relevant commercial queries;
 software-vendor versus agency inquiries; fit conversations; proposals; and won
@@ -194,3 +174,15 @@ software-vendor inquiries, fit conversations, proposals and won value.
 Track agencies separately. Use repeated, consistent prompts for future AI
 citation/recommendation measurement; no cross-engine visibility baseline has
 been measured here.
+
+## Native form replacement and indexing monitor — 12 October 2026
+
+The supplied native form replaces the custom submission adapter. Canonical,
+service/FAQ schema, sitemap and public copy remain unchanged. The live robots.txt
+already allows public crawling and references https://lcbridge.app/sitemap.xml.
+
+Heartbeat `monitor-lc-bridge-page-indexing` checks the exact service URL through
+GSC Wizard, property `sc-domain:lcbridge.app`, every six hours. It stays quiet
+while unchanged, reports confirmed indexing or actionable failures, and pauses
+itself after confirmation. Latest inspection reports “URL is unknown to Google”,
+with no last crawl or Google-selected canonical; indexing is not confirmed.

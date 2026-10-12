@@ -131,21 +131,8 @@
     .dev-contact p{font-size:14px;margin:16px 0 24px}
     .dev-contact .dev-email{display:block;margin-top:15px;font-size:13px;overflow-wrap:anywhere}
     .dev-contact iframe{width:100%;border:0;display:block}
-    .dev-form{display:grid;gap:18px;margin-top:24px}
-    .dev-field label{display:block;font-size:14px;font-weight:600;margin-bottom:8px}
-    .dev-field label span{font-weight:400;color:var(--dev-muted)}
-    .dev-field input,.dev-field textarea{display:block;box-sizing:border-box;width:100%;min-height:48px;padding:12px 14px;border:1px solid #BAC4D7;border-radius:8px;background:#fff;color:var(--lcb-ink);font:inherit;font-size:16px;line-height:1.5}
-    .dev-field textarea{min-height:140px;resize:vertical}
-    .dev-field input:focus,.dev-field textarea:focus{border-color:var(--lcb-primary)}
-    .dev-field input:disabled,.dev-field textarea:disabled{opacity:.7}
-    .dev-contact .dev-form-note{font-size:12px;line-height:1.6;margin:0}
-    .dev-form .lcb-btn{min-height:48px;justify-content:center;cursor:pointer;font:inherit;font-size:14px;font-weight:600}
-    .dev-form .lcb-btn:disabled{opacity:.65;cursor:wait}
-    .dev-contact .dev-form-status{font-size:14px;margin:0;line-height:1.6}
-    .dev-form-status[data-state="error"]{color:#9F2424}
-    .dev-form-status[data-state="success"]{color:#17633E;background:#EFFAF3;padding:16px;border-radius:8px}
-    .dev-form-status:empty{display:none}
-    .dev-field .dev-field-help{font-size:12px;line-height:1.5;margin:7px 0 0;color:var(--dev-muted)}
+    .dev-form-embed{min-height:723px;margin-top:24px}
+    .dev-form-embed iframe{min-height:723px}
     @media(max-width:640px){.dev-example{padding:16px 16px 54px;gap:8px}.dev-example strong{font-size:15px}.dev-example blockquote{font-size:12px;padding:10px}.dev-example p{display:none}.dev-work-cta .lcb-btn{width:100%;justify-content:center}}
     .dev-contact [hidden]{display:none!important}
     .dev-footer{background:#080B16;color:#BAC4D7;padding:36px 0}
@@ -413,15 +400,28 @@
       <div><span class="dev-kicker">Let’s build</span><h2 id="inquiry-heading">Tell us what you want to build.</h2><p>Send a few sentences about your product and the HighLevel experience you want to create. We’ll review your brief and follow up with questions and a suggested next step.</p></div>
       <div class="dev-contact" id="inquiry-form">
         <h3>Share your project with our team.</h3>
-        <form class="dev-form" id="lcbridge-custom-development" name="Discuss Your Project" aria-label="Discuss your project" aria-describedby="project-form-note" method="post" action="/highlevel-development/#inquiry-form">
-          <div class="dev-field"><label for="project-name">Full name</label><input id="project-name" name="full_name" autocomplete="name" required maxlength="120"></div>
-          <div class="dev-field"><label for="project-email">Email</label><input id="project-email" name="email" type="email" autocomplete="email" required maxlength="254"></div>
-          <div class="dev-field"><label for="project-company">Company <span>(optional)</span></label><input id="project-company" name="company_name" autocomplete="organization" maxlength="160"></div>
-          <div class="dev-field"><label for="project-description">What would you like to build?</label><textarea id="project-description" name="project_description" aria-describedby="project-description-help" required maxlength="5000" placeholder="Tell us about your product and what you want it to do in HighLevel."></textarea><p class="dev-field-help" id="project-description-help">A few sentences are enough to get started.</p></div>
-          <p class="dev-form-note" id="project-form-note">Your details and page attribution are sent to our CRM so we can review your project and follow up.</p>
-          <button class="lcb-btn lcb-btn--primary" type="submit" disabled>Send project brief <span aria-hidden="true">→</span></button>
-          <p class="dev-form-status" id="project-form-status" role="status" aria-live="polite" aria-atomic="true"></p>
-        </form>
+        <div class="dev-form-embed">
+          <iframe
+            src="https://api.leadconnectorhq.com/widget/form/clx0Tvu6Bdx27ZtZRnQg"
+            style="width:100%;height:100%;border:none;border-radius:8px"
+            id="inline-clx0Tvu6Bdx27ZtZRnQg"
+            data-layout="{'id':'INLINE'}"
+            data-trigger-type="alwaysShow"
+            data-trigger-value=""
+            data-activation-type="alwaysActivated"
+            data-activation-value=""
+            data-deactivation-type="neverDeactivate"
+            data-deactivation-value=""
+            data-form-name="Custom Dev | Discuss your project"
+            data-height="723"
+            data-layout-iframe-id="inline-clx0Tvu6Bdx27ZtZRnQg"
+            data-form-id="clx0Tvu6Bdx27ZtZRnQg"
+            data-cookie-consent="true"
+            data-cookie-consent-provider="auto"
+            title="Custom Dev | Discuss your project"
+          ></iframe>
+        </div>
+        <script src="https://link.msgsndr.com/js/form_embed.js"></script>
         <noscript><p>Please enable JavaScript to send your inquiry, or email <a class="dev-textlink" href="mailto:arun@lcbridge.app">arun@lcbridge.app</a>.</p></noscript>
         <a class="dev-email dev-textlink" href="mailto:arun@lcbridge.app">Prefer email? arun@lcbridge.app</a>
       </div>
@@ -461,6 +461,5 @@
   </script>
 <script src="/assets/analytics-config.js?v=cf89bb56" defer></script><script src="/assets/analytics.js?v=dcce6169" defer></script>
 <script src="/assets/video-player.js?v=16e5d9ef" defer></script>
-<script src="/assets/project-inquiry.js?v=e6719ddf" defer></script>
 </body>
 </html>
