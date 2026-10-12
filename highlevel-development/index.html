@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.add("has-navjs");</script>
+  <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/poppins-bold-latin.woff2" as="font" type="font/woff2" crossorigin>
   <title>HighLevel Integration &amp; Custom Development | LC Bridge</title>
   <meta name="description" content="Former HighLevel team members building custom integrations, marketplace apps, SaaS extensions, AI agents, and frontend experiences. Discuss your project.">
   <meta name="robots" content="index,follow">
@@ -51,8 +54,9 @@
     .dev-frame-bar{display:flex;gap:6px;align-items:center;padding:13px 16px;border-bottom:1px solid var(--lcb-line);color:var(--dev-muted);font-size:11px}
     .dev-frame-bar i{width:7px;height:7px;background:#CED4E1;border-radius:50%}
     .dev-frame-bar span{margin-left:6px}
-    .dev-hero-screen{overflow:hidden}
-    .dev-hero-screen img{display:block;width:100%;height:auto}
+    .dev-hero-screen{aspect-ratio:1699/926;overflow:hidden}
+    .dev-hero-screen a{display:block;height:100%}
+    .dev-hero-screen img{display:block;width:100%;height:100%;object-fit:contain}
     .dev-frame figcaption{padding:14px 16px;font-size:12px;color:var(--dev-muted);border-top:1px solid var(--lcb-line);line-height:1.5}
     .dev-section{padding:clamp(48px,6vw,72px) 0}
     .dev-section-head{max-width:710px;margin-bottom:36px}
@@ -429,7 +433,6 @@
   </div></footer>
   <script>
     // Existing site navigation behavior, with keyboard focus restored on Escape.
-    document.documentElement.classList.add('has-navjs');
     const toggle = document.querySelector('.lcb-navtoggle');
     const menu = document.getElementById('navmenu');
     const nav = toggle.closest('nav');
