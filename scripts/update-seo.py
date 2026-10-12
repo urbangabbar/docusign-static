@@ -17,7 +17,7 @@ FACTS = json.loads((ROOT / 'data/product-facts.json').read_text())
 DATE = FACTS['lastReviewed']
 ASSET_VERSIONS = {
     '/assets/' + name: hashlib.sha256((ROOT / 'assets' / name).read_bytes()).hexdigest()[:8]
-    for name in ['brand.css', 'fonts.css', 'seo-content.css', 'analytics.js', 'analytics-config.js', 'video-player.js', 'docusign-landing.css', 'docusign-landing.js', 'docusign-docs.css', 'docusign-docs.js', 'community-docs.css']
+    for name in ['brand.css', 'fonts.css', 'seo-content.css', 'analytics.js', 'analytics-config.js', 'video-player.js', 'docusign-landing.css', 'docusign-landing.js', 'docusign-docs.css', 'docusign-docs.js', 'community-docs.css', 'homepage.css', 'product-menu.js']
 }
 
 

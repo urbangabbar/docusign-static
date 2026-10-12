@@ -3,153 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HighLevel Integrations &amp; Custom Development | LC Bridge</title>
-<meta name="description" content="Connect DocuSign and community AI to HighLevel. Explore LC Bridge products, setup guides, and custom integration development for your business.">
+<title>HighLevel Products &amp; Custom Development | LC Bridge</title>
+<meta name="description" content="Build more on HighLevel with LC Bridge. Explore DocuSign Integration, Community Agents, and custom software from a team that helped build HighLevel’s APIs.">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://lcbridge.app/">
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/poppins-bold-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/fonts.css?v=2ee1d9f1">
 <link rel="stylesheet" href="/assets/brand.css?v=b0980d3f">
+<link rel="stylesheet" href="/assets/homepage.css?v=4c3bc792">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://lcbridge.app/">
-<meta property="og:title" content="HighLevel Integrations &amp; Custom Development | LC Bridge">
-<meta property="og:description" content="Connect DocuSign and community AI to HighLevel. Explore LC Bridge products, setup guides, and custom integration development for your business.">
-<meta property="og:image" content="https://lcbridge.app/assets/og-docusign.png">
+<meta property="og:title" content="Your HighLevel. More possible. | LC Bridge">
+<meta property="og:description" content="Products and custom software for HighLevel. Meet DocuSign Integration, Community Agents, and the team behind them.">
+<meta property="og:image" content="https://lcbridge.app/assets/og-lcbridge.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="LC Bridge: Your HighLevel. More possible. Products and custom development.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="HighLevel Integrations &amp; Custom Development | LC Bridge">
-<meta name="twitter:description" content="Connect DocuSign and community AI to HighLevel. Explore LC Bridge products, setup guides, and custom integration development for your business.">
-<meta name="twitter:image" content="https://lcbridge.app/assets/og-docusign.png">
-<style>
-  html{scroll-behavior:smooth;scroll-padding-top:80px}
-
-  /* ---- nav ---- */
-  .nav{position:sticky;top:0;z-index:50;background:rgba(11,17,32,.88);backdrop-filter:saturate(140%) blur(12px);-webkit-backdrop-filter:saturate(140%) blur(12px);border-bottom:1px solid rgba(255,255,255,.10)}
-  .nav-in{display:flex;align-items:center;justify-content:space-between;height:68px;gap:14px}
-  .nav .lcb-logo{color:#fff}
-  .nav .lcb-logo .wm{font-size:19px;color:#fff}
-  /* desktop row only — below 941px brand.css turns this into the dropdown panel */
-  @media(min-width:941px){.nav-links{display:flex;align-items:center;gap:26px}}
-  /* on-dark nav links: #C7CEE0 on #0B1120 measures ~9:1 — the old #9AA3B8 was 3.01:1 and failed AA */
-  .nav-links a{font-size:14.5px;font-weight:500;color:#C7CEE0}
-  .nav-links a:hover{color:#fff}
-  .nav-cta{display:flex;align-items:center;gap:10px}
-  .lcb-navtoggle{color:#fff}
-  @media(max-width:940px){.nav-links a{color:var(--lcb-ink)}.nav-links a:hover{color:var(--lcb-primary)}
-    .nav-cta .lcb-btn--ghost{display:none}}
-  /* very narrow: tighten the bar rather than drop the trial CTA */
-  @media(max-width:420px){
-    .nav .lcb-wrap{padding:0 15px}
-    .nav-cta .lcb-btn{padding:10px 13px;font-size:13.5px}
-    .nav .lcb-logo .wm{font-size:17px}
-    .lcb-navtoggle{margin-left:0;width:40px}
-  }
-
-  /* ---- hero ---- */
-  /* Cobalt on the dark hero measures 2.6:1. Same light cobalt the dark
-     manifesto panel and .lcb-section--dark already use: 7.5:1. */
-  .hero .lcb-eyebrow{color:#8E9BFF}
-  .hero .lcb-eyebrow .dot{background:#8E9BFF}
-  .hero{background:var(--lcb-dark);color:var(--lcb-on-dark);padding:clamp(56px,7vw,92px) 0 clamp(60px,7vw,96px);position:relative;overflow:hidden}
-  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(900px 420px at 78% 8%,rgba(42,65,216,.30),transparent 70%);pointer-events:none}
-  .hero-in{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,1fr);gap:clamp(30px,5vw,64px);align-items:center;position:relative}
-  .hero h1{font-family:var(--lcb-font-display);font-weight:700;letter-spacing:-.032em;line-height:1.04;font-size:clamp(2.25rem,4.7vw,3.5rem);color:#fff;margin:14px 0 0;text-wrap:balance}
-  .hero .sub{font-size:clamp(1.02rem,1.45vw,1.16rem);line-height:1.6;color:var(--lcb-on-dark-mut);margin:18px 0 0;max-width:56ch}
-  .hero .sub b{color:#fff;font-weight:600}
-  .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
-  .hero-tl{margin-top:20px;font-family:var(--lcb-font-mono);font-size:12px;color:#8E9BFF;letter-spacing:.02em}
-  @media(max-width:900px){.hero-in{grid-template-columns:1fr;gap:34px}}
-
-  /* ---- browser-chrome frame (same device as the product pages) ---- */
-  .glance{background:#fff;border:1px solid var(--lcb-line);border-radius:var(--lcb-r-lg);overflow:hidden;box-shadow:var(--lcb-shadow-lg)}
-  .glance .bar{display:flex;align-items:center;gap:7px;padding:10px 13px;background:var(--lcb-soft);border-bottom:1px solid var(--lcb-line)}
-  .glance .bar i{width:9px;height:9px;border-radius:50%;background:#D6DAE3;display:block}
-  .glance .bar .t{margin-left:8px;font-family:var(--lcb-font-mono);font-size:11px;color:var(--lcb-ink-3)}
-  .glance img{display:block;width:100%;height:auto}
-  .glance--crop{max-height:360px;overflow:hidden}
-  .glance--crop img{object-fit:cover;object-position:top left}
-
-  /* ---- proof strip ---- */
-  .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-  .fact{background:var(--lcb-canvas);border:1px solid var(--lcb-line);border-radius:var(--lcb-r-lg);padding:20px;border-top:3px solid var(--lcb-primary)}
-  .fact .n{font-family:var(--lcb-font-display);font-weight:700;font-size:1.65rem;line-height:1;letter-spacing:-.03em;color:var(--lcb-ink)}
-  .fact .l{font-size:13.5px;color:var(--lcb-ink-2);margin-top:9px;line-height:1.45}
-  .facts-note{margin-top:14px;font-size:12.5px;color:var(--lcb-ink-3)}
-  @media(max-width:860px){.facts{grid-template-columns:repeat(2,1fr)}}
-
-  /* ---- see / know / do ---- */
-  .skd{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
-  .skd-c{background:var(--lcb-canvas);border:1px solid var(--lcb-line);border-radius:var(--lcb-r-xl);overflow:hidden;box-shadow:var(--lcb-shadow-sm);display:flex;flex-direction:column}
-  .skd-c .shot{background:var(--lcb-soft);border-bottom:1px solid var(--lcb-line);height:186px;overflow:hidden}
-  .skd-c .shot img{display:block;width:100%;height:100%;object-fit:cover;object-position:top left}
-  .skd-c .body{padding:20px 22px 24px}
-  .skd-k{font-family:var(--lcb-font-mono);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--lcb-primary)}
-  .skd-c h3{font-family:var(--lcb-font-display);font-weight:700;font-size:1.08rem;letter-spacing:-.015em;margin:9px 0 8px;color:var(--lcb-ink)}
-  .skd-c p{font-size:14.5px;line-height:1.6;color:var(--lcb-ink-2);margin:0}
-  @media(max-width:900px){.skd{grid-template-columns:1fr;gap:16px}}
-
-  /* ---- the standard ---- */
-  .define{background:var(--lcb-canvas);border:1px solid var(--lcb-line);border-left:3px solid var(--lcb-primary);border-radius:var(--lcb-r-lg);padding:22px 26px;max-width:74ch;box-shadow:var(--lcb-shadow-sm)}
-  .define p{margin:0;font-size:16.5px;line-height:1.65;color:var(--lcb-ink-2)}
-  .define b{color:var(--lcb-ink)}
-  .laws{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
-  .law h3{font-family:var(--lcb-font-display);font-weight:700;font-size:1.02rem;margin:0 0 7px;color:var(--lcb-ink)}
-  .law p{font-size:14.5px;line-height:1.6;color:var(--lcb-ink-2);margin:0}
-  .law .no{display:block;margin-top:9px;font-family:var(--lcb-font-mono);font-size:11.5px;color:var(--lcb-ink-3)}
-  @media(max-width:860px){.laws{grid-template-columns:1fr}}
-
-  /* ---- brand + bill ---- */
-  .two{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px}
-  .two .lcb-card h3{font-family:var(--lcb-font-display);font-size:1.1rem;margin:0 0 9px}
-  .two .lcb-card p{font-size:14.8px;line-height:1.62;color:var(--lcb-ink-2);margin:0 0 14px}
-  .money{font-family:var(--lcb-font-mono);font-variant-numeric:tabular-nums;font-size:13px;color:var(--lcb-ink-2);border-top:1px solid var(--lcb-line);padding-top:13px;display:flex;flex-direction:column;gap:7px}
-  .money span b{color:var(--lcb-ink)}
-  @media(max-width:860px){.two{grid-template-columns:1fr}}
-
-  /* ---- roadmap row ---- */
-  .road{border:1px solid var(--lcb-line);border-radius:var(--lcb-r-xl);overflow:hidden;margin-top:28px;background:var(--lcb-canvas)}
-  .road-r{display:grid;grid-template-columns:200px minmax(0,1fr) auto;gap:20px;align-items:center;padding:20px 24px;border-bottom:1px solid var(--lcb-line)}
-  .road-r:last-child{border-bottom:0}
-  .road-n{display:flex;align-items:center;gap:10px;font-family:var(--lcb-font-display);font-weight:700;font-size:1rem;color:var(--lcb-ink)}
-  .road-r p{margin:0;font-size:14.5px;line-height:1.55;color:var(--lcb-ink-2)}
-  .st{font-family:var(--lcb-font-mono);font-size:10.5px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;padding:4px 9px;border-radius:var(--lcb-r-sm);white-space:nowrap}
-  .st.live{background:var(--lcb-ok-bg);color:var(--lcb-ok-fg);border:1px solid var(--lcb-ok-line)}
-  .st.soon{background:var(--lcb-attn-bg);color:var(--lcb-attn-fg);border:1px solid var(--lcb-attn-line)}
-  @media(max-width:820px){.road-r{grid-template-columns:1fr;gap:9px;align-items:start}}
-
-  /* ---- manifesto ---- */
-  .princ{background:var(--lcb-dark);color:var(--lcb-on-dark);border-radius:var(--lcb-r-xl);padding:clamp(32px,4.5vw,54px)}
-  .princ h2{color:#fff;text-align:center;max-width:20ch;margin:12px auto 0}
-  .princ .rules{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:34px}
-  .princ .rule{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);border-radius:var(--lcb-r-lg);padding:20px 22px}
-  .princ .rule h3{font-family:var(--lcb-font-display);font-size:1rem;color:#fff;margin:0 0 7px}
-  .princ .rule p{margin:0;font-size:14.3px;line-height:1.6;color:var(--lcb-on-dark-mut)}
-  .princ .lcb-eyebrow{justify-content:center;display:flex;color:#8E9BFF}
-  @media(max-width:800px){.princ .rules{grid-template-columns:1fr}}
-
-  /* ---- two doors ---- */
-  .doors{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
-  .door{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:var(--lcb-r-xl);padding:26px 28px}
-  .door h3{font-family:var(--lcb-font-display);font-size:1.15rem;color:#fff;margin:0 0 8px}
-  .door p{margin:0 0 18px;font-size:14.6px;line-height:1.6;color:var(--lcb-on-dark-mut)}
-  @media(max-width:800px){.doors{grid-template-columns:1fr}}
-
-  /* ---- footer ---- */
-  .ft{background:#080B16;color:var(--lcb-on-dark-mut);padding:52px 0 36px}
-  .ft-top{display:flex;justify-content:space-between;gap:34px;flex-wrap:wrap;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.08)}
-  .ft-brand{max-width:340px}.ft-brand .lcb-logo{margin-bottom:13px}
-  .ft-tag{font-size:14px;line-height:1.6}
-  .ft-links{display:flex;gap:54px;flex-wrap:wrap}
-  .ft-col .footer-heading{font-family:var(--lcb-font-mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:#fff;margin:0 0 13px;font-weight:600}
-  .ft-col a{display:block;font-size:14.5px;margin-bottom:9px;color:var(--lcb-on-dark-mut)}.ft-col a:hover{color:#fff}
-  .ft-social{display:flex;gap:12px;margin-top:14px}
-  .ft-social a{color:var(--lcb-on-dark-mut)}.ft-social a:hover{color:#fff}
-  .ft-social svg{width:20px;height:20px;display:block}
-  .ft-legal{margin-top:24px;font-size:12.5px;line-height:1.7;color:#767F94;max-width:820px}
-  .ft-bot{margin-top:14px;font-size:12.5px;color:#767F94}
-</style>
-<link rel="stylesheet" href="/assets/fonts.css?v=2ee1d9f1">
-<link rel="stylesheet" href="/assets/seo-content.css?v=56f5f1a0">
+<meta name="twitter:title" content="Your HighLevel. More possible. | LC Bridge">
+<meta name="twitter:description" content="Products and custom software for HighLevel. Meet DocuSign Integration, Community Agents, and the team behind them.">
+<meta name="twitter:image" content="https://lcbridge.app/assets/og-lcbridge.png">
 <script id="lcbridge-structured-data" type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -192,329 +69,114 @@
       "@type": "WebPage",
       "@id": "https://lcbridge.app/#webpage",
       "url": "https://lcbridge.app/",
-      "name": "HighLevel Integrations & Custom Development | LC Bridge",
-      "description": "Connect DocuSign and community AI to HighLevel. Explore LC Bridge products, setup guides, and custom integration development for your business.",
+      "name": "HighLevel Products & Custom Development | LC Bridge",
+      "description": "Build more on HighLevel with LC Bridge. Explore DocuSign Integration, Community Agents, and custom software from a team that helped build HighLevel’s APIs.",
       "isPartOf": {
         "@id": "https://lcbridge.app/#website"
       },
       "publisher": {
         "@id": "https://lcbridge.app/#organization"
       }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://lcbridge.app/#faq-schema",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does LC Bridge do?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "LC Bridge builds products and custom software for HighLevel, also known as GoHighLevel. Our available products are DocuSign Integration and Community Agents. We also build integrations, marketplace apps, SaaS extensions, AI agents, and custom frontend experiences. Learn about the company ."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which product should I start with?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Choose DocuSign Integration if your team uses HighLevel and DocuSign for agreements. Choose Community Agents for AI replies and member context in HighLevel communities, including connected GoKollab portals. Each product has its own setup guide and pricing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can my agency offer these products to clients?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, with product-specific account and branding requirements. DocuSign Agency and Scale plans support an agency-configured integration experience. Community Agents installs in the owning HighLevel sub-account, with subscription and usage billing through HighLevel. Review DocuSign plans and Community Agents billing before planning your rollout."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you build custom integrations for software companies?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We build HighLevel integrations and marketplace apps for software brands, and take on substantial agency projects. Start with a short brief about your product and the experience you want to create. We’ll discuss scope, architecture, deliverables, and support before work begins. Share your project ."
+          }
+        }
+      ]
     }
   ]
 }
 </script>
 </head>
-<body class="lcb-body">
-
-<a class="lcb-skip" href="#main" style="position:absolute;left:-9999px;top:0;background:#fff;color:var(--lcb-ink);padding:12px 18px;z-index:100;border-radius:0 0 8px 0" onfocus="this.style.left='0'" onblur="this.style.left='-9999px'">Skip to content</a>
-
-<nav class="nav" id="top"><div class="lcb-wrap nav-in">
-  <a class="lcb-logo" href="/" aria-label="LC Bridge home">
-    <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16v-4"/><path d="M21 16v-4"/><path d="M3 12c0-4 4-6 9-6s9 2 9 6"/><path d="M7 12v4"/><path d="M12 10v6"/><path d="M17 12v4"/></svg></span>
-    <span class="wm">LC Bridge</span>
-  </a>
-  <div class="nav-links" id="navmenu">
-    <a href="#depth">How it works</a>
-    <a href="/docusign-integration/">DocuSign</a>
-    <a href="/highlevel-development/">Custom Development</a>
-    <a href="/docusign-integration/pricing">Pricing</a>
-    <a href="/blog/">Guides</a>
-    <a href="/book-a-call/">Book a call</a>
-  </div>
-  <div class="nav-cta">
-    <a href="/docusign-integration/#apply" class="lcb-btn lcb-btn--trial">Start free trial</a>
-    <a href="/book-a-call/" class="lcb-btn lcb-btn--ghost">Book a call</a>
-  </div>
-  <button class="lcb-navtoggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navmenu"><span></span><span></span><span></span></button>
-</div></nav>
-
+<body class="lcb-body home-page">
+<a class="home-skip" href="#main">Skip to content</a>
+<header class="home-header" id="top"><div class="home-wrap home-nav">
+  <a class="home-brand" href="/" aria-label="LC Bridge home"><img src="/assets/lcbridge-lockup-black.svg" width="180" height="60" alt="LC Bridge"></a>
+  <nav aria-label="Main navigation"><div class="home-nav-links home-desktop-links"><a href="#products">Products</a><a href="/highlevel-development/">Custom development</a><a href="#team">Our team</a><a href="/blog/">Guides</a><a class="home-nav-call" href="/book-a-call/">Talk to us <span aria-hidden="true">↗</span></a></div><details class="home-menu site-products"><summary>Menu <span aria-hidden="true">+</span></summary><div class="home-nav-links">
+    <a href="#products">Products</a><a href="/highlevel-development/">Custom development</a><a href="#team">Our team</a><a href="/blog/">Guides</a><a class="home-nav-call" href="/book-a-call/">Talk to us <span aria-hidden="true">↗</span></a>
+  </div></details></nav>
+</div></header>
 <main id="main">
+<section class="home-hero" id="hero" aria-labelledby="hero-title"><div class="home-wrap home-hero-grid">
+  <div class="home-hero-copy"><p class="home-kicker">LC BRIDGE / BUILT FOR HIGHLEVEL</p><h1 id="hero-title">Your HighLevel.<br> <span>More possible.</span></h1><p class="home-intro">We build products and custom software that bring more of your business into HighLevel. Connected agreements. Helpful community AI. And the next thing your customers need.</p><div class="home-actions"><a class="lcb-btn lcb-btn--primary lcb-btn--lg" href="#products" data-analytics-action="product_discovery_clicked">Explore our products <span aria-hidden="true">↓</span></a><a class="home-textlink" href="/highlevel-development/" data-analytics-action="custom_development_clicked">Build with us <span aria-hidden="true">↗</span></a></div><p class="home-hero-proof">Built by a team that helped build HighLevel’s APIs.</p></div>
+  <div class="home-bridge" aria-label="Two LC Bridge products available for HighLevel">
+    <div class="home-bridge-label"><img src="/assets/lcbridge-logo.svg" alt="" width="36" height="36"><span>FROM OUR TEAM<br> TO YOUR HIGHLEVEL</span></div>
+    <a class="home-preview home-preview-doc" href="/docusign-integration/" data-analytics-action="product_selected"><div class="home-preview-head"><strong>DocuSign Integration</strong><span aria-hidden="true">↗</span></div><div class="home-preview-image"><img src="/docusign-integration/img/agreements-640.webp" alt="DocuSign agreements and signing status inside HighLevel" width="640" height="440" fetchpriority="high"></div><span class="home-preview-foot">Agreements, connected to your CRM.</span></a>
+    <a class="home-preview home-preview-ai" href="/community-agents/" data-analytics-action="product_selected"><div class="home-preview-head"><strong><img src="/assets/community-agents-logo-64.png" alt="" width="26" height="26">Community Agents</strong><span aria-hidden="true">↗</span></div><span class="home-preview-foot">AI replies. Your knowledge. Your controls.</span></a><span class="home-bridge-bottom">TWO PRODUCTS. AVAILABLE NOW.</span>
+  </div>
+</div><div class="home-wrap home-overview" aria-label="What LC Bridge builds"><span>PRODUCTS YOU CAN USE TODAY</span><span>CUSTOM SOFTWARE FOR YOUR BUSINESS</span><span>ONE PLATFORM. DEEP EXPERIENCE.</span></div></section>
 
-<!-- 1 · HERO -->
-<section class="hero"><div class="lcb-wrap hero-in">
-  <div>
-    <span class="lcb-eyebrow"><span class="dot"></span>For HighLevel agencies &amp; SaaS-mode resellers</span>
-    <h1>The capabilities your HighLevel platform is missing.</h1>
-    <p class="sub"><b>DocuSign Integration and Community Agents are available now.</b> Connect agreements to CRM records and give community members helpful AI replies. Explore each product’s setup, plans, and controls.</p>
-    <div class="hero-cta">
-      <a href="/docusign-integration/#apply" class="lcb-btn lcb-btn--trial lcb-btn--lg">Start your 14-day trial</a>
-      <a href="#depth" class="lcb-btn lcb-btn--ghost lcb-btn--lg">See how deep it goes</a>
-    </div>
-    <p class="hero-tl">14-day trial &middot; no card &middot; white-labeled &middot; installs in your sub-account</p>
-  </div>
-  <div class="glance glance--crop">
-    <div class="bar"><i></i><i></i><i></i><span class="t">Your CRM &middot; Agreements</span></div>
-    <img src="/docusign-integration/img/agreements-1952.webp" srcset="/docusign-integration/img/agreements-640.webp 640w, /docusign-integration/img/agreements-1200.webp 1200w, /docusign-integration/img/agreements-1952.webp 1952w" sizes="(max-width: 700px) calc(100vw - 48px), 840px" width="1200" height="720" alt="The agreements list inside HighLevel showing live DocuSign status pills for every contract" loading="eager" decoding="async">
-  </div>
+<section class="home-products home-section" id="products" aria-labelledby="products-title"><div class="home-wrap">
+  <div class="home-section-heading"><div><p class="home-kicker">01 / OUR PRODUCTS</p><h2 id="products-title">More capability.<br> Less work between tools.</h2></div><p>Purpose-built for the way people work in HighLevel. Explore the product, see the demo, and find the guide for your setup.</p></div>
+  <article class="home-product home-product-doc" id="depth" aria-labelledby="docusign-title">
+    <div class="home-product-copy"><div class="home-product-identity"><img src="/assets/docusign-logo.svg" alt="DocuSign" width="154" height="42"><span class="home-status">Available now</span></div><p class="home-kicker">DOCUSIGN INTEGRATION BY LC BRIDGE</p><h3 id="docusign-title">From contact<br> to contract.<br> And back.</h3><p>Send agreements with your CRM data already filled in. Track signing activity inside HighLevel and sync mapped client answers back after the agreement completes.</p><ul class="home-benefits"><li>Use your existing DocuSign templates.</li><li>Map fields and contacts for each signer.</li><li>Connect signing events to configured workflows.</li></ul><a class="lcb-btn lcb-btn--primary" href="/docusign-integration/" data-analytics-action="product_selected">Explore DocuSign Integration <span aria-hidden="true">↗</span></a><p class="home-product-terms">14-day trial · no card to start · assisted setup.<br> Your own DocuSign account is required and billed separately.</p><div class="home-resource-links"><a href="/docusign-integration/docs/">Docs &amp; guides</a><a href="/docusign-integration/pricing">Plans &amp; pricing</a></div></div>
+    <div class="home-product-media"><figure class="home-product-shot"><img src="/docusign-integration/img/agreements-1200.webp" srcset="/docusign-integration/img/agreements-640.webp 640w, /docusign-integration/img/agreements-1200.webp 1200w" sizes="(max-width: 800px) calc(100vw - 48px), 620px" alt="The DocuSign agreements list inside HighLevel, with signing statuses and agreement details" width="1200" height="825" loading="lazy"><figcaption>Inside the product / agreements &amp; signing activity</figcaption></figure>
+    <div class="home-demo" data-youtube-video="xPoWEYjnhdY" data-video-title="DocuSign Integration for HighLevel product demo"><a class="lcb-video-trigger" href="https://www.youtube.com/watch?v=xPoWEYjnhdY" aria-label="Play the 80-second DocuSign Integration demo"><img src="/assets/video/docusign-demo-thumbnail-640.webp" alt="" width="640" height="360" loading="lazy"><span class="home-demo-copy"><span class="home-play" aria-hidden="true">▶</span><strong>Watch it in action</strong><span>DocuSign demo · 80 seconds</span></span></a></div></div>
+  </article>
+  <article class="home-product home-product-ai" aria-labelledby="agents-title">
+    <div class="home-product-copy"><div class="home-product-identity"><img src="/assets/community-agents-logo-64.png" alt="" width="40" height="40"><strong>Community Agents</strong><span class="home-status">Available now</span></div><p class="home-kicker home-ai-kicker">AI FOR HIGHLEVEL COMMUNITIES</p><h3 id="agents-title">Your knowledge.<br> A more helpful<br> community.</h3><p>Give members useful AI replies grounded in the knowledge you supply. Test responses privately and decide how your agents participate.</p><ul class="home-benefits"><li>Bring FAQs, documents, and community context together.</li><li>Preview and improve replies before enabling agents.</li><li>Review Member Insights with the source conversation.</li></ul><a class="lcb-btn lcb-btn--primary" href="/community-agents/" data-analytics-action="product_selected">Explore Community Agents <span aria-hidden="true">↗</span></a><p class="home-product-terms">$47/month per HighLevel sub-account, including $47 of AI usage. Additional usage is metered at 4× provider cost and billed through HighLevel; unused allowance expires at renewal.</p><div class="home-resource-links"><a href="/community-agents/docs/">Docs &amp; setup guides</a><a href="/community-agents/pricing/">Usage &amp; billing</a></div></div>
+    <div class="home-product-media"><div class="home-community-demo" data-youtube-video="W-0UEIWMeM4" data-video-title="Community Agents for HighLevel product demo"><a class="lcb-video-trigger" href="https://www.youtube.com/watch?v=W-0UEIWMeM4" aria-label="Play the 35-second Community Agents demo"><img src="/assets/video/community-agents-demo-thumbnail-1280.webp" srcset="/assets/video/community-agents-demo-thumbnail-640.webp 640w, /assets/video/community-agents-demo-thumbnail-1280.webp 1280w" sizes="(max-width: 800px) calc(100vw - 48px), 620px" alt="Community Agents product demo: unlimited AI agents and five default agent roles" width="1280" height="731" loading="lazy"><span class="home-community-play"><span aria-hidden="true">▶</span> Play product demo</span></a></div><p class="home-demo-caption">Community Agents / 35-second product demo</p><p class="home-video-note">The recorded demo’s trial invitation predates current Marketplace pricing. See the <a href="/community-agents/pricing/">current billing details</a>.</p></div>
+  </article>
+  <aside class="home-next" id="next"><div><p class="home-kicker">IN DEVELOPMENT / GOOGLE SHEETS</p><h3>The next connection is taking shape.</h3><p>Follow our planned HighLevel and Google Sheets integration.</p></div><a class="home-textlink" href="/google-sheets-integration/">Explore the preview <span aria-hidden="true">↗</span></a></aside>
 </div></section>
 
-<!-- 2 · PROOF STRIP -->
-<section class="lcb-section lcb-section--soft"><div class="lcb-wrap">
-  <div class="facts">
-    <div class="fact"><div class="n">6</div><div class="l">native HighLevel workflow triggers fired by real signing events &mdash; not a Zap in the middle</div></div>
-    <div class="fact"><div class="n">~$1</div><div class="l">per sub-account per month at Agency scale, flat &mdash; against per-task metering</div></div>
-    <div class="fact"><div class="n">14 days</div><div class="l">free trial, no card, cancel from the dashboard</div></div>
-    <div class="fact"><div class="n">Same week</div><div class="l">typical time from first call to live in your white-labeled platform</div></div>
-  </div>
-  <p class="facts-note">These are product facts, not usage claims. We'll publish adoption numbers when we have numbers worth publishing.</p>
+<section class="home-build home-section" id="custom-development" aria-labelledby="build-title"><div class="home-wrap home-build-grid">
+  <div class="home-build-copy"><p class="home-kicker">02 / CUSTOM DEVELOPMENT</p><h2 id="build-title">Your next idea.<br> Built for<br> HighLevel.</h2><p>Our products show what we can build. We bring the same engineering experience to your software business or substantial agency project.</p><p>From the API connection to the screen your customers use, we help turn an integration idea into a working product.</p><a class="lcb-btn home-btn-white" href="/highlevel-development/" data-analytics-action="custom_development_clicked">Explore custom development <span aria-hidden="true">↗</span></a><span class="home-build-note">Scope, delivery, ownership, and support agreed for your project.</span></div>
+  <div class="home-services"><div><span>01</span><div><h3>Integrations &amp; marketplace apps</h3><p>Bring your software’s data and actions into HighLevel workflows.</p></div></div><div><span>02</span><div><h3>SaaS extensions</h3><p>Build portals, dashboards, and product features around your customers.</p></div></div><div><span>03</span><div><h3>AI agents</h3><p>Connect your knowledge and platform context with human controls.</p></div></div><div><span>04</span><div><h3>Custom frontend experiences</h3><p>Put useful tools and product actions in the screens people already use.</p></div></div><a href="/highlevel-development/#inquiry" class="home-build-inquiry" data-analytics-action="project_inquiry_clicked">Tell us what you want to build <span aria-hidden="true">↗</span></a></div>
 </div></section>
 
-<!-- 3 · SEE / KNOW / DO -->
-<section class="lcb-section" id="depth"><div class="lcb-wrap">
-  <span class="lcb-eyebrow"><span class="dot"></span>Depth, shown</span>
-  <h2 class="lcb-h2" style="max-width:20ch;margin-top:10px">Three things software has to do before it's worth installing.</h2>
-  <p class="lcb-lede" style="max-width:62ch;margin-top:14px">This is the live DocuSign integration, running inside a HighLevel sub-account. Every screen below is the real product.</p>
-  <div class="skd">
-    <div class="skd-c">
-      <div class="shot"><img src="/docusign-integration/img/agreements-1952.webp" srcset="/docusign-integration/img/agreements-640.webp 640w, /docusign-integration/img/agreements-1200.webp 1200w, /docusign-integration/img/agreements-1952.webp 1952w" sizes="(max-width: 700px) calc(100vw - 48px), 840px" width="1200" height="720" alt="The all-agreements list showing the five status pills and a status table" loading="lazy" decoding="async"></div>
-      <div class="body">
-        <span class="skd-k">See</span>
-        <h3>Status lands on the record</h3>
-        <p>Every agreement and its live state on the HighLevel contact &mdash; sent, viewed, signed, declined &mdash; without anyone opening DocuSign.</p>
-      </div>
-    </div>
-    <div class="skd-c">
-      <div class="shot"><img src="/docusign-integration/img/worklist-2492.webp" srcset="/docusign-integration/img/worklist-640.webp 640w, /docusign-integration/img/worklist-1200.webp 1200w, /docusign-integration/img/worklist-2492.webp 2492w" sizes="(max-width: 700px) calc(100vw - 48px), 840px" width="1200" height="720" alt="The worklist showing agreements that need attention with an AI summary and nudge buttons" loading="lazy" decoding="async"></div>
-      <div class="body">
-        <span class="skd-k">Know</span>
-        <h3>It tells you what's stuck, and why</h3>
-        <p>A daily worklist of the agreements needing attention &mdash; each with the reason it stalled and how long it has been sitting there.</p>
-      </div>
-    </div>
-    <div class="skd-c">
-      <div class="shot"><img src="/docusign-integration/img/nudge-940.webp" srcset="/docusign-integration/img/nudge-640.webp 640w, /docusign-integration/img/nudge-940.webp 940w" sizes="(max-width: 700px) calc(100vw - 48px), 840px" width="1200" height="720" alt="The nudge composer with a drafted message and SMS or email channel options" loading="lazy" decoding="async"></div>
-      <div class="body">
-        <span class="skd-k">Do</span>
-        <h3>It acts, from inside your CRM</h3>
-        <p>One tap drafts the reminder and sends it from your own number, logged to the conversation. Then the signature moves the deal itself.</p>
-      </div>
-    </div>
-  </div>
+<section class="home-team home-section" id="team" aria-labelledby="team-title"><div class="home-wrap home-team-grid">
+  <div class="home-team-heading"><p class="home-kicker">03 / THE PEOPLE BEHIND IT</p><h2 id="team-title">We helped build<br> the platform.<br> Now we build on it.</h2><a class="home-textlink" href="/about/">Meet LC Bridge <span aria-hidden="true">↗</span></a></div>
+  <div class="home-team-story"><p>Our team includes former HighLevel team members who helped design and build APIs used by its developer community.</p><p>That experience informs how we connect systems, build interfaces, and work with platform constraints. DocuSign Integration and Community Agents are our own products, built on that foundation.</p><div class="home-founder"><img src="/assets/arun-headshot.jpg" alt="Arun, founder of LC Bridge" width="128" height="128" loading="lazy"><div><h3>Talk to the person building it.</h3><p>Arun / Founder, LC Bridge</p><a class="home-textlink" href="/book-a-call/">Book a conversation <span aria-hidden="true">↗</span></a></div></div><p class="home-independent">LC Bridge is an independent company. Our team’s experience does not imply HighLevel affiliation or endorsement.</p></div>
 </div></section>
 
-<!-- 4 · THE STANDARD -->
-<section class="lcb-section lcb-section--soft"><div class="lcb-wrap">
-  <span class="lcb-eyebrow"><span class="dot"></span>The standard</span>
-  <h2 class="lcb-h2" style="max-width:22ch;margin-top:10px">Everything we ship has to pass the same test.</h2>
-  <div class="define" style="margin-top:22px">
-    <p>We published the test before we published the products. <b>A shallow version of this on four platforms would be worse than a deep version on one</b> &mdash; so we go one platform deep. If a thing cannot see the record, know what changed, and act on it, we don't ship it. We called it <a href="/blog/four-levels-of-integration/">the four levels of integration</a>; internally we just call it see, know, do.</p>
-  </div>
-  <div class="laws">
-    <div class="law">
-      <h3>Depth is the product</h3>
-      <p>See, know and do &mdash; or it doesn't ship. That's why we build for one platform instead of five.</p>
-      <span class="no">Level 4 or nothing</span>
-    </div>
-    <div class="law">
-      <h3>An experience that fits your agency</h3>
-      <p>Agency branding options depend on the product and plan. Confirm your logo, colours, permissions, and rollout settings during setup.</p>
-      <span class="no">Branding options depend on plan</span>
-    </div>
-    <div class="law">
-      <h3>Built for a book of sub-accounts</h3>
-      <p>Roll out across hundreds of sub-accounts and rebill at your own margin, on one flat rate rather than per task.</p>
-      <span class="no">One login is not the unit</span>
-    </div>
-  </div>
-
-  <div class="nvz">
-    <p class="nvz-cap">The same job, done at two different depths.</p>
-    <div class="nvz-grid">
-      <div class="nvz-card nvz-us">
-        <div class="nvz-h"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Built to Level 4</div>
-        <ul class="nvz-list">
-          <li>Status renders on the contact record your team already works from</li>
-          <li>Signing events fire your own native workflows</li>
-          <li>Carries your brand, because it inherits it automatically</li>
-          <li>One flat rate across every sub-account you roll it out to</li>
-        </ul>
-      </div>
-      <div class="nvz-card nvz-them">
-        <div class="nvz-h"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>Wired up with middleware</div>
-        <ul class="nvz-list">
-          <li>Capable connectors &mdash; but they run outside HighLevel</li>
-          <li>Nothing renders on the record; you go and look somewhere else</li>
-          <li>Middleware automations need their own configuration and maintenance</li>
-          <li>A scenario to rebuild for every sub-account, metered per task</li>
-        </ul>
-      </div>
-    </div>
-    <div class="nvz-more"><a class="lcb-btn lcb-btn--ghost" href="/docusign-integration/how-to-integrate">See the full breakdown</a></div>
-  </div>
+<section class="home-answers home-section" id="questions" aria-labelledby="questions-title"><div class="home-wrap home-answers-grid">
+  <div><p class="home-kicker">BEFORE YOU START</p><h2 id="questions-title">Find your<br> way in.</h2><p>Choose a product for a ready-built capability. Talk to us when your business needs something custom.</p></div>
+  <div class="home-faq"><details><summary>What does LC Bridge do?</summary><p>LC Bridge builds products and custom software for HighLevel, also known as GoHighLevel. Our available products are DocuSign Integration and Community Agents. We also build integrations, marketplace apps, SaaS extensions, AI agents, and custom frontend experiences. <a href="/about/">Learn about the company</a>.</p></details><details><summary>Which product should I start with?</summary><p>Choose <a href="/docusign-integration/">DocuSign Integration</a> if your team uses HighLevel and DocuSign for agreements. Choose <a href="/community-agents/">Community Agents</a> for AI replies and member context in HighLevel communities, including connected GoKollab portals. Each product has its own setup guide and pricing.</p></details><details><summary>Can my agency offer these products to clients?</summary><p>Yes, with product-specific account and branding requirements. DocuSign Agency and Scale plans support an agency-configured integration experience. Community Agents installs in the owning HighLevel sub-account, with subscription and usage billing through HighLevel. Review <a href="/docusign-integration/pricing">DocuSign plans</a> and <a href="/community-agents/pricing/">Community Agents billing</a> before planning your rollout.</p></details><details><summary>Do you build custom integrations for software companies?</summary><p>Yes. We build HighLevel integrations and marketplace apps for software brands, and take on substantial agency projects. Start with a short brief about your product and the experience you want to create. We’ll discuss scope, architecture, deliverables, and support before work begins. <a href="/highlevel-development/#inquiry">Share your project</a>.</p></details></div>
 </div></section>
 
-<!-- 5 · BRAND + BILL -->
-<section class="lcb-section"><div class="lcb-wrap">
-  <span class="lcb-eyebrow"><span class="dot"></span>Your brand, your bill</span>
-  <h2 class="lcb-h2" style="max-width:24ch;margin-top:10px">Build an offer around your clients’ workflow.</h2>
-  <div class="two">
-    <div class="lcb-card">
-      <h3>Agency branding is configured during setup</h3>
-      <p>Agency and Scale plans support an agency-configured DocuSign integration experience. Confirm the intended logo, colours, permissions, and rollout settings with the setup team.</p>
-      <a class="lcb-btn lcb-btn--ghost" href="/docusign-integration/docs/features/#agency-branding">Review branding requirements</a>
-    </div>
-    <div class="lcb-card">
-      <h3>Priced so you can rebill it</h3>
-      <p>DocuSign offers per-sub-account and flat-rate agency plans. Community Agents has a $47 monthly subscription with included metered AI usage; additional usage is billed separately. Review <a href="/community-agents/pricing/">Community Agents billing</a> alongside the DocuSign plans.</p>
-      <div class="money">
-        <span><b>$29</b> / mo per active sub-account</span>
-        <span><b>$249</b> / mo Agency &mdash; up to 250 sub-accounts, about $1 each</span>
-        <span><b>$497</b> / mo Scale &mdash; unlimited</span>
-      </div>
-      <p style="margin-top:14px"><a class="lcb-btn lcb-btn--ghost" href="/docusign-integration/pricing">Full pricing</a></p>
-    </div>
-  </div>
-</div></section>
-
-<!-- 6 · WHAT'S NEXT -->
-<section class="lcb-section lcb-section--soft" id="next"><div class="lcb-wrap">
-  <span class="lcb-eyebrow"><span class="dot"></span>What's next</span>
-  <h2 class="lcb-h2" style="max-width:26ch;margin-top:10px">One product live. Two more being built to the same standard.</h2>
-  <p class="lcb-lede" style="max-width:64ch;margin-top:14px">Depth is also what makes agents work &mdash; an agent can only act on what the integration exposes. That's <a href="/blog/ai-agents-need-deep-integrations/">the argument</a>. <a href="/community-agents/">Community Agents</a> is now available for HighLevel communities.</p>
-  <div class="road">
-    <div class="road-r">
-      <div class="road-n">DocuSign <span class="st live">Live</span></div>
-      <p>Send, track and chase agreements from the contact record. Priced, documented, and running in production today.</p>
-      <a class="lcb-btn lcb-btn--trial" href="/docusign-integration/#apply">Start the trial</a>
-    </div>
-    <div class="road-r">
-      <div class="road-n">Google Sheets <span class="st soon">Launching soon</span></div>
-      <p>Two-way, real-time sync between HighLevel records and your sheets &mdash; and a sheet edit that can fire a workflow.</p>
-      <a class="lcb-btn lcb-btn--ghost" href="/google-sheets-integration/">Join the Sheets waitlist</a>
-    </div>
-    <div class="road-r">
-      <div class="road-n">Community Agents <span class="st">Released</span></div>
-      <p>AI replies for HighLevel communities using supplied knowledge, private previews, and member insights with conversation evidence.</p>
-      <a class="lcb-btn lcb-btn--ghost" href="/community-agents/">Explore Community Agents</a>
-    </div>
-  </div>
-</div></section>
-
-<!-- 7 · MANIFESTO -->
-<section class="lcb-section"><div class="lcb-wrap">
-  <div class="princ">
-    <span class="lcb-eyebrow"><span class="dot"></span>What we won't do</span>
-    <h2 class="lcb-h2">Four rules we'd rather lose a deal than break.</h2>
-    <div class="rules">
-      <div class="rule"><h3>One platform, all the way down</h3><p>A shallow version of this on four platforms would be worse than a deep version on one. We're not going wide.</p></div>
-      <div class="rule"><h3>See, know, do &mdash; or we don't ship it</h3><p>If it can't read the record, tell you what changed, and act on it, it isn't finished. We'd rather ship late.</p></div>
-      <div class="rule"><h3>An experience that fits your platform</h3><p>Agency branding options depend on the product and plan. Confirm your logo, colors, permissions, and rollout settings during setup.</p></div>
-      <div class="rule"><h3>We don't build what HighLevel is about to build</h3><p>If it's on their roadmap it isn't on ours. We work the gaps they've left &mdash; and we'll tell you when a gap looks like it's closing.</p></div>
-    </div>
-  </div>
-</div></section>
-
-<!-- 8 · TWO DOORS -->
-<section class="lcb-section lcb-section--dark" id="contact"><div class="lcb-wrap">
-  <span class="lcb-eyebrow"><span class="dot"></span>Two ways in</span>
-  <h2 class="lcb-h2" style="color:#fff;max-width:24ch;margin-top:10px">Where do you sit?</h2>
-  <div class="doors">
-    <div class="door">
-      <h3>You run client sub-accounts</h3>
-      <p>Install it into a sub-account, put your brand on it, and rebill it. Fourteen days free, no card, and you can be live this week.</p>
-      <a class="lcb-btn lcb-btn--trial lcb-btn--lg" href="/docusign-integration/#apply">Start the trial</a>
-    </div>
-    <div class="door">
-      <h3>You run your own HighLevel platform</h3>
-      <p>Embed it as a feature of your product on wholesale, licence or revenue-share terms. Thirty minutes with Arun, who built it &mdash; not an SDR, not a scripted demo.</p>
-      <a class="lcb-btn lcb-btn--ghost lcb-btn--lg" href="/book-a-call/">Talk to the founder</a>
-    </div>
-  </div>
-  <div class="nvz-strip">
-    <span class="nvz-strip-lbl">DocuSign, configured for your process</span>
-    <span class="nvz-pt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>On the contact record</span>
-    <span class="nvz-pt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Fired by your workflows</span>
-    <span class="nvz-pt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>In your brand</span>
-    <span class="nvz-pt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Plans for your account scope</span>
-  </div>
-</div></section>
-
+<section class="home-contact" id="contact" aria-labelledby="contact-title"><div class="home-wrap home-contact-row"><div><p class="home-kicker">LET’S BUILD MORE</p><h2 id="contact-title">What’s next for<br> your HighLevel?</h2></div><div><a class="lcb-btn lcb-btn--primary lcb-btn--lg" href="#products" data-analytics-action="product_discovery_clicked">Find your product <span aria-hidden="true">↑</span></a><p>Have something else in mind?</p><a class="home-textlink" href="/highlevel-development/#inquiry" data-analytics-action="project_inquiry_clicked">Tell us about your project <span aria-hidden="true">↗</span></a></div></div></section>
 </main>
-
-<footer class="ft"><div class="lcb-wrap">
-  <div class="ft-top">
-    <div class="ft-brand">
-      <a class="lcb-logo" href="/" style="color:#fff"><img src="/assets/lcbridge-lockup-white.svg" alt="LC Bridge" width="180" height="60" style="height:42px;width:auto;display:block"></a>
-      <p class="ft-tag">Deep HighLevel capabilities &mdash; built to one standard, shipped under your brand.</p>
-      <div class="ft-social">
-        <a href="https://www.linkedin.com/company/lc-bridge/" target="_blank" rel="noopener" aria-label="LC Bridge on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-      </div>
-    </div>
-    <div class="ft-links">
-      <div class="ft-col"><p class="footer-heading">Products</p>
-        <a href="/docusign-integration/">DocuSign integration</a>
-        <a href="/google-sheets-integration/">Google Sheets integration</a>
-        <a href="/community-agents/">Community Agents</a>
-        <a href="/products/">All products</a>
-      </div>
-      <div class="ft-col"><p class="footer-heading">DocuSign</p>
-        <a href="/docusign-integration/pricing">Pricing</a>
-        <a href="/docusign-integration/insurance">For insurance</a>
-        <a href="/docusign-integration/real-estate">For real estate</a>
-        <a href="/docusign-integration/docs/">Documentation</a>
-      </div>
-      <div class="ft-col"><p class="footer-heading">Guides</p>
-        <a href="/blog/gohighlevel-esignature-legally-binding/">Is GHL e-sign legally binding?</a>
-        <a href="/blog/four-levels-of-integration/">The 4 levels of integration</a>
-        <a href="/blog/ai-agents-need-deep-integrations/">AI agents &amp; integration depth</a>
-        <a href="/blog/">All guides</a>
-      </div>
-      <div class="ft-col"><p class="footer-heading">Company</p>
-        <a href="/highlevel-development/">Custom Development</a>
-        <a href="mailto:arun@lcbridge.app">arun@lcbridge.app</a>
-        <a href="/book-a-call/">Book a call</a>
-      </div>
-    </div>
-  </div>
-  <p class="ft-legal">LC Bridge (Lead Connector Bridge) is an independent company &mdash; we build white-labeled capabilities that HighLevel platforms embed as their own. Our products work with HighLevel&reg;, DocuSign&reg; and Google Sheets&trade;, and we are not affiliated with, endorsed by, or sponsored by any of them. All trademarks are the property of their respective owners.</p>
-  <p class="foot-legal-links" style="margin:0 0 12px;font-size:13px;opacity:.9"><a href="/docusign-integration/pricing">Pricing</a> &middot; <a href="/docusign-integration/privacy">Privacy</a> &middot; <a href="/docusign-integration/terms">Terms</a> &middot; <a href="/docusign-integration/refund">Refund</a></p>
-  <p class="ft-bot">&copy; 2026 LC Bridge. All rights reserved.</p>
+<footer class="home-footer"><div class="home-wrap">
+  <div class="home-footer-top"><a href="/" class="home-brand" aria-label="LC Bridge home"><img src="/assets/lcbridge-lockup-white.svg" width="180" height="60" alt="LC Bridge"></a><p>Products and custom software.<br> Built for HighLevel.</p><a href="https://www.linkedin.com/company/lc-bridge/" rel="noopener" target="_blank">Follow LC Bridge <span aria-hidden="true">↗</span></a></div>
+  <div class="home-footer-links"><div><h3>Products</h3><a href="/docusign-integration/">DocuSign Integration</a><a href="/community-agents/">Community Agents</a><a href="/google-sheets-integration/">Google Sheets / in development</a><a href="/products/">All products</a></div><div><h3>Learn</h3><a href="/docusign-integration/docs/">DocuSign docs</a><a href="/community-agents/docs/">Community Agents docs</a><a href="/blog/">Guides &amp; perspectives</a></div><div><h3>Company</h3><a href="/highlevel-development/">Custom development</a><a href="/about/">About LC Bridge</a><a href="/book-a-call/">Talk to our team</a></div><div><h3>Get in touch</h3><a href="mailto:arun@lcbridge.app">arun@lcbridge.app</a><a href="mailto:support@lcbridge.app">Product support</a><a href="https://www.g2.com/sellers/lc-bridge" rel="noopener" target="_blank">LC Bridge on G2 <span aria-hidden="true">↗</span></a></div></div>
+  <div class="home-signoff" aria-hidden="true">LC BRIDGE<span>↗</span></div><div class="home-footer-legal"><p>LC Bridge is operated by GoCSM Innovations Private Limited. We are an independent company; HighLevel®, DocuSign®, and Google Sheets™ are trademarks of their respective owners and do not sponsor or endorse LC Bridge.</p><div><span>© 2026 LC Bridge</span><a href="/docusign-integration/privacy">Privacy</a><a href="/docusign-integration/terms">Terms</a></div></div>
 </div></footer>
-
-<script>
-/* Mobile nav — shared behaviour (see .lcb-navtoggle in /assets/brand.css). */
-document.documentElement.classList.add('has-navjs');
-document.querySelectorAll('.lcb-navtoggle').forEach(function(btn){
-  var menu = document.getElementById(btn.getAttribute('aria-controls'));
-  if(!menu) return;
-  var nav = btn.closest('nav'), bar = btn.parentElement;
-  /* Below 480px the bar has no room for the CTA, so a copy lives in the panel. */
-  var cta = bar.querySelector('.nav-cta');
-  if(!cta){
-    cta = Array.prototype.filter.call(bar.children, function(el){
-      return el !== menu && !menu.contains(el) && !el.contains(menu) &&
-             (el.classList.contains('lcb-btn') || el.classList.contains('btn'));
-    }).pop();
-  }
-  if(cta && !menu.querySelector('.nav-cta-mobile') && !menu.classList.contains('nav-cta-mobile')){
-    cta.classList.add('nav-bar-cta');
-    var clone = cta.cloneNode(true);
-    clone.classList.remove('nav-bar-cta');
-    clone.classList.add('nav-cta-mobile');
-    clone.removeAttribute('id');
-    clone.querySelectorAll('[id]').forEach(function(n){ n.removeAttribute('id'); });
-    /* Pin each button's own text colour: the panel's link rules would
-       otherwise repaint white-on-brand button text to body ink. */
-    var src = cta.classList.contains('lcb-btn') || cta.classList.contains('btn')
-      ? [cta] : cta.querySelectorAll('.lcb-btn,.btn');
-    var dst = clone.classList.contains('lcb-btn') || clone.classList.contains('btn')
-      ? [clone] : clone.querySelectorAll('.lcb-btn,.btn');
-    Array.prototype.forEach.call(dst, function(el, i){
-      if(src[i]) el.style.color = getComputedStyle(src[i]).color;
-    });
-    menu.appendChild(clone);
-  }
-  function setOpen(open){
-    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    menu.classList.toggle('is-open', open);
-    if(nav) nav.classList.toggle('is-navopen', open);
-  }
-  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
-  menu.addEventListener('click', function(e){ if(e.target.closest('a')) setOpen(false); });
-  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') setOpen(false); });
-});
-</script>
-<script src="/assets/analytics-config.js?v=cf89bb56" defer></script><script src="/assets/analytics.js?v=82de975e" defer></script>
+<script src="/assets/analytics-config.js?v=cf89bb56" defer></script>
+<script src="/assets/analytics.js?v=dcce6169" defer></script>
+<script src="/assets/video-player.js?v=16e5d9ef" defer></script>
+<script src="/assets/product-menu.js?v=e56d31d5" defer></script>
 </body>
 </html>
