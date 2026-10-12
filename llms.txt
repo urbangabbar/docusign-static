@@ -17,6 +17,8 @@ LC Bridge (Lead Connector Bridge), operated by GoCSM Innovations Private Limited
 
 ## Community Agents — installation, pricing and guides
 
+- [Docs and guides](https://lcbridge.app/community-agents/docs/): Browse installation, portal connection, knowledge, response controls, illustrative use cases, Member Insights, demos, and background reading.
+
 - [Pricing](https://lcbridge.app/community-agents/pricing/): $47 USD monthly per HighLevel sub-account, including $47 of AI usage per billing period. Usage is metered at 4× provider cost. Included allowance is used first and expires at renewal; additional usage is billed through the appropriate HighLevel wallet. Agency resale pricing and taxes may change the final charge.
 - [Install in HighLevel](https://community-agents.lcbridge.app/oauth/install): Install separately in each sub-account. Launch from HighLevel; no separate Community Agents signup or checkout.
 - [Setup guide](https://lcbridge.app/community-agents/how-to-add-ai-agent-highlevel-community/): Marketplace installation, member portal, dedicated AI identity, knowledge, preview, and enabled actions.

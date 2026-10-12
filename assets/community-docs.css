@@ -1,0 +1,6 @@
+/* Reuse the DocuSign learning hub's shared reading layout and local search.
+   Community Agents identity, categories and content are supplied by each page. */
+.community-docs .ds-guide-browse{margin:0 0 24px}
+.community-docs .ds-identity img{width:32px;height:32px}
+.community-docs .ds-global-nav a[aria-current]{color:var(--ds-ink)}
+.community-docs main h2[id],.community-docs main h3[id]{scroll-margin-top:24px}

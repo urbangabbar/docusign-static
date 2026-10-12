@@ -17,7 +17,7 @@ FACTS = json.loads((ROOT / 'data/product-facts.json').read_text())
 DATE = FACTS['lastReviewed']
 ASSET_VERSIONS = {
     '/assets/' + name: hashlib.sha256((ROOT / 'assets' / name).read_bytes()).hexdigest()[:8]
-    for name in ['brand.css', 'fonts.css', 'seo-content.css', 'analytics.js', 'analytics-config.js', 'video-player.js', 'docusign-landing.css', 'docusign-landing.js', 'docusign-docs.css', 'docusign-docs.js']
+    for name in ['brand.css', 'fonts.css', 'seo-content.css', 'analytics.js', 'analytics-config.js', 'video-player.js', 'docusign-landing.css', 'docusign-landing.js', 'docusign-docs.css', 'docusign-docs.js', 'community-docs.css']
 }
 
 
@@ -51,8 +51,7 @@ def application(product):
            'softwareRequirements': data['requirements'],
            'publisher': {'@id': BASE + '/#organization'},
            'softwareHelp': {'@type': 'WebPage',
-                            'url': data['url'] + ('how-to-add-ai-agent-highlevel-community/'
-                                                 if product == 'community-agents' else 'docs/'),
+                            'url': data['url'] + 'docs/',
                             'name': data['name'] + ' documentation'}}
     if product == 'docusign':
         offers = []
@@ -111,7 +110,7 @@ def update_page(path):
                'publisher': {'@id': BASE + '/#organization'}}
     graph = [ORG, {'@type': 'WebSite', '@id': BASE + '/#website', 'url': BASE + '/',
                    'name': 'LC Bridge', 'publisher': {'@id': BASE + '/#organization'}}, webpage]
-    if canonical == BASE + '/docusign-integration/docs/':
+    if canonical in [BASE + '/docusign-integration/docs/', BASE + '/community-agents/docs/']:
         # The hub is static HTML: keep schema aligned with its visible catalogue.
         resources = re.findall(r'<li\s+data-docs-resource\b[^>]*>\s*<a\s+href="([^"]+)">(.*?)</a>', source, re.S)
         webpage['@type'] = 'CollectionPage'
@@ -119,7 +118,7 @@ def update_page(path):
             catalogue_id = canonical + '#resources'
             webpage['mainEntity'] = {'@id': catalogue_id}
             graph.append({'@type': 'ItemList', '@id': catalogue_id,
-                          'name': 'DocuSign docs and guides',
+                          'name': heading,
                           'itemListElement': [{'@type': 'ListItem', 'position': i + 1,
                                                'name': plain(label), 'url': BASE + html.unescape(url)}
                                               for i, (url, label) in enumerate(resources)]})
@@ -131,6 +130,8 @@ def update_page(path):
                 crumbs.append(('Documentation', BASE + '/docusign-integration/docs/'))
         elif '/community-agents/' in canonical and canonical != BASE + '/community-agents/':
             crumbs.append(('Community Agents', BASE + '/community-agents/'))
+            if any(canonical.endswith('/' + slug + '/') for slug in ['how-to-add-ai-agent-highlevel-community', 'gokollab-ai-agents', 'knowledge-and-controls', 'member-insights']):
+                crumbs.append(('Docs & guides', BASE + '/community-agents/docs/'))
         elif '/blog/' in canonical and canonical != BASE + '/blog/':
             crumbs.append(('Blog', BASE + '/blog/'))
         crumbs.append((heading, canonical))
@@ -149,7 +150,7 @@ def update_page(path):
         if canonical == root_url:
             graph.append(video(product))
             webpage['video'] = {'@id': root_url + '#video'}
-    article_page = '/blog/' in canonical and canonical != BASE + '/blog/' or '/docs/' in canonical and not canonical.endswith('/docs/') or product == 'community-agents' and canonical != FACTS[product]['url'] and not canonical.endswith('/pricing/')
+    article_page = '/blog/' in canonical and canonical != BASE + '/blog/' or '/docs/' in canonical and not canonical.endswith('/docs/') or product == 'community-agents' and canonical != FACTS[product]['url'] and not canonical.endswith(('/pricing/', '/docs/'))
     if article_page:
         old = next((n for n in prior if n.get('@type') in ['BlogPosting', 'Article', 'TechArticle']), {})
         article = {'@type': 'BlogPosting' if '/blog/' in canonical else 'TechArticle',

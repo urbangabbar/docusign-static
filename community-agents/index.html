@@ -185,7 +185,9 @@
     @media(max-width:1000px){.ca-nav-inner{grid-template-columns:minmax(0,1fr) auto}}
     @media(max-width:700px){.ca-brand{gap:7px}.ca-brand .name{font-size:14px}.ca-nav .lcb-btn{font-size:11px;padding:10px}.ca-nav-inner{gap:8px}}
     @media(max-width:380px){.ca-nav .lcb-btn{display:inline-flex}.ca-brand .name{font-size:12px}.ca-brand img{width:28px;height:28px}}
-    </style>
+
+.ca-nav-inner{display:grid;grid-template-columns:minmax(0,1fr) auto auto auto}.ca-brand .name{white-space:normal;overflow-wrap:normal}.ca-docs-link{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:8px 6px;font-size:14px;font-weight:600;color:var(--lcb-primary);text-decoration:underline;text-underline-offset:3px}.ca-docs-link:focus-visible{outline:3px solid var(--lcb-primary);outline-offset:3px}@media(max-width:1000px){.ca-nav-inner{grid-template-columns:minmax(0,1fr) auto auto}}.ca-pillar h3[id],#ca-video-screen{scroll-margin-top:100px}
+</style>
 <link rel="stylesheet" href="/assets/fonts.css?v=2ee1d9f1">
 <link rel="stylesheet" href="/assets/seo-content.css?v=56f5f1a0">
 <script src="https://community-agents.lcbridge.app/meta-pixel.js" defer></script>
@@ -281,7 +283,7 @@
       },
       "softwareHelp": {
         "@type": "WebPage",
-        "url": "https://lcbridge.app/community-agents/how-to-add-ai-agent-highlevel-community/",
+        "url": "https://lcbridge.app/community-agents/docs/",
         "name": "Community Agents by LC Bridge documentation"
       },
       "offers": {
@@ -364,7 +366,7 @@
       <img src="/assets/community-agents-logo-128.png" alt="" width="36" height="36">
       <span class="name">Community Agents</span><span class="by">by LC Bridge</span>
     </a>
-    <div class="ca-nav-links"><a href="#benefits">Benefits</a><a href="#how-it-works">How it works</a><a href="#insights">Member Insights</a><a href="/community-agents/pricing/">Pricing</a><a href="#faq">FAQ</a></div>
+    <a class="ca-docs-link" href="/community-agents/docs/">Docs</a><div class="ca-nav-links"><a href="#benefits">Benefits</a><a href="#how-it-works">How it works</a><a href="#insights">Member Insights</a><a href="/community-agents/pricing/">Pricing</a><a href="#faq">FAQ</a></div>
     <a class="lcb-btn lcb-btn--primary" href="https://community-agents.lcbridge.app/oauth/install">Install <span aria-hidden="true">↗</span></a>
   </div></nav>
 
@@ -393,9 +395,9 @@
     <section class="ca-section" id="benefits"><div class="lcb-wrap">
       <div class="ca-section-head"><span class="lcb-eyebrow"><span class="dot"></span>What it helps you do</span><h2>Give members support. See what needs your attention.</h2><p>Member-facing agents handle useful conversations. Member Insights helps your team recognize when a personal follow-up may matter.</p></div>
       <div class="ca-pillar-grid">
-        <article class="ca-pillar"><span class="ca-pillar-number">01</span><h3>Help members get answers</h3><p>Use the knowledge you provide to help answer recurring questions where members ask them.</p><div class="ca-example"><small>Illustrative conversation</small><blockquote>Member: “Where do I start?”</blockquote><blockquote class="ca-example-answer"><strong>AI answer desk:</strong> “Start with the getting-started lesson. Tell me which step you’re on and I’ll point you to the right part.”</blockquote></div></article>
-        <article class="ca-pillar"><span class="ca-pillar-number">02</span><h3>Keep conversations going</h3><p>Welcome introductions and acknowledge wins with replies that refer to what a member actually shared.</p><div class="ca-example"><small>Illustrative conversation</small><blockquote>Member: “I’m building my first campaign.”</blockquote><blockquote class="ca-example-answer"><strong>AI host:</strong> “Welcome. Which part of the campaign are you working on first?”</blockquote></div></article>
-        <article class="ca-pillar"><span class="ca-pillar-number">03</span><h3>Spot buying interest</h3><p>See when a member asks about your offer, along with the conversation behind a suggested follow-up.</p><div class="ca-example"><small>Illustrative member insight</small><blockquote>Member: “Does the paid program include setup help?”</blockquote><blockquote class="ca-example-answer"><strong>Member Insights:</strong> “Possible interest in paid help. Review this question before following up.”</blockquote></div></article>
+        <article class="ca-pillar"><span class="ca-pillar-number">01</span><h3 id="answer-questions">Help members get answers</h3><p>Use the knowledge you provide to help answer recurring questions where members ask them.</p><div class="ca-example"><small>Illustrative conversation</small><blockquote>Member: “Where do I start?”</blockquote><blockquote class="ca-example-answer"><strong>AI answer desk:</strong> “Start with the getting-started lesson. Tell me which step you’re on and I’ll point you to the right part.”</blockquote></div></article>
+        <article class="ca-pillar"><span class="ca-pillar-number">02</span><h3 id="welcome-members">Keep conversations going</h3><p>Welcome introductions and acknowledge wins with replies that refer to what a member actually shared.</p><div class="ca-example"><small>Illustrative conversation</small><blockquote>Member: “I’m building my first campaign.”</blockquote><blockquote class="ca-example-answer"><strong>AI host:</strong> “Welcome. Which part of the campaign are you working on first?”</blockquote></div></article>
+        <article class="ca-pillar"><span class="ca-pillar-number">03</span><h3 id="buying-interest">Spot buying interest</h3><p>See when a member asks about your offer, along with the conversation behind a suggested follow-up.</p><div class="ca-example"><small>Illustrative member insight</small><blockquote>Member: “Does the paid program include setup help?”</blockquote><blockquote class="ca-example-answer"><strong>Member Insights:</strong> “Possible interest in paid help. Review this question before following up.”</blockquote></div></article>
       </div>
       <p class="ca-examples-note">Examples are illustrative, not screenshots or real member conversations.</p>
     </div></section>
@@ -423,7 +425,7 @@
     <section class="ca-section"><div class="lcb-wrap">
       <div class="ca-section-head"><span class="lcb-eyebrow"><span class="dot"></span>Setup guides</span><h2>Get your first agent ready.</h2><p>Connect through your HighLevel community portal, then configure an AI identity, knowledge, and response settings.</p></div>
       <div class="ca-setup"><a href="/community-agents/how-to-add-ai-agent-highlevel-community/"><strong>HighLevel community setup ↗</strong><span>Follow the portal connection, identity, knowledge, and testing steps.</span></a><a href="/community-agents/gokollab-ai-agents/"><strong>Using GoKollab? ↗</strong><span>Check your connected HighLevel portal and member access before setup.</span></a></div>
-    <p class="seo-note"><a class="seo-link" href="/community-agents/knowledge-and-controls/">Knowledge and response controls</a> · <a class="seo-link" href="/community-agents/member-insights/">Review Member Insights</a></p></div></section>
+    <p><a class="seo-link" href="/community-agents/docs/">Browse all Community Agents docs and guides →</a></p><p class="seo-note"><a class="seo-link" href="/community-agents/knowledge-and-controls/">Knowledge and response controls</a> · <a class="seo-link" href="/community-agents/member-insights/">Review Member Insights</a></p></div></section>
 
     <section class="ca-section ca-section--soft" id="pricing"><div class="lcb-wrap"><div class="ca-section-head"><span class="lcb-eyebrow"><span class="dot"></span>Community Agents pricing</span><h2>$47/month per HighLevel sub-account.</h2><p>The subscription includes $47 of AI usage each billing period. Included credit expires at renewal. Additional usage is metered at 4× provider cost and billed through your HighLevel wallet. Agency resale pricing and taxes can affect your final bill.</p><p><a class="seo-link" href="/community-agents/pricing/">See included usage, overage, and billing details →</a></p></div></div></section>
 <section class="ca-section ca-section--soft" id="faq"><div class="lcb-wrap ca-faq">
@@ -439,7 +441,7 @@
   <details class="seo-transcript" id="transcript"><summary>Read the recorded Community Agents demo transcript</summary><p class="seo-note">English, auto-generated captions from the 35-second demo published 9 October 2026. Caption wording is preserved. The closing free-trial invitation predates current Marketplace billing; use the <a href="/community-agents/pricing/">current pricing</a> and <a href="/community-agents/how-to-add-ai-agent-highlevel-community/">installation guide</a>.</p><ol><li><span>0:00</span> Still answering the same community</li><li><span>0:01</span> questions?</li><li><span>0:03</span> Meet community agents for your</li><li><span>0:04</span> communities.</li><li><span>0:06</span> Answer from entire frequently asked</li><li><span>0:07</span> questions, collections, documents, and</li><li><span>0:10</span> your community history.</li><li><span>0:12</span> Welcome members with relevant replies.</li><li><span>0:16</span> Spot buying interest with the</li><li><span>0:17</span> conversation behind it.</li><li><span>0:21</span> Test replies privately.</li><li><span>0:24</span> Review and improve them.</li><li><span>0:27</span> Go live only when you&#x27;re confident.</li><li><span>0:28</span> You&#x27;re in control.</li><li><span>0:30</span> Try community agents in your community</li><li><span>0:32</span> for free today.</li></ol></details>
 </main>
 
-  <footer class="ca-footer"><div class="lcb-wrap ca-footer-inner"><div><a href="../" aria-label="LC Bridge home"><img src="../assets/lcbridge-lockup-white.svg" alt="LC Bridge" width="142" height="48"></a><p>Community Agents is built by LC Bridge (Lead Connector Bridge). It works with HighLevel® and is not affiliated with, endorsed by, or sponsored by HighLevel.</p></div><div class="ca-footer-links"><a href="../docusign-integration/">DocuSign integration</a><a href="../google-sheets-integration/">Google Sheets integration</a><a href="/community-agents/pricing/">Pricing</a><a href="/community-agents/how-to-add-ai-agent-highlevel-community/">Setup</a><a href="/about/">About LC Bridge</a><a href="../book-a-call/">Book a call</a></div></div></footer>
+  <footer class="ca-footer"><div class="lcb-wrap ca-footer-inner"><div><a href="../" aria-label="LC Bridge home"><img src="../assets/lcbridge-lockup-white.svg" alt="LC Bridge" width="142" height="48"></a><p>Community Agents is built by LC Bridge (Lead Connector Bridge). It works with HighLevel® and is not affiliated with, endorsed by, or sponsored by HighLevel.</p></div><div class="ca-footer-links"><a href="/community-agents/docs/">Docs &amp; guides</a><a href="../docusign-integration/">DocuSign integration</a><a href="../google-sheets-integration/">Google Sheets integration</a><a href="/community-agents/pricing/">Pricing</a><a href="/community-agents/how-to-add-ai-agent-highlevel-community/">Setup</a><a href="/about/">About LC Bridge</a><a href="../book-a-call/">Book a call</a></div></div></footer>
   <div class="ca-mobile-cta"><a class="lcb-btn lcb-btn--primary" href="https://community-agents.lcbridge.app/oauth/install">Install in HighLevel <span aria-hidden="true">↗</span></a></div>
 
 <script src="/assets/analytics-config.js?v=cf89bb56" defer></script><script src="/assets/analytics.js?v=82de975e" defer></script>
