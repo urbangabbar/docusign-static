@@ -180,6 +180,20 @@ def update_page(path):
                               'acceptedAnswer': {'@type': 'Answer', 'text': answer}})
     if questions:
         graph.append({'@type': 'FAQPage', '@id': canonical + '#faq-schema', 'mainEntity': questions})
+    if canonical == BASE + '/highlevel-development/':
+        # Preserve the authored service identity on future site-wide refreshes.
+        service = next((n for n in prior if n.get('@type') == 'Service'
+                        and n.get('url') == canonical), None)
+        if service:
+            graph.append(service)
+            webpage['mainEntity'] = {'@id': service['@id']}
+        authored_page = next((n for n in prior if n.get('@id') == canonical + '#webpage'), {})
+        for field in ['inLanguage', 'dateModified', 'primaryImageOfPage']:
+            if field in authored_page:
+                webpage[field] = authored_page[field]
+        for node in graph:
+            if node.get('@type') == 'FAQPage':
+                node['isPartOf'] = {'@id': webpage['@id']}
     for node in prior:
         if node.get('@type') == 'DefinedTermSet':
             graph.append(node)
