@@ -3,45 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GoHighLevel Integrations: The Complete Guide (Native, White-Label) | LC Bridge</title>
-<meta name="description" content="What GoHighLevel integrations are, how to tell a native one from a Zapier bolt-on, and every integration LC Bridge builds for the HighLevel CRM — in one guide.">
+<title>HighLevel Integrations: A Practical Guide | LC Bridge</title>
+<meta name="description" content="Understand HighLevel integrations, middleware tradeoffs, and LC Bridge products. Explore DocuSign, community AI, setup guides, and account requirements.">
 <meta name="author" content="LC Bridge">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://lcbridge.app/blog/gohighlevel-integrations/">
-<link rel="stylesheet" href="/assets/brand.css">
-<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="stylesheet" href="/assets/brand.css?v=b0980d3f">
+<link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://lcbridge.app/blog/gohighlevel-integrations/">
-<meta property="og:title" content="GoHighLevel Integrations: The Complete Guide">
-<meta property="og:description" content="How to tell a native GoHighLevel integration from a Zapier bolt-on — and every integration LC Bridge builds for the HighLevel CRM.">
+<meta property="og:title" content="HighLevel Integrations: A Practical Guide | LC Bridge">
+<meta property="og:description" content="Understand HighLevel integrations, middleware tradeoffs, and LC Bridge products. Explore DocuSign, community AI, setup guides, and account requirements.">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="GoHighLevel Integrations: The Complete Guide">
-<meta name="twitter:description" content="Native vs Zapier, AI-agent readiness, and the full LC Bridge integration directory for HighLevel.">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    { "@type": "Organization", "@id": "https://lcbridge.app/#organization", "name": "LC Bridge", "legalName": "GoCSM Innovations Private Limited",
-      "alternateName": ["LCBridge", "Lead Connector Bridge", "LC Bridge (Lead Connector Bridge)"],
-      "sameAs": ["https://www.linkedin.com/company/lc-bridge/"],
-      "logo": {"@type": "ImageObject", "url": "https://lcbridge.app/assets/lcbridge-lockup-black.png"}, "url": "https://lcbridge.app/", "knowsAbout": ["GoHighLevel integrations", "HighLevel CRM", "native integrations", "white-label integrations", "LeadConnector workflows"] },
-    { "@type": "Article", "@id": "https://lcbridge.app/blog/gohighlevel-integrations/#article", "headline": "GoHighLevel Integrations: The Complete Guide", "description": "What GoHighLevel integrations are, how to tell a native one from a Zapier bolt-on, and every integration LC Bridge builds for the HighLevel CRM.", "datePublished": "2026-07-03", "dateModified": "2026-07-03", "author": { "@id": "https://lcbridge.app/#organization" }, "publisher": { "@id": "https://lcbridge.app/#organization" }, "mainEntityOfPage": "https://lcbridge.app/blog/gohighlevel-integrations/", "keywords": "GoHighLevel integrations, HighLevel integrations, native integration, white-label integration", "about": ["GoHighLevel integrations", "HighLevel CRM"] },
-    { "@type": "BreadcrumbList", "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://lcbridge.app/" },
-      { "@type": "ListItem", "position": 2, "name": "GoHighLevel Integrations", "item": "https://lcbridge.app/blog/gohighlevel-integrations/" }
-    ]},
-    { "@type": "FAQPage", "mainEntity": [
-      { "@type": "Question", "name": "What integrations does GoHighLevel support?", "acceptedAnswer": { "@type": "Answer", "text": "HighLevel connects to many tools through its API, App Marketplace, and workflow actions. LC Bridge builds deep, native integrations that install inside your sub-account — starting with DocuSign e-signature and Google Sheets sync." } },
-      { "@type": "Question", "name": "What's the best way to integrate a tool with GoHighLevel?", "acceptedAnswer": { "@type": "Answer", "text": "A native integration that runs inside HighLevel and writes data and actions onto the contact record — rather than a Zapier-style one-way sync that only copies fields between separate apps." } },
-      { "@type": "Question", "name": "Are GoHighLevel integrations white-label?", "acceptedAnswer": { "@type": "Answer", "text": "LC Bridge integrations are fully white-label: they inherit your HighLevel branding so your clients see your platform, not a third-party add-on." } },
-      { "@type": "Question", "name": "Can agencies resell integrations to their sub-accounts?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Agencies can roll out LC Bridge integrations across client sub-accounts as a white-labeled offering — a new revenue line for HighLevel SaaS-mode resellers." } }
-    ]}
-  ]
-}
-</script>
+<meta name="twitter:title" content="HighLevel Integrations: A Practical Guide | LC Bridge">
+<meta name="twitter:description" content="Understand HighLevel integrations, middleware tradeoffs, and LC Bridge products. Explore DocuSign, community AI, setup guides, and account requirements.">
 
 <style>
   html{scroll-behavior:smooth;scroll-padding-top:80px}
@@ -121,11 +98,158 @@
   .ft-brand{max-width:340px} .ft-brand .lcb-logo{margin-bottom:13px}
   .ft-tag{font-size:14px;line-height:1.6}
   .ft-links{display:flex;gap:54px;flex-wrap:wrap}
-  .ft-col h4{font-family:var(--lcb-font-mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:#fff;margin:0 0 13px;font-weight:600}
+  .ft-col .footer-heading{font-family:var(--lcb-font-mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:#fff;margin:0 0 13px;font-weight:600}
   .ft-col a{display:block;font-size:14.5px;margin-bottom:9px;color:var(--lcb-on-dark-mut)}.ft-col a:hover{color:#fff}
   .ft-legal{margin-top:24px;font-size:12.5px;line-height:1.7;color:#767F94;max-width:820px}
   .ft-bot{margin-top:14px;font-size:12.5px;color:#767F94}
 </style>
+<link rel="stylesheet" href="/assets/fonts.css?v=2ee1d9f1">
+<link rel="stylesheet" href="/assets/seo-content.css?v=84a79680">
+<script id="lcbridge-structured-data" type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://lcbridge.app/#organization",
+      "name": "LC Bridge",
+      "legalName": "GoCSM Innovations Private Limited",
+      "alternateName": [
+        "LCBridge",
+        "Lead Connector Bridge"
+      ],
+      "url": "https://lcbridge.app/",
+      "sameAs": [
+        "https://www.linkedin.com/company/lc-bridge/",
+        "https://www.g2.com/sellers/lc-bridge"
+      ],
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://lcbridge.app/assets/lcbridge-lockup-black.png"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "support@lcbridge.app",
+        "url": "https://lcbridge.app/about/"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://lcbridge.app/#website",
+      "url": "https://lcbridge.app/",
+      "name": "LC Bridge",
+      "publisher": {
+        "@id": "https://lcbridge.app/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://lcbridge.app/blog/gohighlevel-integrations/#webpage",
+      "url": "https://lcbridge.app/blog/gohighlevel-integrations/",
+      "name": "HighLevel Integrations: A Practical Guide | LC Bridge",
+      "description": "Understand HighLevel integrations, middleware tradeoffs, and LC Bridge products. Explore DocuSign, community AI, setup guides, and account requirements.",
+      "isPartOf": {
+        "@id": "https://lcbridge.app/#website"
+      },
+      "publisher": {
+        "@id": "https://lcbridge.app/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://lcbridge.app/blog/gohighlevel-integrations/#breadcrumbs"
+      },
+      "mainEntity": {
+        "@id": "https://lcbridge.app/blog/gohighlevel-integrations/#article"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://lcbridge.app/blog/gohighlevel-integrations/#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://lcbridge.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://lcbridge.app/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "HighLevel Integrations: A Practical Guide",
+          "item": "https://lcbridge.app/blog/gohighlevel-integrations/"
+        }
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://lcbridge.app/blog/gohighlevel-integrations/#article",
+      "headline": "HighLevel Integrations: A Practical Guide",
+      "description": "Understand HighLevel integrations, middleware tradeoffs, and LC Bridge products. Explore DocuSign, community AI, setup guides, and account requirements.",
+      "datePublished": "2026-07-03",
+      "dateModified": "2026-10-12",
+      "mainEntityOfPage": {
+        "@id": "https://lcbridge.app/blog/gohighlevel-integrations/#webpage"
+      },
+      "author": {
+        "@type": "Organization",
+        "@id": "https://lcbridge.app/#organization",
+        "name": "LC Bridge",
+        "url": "https://lcbridge.app/about/#editorial-team"
+      },
+      "publisher": {
+        "@id": "https://lcbridge.app/#organization"
+      },
+      "image": [
+        "https://lcbridge.app/assets/og-docusign.png"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://lcbridge.app/blog/gohighlevel-integrations/#faq-schema",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What integrations does GoHighLevel support?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "HighLevel connects to many tools through its API, App Marketplace, and workflow actions. LC Bridge builds deep, native integrations that install inside your sub-account — starting with DocuSign e-signature and Google Sheets sync."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the best way to integrate a tool with GoHighLevel?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An integration that supplies the data, context, and actions your process needs. Compare embedded apps and configured middleware on interface, event coverage, maintenance, and cost. See the four levels of integration ."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are GoHighLevel integrations white-label?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "LC Bridge integrations are fully white-label: they inherit your HighLevel branding so your clients see your platform, not a third-party add-on."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can agencies resell integrations to their sub-accounts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Agencies can roll out LC Bridge integrations across client sub-accounts as a white-labeled offering — a new revenue line for HighLevel SaaS-mode resellers."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body class="lcb-body">
 
@@ -135,12 +259,13 @@
     <span class="wm">LC Bridge</span><span class="nav-by">Guides</span>
   </a>
   <div class="nav-links" id="navmenu">
-    <a href="/blog/gohighlevel-integrations/">Integrations guide</a><a href="/docusign-integration/">DocuSign</a><a href="/#contact">Contact</a>
+    <a href="/blog/gohighlevel-integrations/">Integrations guide</a><a href="/docusign-integration/">DocuSign</a><a href="/highlevel-development/">Custom Development</a><a href="/#contact">Contact</a>
   </div>
   <a href="/book-a-call/" class="lcb-btn lcb-btn--primary">Book a call</a>
 
   <button class="lcb-navtoggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navmenu"><span></span><span></span><span></span></button>
 </div></nav>
+<main id="main">
 
 <nav class="crumb lcb-wrap" aria-label="Breadcrumb"><ol>
   <li><a href="/">Home</a></li><li aria-hidden="true">/</li><li aria-current="page">GoHighLevel Integrations</li>
@@ -149,26 +274,26 @@
 <article><div class="post">
   <header class="post-head">
     <span class="lcb-eyebrow"><span class="dot"></span>Guide</span>
-    <h1 class="post-h1">GoHighLevel Integrations: The Complete Guide</h1>
-    <div class="post-meta"><span>By LC Bridge</span><span>6 min read</span><span>Updated Jul 2026</span></div>
+    <h1 class="post-h1">HighLevel Integrations: A Practical Guide</h1>
+    <div class="post-meta"><span>By <a href="/about/#editorial-team">LC Bridge editorial team</a></span><span>6 min read</span><span>Updated Jul 2026</span></div>
   </header>
 
   <div class="tldr"><span class="k">TL;DR</span>A GoHighLevel integration brings an outside tool — e-signature, payments, documents, spreadsheets — onto the contact record and into your workflows. The ones worth having are <strong>native and white-label</strong>: they run inside your sub-account, sync two-way in real time, and let workflows act — not a Zapier bolt-on that copies a field and stops.</div>
 
   <div class="prose">
-    <p>GoHighLevel (HighLevel) runs your pipeline, your messaging, and your automations. But the tools your business actually closes with often live somewhere else — DocuSign for signatures, spreadsheets for data, payment and document tools for everything after. A <strong>GoHighLevel integration</strong> is what brings those tools onto the contact record and into your LeadConnector workflows. This guide covers what that means, how to tell a real integration from a bolt-on, and every integration LC Bridge builds for the HighLevel ecosystem.</p>
+    <p>GoHighLevel (HighLevel) runs your pipeline, your messaging, and your automations. But the tools your business actually closes with often live somewhere else — DocuSign for signatures, spreadsheets for data, payment and document tools for everything after. A <strong>GoHighLevel integration</strong> is what brings those tools onto the contact record and into your LeadConnector workflows. This guide covers what that means, how to tell a real integration from a bolt-on, and LC Bridge’s product range and where it fits in the HighLevel ecosystem.</p>
 
     <h2>What is a GoHighLevel integration?</h2>
-    <p>A GoHighLevel integration connects an outside tool to your CRM so its data and actions live inside HighLevel instead of a separate tab. A deep, native integration installs into your sub-account, writes status back to the contact in real time, and lets HighLevel workflows both trigger and respond to the other tool — with no code, no Zapier, and fully white-labeled to your brand.</p>
+    <p>A GoHighLevel integration connects an outside tool to your CRM so its data and actions live inside HighLevel instead of a separate tab. An embedded integration provides its task-specific interface inside HighLevel. A configured middleware integration can also connect events and CRM actions. Review the actual data mappings, available events, permissions, and setup requirements.</p>
 
     <h2>Not all integrations are equal: the four levels</h2>
-    <p>"Integration" is a spectrum, not a yes/no. Most tools that claim to integrate with HighLevel stop at a notification or a one-way Zapier sync — the data lands as a dead field with no action attached. A true native integration passes a three-part test: it lets your CRM <strong>See</strong> live data, <strong>Know</strong> what needs doing, and <strong>Do</strong> something about it without leaving. We break the whole spectrum down in <a href="/blog/four-levels-of-integration/">The 4 Levels of CRM Integration</a>.</p>
+    <p>"Integration" is a spectrum, not a yes/no. Integration depth depends on the configured data, context, and actions. Middleware can update CRM fields and trigger actions; embedded apps also provide a task-specific interface inside HighLevel. A true native integration passes a three-part test: it lets your CRM <strong>See</strong> live data, <strong>Know</strong> what needs doing, and <strong>Do</strong> something about it without leaving. We break the whole spectrum down in <a href="/blog/four-levels-of-integration/">The 4 Levels of CRM Integration</a>.</p>
 
     <h2>Why integration depth decides AI-agent readiness</h2>
     <p>HighLevel now ships Agent Studio, an AI Agent workflow action, and an MCP server — but an AI agent can only act on the data your integrations actually write into the CRM. Shallow integrations leave your agents blind, making confident mistakes at scale. If you're planning to deploy an AI SDR or assistant, integration depth is the prerequisite — more on that in <a href="/blog/ai-agents-need-deep-integrations/">An AI Agent Can't Chase a Signature It Can't See</a>.</p>
 
     <h2>Integrations LC Bridge builds for HighLevel</h2>
-    <p>Every one is native, white-label, and installed inside your sub-account:</p>
+    <p>LC Bridge’s products connect different parts of the HighLevel ecosystem. Their account, branding, and setup requirements differ:</p>
     <div class="dir">
       <div class="lcb-card">
         <span class="lcb-badge is-completed"><span class="dot"></span>Live</span>
@@ -198,12 +323,17 @@
     </div>
 
     <h2>How we build them</h2>
-    <p>Every LC Bridge integration is native, white-label, and built for scale. It installs inside your sub-account with no code, inherits your HighLevel branding so your clients see your platform, and is architected for depth on the HighLevel API and App Marketplace. That's the difference between a bolt-on and something that feels like HighLevel shipped it.</p>
+    <p>Review each product’s installation, permissions, configuration, and branding requirements. DocuSign connects agreements to CRM records and workflows; Community Agents connects a member portal to configured AI identities and human-reviewed insights.</p>
+  </div>
+
+  <div class="prose" style="margin-top:32px">
+    <h2>Building an integration for your software?</h2>
+    <p>LC Bridge provides <a href="/highlevel-development/">HighLevel integration and custom development</a> for software brands entering the market and agencies building custom solutions. See the products we’ve shipped and discuss your project.</p>
   </div>
 
   <div class="related">
     <div class="k">Guides in this series</div>
-    <a href="/blog/four-levels-of-integration/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>The 4 Levels of CRM Integration (and Why a Zap Isn't One)</a>
+    <a href="/blog/four-levels-of-integration/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>CRM Integration Depth: Data, Context, and Actions</a>
     <a href="/blog/ai-agents-need-deep-integrations/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>An AI Agent Can't Chase a Signature It Can't See</a>
   </div>
 </div></article>
@@ -215,7 +345,7 @@
   </div>
   <div class="faqw">
     <details class="faq"><summary>What integrations does GoHighLevel support?<span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="a">HighLevel connects to many tools through its API, App Marketplace, and workflow actions. LC Bridge builds deep, native integrations that install inside your sub-account — starting with DocuSign e-signature and Google Sheets sync.</div></details>
-    <details class="faq"><summary>What's the best way to integrate a tool with GoHighLevel?<span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="a">A native integration that runs inside HighLevel and writes data and actions onto the contact record — rather than a Zapier-style one-way sync that only copies fields between separate apps. See <a href="/blog/four-levels-of-integration/">the four levels of integration</a>.</div></details>
+    <details class="faq"><summary>What's the best way to integrate a tool with GoHighLevel?<span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="a">An integration that supplies the data, context, and actions your process needs. Compare embedded apps and configured middleware on interface, event coverage, maintenance, and cost. See <a href="/blog/four-levels-of-integration/">the four levels of integration</a>.</div></details>
     <details class="faq"><summary>Are GoHighLevel integrations white-label?<span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="a">LC Bridge integrations are fully white-label: they inherit your HighLevel branding so your clients see your platform, not a third-party add-on.</div></details>
     <details class="faq"><summary>Can agencies resell integrations to their sub-accounts?<span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="a">Yes. Agencies can roll out LC Bridge integrations across client sub-accounts as a white-labeled offering — a new revenue line for HighLevel SaaS-mode resellers.</div></details>
   </div>
@@ -230,6 +360,7 @@
   </div>
 </div></section>
 
+</main>
 <footer class="ft"><div class="lcb-wrap">
   <div class="ft-top">
     <div class="ft-brand">
@@ -237,9 +368,9 @@
       <p class="ft-tag">Deep, white-labeled integrations for the HighLevel ecosystem.</p>
     </div>
     <div class="ft-links">
-      <div class="ft-col"><h4>Guides</h4><a href="/blog/gohighlevel-esignature-legally-binding/">Is GHL e-sign legally binding?</a><a href="/blog/gohighlevel-integrations/">GoHighLevel integrations</a><a href="/blog/four-levels-of-integration/">The 4 levels of integration</a><a href="/blog/ai-agents-need-deep-integrations/">AI agents &amp; integration depth</a></div>
-      <div class="ft-col"><h4>Products</h4><a href="/docusign-integration/">DocuSign integration</a><a href="/google-sheets-integration/">Google Sheets integration</a><a href="/community-agents/">Community Agents</a></div>
-      <div class="ft-col"><h4>Company</h4><a href="/">About LC Bridge</a><a href="mailto:arun@lcbridge.app">arun@lcbridge.app</a><a href="/book-a-call/">Book a call</a></div>
+      <div class="ft-col"><p class="footer-heading">Guides</p><a href="/blog/gohighlevel-esignature-legally-binding/">Is GHL e-sign legally binding?</a><a href="/blog/gohighlevel-integrations/">GoHighLevel integrations</a><a href="/blog/four-levels-of-integration/">The 4 levels of integration</a><a href="/blog/ai-agents-need-deep-integrations/">AI agents &amp; integration depth</a></div>
+      <div class="ft-col"><p class="footer-heading">Products</p><a href="/docusign-integration/">DocuSign integration</a><a href="/google-sheets-integration/">Google Sheets integration</a><a href="/community-agents/">Community Agents</a></div>
+      <div class="ft-col"><p class="footer-heading">Company</p><a href="/about/">About LC Bridge</a><a href="mailto:arun@lcbridge.app">arun@lcbridge.app</a><a href="/book-a-call/">Book a call</a></div>
     </div>
   </div>
   <p class="ft-legal">Published by LC Bridge (Lead Connector Bridge) — we build white-labeled integrations that HighLevel platforms embed as their own. An independent company that works with DocuSign&reg; and HighLevel&reg;, and is not affiliated with, endorsed by, or sponsored by either. All trademarks are the property of their respective owners.</p>
@@ -288,5 +419,6 @@ document.querySelectorAll('.lcb-navtoggle').forEach(function(btn){
   document.addEventListener('keydown', function(e){ if(e.key === 'Escape') setOpen(false); });
 });
 </script>
+<script src="/assets/analytics-config.js?v=cf89bb56" defer></script><script src="/assets/analytics.js?v=82de975e" defer></script>
 </body>
 </html>

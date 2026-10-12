@@ -5,6 +5,7 @@
 # repeated here.
 exclude:
   - HANDOFF.md
+  - HIGHLEVEL_DEVELOPMENT.md
   - .sass-cache/
   - .jekyll-cache/
   - gemfiles/
@@ -15,3 +16,9 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+
+  - output/
+  - docs/
+  - scripts/
+  - blog-drafts/
+  - Claude outputs/

@@ -1,0 +1,35 @@
+
+.seo-note{font-size:13px;line-height:1.7;color:#475467;margin:22px 0;max-width:80ch}
+.seo-link{text-decoration:underline!important;text-underline-offset:3px;color:var(--lcb-primary,#4c00ff)!important}
+.seo-wrap{max-width:900px;margin:auto;padding:40px 24px 80px;overflow-wrap:anywhere}
+.seo-wrap h1{font-size:clamp(30px,5vw,48px);line-height:1.15;margin:18px 0}
+.seo-wrap h2{font-size:clamp(23px,3vw,30px);margin:40px 0 14px;line-height:1.25}
+.seo-wrap h3{font-size:19px;margin:25px 0 10px;line-height:1.3}
+.seo-wrap p,.seo-wrap li{color:#475467;line-height:1.75;margin:0 0 16px}
+.seo-wrap a:not(.lcb-btn){color:var(--lcb-primary,#2a41d8);text-decoration:underline;text-underline-offset:3px}
+.seo-wrap ul,.seo-wrap ol{padding-left:24px}.seo-wrap li{padding-left:4px}
+.seo-byline,.seo-crumb{font-size:13px;color:#667085;margin:15px 0 28px}
+.seo-table{overflow-x:auto;max-width:100%;border:1px solid #e2e5ec;border-radius:12px;margin:22px 0}
+.seo-table table{width:100%;min-width:600px;border-collapse:collapse;text-align:left;font-size:14px}
+.seo-table th,.seo-table td{padding:14px 16px;border-bottom:1px solid #eaecf2;vertical-align:top;line-height:1.6}
+.seo-table th{background:#f5f7fa}.seo-table tr:last-child td{border-bottom:0}
+.seo-callout{padding:22px;background:#f5f3ff;border:1px solid #ddd6fe;border-radius:12px;margin:25px 0}
+.seo-callout h2{margin-top:0}.seo-callout p:last-child{margin-bottom:0}
+.seo-nav{border-bottom:1px solid #eaecf2;background:#fff}.seo-nav .lcb-wrap{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:76px}
+.seo-nav .seo-brand{display:flex;gap:10px;align-items:center;min-width:0;text-decoration:none}.seo-brand img{width:32px;height:32px}.seo-brand span{font-weight:700;font-size:16px}
+.seo-footer{background:#0b1120;padding:30px 0;color:#d7d9e4;font-size:13px}.seo-footer .lcb-wrap{display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between}.seo-footer a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+.seo-transcript{max-width:900px;margin:30px auto;padding:0 24px}.seo-transcript summary{padding:16px 0;min-height:48px;font-weight:600;cursor:pointer}.seo-transcript p{margin:12px 0;line-height:1.75}.seo-transcript ol{padding-left:24px}.seo-transcript li{margin-bottom:10px}
+.footer-heading{font-family:var(--lcb-font-mono,ui-monospace,monospace);font-size:11px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:inherit;margin:0 0 13px!important}
+@media(max-width:500px){.seo-nav .lcb-btn{font-size:11px;padding:10px 12px;white-space:nowrap}.seo-brand span{font-size:13px}.seo-nav .lcb-wrap{gap:10px}.seo-wrap{padding:28px 20px 60px}}
+.seo-skip{position:absolute;left:12px;top:8px;z-index:100;padding:12px;background:#fff;border:2px solid #2a41d8;transform:translateY(-200%)}
+.seo-skip:focus{transform:none}
+/* User-provided video artwork, preserved in full with an explicit play action. */
+.lcb-video-poster{position:absolute;inset:0;display:block;width:100%;height:100%;background:#0b1120}
+.lcb-video-poster img{display:block;width:100%;height:100%;object-fit:contain;object-position:center}
+[data-youtube-video] .lcb-video-trigger{position:absolute;inset:0;z-index:3;display:flex;align-items:flex-end;justify-content:flex-end;padding:14px;border:0;background:transparent;text-decoration:none!important;cursor:pointer}
+[data-youtube-video] .lcb-video-label{display:inline-flex;align-items:center;gap:7px;min-height:44px;padding:10px 15px;border:1px solid rgba(255,255,255,.55);border-radius:999px;background:#0b1120;color:#fff!important;font:700 14px/1.2 var(--lcb-font-text,Inter,sans-serif);box-shadow:0 4px 16px rgba(0,0,0,.3)}
+.lcb-video-label svg{width:22px;height:22px;flex:none}
+.lcb-video-trigger:hover .lcb-video-label{background:#4c00ff}
+.lcb-video-trigger:focus-visible{outline:3px solid #fff;outline-offset:-6px;box-shadow:inset 0 0 0 9px #4c00ff}
+[data-youtube-video]>iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+@media(max-width:500px){[data-youtube-video] .lcb-video-trigger{padding:9px}[data-youtube-video] .lcb-video-label{font-size:12px;padding:9px 12px}}

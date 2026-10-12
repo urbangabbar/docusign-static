@@ -5,10 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DocuSign Integration for HighLevel — for Insurance teams</title>
 <link rel="canonical" href="https://lcbridge.app/docusign-integration/insurance">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/brand.css">
+<link rel="stylesheet" href="/assets/brand.css?v=b0980d3f">
 <style>
   /* ===== DocuSign brand theme — overrides Refined Cobalt tokens on this page only ===== */
   :root{
@@ -346,7 +343,7 @@ footer{background:#0B1120;color:#9AA3B8;padding:54px 0 38px}
 .ft-wm{font-weight:800;font-size:18px;letter-spacing:-.02em}
 .ft-tag{font-size:14px;color:#9AA3B8;line-height:1.6;margin:0}
 .ft-links{display:flex;gap:56px;flex-wrap:wrap}
-.ft-col h4{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:#fff;margin:0 0 14px;font-weight:700}
+.ft-col .footer-heading{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:#fff;margin:0 0 14px;font-weight:700}
 .ft-col a{display:block;font-size:14.5px;margin-bottom:10px;color:#9AA3B8;text-decoration:none;transition:color .15s}
 .ft-col a:hover{color:#fff}
 .ft-legal{margin-top:24px;font-size:12.5px;line-height:1.7;color:#767F94;max-width:780px}
@@ -446,7 +443,7 @@ nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-f
 @media(max-width:430px){.nav-in .btn{padding:9px 12px;font-size:13px}}
 </style>
 
-<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="description" content="Give your insurance customers live DocuSign tracking inside your HighLevel platform — embedded, fully white-labeled, in your brand. A white-label integration from LC Bridge.">
@@ -456,32 +453,84 @@ nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-f
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DocuSign Integration for HighLevel — for Insurance teams">
 <meta name="twitter:description" content="Give your insurance customers live DocuSign tracking inside your HighLevel platform — embedded, fully white-labeled, in your brand. A white-label integration from LC Bridge.">
-<script type="application/ld+json">
+<link rel="stylesheet" href="/assets/fonts.css?v=2ee1d9f1">
+<link rel="stylesheet" href="/assets/seo-content.css?v=84a79680">
+<script id="lcbridge-structured-data" type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@graph":[
-    {"@type":"Organization","@id":"https://lcbridge.app/#organization","name":"LC Bridge","legalName":"GoCSM Innovations Private Limited",
-      "alternateName":["LCBridge","Lead Connector Bridge","LC Bridge (Lead Connector Bridge)"],
-      "sameAs":["https://www.linkedin.com/company/lc-bridge/"],
-      "logo":{"@type":"ImageObject","url":"https://lcbridge.app/assets/lcbridge-lockup-black.png"},"url":"https://lcbridge.app/"},
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@type":"SoftwareApplication",
-      "@id":"https://lcbridge.app/docusign-integration/insurance#app",
-      "name":"LC Bridge DocuSign Integration for HighLevel — Insurance",
-      "applicationCategory":"BusinessApplication",
-      "applicationSubCategory":"CRM Integration",
-      "operatingSystem":"Web (HighLevel / GoHighLevel CRM)",
-      "url":"https://lcbridge.app/docusign-integration/insurance",
-      "description":"White-label DocuSign e-signature integration for insurance teams running on the HighLevel (GoHighLevel) CRM. Send applications and ACORD-style forms, track signature status, and trigger workflows.",
-      "isPartOf":{"@id":"https://lcbridge.app/docusign-integration/#app"},
-      "publisher":{"@id":"https://lcbridge.app/#organization"}
+      "@type": "Organization",
+      "@id": "https://lcbridge.app/#organization",
+      "name": "LC Bridge",
+      "legalName": "GoCSM Innovations Private Limited",
+      "alternateName": [
+        "LCBridge",
+        "Lead Connector Bridge"
+      ],
+      "url": "https://lcbridge.app/",
+      "sameAs": [
+        "https://www.linkedin.com/company/lc-bridge/",
+        "https://www.g2.com/sellers/lc-bridge"
+      ],
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://lcbridge.app/assets/lcbridge-lockup-black.png"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "support@lcbridge.app",
+        "url": "https://lcbridge.app/about/"
+      }
     },
     {
-      "@type":"BreadcrumbList",
-      "itemListElement":[
-        {"@type":"ListItem","position":1,"name":"Home","item":"https://lcbridge.app/"},
-        {"@type":"ListItem","position":2,"name":"DocuSign Integration","item":"https://lcbridge.app/docusign-integration/"},
-        {"@type":"ListItem","position":3,"name":"Insurance","item":"https://lcbridge.app/docusign-integration/insurance"}
+      "@type": "WebSite",
+      "@id": "https://lcbridge.app/#website",
+      "url": "https://lcbridge.app/",
+      "name": "LC Bridge",
+      "publisher": {
+        "@id": "https://lcbridge.app/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://lcbridge.app/docusign-integration/insurance#webpage",
+      "url": "https://lcbridge.app/docusign-integration/insurance",
+      "name": "DocuSign Integration for HighLevel — for Insurance teams",
+      "description": "Give your insurance customers live DocuSign tracking inside your HighLevel platform — embedded, fully white-labeled, in your brand. A white-label integration from LC Bridge.",
+      "isPartOf": {
+        "@id": "https://lcbridge.app/#website"
+      },
+      "publisher": {
+        "@id": "https://lcbridge.app/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://lcbridge.app/docusign-integration/insurance#breadcrumbs"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://lcbridge.app/docusign-integration/insurance#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://lcbridge.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "DocuSign Integration",
+          "item": "https://lcbridge.app/docusign-integration/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "DocuSign for insurance, inside HighLevel — live tracking in your brand.",
+          "item": "https://lcbridge.app/docusign-integration/insurance"
+        }
       ]
     }
   ]
@@ -512,6 +561,7 @@ nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-f
 </ol></nav>
 
 <!-- HERO -->
+<main id="main">
 <header class="hero"><div class="wrap">
   <span class="eyebrow"><span class="dot"></span>For HighLevel platforms serving insurance</span>
   <h1>DocuSign for insurance, inside HighLevel — <span class="hl">live tracking in your brand.</span></h1>
@@ -777,7 +827,7 @@ nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-f
   <div class="sec-head">
     <span class="eyebrow"><span class="dot"></span>Built for automation</span>
     <h2>Turn every signing event into a HighLevel workflow.</h2>
-    <p>Every status change fires a native HighLevel trigger — so your customers can automate what happens next inside the workflows your platform already runs.</p>
+    <p>Every status change fires a HighLevel trigger, so your customers can automate what happens next inside the workflows your platform already runs.</p>
   </div>
   <div class="trig-grid">
     <div class="trig-card"><div class="trig-when"><span class="d" style="background:#16A34A"></span>Application signed</div><div class="ex"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Move the case forward, hand off to underwriting, and notify the team.</div></div>
@@ -785,9 +835,9 @@ nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-f
     <div class="trig-card"><div class="trig-when"><span class="d" style="background:#DC2626"></span>Application declined</div><div class="ex"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Create a task and alert the agent right away.</div></div>
     <div class="trig-card"><div class="trig-when"><span class="d" style="background:#2E90FA"></span>Application viewed</div><div class="ex"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Flag engaged applicants so an agent can call while it's hot.</div></div>
     <div class="trig-card"><div class="trig-when"><span class="d" style="background:#2E90FA"></span>Application sent</div><div class="ex"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Tag the contact and begin a 'waiting on signature' nurture.</div></div>
-    <div class="trig-card"><div class="trig-when"><span class="d" style="background:#98A2B3"></span>Application expired</div><div class="ex"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Re-send or re-engage before the case goes cold.</div></div>
+    <div class="trig-card"><div class="trig-when"><span class="d" style="background:#98A2B3"></span>Application about to expire</div><div class="ex"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Re-send or re-engage before the case goes cold.</div></div>
   </div>
-  <div class="trig-foot">Every trigger is <b>native to HighLevel</b> — so they slot straight into the workflows and snapshots your platform already ships. No Zapier in the middle.</div>
+  <div class="trig-foot">These fire inside HighLevel, so they drop straight into the workflows and snapshots your platform already ships. No Zapier in the middle. Or skip the building: <a href="/docusign-integration/workflows" style="color:var(--brand);font-weight:600">see the six pre-built workflows</a> and the emails they send.</div>
 </div></section>
 
 <!-- WHY -->
@@ -840,7 +890,7 @@ nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-f
     <div class="price-card">
       <div class="price-tag">White-label</div>
       <div style="font-size:15px;font-weight:700;color:var(--brand)">DocuSign Integration</div>
-      <div class="price-amt"><span class="big">$14</span><span class="per">/ mo per active sub-account</span></div>
+      <div class="price-amt"><span class="big">$29</span><span class="per">/ mo per active sub-account</span></div>
       <div class="price-alt">The list rate per sub-account. Rolling out across a book of them? Flat-rate Agency and Scale plans cap what you pay &mdash; <a href="/docusign-integration/pricing" style="color:inherit;text-decoration:underline">see the plans</a>.</div>
       <div class="price-list">
         <div class="li"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Real-time DocuSign status on every contact</div>
@@ -852,7 +902,7 @@ nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-f
     </div>
     <div class="price-side">
       <h3>Package it however fits your platform.</h3>
-      <p>You pay <b>$14 per active sub-account</b>, or a flat Agency or Scale rate once you are running enough of them. How you package it for your customers is up to you: bundle it into a plan, sell it as a paid add-on, or include it in a premium tier.</p>
+      <p>You pay <b>$29 per active sub-account</b>, or a flat Agency or Scale rate once you are running enough of them. How you package it for your customers is up to you: bundle it into a plan, sell it as a paid add-on, or include it in a premium tier.</p>
       <p>We'll work out the model that fits your platform — per-seat wholesale, a flat license, or revenue share. Let's figure it out together.</p>
     </div>
   </div>
@@ -867,7 +917,7 @@ nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-f
       <div class="pts">
         <div class="pt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Real-time DocuSign status on the contact record</div>
         <div class="pt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Fully white-labeled to match your platform</div>
-        <div class="pt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>$14 per active sub-account — one flat rate</div>
+        <div class="pt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>$29 per active sub-account — one flat rate</div>
         <div class="pt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>A direct line to the founders</div>
       </div>
     </div>
@@ -882,6 +932,7 @@ nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-f
   </div>
 </section>
 
+<section class="seo-wrap"><h2>Example: an application linked to a contact</h2><p>This is an illustrative workflow to adapt to your approved templates and account configuration. It is not a customer case study or a legal/compliance assessment.</p><ol><li>Use the carrier or agency-approved DocuSign template and confirm the intended signer roles.</li><li>Map the applicant’s existing contact values to prefill fields. Configure custom fields for details the applicant will supply.</li><li>Preview the agreement and recipient before sending. Confirm any disclosure or document requirements with the responsible team.</li><li>Configure follow-up timing and exception handling. Keep decline handling separate from completion.</li><li>After required signing completes, inspect the returned fields and signed-document access before advancing the opportunity.</li></ol><p>Use the <a href="/docusign-integration/docs/field-mapping/">field-mapping guide</a>, <a href="/docusign-integration/docs/multiple-signers/">multiple-signers instructions</a>, and <a href="/docusign-integration/docs/workflows/">workflow setup</a> to configure the process.</p></section></main>
 <footer><div class="wrap">
   <div class="ft-top">
     <div class="ft-brand">
@@ -890,19 +941,19 @@ nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-f
     </div>
     <div class="ft-links">
       <div class="ft-col">
-        <h4>Products</h4>
+        <p class="footer-heading">Products</p>
         <a href="/docusign-integration/">DocuSign integration</a>
         <a href="/google-sheets-integration/">Google Sheets integration</a><a href="/community-agents/">Community Agents</a>
       </div>
       <div class="ft-col">
-        <h4>DocuSign</h4>
+        <p class="footer-heading">DocuSign</p>
         <a href="/docusign-integration/insurance">For insurance</a>
         <a href="/docusign-integration/real-estate">For real estate</a>
       <a href="/docusign-integration/docs/">Documentation</a>
       </div>
       <div class="ft-col">
-        <h4>Company</h4>
-        <a href="/">About LC Bridge</a>
+        <p class="footer-heading">Company</p>
+        <a href="/about/">About LC Bridge</a>
         <a href="mailto:arun@lcbridge.app">arun@lcbridge.app</a>
         <a href="/docusign-integration/book-a-call">Book a call</a>
       </div>
@@ -957,5 +1008,6 @@ document.querySelectorAll('.lcb-navtoggle').forEach(function(btn){
   document.addEventListener('keydown', function(e){ if(e.key === 'Escape') setOpen(false); });
 });
 </script>
+<script src="/assets/analytics-config.js?v=cf89bb56" defer></script><script src="/assets/analytics.js?v=82de975e" defer></script>
 </body>
 </html>

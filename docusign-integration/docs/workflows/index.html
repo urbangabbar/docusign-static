@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Set up the contract workflows — DocuSign Integration docs | LC Bridge</title>
+<meta name="description" content="How to set up the six pre-built DocuSign workflows in HighLevel: the triggers, actions and stall types, the steps inside each workflow, merge fields, and the order to switch them on.">
+<link rel="canonical" href="https://lcbridge.app/docusign-integration/docs/workflows/">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/brand.css?v=b0980d3f">
+<style>
+  :root{
+    --ink:#0B1220; --ink-2:#475467; --ink-3:#667085; --line:#E7E9EE; --line-2:#EEF0F4;
+    --bg:#fff; --bg-soft:#F7F8FB; --bg-tint:#F5F7FF;
+    --brand:#3047C0; --brand-press:#283BA6;
+    --ai:#6938EF; --ai-bg:#F5F3FF; --ai-line:#DDD6FE; --ai-fg:#5925DC;
+    --shadow:0 1px 2px rgba(16,24,40,.05); --maxw:820px;
+  }
+  *{box-sizing:border-box}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;margin:0;background:var(--bg)}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+  nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.85);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line-2)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .brand{display:flex;align-items:center;gap:11px;text-decoration:none}
+  .by{display:inline-flex;align-items:center;gap:7px;font-size:11.5px;color:var(--ink-3);font-weight:600;text-decoration:none;white-space:nowrap}
+  .by:hover{color:var(--ink)}
+  .by .by-lock{height:18px;width:auto;display:block}
+  .by:hover .by-lock{opacity:.82}
+  .brand .for{font-weight:600;font-size:13px;color:var(--ink-3);border-left:1px solid var(--line);padding-left:11px;margin-left:3px}
+  @media(min-width:941px){.nav-links{display:flex;align-items:center;gap:6px;margin-left:auto}}
+  .ghost{color:var(--ink-2);text-decoration:none;font-weight:600;font-size:14px;padding:8px 12px;border-radius:8px}
+  .ghost:hover{background:var(--bg-soft)}
+
+  header.page{padding-top:48px;padding-bottom:8px}
+  .eyebrow{display:inline-flex;align-items:center;gap:6px;color:var(--brand);background:var(--bg-tint);font-size:12.5px;font-weight:600;padding:5px 11px;border-radius:999px}
+  .eyebrow .dot{width:6px;height:6px;background:var(--brand);border-radius:50%}
+  h1{font-size:40px;font-weight:800;letter-spacing:-.02em;margin:14px 0 6px;color:var(--ink)}
+  .subtitle{color:var(--ink-2);font-size:17px;margin:0 0 6px;max-width:64ch}
+  .updated{color:var(--ink-3);font-size:14px;margin:0}
+
+  h2{color:var(--ink);font-size:22px;font-weight:700;margin-top:40px;margin-bottom:10px;letter-spacing:-.01em;scroll-margin-top:84px}
+  h3{color:var(--ink);font-size:17px;font-weight:700;margin-top:30px;margin-bottom:6px;scroll-margin-top:84px}
+  p{color:var(--ink-2);margin:0 0 14px}
+  ul,ol{color:var(--ink-2);padding-left:22px;margin:0 0 14px}
+  li{margin:6px 0}
+  li > ul{margin:6px 0 4px}
+  strong{color:var(--ink);font-weight:600}
+  a.inline{color:var(--brand);text-decoration:none}
+  a.inline:hover{text-decoration:underline}
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;background:var(--bg-tint);color:var(--brand);padding:1px 6px;border-radius:5px;overflow-wrap:anywhere}
+
+  .toc{border:1px solid var(--line);background:var(--bg-soft);border-radius:12px;padding:18px 20px;margin:24px 0 8px}
+  .toc .toc-h{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);margin:0 0 10px}
+  .toc ol{list-style:none;padding:0;margin:0;columns:2;column-gap:28px}
+  .toc li{margin:5px 0;break-inside:avoid}
+  .toc a{color:var(--brand);text-decoration:none;font-weight:600;font-size:14px}
+  .toc a:hover{text-decoration:underline}
+
+  .callout{border:1px solid var(--line);background:var(--bg-soft);border-radius:12px;padding:18px;margin:18px 0;font-size:14.5px;color:var(--ink-2)}
+  .callout p{margin:0 0 10px}
+  .callout p:last-child{margin-bottom:0}
+  .callout .ck{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ai-fg);margin:0 0 6px}
+  .callout.tip{border-color:var(--ai-line);background:var(--ai-bg)}
+  .callout.warn{border-color:#FEC84B;background:#FFFAEB}
+  .callout.warn .ck{color:#B54708}
+
+  table{width:100%;border-collapse:collapse;margin:6px 0 18px;font-size:14.5px}
+  th,td{text-align:left;vertical-align:top;padding:11px 14px;border-bottom:1px solid var(--line-2)}
+  thead th{font-size:12px;font-weight:700;letter-spacing:.02em;color:var(--ink-3);text-transform:uppercase;border-bottom:1px solid var(--line);background:var(--bg-soft)}
+  td:first-child{color:var(--ink);font-weight:600}
+  td code{font-size:12.5px}
+
+  /* one block per workflow */
+  .wfh{display:flex;align-items:center;gap:11px}
+  .wfh .n{width:28px;height:28px;border-radius:50%;background:var(--tone,#4C00FF);color:#fff;font-size:13px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto}
+  .trig{display:flex;flex-wrap:wrap;gap:6px 18px;margin:0 0 12px;font-size:14px;color:var(--ink-3)}
+  .trig strong{font-weight:600}
+  .steps-wf li::marker{color:var(--ink-3);font-weight:600}
+
+  footer{margin-top:56px;border-top:1px solid var(--line-2);padding:28px 0 48px;font-size:13px;color:var(--ink-3)}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;align-items:center}
+  footer .flinks{display:flex;gap:18px;flex-wrap:wrap}
+  footer a{color:var(--ink-3);text-decoration:none}
+  footer a:hover{color:var(--ink-2)}
+
+  @media (max-width:720px){
+    h1{font-size:30px}
+    .toc ol{columns:1}
+    table,thead,tbody,th,td,tr{display:block}
+    thead{display:none}
+    td{border:none;padding:2px 0}
+    td:first-child{padding-top:12px}
+    tr{border-bottom:1px solid var(--line-2);padding:8px 0}
+  }
+
+  .tldr{background:var(--bg-soft);border:1px solid var(--line);border-radius:14px;padding:24px 26px;margin:30px 0 8px}
+  .tldr h2{margin:0 0 4px;font-size:1.05rem;border:0;padding:0}
+  .tldr .sub{font-size:13.5px;color:var(--ink-3);margin-bottom:18px}
+  .tldr ol{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media(max-width:780px){.tldr ol{grid-template-columns:1fr}}
+  .tldr li{background:#fff;border:1px solid var(--line);border-radius:11px;padding:16px 17px;margin:0}
+  .tldr .who{font-size:11px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;color:var(--brand);margin-bottom:8px;display:block}
+  .tldr b{display:block;font-size:14.5px;margin-bottom:5px;color:var(--ink)}
+  .tldr p{margin:0;font-size:13.5px;color:var(--ink-2);line-height:1.5}
+  .tldr .t{font-size:12px;color:var(--ink-3);margin-top:9px;display:block}
+
+  .done{display:flex;gap:11px;align-items:flex-start;background:#F0FAF4;border:1px solid #C3E9D2;
+    border-left:3px solid #0B8043;border-radius:10px;padding:13px 16px;margin:18px 0 0}
+  .done svg{width:17px;height:17px;color:#0B8043;flex:0 0 auto;margin-top:2px}
+  .done p{margin:0;font-size:14px;color:#14532D;line-height:1.5}
+  .done a{color:#0B8043;font-weight:700}
+
+@media(max-width:720px){.brand .for{display:none}}
+@media(max-width:820px){.by-txt{display:none}}
+</style>
+<link rel="stylesheet" href="/assets/fonts.css?v=2ee1d9f1">
+<link rel="stylesheet" href="/assets/seo-content.css?v=84a79680">
+<script id="lcbridge-structured-data" type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://lcbridge.app/#organization",
+      "name": "LC Bridge",
+      "legalName": "GoCSM Innovations Private Limited",
+      "alternateName": [
+        "LCBridge",
+        "Lead Connector Bridge"
+      ],
+      "url": "https://lcbridge.app/",
+      "sameAs": [
+        "https://www.linkedin.com/company/lc-bridge/",
+        "https://www.g2.com/sellers/lc-bridge"
+      ],
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://lcbridge.app/assets/lcbridge-lockup-black.png"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "support@lcbridge.app",
+        "url": "https://lcbridge.app/about/"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://lcbridge.app/#website",
+      "url": "https://lcbridge.app/",
+      "name": "LC Bridge",
+      "publisher": {
+        "@id": "https://lcbridge.app/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://lcbridge.app/docusign-integration/docs/workflows/#webpage",
+      "url": "https://lcbridge.app/docusign-integration/docs/workflows/",
+      "name": "Set up the contract workflows — DocuSign Integration docs | LC Bridge",
+      "description": "How to set up the six pre-built DocuSign workflows in HighLevel: the triggers, actions and stall types, the steps inside each workflow, merge fields, and the order to switch them on.",
+      "isPartOf": {
+        "@id": "https://lcbridge.app/#website"
+      },
+      "publisher": {
+        "@id": "https://lcbridge.app/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://lcbridge.app/docusign-integration/docs/workflows/#breadcrumbs"
+      },
+      "mainEntity": {
+        "@id": "https://lcbridge.app/docusign-integration/docs/workflows/#article"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://lcbridge.app/docusign-integration/docs/workflows/#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://lcbridge.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "DocuSign Integration",
+          "item": "https://lcbridge.app/docusign-integration/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Documentation",
+          "item": "https://lcbridge.app/docusign-integration/docs/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Set up the contract workflows",
+          "item": "https://lcbridge.app/docusign-integration/docs/workflows/"
+        }
+      ]
+    },
+    {
+      "@type": "TechArticle",
+      "@id": "https://lcbridge.app/docusign-integration/docs/workflows/#article",
+      "headline": "Set up the contract workflows",
+      "description": "How to set up the six pre-built DocuSign workflows in HighLevel: the triggers, actions and stall types, the steps inside each workflow, merge fields, and the order to switch them on.",
+      "datePublished": "2026-10-12",
+      "dateModified": "2026-10-12",
+      "mainEntityOfPage": {
+        "@id": "https://lcbridge.app/docusign-integration/docs/workflows/#webpage"
+      },
+      "author": {
+        "@type": "Organization",
+        "@id": "https://lcbridge.app/#organization",
+        "name": "LC Bridge",
+        "url": "https://lcbridge.app/about/#editorial-team"
+      },
+      "publisher": {
+        "@id": "https://lcbridge.app/#organization"
+      },
+      "image": [
+        "https://lcbridge.app/assets/og-docusign.png"
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<nav>
+  <div class="wrap">
+    <span class="brand">
+      <a href="/docusign-integration/" aria-label="Docusign Integration home"><img src="/assets/docusign-logo.svg" alt="Docusign" width="139" height="28" style="height:28px;width:auto;display:block"></a>
+      <a class="by" href="/" aria-label="LC Bridge home"><span class="by-txt">integration by</span><img src="/assets/lcbridge-lockup-black.svg" alt="LC Bridge" width="180" height="60" class="by-lock"></a>
+      <span class="for">for LeadConnector platforms</span>
+    </span>
+    <div class="nav-links" id="navmenu">
+      <a class="ghost" href="/docusign-integration/">Home</a>
+      <a class="ghost" href="/docusign-integration/privacy">Privacy</a>
+      <a class="ghost" href="/docusign-integration/terms">Terms</a>
+      <a class="ghost" href="/docusign-integration/refund">Refund</a>
+    </div>
+      <button class="lcb-navtoggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navmenu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<main class="wrap">
+  <nav aria-label="Breadcrumb" style="font-size:13px;color:var(--ink-3);margin:0 0 6px">
+    <a href="/docusign-integration/" style="color:inherit">DocuSign Integration</a>
+    <span aria-hidden="true"> / </span>
+    <a href="/docusign-integration/docs/" style="color:inherit">Docs</a>
+    <span aria-hidden="true"> / </span>
+    <span style="color:var(--ink);font-weight:600">Workflows</span>
+  </nav>
+  <header class="page">
+    <span class="eyebrow"><span class="dot"></span>Documentation</span>
+    <h1>Set up the contract workflows</h1>
+    <p class="subtitle">Six workflows come with the DocuSign Integration, saved as drafts. This guide covers what starts each one, the steps inside, and the order to switch them on. For the plain-English tour of what they do, see <a class="inline" href="/docusign-integration/workflows">the six workflows</a>.</p>
+    <p class="updated">Last updated: September 15, 2026</p>
+  </header>
+
+  <div class="tldr">
+    <h2>The short version</h2>
+    <p class="sub">Three things, in this order.</p>
+    <ol>
+      <li>
+        <span class="who">Admin &middot; once</span>
+        <b>Check who the emails come from</b>
+        <p>On each Send Email step, the From name should be the assigned user and Reply-To their email, so replies reach a person.</p>
+        <span class="t">about 5 minutes</span>
+      </li>
+      <li>
+        <span class="who">Admin &middot; once</span>
+        <b>Test with a real contract</b>
+        <p>Send one to yourself and take it through opened, stalled and signed. The email preview can&rsquo;t fill in contract fields.</p>
+        <span class="t">about 15 minutes</span>
+      </li>
+      <li>
+        <span class="who">Admin &middot; once</span>
+        <b>Switch on 2, 4 and 6</b>
+        <p>Workflow 4 follows up on quiet contracts and 6 stops it when they sign. Always switch those two on together.</p>
+        <span class="t">three clicks</span>
+      </li>
+    </ol>
+  </div>
+
+  <div class="callout">
+    <p>LCBridge is an independent third-party integration. DocuSign and LeadConnector are trademarks of their respective owners; LCBridge is not affiliated with or endorsed by them.</p>
+  </div>
+
+  <nav class="toc" aria-label="On this page">
+    <p class="toc-h">On this page</p>
+    <ol>
+      <li><a href="#included">What&rsquo;s included</a></li>
+      <li><a href="#before-you-begin">Before you begin</a></li>
+      <li><a href="#triggers">Triggers</a></li>
+      <li><a href="#actions">Actions</a></li>
+      <li><a href="#stalls">Stall types</a></li>
+      <li><a href="#workflows">The six workflows</a></li>
+      <li><a href="#merge-fields">Merge fields</a></li>
+      <li><a href="#order">Switch-on order</a></li>
+      <li><a href="#testing">Test before you switch on</a></li>
+      <li><a href="#limitations">Known limitations</a></li>
+      <li><a href="#troubleshooting">Troubleshooting</a></li>
+      <li><a href="#help">Get help</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="included">What&rsquo;s included</h2>
+  <p>Every sub-account with the integration gets:</p>
+  <ul>
+    <li><strong>Six workflows</strong> in Automation &rsaquo; Workflows, all saved as drafts. Nothing sends until you publish one.</li>
+    <li><strong>Thirteen email templates</strong> in Marketing &rsaquo; Emails &rsaquo; Templates, each named with a <code>DS &middot;</code> prefix. Eight go to customers; five are alerts for the assigned user.</li>
+    <li><strong>Four text messages</strong> already written into the workflow steps: three to customers in workflow 4, and one alert to the assigned user in workflow 5.</li>
+  </ul>
+  <p>Customer emails pull in the sub-account&rsquo;s logo, business name, address and phone when they send, and the assigned user signs them. None of them mention DocuSign or LC Bridge, so there&rsquo;s nothing to re-brand for each client.</p>
+
+  <h2 id="before-you-begin">Before you begin</h2>
+  <ol>
+    <li>The DocuSign Integration is installed and DocuSign is <strong>connected</strong> in the sub-account. <a class="inline" href="/docusign-integration/docs/getting-started/">Getting started</a> covers this.</li>
+    <li>Contracts are <strong>matched to contacts</strong>. The workflows act on the contact, so a contract still sitting in Unmatched is skipped.</li>
+    <li>Contacts have an <strong>assigned user</strong>. Every internal alert goes to that person.</li>
+    <li>The sub-account has a <strong>verified sending domain</strong>, so emails come from the business rather than a shared address.</li>
+    <li>If you&rsquo;ll use the texts in workflow 4, the sub-account&rsquo;s <strong>SMS number is registered</strong> and those contacts have agreed to receive texts. Every customer text ends with &ldquo;Reply STOP to opt out&rdquo;. Keep it.</li>
+  </ol>
+
+  <h2 id="triggers">Triggers</h2>
+  <p>The integration adds five triggers to the HighLevel workflow builder. Look for these names when you add a trigger.</p>
+  <table>
+    <thead><tr><th>Trigger</th><th>Fires when</th><th>Used in</th></tr></thead>
+    <tbody>
+      <tr><td>Agreement Sent</td><td>A contract is first sent, whether from HighLevel or straight from DocuSign</td><td>Workflow 2</td></tr>
+      <tr><td>Envelope Viewed</td><td>A signer opens the contract</td><td>Workflow 3</td></tr>
+      <tr><td>Envelope Stalled</td><td>A contract moves into one of the four <a class="inline" href="#stalls">stall types</a></td><td>Workflow 4</td></tr>
+      <tr><td>Envelope Declined</td><td>A signer declines</td><td>Workflow 5</td></tr>
+      <tr><td>Envelope Completed</td><td>Every signer has signed</td><td>Workflow 6</td></tr>
+    </tbody>
+  </table>
+  <p>Workflow 1 starts from HighLevel&rsquo;s own <strong>Pipeline Stage Changed</strong> trigger instead.</p>
+  <div class="callout">
+    <p class="ck">Note</p>
+    <p><strong>Envelope Stalled fires once each time a contract enters a stall type</strong>, not on a schedule. A contract that sits in the same stall for a week fires it once. That&rsquo;s why the follow-ups in workflow 4 are Wait steps inside a single run.</p>
+    <p>Leave trigger filters empty. A filter that doesn&rsquo;t match exactly fails silently, so branch inside the workflow instead.</p>
+  </div>
+
+  <h2 id="actions">Actions</h2>
+  <table>
+    <thead><tr><th>Action</th><th>What it does</th></tr></thead>
+    <tbody>
+      <tr><td>Send Agreement from Template</td><td>Sends a contract from a DocuSign template to the workflow&rsquo;s contact. Used in workflow 1.</td></tr>
+      <tr><td>Send Reminder</td><td>Sends DocuSign&rsquo;s own reminder, the one with the signing link. Skips contracts that are already finished or were reminded in the last day. Used in workflow 4.</td></tr>
+      <tr><td>Fetch Signed Document</td><td>Files the signed PDF on the contact record. Optional, in workflow 6.</td></tr>
+      <tr><td>Get Envelope Status</td><td>Looks up where a contract stands and changes nothing. None of the six workflows need it.</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="stalls">Stall types</h2>
+  <table>
+    <thead><tr><th>Stall type</th><th>Flagged</th><th>Value to branch on</th></tr></thead>
+    <tbody>
+      <tr><td>Sent, not opened</td><td>24 hours after sending</td><td><code>sent_unopened</code></td></tr>
+      <tr><td>Viewed, not signed</td><td>48 hours after it was opened</td><td><code>viewed_unsigned</code></td></tr>
+      <tr><td>Expiring soon</td><td>7 days before it expires</td><td><code>expiring_soon</code></td></tr>
+      <tr><td>Declined</td><td>The moment a signer declines</td><td><code>declined</code></td></tr>
+    </tbody>
+  </table>
+  <div class="callout tip">
+    <p class="ck">Tip</p>
+    <p>Branch on the stall bucket value in the right-hand column. The readable reason (&ldquo;Viewed but not signed&rdquo;) is for showing in an email, not for matching.</p>
+  </div>
+
+  <h2 id="workflows">The six workflows</h2>
+  <p>Numbered in the order a contract lives. Step names match the actions in the HighLevel workflow builder, and template names match what&rsquo;s in Marketing &rsaquo; Emails.</p>
+
+  <h3 id="w1" class="wfh" style="--tone:#4C00FF"><span class="n">1</span>Send when the deal is ready</h3>
+  <p class="trig"><span><strong>Trigger:</strong> Pipeline Stage Changed, set to your paperwork stage</span></p>
+  <ol class="steps-wf">
+    <li><strong>Send Agreement from Template.</strong> Pick the template. Leave Subject empty to use the template&rsquo;s own subject line.</li>
+    <li><strong>Send Internal Notification</strong> (email) to the assigned user, with <code>DS internal &middot; Agreement sent</code>.</li>
+  </ol>
+  <p>There&rsquo;s no customer email in this one on purpose. Sending the contract fires Agreement Sent, which runs workflow 2.</p>
+  <div class="callout">
+    <p class="ck">Note</p>
+    <p>The contract goes to the workflow&rsquo;s contact. If that contact has no email address, or a required template field is empty, the send stops with an error naming what&rsquo;s missing.</p>
+  </div>
+
+  <h3 id="w2" class="wfh" style="--tone:#175CD3"><span class="n">2</span>Make sure it lands</h3>
+  <p class="trig"><span><strong>Trigger:</strong> Agreement Sent</span><span><strong>Safe to run alone</strong></span></p>
+  <ol class="steps-wf">
+    <li><strong>Find Contact</strong> on <code>{{envelope_sent.contactId}}</code>. If it&rsquo;s empty, end.</li>
+    <li><strong>Wait</strong> 5 minutes, so DocuSign&rsquo;s own email arrives first.</li>
+    <li><strong>Send Email</strong> with <code>DS &middot; On its way</code>. Subject: <code>Your {{envelope_sent.emailSubject}} is on its way</code></li>
+  </ol>
+  <p>Don&rsquo;t add an internal alert here. This fires on every send, including the ones a rep just sent by hand.</p>
+
+  <h3 id="w3" class="wfh" style="--tone:#175CD3"><span class="n">3</span>Catch them while it&rsquo;s open</h3>
+  <p class="trig"><span><strong>Trigger:</strong> Envelope Viewed</span></p>
+  <ol class="steps-wf">
+    <li><strong>Find Contact</strong> on <code>{{envelope_viewed.contactId}}</code>.</li>
+    <li><strong>If/Else:</strong> <code>{{envelope_viewed.contactId}}</code> is not empty. If it is empty, end.</li>
+    <li><strong>Send Internal Notification</strong> (email) to the assigned user, with <code>DS internal &middot; Opened, call now</code>.</li>
+    <li><strong>Wait</strong> 30 minutes.</li>
+    <li><strong>Send Email</strong> with <code>DS &middot; Anything to walk through</code>.</li>
+  </ol>
+  <p>If they sign during the wait, workflow 6 removes them before the email goes out.</p>
+
+  <h3 id="w4" class="wfh" style="--tone:#B54708"><span class="n">4</span>Chase what stalled</h3>
+  <p class="trig"><span><strong>Trigger:</strong> Envelope Stalled</span><span><strong>Switch on with workflow 6</strong></span></p>
+  <ol class="steps-wf">
+    <li><strong>Find Contact</strong> on <code>{{envelope_stalled.contactId}}</code>. If it&rsquo;s empty, end.</li>
+    <li><strong>If/Else</strong> on <code>{{envelope_stalled.stallBucket}}</code>, with four branches:
+      <ul>
+        <li><code>sent_unopened</code>: Send Email with <code>DS &middot; Can&rsquo;t find it</code>, wait 2 days, then Send SMS.</li>
+        <li><code>viewed_unsigned</code>: Send Email with <code>DS &middot; Anything holding up</code>, wait 2 days, then Send SMS.</li>
+        <li><code>expiring_soon</code>: Send Email with <code>DS &middot; Running out of time</code>, wait 2 days, then Send SMS.</li>
+        <li><code>declined</code>: end. Workflow 5 handles declines, and without this exit the customer gets two emails about one decline.</li>
+      </ul>
+    </li>
+    <li><strong>Wait</strong> 3 days.</li>
+    <li><strong>Send Reminder.</strong> Leave Channel and the skip window empty; the default skips anyone reminded in the last day.</li>
+    <li><strong>Wait</strong> 2 days.</li>
+    <li><strong>Send Internal Notification</strong> (email) to the assigned user, with <code>DS internal &middot; Stall escalation</code>. The workflow ends here.</li>
+  </ol>
+  <div class="callout warn">
+    <p class="ck">Don&rsquo;t add a fourth message</p>
+    <p>Three automated touches, then a person. A fourth message teaches the customer that this sender can be ignored, which is the opposite of what you want on a contract.</p>
+  </div>
+
+  <h3 id="w5" class="wfh" style="--tone:#B42318"><span class="n">5</span>Save the declined deal</h3>
+  <p class="trig"><span><strong>Trigger:</strong> Envelope Declined</span></p>
+  <ol class="steps-wf">
+    <li><strong>Find Contact</strong> on <code>{{envelope_declined.contactId}}</code>. If it&rsquo;s empty, skip to step 3.</li>
+    <li><strong>Remove from Workflow:</strong> workflows 2, 3 and 4.</li>
+    <li><strong>Send Internal Notification</strong> (email) to the assigned user, with <code>DS internal &middot; Declined</code>. It includes the reason the signer typed, if they gave one.</li>
+    <li><strong>Send Internal Notification</strong> (SMS) to the assigned user.</li>
+    <li><strong>Wait</strong> 10 minutes, so the rep can call first.</li>
+    <li><strong>Send Email</strong> with <code>DS &middot; Let&rsquo;s get it right</code>.</li>
+  </ol>
+  <p>Don&rsquo;t add a step that re-sends the same contract. Nothing has changed yet, and sending an identical copy to someone who just said no rarely ends well.</p>
+
+  <h3 id="w6" class="wfh" style="--tone:#027A48"><span class="n">6</span>Close the loop when signed</h3>
+  <p class="trig"><span><strong>Trigger:</strong> Envelope Completed</span><span><strong>Switch on with workflow 4</strong></span></p>
+  <ol class="steps-wf">
+    <li><strong>Find Contact</strong> on <code>{{envelope_completed.contactId}}</code>. If it&rsquo;s empty, skip to step 5.</li>
+    <li><strong>Remove from Workflow:</strong> workflows 2, 3 and 4. This is the step that makes the whole set safe to leave running.</li>
+    <li><strong>Fetch Signed Document</strong> (optional), with Store to set to <code>contact</code>, if you want the PDF filed on the contact record.</li>
+    <li><strong>Send Email</strong> with <code>DS &middot; Signed, here&rsquo;s your copy</code>, attaching the file from <code>{{envelope_completed.documentLink}}</code>. The email links to it as well, because attachments over 20 MB are dropped.</li>
+    <li><strong>Send Internal Notification</strong> (email) to the assigned user, with <code>DS internal &middot; Completed</code>.</li>
+    <li><strong>Wait</strong> 3 days, then <strong>Send Email</strong> with <code>DS &middot; Referral ask</code>. Both steps ship switched off, because asking customers for referrals is your client&rsquo;s call.</li>
+  </ol>
+
+  <h2 id="merge-fields">Merge fields</h2>
+  <p>The integration&rsquo;s fields use the trigger as a prefix, then the field name exactly as written, capitals included: <code>{{envelope_completed.emailSubject}}</code>. HighLevel&rsquo;s own fields keep their usual format, like <code>{{contact.first_name}}</code>.</p>
+  <table>
+    <thead><tr><th>Field</th><th>What it holds</th><th>Where</th></tr></thead>
+    <tbody>
+      <tr><td><code>emailSubject</code></td><td>The contract&rsquo;s name, as it appears in DocuSign</td><td>Every trigger</td></tr>
+      <tr><td><code>documentLink</code></td><td>The signed PDF</td><td>Envelope Completed only</td></tr>
+      <tr><td><code>blockerRecipient.name</code></td><td>The person the contract is waiting on</td><td>Empty on Envelope Completed; use <code>{{contact.name}}</code> there</td></tr>
+      <tr><td><code>stallReason</code></td><td>Why it stalled, in words</td><td>Envelope Stalled</td></tr>
+      <tr><td><code>stallDays</code></td><td>Days stalled, as a bare number</td><td>Envelope Stalled</td></tr>
+      <tr><td><code>nudgeCount</code></td><td>Reminders that reached the signer</td><td>Envelope Stalled</td></tr>
+      <tr><td><code>turnaroundDays</code></td><td>Days from sent to signed</td><td>Envelope Completed</td></tr>
+      <tr><td><code>blockerRecipient.declinedReason</code></td><td>What the signer typed when declining. Can be empty.</td><td>Envelope Declined, internal alerts only</td></tr>
+    </tbody>
+  </table>
+  <div class="callout tip">
+    <p class="ck">Tip</p>
+    <p>Before editing any template, insert one field from the builder&rsquo;s merge-field picker and check the prefix matches. If it doesn&rsquo;t, it&rsquo;s a find-and-replace on the prefix, and nothing else changes.</p>
+  </div>
+  <div class="callout">
+    <p class="ck">Note</p>
+    <p><strong>Numbers go in labelled rows, not sentences.</strong> HighLevel can&rsquo;t pluralise, so &ldquo;it&rsquo;s been {{stallDays}} days&rdquo; sends as &ldquo;it&rsquo;s been 1 days&rdquo;. &ldquo;Days stalled: 1&rdquo; reads fine at any value.</p>
+    <p><strong>Dates arrive in US Central time</strong>, like <code>June 18, 2026 4:00 AM CDT</code>, whatever the sub-account&rsquo;s time zone, and HighLevel can&rsquo;t convert them. That&rsquo;s why no customer email names a date.</p>
+    <p>Don&rsquo;t use <code>opportunityValue</code> or <code>sender</code>. They&rsquo;re always 0 and empty.</p>
+  </div>
+
+  <h2 id="order">Switch-on order</h2>
+  <ol>
+    <li><strong>Workflows 4 and 6, together.</strong> Switch on 4 without 6 and people keep getting chased after they&rsquo;ve signed.</li>
+    <li><strong>Workflow 2</strong>, whenever you like. It&rsquo;s safe on its own.</li>
+    <li><strong>Workflows 3 and 5</strong>, once the team is ready to act on the alerts they send.</li>
+    <li><strong>Workflow 1</strong> last, after you&rsquo;ve confirmed the pipeline stage and the template it sends.</li>
+  </ol>
+
+  <h2 id="testing">Test before you switch on</h2>
+  <p>The email preview can&rsquo;t fill in contract fields, so it will look blank. Test with a real contract sent to yourself, and check that:</p>
+  <ul>
+    <li>every merge field shows a value, never a raw <code>{{&hellip;}}</code></li>
+    <li>the logo appears, and falls back to the business name when the sub-account has none</li>
+    <li>buttons go somewhere, and a reply lands in the rep&rsquo;s inbox</li>
+    <li>the business address is in the footer</li>
+  </ul>
+  <p>Three cases worth trying on purpose: a contract that isn&rsquo;t matched to any contact, a decline with no reason typed, and a contract signed the same day it was sent.</p>
+  <div class="done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><p><b>You&rsquo;re done when</b> a test contract has walked through sent, opened and signed, each email and alert arrived, and the follow-ups stopped at the signature.</p></div>
+
+  <h2 id="limitations">Known limitations</h2>
+  <ul>
+    <li><strong>Follow-ups stop per contact, not per contract.</strong> If a contact has two contracts out and signs one, the follow-up on the other stops too. It picks up again if that contract moves into a different stall type.</li>
+    <li><strong>An event can occasionally arrive twice</strong>, which can mean a duplicate email. Send Reminder guards against this. Fetch Signed Document doesn&rsquo;t, and can file a second copy of the PDF.</li>
+    <li><strong>Workflow 2 can miss a contract</strong> if the first update we receive for it is already past &ldquo;sent&rdquo;. Workflow 4 still catches it if it stalls.</li>
+    <li><strong>No calendar dates in customer emails</strong>, for the reason in <a class="inline" href="#merge-fields">Merge fields</a>.</li>
+  </ul>
+
+  <h2 id="troubleshooting">Troubleshooting</h2>
+  <table>
+    <thead><tr><th>Symptom</th><th>What&rsquo;s happening &amp; how to fix it</th></tr></thead>
+    <tbody>
+      <tr><td>A field shows as <code>{{&hellip;}}</code> in a sent email</td><td>The prefix or field name doesn&rsquo;t match. Check the prefix with the builder&rsquo;s picker and copy the field name exactly, capitals included. If it still shows, email <a class="inline" href="mailto:support@lcbridge.app">support@lcbridge.app</a>.</td></tr>
+      <tr><td>A signed contract is still being chased</td><td>Workflow 6 is off, or its Remove from Workflow step doesn&rsquo;t list workflows 2, 3 and 4.</td></tr>
+      <tr><td>A workflow never starts</td><td>The contract isn&rsquo;t matched to a contact. Match it from Unmatched.</td></tr>
+      <tr><td>Nobody gets the alerts</td><td>The contact has no assigned user.</td></tr>
+      <tr><td>A text didn&rsquo;t send</td><td>The contact hasn&rsquo;t agreed to texts, or the sub-account&rsquo;s SMS number isn&rsquo;t set up.</td></tr>
+      <tr><td>Send Agreement from Template fails</td><td>The contact has no email address, or a required template field is empty. The error names which.</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="help">Get help</h2>
+  <p>If something isn&rsquo;t behaving the way this guide describes, get in touch and we&rsquo;ll help.</p>
+  <ul>
+    <li><strong>Email support:</strong> <a class="inline" href="mailto:support@lcbridge.app">support@lcbridge.app</a></li>
+    <li><strong>Getting started:</strong> <a class="inline" href="/docusign-integration/docs/getting-started/">connect DocuSign and send your first contract</a></li>
+    <li><strong>What each workflow does:</strong> <a class="inline" href="/docusign-integration/workflows">the six workflows, with example emails</a></li>
+  </ul>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 LCBridge</span>
+    <span class="flinks">
+      <a href="/docusign-integration/privacy">Privacy</a>
+      <a href="/docusign-integration/terms">Terms</a>
+      <a href="/docusign-integration/refund">Refund</a>
+      <a href="/docusign-integration/">Home</a>
+    </span>
+  </div>
+</footer>
+<script>
+/* Mobile nav — shared behaviour (see .lcb-navtoggle in /assets/brand.css). */
+document.documentElement.classList.add('has-navjs');
+document.querySelectorAll('.lcb-navtoggle').forEach(function(btn){
+  var menu = document.getElementById(btn.getAttribute('aria-controls'));
+  if(!menu) return;
+  var nav = btn.closest('nav'), bar = btn.parentElement;
+  /* Below 480px the bar has no room for the CTA, so a copy lives in the panel. */
+  var cta = bar.querySelector('.nav-cta');
+  if(!cta){
+    cta = Array.prototype.filter.call(bar.children, function(el){
+      return el !== menu && !menu.contains(el) && !el.contains(menu) &&
+             (el.classList.contains('lcb-btn') || el.classList.contains('btn'));
+    }).pop();
+  }
+  if(cta && !menu.querySelector('.nav-cta-mobile') && !menu.classList.contains('nav-cta-mobile')){
+    cta.classList.add('nav-bar-cta');
+    var clone = cta.cloneNode(true);
+    clone.classList.remove('nav-bar-cta');
+    clone.classList.add('nav-cta-mobile');
+    clone.removeAttribute('id');
+    clone.querySelectorAll('[id]').forEach(function(n){ n.removeAttribute('id'); });
+    var src = cta.classList.contains('lcb-btn') || cta.classList.contains('btn')
+      ? [cta] : cta.querySelectorAll('.lcb-btn,.btn');
+    var dst = clone.classList.contains('lcb-btn') || clone.classList.contains('btn')
+      ? [clone] : clone.querySelectorAll('.lcb-btn,.btn');
+    Array.prototype.forEach.call(dst, function(el, i){
+      if(src[i]) el.style.color = getComputedStyle(src[i]).color;
+    });
+    menu.appendChild(clone);
+  }
+  function setOpen(open){
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    menu.classList.toggle('is-open', open);
+    if(nav) nav.classList.toggle('is-navopen', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  menu.addEventListener('click', function(e){ if(e.target.closest('a')) setOpen(false); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') setOpen(false); });
+});
+</script>
+<script src="/assets/analytics-config.js?v=cf89bb56" defer></script><script src="/assets/analytics.js?v=82de975e" defer></script>
+</body>
+</html>

@@ -7,8 +7,6 @@
    only — it never needs to match the product UI.
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
-
 :root{
   /* ---- Surfaces ---- */
   --lcb-canvas:#FFFFFF;
@@ -274,3 +272,70 @@ body.modal-lock{overflow:hidden}
   .lcb-navtoggle{width:40px; margin-left:0}
 }
 @media(prefers-reduced-motion:reduce){.lcb-navtoggle span{transition:none}}
+
+/* =========================================================================
+   Contract lifecycle map (.lcb-life)
+   The six DocuSign workflows in the order a contract lives: four that keep
+   it moving, then the two exits. Used on /docusign-integration/ (#how) and
+   /docusign-integration/workflows.
+   Add data-play and the page script arms a one-shot fill when it scrolls
+   into view. Transform and opacity only, it runs once, and nothing waits on
+   it: no JS, reduced motion and the static map all show the finished state.
+   ========================================================================= */
+[data-tone="brand"]{--tone:var(--lcb-primary)}
+[data-tone="track"]{--tone:var(--lcb-track-fg)}
+[data-tone="attn"]{--tone:var(--lcb-attn-fg)}
+[data-tone="ok"]{--tone:var(--lcb-ok-fg)}
+[data-tone="decl"]{--tone:var(--lcb-decl-fg)}
+
+.lcb-life{--lcb-life-gap:24px;list-style:none;margin:0;padding:0;display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr)) minmax(0,1.3fr);column-gap:var(--lcb-life-gap);align-items:start}
+.lcb-life-step{position:relative;min-width:0;padding:42px 6px 0 0}
+.lcb-life-dot{position:absolute;left:0;top:0;width:28px;height:28px;border-radius:50%;z-index:1;
+  background:var(--lcb-canvas);border:1.5px solid var(--lcb-line-2);color:var(--lcb-ink-3);
+  font:600 12.5px/25px var(--lcb-font-text);text-align:center}
+.lcb-life-dot::after{content:attr(data-n);position:absolute;inset:-1.5px;border-radius:50%;
+  background:var(--tone);color:#fff;line-height:28px}
+/* the rail: each step draws the segment from its own dot to the next column */
+.lcb-life-step::before,.lcb-life-step::after{content:"";position:absolute;left:14px;top:13px;height:2px;
+  width:calc(100% + var(--lcb-life-gap) - 14px)}
+.lcb-life-step::before{background:var(--lcb-line-2)}
+.lcb-life-step::after{background:var(--tone);transform-origin:left center}
+.lcb-life-t{display:block;font-family:var(--lcb-font-display);font-weight:600;font-size:1.02rem;
+  line-height:1.3;letter-spacing:-.01em;color:var(--lcb-ink)}
+.lcb-body a.lcb-life-t:hover{color:var(--lcb-primary)}
+.lcb-life-o{display:block;margin-top:6px;font-size:14.5px;line-height:1.5;color:var(--lcb-ink-2)}
+.lcb-life-tag{display:inline-block;margin-top:10px;font-size:12px;font-weight:600;line-height:1.5;
+  color:var(--lcb-ok-fg);background:var(--lcb-ok-bg);border:1px solid var(--lcb-ok-line);
+  border-radius:var(--lcb-r-pill);padding:1px 9px}
+/* the exits share one box: a contract ends one way or the other, never both */
+.lcb-life-exits{position:relative;margin-top:-18px;background:var(--lcb-canvas);
+  border:1px solid var(--lcb-line-2);border-radius:var(--lcb-r-lg);padding:14px 16px 16px;box-shadow:var(--lcb-shadow-sm)}
+.lcb-life-k{display:block;font-size:13px;color:var(--lcb-ink-3);margin-bottom:12px}
+.lcb-life-exits ol{list-style:none;margin:0;padding:0;display:grid;gap:16px}
+.lcb-life-exit{position:relative;padding-left:40px;min-height:28px}
+.lcb-life-exit .lcb-life-t{padding-top:3px}
+
+@media(max-width:1023px){
+  .lcb-life{grid-template-columns:minmax(0,1fr);max-width:640px}
+  .lcb-life-step{padding:3px 0 26px 44px}
+  .lcb-life-step::before,.lcb-life-step::after{left:13px;top:28px;width:2px;height:calc(100% - 28px)}
+  .lcb-life-step::after{transform-origin:center top}
+  .lcb-life-exits{margin-top:0}
+}
+
+.lcb-life.is-armed .lcb-life-dot::after{opacity:0;transform:scale(.5)}
+.lcb-life.is-armed .lcb-life-step::after{transform:scaleX(0)}
+.lcb-life.is-playing .lcb-life-dot::after{animation:lcbLifeDot .42s var(--lcb-ease) both;animation-delay:calc(var(--i,0) * .7s)}
+.lcb-life.is-playing .lcb-life-step::after{animation:lcbLifeX .4s linear both;animation-delay:calc(var(--i,0) * .7s + .3s)}
+@keyframes lcbLifeDot{from{opacity:0;transform:scale(.5)}to{opacity:1;transform:none}}
+@keyframes lcbLifeX{from{transform:scaleX(0)}to{transform:none}}
+@keyframes lcbLifeY{from{transform:scaleY(0)}to{transform:none}}
+@media(max-width:1023px){
+  .lcb-life.is-armed .lcb-life-step::after{transform:scaleY(0)}
+  .lcb-life.is-playing .lcb-life-step::after{animation-name:lcbLifeY}
+}
+@media(prefers-reduced-motion:reduce){
+  .lcb-life.is-armed .lcb-life-dot::after{opacity:1;transform:none}
+  .lcb-life.is-armed .lcb-life-step::after{transform:none}
+}

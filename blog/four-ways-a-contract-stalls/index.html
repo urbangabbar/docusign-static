@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The 4 Ways a Contract Stalls (and the Follow-Up That Fixes Each) | LC Bridge</title>
+<meta name="description" content="Sent but not opened, opened but not signed, about to expire, declined. Each stalled contract needs a different follow-up. What to send, when to send it, and when to stop.">
+<meta name="author" content="LC Bridge">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://lcbridge.app/blog/four-ways-a-contract-stalls/">
+<link rel="stylesheet" href="/assets/brand.css?v=b0980d3f">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://lcbridge.app/blog/four-ways-a-contract-stalls/">
+<meta property="og:title" content="The 4 Ways a Contract Stalls (and the Follow-Up That Fixes Each)">
+<meta property="og:description" content="Each kind of stalled contract needs a different follow-up. What to send, when, and when to stop.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="The 4 Ways a Contract Stalls (and the Follow-Up That Fixes Each)">
+<meta name="twitter:description" content="Sent but not opened, opened but not signed, about to expire, declined. The follow-up each one needs.">
+
+<style>
+  html{scroll-behavior:smooth;scroll-padding-top:80px}
+  /* nav */
+  .nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.86);backdrop-filter:saturate(140%) blur(12px);-webkit-backdrop-filter:saturate(140%) blur(12px);border-bottom:1px solid var(--lcb-line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .nav .lcb-logo .wm{font-size:18px}
+  .nav-by{font-size:11px;color:var(--lcb-ink-3);font-weight:600;border-left:1px solid var(--lcb-line-2);padding-left:10px;margin-left:2px}
+  @media(min-width:941px){.nav-links{display:flex;align-items:center;gap:24px}}
+  .nav-links a{font-size:14.5px;font-weight:500;color:var(--lcb-ink-2)}
+  .nav-links a:hover{color:var(--lcb-ink)}
+  @media(max-width:940px){.nav-by{display:none}}
+  /* breadcrumb */
+  .crumb{padding:20px 0 0}
+  .crumb ol{list-style:none;display:flex;flex-wrap:wrap;gap:8px;font-size:13px;color:var(--lcb-ink-3);margin:0;padding:0}
+  .crumb a:hover{color:var(--lcb-primary)}
+  .crumb [aria-current]{color:var(--lcb-ink);font-weight:600}
+  /* article shell */
+  .post{max-width:760px;margin:0 auto;padding:0 24px 8px}
+  .post-head{padding:24px 0 6px}
+  .post-head .lcb-eyebrow{margin-bottom:16px}
+  .post-h1{font-family:var(--lcb-font-display);font-weight:700;letter-spacing:-.03em;line-height:1.08;font-size:clamp(2rem,4.4vw,2.9rem)}
+  .post-meta{display:flex;flex-wrap:wrap;gap:16px;margin-top:18px;font-family:var(--lcb-font-mono);font-size:12.5px;color:var(--lcb-ink-3)}
+  /* prose */
+  .prose{font-size:17px;line-height:1.7;margin-top:26px}
+  .lcb-body .prose > * + *{margin-top:20px}
+  .lcb-body .prose > h2{margin-top:46px}
+  .prose h2{font-family:var(--lcb-font-display);font-weight:700;letter-spacing:-.02em;font-size:1.55rem;line-height:1.2;margin-top:46px;color:var(--lcb-ink)}
+  .prose p{color:var(--lcb-ink-2)}
+  .prose strong{color:var(--lcb-ink);font-weight:700}
+  .prose em{font-style:italic}
+  .prose a{color:var(--lcb-primary);font-weight:600;text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px}
+  .prose a:hover{color:var(--lcb-primary-press)}
+  .prose ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:11px}
+  .prose ul li{position:relative;padding-left:26px;color:var(--lcb-ink-2)}
+  .prose ul li::before{content:"";position:absolute;left:5px;top:11px;width:6px;height:6px;border-radius:50%;background:var(--lcb-primary)}
+  .prose .say{border-left:3px solid var(--lcb-line-2);padding:2px 0 2px 18px;color:var(--lcb-ink);font-style:italic}
+  /* stall header: when it's flagged, at a glance */
+  .stall-when{display:block;margin-top:8px;font-family:var(--lcb-font-text);font-size:13.5px;font-weight:600;letter-spacing:0;color:var(--lcb-ink-3)}
+  /* tldr */
+  .tldr{background:var(--lcb-tint);border:1px solid #DDE3FB;border-left:3px solid var(--lcb-primary);border-radius:var(--lcb-r-md);padding:18px 20px;font-size:16px;line-height:1.62;color:var(--lcb-ink-2);margin-top:26px}
+  .tldr .k{font-family:var(--lcb-font-mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--lcb-primary);font-weight:700;margin-right:6px}
+  /* related */
+  .related{border-top:1px solid var(--lcb-line);margin-top:46px;padding-top:26px}
+  .related .k{font-family:var(--lcb-font-mono);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--lcb-ink-3);font-weight:600;margin-bottom:15px}
+  .related a{display:flex;align-items:center;gap:8px;font-family:var(--lcb-font-display);font-weight:600;font-size:1.05rem;color:var(--lcb-ink);letter-spacing:-.01em;margin-bottom:11px}
+  .related a svg{width:16px;height:16px;color:var(--lcb-primary);flex:0 0 auto}
+  .related a:hover{color:var(--lcb-primary)}
+  /* faq */
+  .faqw{max-width:760px;margin:0 auto}
+  .faq{border:1px solid var(--lcb-line);border-radius:var(--lcb-r-md);background:#fff;margin-bottom:12px;overflow:hidden}
+  .faq summary{list-style:none;cursor:pointer;padding:18px 20px;font-weight:600;font-size:16px;display:flex;align-items:center;justify-content:space-between;gap:16px;color:var(--lcb-ink)}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq .chev{color:var(--lcb-ink-3);transition:transform .2s;flex:0 0 auto}.faq .chev svg{width:20px;height:20px}
+  .faq[open] .chev{transform:rotate(180deg)}
+  .faq .a{padding:0 20px 18px;color:var(--lcb-ink-2);font-size:15px;line-height:1.65}
+  /* post cta */
+  .postcta h2{color:#fff;font-size:clamp(1.5rem,3vw,2rem)}
+  .postcta p{color:var(--lcb-on-dark-mut);font-size:1.05rem;max-width:560px;margin-top:12px}
+  .postcta .btns{display:flex;gap:13px;flex-wrap:wrap;margin-top:24px}
+  @media(max-width:430px){
+    .postcta .btns{flex-direction:column;align-items:stretch}
+    .postcta .btns .lcb-btn{white-space:normal;justify-content:center;text-align:center}
+  }
+  /* footer */
+  .ft{background:#080B16;color:var(--lcb-on-dark-mut);padding:52px 0 36px}
+  .ft-top{display:flex;justify-content:space-between;gap:34px;flex-wrap:wrap;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.08)}
+  .ft-brand{max-width:340px} .ft-brand .lcb-logo{margin-bottom:13px}
+  .ft-tag{font-size:14px;line-height:1.6}
+  .ft-links{display:flex;gap:54px;flex-wrap:wrap}
+  .ft-col .footer-heading{font-family:var(--lcb-font-mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:#fff;margin:0 0 13px;font-weight:600}
+  .ft-col a{display:block;font-size:14.5px;margin-bottom:9px;color:var(--lcb-on-dark-mut)}.ft-col a:hover{color:#fff}
+  .ft-legal{margin-top:24px;font-size:12.5px;line-height:1.7;color:#767F94;max-width:820px}
+  .ft-bot{margin-top:14px;font-size:12.5px;color:#767F94}
+</style>
+<link rel="stylesheet" href="/assets/fonts.css?v=2ee1d9f1">
+<link rel="stylesheet" href="/assets/seo-content.css?v=84a79680">
+<script id="lcbridge-structured-data" type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://lcbridge.app/#organization",
+      "name": "LC Bridge",
+      "legalName": "GoCSM Innovations Private Limited",
+      "alternateName": [
+        "LCBridge",
+        "Lead Connector Bridge"
+      ],
+      "url": "https://lcbridge.app/",
+      "sameAs": [
+        "https://www.linkedin.com/company/lc-bridge/",
+        "https://www.g2.com/sellers/lc-bridge"
+      ],
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://lcbridge.app/assets/lcbridge-lockup-black.png"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "support@lcbridge.app",
+        "url": "https://lcbridge.app/about/"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://lcbridge.app/#website",
+      "url": "https://lcbridge.app/",
+      "name": "LC Bridge",
+      "publisher": {
+        "@id": "https://lcbridge.app/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://lcbridge.app/blog/four-ways-a-contract-stalls/#webpage",
+      "url": "https://lcbridge.app/blog/four-ways-a-contract-stalls/",
+      "name": "The 4 Ways a Contract Stalls (and the Follow-Up That Fixes Each) | LC Bridge",
+      "description": "Sent but not opened, opened but not signed, about to expire, declined. Each stalled contract needs a different follow-up. What to send, when to send it, and when to stop.",
+      "isPartOf": {
+        "@id": "https://lcbridge.app/#website"
+      },
+      "publisher": {
+        "@id": "https://lcbridge.app/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://lcbridge.app/blog/four-ways-a-contract-stalls/#breadcrumbs"
+      },
+      "mainEntity": {
+        "@id": "https://lcbridge.app/blog/four-ways-a-contract-stalls/#article"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://lcbridge.app/blog/four-ways-a-contract-stalls/#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://lcbridge.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://lcbridge.app/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "The 4 Ways a Contract Stalls (and the Follow-Up That Fixes Each)",
+          "item": "https://lcbridge.app/blog/four-ways-a-contract-stalls/"
+        }
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://lcbridge.app/blog/four-ways-a-contract-stalls/#article",
+      "headline": "The 4 Ways a Contract Stalls (and the Follow-Up That Fixes Each)",
+      "description": "Sent but not opened, opened but not signed, about to expire, declined. Each stalled contract needs a different follow-up. What to send, when to send it, and when to stop.",
+      "datePublished": "2026-09-15",
+      "dateModified": "2026-10-12",
+      "mainEntityOfPage": {
+        "@id": "https://lcbridge.app/blog/four-ways-a-contract-stalls/#webpage"
+      },
+      "author": {
+        "@type": "Organization",
+        "@id": "https://lcbridge.app/#organization",
+        "name": "LC Bridge",
+        "url": "https://lcbridge.app/about/#editorial-team"
+      },
+      "publisher": {
+        "@id": "https://lcbridge.app/#organization"
+      },
+      "image": [
+        "https://lcbridge.app/assets/og-docusign.png"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://lcbridge.app/blog/four-ways-a-contract-stalls/#faq-schema",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How long should I wait before following up on an unsigned contract?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends where it’s stuck. If it hasn’t been opened, a day is enough to know something’s wrong. If it’s been opened, give it two days. If it’s close to expiring, reach out about a week before the deadline. If it’s been declined, call straight away."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many times should I follow up on a contract?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Three automated follow-ups, then a phone call from a person. Automated messages past that point tend to get ignored."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I resend a contract that was declined?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not unchanged. Find out what they objected to, fix it, then send a corrected copy."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="lcb-body">
+
+<nav class="nav"><div class="lcb-wrap nav-in">
+  <a class="lcb-logo" href="/" aria-label="LC Bridge home">
+    <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16v-4"/><path d="M21 16v-4"/><path d="M3 12c0-4 4-6 9-6s9 2 9 6"/><path d="M7 12v4"/><path d="M12 10v6"/><path d="M17 12v4"/></svg></span>
+    <span class="wm">LC Bridge</span><span class="nav-by">Guides</span>
+  </a>
+  <div class="nav-links" id="navmenu">
+    <a href="/blog/gohighlevel-integrations/">Integrations guide</a><a href="/docusign-integration/">DocuSign</a><a href="/#contact">Contact</a>
+  </div>
+  <a href="/book-a-call/" class="lcb-btn lcb-btn--primary">Book a call</a>
+
+  <button class="lcb-navtoggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navmenu"><span></span><span></span><span></span></button>
+</div></nav>
+<main id="main">
+
+<nav class="crumb lcb-wrap" aria-label="Breadcrumb"><ol>
+  <li><a href="/">Home</a></li><li aria-hidden="true">/</li><li><a href="/blog/">Blog</a></li><li aria-hidden="true">/</li><li aria-current="page">The 4 ways a contract stalls</li>
+</ol></nav>
+
+<article><div class="post">
+  <header class="post-head">
+    <span class="lcb-eyebrow"><span class="dot"></span>Getting contracts signed</span>
+    <h1 class="post-h1">The 4 Ways a Contract Stalls (and the Follow-Up That Fixes Each)</h1>
+    <div class="post-meta"><span>By <a href="/about/#editorial-team">LC Bridge editorial team</a></span><span>6 min read</span><span>Sep 2026</span></div>
+  </header>
+
+  <div class="tldr"><span class="k">TL;DR</span>An unsigned contract is stuck in one of four places: nobody saw it, somebody saw it and put it down, it&rsquo;s about to expire, or it was refused. Each needs a different message. Send the same &ldquo;just a reminder&rdquo; to all four and you&rsquo;ll annoy the people who were about to sign, and never reach the ones who didn&rsquo;t get it.</div>
+
+  <div class="prose">
+    <p>Most follow-up on an unsigned contract is one email: &ldquo;Just a reminder to sign.&rdquo; It goes out on day three, again on day seven, and after that somebody quietly gives up.</p>
+    <p>The trouble is that &ldquo;unsigned&rdquo; isn&rsquo;t one situation. A contract nobody has opened has nothing in common with one that&rsquo;s been opened four times and set aside. Treat them the same and your reminders start to feel like nagging, which is a big part of why they so often don&rsquo;t work.</p>
+    <p>Here are the four places a contract actually gets stuck, and what to send for each.</p>
+
+    <h2>1. Sent, but never opened<span class="stall-when">Worth a follow-up after 24 hours</span></h2>
+    <p>If a day goes by and it hasn&rsquo;t been opened, the likeliest explanation is a boring one: they never saw it. The signing email doesn&rsquo;t come from you. It arrives separately, from a different sender, so it can end up in Promotions, in spam, or under forty newer emails.</p>
+    <p>So don&rsquo;t remind them to sign. Tell them where to look:</p>
+    <ul>
+      <li>Where it probably went: the Promotions or Updates tab, or spam.</li>
+      <li>The exact subject line to search for.</li>
+      <li>An easy way out: &ldquo;Reply and I&rsquo;ll send it again.&rdquo;</li>
+    </ul>
+    <p>Keep it light, and blame the inbox rather than the person. &ldquo;It&rsquo;s probably in a filtered folder&rdquo; gets a reply. &ldquo;You haven&rsquo;t opened my email&rdquo; gets silence.</p>
+    <p>If that doesn&rsquo;t work, the next follow-up shouldn&rsquo;t be another email. When email isn&rsquo;t getting through, more email won&rsquo;t fix it. Send a short text instead.</p>
+
+    <h2>2. Opened, but not signed<span class="stall-when">Worth a follow-up 48 hours after they open it</span></h2>
+    <p>This one is completely different. They&rsquo;ve read it, and something stopped them. It&rsquo;s usually one of three things: a question they&rsquo;d rather ask than guess at, something in it that needs changing, or the timing.</p>
+    <p>A reminder doesn&rsquo;t help with any of those. A question does:</p>
+    <p class="say">Is there anything holding this up? If it&rsquo;s simpler, just reply with the one thing that&rsquo;s stopping you.</p>
+    <p>One rule matters more than the rest here: <strong>never say you saw them open it.</strong> Knowing when someone opened a contract is useful for deciding when to follow up. Put it in the email and people feel watched.</p>
+    <p>Two days after opening is about right. Soon enough that they still remember it, and late enough that it doesn&rsquo;t look like you were waiting by the phone.</p>
+
+    <h2>3. About to expire<span class="stall-when">Worth a follow-up a week before the deadline</span></h2>
+    <p>Most contracts come with an expiry date. When one lapses nothing is lost exactly, but the whole thing has to be sent again and signed from scratch.</p>
+    <p>This is the only one of the four where urgency is fair. You didn&rsquo;t invent the deadline to push them. It&rsquo;s real, and saying so plainly is doing them a favour:</p>
+    <p class="say">This expires in the next few days, and if it does we&rsquo;ll have to start again. It takes about three minutes.</p>
+    <p>Just don&rsquo;t borrow that urgency for the other three. Once every reminder sounds urgent, nobody believes any of them.</p>
+
+    <h2>4. Declined<span class="stall-when">Worth a phone call straight away</span></h2>
+    <p>A decline feels final, but it often isn&rsquo;t. Plenty of the time it means one thing is wrong: a date, a number, a misspelled name, a clause they didn&rsquo;t expect.</p>
+    <p>Two mistakes lose the deal here. The first is carrying on with reminders to sign something they&rsquo;ve just refused. The second is sending the same contract again, unchanged.</p>
+    <p>What works instead:</p>
+    <ul>
+      <li>Stop every reminder immediately.</li>
+      <li>Get the reason to whoever owns the deal, fast. If the signer typed one when they declined, it&rsquo;s the most useful thing that person will read all day.</li>
+      <li>Call before you email. A ten-minute head start is plenty.</li>
+      <li>Then send a short note thanking them for saying so, and offering a corrected copy.</li>
+    </ul>
+
+    <h2>Three follow-ups, then a person</h2>
+    <p>However a contract stalled, set a limit. Three automated follow-ups is plenty: an email written for that particular stall, a text a couple of days later, then DocuSign&rsquo;s own reminder, the one with the signing link in it.</p>
+    <p>After that, stop and hand it to a human. A fourth automated message won&rsquo;t get the signature. It teaches people that your emails can be ignored, and on a contract that impression outlasts the deal.</p>
+
+    <h2>The step everyone forgets: stop when it&rsquo;s signed</h2>
+    <p>The quickest way to make a business look careless is a reminder about a contract that was signed yesterday. Every follow-up needs an off switch, and a signature, or a decline, should flip it the moment it happens.</p>
+    <p>Once it&rsquo;s signed, send their copy straight away. Attach it and link to it, so it survives a full inbox. Then get out of their way.</p>
+
+    <h2>Doing this without a spreadsheet</h2>
+    <p>None of this is complicated. It&rsquo;s just hard to keep up by hand, for every contract, every day, which is exactly the kind of thing that slips.</p>
+    <p>So we built it into six ready-made workflows for HighLevel. They work out which of the four stalls a contract is in, send the follow-up that fits, hand it to a person after three tries, and stop the moment it&rsquo;s signed or declined. <a href="/docusign-integration/workflows">See the six workflows and the emails they send</a>.</p>
+  </div>
+
+  <div class="related">
+    <div class="k">Keep reading</div>
+    <a href="/blog/gohighlevel-esignature-legally-binding/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>Is a GoHighLevel E-Signature Legally Binding?</a>
+    <a href="/blog/four-levels-of-integration/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>The 4 Levels of CRM Integration (and Why a Zap Isn&rsquo;t One)</a>
+  </div>
+</div></article>
+
+<section class="lcb-section" id="faq" style="padding-top:clamp(48px,6vw,72px)"><div class="lcb-wrap">
+  <div style="max-width:760px;margin:0 auto 26px">
+    <span class="lcb-eyebrow"><span class="dot"></span>Questions</span>
+    <h2 class="lcb-h2" style="margin-top:12px">Following up on unsigned contracts</h2>
+  </div>
+  <div class="faqw">
+    <details class="faq"><summary>How long should I wait before following up on an unsigned contract?<span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="a">It depends where it&rsquo;s stuck. If it hasn&rsquo;t been opened, a day is enough to know something&rsquo;s wrong. If it&rsquo;s been opened, give it two days. If it&rsquo;s close to expiring, reach out about a week before the deadline. If it&rsquo;s been declined, call straight away.</div></details>
+    <details class="faq"><summary>How many times should I follow up on a contract?<span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="a">Three automated follow-ups, then a phone call from a person. Automated messages past that point tend to get ignored.</div></details>
+    <details class="faq"><summary>Should I resend a contract that was declined?<span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="a">Not unchanged. Find out what they objected to, fix it, then send a corrected copy.</div></details>
+  </div>
+</div></section>
+
+<section class="lcb-section lcb-section--dark postcta"><div class="lcb-wrap">
+  <h2>Let the follow-up run itself.</h2>
+  <p>Six ready-made HighLevel workflows that follow up on each kind of stalled contract, and stop the moment it&rsquo;s signed.</p>
+  <div class="btns">
+    <a href="/docusign-integration/workflows" class="lcb-btn lcb-btn--primary lcb-btn--lg">See the six workflows <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+    <a href="/book-a-call/" class="lcb-btn lcb-btn--ghost lcb-btn--lg">Book a call</a>
+  </div>
+</div></section>
+
+</main>
+<footer class="ft"><div class="lcb-wrap">
+  <div class="ft-top">
+    <div class="ft-brand">
+      <a class="lcb-logo" href="/" style="color:#fff"><img src="/assets/lcbridge-lockup-white.svg" alt="LC Bridge" width="180" height="60" style="height:42px;width:auto;display:block"></a>
+      <p class="ft-tag">Deep, white-labeled integrations for the HighLevel ecosystem.</p>
+    </div>
+    <div class="ft-links">
+      <div class="ft-col"><p class="footer-heading">Guides</p><a href="/blog/four-ways-a-contract-stalls/">The 4 ways a contract stalls</a><a href="/blog/gohighlevel-esignature-legally-binding/">Is GHL e-sign legally binding?</a><a href="/blog/gohighlevel-integrations/">GoHighLevel integrations</a><a href="/blog/four-levels-of-integration/">The 4 levels of integration</a></div>
+      <div class="ft-col"><p class="footer-heading">Products</p><a href="/docusign-integration/">DocuSign integration</a><a href="/google-sheets-integration/">Google Sheets integration</a><a href="/community-agents/">Community Agents</a></div>
+      <div class="ft-col"><p class="footer-heading">Company</p><a href="/about/">About LC Bridge</a><a href="mailto:arun@lcbridge.app">arun@lcbridge.app</a><a href="/book-a-call/">Book a call</a></div>
+    </div>
+  </div>
+  <p class="ft-legal">Published by LC Bridge (Lead Connector Bridge). We build white-labeled integrations that HighLevel platforms embed as their own. An independent company that works with DocuSign&reg; and HighLevel&reg;, and is not affiliated with, endorsed by, or sponsored by either. All trademarks are the property of their respective owners.</p>
+  <p class="ft-bot">&copy; 2026 LC Bridge. All rights reserved.</p>
+</div></footer>
+<script>
+/* Mobile nav — shared behaviour (see .lcb-navtoggle in /assets/brand.css). */
+document.documentElement.classList.add('has-navjs');
+document.querySelectorAll('.lcb-navtoggle').forEach(function(btn){
+  var menu = document.getElementById(btn.getAttribute('aria-controls'));
+  if(!menu) return;
+  var nav = btn.closest('nav'), bar = btn.parentElement;
+  var cta = bar.querySelector('.nav-cta');
+  if(!cta){
+    cta = Array.prototype.filter.call(bar.children, function(el){
+      return el !== menu && !menu.contains(el) && !el.contains(menu) &&
+             (el.classList.contains('lcb-btn') || el.classList.contains('btn'));
+    }).pop();
+  }
+  if(cta && !menu.querySelector('.nav-cta-mobile') && !menu.classList.contains('nav-cta-mobile')){
+    cta.classList.add('nav-bar-cta');
+    var clone = cta.cloneNode(true);
+    clone.classList.remove('nav-bar-cta');
+    clone.classList.add('nav-cta-mobile');
+    clone.removeAttribute('id');
+    clone.querySelectorAll('[id]').forEach(function(n){ n.removeAttribute('id'); });
+    var src = cta.classList.contains('lcb-btn') || cta.classList.contains('btn')
+      ? [cta] : cta.querySelectorAll('.lcb-btn,.btn');
+    var dst = clone.classList.contains('lcb-btn') || clone.classList.contains('btn')
+      ? [clone] : clone.querySelectorAll('.lcb-btn,.btn');
+    Array.prototype.forEach.call(dst, function(el, i){
+      if(src[i]) el.style.color = getComputedStyle(src[i]).color;
+    });
+    menu.appendChild(clone);
+  }
+  function setOpen(open){
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    menu.classList.toggle('is-open', open);
+    if(nav) nav.classList.toggle('is-navopen', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  menu.addEventListener('click', function(e){ if(e.target.closest('a')) setOpen(false); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') setOpen(false); });
+});
+</script>
+<script src="/assets/analytics-config.js?v=cf89bb56" defer></script><script src="/assets/analytics.js?v=82de975e" defer></script>
+</body>
+</html>

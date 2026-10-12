@@ -4,9 +4,10 @@ Marketing site for **LC Bridge** (legal entity: GoCSM Innovations Private Limite
 trading as LCBridge). Sells white-labeled integrations that HighLevel / LeadConnector
 agencies embed as their own.
 
-Repo: `https://github.com/urbangabbar/docusign-static`
+Repo: `https://github.com/urbangabbar/docusign-static`  (the GitHub slug still says docusign-static)
+Local checkout: `~/dev/Personal/lcbridge-website`  (renamed 2026-09-10 — the slug and the folder no longer match)
 Live: `https://lcbridge.app`
-Last verified: 8 September 2026, at commit `3c3cde7`.
+Last verified: 11 September 2026.
 
 ---
 
@@ -25,7 +26,7 @@ Last verified: 8 September 2026, at commit `3c3cde7`.
 ### Serving it locally
 
 ```bash
-cd ~/dev/Personal/docusign-static
+cd ~/dev/Personal/lcbridge-website
 python3 -m http.server 8000
 # http://localhost:8000/index.html
 ```
@@ -399,6 +400,21 @@ live in the owner's global `~/.claude/CLAUDE.md`, and two are worth knowing:
 
 ---
 
+### Favicons
+
+One mark sitewide, at the repo root: `favicon.ico` (16/32/48/64, each purpose-rendered),
+`favicon.svg`, `apple-touch-icon.png` (180). Every page declares all three.
+
+`favicon.svg` is a **deliberately simplified** variant of the brand mark — one centre
+support instead of four piers, strokes at 2.6 rather than 1.6. The full four-pier
+lockup dissolves into a smudge at the 16px Google renders in a result row. Do not
+"restore" the detailed drawing here; the header and footer lockups carry it.
+
+Google caches favicons independently of page crawls, often for weeks. A change here
+will not show in search results quickly and there is no way to force it.
+
+---
+
 ## 8. Open TODOs — already queued, do not duplicate
 
 Ordered roughly by value. Items 1–3 need the owner; the rest are code.
@@ -410,25 +426,23 @@ Ordered roughly by value. Items 1–3 need the owner; the rest are code.
    The owner deferred it as a separate task.
 3. **Retire two now-unused GHL assets:** form `TO5PG5GbMdM5I72xnUX0` and calendar
    `CwWPut2pYcgUSqeozTVA`. Both are unreferenced by the site.
-4. **Fix `"Talk to us"` on `docusign-integration/pricing.html`** — it points at
-   `/docusign-integration/#apply`, which is now the trial *form*. It should go to
-   `/docusign-integration/book-a-call`. Small, unambiguous, not yet done.
-5. **Nav-link contrast on the dark hero** — "About Us / Products / Blog / Contact"
+4. **Nav-link contrast on the dark hero** — "About Us / Products / Blog / Contact"
    measure **3.01:1** against 4.5 required, on `index.html` and `products/index.html`,
    desktop only (hidden on mobile). Measured, reported, not fixed.
-6. **Horizontal overflow at 360px** on `docusign-integration/insurance.html` and
+5. **Horizontal overflow at 360px** on `docusign-integration/insurance.html` and
    `real-estate.html`, caused by `.surface` blocks in the page body (not the nav).
    Confirmed pre-existing against `HEAD`.
-7. **Decide the fate of unreferenced assets** — `assets/docusign-icon.svg`,
+6. **Decide the fate of unreferenced assets** — `assets/docusign-favicon.svg` (orphaned
+   when favicons were consolidated to one sitewide mark), `assets/docusign-icon.svg`,
    `docusign-icon-180.png`, `lcbridge-logo.{svg,png}`, `lcbridge-lockup-dark.svg`,
    `hero-01.png`. Needs the owner to confirm the marketplace icon isn't among them.
-8. **Internal markdown is publicly readable.** `brand/brand-guidelines.md` (200) and
+7. **Internal markdown is publicly readable.** `brand/brand-guidelines.md` (200) and
    both `blog-drafts/*.md`, which Jekyll renders to `/blog-drafts/<slug>.html` (200,
    indexable). Decide whether that is intended; `_config.yml` `exclude` is the fix.
-9. **Cloudflare in front of Pages** for real 301s, which retires all 22 redirect
+8. **Cloudflare in front of Pages** for real 301s, which retires all 22 redirect
    stubs. Recommended, not started.
-10. **A brand-level OG image**, so `/book-a-call/` and `/community-agents/` stop
+9. **A brand-level OG image**, so `/book-a-call/` and `/community-agents/` stop
     sharing with no card.
-11. **Fix the YouTube description on `fZ4Qpj5K-Lo`** — its chapter list runs to
+10. **Fix the YouTube description on `fZ4Qpj5K-Lo`** — its chapter list runs to
     `13:30` but the video is `5:58`. Not a repo change; the timestamps are wrong on
     YouTube and break the chapter UI.

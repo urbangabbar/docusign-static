@@ -1,0 +1,67 @@
+{
+  "lastReviewed": "2026-10-12",
+  "organization": {
+    "name": "LC Bridge",
+    "legalName": "GoCSM Innovations Private Limited",
+    "alternateName": [
+      "LCBridge",
+      "Lead Connector Bridge"
+    ],
+    "url": "https://lcbridge.app/",
+    "sameAs": [
+      "https://www.linkedin.com/company/lc-bridge/",
+      "https://www.g2.com/sellers/lc-bridge"
+    ]
+  },
+  "docusign": {
+    "name": "DocuSign Integration by LC Bridge",
+    "url": "https://lcbridge.app/docusign-integration/",
+    "requirements": "HighLevel account and an existing DocuSign account; configured template mappings and enabled workflows",
+    "description": "Connect DocuSign agreements to HighLevel contact data, configured follow-up workflows, and completed-answer sync.",
+    "plans": [
+      {
+        "name": "Starter",
+        "monthlyUSD": 29,
+        "annualUSD": 249,
+        "unit": "active HighLevel sub-account"
+      },
+      {
+        "name": "Agency",
+        "monthlyUSD": 249,
+        "annualUSD": 2390.4,
+        "unit": "agency, up to 250 sub-accounts"
+      },
+      {
+        "name": "Scale",
+        "monthlyUSD": 497,
+        "annualUSD": 4771.2,
+        "unit": "agency, unlimited sub-accounts"
+      }
+    ],
+    "trial": "14-day free trial; no card to start; DocuSign subscription billed separately",
+    "video": {
+      "id": "xPoWEYjnhdY",
+      "duration": "PT1M20S",
+      "uploadDate": "2026-10-10T00:00:00+05:30",
+      "thumbnailUrl": "https://lcbridge.app/assets/video/docusign-demo-thumbnail-1280.webp"
+    }
+  },
+  "community-agents": {
+    "name": "Community Agents by LC Bridge",
+    "url": "https://lcbridge.app/community-agents/",
+    "requirements": "Marketplace installation in the owning HighLevel sub-account, a member-facing community portal, and a dedicated member login for each AI identity",
+    "description": "AI replies for HighLevel community teams using supplied knowledge, private previews, and member assessments supported by source conversations.",
+    "monthlyUSD": 47,
+    "unit": "HighLevel sub-account",
+    "includedAIAllowanceUSD": 47,
+    "usageMetering": "4 times provider cost; included allowance used first, overage billed through HighLevel wallet",
+    "rollover": false,
+    "installationUrl": "https://community-agents.lcbridge.app/oauth/install",
+    "video": {
+      "id": "W-0UEIWMeM4",
+      "duration": "PT35S",
+      "uploadDate": "2026-10-09T10:13:39-07:00",
+      "thumbnailUrl": "https://lcbridge.app/assets/video/community-agents-demo-thumbnail-1280.webp"
+    }
+  }
+}

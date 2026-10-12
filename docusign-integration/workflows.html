@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DocuSign Workflows for HighLevel: Contracts That Follow Themselves Up | LC Bridge</title>
+<meta name="description" content="Six pre-built HighLevel workflows for DocuSign contracts. They send it when the deal is ready, make sure it lands, follow up when it goes quiet, and stop the moment it's signed.">
+<link rel="canonical" href="https://lcbridge.app/docusign-integration/workflows">
+<link rel="stylesheet" href="/assets/brand.css?v=b0980d3f">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lcbridge.app/docusign-integration/workflows">
+<meta property="og:title" content="Contracts that follow themselves up | DocuSign workflows for HighLevel">
+<meta property="og:description" content="Six pre-built workflows that send the contract, make sure it lands, follow up when it goes quiet, and stop the moment it's signed.">
+<meta property="og:image" content="https://lcbridge.app/assets/og-docusign.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contracts that follow themselves up | DocuSign workflows for HighLevel">
+<meta name="twitter:description" content="Six pre-built HighLevel workflows for DocuSign contracts, from ready-to-sign to signed.">
+<meta name="twitter:image" content="https://lcbridge.app/assets/og-docusign.png">
+
+<style>
+  /* ===== DocuSign brand theme, same as the product page ===== */
+  :root{
+    --lcb-primary:#4C00FF; --lcb-primary-press:#3A00C2; --lcb-on-primary:#FFFFFF;
+    --lcb-tint:#EEE9FF; --lcb-dark:#130032;
+    --lcb-logo-grad:linear-gradient(135deg,#4C00FF,#7A2BFF);
+    --ds-accent:#FF5252;
+    /* the example sub-account's own brand: emails wear the client's colour, not ours */
+    --client:#0F766E;
+  }
+  .lcb-eyebrow .dot{background:var(--ds-accent)}
+  .lcb-section--dark .lcb-eyebrow{color:#CBC2FF}
+
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  /* nav */
+  .nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.86);backdrop-filter:saturate(140%) blur(12px);-webkit-backdrop-filter:saturate(140%) blur(12px);border-bottom:1px solid var(--lcb-line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .nav-lock{display:inline-flex;align-items:center}
+  .nav-by{display:inline-flex;align-items:center;gap:7px;font-size:11.5px;color:var(--lcb-ink-3);font-weight:600;border-left:1px solid var(--lcb-line-2);padding-left:11px;margin-left:3px;text-decoration:none;white-space:nowrap}
+  .nav-by:hover{color:var(--lcb-ink)}
+  .nav-by .by-lock{height:18px;width:auto;display:block}
+  @media(min-width:941px){.nav-links{display:flex;align-items:center;gap:24px}}
+  .nav-links a{font-size:14.5px;font-weight:500;color:var(--lcb-ink-2)}
+  .nav-links a:hover,.lcb-body .nav-links a[aria-current]{color:var(--lcb-ink)}
+  @media(max-width:1040px){.nav-links{gap:17px}.nav-links a{font-size:13.8px}}
+  @media(max-width:820px){.by-txt{display:none}}
+  /* breadcrumb */
+  .crumb{padding-top:16px}
+  .crumb ol{list-style:none;display:flex;flex-wrap:wrap;gap:8px;font-size:13px;color:var(--lcb-ink-3);margin:0;padding:0}
+  .crumb a:hover{color:var(--lcb-primary)} .crumb [aria-current]{color:var(--lcb-ink);font-weight:600}
+
+  /* ===== hero ===== */
+  .hero{padding:36px 0 clamp(44px,5vw,64px);background:radial-gradient(1100px 460px at 50% -14%,#EEE9FF 0,rgba(238,241,254,0) 60%)}
+  .hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center}
+  @media(max-width:940px){.hero-grid{grid-template-columns:minmax(0,1fr);gap:40px}}
+  .quote{margin:0 0 26px;padding-left:16px;border-left:3px solid var(--lcb-primary);max-width:500px}
+  .quote p{font-size:16px;line-height:1.55;color:var(--lcb-ink);font-style:italic}
+  .quote cite{display:block;margin-top:6px;font-style:normal;font-size:13px;color:var(--lcb-ink-3)}
+  .hero h1{font-size:clamp(2.4rem,5vw,3.6rem);line-height:1.04;letter-spacing:-.035em;margin-bottom:20px;text-wrap:balance}
+  .hero .sub{font-size:18px;line-height:1.6;color:var(--lcb-ink-2);max-width:530px;margin-bottom:28px}
+  .hero-cta{display:flex;gap:12px;flex-wrap:wrap}
+  .lcb-body .hero-note{margin-top:18px;font-size:14px;color:var(--lcb-ink-3);display:flex;gap:8px;align-items:center}
+  .hero-note svg{width:16px;height:16px;color:var(--lcb-ok-dot);flex:0 0 auto}
+  @media(max-width:430px){.hero-cta .lcb-btn{width:100%;justify-content:center}}
+
+  /* numbered workflow dot, shared by the week feed, the steps and the start-here list */
+  .wdot{display:inline-block;width:26px;height:26px;border-radius:50%;background:var(--tone,var(--lcb-primary));color:#fff;
+    font:600 12px/26px var(--lcb-font-text);text-align:center;flex:0 0 auto}
+
+  /* ===== one contract's week (the page's one piece of motion) ===== */
+  .week{margin:0}
+  .week-card{background:#fff;border:1px solid var(--lcb-line);border-radius:var(--lcb-r-xl);box-shadow:var(--lcb-shadow-lg);padding:18px 20px 4px}
+  .week-head{display:flex;align-items:center;gap:12px;padding-bottom:14px;border-bottom:1px solid var(--lcb-line)}
+  .week-av{width:40px;height:40px;border-radius:50%;background:var(--lcb-tint);color:var(--lcb-primary);font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+  .week-who{min-width:0}
+  .week-who b{display:block;font-size:15px}
+  .week-who span{display:block;font-size:13px;color:var(--lcb-ink-3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .week-status{margin-left:auto;display:grid}
+  .week-status>*{grid-area:1/1;justify-self:end}
+  .week-status .is-attention{opacity:0}
+  .week-feed{list-style:none;margin:0;padding:0}
+  .week-feed li{display:grid;grid-template-columns:26px 86px minmax(0,1fr);column-gap:12px;align-items:start;padding:13px 0;border-top:1px solid var(--lcb-line)}
+  .week-feed li:first-child{border-top:0}
+  .week-feed time{font-size:13px;line-height:26px;color:var(--lcb-ink-3);font-variant-numeric:tabular-nums;white-space:nowrap}
+  .week-feed .x{font-size:14.5px;line-height:1.5;color:var(--lcb-ink-2);padding-top:2px}
+  .week-feed .x b{color:var(--lcb-ink);font-weight:600}
+  @media(max-width:480px){
+    .week-card{padding:16px 16px 4px}
+    .week-who span{white-space:normal}
+    .week-feed li{grid-template-columns:26px minmax(0,1fr)}
+    .week-feed time{grid-column:2;line-height:1.3;padding-top:1px}
+    .week-feed .x{grid-column:2}
+  }
+  .week figcaption{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 16px;margin-top:14px;font-size:13px;color:var(--lcb-ink-3)}
+  .replay{font:inherit;font-size:13px;font-weight:600;color:var(--lcb-primary);background:none;border:0;padding:6px 0;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+  .replay[hidden]{display:none}
+  .replay svg{width:14px;height:14px}
+  .week.is-armed .week-feed li{opacity:0;transform:translateY(8px)}
+  .week.is-armed .week-status .is-attention{opacity:1}
+  .week.is-armed .week-status .is-completed{opacity:0}
+  .week.is-playing .week-feed li{animation:weekIn .5s var(--lcb-ease) both;animation-delay:calc(var(--i) * .9s + .3s)}
+  .week.is-playing .week-status .is-attention{animation:weekOut .3s linear both;animation-delay:4.1s}
+  .week.is-playing .week-status .is-completed{animation:weekFade .3s linear both;animation-delay:4.1s}
+  @keyframes weekIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  @keyframes weekFade{from{opacity:0}to{opacity:1}}
+  @keyframes weekOut{from{opacity:1}to{opacity:0}}
+  @media(prefers-reduced-motion:reduce){
+    .week.is-armed .week-feed li,.week.is-armed .week-status .is-completed{opacity:1;transform:none}
+    .week.is-armed .week-status .is-attention{opacity:0}
+    .replay{display:none}
+  }
+
+  /* ===== section heads ===== */
+  .head{max-width:700px;margin-bottom:44px}
+  .head h2{margin-bottom:14px}
+
+  /* ===== for agencies ===== */
+  .agency3{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px}
+  @media(max-width:860px){.agency3{grid-template-columns:minmax(0,1fr);gap:28px}}
+  .agency3 li{border-top:2px solid var(--lcb-ink);padding-top:20px}
+  .agency3 svg{width:24px;height:24px;color:var(--lcb-primary);margin-bottom:12px}
+  .agency3 h3{font-size:1.15rem;letter-spacing:-.015em;margin-bottom:8px}
+  .agency3 p{font-size:15.5px;line-height:1.6;color:var(--lcb-ink-2)}
+
+  /* ===== the map ===== */
+  .lcb-body .map-note{margin-top:30px;font-size:14px;color:var(--lcb-ink-3)}
+
+  /* ===== one section per workflow ===== */
+  .wf{padding:clamp(60px,7.5vw,96px) 0;border-top:1px solid var(--lcb-line)}
+  .wf-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:center}
+  .wf.rev .wf-copy{order:2}
+  @media(max-width:900px){.wf-grid{grid-template-columns:minmax(0,1fr);gap:36px}.wf.rev .wf-copy{order:0}}
+  .lcb-body .wf-when{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:600;color:var(--tone);margin-bottom:14px}
+  .wf h2{font-size:clamp(1.75rem,3.2vw,2.35rem);line-height:1.1;margin-bottom:14px}
+  .wf-problem{font-size:17px;line-height:1.6;color:var(--lcb-ink-2);max-width:500px}
+  .steps{list-style:none;margin:26px 0 0;padding:0;max-width:500px}
+  .steps li{position:relative;padding:0 0 15px 30px;font-size:15px;line-height:1.45;color:var(--lcb-ink)}
+  .steps li::before{content:"";position:absolute;left:5px;top:5px;width:9px;height:9px;border-radius:50%;background:var(--lcb-canvas);border:2px solid var(--tone)}
+  .steps li::after{content:"";position:absolute;left:11px;top:20px;bottom:1px;width:1px;background:var(--lcb-line-2)}
+  .steps li:last-child{padding-bottom:0}
+  .steps li:last-child::after{display:none}
+  .steps .when::before{background:var(--tone)}
+  .steps .when b{font-weight:600}
+  .steps .wait{color:var(--lcb-ink-3)}
+  .steps .wait::before{border-color:var(--lcb-line-2)}
+  .lcb-body .wf-out{display:flex;gap:10px;align-items:flex-start;margin-top:26px;font-family:var(--lcb-font-display);font-weight:600;font-size:1.1rem;line-height:1.35;letter-spacing:-.01em;color:var(--lcb-ink);max-width:500px}
+  .wf-out svg{width:22px;height:22px;color:var(--lcb-ok-dot);flex:0 0 auto;margin-top:1px}
+  .lcb-body .wf-fine{margin-top:14px;font-size:14px;line-height:1.55;color:var(--lcb-ink-3);max-width:500px}
+
+  /* the stage every example sits on */
+  .fig{margin:0}
+  .stage{position:relative;background:var(--lcb-soft);border:1px solid var(--lcb-line);border-radius:var(--lcb-r-xl);padding:clamp(36px,5vw,52px) clamp(18px,4vw,40px) clamp(24px,4vw,40px)}
+  .ex-tag{position:absolute;top:12px;left:14px;font-size:12px;font-weight:600;color:var(--lcb-ink-3)}
+  .fig figcaption{margin-top:12px;font-size:13.5px;line-height:1.5;color:var(--lcb-ink-3);text-align:center}
+
+  /* email */
+  .mail{background:#fff;border:1px solid var(--lcb-line);border-radius:14px;box-shadow:var(--lcb-shadow-md);padding:18px 20px 20px;max-width:440px;margin:0 auto;font-size:14.5px;line-height:1.55;color:var(--lcb-ink-2)}
+  .mail-from{display:flex;align-items:center;gap:10px;padding-bottom:12px;margin-bottom:14px;border-bottom:1px solid var(--lcb-line)}
+  .mail-av{width:34px;height:34px;border-radius:50%;background:var(--client);color:#fff;font-weight:700;font-size:12.5px;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+  .mail-from b{display:block;font-size:14px;color:var(--lcb-ink);line-height:1.3}
+  .mail-from div span{display:block;font-size:12.5px;color:var(--lcb-ink-3);line-height:1.3}
+  .lcb-body .mail-subj{font-family:var(--lcb-font-display);font-weight:600;font-size:1.05rem;line-height:1.3;letter-spacing:-.01em;color:var(--lcb-ink);margin-bottom:12px}
+  .mail p + p{margin-top:10px}
+  .mail-fact{margin:14px 0 0;border:1px dashed var(--lcb-line-2);border-radius:10px;padding:10px 12px;font-size:13px;color:var(--lcb-ink-3)}
+  .mail-fact b{display:block;font-size:14px;color:var(--lcb-ink)}
+  .mail-btn{display:inline-block;margin-top:14px;background:var(--client);color:#fff;border-radius:8px;padding:9px 15px;font-weight:600;font-size:13.5px}
+  .mail-att{display:flex;align-items:center;gap:11px;margin-top:14px;border:1px solid var(--lcb-line);border-radius:10px;padding:10px 12px}
+  .mail-att i{width:30px;height:36px;border-radius:5px;background:var(--lcb-decl-bg);border:1px solid var(--lcb-decl-line);color:var(--lcb-decl-fg);font:700 9px/34px var(--lcb-font-text);font-style:normal;text-align:center;flex:0 0 auto}
+  .mail-att b{display:block;font-size:13.5px;color:var(--lcb-ink);line-height:1.3}
+  .mail-att span{display:block;font-size:12px;color:var(--lcb-ink-3)}
+
+  /* inbox rows */
+  .inbox{max-width:440px;margin:0 auto}
+  .inbox + .inbox{margin-top:18px}
+  .lcb-body .inbox-h{font-size:12.5px;font-weight:600;color:var(--lcb-ink-3);margin:0 0 8px 2px}
+  .inbox-row{display:flex;gap:11px;align-items:flex-start;background:#fff;border:1px solid var(--lcb-line);border-radius:12px;box-shadow:var(--lcb-shadow-md);padding:13px 15px}
+  .inbox-row .mail-av{width:30px;height:30px;font-size:11.5px}
+  .inbox-row .mail-av.is-sys{background:var(--lcb-ink)}
+  .inbox-row div{min-width:0;flex:1}
+  .inbox-row b{display:block;font-size:14px;line-height:1.35;color:var(--lcb-ink)}
+  .inbox-row div span{display:block;font-size:13px;line-height:1.45;color:var(--lcb-ink-3);margin-top:2px}
+  .inbox-row time{font-size:12px;color:var(--lcb-ink-3);white-space:nowrap}
+
+  /* internal alert */
+  .alertm{background:#fff;border:1px solid var(--lcb-line);border-left:4px solid var(--lcb-decl-dot);border-radius:12px;box-shadow:var(--lcb-shadow-md);padding:18px 20px;max-width:440px;margin:0 auto;font-size:14px;line-height:1.5;color:var(--lcb-ink-2)}
+  .alertm-k{display:block;font-size:12.5px;font-weight:600;color:var(--lcb-decl-fg);margin-bottom:4px}
+  .alertm-t{display:block;font-family:var(--lcb-font-display);font-weight:600;font-size:1.08rem;line-height:1.3;color:var(--lcb-ink);margin-bottom:6px}
+  .alertm-said{margin:14px 0;background:var(--lcb-soft);border-radius:10px;padding:12px 14px}
+  .alertm-said span{display:block;font-size:12.5px;font-weight:600;color:var(--lcb-ink-3);margin-bottom:3px}
+  .alertm-said q{font-size:15px;color:var(--lcb-ink);quotes:"\201C" "\201D"}
+  .alertm dl{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;margin:0;font-size:13.5px}
+  .alertm dt{color:var(--lcb-ink-3)} .alertm dd{margin:0;color:var(--lcb-ink);font-weight:500}
+
+  /* pipeline */
+  .pipe{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;max-width:460px;margin:0 auto}
+  .pipe-col{background:#fff;border:1px solid var(--lcb-line);border-radius:12px;padding:10px;min-height:170px}
+  .pipe-col.is-on{border-color:color-mix(in srgb,var(--lcb-primary) 35%,var(--lcb-line))}
+  .pipe-h{display:block;font-size:12.5px;font-weight:600;color:var(--lcb-ink-3);margin-bottom:9px}
+  .pipe-card{border:1px solid var(--lcb-line);border-radius:9px;padding:9px 10px;box-shadow:var(--lcb-shadow-sm);font-size:13px;font-weight:600;color:var(--lcb-ink);line-height:1.3}
+  .pipe-card span{display:block;font-size:12px;font-weight:400;color:var(--lcb-ink-3);margin-top:2px}
+  .pipe-card .lcb-badge{margin-top:9px;font-size:11px;padding:3px 8px}
+  .pipe-card.is-ghost{border-style:dashed;box-shadow:none;color:var(--lcb-ink-3);font-weight:500;background:transparent}
+  @media(max-width:420px){.pipe{grid-template-columns:1fr 1fr}.pipe-col:last-child{display:none}}
+
+  /* the chase, day by day */
+  .ladder{list-style:none;margin:0 auto;padding:0;max-width:420px}
+  .ladder li{position:relative;display:grid;grid-template-columns:62px minmax(0,1fr);gap:14px;padding-bottom:22px}
+  .ladder li:last-child{padding-bottom:0}
+  .ladder li::after{content:"";position:absolute;left:30px;top:30px;bottom:4px;width:2px;background:var(--lcb-line-2)}
+  .ladder li:last-child::after{display:none}
+  .ladder-day{position:relative;z-index:1;align-self:start;text-align:center;font-size:12.5px;font-weight:600;color:var(--lcb-attn-fg);background:#fff;border:1px solid var(--lcb-attn-line);border-radius:var(--lcb-r-pill);padding:4px 0}
+  .ladder b{display:block;font-size:15px;line-height:1.4;color:var(--lcb-ink);padding-top:3px}
+  .ladder span.d{display:block;font-size:13.5px;color:var(--lcb-ink-3);margin-top:2px}
+  .ladder li.is-human .ladder-day{color:#fff;background:var(--lcb-ink);border-color:var(--lcb-ink)}
+
+  /* four stall types */
+  .lcb-body .stalls-h{margin:56px 0 18px;font-size:1.15rem;letter-spacing:-.015em}
+  .stalls{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+  @media(max-width:960px){.stalls{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media(max-width:520px){.stalls{grid-template-columns:minmax(0,1fr)}}
+  .stall{position:relative;overflow:hidden;background:#fff;border:1px solid var(--lcb-line);border-radius:12px;padding:19px 16px 18px}
+  .stall::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:var(--tone)}
+  .stall b{display:block;font-size:15.5px;color:var(--lcb-ink)}
+  .stall .t{display:block;font-size:13px;font-weight:600;color:var(--tone);margin:3px 0 8px}
+  .stall p{font-size:14px;line-height:1.5;color:var(--lcb-ink-2)}
+
+  /* start with 2, 4 and 6 */
+  .start3{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+  @media(max-width:860px){.start3{grid-template-columns:minmax(0,1fr)}}
+  .start3 li{background:#fff;border:1px solid var(--lcb-line);border-radius:var(--lcb-r-lg);padding:20px 20px 22px}
+  .start3 .wdot{margin-bottom:14px}
+  .start3 h3{font-size:1.1rem;letter-spacing:-.015em;margin-bottom:6px}
+  .lcb-body .start3 h3 a:hover{color:var(--lcb-primary)}
+  .start3 p{font-size:15px;line-height:1.55;color:var(--lcb-ink-2)}
+  .lcb-body .pair{display:flex;gap:12px;align-items:flex-start;margin-top:22px;max-width:760px;background:var(--lcb-attn-bg);border:1px solid var(--lcb-attn-line);border-radius:var(--lcb-r-md);padding:14px 16px;font-size:15px;line-height:1.55;color:var(--lcb-ink)}
+  .pair svg{width:20px;height:20px;color:var(--lcb-attn-fg);flex:0 0 auto;margin-top:1px}
+
+  /* rules */
+  .rules{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:34px 56px;max-width:980px}
+  @media(max-width:760px){.rules{grid-template-columns:minmax(0,1fr);gap:26px}}
+  .rules li{padding-left:18px;border-left:2px solid var(--lcb-line-2)}
+  .rules h3{font-size:1.1rem;letter-spacing:-.015em;margin-bottom:6px}
+  .rules p{font-size:15.5px;line-height:1.6;color:var(--lcb-ink-2)}
+
+  /* closing cta */
+  .close h2{color:#fff;max-width:720px;text-wrap:balance}
+  .close p{color:var(--lcb-on-dark-mut);font-size:1.1rem;line-height:1.6;max-width:560px;margin-top:14px}
+  .close .btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+  .close .fine{margin-top:22px;font-size:14.5px}
+  .lcb-body .close .fine a{color:#fff;font-weight:600;text-decoration:underline;text-underline-offset:3px}
+  @media(max-width:430px){.close .btns .lcb-btn{width:100%;justify-content:center}}
+
+  /* footer */
+  .ft{background:#080B16;color:var(--lcb-on-dark-mut);padding:52px 0 36px}
+  .ft-top{display:flex;justify-content:space-between;gap:34px;flex-wrap:wrap;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.08)}
+  .ft-brand{max-width:340px} .ft-brand .lcb-logo{margin-bottom:13px}
+  .ft-tag{font-size:14px;line-height:1.6}
+  .ft-links{display:flex;gap:54px;flex-wrap:wrap}
+  .ft-col .footer-heading{font-family:var(--lcb-font-mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:#fff;margin:0 0 13px;font-weight:600}
+  .ft-col a{display:block;font-size:14.5px;margin-bottom:9px;color:var(--lcb-on-dark-mut)}.ft-col a:hover{color:#fff}
+  .ft-legal{margin-top:24px;font-size:12.5px;line-height:1.7;color:#767F94;max-width:820px}
+  .ft-bot{margin-top:14px;font-size:12.5px;color:#767F94}
+</style>
+<link rel="stylesheet" href="/assets/fonts.css?v=2ee1d9f1">
+<link rel="stylesheet" href="/assets/seo-content.css?v=84a79680">
+<script id="lcbridge-structured-data" type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://lcbridge.app/#organization",
+      "name": "LC Bridge",
+      "legalName": "GoCSM Innovations Private Limited",
+      "alternateName": [
+        "LCBridge",
+        "Lead Connector Bridge"
+      ],
+      "url": "https://lcbridge.app/",
+      "sameAs": [
+        "https://www.linkedin.com/company/lc-bridge/",
+        "https://www.g2.com/sellers/lc-bridge"
+      ],
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://lcbridge.app/assets/lcbridge-lockup-black.png"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "support@lcbridge.app",
+        "url": "https://lcbridge.app/about/"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://lcbridge.app/#website",
+      "url": "https://lcbridge.app/",
+      "name": "LC Bridge",
+      "publisher": {
+        "@id": "https://lcbridge.app/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://lcbridge.app/docusign-integration/workflows#webpage",
+      "url": "https://lcbridge.app/docusign-integration/workflows",
+      "name": "DocuSign Workflows for HighLevel: Contracts That Follow Themselves Up | LC Bridge",
+      "description": "Six pre-built HighLevel workflows for DocuSign contracts. They send it when the deal is ready, make sure it lands, follow up when it goes quiet, and stop the moment it's signed.",
+      "isPartOf": {
+        "@id": "https://lcbridge.app/#website"
+      },
+      "publisher": {
+        "@id": "https://lcbridge.app/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://lcbridge.app/docusign-integration/workflows#breadcrumbs"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://lcbridge.app/docusign-integration/workflows#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://lcbridge.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "DocuSign Integration",
+          "item": "https://lcbridge.app/docusign-integration/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Contracts that follow themselves up.",
+          "item": "https://lcbridge.app/docusign-integration/workflows"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="lcb-body">
+
+<nav class="nav"><div class="lcb-wrap nav-in">
+  <span class="nav-lock"><a class="lcb-logo" href="/docusign-integration/" aria-label="Docusign Integration home"><img src="/assets/docusign-logo.svg" alt="Docusign" width="139" height="28" style="height:28px;width:auto;display:block"></a><a class="nav-by" href="/" aria-label="LC Bridge home"><span class="by-txt">integration by</span><img src="/assets/lcbridge-lockup-black.svg" alt="LC Bridge" width="180" height="60" class="by-lock"></a></span>
+  <div class="nav-links" id="navmenu">
+    <a href="/docusign-integration/pricing">Pricing</a><a href="/docusign-integration/#capabilities">Capabilities</a><a href="/docusign-integration/workflows" aria-current="page">Workflows</a><a href="/docusign-integration/#industries">Industries</a><a href="/docusign-integration/docs/">Docs</a><a href="/docusign-integration/#faq">FAQ</a>
+  </div>
+  <a href="/docusign-integration/book-a-call" class="lcb-btn lcb-btn--primary">Book a call</a>
+
+  <button class="lcb-navtoggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navmenu"><span></span><span></span><span></span></button>
+</div></nav>
+
+<nav class="crumb lcb-wrap" aria-label="Breadcrumb"><ol>
+  <li><a href="/">Home</a></li><li aria-hidden="true">/</li><li><a href="/docusign-integration/">DocuSign Integration</a></li><li aria-hidden="true">/</li><li aria-current="page">Workflows</li>
+</ol></nav>
+
+<!-- HERO -->
+<main id="main">
+<header class="hero"><div class="lcb-wrap hero-grid">
+  <div>
+    <blockquote class="quote">
+      <p>&ldquo;I get the email when the contract is initially sent and not when it is signed.&rdquo;</p>
+      <cite>A HighLevel user, on HighLevel&rsquo;s ideas board</cite>
+    </blockquote>
+    <h1>Contracts that follow themselves up.</h1>
+    <p class="sub">Six pre-built workflows for your clients&rsquo; sub-accounts. They send the contract when the deal is ready, make sure it lands, follow up when it goes quiet, and tell your client the moment it&rsquo;s signed. Or the moment it isn&rsquo;t.</p>
+    <div class="hero-cta">
+      <a href="/docusign-integration/#apply" class="lcb-btn lcb-btn--trial lcb-btn--lg">Start your 14-day trial <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <a href="#six" class="lcb-btn lcb-btn--ghost lcb-btn--lg">See the six workflows</a>
+    </div>
+    <p class="hero-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Pre-built and switched off until you turn them on.</p>
+  </div>
+
+  <figure class="week" id="week" data-play>
+    <div class="week-card">
+      <div class="week-head">
+        <span class="week-av" aria-hidden="true">JH</span>
+        <div class="week-who"><b>John Henderson</b><span>Buyer Representation Agreement</span></div>
+        <span class="week-status">
+          <span class="lcb-badge is-attention" aria-hidden="true"><span class="dot"></span>Waiting</span>
+          <span class="lcb-badge is-completed"><span class="dot"></span>Signed</span>
+        </span>
+      </div>
+      <ol class="week-feed">
+        <li style="--i:0"><span class="wdot" data-tone="brand" role="img" aria-label="Workflow 1">1</span><time>Mon 9:00 am</time><p class="x"><b>Deal moved to Contract.</b> The agreement went out on its own.</p></li>
+        <li style="--i:1"><span class="wdot" data-tone="track" role="img" aria-label="Workflow 2">2</span><time>Mon 9:05 am</time><p class="x"><b>Email to John:</b> &ldquo;Your agreement is on its way,&rdquo; with the subject line to search for.</p></li>
+        <li style="--i:2"><span class="wdot" data-tone="track" role="img" aria-label="Workflow 3">3</span><time>Tue 7:42 pm</time><p class="x"><b>John opened it.</b> Yvette gets an email saying now&rsquo;s a good time to call.</p></li>
+        <li style="--i:3"><span class="wdot" data-tone="attn" role="img" aria-label="Workflow 4">4</span><time>Thu 7:42 pm</time><p class="x"><b>Two days, still unsigned.</b> John gets &ldquo;Anything holding this up?&rdquo;</p></li>
+        <li style="--i:4"><span class="wdot" data-tone="ok" role="img" aria-label="Workflow 6">6</span><time>Fri 11:18 am</time><p class="x"><b>Signed.</b> John gets his copy, and every follow-up switches off.</p></li>
+      </ol>
+    </div>
+    <figcaption><span>One contract&rsquo;s week. Nobody declined, so workflow 5 never ran. Coastal Realty, Yvette and John are made up.</span><button class="replay" type="button" data-replay="week" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>Play it again</button></figcaption>
+  </figure>
+</div></header>
+
+<!-- FOR AGENCIES -->
+<section class="lcb-section lcb-section--soft" id="agencies"><div class="lcb-wrap">
+  <div class="head">
+    <h2 class="lcb-h2">You don&rsquo;t build a thing per client.</h2>
+    <p class="lcb-lede">The six workflows come with the integration. Every client sub-account gets the same set, so there&rsquo;s no Zap or Make scenario to rebuild and babysit for each one.</p>
+  </div>
+  <ul class="agency3">
+    <li>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="10" rx="5"/><circle cx="7" cy="12" r="3"/></svg>
+      <h3>Off until someone turns them on</h3>
+      <p>They arrive as drafts. Nothing reaches your client&rsquo;s customers until you, or your client, switch one on.</p>
+    </li>
+    <li>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v12H5.2L4 17.2z"/><path d="M8 9h8M8 12h5"/></svg>
+      <h3>Wearing your client&rsquo;s brand</h3>
+      <p>Each email pulls in that sub-account&rsquo;s logo, business name and address, and it&rsquo;s signed by the rep. Neither DocuSign&rsquo;s name nor ours appears in them.</p>
+    </li>
+    <li>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 14 4 9l5-5"/><path d="M4 9h10.5A5.5 5.5 0 0 1 20 14.5 5.5 5.5 0 0 1 14.5 20H11"/></svg>
+      <h3>Replies reach a real person</h3>
+      <p>Every email is sent as the rep, so when a customer hits reply, it lands in a person&rsquo;s inbox. Not a no-reply address.</p>
+    </li>
+  </ul>
+</div></section>
+
+<!-- THE MAP -->
+<section class="lcb-section" id="six"><div class="lcb-wrap">
+  <div class="head">
+    <h2 class="lcb-h2">A workflow for each moment in a contract&rsquo;s life.</h2>
+    <p class="lcb-lede">The first four keep a contract moving. Five and six are the exits: the moment it&rsquo;s signed or refused, the follow-ups stop.</p>
+  </div>
+  <ol class="lcb-life" aria-label="The six workflows, in the order a contract lives">
+    <li class="lcb-life-step" data-tone="brand"><span class="lcb-life-dot" data-n="1" aria-hidden="true">1</span><a class="lcb-life-t" href="#w1">The deal is ready</a><span class="lcb-life-o">Nobody has to remember to send it.</span></li>
+    <li class="lcb-life-step" data-tone="track"><span class="lcb-life-dot" data-n="2" aria-hidden="true">2</span><a class="lcb-life-t" href="#w2">It&rsquo;s just gone out</a><span class="lcb-life-o">They know where to look, even if it lands in spam.</span><span class="lcb-life-tag">Start here</span></li>
+    <li class="lcb-life-step" data-tone="track"><span class="lcb-life-dot" data-n="3" aria-hidden="true">3</span><a class="lcb-life-t" href="#w3">They open it</a><span class="lcb-life-o">You can call while it&rsquo;s still on their screen.</span></li>
+    <li class="lcb-life-step" data-tone="attn"><span class="lcb-life-dot" data-n="4" aria-hidden="true">4</span><a class="lcb-life-t" href="#w4">It goes quiet</a><span class="lcb-life-o">Three follow-ups, then a nudge to pick up the phone.</span><span class="lcb-life-tag">Start here</span></li>
+    <li class="lcb-life-exits">
+      <span class="lcb-life-k">Then it ends one of two ways</span>
+      <ol>
+        <li class="lcb-life-exit" data-tone="decl"><span class="lcb-life-dot" data-n="5" aria-hidden="true">5</span><a class="lcb-life-t" href="#w5">They say no</a><span class="lcb-life-o">The chasing stops, and the rep hears first, with any reason they gave.</span></li>
+        <li class="lcb-life-exit" data-tone="ok"><span class="lcb-life-dot" data-n="6" aria-hidden="true">6</span><a class="lcb-life-t" href="#w6">They sign</a><span class="lcb-life-o">Nobody chases a contract that&rsquo;s already signed.</span><span class="lcb-life-tag">Start here</span></li>
+      </ol>
+    </li>
+  </ol>
+  <p class="map-note">Every example below uses Coastal Realty, a made-up business, and its made-up customer, John.</p>
+</div></section>
+
+<!-- 1 -->
+<section class="wf" id="w1" data-tone="brand"><div class="lcb-wrap wf-grid">
+  <div class="wf-copy">
+    <p class="wf-when"><span class="wdot">1</span>When the deal is ready</p>
+    <h2>Send when the deal is ready</h2>
+    <p class="wf-problem">A deal reaches the paperwork stage, and then it waits. For someone to notice, open DocuSign, find the right template and type the customer&rsquo;s details in again.</p>
+    <ol class="steps">
+      <li class="when"><b>When</b> the deal moves to your paperwork stage</li>
+      <li>The contract goes out from your template, addressed to that contact</li>
+      <li>The deal&rsquo;s owner gets an email saying it&rsquo;s gone</li>
+    </ol>
+    <p class="wf-out"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Nobody has to remember to send it.</p>
+  </div>
+  <figure class="fig">
+    <div class="stage">
+      <span class="ex-tag">Example</span>
+      <div class="pipe">
+        <div class="pipe-col"><span class="pipe-h">Proposal</span><div class="pipe-card is-ghost">John Henderson</div></div>
+        <div class="pipe-col is-on"><span class="pipe-h">Contract</span><div class="pipe-card">John Henderson<span>412 Oak Ave</span><span class="lcb-badge is-ontrack"><span class="dot"></span>Agreement sent</span></div></div>
+        <div class="pipe-col"><span class="pipe-h">Won</span></div>
+      </div>
+    </div>
+    <figcaption>Move the card to Contract. The contract goes out.</figcaption>
+  </figure>
+</div></section>
+
+<!-- 2 -->
+<section class="wf rev" id="w2" data-tone="track"><div class="lcb-wrap wf-grid">
+  <div class="wf-copy">
+    <p class="wf-when"><span class="wdot">2</span>When it&rsquo;s just gone out</p>
+    <h2>Make sure it lands</h2>
+    <p class="wf-problem">The contract doesn&rsquo;t arrive from your client. It comes in a separate email from DocuSign, which can easily end up in Promotions or spam while everyone assumes the customer is just thinking it over.</p>
+    <ol class="steps">
+      <li class="when"><b>When</b> a contract is sent, from HighLevel or straight from DocuSign</li>
+      <li class="wait">Wait 5 minutes, so DocuSign&rsquo;s own email gets there first</li>
+      <li>An email from the rep with the exact subject line to search for</li>
+    </ol>
+    <p class="wf-out"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>They know where to look, even if it lands in spam.</p>
+  </div>
+  <figure class="fig">
+    <div class="stage">
+      <span class="ex-tag">Example</span>
+      <div class="mail">
+        <div class="mail-from"><span class="mail-av" aria-hidden="true">YA</span><div><b>Yvette Alvarez</b><span>Coastal Realty, to John</span></div></div>
+        <p class="mail-subj">Your Buyer Representation Agreement is on its way</p>
+        <p>Hi John, I&rsquo;ve just sent over the Buyer Representation Agreement for your signature. It comes as a separate email from our signing service, so it can land in Promotions or spam.</p>
+        <div class="mail-fact">Search your inbox for<b>Buyer Representation Agreement</b></div>
+        <p style="margin-top:12px">It takes about three minutes and works fine on a phone.</p>
+      </div>
+    </div>
+    <figcaption>What John gets, five minutes after the contract goes out.</figcaption>
+  </figure>
+</div></section>
+
+<!-- 3 -->
+<section class="wf" id="w3" data-tone="track"><div class="lcb-wrap wf-grid">
+  <div class="wf-copy">
+    <p class="wf-when"><span class="wdot">3</span>When they open it</p>
+    <h2>Catch them while it&rsquo;s open</h2>
+    <p class="wf-problem">The best time to answer a question is while the contract is still on their screen. Leave it until tomorrow and the question turns into &ldquo;I&rsquo;ll look at it later.&rdquo;</p>
+    <ol class="steps">
+      <li class="when"><b>When</b> they open the contract</li>
+      <li>The rep gets an email straight away: good time to call</li>
+      <li class="wait">Wait 30 minutes</li>
+      <li>An email from the rep asking if there&rsquo;s anything to walk through</li>
+    </ol>
+    <p class="wf-out"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>You can call while it&rsquo;s still on their screen.</p>
+  </div>
+  <figure class="fig">
+    <div class="stage">
+      <span class="ex-tag">Example</span>
+      <div class="inbox">
+        <p class="inbox-h">Yvette&rsquo;s inbox</p>
+        <div class="inbox-row"><span class="mail-av is-sys" aria-hidden="true">C</span><div><b>John Henderson just opened the Buyer Representation Agreement</b><span>Good time to call. A follow-up email goes to him in 30 minutes.</span></div><time>now</time></div>
+      </div>
+      <div class="inbox">
+        <p class="inbox-h">John&rsquo;s inbox, half an hour later</p>
+        <div class="inbox-row"><span class="mail-av" aria-hidden="true">YA</span><div><b>Quick question about your Buyer Representation Agreement</b><span>Before you sign, is there anything on it you&rsquo;d like me to explain?</span></div><time>8:12 pm</time></div>
+      </div>
+    </div>
+    <figcaption>John&rsquo;s email never mentions that he opened it.</figcaption>
+  </figure>
+</div></section>
+
+<!-- 4 -->
+<section class="wf rev" id="w4" data-tone="attn"><div class="lcb-wrap">
+  <div class="wf-grid">
+    <div class="wf-copy">
+      <p class="wf-when"><span class="wdot">4</span>When it goes quiet</p>
+      <h2>Chase what stalled</h2>
+      <p class="wf-problem">This is where deals quietly die. Nobody says no. The contract just stops moving, and everyone assumes someone else is on it.</p>
+      <p class="wf-out"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Three follow-ups, then a nudge to pick up the phone.</p>
+      <p class="wf-fine">Texts go from your client&rsquo;s own number and include an opt-out. Only switch it on if the contacts it reaches have agreed to get texts.</p>
+    </div>
+    <figure class="fig">
+      <div class="stage">
+        <span class="ex-tag">The follow-up, counted from the day it stalls</span>
+        <ol class="ladder">
+          <li><span class="ladder-day">Day 0</span><div><b>An email written for that exact stall</b><span class="d">&ldquo;Anything holding this up?&rdquo;</span></div></li>
+          <li><span class="ladder-day">Day 2</span><div><b>A short text from the rep</b><span class="d">&ldquo;Anything I can answer?&rdquo;</span></div></li>
+          <li><span class="ladder-day">Day 5</span><div><b>DocuSign&rsquo;s own reminder</b><span class="d">The one with the signing link in it</span></div></li>
+          <li class="is-human"><span class="ladder-day">Day 7</span><div><b>The rep gets &ldquo;Time to call&rdquo;</b><span class="d">And the workflow stops there</span></div></li>
+        </ol>
+      </div>
+    </figure>
+  </div>
+
+  <h3 class="stalls-h">It knows why a contract is stuck, and follows up differently for each.</h3>
+  <ul class="stalls">
+    <li class="stall" data-tone="track"><b>Sent, not opened</b><span class="t">24 hours after sending</span><p>Usually a delivery problem, not a people problem. The email says where to look.</p></li>
+    <li class="stall" data-tone="attn"><b>Opened, not signed</b><span class="t">48 hours after opening</span><p>Usually one question they haven&rsquo;t asked. The email asks what&rsquo;s holding it up.</p></li>
+    <li class="stall" data-tone="attn"><b>About to expire</b><span class="t">7 days before the deadline</span><p>The only follow-up with any urgency, because the deadline is real.</p></li>
+    <li class="stall" data-tone="decl"><b>Declined</b><span class="t">The moment they say no</span><p>No more chasing. It goes straight to workflow 5.</p></li>
+  </ul>
+</div></section>
+
+<!-- 5 -->
+<section class="wf" id="w5" data-tone="decl"><div class="lcb-wrap wf-grid">
+  <div class="wf-copy">
+    <p class="wf-when"><span class="wdot">5</span>When they say no</p>
+    <h2>Save the declined deal</h2>
+    <p class="wf-problem">A declined contract usually means one thing needs to change. Keep sending reminders and you lose the deal. Go quiet and you lose it anyway.</p>
+    <ol class="steps">
+      <li class="when"><b>When</b> someone declines to sign</li>
+      <li>Every follow-up for that contact stops</li>
+      <li>The rep gets an email and a text, including any reason they typed</li>
+      <li class="wait">Wait 10 minutes, so the rep can call first</li>
+      <li>An email from the rep offering to fix it</li>
+    </ol>
+    <p class="wf-out"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>The chasing stops, and the rep hears first, with any reason they gave.</p>
+  </div>
+  <figure class="fig">
+    <div class="stage">
+      <span class="ex-tag">Example</span>
+      <div class="alertm">
+        <span class="alertm-k">Declined. Call within the hour.</span>
+        <b class="alertm-t">John Henderson declined to sign</b>
+        <p>A customer email goes out in 10 minutes. Beat it with a call if you can.</p>
+        <div class="alertm-said"><span>What he said</span><q>Can we make the term 90 days instead of six months? Happy to sign once that&rsquo;s changed.</q></div>
+        <dl><dt>Agreement</dt><dd>Buyer Representation Agreement</dd><dt>Call</dt><dd>(415) 555-0198</dd></dl>
+      </div>
+    </div>
+    <figcaption>What Yvette sees. The reason is whatever John typed into DocuSign.</figcaption>
+  </figure>
+</div></section>
+
+<!-- 6 -->
+<section class="wf rev" id="w6" data-tone="ok"><div class="lcb-wrap wf-grid">
+  <div class="wf-copy">
+    <p class="wf-when"><span class="wdot">6</span>When they sign</p>
+    <h2>Close the loop when signed</h2>
+    <p class="wf-problem">You hear when the contract goes out, and nothing when it&rsquo;s signed. So the reminders keep going, and one lands after the signature. Nothing makes a business look less like it&rsquo;s paying attention.</p>
+    <ol class="steps">
+      <li class="when"><b>When</b> everyone has signed</li>
+      <li>Every follow-up for that contact stops</li>
+      <li>The customer gets their signed copy, attached and linked</li>
+      <li>The rep gets an email saying it&rsquo;s signed</li>
+    </ol>
+    <p class="wf-out"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Nobody chases a contract that&rsquo;s already signed.</p>
+  </div>
+  <figure class="fig">
+    <div class="stage">
+      <span class="ex-tag">Example</span>
+      <div class="mail">
+        <div class="mail-from"><span class="mail-av" aria-hidden="true">YA</span><div><b>Yvette Alvarez</b><span>Coastal Realty, to John</span></div></div>
+        <p class="mail-subj">That&rsquo;s signed, thank you</p>
+        <p>Hi John, the Buyer Representation Agreement is fully signed. Your copy is attached, and you can download it any time.</p>
+        <div class="mail-att"><i aria-hidden="true">PDF</i><div><b>Buyer Representation Agreement.pdf</b><span>Signed copy</span></div></div>
+        <span class="mail-btn">Download your signed copy</span>
+      </div>
+    </div>
+    <figcaption>Attached and linked, so the copy survives a full inbox.</figcaption>
+  </figure>
+</div></section>
+
+<!-- START HERE -->
+<section class="lcb-section lcb-section--soft" id="start"><div class="lcb-wrap">
+  <div class="head">
+    <h2 class="lcb-h2">Not sure where to start? Turn on 2, 4 and 6.</h2>
+    <p class="lcb-lede">That covers the moment it goes out, the stretch where it goes quiet, and the moment it&rsquo;s signed. Add the others when the team&rsquo;s ready for the alerts.</p>
+  </div>
+  <ol class="start3">
+    <li><span class="wdot" data-tone="track">2</span><h3><a href="#w2">Make sure it lands</a></h3><p>Safe to switch on by itself. It sends one helpful email, and that&rsquo;s all.</p></li>
+    <li><span class="wdot" data-tone="attn">4</span><h3><a href="#w4">Chase what stalled</a></h3><p>Does the real work on every contract that goes quiet.</p></li>
+    <li><span class="wdot" data-tone="ok">6</span><h3><a href="#w6">Close the loop when signed</a></h3><p>Stops the chase the moment the last signature lands.</p></li>
+  </ol>
+  <p class="pair"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg><span>Switch on 4 without 6 and people get chased after they&rsquo;ve signed. Treat them as one switch.</span></p>
+</div></section>
+
+<!-- RULES -->
+<section class="lcb-section" id="written"><div class="lcb-wrap">
+  <div class="head">
+    <h2 class="lcb-h2">Follow-ups your clients won&rsquo;t be embarrassed by.</h2>
+    <p class="lcb-lede">Automated email has a reputation. These were written to the rules a good rep follows without thinking about it.</p>
+  </div>
+  <ul class="rules">
+    <li><h3>Never &ldquo;we saw you opened it&rdquo;</h3><p>Opening a contract decides when a follow-up goes out. It never shows up in what the follow-up says. Nobody likes feeling watched.</p></li>
+    <li><h3>Blame the spam folder, not the person</h3><p>&ldquo;It&rsquo;s probably in a filtered folder&rdquo; gets a reply. &ldquo;You haven&rsquo;t opened it&rdquo; gets silence.</p></li>
+    <li><h3>Only real deadlines</h3><p>The expiry date is DocuSign&rsquo;s, not a sales tactic. That&rsquo;s why it&rsquo;s the only email with any urgency in it.</p></li>
+    <li><h3>Three follow-ups, then a person</h3><p>A fourth automated message teaches people to ignore you. So the workflow stops and hands the contract to the rep.</p></li>
+  </ul>
+</div></section>
+
+<!-- CLOSE -->
+<section class="lcb-section lcb-section--dark close"><div class="lcb-wrap">
+  <h2 class="lcb-h2">Give every client the follow-up they&rsquo;d never have set up themselves.</h2>
+  <p>Try all six free for 14 days in your own sub-account, on the DocuSign account you already have. No card to start.</p>
+  <div class="btns">
+    <a href="/docusign-integration/#apply" class="lcb-btn lcb-btn--trial lcb-btn--lg">Start your 14-day trial <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+    <a href="/docusign-integration/book-a-call" class="lcb-btn lcb-btn--ghost lcb-btn--lg">Book a call</a>
+  </div>
+  <p class="fine">Already have the integration? <a href="/docusign-integration/docs/workflows/">The setup guide</a> walks through each workflow, step by step.</p>
+</div></section>
+
+<!-- FOOTER -->
+</main>
+<footer class="ft"><div class="lcb-wrap">
+  <div class="ft-top">
+    <div class="ft-brand">
+      <a class="lcb-logo" href="/" style="color:#fff"><img src="/assets/lcbridge-lockup-white.svg" alt="LC Bridge" width="180" height="60" style="height:42px;width:auto;display:block"></a>
+      <p class="ft-tag">Deep, white-labeled integrations for the HighLevel ecosystem.</p>
+    </div>
+    <div class="ft-links">
+      <div class="ft-col"><p class="footer-heading">Products</p><a href="/docusign-integration/">DocuSign integration</a><a href="/google-sheets-integration/">Google Sheets integration</a><a href="/community-agents/">Community Agents</a></div>
+      <div class="ft-col"><p class="footer-heading">DocuSign</p><a href="/docusign-integration/workflows">Workflows</a><a href="/docusign-integration/insurance">For insurance</a><a href="/docusign-integration/real-estate">For real estate</a><a href="/docusign-integration/docs/">Documentation</a></div>
+      <div class="ft-col"><p class="footer-heading">Guides</p><a href="/blog/four-ways-a-contract-stalls/">The 4 ways a contract stalls</a><a href="/blog/gohighlevel-esignature-legally-binding/">Is GHL e-sign legally binding?</a><a href="/blog/gohighlevel-integrations/">GoHighLevel integrations</a><a href="/blog/four-levels-of-integration/">The 4 levels of integration</a></div>
+      <div class="ft-col"><p class="footer-heading">Company</p><a href="/about/">About LC Bridge</a><a href="mailto:arun@lcbridge.app">arun@lcbridge.app</a><a href="/docusign-integration/book-a-call">Book a call</a></div>
+    </div>
+  </div>
+  <p class="ft-legal">DocuSign Integration is built by LC Bridge (Lead Connector Bridge). We build white-labeled integrations that HighLevel platforms embed as their own. An independent product that works with DocuSign® and HighLevel®, and is not affiliated with, endorsed by, or sponsored by either. DocuSign and HighLevel are trademarks of their respective owners.</p>
+  <p class="foot-legal-links" style="margin:0 0 12px;font-size:13px;opacity:.9"><a href="/docusign-integration/pricing">Pricing</a> &middot; <a href="/docusign-integration/privacy">Privacy</a> &middot; <a href="/docusign-integration/terms">Terms</a> &middot; <a href="/docusign-integration/refund">Refund</a></p>
+  <p class="ft-bot">© 2026 LC Bridge. All rights reserved.</p>
+</div></footer>
+
+<script>
+/* One-shot reveal: arm each [data-play] block and play it once as it scrolls
+   into view. Reduced motion (or no IntersectionObserver) skips arming, so the
+   finished state simply shows. Nothing loops, so nothing runs after it ends. */
+(function(){
+  var els=document.querySelectorAll('[data-play]');
+  if(!els.length||!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('is-playing'); io.unobserve(e.target); } });
+  },{threshold:.3});
+  els.forEach(function(el){ el.classList.add('is-armed'); io.observe(el); });
+  document.querySelectorAll('[data-replay]').forEach(function(b){
+    var el=document.getElementById(b.getAttribute('data-replay')); if(!el) return;
+    b.hidden=false;
+    b.addEventListener('click',function(){ el.classList.remove('is-playing'); void el.offsetWidth; el.classList.add('is-playing'); });
+  });
+})();
+</script>
+<script>
+/* Mobile nav — shared behaviour (see .lcb-navtoggle in /assets/brand.css). */
+document.documentElement.classList.add('has-navjs');
+document.querySelectorAll('.lcb-navtoggle').forEach(function(btn){
+  var menu = document.getElementById(btn.getAttribute('aria-controls'));
+  if(!menu) return;
+  var nav = btn.closest('nav'), bar = btn.parentElement;
+  /* Below 480px the bar has no room for the CTA, so a copy lives in the panel. */
+  var cta = bar.querySelector('.nav-cta');
+  if(!cta){
+    cta = Array.prototype.filter.call(bar.children, function(el){
+      return el !== menu && !menu.contains(el) && !el.contains(menu) &&
+             (el.classList.contains('lcb-btn') || el.classList.contains('btn'));
+    }).pop();
+  }
+  if(cta && !menu.querySelector('.nav-cta-mobile') && !menu.classList.contains('nav-cta-mobile')){
+    cta.classList.add('nav-bar-cta');
+    var clone = cta.cloneNode(true);
+    clone.classList.remove('nav-bar-cta');
+    clone.classList.add('nav-cta-mobile');
+    clone.removeAttribute('id');
+    clone.querySelectorAll('[id]').forEach(function(n){ n.removeAttribute('id'); });
+    /* Pin each button's own text colour: the panel's link rules would
+       otherwise repaint white-on-brand button text to body ink. */
+    var src = cta.classList.contains('lcb-btn') || cta.classList.contains('btn')
+      ? [cta] : cta.querySelectorAll('.lcb-btn,.btn');
+    var dst = clone.classList.contains('lcb-btn') || clone.classList.contains('btn')
+      ? [clone] : clone.querySelectorAll('.lcb-btn,.btn');
+    Array.prototype.forEach.call(dst, function(el, i){
+      if(src[i]) el.style.color = getComputedStyle(src[i]).color;
+    });
+    menu.appendChild(clone);
+  }
+  function setOpen(open){
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    menu.classList.toggle('is-open', open);
+    if(nav) nav.classList.toggle('is-navopen', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  menu.addEventListener('click', function(e){ if(e.target.closest('a')) setOpen(false); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') setOpen(false); });
+});
+</script>
+<script src="/assets/analytics-config.js?v=cf89bb56" defer></script><script src="/assets/analytics.js?v=82de975e" defer></script>
+</body>
+</html>

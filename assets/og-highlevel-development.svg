@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="LC Bridge — Bring your product into HighLevel">
+  <rect width="1200" height="630" fill="#0B1120"/>
+  <rect x="0" y="0" width="12" height="630" fill="#2A41D8"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="76" y="100" fill="#FFFFFF" font-size="30" font-weight="700">LC Bridge</text>
+    <text x="76" y="160" fill="#A5B1FF" font-size="20" letter-spacing="2">HIGHLEVEL INTEGRATION &amp; CUSTOM DEVELOPMENT</text>
+    <text x="72" y="290" fill="#FFFFFF" font-size="80" font-weight="700" letter-spacing="-2">Bring your product</text>
+    <text x="72" y="384" fill="#FFFFFF" font-size="80" font-weight="700" letter-spacing="-2">into <tspan fill="#A5B1FF">HighLevel.</tspan></text>
+    <text x="76" y="456" fill="#C7CEE0" font-size="27">We helped build it. Now we help you build on it.</text>
+    <path d="M76 499H1124" stroke="#384258"/>
+    <text x="76" y="553" fill="#FFFFFF" font-size="21">Integrations · Marketplace apps · SaaS extensions · AI agents</text>
+    <text x="76" y="598" fill="#A5B1FF" font-size="18">lcbridge.app/highlevel-development</text>
+  </g>
+</svg>

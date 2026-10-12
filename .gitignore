@@ -13,3 +13,8 @@ gsheets-*.png
 benchmark-*.png
 docusign-pillar-*.png
 .gstack/
+
+# Local audits, account reports, screenshots and working drafts.
+/output/
+/docs/
+/Claude outputs/
