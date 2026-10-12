@@ -9,6 +9,7 @@
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/brand.css?v=b0980d3f">
 <style>
   :root{--ink:#0b1220;--muted:#475467;--soft:#667085;--line:#e7e9ee;--pale:#f7f8fb;--brand:#3047c0;--violet:#6938ef}
   *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font:16px/1.65 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
@@ -33,6 +34,7 @@
 </style>
 <link rel="stylesheet" href="/assets/fonts.css?v=2ee1d9f1">
 <link rel="stylesheet" href="/assets/seo-content.css?v=56f5f1a0">
+<link rel="stylesheet" href="/assets/docusign-docs.css?v=fed0c454">
 <script id="lcbridge-structured-data" type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -147,10 +149,13 @@
 }
 </script>
 </head>
-<body>
-<header class="top"><div class="wrap"><div class="brand"><a href="/docusign-integration/" aria-label="Docusign Integration home"><img class="docusign-logo" src="/assets/docusign-logo.svg" alt="Docusign" width="139" height="28"></a><a class="by" href="/" aria-label="LC Bridge home"><span>integration by</span><img class="lcbridge-logo" src="/assets/lcbridge-lockup-black.svg" alt="LC Bridge" width="78" height="26"></a><span class="for">for LeadConnector platforms</span></div><nav class="nav-links" aria-label="Site"><a href="/docusign-integration/">Home</a><a href="/docusign-integration/docs/">Documentation</a></nav></div></header>
-<main class="wrap">
-  <div class="crumb"><a href="/docusign-integration/docs/">Documentation</a><span>/</span>Multiple signers</div>
+<body class="ds-docs"><a class="seo-skip" href="#main">Skip to content</a>
+<header class="ds-header"><div class="ds-header-inner">
+<a class="ds-identity" href="/docusign-integration/" aria-label="DocuSign Integration by LC Bridge home"><img src="/assets/docusign-icon.svg" alt="" width="32" height="32"><span>DocuSign Integration<small>by LC Bridge</small></span></a>
+<nav class="ds-global-nav" aria-label="DocuSign navigation"><a href="/docusign-integration/">Overview</a><a href="/docusign-integration/docs/" aria-current="true">Docs &amp; guides</a><a href="/docusign-integration/pricing">Pricing</a><a href="mailto:support@lcbridge.app">Support</a></nav>
+</div></header>
+<main class="wrap" id="main">
+  <div class="crumb"><a href="/docusign-integration/docs/">Documentation</a><span>/</span>Multiple signers</div><details class="ds-guide-browse"><summary>Browse docs and guides</summary><nav class="ds-section-links" aria-label="DocuSign resource categories"><a href="/docusign-integration/docs/#compare">Compare your options</a><a href="/docusign-integration/docs/#get-started">Get started</a><a href="/docusign-integration/docs/#send-automate">Send and automate</a><a href="/docusign-integration/docs/#use-cases">Use cases and buying guidance</a><a href="/docusign-integration/docs/#go-deeper">Go deeper: integration design</a></nav></details>
   <span class="eyebrow">Template and send guide</span>
   <h1>Send one document to multiple signers</h1>
   <p class="lead">With Docusign by LC Bridge, a document can have more than one signer. Select a HighLevel contact for each signer role, then choose which contact supplies each mapped document value.</p>
@@ -185,8 +190,8 @@
   <table><thead><tr><th>What you see</th><th>What to check</th></tr></thead><tbody><tr><td>A second role is missing</td><td>Confirm the DocuSign template has a second recipient role, then reopen the template in Docusign by LC Bridge and check its Recipients tab.</td></tr><tr><td>A field is blank in preview</td><td>Check its HighLevel field, its “Read from” role, and that the selected contact has a value for that property. Save the template and reopen the send sheet.</td></tr><tr><td>A value comes from the wrong contact</td><td>Inspect the field’s “Read from” role and the contact selected for that role in the send sheet.</td></tr><tr><td>Completed data updates the wrong contact</td><td>Inspect the field’s “Write to” role and confirm its mapping is set to Writeback or Both.</td></tr><tr><td>Send is disabled</td><td>Choose a valid contact for every required signer role and review any contact email validation shown in HighLevel.</td></tr></tbody></table>
   <div class="finish"><p><strong>Ready to test:</strong> Use a non-sensitive demo template, select two test contacts, and confirm both values in the preview before sending.</p></div>
   <p>Need help with the first setup? <a href="mailto:support@lcbridge.app">Contact LC Bridge support</a> or return to the <a href="/docusign-integration/docs/">documentation index</a>.</p>
-</main>
-<footer><div class="wrap"><span>© 2026 LC Bridge · Docusign integration for HighLevel</span><span><a href="/docusign-integration/docs/">Documentation</a> · <a href="/docusign-integration/privacy">Privacy</a></span></div></footer>
+<section class="ds-next" aria-label="Related DocuSign guides"><h2>Keep going</h2><ul><li><a href="/docusign-integration/docs/field-mapping/">Map fields and sync completed answers</a></li><li><a href="/docusign-integration/docs/workflows/">Configure follow-up and completion workflows</a></li><li><a href="/docusign-integration/docs/">Browse all DocuSign docs &amp; guides</a></li></ul></section></main>
+<footer class="ds-footer"><div class="ds-footer-inner"><p>DocuSign Integration by LC Bridge is an independent third-party integration for HighLevel. LC Bridge is not affiliated with or endorsed by DocuSign or HighLevel. All trademarks belong to their respective owners.</p><div class="ds-footer-links"><a href="/docusign-integration/docs/">Docs &amp; guides</a><a href="/docusign-integration/privacy">Privacy</a><a href="/docusign-integration/terms">Terms</a><a href="/docusign-integration/refund">Refund</a><a href="/">LC Bridge</a></div><p>© 2026 LC Bridge · Operated by GoCSM Innovations Private Limited.</p></div></footer>
 <script src="/assets/analytics-config.js?v=cf89bb56" defer></script><script src="/assets/analytics.js?v=82de975e" defer></script>
 </body>
 </html>

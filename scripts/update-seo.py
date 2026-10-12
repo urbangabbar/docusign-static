@@ -17,7 +17,7 @@ FACTS = json.loads((ROOT / 'data/product-facts.json').read_text())
 DATE = FACTS['lastReviewed']
 ASSET_VERSIONS = {
     '/assets/' + name: hashlib.sha256((ROOT / 'assets' / name).read_bytes()).hexdigest()[:8]
-    for name in ['brand.css', 'fonts.css', 'seo-content.css', 'analytics.js', 'analytics-config.js', 'video-player.js', 'docusign-landing.css', 'docusign-landing.js']
+    for name in ['brand.css', 'fonts.css', 'seo-content.css', 'analytics.js', 'analytics-config.js', 'video-player.js', 'docusign-landing.css', 'docusign-landing.js', 'docusign-docs.css', 'docusign-docs.js']
 }
 
 
@@ -111,6 +111,18 @@ def update_page(path):
                'publisher': {'@id': BASE + '/#organization'}}
     graph = [ORG, {'@type': 'WebSite', '@id': BASE + '/#website', 'url': BASE + '/',
                    'name': 'LC Bridge', 'publisher': {'@id': BASE + '/#organization'}}, webpage]
+    if canonical == BASE + '/docusign-integration/docs/':
+        # The hub is static HTML: keep schema aligned with its visible catalogue.
+        resources = re.findall(r'<li\s+data-docs-resource\b[^>]*>\s*<a\s+href="([^"]+)">(.*?)</a>', source, re.S)
+        webpage['@type'] = 'CollectionPage'
+        if resources:
+            catalogue_id = canonical + '#resources'
+            webpage['mainEntity'] = {'@id': catalogue_id}
+            graph.append({'@type': 'ItemList', '@id': catalogue_id,
+                          'name': 'DocuSign docs and guides',
+                          'itemListElement': [{'@type': 'ListItem', 'position': i + 1,
+                                               'name': plain(label), 'url': BASE + html.unescape(url)}
+                                              for i, (url, label) in enumerate(resources)]})
     if canonical != BASE + '/':
         crumbs = [('Home', BASE + '/')]
         if '/docusign-integration/' in canonical and canonical != BASE + '/docusign-integration/':
