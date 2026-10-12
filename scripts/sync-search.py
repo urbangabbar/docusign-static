@@ -174,7 +174,19 @@ def generated(root, policy, manifest):
     for page in manifest['pages']:
         label = page['title'].replace('[', '').replace(']', '')
         llms += f'- [{label}]({page["url"]}): {page["description"]}\n'
-    return {'sitemap.xml': sitemap, 'robots.txt': robots, 'llms.txt': llms,
+    config_path = root / '_config.yml'
+    config = config_path.read_text() if config_path.exists() else 'exclude:\n'
+    header = re.search(r'^exclude:[ \t]*(?:#[^\n]*)?$', config, re.M)
+    if not header:
+        raise ValueError('_config.yml requires an exclude block list for private publishing rules')
+    existing_excludes = {s.strip() for s in re.findall(r'^\s+-\s+([^\n#]+)', config, re.M)}
+    for pattern in policy['internalPaths']:
+        if pattern in ('404.html', '.*'):
+            continue
+        exclusion = pattern[:-1] if pattern.endswith('/*') else pattern
+        if exclusion not in existing_excludes:
+            config = config[:header.end()] + '\n  - ' + exclusion + config[header.end():]
+    return {'sitemap.xml': sitemap, 'robots.txt': robots, 'llms.txt': llms, '_config.yml': config,
             'search-manifest.json': json.dumps(manifest, ensure_ascii=False, indent=2) + '\n'}
 
 

@@ -26,3 +26,5 @@ exclude:
   - scripts/
   - blog-drafts/
   - Claude outputs/
+  - _site/
+  - vendor/

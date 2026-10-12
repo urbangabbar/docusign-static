@@ -7,7 +7,7 @@ description: Keep lcbridge.app public pages, URL migrations, sitemap, llms.txt, 
 
 The user wants every public canonical page discoverable and individually submitted to Google, including `/blog/`, `/products/` and documentation hubs. Google controls actual indexing. Never report submission as indexing or inspections as submission.
 
-Work in the website repository using `AGENTS.md` for GitHub identity. Read `data/search-policy.json`; every non-redirect HTML page is public unless explicitly classified internal. Keep internal sources excluded by `_config.yml`.
+Work in the website repository using `AGENTS.md` for GitHub identity. Read `data/search-policy.json`; every non-redirect HTML page is public unless explicitly classified internal. The generator also adds internal publishing exclusions to `_config.yml`; the build verifies no internal policy path is published. Use this site's HTML page format for new pages; a new content source format requires extending the inventory before publication.
 
 Before publishing:
 

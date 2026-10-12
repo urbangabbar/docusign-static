@@ -81,6 +81,15 @@ class SearchSyncTests(unittest.TestCase):
         self.page('brand/index.html', '/brand/', robots='<meta name="robots" content="noindex">')
         self.assertEqual(sync.run(self.root, True), 0)
         self.assertEqual(len(self.manifest()['pages']), 1)
+        self.assertIn('  - brand/', (self.root / '_config.yml').read_text())
+
+    def test_new_internal_directory_updates_publishing_exclusions(self):
+        self.policy['internalPaths']['private-reports/*'] = 'Internal reports'
+        (self.root / 'data/search-policy.json').write_text(json.dumps(self.policy))
+        self.page('private-reports/index.html', '/private-reports/')
+        self.assertEqual(sync.run(self.root, True), 0)
+        self.assertEqual(len(self.manifest()['pages']), 1)
+        self.assertIn('  - private-reports/', (self.root / '_config.yml').read_text())
 
     def test_migration_redirect_is_not_an_indexing_destination(self):
         self.page('index.html', '/', '<a href="/old">Old</a>')
