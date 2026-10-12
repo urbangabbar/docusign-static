@@ -7,6 +7,7 @@ GSC Wizard and the signed-in Search Console UI perform the actual external actio
 import argparse
 from datetime import datetime, timedelta, timezone
 import json
+from hashlib import sha256
 from pathlib import Path
 from urllib.request import Request, urlopen
 
@@ -26,6 +27,7 @@ def reconcile(state, manifest):
         if url not in current:
             entry['status'] = 'retired'
     state['manifest'] = manifest
+    state['manifestHash'] = sha256(json.dumps(manifest, sort_keys=True).encode()).hexdigest()
     state['lastReconciledAt'] = datetime.now(timezone.utc).isoformat()
     return state
 
@@ -37,6 +39,7 @@ def main():
     parser.add_argument('--record', help='Exact public URL whose Google UI outcome was verified')
     parser.add_argument('--status', choices=['accepted', 'quota', 'blocked'])
     parser.add_argument('--detail', default='')
+    parser.add_argument('--ack-gsc-sync', action='store_true', help='Record verified sitemap submission and tracker reconciliation')
     args = parser.parse_args()
     private = args.root / 'output/search-maintenance'
     private.mkdir(parents=True, exist_ok=True)
@@ -51,6 +54,8 @@ def main():
     if manifest.get('baseUrl') != 'https://lcbridge.app':
         raise SystemExit('Unexpected manifest host')
     state = reconcile(state, manifest)
+    if args.ack_gsc_sync:
+        state['gscManifestHash'] = state['manifestHash']
     if args.record:
         if not args.status or args.record not in {p['url'] for p in manifest['pages']}:
             raise SystemExit('A confirmed status and current public URL are required')
@@ -69,6 +74,7 @@ def main():
     pending = [u for u, e in state['urls'].items() if e['status'] == 'pending']
     accepted = [u for u, e in state['urls'].items() if e['status'] == 'accepted']
     print(json.dumps({'publicPages': len(manifest['pages']), 'acceptedRequests': len(accepted),
+                      'needsGscSync': state.get('gscManifestHash') != state['manifestHash'],
                       'pendingRequests': pending, 'submissionRetryAfter': state.get('submissionRetryAfter'),
                       'stateFile': str(path)}, indent=2))
 

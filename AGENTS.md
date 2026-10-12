@@ -8,6 +8,8 @@ This is a Community Agents-related repository. Use `karthik-sheetstack` for auth
 
 Apply [lcbridge-search-sync](skills/lcbridge-search-sync/SKILL.md) whenever adding, changing, moving, or deleting public content. Run `python3 scripts/sync-search.py --write`, `python3 scripts/sync-search.py`, and `python3 scripts/check-site.py` before publishing. The publishing workflow repeats generation and validation automatically on every main push.
 
+Ensure the working branch includes current production `origin/main` before publishing. Preserve other tasks' uncommitted edits; use a clean current checkout if they prevent a safe update. Never regenerate discovery files from a stale checkout and publish them over newer pages.
+
 Every public page, including listing and hierarchy pages, must have a matching canonical, be crawlable, and be linked from the public site. Explicitly classify genuinely internal pages in `data/search-policy.json`. Never silently omit a public page because of missing SEO metadata or an accidental noindex.
 
 After deployment, reconcile Google Search Console through GSC Wizard and individual Request indexing actions in Google's UI. The hourly LC Bridge search maintenance heartbeat handles changes made outside this task and pending quota-limited requests. An inspection or tracker registration is not an indexing request; record accepted requests and Google's eventual indexing separately.
