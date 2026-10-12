@@ -17,7 +17,7 @@ FACTS = json.loads((ROOT / 'data/product-facts.json').read_text())
 DATE = FACTS['lastReviewed']
 ASSET_VERSIONS = {
     '/assets/' + name: hashlib.sha256((ROOT / 'assets' / name).read_bytes()).hexdigest()[:8]
-    for name in ['brand.css', 'fonts.css', 'seo-content.css', 'analytics.js', 'analytics-config.js', 'video-player.js']
+    for name in ['brand.css', 'fonts.css', 'seo-content.css', 'analytics.js', 'analytics-config.js', 'video-player.js', 'docusign-landing.css', 'docusign-landing.js']
 }
 
 
@@ -173,7 +173,7 @@ def update_page(path):
     markup = json.dumps({'@context': 'https://schema.org', '@graph': graph}, ensure_ascii=False, indent=2)
     source = source.replace('</head>', '<script id="lcbridge-structured-data" type="application/ld+json">\n' + markup + '\n</script>\n</head>', 1)
     for asset, version in ASSET_VERSIONS.items():
-        source = re.sub(re.escape(asset) + r'(?:\?v=[a-f0-9]+)?(?=["\'])',
+        source = re.sub(re.escape(asset) + r'(?:\?v=[A-Za-z0-9_-]+)?(?=["\'])',
                         asset + '?v=' + version, source)
     path.write_text(source)
     return True
