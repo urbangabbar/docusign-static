@@ -63,10 +63,40 @@ jobs:
     permissions:
       pages: write
       id-token: write
+      actions: read
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - name: Wait for overlapping branch deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json, os, time
+          from urllib.request import Request, urlopen
+          repo = os.environ['GITHUB_REPOSITORY']
+          def api(path):
+              request = Request('https://api.github.com/repos/' + repo + path,
+                                headers={'Authorization': 'Bearer ' + os.environ['GH_TOKEN'],
+                                         'Accept': 'application/vnd.github+json'})
+              with urlopen(request, timeout=30) as response:
+                  return json.load(response)
+          if api('/pages').get('build_type') == 'legacy':
+              # Until an administrator selects Actions as the Pages source, the
+              # legacy build can race our generated artifact. Publish ours last.
+              for attempt in range(60):
+                  runs = api('/actions/runs?per_page=50')['workflow_runs']
+                  legacy = [r for r in runs if r['head_sha'] == os.environ['GITHUB_SHA']
+                            and r.get('path') == 'dynamic/pages/pages-build-deployment']
+                  if legacy and all(r['status'] == 'completed' for r in legacy):
+                      print('Legacy deployment finished; publishing validated discovery files last.')
+                      break
+                  time.sleep(10)
+              else:
+                  raise SystemExit('Legacy deployment did not finish; retry after it completes.')
+          PY
       - name: Publish to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

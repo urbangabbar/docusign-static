@@ -17,6 +17,8 @@ Before publishing:
 - For an intentionally deleted URL with no replacement, delete the page so it returns 404 and add an explanation keyed by its absolute URL in `data/search-removals.json`. Do not redirect unrelated deletions to the homepage.
 - Commit discovery files and `search-manifest.json` with the change. `.github/workflows/publish.yml` regenerates and validates before deploying, including edits made outside Codex.
 
+GitHub Pages currently also uses legacy main-branch publishing. The workflow waits for that build before deploying its validated artifact, so generated metadata wins the race. An administrator can select GitHub Actions as the sole Pages source for strict pre-publication gating. The required `karthik-sheetstack` account has push access but cannot change that setting; never silently switch accounts to change it.
+
 After successful publication:
 
 1. Read the live `search-manifest.json`; verify live sitemap, robots, llms and changed pages. Work from deployed content, not another task's uncommitted checkout.
