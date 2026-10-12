@@ -7,7 +7,8 @@
   var pageViewed = false;
   var measurementId = /^G-[A-Z0-9]+$/.test(config.ga4MeasurementId || '') ? config.ga4MeasurementId : '';
   var product = location.pathname.indexOf('/community-agents/') === 0 ? 'community_agents' :
-    location.pathname.indexOf('/docusign-integration/') === 0 ? 'docusign' : 'company';
+    location.pathname.indexOf('/docusign-integration/') === 0 ? 'docusign' :
+    location.pathname.indexOf('/highlevel-development/') === 0 ? 'custom_development' : 'company';
 
   function send(name, properties) {
     var event = Object.assign({ event: name, product: product, page_path: location.pathname }, properties || {});
@@ -67,6 +68,11 @@
   });
 
   window.LCBridgeAnalytics = { setConsent: setConsent,
+    recordProjectInquiryEvent: function (name) {
+      if (product !== 'custom_development') return;
+      if (['project_form_started', 'project_form_error', 'project_form_accepted'].indexOf(name) === -1) return;
+      send(name);
+    },
     // Conversion confirmation must come from a trusted success page or backend.
     // A click or an iframe load is never a completed trial, installation or sale.
     confirmConversion: function (name, productName) {

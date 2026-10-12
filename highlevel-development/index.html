@@ -51,19 +51,32 @@
     .dev-frame-bar{display:flex;gap:6px;align-items:center;padding:13px 16px;border-bottom:1px solid var(--lcb-line);color:var(--dev-muted);font-size:11px}
     .dev-frame-bar i{width:7px;height:7px;background:#CED4E1;border-radius:50%}
     .dev-frame-bar span{margin-left:6px}
-    .dev-hero-screen{max-height:340px;overflow:hidden}
+    .dev-hero-screen{overflow:hidden}
     .dev-hero-screen img{display:block;width:100%;height:auto}
     .dev-frame figcaption{padding:14px 16px;font-size:12px;color:var(--dev-muted);border-top:1px solid var(--lcb-line);line-height:1.5}
-    .dev-section{padding:clamp(56px,7vw,88px) 0}
+    .dev-section{padding:clamp(48px,6vw,72px) 0}
     .dev-section-head{max-width:710px;margin-bottom:36px}
     .dev-section h2{font-size:clamp(1.8rem,3vw,2.5rem);line-height:1.18;text-wrap:balance;margin-top:13px;max-width:28ch}
     .dev-section-head p{color:var(--dev-muted);margin-top:16px;max-width:62ch}
     .dev-team{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
     .dev-team p{font-size:16px;color:var(--dev-muted)}
     .dev-team p+p{margin-top:16px}
+    .dev-team .dev-updated{font-size:12px;color:var(--dev-muted)}
     .dev-work{background:#F5F7FA}
     .dev-project{display:grid;grid-template-columns:1fr 1.15fr;gap:44px;align-items:center;border-top:1px solid #DCE2ED;padding-top:32px}
-    .dev-project+.dev-project{margin-top:44px}
+    .dev-project+.dev-project{margin-top:36px}
+    .dev-case-label{display:block;font:10px var(--lcb-font-mono);text-transform:uppercase;letter-spacing:.06em;color:var(--lcb-primary);margin-bottom:14px}
+    .dev-case-copy{display:grid;gap:12px;margin-bottom:18px}
+    .dev-case-copy strong{color:var(--lcb-ink)}
+    .dev-evidence-links{display:flex;flex-wrap:wrap;gap:12px 20px}
+    .dev-example{box-sizing:border-box;height:100%;padding:24px 24px 65px;background:#F7F8FC;color:var(--lcb-ink);display:flex;flex-direction:column;justify-content:center;gap:13px}
+    .dev-example small{font:10px var(--lcb-font-mono);text-transform:uppercase;letter-spacing:.06em;color:var(--dev-muted)}
+    .dev-example strong{font-size:19px;line-height:1.3}
+    .dev-example blockquote{margin:0;border:1px solid #D6DDE9;background:#fff;border-radius:8px;padding:14px;font-size:14px;line-height:1.5}
+    .dev-example p{font-size:13px;line-height:1.5}
+    .dev-work-cta{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;border-top:1px solid #DCE2ED;margin-top:32px;padding-top:28px}
+    .dev-work-cta p{color:var(--dev-muted);font-size:15px;max-width:48ch}
+    .dev-work-cta strong{display:block;color:var(--lcb-ink);margin-bottom:4px}
     .dev-project h3{font-size:26px;line-height:1.2;margin:15px 0}
     .dev-product-logo{height:27px;width:auto;display:block}
     .dev-ca-label{display:flex;align-items:center;gap:10px;font-size:13px;font-weight:600;color:#536079}
@@ -114,6 +127,23 @@
     .dev-contact p{font-size:14px;margin:16px 0 24px}
     .dev-contact .dev-email{display:block;margin-top:15px;font-size:13px;overflow-wrap:anywhere}
     .dev-contact iframe{width:100%;border:0;display:block}
+    .dev-form{display:grid;gap:18px;margin-top:24px}
+    .dev-field label{display:block;font-size:14px;font-weight:600;margin-bottom:8px}
+    .dev-field label span{font-weight:400;color:var(--dev-muted)}
+    .dev-field input,.dev-field textarea{display:block;box-sizing:border-box;width:100%;min-height:48px;padding:12px 14px;border:1px solid #BAC4D7;border-radius:8px;background:#fff;color:var(--lcb-ink);font:inherit;font-size:16px;line-height:1.5}
+    .dev-field textarea{min-height:140px;resize:vertical}
+    .dev-field input:focus,.dev-field textarea:focus{border-color:var(--lcb-primary)}
+    .dev-field input:disabled,.dev-field textarea:disabled{opacity:.7}
+    .dev-contact .dev-form-note{font-size:12px;line-height:1.6;margin:0}
+    .dev-form .lcb-btn{min-height:48px;justify-content:center;cursor:pointer;font:inherit;font-size:14px;font-weight:600}
+    .dev-form .lcb-btn:disabled{opacity:.65;cursor:wait}
+    .dev-contact .dev-form-status{font-size:14px;margin:0;line-height:1.6}
+    .dev-form-status[data-state="error"]{color:#9F2424}
+    .dev-form-status[data-state="success"]{color:#17633E;background:#EFFAF3;padding:16px;border-radius:8px}
+    .dev-form-status:empty{display:none}
+    .dev-field .dev-field-help{font-size:12px;line-height:1.5;margin:7px 0 0;color:var(--dev-muted)}
+    @media(max-width:640px){.dev-example{padding:16px 16px 54px;gap:8px}.dev-example strong{font-size:15px}.dev-example blockquote{font-size:12px;padding:10px}.dev-example p{display:none}.dev-work-cta .lcb-btn{width:100%;justify-content:center}}
+    .dev-contact [hidden]{display:none!important}
     .dev-footer{background:#080B16;color:#BAC4D7;padding:36px 0}
     .dev-footer-main{display:flex;justify-content:space-between;gap:28px;align-items:center;flex-wrap:wrap}
     .dev-footer img{width:144px;height:auto;display:block}
@@ -121,7 +151,7 @@
     .dev-footer small{display:block;max-width:800px;margin-top:24px;font-size:12px;line-height:1.7;color:#A5AFC2}
     @media(max-width:1040px){.dev-hero-grid{gap:28px}.dev-nav .nav-links{gap:18px}.dev-nav .nav-in{gap:18px}}
     @media(max-width:940px){.dev-hero-grid{grid-template-columns:1fr;gap:36px}.dev-hero h1{max-width:17ch}.dev-lede{max-width:65ch}.dev-hero .dev-frame{max-width:640px}.dev-team,.dev-faq-grid{grid-template-columns:1fr;gap:24px}.dev-faq-grid .dev-section-head{margin-bottom:0}.dev-project{gap:28px}.dev-steps{grid-template-columns:repeat(2,1fr)}.dev-inquiry-grid{gap:30px}}
-    @media(max-width:640px){.dev-hero{padding:44px 0}.dev-hero h1{font-size:40px;max-width:13ch}.dev-lede{font-size:16px}.dev-services,.dev-project,.dev-inquiry-grid,.dev-engineering{grid-template-columns:1fr}.dev-project{gap:25px}.dev-section{padding:52px 0}.dev-service{padding:24px}.dev-team{gap:22px}.dev-engineering{gap:12px;padding:24px}.dev-section-head{margin-bottom:28px}.dev-contact{padding:25px}.dev-footer-main{align-items:flex-start;flex-direction:column}.dev-footer-links{gap:18px}.dev-hero-screen{max-height:260px}.dev-kicker{font-size:10px}.dev-video-links{font-size:10px}.dev-nav .nav-in{height:68px}.dev-brand img{width:142px}}
+    @media(max-width:640px){.dev-hero{padding:44px 0}.dev-hero h1{font-size:40px;max-width:13ch}.dev-lede{font-size:16px}.dev-services,.dev-project,.dev-inquiry-grid,.dev-engineering{grid-template-columns:1fr}.dev-project{gap:25px}.dev-section{padding:52px 0}.dev-service{padding:24px}.dev-team{gap:22px}.dev-engineering{gap:12px;padding:24px}.dev-section-head{margin-bottom:28px}.dev-contact{padding:25px}.dev-footer-main{align-items:flex-start;flex-direction:column}.dev-footer-links{gap:18px}.dev-kicker{font-size:10px}.dev-video-links{font-size:10px}.dev-nav .nav-in{height:68px}.dev-brand img{width:142px}}
     @media(max-width:380px){.dev-page .lcb-wrap{padding:0 20px}.dev-hero h1{font-size:36px}.dev-steps{gap:22px}.dev-steps h3{font-size:17px}.dev-actions{gap:16px}.dev-inquiry .lcb-btn{white-space:normal;font-size:14px;justify-content:center}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
     /* Keep navigation available when JavaScript is disabled. */
@@ -181,6 +211,16 @@
       },
       "breadcrumb": {
         "@id": "https://lcbridge.app/highlevel-development/#breadcrumbs"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-10-12",
+      "mainEntity": {
+        "@id": "https://lcbridge.app/highlevel-development/#service"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://lcbridge.app/docusign-integration/docs/multiple-signers/images/send-two-signers-1200.webp",
+        "caption": "DocuSign send panel inside HighLevel with edited example contact details and template name"
       }
     },
     {
@@ -196,7 +236,7 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Bring your product into HighLevel.",
+          "name": "HighLevel Custom Development",
           "item": "https://lcbridge.app/highlevel-development/"
         }
       ]
@@ -210,7 +250,7 @@
           "name": "Can you integrate our existing SaaS product with HighLevel?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. We start with your product’s API and the experience your customers need in HighLevel, then scope the data connections, actions, and interface."
+            "text": "Yes. Bring your API documentation and the experience your customers need. We scope the data connections, workflow actions, and interface around your product."
           }
         },
         {
@@ -223,29 +263,56 @@
         },
         {
           "@type": "Question",
-          "name": "Can you extend the HighLevel frontend?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. We build custom JavaScript extensions, embedded tools, and interfaces. We assess the platform’s available extension points and agree how the experience will be maintained."
-          }
-        },
-        {
-          "@type": "Question",
           "name": "How do you determine project scope and cost?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "We review your requirements, technical constraints, and launch goals before proposing scope and pricing. Start with a project-fit conversation."
+            "text": "We review the user journey, API capabilities, account boundaries, frontend needs, and launch goals before proposing scope and pricing. A few sentences about your project are enough to start."
           }
         },
         {
           "@type": "Question",
-          "name": "Do you support integrations after launch?",
+          "name": "How are ownership and handover handled?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Launch assistance, documentation, maintenance, and ongoing development can be included. The support scope is agreed for each engagement."
+            "text": "Discuss code ownership, repository access, hosting, documentation, and handover with us during scoping so the arrangements are agreed for your engagement."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens when HighLevel changes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We assess platform dependencies and maintenance needs during scoping. Post-launch support and ongoing development can be included, with the scope agreed for your project."
           }
         }
-      ]
+      ],
+      "isPartOf": {
+        "@id": "https://lcbridge.app/highlevel-development/#webpage"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://lcbridge.app/highlevel-development/#service",
+      "name": "HighLevel Integration & Custom Development",
+      "serviceType": [
+        "HighLevel integration development",
+        "GoHighLevel marketplace app development",
+        "SaaS extensions",
+        "AI agent development",
+        "HighLevel custom JavaScript development"
+      ],
+      "url": "https://lcbridge.app/highlevel-development/",
+      "description": "LC Bridge builds HighLevel integrations, marketplace apps, SaaS extensions, AI agents, and custom frontend experiences for software brands. Scope, pricing, handover, and support are agreed per engagement.",
+      "provider": {
+        "@id": "https://lcbridge.app/#organization"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://lcbridge.app/highlevel-development/#webpage"
+      },
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "Software brands entering the HighLevel market and agencies needing substantial custom development"
+      }
     }
   ]
 }
@@ -256,103 +323,108 @@
   <nav class="dev-nav" aria-label="Main navigation"><div class="lcb-wrap nav-in">
     <a class="dev-brand" href="/" aria-label="LC Bridge home"><img src="/assets/lcbridge-lockup-black.svg" alt="LC Bridge" width="180" height="60"></a>
     <div class="nav-links" id="navmenu"><a href="/products/">Products</a><a href="/highlevel-development/" aria-current="page">Custom Development</a><a href="/blog/">Guides</a></div>
-    <a href="#inquiry" class="lcb-btn lcb-btn--primary">Discuss your project <span aria-hidden="true">↗</span></a>
+    <a href="#inquiry" data-analytics-action="project_inquiry_cta_clicked" class="lcb-btn lcb-btn--primary">Discuss your project <span aria-hidden="true">→</span></a>
     <button class="lcb-navtoggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navmenu"><span></span><span></span><span></span></button>
   </div></nav>
   <main id="main">
     <section class="dev-hero"><div class="lcb-wrap dev-hero-grid">
       <div>
-        <span class="dev-kicker">HighLevel integration &amp; custom development</span>
+        <span class="dev-kicker">HighLevel development for software brands</span>
         <h1>Bring your product into <span>HighLevel.</span></h1>
-        <p class="dev-lede">Custom integrations, marketplace apps, SaaS extensions, and AI agents—built by former HighLevel team members who helped design and build its APIs. From the backend to custom interfaces that feel native, we help software brands and agencies build on HighLevel.</p>
-        <div class="dev-actions"><a class="lcb-btn lcb-btn--primary lcb-btn--lg" href="#inquiry">Discuss your project <span aria-hidden="true">↗</span></a><a class="dev-textlink" href="#work">See what we’ve built <span aria-hidden="true">↓</span></a></div>
+        <p class="dev-lede">LC Bridge builds HighLevel integrations and marketplace apps for software brands. Our former HighLevel team members helped design and build its APIs. We connect your software to HighLevel workflows and create interfaces that feel native.</p>
+        <div class="dev-actions"><a class="lcb-btn lcb-btn--primary lcb-btn--lg" href="#inquiry" data-analytics-action="project_inquiry_cta_clicked">Discuss your project <span aria-hidden="true">→</span></a><a class="dev-textlink" href="#work">See what we’ve built <span aria-hidden="true">↓</span></a></div>
         <p class="dev-hero-proof">The team behind DocuSign Integration and Community Agents.</p>
       </div>
       <figure class="dev-frame">
         <div class="dev-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>LC Bridge / DocuSign Integration</span></div>
-        <div class="dev-hero-screen"><img loading="lazy" src="/docusign-integration/img/agreements-1952.webp" srcset="/docusign-integration/img/agreements-640.webp 640w, /docusign-integration/img/agreements-1200.webp 1200w, /docusign-integration/img/agreements-1952.webp 1952w" sizes="(max-width: 700px) calc(100vw - 48px), 840px" width="1952" height="1342" alt="LC Bridge’s DocuSign Integration showing agreement statuses inside HighLevel" fetchpriority="high" decoding="async"></div>
-        <figcaption>A real screen from our DocuSign Integration. Agreements and signing status, inside HighLevel.</figcaption>
+        <div class="dev-hero-screen"><a href="/docusign-integration/docs/multiple-signers/#send" aria-label="See the DocuSign send flow inside HighLevel"><img src="/docusign-integration/docs/multiple-signers/images/send-two-signers-1200.webp" srcset="/docusign-integration/docs/multiple-signers/images/send-two-signers-640.webp 640w, /docusign-integration/docs/multiple-signers/images/send-two-signers-1200.webp 1200w, /docusign-integration/docs/multiple-signers/images/send-two-signers-1699.webp 1699w" sizes="(max-width: 940px) calc(100vw - 48px), 560px" width="1699" height="926" alt="LC Bridge’s DocuSign send panel inside a HighLevel contact, with two selected signers and a document preview" fetchpriority="high" decoding="async"></a></div>
+        <figcaption>Our DocuSign send panel inside HighLevel. Product screenshot with edited example contact details and template name.</figcaption>
       </figure>
     </div></section>
 
     <section class="dev-section" aria-labelledby="team-heading"><div class="lcb-wrap dev-team">
       <div><span class="dev-kicker">Our team</span><h2 id="team-heading">We helped build the platform. Now we build on it.</h2></div>
-      <div><p>Our team spent years at HighLevel, contributing to the design and development of APIs used by its developer community. We left to build LC Bridge, bringing that platform experience to integrations, applications, and custom experiences for other businesses.</p><p>Knowing the platform’s constraints helps us make informed architecture decisions before development starts: what belongs in HighLevel, what needs your own backend, and how the experience fits together.</p></div>
+      <div><p>Our team spent years at HighLevel, contributing to APIs used by its developer community. We left to build LC Bridge and bring that experience to other software businesses.</p><p>That experience helps us decide what belongs in HighLevel, what needs your own backend, and how the two fit together. Our own products put those decisions into practice.</p><p><a class="dev-textlink" href="/about/">Meet LC Bridge and the company behind it →</a></p><p class="dev-updated">Updated <time datetime="2026-10-12">12 October 2026</time></p></div>
     </div></section>
 
     <section class="dev-section dev-work" id="work" aria-labelledby="work-heading"><div class="lcb-wrap">
-      <div class="dev-section-head"><span class="dev-kicker">LC Bridge products · available now</span><h2 id="work-heading">See that expertise in the products we’ve shipped.</h2><p>Our own products show how we connect software to HighLevel and build experiences around the people using it.</p></div>
+      <div class="dev-section-head"><span class="dev-kicker">LC Bridge products · available now</span><h2 id="work-heading">Two products. Concrete engineering.</h2><p>Explore what we built, how users work with it, and the details in our product documentation.</p></div>
       <article class="dev-project">
-        <div><img class="dev-product-logo" src="/assets/docusign-logo.svg" alt="DocuSign" width="139" height="28"><h3>DocuSign Integration</h3><p>Send agreements, track signing status, and follow up from HighLevel. Our integration connects an existing DocuSign account to the contact record and workflow builder, so teams can work with their documents where they manage their customers.</p><p class="dev-build-note"><strong>What’s behind the experience:</strong> contact fields map into documents, signing events connect to workflows, and a custom interface brings agreement status and actions together.</p><a class="dev-textlink" href="/docusign-integration/">Explore our DocuSign integration <span aria-hidden="true">↗</span></a></div>
+        <div><span class="dev-case-label">LC Bridge product · integration &amp; frontend</span><img class="dev-product-logo" src="/assets/docusign-logo.svg" alt="DocuSign" width="139" height="28"><h3>DocuSign Integration</h3><div class="dev-case-copy"><p><strong>The challenge:</strong> Bring agreements into HighLevel’s contact and workflow experience.</p><p><strong>What we built:</strong> Field mapping, signer selection, document previews, signing status, and configured workflow connections. Each mapped field can read from the contact selected for its signer role.</p><p><strong>What users can do:</strong> Review and send agreements inside HighLevel, then sync mapped signer-entered answers after the agreement completes.</p></div><div class="dev-evidence-links"><a class="dev-textlink" href="/docusign-integration/docs/multiple-signers/">See the mapping &amp; send flow →</a><a class="dev-textlink" href="/docusign-integration/">Explore the product →</a></div></div>
         <div class="dev-frame">
           <div class="dev-video" data-youtube-video="xPoWEYjnhdY" data-video-title="DocuSign Integration for HighLevel product demo" >
-<picture class="lcb-video-poster"><source type="image/webp" srcset="/assets/video/docusign-demo-thumbnail-640.webp 640w, /assets/video/docusign-demo-thumbnail-1280.webp 1280w" sizes="(max-width: 700px) calc(100vw - 48px), 700px"><img src="/assets/video/docusign-demo-thumbnail.jpg" width="1280" height="720" alt="DocuSign and HighLevel integration demo thumbnail" loading="lazy" decoding="async"></picture>
+<picture class="lcb-video-poster"><source type="image/webp" srcset="/docusign-integration/docs/multiple-signers/images/field-mapping-640.webp 640w, /docusign-integration/docs/multiple-signers/images/field-mapping-1200.webp 1200w" sizes="(max-width: 640px) calc(100vw - 48px), 620px"><img src="/docusign-integration/docs/multiple-signers/images/field-mapping-1200.webp" width="1699" height="926" alt="DocuSign field mapping and resolved contact values inside HighLevel; edited example data" loading="lazy" decoding="async"></picture>
 <a class="lcb-video-trigger" href="https://www.youtube.com/watch?v=xPoWEYjnhdY" rel="noopener noreferrer" aria-label="Play DocuSign Integration for HighLevel product demo" data-analytics-action="demo_play_clicked"><span class="lcb-video-label"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Play demo</span></a>
 </div>
-          <div class="dev-video-links"><span>DocuSign product demo</span><a href="https://www.youtube.com/watch?v=xPoWEYjnhdY" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a></div>
+          <div class="dev-video-links"><span>Field mapping · edited example data</span><a href="https://www.youtube.com/watch?v=xPoWEYjnhdY" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a></div>
         </div>
       </article>
       <article class="dev-project">
-        <div><div class="dev-ca-label"><img src="/assets/community-agents-logo-128.png" alt="" width="30" height="30"><span>AI for HighLevel communities</span></div><h3>Community Agents</h3><p>Give agents knowledge, configure their roles, and preview responses before they participate in your community. Community Agents answers member questions and surfaces possible buying interest with the conversation evidence for your team to review.</p><p class="dev-build-note"><strong>What’s behind the experience:</strong> configured knowledge and agent controls connect to community conversations. Private previews help test responses; Member Insights keeps suggested follow-ups grounded in evidence.</p><a class="dev-textlink" href="/community-agents/">Explore Community Agents <span aria-hidden="true">↗</span></a></div>
+        <div><span class="dev-case-label">LC Bridge product · AI &amp; community context</span><div class="dev-ca-label"><img src="/assets/community-agents-logo-128.png" alt="Community Agents" width="30" height="30"><span>AI for HighLevel communities</span></div><h3>Community Agents</h3><div class="dev-case-copy"><p><strong>The challenge:</strong> Give AI agents useful community context while keeping people in control.</p><p><strong>What we built:</strong> Knowledge sources, private response previews, agent participation settings, and Member Insights backed by source conversations.</p><p><strong>What users can do:</strong> Test replies before enabling agents and review conversation evidence before deciding on a personal follow-up.</p></div><div class="dev-evidence-links"><a class="dev-textlink" href="/community-agents/#insights">Explore Member Insights →</a><a class="dev-textlink" href="/community-agents/">Explore the product →</a></div></div>
         <div class="dev-frame">
-          <div class="dev-video" data-youtube-video="yKUq4eHN9J0" data-video-title="Community Agents for HighLevel product demo" >
-<picture class="lcb-video-poster"><source type="image/webp" srcset="/assets/video/community-agents-demo-thumbnail-640.webp 640w, /assets/video/community-agents-demo-thumbnail-1280.webp 1280w" sizes="(max-width: 700px) calc(100vw - 48px), 700px"><img src="/assets/video/community-agents-demo-thumbnail.jpg" width="1280" height="731" alt="Community Agents for HighLevel and GoKollab product demo thumbnail" loading="lazy" decoding="async"></picture>
-<a class="lcb-video-trigger" href="https://www.youtube.com/watch?v=yKUq4eHN9J0" rel="noopener noreferrer" aria-label="Play Community Agents for HighLevel product demo" data-analytics-action="demo_play_clicked"><span class="lcb-video-label"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Play demo</span></a>
+          <div class="dev-video" data-youtube-video="W-0UEIWMeM4" data-video-title="Community Agents for HighLevel product demo" >
+<div class="dev-example"><small>Illustrative Member Insights preview</small><strong>Possible buying interest</strong><blockquote>“Is there a plan that includes feedback on my campaigns?”</blockquote><p>Review the source conversation before deciding on a personal follow-up.</p></div>
+<a class="lcb-video-trigger" href="https://www.youtube.com/watch?v=W-0UEIWMeM4" rel="noopener noreferrer" aria-label="Play Community Agents for HighLevel product demo" data-analytics-action="demo_play_clicked"><span class="lcb-video-label"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Play demo</span></a>
 </div>
-          <div class="dev-video-links"><span>Community Agents product demo</span><a href="https://www.youtube.com/watch?v=yKUq4eHN9J0" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a></div>
+          <div class="dev-video-links"><span>Illustrative preview · 35-second video</span><a href="https://www.youtube.com/watch?v=W-0UEIWMeM4" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a></div>
         </div>
       </article>
+      <div class="dev-work-cta"><p><strong>Planning a HighLevel integration for your product?</strong>Tell us what your customers need to do.</p><a class="lcb-btn lcb-btn--primary" href="#inquiry" data-analytics-action="project_inquiry_cta_clicked">Discuss your project <span aria-hidden="true">→</span></a></div>
     </div></section>
 
     <section class="dev-section" aria-labelledby="services-heading"><div class="lcb-wrap">
-      <div class="dev-section-head"><span class="dev-kicker">Custom development</span><h2 id="services-heading">What we can build for you.</h2><p>Entering the HighLevel market with your software? Building a differentiated agency offering? We handle the engineering that connects your idea to a working product.</p></div>
+      <div class="dev-section-head"><span class="dev-kicker">Custom development</span><h2 id="services-heading">HighLevel custom development for your product.</h2><p>Build the HighLevel experience your customers need—from the API connection to the interface they use. We also take on substantial agency projects.</p></div>
       <div class="dev-services">
-        <article class="dev-service"><span class="dev-service-number">01 / CONNECT</span><h3>Integrations &amp; marketplace apps</h3><p>Bring your existing software into HighLevel through connected data, workflow actions, and installable applications. We build GoHighLevel API integrations around your product’s user journey.</p></article>
-        <article class="dev-service"><span class="dev-service-number">02 / EXTEND</span><h3>SaaS extensions</h3><p>Build differentiated features, portals, dashboards, and products on top of HighLevel. Give your customers capabilities tailored to their work, with your own product experience.</p></article>
-        <article class="dev-service"><span class="dev-service-number">03 / ACT</span><h3>AI agents</h3><p>Connect business knowledge and HighLevel context to agents with defined actions and human controls. Design how they respond, what they can do, and where your team reviews their work.</p></article>
-        <article class="dev-service"><span class="dev-service-number">04 / EXPERIENCE</span><h3>Custom frontend experiences</h3><p>Extend interfaces with custom JavaScript, embedded tools, and plugins that fit how users already work. Bring your features into a HighLevel experience that feels familiar.</p></article>
+        <article class="dev-service"><span class="dev-service-number">01 / CONNECT</span><h3>Integrations &amp; marketplace apps</h3><p>Connect your API to HighLevel data and workflow actions. Build installable apps, account connections, and the interfaces around them.</p></article>
+        <article class="dev-service"><span class="dev-service-number">02 / EXTEND</span><h3>SaaS extensions</h3><p>Add portals, dashboards, and product features on top of HighLevel, shaped around your customers’ workflows.</p></article>
+        <article class="dev-service"><span class="dev-service-number">03 / ACT</span><h3>AI agents</h3><p>Connect your knowledge and HighLevel context to agents with defined actions, response previews, and human controls.</p></article>
+        <article class="dev-service"><span class="dev-service-number">04 / EXPERIENCE</span><h3>Custom frontend experiences</h3><p>Build custom JavaScript extensions, embedded tools, and plugins. Bring product actions into the screens your customers already use.</p></article>
       </div>
-      <div class="dev-engineering"><h3>Built for life after the demo.</h3><p>We plan for authentication, account isolation, API limits, failure recovery, testing, and maintenance. The architecture and support requirements are defined for your project, including how frontend extensions are maintained as the platform changes.</p></div>
+      <div class="dev-engineering"><h3>Built for life after the demo.</h3><p>We scope authentication, account isolation, API limits, failure recovery, testing, and maintenance—including how frontend extensions adapt as HighLevel changes.</p></div>
     </div></section>
 
     <section class="dev-section dev-process" aria-labelledby="process-heading"><div class="lcb-wrap">
       <div class="dev-section-head"><span class="dev-kicker">How we work</span><h2 id="process-heading">From integration idea to supported product.</h2></div>
       <ol class="dev-steps">
-        <li><span>01</span><h3>Define</h3><p>Map your users, requirements, and platform constraints. Agree the scope and approach.</p></li>
-        <li><span>02</span><h3>Build</h3><p>Develop the backend and frontend together. Review the experience as it takes shape.</p></li>
-        <li><span>03</span><h3>Launch</h3><p>Test the integration, prepare documentation, and assist with rollout and marketplace submission where relevant.</p></li>
-        <li><span>04</span><h3>Support</h3><p>Maintain and improve the product through the ongoing support agreed for your engagement.</p></li>
+        <li><span>01</span><h3>Define</h3><p>Review your API, user journey, and platform constraints. Agree the scope and architecture direction.</p></li>
+        <li><span>02</span><h3>Build</h3><p>Build the backend and frontend. Review the working experience against the agreed requirements.</p></li>
+        <li><span>03</span><h3>Launch</h3><p>Test, document, and prepare for rollout. Include marketplace submission assistance where relevant.</p></li>
+        <li><span>04</span><h3>Support</h3><p>Agree the maintenance and ongoing development your product needs after launch.</p></li>
       </ol>
-      <p class="dev-process-note">Scope, launch assistance, documentation, and ongoing support are agreed per engagement.</p>
+      <p class="dev-process-note">Agree deliverables, documentation, handover, and support during scoping. Discuss code ownership, repository access, and hosting for your engagement.</p>
     </div></section>
 
     <section class="dev-section" aria-labelledby="faq-heading"><div class="lcb-wrap dev-faq-grid">
-      <div class="dev-section-head"><span class="dev-kicker">Before we build</span><h2 id="faq-heading">A few things you might want to know.</h2></div>
+      <div class="dev-section-head"><span class="dev-kicker">Before we build</span><h2 id="faq-heading">Before your project starts.</h2></div>
       <div class="dev-faq">
-        <details><summary>Can you integrate our existing SaaS product with HighLevel?</summary><p>Yes. We start with your product’s API and the experience your customers need in HighLevel, then scope the data connections, actions, and interface.</p></details>
+        <details><summary>Can you integrate our existing SaaS product with HighLevel?</summary><p>Yes. Bring your API documentation and the experience your customers need. We scope the data connections, workflow actions, and interface around your product.</p></details>
         <details><summary>Can you build a HighLevel marketplace app?</summary><p>Yes. We build marketplace applications and assist with installation flows, testing, and submission. HighLevel controls marketplace review and approval.</p></details>
-        <details><summary>Can you extend the HighLevel frontend?</summary><p>Yes. We build custom JavaScript extensions, embedded tools, and interfaces. We assess the platform’s available extension points and agree how the experience will be maintained.</p></details>
-        <details><summary>How do you determine project scope and cost?</summary><p>We review your requirements, technical constraints, and launch goals before proposing scope and pricing. Start with a project-fit conversation.</p></details>
-        <details><summary>Do you support integrations after launch?</summary><p>Yes. Launch assistance, documentation, maintenance, and ongoing development can be included. The support scope is agreed for each engagement.</p></details>
+        <details><summary>How do you determine project scope and cost?</summary><p>We review the user journey, API capabilities, account boundaries, frontend needs, and launch goals before proposing scope and pricing. A few sentences about your project are enough to start.</p></details>
+        <details><summary>How are ownership and handover handled?</summary><p>Discuss code ownership, repository access, hosting, documentation, and handover with us during scoping so the arrangements are agreed for your engagement.</p></details>
+        <details><summary>What happens when HighLevel changes?</summary><p>We assess platform dependencies and maintenance needs during scoping. Post-launch support and ongoing development can be included, with the scope agreed for your project.</p></details>
       </div>
     </div></section>
 
     <section class="dev-section dev-inquiry" id="inquiry" aria-labelledby="inquiry-heading"><div class="lcb-wrap dev-inquiry-grid">
-      <div><span class="dev-kicker">Let’s build</span><h2 id="inquiry-heading">Tell us what you want to build.</h2><p>Start with a project-fit conversation. We’ll review your requirements, discuss feasibility, and explore an initial direction.</p><ul><li>Your product or company</li><li>What you want users to do in HighLevel</li><li>Your target launch date and budget, if known</li></ul></div>
+      <div><span class="dev-kicker">Let’s build</span><h2 id="inquiry-heading">Tell us what you want to build.</h2><p>Send a few sentences about your product and the HighLevel experience you want to create. We’ll review your brief and follow up with questions and a suggested next step.</p></div>
       <div class="dev-contact" id="inquiry-form">
-        <!-- Custom-development HighLevel embed goes here when supplied.
-             Keep the email fallback until the form is connected and verified.
-             Fields and submission confirmation are configured in HighLevel.
-             CTA clicks are intent signals, not confirmed lead conversions. -->
         <h3>Share your project with our team.</h3>
-        <p>Email a short brief. We’ll review it and follow up about project fit and next steps.</p>
-        <a class="lcb-btn lcb-btn--primary" href="mailto:arun@lcbridge.app?subject=HighLevel%20custom%20development%20inquiry">Email your project brief <span aria-hidden="true">↗</span></a>
-        <a class="dev-email dev-textlink" href="mailto:arun@lcbridge.app">arun@lcbridge.app</a>
+        <form class="dev-form" id="lcbridge-custom-development" name="Discuss Your Project" aria-label="Discuss your project" aria-describedby="project-form-note" method="post" action="/highlevel-development/#inquiry-form">
+          <div class="dev-field"><label for="project-name">Full name</label><input id="project-name" name="full_name" autocomplete="name" required maxlength="120"></div>
+          <div class="dev-field"><label for="project-email">Email</label><input id="project-email" name="email" type="email" autocomplete="email" required maxlength="254"></div>
+          <div class="dev-field"><label for="project-company">Company <span>(optional)</span></label><input id="project-company" name="company_name" autocomplete="organization" maxlength="160"></div>
+          <div class="dev-field"><label for="project-description">What would you like to build?</label><textarea id="project-description" name="project_description" aria-describedby="project-description-help" required maxlength="5000" placeholder="Tell us about your product and what you want it to do in HighLevel."></textarea><p class="dev-field-help" id="project-description-help">A few sentences are enough to get started.</p></div>
+          <p class="dev-form-note" id="project-form-note">Your details and page attribution are sent to our CRM so we can review your project and follow up.</p>
+          <button class="lcb-btn lcb-btn--primary" type="submit" disabled>Send project brief <span aria-hidden="true">→</span></button>
+          <p class="dev-form-status" id="project-form-status" role="status" aria-live="polite" aria-atomic="true"></p>
+        </form>
+        <noscript><p>Please enable JavaScript to send your inquiry, or email <a class="dev-textlink" href="mailto:arun@lcbridge.app">arun@lcbridge.app</a>.</p></noscript>
+        <a class="dev-email dev-textlink" href="mailto:arun@lcbridge.app">Prefer email? arun@lcbridge.app</a>
       </div>
     </div></section>
   </main>
   <footer class="dev-footer"><div class="lcb-wrap">
-    <div class="dev-footer-main"><a href="/" aria-label="LC Bridge home"><img src="/assets/lcbridge-lockup-white.svg" alt="LC Bridge" width="180" height="60"></a><div class="dev-footer-links"><a href="/products/">Products</a><a href="/highlevel-development/">Custom Development</a><a href="/blog/">Guides</a><a href="mailto:arun@lcbridge.app">Contact</a></div></div>
+    <div class="dev-footer-main"><a href="/" aria-label="LC Bridge home"><img src="/assets/lcbridge-lockup-white.svg" alt="LC Bridge" width="180" height="60"></a><div class="dev-footer-links"><a href="/products/">Products</a><a href="/highlevel-development/">Custom Development</a><a href="/blog/">Guides</a><a href="/about/">About LC Bridge</a><a href="mailto:arun@lcbridge.app">Contact</a></div></div>
     <small>LC Bridge is an independent company. Our products work with HighLevel® and DocuSign®; we are not affiliated with, endorsed by, or sponsored by either. All trademarks belong to their respective owners. © 2026 LC Bridge.</small>
   </div></footer>
   <script>
@@ -384,7 +456,8 @@
     window.matchMedia('(max-width: 940px)').addEventListener('change', () => setMenu(false));
 
   </script>
-<script src="/assets/analytics-config.js?v=cf89bb56" defer></script><script src="/assets/analytics.js?v=82de975e" defer></script>
+<script src="/assets/analytics-config.js?v=cf89bb56" defer></script><script src="/assets/analytics.js?v=dcce6169" defer></script>
 <script src="/assets/video-player.js?v=16e5d9ef" defer></script>
+<script src="/assets/project-inquiry.js?v=e6719ddf" defer></script>
 </body>
 </html>

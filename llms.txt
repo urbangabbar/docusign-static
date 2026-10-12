@@ -6,7 +6,7 @@ LC Bridge (Lead Connector Bridge), operated by GoCSM Innovations Private Limited
 
 ## Custom development
 
-- [HighLevel Integration & Custom Development](https://lcbridge.app/highlevel-development/): Custom integrations and marketplace apps, SaaS extensions, AI agents, and custom JavaScript frontend experiences. The team behind DocuSign Integration and Community Agents. Scope, launch assistance, documentation, and ongoing support are agreed per engagement. Start with a project-fit conversation; contact arun@lcbridge.app with a project brief.
+- [HighLevel Integration & Custom Development](https://lcbridge.app/highlevel-development/): Custom integrations and marketplace apps for software brands, SaaS extensions, AI agents, and custom JavaScript frontend experiences. The team behind DocuSign Integration and Community Agents. Explore the documented mapping and send flow, and Member Insights. Scope, handover, and support are agreed per engagement. Send a short project brief through the inquiry form; email arun@lcbridge.app is also available.
 
 ## Products
 
