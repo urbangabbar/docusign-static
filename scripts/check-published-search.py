@@ -4,9 +4,13 @@ import json
 from fnmatch import fnmatch
 from pathlib import Path
 import sys
+from check_brand_separation import scan as scan_brand_separation
 
 root = Path(__file__).resolve().parents[1]
 site = Path(sys.argv[1])
+brand_check = scan_brand_separation(site, root, published=True)
+if brand_check['errors']:
+    raise SystemExit('\n'.join(brand_check['errors']))
 for name in ('sitemap.xml', 'llms.txt', 'robots.txt', 'search-manifest.json'):
     if (site / name).read_bytes() != (root / name).read_bytes():
         raise SystemExit(f'Published discovery file differs: {name}')

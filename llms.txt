@@ -2,7 +2,7 @@
 
 > LC Bridge builds products and custom software for HighLevel (GoHighLevel): integrations, marketplace apps, SaaS extensions, AI agents, and frontend experiences.
 
-LC Bridge (Lead Connector Bridge), operated by GoCSM Innovations Private Limited, builds products and provides custom development for the HighLevel / GoHighLevel CRM ecosystem (also searched as "LeadConnector"). Its former HighLevel team members helped design and build APIs used by the developer community. Custom development serves software brands entering the HighLevel market and agencies needing substantial integrations, applications, AI agents, or frontend extensions. LC Bridge is independent and is not affiliated with or endorsed by HighLevel or DocuSign.
+LC Bridge (Lead Connector Bridge) builds products and provides custom development for the HighLevel / GoHighLevel CRM ecosystem (also searched as "LeadConnector"). Its former HighLevel team members helped design and build APIs used by the developer community. Custom development serves software brands entering the HighLevel market and agencies needing substantial integrations, applications, AI agents, or frontend extensions. LC Bridge is independent and is not affiliated with or endorsed by HighLevel or DocuSign.
 
 ## Custom development
 
@@ -66,7 +66,7 @@ LC Bridge (Lead Connector Bridge), operated by GoCSM Innovations Private Limited
 - [Sitemap](https://lcbridge.app/sitemap.xml): Full list of indexable URLs.
 ## Complete public page directory
 
-- [About LC Bridge | HighLevel Products & Development](https://lcbridge.app/about/): Meet LC Bridge, operated by GoCSM Innovations Private Limited. Explore HighLevel products, documentation, founder contact, and custom development services.
+- [About LC Bridge | HighLevel Products & Development](https://lcbridge.app/about/): Meet the LC Bridge team. Explore HighLevel products, documentation, founder contact, and custom development services.
 - [AI Agents & CRM Integration: What Data Matters | LC Bridge](https://lcbridge.app/blog/ai-agents-need-deep-integrations/): An AI agent needs reliable CRM data and configured actions. Learn how integration depth affects HighLevel workflows and DocuSign follow-up.
 - [CRM Integration Depth: Data, Context & Actions | LC Bridge](https://lcbridge.app/blog/four-levels-of-integration/): Learn how to assess CRM integrations by the data, context, and actions they expose. Compare embedded apps and configured middleware for HighLevel.
 - [The 4 Ways a Contract Stalls (and the Follow-Up That Fixes Each) | LC Bridge](https://lcbridge.app/blog/four-ways-a-contract-stalls/): Sent but not opened, opened but not signed, about to expire, declined. Each stalled contract needs a different follow-up. What to send, when to send it, and when to stop.

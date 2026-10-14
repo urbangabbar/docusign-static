@@ -8,6 +8,7 @@ import json
 import re
 import sys
 import xml.etree.ElementTree as ET
+from check_brand_separation import scan as scan_brand_separation
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'https://lcbridge.app'
@@ -104,7 +105,7 @@ def resolve(url):
 
 def main():
     pages = {}
-    errors = []
+    errors = scan_brand_separation(ROOT)['errors']
     notes = []
     for path in ROOT.rglob('*.html'):
         parts = path.relative_to(ROOT).parts
@@ -140,7 +141,7 @@ def main():
                 schema = json.loads(raw)
                 for node in schema.get('@graph', [schema]):
                     if node.get('@type') == 'Organization' and node.get('@id', '').endswith('#organization'):
-                        if node.get('legalName') != 'GoCSM Innovations Private Limited':
+                        if node.get('name') != 'LC Bridge' or node.get('url') != BASE + '/':
                             errors.append(f'Organization identity mismatch: {url}')
             except Exception as exc:
                 errors.append(f'Invalid JSON-LD: {url}: {exc}')

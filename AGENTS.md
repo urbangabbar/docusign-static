@@ -1,5 +1,15 @@
 # LC Bridge website maintenance
 
+## Non-negotiable public brand separation
+
+LC Bridge and every LC Bridge product or brand must remain separate from GoCSM and GovPreneurs in ALL public-facing work. Never disclose, imply, link, or describe an ownership, operator, parent-company, legal-entity, team, or brand relationship to either. Do not reuse their names, logos, domains, email addresses, social profiles, screenshots, customer examples, testimonials, or assets in LC Bridge material.
+
+This covers websites, footers, About and policy pages, copy, docs, metadata, structured data, crawler files, images, videos, captions, downloads, public messages and external communications. Use LC Bridge's own identity and contact details. Do not invent a registered legal name or corporate relationship. Private GitHub authentication instructions are operational only and must never appear in published material.
+
+Treat this as a standing user constraint across future tasks. Read it before creating public assets or communications. Never restore ownership text from history, drafts, handoffs, schema generators or other projects. An exception requires the user's explicit change to this rule.
+
+Run `python3 scripts/check_brand_separation.py` before publication. `check-site.py` and the generated-site check enforce this rule. Media hashes in `data/approved-public-media.json` require review of visible text, metadata, and video/audio content before approving new or changed assets. Never automatically approve changed media just to pass a check.
+
 ## GitHub identity
 
 This is a Community Agents-related repository. Use `karthik-sheetstack` for authenticated GitHub operations. Switch with `gh auth switch --hostname github.com --user karthik-sheetstack`, verify `gh api user --jq .login`, and verify the effective identity for Git credentials or environment overrides. Scope credentials per command if concurrent tasks could race. Preserve commit author settings.

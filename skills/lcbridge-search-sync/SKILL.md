@@ -11,6 +11,8 @@ Work in the website repository using `AGENTS.md` for GitHub identity. Read `data
 
 Before publishing:
 
+- Honor AGENTS.md's public brand-separation rule. Never restore ownership/operator references in public copy, facts, schemas, metadata or discovery files. Run `python3 scripts/check_brand_separation.py`; review new/changed media before updating approval hashes.
+
 - Give public pages self-canonicals that match GitHub Pages routing: directory index URLs end in `/`; flat HTML URLs have neither `.html` nor a trailing slash.
 - Link new pages from their public hub. Run `python3 scripts/sync-search.py --write`, then `python3 scripts/sync-search.py` and `python3 scripts/check-site.py`. The generator inventories all public pages and keeps lastmod stable for unchanged content.
 - For a moved URL, preserve the old path as an instant meta-refresh + canonical stub pointing directly to the final public page. GitHub Pages does not support arbitrary HTTP redirect rules. Prefer server-side 301/308 if the hosting later supports them. Do not introduce chains or use noindex on migration stubs.

@@ -1,7 +1,6 @@
 # HANDOFF — lcbridge.app
 
-Marketing site for **LC Bridge** (legal entity: GoCSM Innovations Private Limited,
-trading as LCBridge). Sells white-labeled integrations that HighLevel / LeadConnector
+Marketing site for **LC Bridge**. Public identity is LC Bridge only; follow the strict brand-separation rule in AGENTS.md. Sells white-labeled integrations that HighLevel / LeadConnector
 agencies embed as their own.
 
 Repo: `https://github.com/urbangabbar/docusign-static`  (the GitHub slug still says docusign-static)
@@ -205,15 +204,7 @@ Rules when you touch these:
 authenticates — not `user.name`/`user.email`, which are already correct
 (`karthik-sheetstack` / `karthik@sheetstack.ai`) and will mislead you.
 
-Two accounts are in the keyring. `sunny-gocsm` is usually active and **has no write
-access** — it fails with `403 Permission to urbangabbar/docusign-static.git denied
-to sunny-gocsm`. Only `karthik-sheetstack` can push.
-
-```bash
-gh auth switch --user karthik-sheetstack
-git push origin main
-gh auth switch --user sunny-gocsm     # restore what the owner had active
-```
+Use only `karthik-sheetstack`. Switch and verify the effective account before every authenticated GitHub operation; use per-command credentials when other tasks may run concurrently. Do not switch back to a different account after publishing. See AGENTS.md for the full account rule.
 
 ### Verifying a deploy
 

@@ -27,7 +27,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Test publishing invariants
-        run: python3 -m unittest discover -s scripts -p 'test_search_sync.py'
+        run: python3 -m unittest discover -s scripts -p 'test_*.py'
       - name: Generate and save public discovery files
         shell: bash
         run: |
