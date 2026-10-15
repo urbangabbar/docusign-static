@@ -3,8 +3,8 @@
  <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <title>DocuSign Integration for GoHighLevel | LC Bridge</title>
-  <meta name="description" content="Connect DocuSign to GoHighLevel. Prefill agreements, configure follow-up workflows, and sync completed answers back. Start your 14-day free trial.">
+  <title>DocuSign Integration for GoHighLevel (GHL) | LC Bridge</title>
+  <meta name="description" content="Send, track and sync DocuSign agreements inside GoHighLevel. Map contact fields, connect configured workflows and sync completed signer answers.">
   <link rel="canonical" href="https://lcbridge.app/docusign-integration/">
   <meta content="index,follow" name="robots"/>
   <meta content="#4d3fe7" name="theme-color"/>
@@ -12,15 +12,15 @@
   <meta content="website" property="og:type"/>
   <meta content="https://lcbridge.app/docusign-integration/" property="og:url"/>
   <meta content="LCBridge" property="og:site_name"/>
-  <meta content="DocuSign in HighLevel. Without the busywork." property="og:title"/>
-  <meta content="Connect DocuSign with GoHighLevel. Send prefilled agreements, automate signature follow-ups, and sync client answers back. Start your 14-day free trial." property="og:description"/>
+  <meta content="DocuSign Integration for GoHighLevel (GHL) | LC Bridge" property="og:title"/>
+  <meta content="Send, track and sync DocuSign agreements inside GoHighLevel. Map contact fields, connect configured workflows and sync completed signer answers." property="og:description"/>
   <meta content="https://lcbridge.app/assets/video/docusign-demo-thumbnail.jpg" property="og:image"/>
   <meta content="1280" property="og:image:width"/>
   <meta content="720" property="og:image:height"/>
-  <meta content="DocuSign connected to HighLevel by LCBridge" property="og:image:alt"/>
+  <meta content="DocuSign connected to GoHighLevel by LCBridge" property="og:image:alt"/>
   <meta content="summary_large_image" name="twitter:card"/>
-  <meta content="DocuSign in HighLevel. Without the busywork." name="twitter:title"/>
-  <meta content="Connect DocuSign with GoHighLevel. Send prefilled agreements, automate signature follow-ups, and sync client answers back. Start your 14-day free trial." name="twitter:description"/>
+  <meta content="DocuSign Integration for GoHighLevel (GHL) | LC Bridge" name="twitter:title"/>
+  <meta content="Send, track and sync DocuSign agreements inside GoHighLevel. Map contact fields, connect configured workflows and sync completed signer answers." name="twitter:description"/>
   <meta content="https://lcbridge.app/assets/video/docusign-demo-thumbnail.jpg" name="twitter:image"/>
   <link as="font" crossorigin="" href="/assets/fonts/inter-latin.woff2" rel="preload" type="font/woff2"/>
   <link href="/assets/docusign-landing.css?v=07aa02fd" rel="stylesheet"/>
@@ -35,7 +35,6 @@
       "@type": "Organization",
       "@id": "https://lcbridge.app/#organization",
       "name": "LC Bridge",
-
       "alternateName": [
         "LCBridge",
         "Lead Connector Bridge"
@@ -66,11 +65,26 @@
       }
     },
     {
+      "@type": "Brand",
+      "@id": "https://lcbridge.app/#gohighlevel-platform",
+      "name": "GoHighLevel",
+      "alternateName": [
+        "Go High Level",
+        "GHL",
+        "HighLevel",
+        "High Level"
+      ],
+      "url": "https://www.gohighlevel.com/"
+    },
+    {
       "@type": "WebPage",
       "@id": "https://lcbridge.app/docusign-integration/#webpage",
       "url": "https://lcbridge.app/docusign-integration/",
-      "name": "DocuSign Integration for GoHighLevel | LC Bridge",
-      "description": "Connect DocuSign to GoHighLevel. Prefill agreements, configure follow-up workflows, and sync completed answers back. Start your 14-day free trial.",
+      "name": "DocuSign Integration for GoHighLevel (GHL) | LC Bridge",
+      "description": "Send, track and sync DocuSign agreements inside GoHighLevel. Map contact fields, connect configured workflows and sync completed signer answers.",
+      "about": {
+        "@id": "https://lcbridge.app/#gohighlevel-platform"
+      },
       "isPartOf": {
         "@id": "https://lcbridge.app/#website"
       },
@@ -100,7 +114,7 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "DocuSign in HighLevel. Send, sync, and follow up.",
+          "name": "DocuSign in GoHighLevel. Send, sync, and follow up.",
           "item": "https://lcbridge.app/docusign-integration/"
         }
       ]
@@ -110,10 +124,13 @@
       "@id": "https://lcbridge.app/docusign-integration/#app",
       "name": "DocuSign Integration by LC Bridge",
       "url": "https://lcbridge.app/docusign-integration/",
-      "description": "Connect DocuSign agreements to HighLevel contact data, configured follow-up workflows, and completed-answer sync.",
+      "description": "Connect DocuSign agreements to GoHighLevel contact data, configured follow-up workflows, and completed-answer sync. Built for GoHighLevel (GHL), also known as HighLevel.",
       "applicationCategory": "BusinessApplication",
-      "operatingSystem": "Web: HighLevel / GoHighLevel",
-      "softwareRequirements": "HighLevel account and an existing DocuSign account; configured template mappings and enabled workflows",
+      "operatingSystem": "Web",
+      "about": {
+        "@id": "https://lcbridge.app/#gohighlevel-platform"
+      },
+      "softwareRequirements": "GoHighLevel account and an existing DocuSign account; configured template mappings and enabled workflows",
       "publisher": {
         "@id": "https://lcbridge.app/#organization"
       },
@@ -152,8 +169,11 @@
     {
       "@type": "VideoObject",
       "@id": "https://lcbridge.app/docusign-integration/#video",
-      "name": "DocuSign Integration by LC Bridge product demo",
-      "description": "Connect DocuSign agreements to HighLevel contact data, configured follow-up workflows, and completed-answer sync.",
+      "name": "DocuSign Integration by LC Bridge for GoHighLevel (GHL) — product demo",
+      "description": "Connect DocuSign agreements to GoHighLevel contact data, configured follow-up workflows, and completed-answer sync. Built for GoHighLevel (GHL), also known as HighLevel.",
+      "about": {
+        "@id": "https://lcbridge.app/#gohighlevel-platform"
+      },
       "thumbnailUrl": [
         "https://lcbridge.app/assets/video/docusign-demo-thumbnail-1280.webp"
       ],
@@ -173,7 +193,7 @@
           "name": "What does LCBridge connect?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "LCBridge connects your DocuSign account to HighLevel, also known as GoHighLevel or GHL. It lets you send mapped agreements, automate configured follow-ups, and see completed agreement data from the contact record."
+            "text": "LCBridge connects your DocuSign account to GoHighLevel, also known as GoHighLevel or GHL. It lets you send mapped agreements, automate configured follow-ups, and see completed agreement data from the contact record."
           }
         },
         {
@@ -181,7 +201,7 @@
           "name": "Do I need my own DocuSign account?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. You need a HighLevel account and your own DocuSign account. LCBridge is the integration; a DocuSign subscription is not included."
+            "text": "Yes. You need a GoHighLevel account and your own DocuSign account. LCBridge is the integration; a DocuSign subscription is not included."
           }
         },
         {
@@ -189,7 +209,7 @@
           "name": "Can I send documents prefilled with CRM data?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Map your HighLevel contact fields to the fields in a DocuSign template. Those mapped CRM values populate the agreement when you send it."
+            "text": "Yes. Map your GoHighLevel contact fields to the fields in a DocuSign template. Those mapped CRM values populate the agreement when you send it."
           }
         },
         {
@@ -205,7 +225,7 @@
           "name": "Will agreements and follow-ups send automatically?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "They can when you enable and configure the relevant HighLevel workflows. Use a pipeline-stage change to send an agreement, a stalled-agreement event for follow-up, and completed signing to advance the opportunity. Choose the stages, timing, and actions for your process."
+            "text": "They can when you enable and configure the relevant GoHighLevel workflows. Use a pipeline-stage change to send an agreement, a stalled-agreement event for follow-up, and completed signing to advance the opportunity. Choose the stages, timing, and actions for your process."
           }
         },
         {
@@ -218,10 +238,10 @@
         },
         {
           "@type": "Question",
-          "name": "How is this different from HighLevel Documents & Contracts?",
+          "name": "How is this different from GoHighLevel Documents & Contracts?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "HighLevel has its own Documents & Contracts functionality. LCBridge is for teams that want to keep using DocuSign while connecting it to HighLevel. Compare the two approaches ."
+            "text": "GoHighLevel has its own Documents & Contracts functionality. LCBridge is for teams that want to keep using DocuSign while connecting it to GoHighLevel. Compare the two approaches ."
           }
         },
         {
@@ -229,7 +249,7 @@
           "name": "How does the 14-day trial work?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Complete the trial form below to request assisted setup. We reply the same working day and help connect the integration to your HighLevel account. No card is needed to start. A setup call is available if you want one; requesting a trial does not instantly provision an account."
+            "text": "Complete the trial form below to request assisted setup. We reply the same working day and help connect the integration to your GoHighLevel account. No card is needed to start. A setup call is available if you want one; requesting a trial does not instantly provision an account."
           }
         },
         {
@@ -237,7 +257,7 @@
           "name": "Can my agency offer it under our own brand?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Agency and Scale plans include a white-label integration experience inside your HighLevel environment. Branding is configured during setup. Customers still use their own DocuSign account and its signing experience."
+            "text": "Agency and Scale plans include a white-label integration experience inside your GoHighLevel environment. Branding is configured during setup. Customers still use their own DocuSign account and its signing experience."
           }
         },
         {
@@ -309,9 +329,9 @@
      <div class="hero-grid">
       <div>
        <span class="eyebrow">
-        DocuSign integration for HighLevel
+        DocuSign integration for GoHighLevel
        </span>
-       <h1>DocuSign in HighLevel. <span>Send, sync, and follow up.</span></h1>
+       <h1>DocuSign in GoHighLevel. <span>Send, sync, and follow up.</span></h1><p class="lcb-platform-context">For GoHighLevel (GHL), also known as HighLevel.</p>
        <p class="lede">
         Send agreements with CRM data already filled in. Configure signature follow-ups and sync completed client answers to mapped contact fields. Signed PDF access depends on your configured storage and permissions.
        </p>
@@ -335,7 +355,7 @@
         <strong>
          No card to start.
         </strong>
-        Request assisted setup for your HighLevel account.
+        Request assisted setup for your GoHighLevel account.
        </p>
       </div>
       <figure class="demo" id="demo">
@@ -344,11 +364,11 @@
          See the entire agreement flow
         </span>
         <span>
-         DocuSign × HighLevel
+         DocuSign × GoHighLevel
         </span>
        </div>
        <div class="demo-shell" data-youtube-video="xPoWEYjnhdY">
-        <a class="demo-cover lcb-video-trigger" data-play-demo="" href="https://www.youtube.com/watch?v=xPoWEYjnhdY" aria-label="Play the 80-second DocuSign and HighLevel demo" data-analytics-action="demo_play_clicked"><picture class="lcb-video-poster"><source type="image/webp" srcset="/assets/video/docusign-demo-thumbnail-640.webp 640w, /assets/video/docusign-demo-thumbnail-1280.webp 1280w" sizes="(max-width:800px) calc(100vw - 40px), 550px"><img src="/assets/video/docusign-demo-thumbnail.jpg" alt="DocuSign and HighLevel integration demo thumbnail" width="1280" height="720" fetchpriority="high" decoding="async"></picture><span class="lcb-video-label"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Play demo</span></a>
+        <a class="demo-cover lcb-video-trigger" data-play-demo="" href="https://www.youtube.com/watch?v=xPoWEYjnhdY" aria-label="Play the 80-second DocuSign and GoHighLevel demo" data-analytics-action="demo_play_clicked"><picture class="lcb-video-poster"><source type="image/webp" srcset="/assets/video/docusign-demo-thumbnail-640.webp 640w, /assets/video/docusign-demo-thumbnail-1280.webp 1280w" sizes="(max-width:800px) calc(100vw - 40px), 550px"><img src="/assets/video/docusign-demo-thumbnail.jpg" alt="DocuSign and GoHighLevel integration demo thumbnail" width="1280" height="720" fetchpriority="high" decoding="async"></picture><span class="lcb-video-label"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Play demo</span></a>
         <template id="product-video-template"><iframe allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen="" data-video-id="xPoWEYjnhdY" hidden="" id="product-video" referrerpolicy="strict-origin-when-cross-origin" title="DocuSign Integration by LCBridge product demo"></iframe></template>
         <button aria-label="Turn on sound for the DocuSign demo" class="demo-sound" hidden="" type="button">
          <svg aria-hidden="true" class="icon" viewBox="0 0 24 24"><path d="M11 5 6 9H2v6h4l5 4z"></path><path d="m16 9 6 6m0-6-6 6"></path></svg>
@@ -399,7 +419,7 @@
        <path d="m5 12 4 4L19 6">
        </path>
       </svg>
-      Work inside HighLevel
+      Work inside GoHighLevel
      </span>
     </div>
    </div>
@@ -424,7 +444,7 @@
         Ready to send. Still copying details.
        </h3>
        <p>
-        Your client’s details are already in HighLevel. Yet you’re switching tabs to paste them into DocuSign, one field at a time.
+        Your client’s details are already in GoHighLevel. Yet you’re switching tabs to paste them into DocuSign, one field at a time.
        </p>
       </article>
       <article class="pain">
@@ -446,7 +466,7 @@
         Signed. But the answers are over there.
        </h3>
        <p>
-        Your client entered the details you needed in DocuSign. Now you’re copying those answers back into HighLevel.
+        Your client entered the details you needed in DocuSign. Now you’re copying those answers back into GoHighLevel.
        </p>
       </article>
      </div>
@@ -472,7 +492,7 @@
        </h2>
       </div>
       <p class="lede">
-       Use mapped HighLevel data to prefill agreements. After signing completes, client-entered details return to their mapped contact fields.
+       Use mapped GoHighLevel data to prefill agreements. After signing completes, client-entered details return to their mapped contact fields.
       </p>
      </div>
      <div class="proof-stage data-proof" id="prefill-proof">
@@ -491,7 +511,7 @@
           <span class="app-dot">
            HL
           </span>
-          HighLevel contact
+          GoHighLevel contact
          </span>
          <span class="status">
           <svg aria-hidden="true" class="icon" viewbox="0 0 24 24">
@@ -584,7 +604,7 @@
       </div>
       <div class="stage-bottom">
        <p>
-        Choose a mapped template. Send the agreement from HighLevel with the details already in place.
+        Choose a mapped template. Send the agreement from GoHighLevel with the details already in place.
        </p>
        <button class="replay" data-replay="prefill-proof" type="button">
         <svg aria-hidden="true" class="icon" viewbox="0 0 24 24">
@@ -655,7 +675,7 @@
           <span class="app-dot">
            HL
           </span>
-          HighLevel custom fields
+          GoHighLevel custom fields
          </span>
          <span class="status">
           <svg aria-hidden="true" class="icon" viewbox="0 0 24 24">
@@ -756,7 +776,7 @@
      <div class="workflow" id="workflow-proof">
       <div class="workflow-intro">
        <h3>
-        Connected HighLevel workflows
+        Connected GoHighLevel workflows
        </h3>
        <span class="tag">
         Trigger → action → result
@@ -1029,7 +1049,7 @@
         Tell us about your account.
        </h3>
        <p>
-        Complete the trial form. We reply the same working day and help set up the integration for your HighLevel account.
+        Complete the trial form. We reply the same working day and help set up the integration for your GoHighLevel account.
        </p>
       </article>
       <article class="setup-step">
@@ -1051,7 +1071,7 @@
         Run your first agreement.
        </h3>
        <p>
-        Send from HighLevel and enable the workflows that fit your pipeline and follow-up process.
+        Send from GoHighLevel and enable the workflows that fit your pipeline and follow-up process.
        </p>
       </article>
      </div>
@@ -1104,7 +1124,7 @@
         Starter
        </h3>
        <p>
-        For a business connecting its own HighLevel account.
+        For a business connecting its own GoHighLevel account.
        </p>
        <div class="price">
         <span class="amount" data-annual="20.75" data-monthly="29">
@@ -1323,7 +1343,7 @@
          Arun · Founder of LCBridge
         </strong>
         <p>
-         A working conversation about your HighLevel and DocuSign setup.
+         A working conversation about your GoHighLevel and DocuSign setup.
         </p>
         <a class="text-link" href="/docusign-integration/book-a-call">
          Book an optional call
@@ -1341,7 +1361,7 @@
         Offering this to your agency’s clients?
        </h3>
        <p>
-        Agency and Scale plans let you deliver the integration inside your HighLevel environment with branding configured for your agency.
+        Agency and Scale plans let you deliver the integration inside your GoHighLevel environment with branding configured for your agency.
        </p>
       </div>
       <a class="text-link" data-trial-cta="agency" href="#apply">
@@ -1383,7 +1403,7 @@
         What does LCBridge connect?
        </summary>
        <p>
-        LCBridge connects your DocuSign account to HighLevel, also known as GoHighLevel or GHL. It lets you send mapped agreements, automate configured follow-ups, and see completed agreement data from the contact record.
+        LCBridge connects your DocuSign account to GoHighLevel, also known as GoHighLevel or GHL. It lets you send mapped agreements, automate configured follow-ups, and see completed agreement data from the contact record.
        </p>
       </details>
       <details>
@@ -1391,7 +1411,7 @@
         Do I need my own DocuSign account?
        </summary>
        <p>
-        Yes. You need a HighLevel account and your own DocuSign account. LCBridge is the integration; a DocuSign subscription is not included.
+        Yes. You need a GoHighLevel account and your own DocuSign account. LCBridge is the integration; a DocuSign subscription is not included.
        </p>
       </details>
       <details>
@@ -1399,7 +1419,7 @@
         Can I send documents prefilled with CRM data?
        </summary>
        <p>
-        Yes. Map your HighLevel contact fields to the fields in a DocuSign template. Those mapped CRM values populate the agreement when you send it.
+        Yes. Map your GoHighLevel contact fields to the fields in a DocuSign template. Those mapped CRM values populate the agreement when you send it.
        </p>
       </details>
       <details>
@@ -1419,7 +1439,7 @@
         Will agreements and follow-ups send automatically?
        </summary>
        <p>
-        They can when you enable and configure the relevant HighLevel workflows. Use a pipeline-stage change to send an agreement, a stalled-agreement event for follow-up, and completed signing to advance the opportunity. Choose the stages, timing, and actions for your process.
+        They can when you enable and configure the relevant GoHighLevel workflows. Use a pipeline-stage change to send an agreement, a stalled-agreement event for follow-up, and completed signing to advance the opportunity. Choose the stages, timing, and actions for your process.
        </p>
       </details>
       <details>
@@ -1432,10 +1452,10 @@
       </details>
       <details>
        <summary>
-        How is this different from HighLevel Documents &amp; Contracts?
+        How is this different from GoHighLevel Documents &amp; Contracts?
        </summary>
        <p>
-        HighLevel has its own Documents &amp; Contracts functionality. LCBridge is for teams that want to keep using DocuSign while connecting it to HighLevel.
+        GoHighLevel has its own Documents &amp; Contracts functionality. LCBridge is for teams that want to keep using DocuSign while connecting it to GoHighLevel.
         <a href="/docusign-integration/vs-native-signature">
          Compare the two approaches
         </a>
@@ -1447,7 +1467,7 @@
         How does the 14-day trial work?
        </summary>
        <p>
-        Complete the trial form below to request assisted setup. We reply the same working day and help connect the integration to your HighLevel account. No card is needed to start. A setup call is available if you want one; requesting a trial does not instantly provision an account.
+        Complete the trial form below to request assisted setup. We reply the same working day and help connect the integration to your GoHighLevel account. No card is needed to start. A setup call is available if you want one; requesting a trial does not instantly provision an account.
        </p>
       </details>
       <details>
@@ -1455,7 +1475,7 @@
         Can my agency offer it under our own brand?
        </summary>
        <p>
-        Agency and Scale plans include a white-label integration experience inside your HighLevel environment. Branding is configured during setup. Customers still use their own DocuSign account and its signing experience.
+        Agency and Scale plans include a white-label integration experience inside your GoHighLevel environment. Branding is configured during setup. Customers still use their own DocuSign account and its signing experience.
        </p>
       </details>
       <details>
@@ -1481,7 +1501,7 @@
        free trial today.
       </h2>
       <p>
-       Tell us about your HighLevel account. We’ll reply the same working day and help you connect DocuSign, map your fields, and get started.
+       Tell us about your GoHighLevel account. We’ll reply the same working day and help you connect DocuSign, map your fields, and get started.
       </p>
       <ul class="trial-details">
        <li>
@@ -1556,7 +1576,7 @@
      </details>
     </div>
    </section>
-<p class="seo-note"><a href="/docusign-integration/docs/features/">Capabilities and requirements</a> · <a href="/docusign-integration/docs/field-mapping/">Field mapping and answer sync</a> · <a href="/docusign-integration/docs/multiple-signers/">Multiple signers</a> · <a href="/docusign-integration/workflows">Configured follow-up workflows</a> · <a href="/docusign-integration/how-to-integrate">Setup comparison</a> · <a href="/docusign-integration/vs-native-signature">Compare native HighLevel signing</a></p>
+<p class="seo-note"><a href="/docusign-integration/docs/features/">Capabilities and requirements</a> · <a href="/docusign-integration/docs/field-mapping/">Field mapping and answer sync</a> · <a href="/docusign-integration/docs/multiple-signers/">Multiple signers</a> · <a href="/docusign-integration/workflows">Configured follow-up workflows</a> · <a href="/docusign-integration/how-to-integrate">Setup comparison</a> · <a href="/docusign-integration/vs-native-signature">Compare native GoHighLevel signing</a></p>
   </main>
   <footer class="footer">
    <div class="wrap">
@@ -1566,7 +1586,7 @@
        <img alt="LCBridge" class="footer-logo" height="53" loading="lazy" src="/assets/lcbridge-lockup-white.svg" width="157"/>
       </a>
       <p>
-       Integrations that connect the tools you use to HighLevel.
+       Integrations that connect the tools you use to GoHighLevel.
       </p>
      </div>
      <div class="footer-links">
@@ -1621,7 +1641,7 @@
      </div>
     </div>
     <p class="legal">
-     LCBridge is an independent integration provider. DocuSign and HighLevel are trademarks of their respective owners. Your existing DocuSign and HighLevel accounts are required.
+     LCBridge is an independent integration provider. DocuSign and GoHighLevel are trademarks of their respective owners. Your existing DocuSign and GoHighLevel accounts are required.
     </p>
     <div class="legal-links">
      <a href="/docusign-integration/privacy">
@@ -1639,6 +1659,6 @@
     </p>
    </div>
   </footer>
- <script src="/assets/analytics-config.js?v=cf89bb56" defer></script><script src="/assets/analytics.js?v=82de975e" defer></script>
+ <script src="/assets/analytics-config.js?v=cf89bb56" defer></script><script src="/assets/analytics.js?v=dcce6169" defer></script>
 </body>
 </html>

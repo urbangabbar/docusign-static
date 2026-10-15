@@ -9,6 +9,11 @@ import re
 import sys
 import xml.etree.ElementTree as ET
 from check_brand_separation import scan as scan_brand_separation
+import importlib.util
+
+platform_spec = importlib.util.spec_from_file_location('platform_names', Path(__file__).with_name('check-platform-names.py'))
+platform_names = importlib.util.module_from_spec(platform_spec)
+platform_spec.loader.exec_module(platform_names)
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'https://lcbridge.app'
@@ -105,7 +110,7 @@ def resolve(url):
 
 def main():
     pages = {}
-    errors = scan_brand_separation(ROOT)['errors']
+    errors = scan_brand_separation(ROOT)['errors'] + platform_names.scan(ROOT)['errors']
     notes = []
     for path in ROOT.rglob('*.html'):
         parts = path.relative_to(ROOT).parts

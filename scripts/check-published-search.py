@@ -11,7 +11,7 @@ site = Path(sys.argv[1])
 brand_check = scan_brand_separation(site, root, published=True)
 if brand_check['errors']:
     raise SystemExit('\n'.join(brand_check['errors']))
-for name in ('sitemap.xml', 'llms.txt', 'robots.txt', 'search-manifest.json'):
+for name in ('sitemap.xml', 'image-sitemap.xml', 'llms.txt', 'robots.txt', 'search-manifest.json'):
     if (site / name).read_bytes() != (root / name).read_bytes():
         raise SystemExit(f'Published discovery file differs: {name}')
 for name in ('AGENTS.md', 'HANDOFF.md', 'HIGHLEVEL_DEVELOPMENT.md', 'data', 'scripts', 'skills', 'brand', 'blog-drafts', 'output', 'docs'):

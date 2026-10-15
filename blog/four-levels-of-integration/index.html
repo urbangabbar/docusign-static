@@ -3,22 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CRM Integration Depth: Data, Context &amp; Actions | LC Bridge</title>
-<meta name="description" content="Learn how to assess CRM integrations by the data, context, and actions they expose. Compare embedded apps and configured middleware for HighLevel.">
+<title>GoHighLevel Integration Depth: Data &amp; Actions | LC Bridge</title>
+<meta name="description" content="Compare four levels of CRM integration through GoHighLevel and DocuSign examples: link-outs, data sync, shared context and actions inside the platform.">
 <meta name="author" content="LC Bridge">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://lcbridge.app/blog/four-levels-of-integration/">
-<link rel="stylesheet" href="/assets/brand.css?v=b0980d3f">
+<link rel="stylesheet" href="/assets/brand.css?v=b11dccd9">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://lcbridge.app/blog/four-levels-of-integration/">
-<meta property="og:title" content="CRM Integration Depth: Data, Context &amp; Actions | LC Bridge">
-<meta property="og:description" content="Learn how to assess CRM integrations by the data, context, and actions they expose. Compare embedded apps and configured middleware for HighLevel.">
+<meta property="og:title" content="GoHighLevel Integration Depth: Data &amp; Actions | LC Bridge">
+<meta property="og:description" content="Compare four levels of CRM integration through GoHighLevel and DocuSign examples: link-outs, data sync, shared context and actions inside the platform.">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CRM Integration Depth: Data, Context &amp; Actions | LC Bridge">
-<meta name="twitter:description" content="Learn how to assess CRM integrations by the data, context, and actions they expose. Compare embedded apps and configured middleware for HighLevel.">
+<meta name="twitter:title" content="GoHighLevel Integration Depth: Data &amp; Actions | LC Bridge">
+<meta name="twitter:description" content="Compare four levels of CRM integration through GoHighLevel and DocuSign examples: link-outs, data sync, shared context and actions inside the platform.">
 
 <style>
   html{scroll-behavior:smooth;scroll-padding-top:80px}
@@ -110,7 +110,6 @@
       "@type": "Organization",
       "@id": "https://lcbridge.app/#organization",
       "name": "LC Bridge",
-
       "alternateName": [
         "LCBridge",
         "Lead Connector Bridge"
@@ -141,11 +140,26 @@
       }
     },
     {
+      "@type": "Brand",
+      "@id": "https://lcbridge.app/#gohighlevel-platform",
+      "name": "GoHighLevel",
+      "alternateName": [
+        "Go High Level",
+        "GHL",
+        "HighLevel",
+        "High Level"
+      ],
+      "url": "https://www.gohighlevel.com/"
+    },
+    {
       "@type": "WebPage",
       "@id": "https://lcbridge.app/blog/four-levels-of-integration/#webpage",
       "url": "https://lcbridge.app/blog/four-levels-of-integration/",
-      "name": "CRM Integration Depth: Data, Context & Actions | LC Bridge",
-      "description": "Learn how to assess CRM integrations by the data, context, and actions they expose. Compare embedded apps and configured middleware for HighLevel.",
+      "name": "GoHighLevel Integration Depth: Data & Actions | LC Bridge",
+      "description": "Compare four levels of CRM integration through GoHighLevel and DocuSign examples: link-outs, data sync, shared context and actions inside the platform.",
+      "about": {
+        "@id": "https://lcbridge.app/#gohighlevel-platform"
+      },
       "isPartOf": {
         "@id": "https://lcbridge.app/#website"
       },
@@ -187,9 +201,9 @@
       "@type": "BlogPosting",
       "@id": "https://lcbridge.app/blog/four-levels-of-integration/#article",
       "headline": "CRM Integration Depth: Data, Context, and Actions",
-      "description": "Learn how to assess CRM integrations by the data, context, and actions they expose. Compare embedded apps and configured middleware for HighLevel.",
+      "description": "Compare four levels of CRM integration through GoHighLevel and DocuSign examples: link-outs, data sync, shared context and actions inside the platform.",
       "datePublished": "2026-07-03",
-      "dateModified": "2026-10-12",
+      "dateModified": "2026-10-15",
       "mainEntityOfPage": {
         "@id": "https://lcbridge.app/blog/four-levels-of-integration/#webpage"
       },
@@ -306,7 +320,7 @@
 <article><div class="post">
   <header class="post-head">
     <span class="lcb-eyebrow"><span class="dot"></span>Integration depth</span>
-    <h1 class="post-h1">CRM Integration Depth: Data, Context, and Actions</h1>
+    <h1 class="post-h1">CRM Integration Depth: Data, Context, and Actions</h1><p class="lcb-platform-context">For GoHighLevel (GHL), also known as HighLevel.</p>
     <div class="post-meta"><span>By <a href="/about/#editorial-team">LC Bridge editorial team</a></span><span>6 min read</span><span>Updated Jul 2026</span></div>
   </header>
 
@@ -315,7 +329,7 @@
   <div class="prose">
     <p>"Does this integrate with my CRM?" is the wrong question. A pricing-page checkbox and a tool that quietly runs half your business are both called "an integration" — the word's been stretched until it means nothing.</p>
     <p>Ask a better one: <em>how deep does it go?</em> Real integration passes a three-part test — <strong>See, Know, Do</strong>. Your CRM should <strong>See</strong> the full picture live, <strong>Know</strong> what needs doing, and let you <strong>Do</strong> something about it without leaving. That's a ladder with four rungs, and most tools quit early.</p>
-    <p>We build deep on the HighLevel&reg; API and App Marketplace — so we'll be blunt about which rung most "integrations" stop on, and why the one that <em>looks</em> finished is usually the trap. Meanwhile the tax runs quietly: workers switch between apps about <a href="https://hbr.org/2022/08/how-much-time-and-energy-do-we-waste-toggling-between-applications" target="_blank" rel="noopener">1,200 times a day</a> (Harvard Business Review). Your CRM was supposed to end that. Most integrations just add a tab.</p>
+    <p>We build deep on the GoHighLevel&reg; API and App Marketplace — so we'll be blunt about which rung most "integrations" stop on, and why the one that <em>looks</em> finished is usually the trap. Meanwhile the tax runs quietly: workers switch between apps about <a href="https://hbr.org/2022/08/how-much-time-and-energy-do-we-waste-toggling-between-applications" target="_blank" rel="noopener">1,200 times a day</a> (Harvard Business Review). Your CRM was supposed to end that. Most integrations just add a tab.</p>
 
     <h2>The test for real integration: See, Know, Do</h2>
     <p>Three things separate an integration that saves time from one that just moves work around:</p>
@@ -357,11 +371,11 @@
     <h2>What a Level 4 integration looks like in practice</h2>
     <p>Take the daily grind of getting a contract signed. Picture a real-estate agency sending 40 agreements a week. <em>Before:</em> someone opens DocuSign every morning, cross-checks the CRM by hand, chases whoever hasn't signed — and forgets a few, so deals rot in "sent." <em>After,</em> on a Level 4 integration:</p>
     <ul>
-      <li><strong>See</strong> — the instant a signer opens, views, or signs, the status writes back to the HighLevel contact in real time.</li>
+      <li><strong>See</strong> — the instant a signer opens, views, or signs, the status writes back to the GoHighLevel contact in real time.</li>
       <li><strong>Know</strong> — a stall Worklist ranks everyone still waiting and groups them by <em>why</em>: viewed-not-signed, sent-not-opened, expiring, declined.</li>
       <li><strong>Do</strong> — one tap nudges a stalled signer, and a completed signature moves the deal to Won and starts onboarding on its own.</li>
     </ul>
-    <p>The Worklist shows the six people actually stalled, not all forty. Nobody opens DocuSign. <em>See it working &rarr; the <a href="/docusign-integration/">native DocuSign integration for HighLevel</a>, built for <a href="/docusign-integration/real-estate">real-estate</a> and <a href="/docusign-integration/insurance">insurance</a> teams.</em></p>
+    <p>The Worklist shows the six people actually stalled, not all forty. Nobody opens DocuSign. <em>See it working &rarr; the <a href="/docusign-integration/">native DocuSign integration for GoHighLevel</a>, built for <a href="/docusign-integration/real-estate">real-estate</a> and <a href="/docusign-integration/insurance">insurance</a> teams.</em></p>
 
     <h2>Stop asking "does it integrate?" Ask "which level?"</h2>
     <p>Next time a tool says it connects to your CRM, run it up the ladder. Does the data land on the record, live? Does it tell you what needs doing? Can you act without leaving? Anything short of yes on all three is Level 1&ndash;3 — a prettier way to do the same manual work. Level 4 is the rung that gives the time back.</p>
@@ -370,7 +384,7 @@
 
   <div class="prose" style="margin-top:32px">
     <h2>Build this experience for your own product</h2>
-    <p>Need your software to work inside HighLevel? Our former HighLevel team members build <a href="/highlevel-development/">custom integrations, marketplace apps, and frontend extensions</a>. Explore our work and tell us what you want to build.</p>
+    <p>Need your software to work inside GoHighLevel? Our former GoHighLevel team members build <a href="/highlevel-development/">custom integrations, marketplace apps, and frontend extensions</a>. Explore our work and tell us what you want to build.</p>
   </div>
 
   <div class="related">
@@ -396,7 +410,7 @@
 
 <section class="lcb-section lcb-section--dark postcta"><div class="lcb-wrap">
   <h2>See what Level 4 actually feels like.</h2>
-  <p>The native DocuSign integration for HighLevel puts live signing status, a stall Worklist, and one-tap follow-up on the contact record — See, Know, Do, fully white-labeled to your brand.</p>
+  <p>The native DocuSign integration for GoHighLevel puts live signing status, a stall Worklist, and one-tap follow-up on the contact record — See, Know, Do, fully white-labeled to your brand.</p>
   <div class="btns">
     <a href="/docusign-integration/" class="lcb-btn lcb-btn--primary lcb-btn--lg">Explore the DocuSign integration <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
     <a href="/book-a-call/" class="lcb-btn lcb-btn--ghost lcb-btn--lg">Book a call</a>
@@ -408,7 +422,7 @@
   <div class="ft-top">
     <div class="ft-brand">
       <a class="lcb-logo" href="/" style="color:#fff"><img src="/assets/lcbridge-lockup-white.svg" alt="LC Bridge" width="180" height="60" style="height:42px;width:auto;display:block"></a>
-      <p class="ft-tag">Deep, white-labeled integrations for the HighLevel ecosystem.</p>
+      <p class="ft-tag">Deep, white-labeled integrations for the GoHighLevel ecosystem.</p>
     </div>
     <div class="ft-links">
       <div class="ft-col"><p class="footer-heading">Guides</p><a href="/blog/gohighlevel-esignature-legally-binding/">Is GHL e-sign legally binding?</a><a href="/blog/gohighlevel-integrations/">GoHighLevel integrations</a><a href="/blog/four-levels-of-integration/">The 4 levels of integration</a><a href="/blog/ai-agents-need-deep-integrations/">AI agents &amp; integration depth</a></div>
@@ -462,6 +476,6 @@ document.querySelectorAll('.lcb-navtoggle').forEach(function(btn){
   document.addEventListener('keydown', function(e){ if(e.key === 'Escape') setOpen(false); });
 });
 </script>
-<script src="/assets/analytics-config.js?v=cf89bb56" defer></script><script src="/assets/analytics.js?v=82de975e" defer></script>
+<script src="/assets/analytics-config.js?v=cf89bb56" defer></script><script src="/assets/analytics.js?v=dcce6169" defer></script>
 </body>
 </html>

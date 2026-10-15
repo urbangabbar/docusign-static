@@ -30,3 +30,4 @@ User-agent: Google-Extended
 Allow: /
 
 Sitemap: https://lcbridge.app/sitemap.xml
+Sitemap: https://lcbridge.app/image-sitemap.xml

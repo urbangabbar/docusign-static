@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Send one document to multiple signers — Docusign by LC Bridge</title>
-<meta name="description" content="Set up multiple signer roles, map document fields to each selected contact, preview the values, and send one DocuSign document from HighLevel.">
+<title>GoHighLevel DocuSign: Multiple Signers | LC Bridge</title>
+<meta name="description" content="Send one DocuSign agreement to multiple signers from GoHighLevel. Configure signer roles, map contact values and review the document before sending.">
 <link rel="canonical" href="https://lcbridge.app/docusign-integration/docs/multiple-signers/">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="stylesheet" href="/assets/brand.css?v=b0980d3f">
+<link rel="stylesheet" href="/assets/brand.css?v=b11dccd9">
 <style>
   :root{--ink:#0b1220;--muted:#475467;--soft:#667085;--line:#e7e9ee;--pale:#f7f8fb;--brand:#3047c0;--violet:#6938ef}
   *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font:16px/1.65 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
@@ -43,7 +43,6 @@
       "@type": "Organization",
       "@id": "https://lcbridge.app/#organization",
       "name": "LC Bridge",
-
       "alternateName": [
         "LCBridge",
         "Lead Connector Bridge"
@@ -74,11 +73,26 @@
       }
     },
     {
+      "@type": "Brand",
+      "@id": "https://lcbridge.app/#gohighlevel-platform",
+      "name": "GoHighLevel",
+      "alternateName": [
+        "Go High Level",
+        "GHL",
+        "HighLevel",
+        "High Level"
+      ],
+      "url": "https://www.gohighlevel.com/"
+    },
+    {
       "@type": "WebPage",
       "@id": "https://lcbridge.app/docusign-integration/docs/multiple-signers/#webpage",
       "url": "https://lcbridge.app/docusign-integration/docs/multiple-signers/",
-      "name": "Send one document to multiple signers — Docusign by LC Bridge",
-      "description": "Set up multiple signer roles, map document fields to each selected contact, preview the values, and send one DocuSign document from HighLevel.",
+      "name": "GoHighLevel DocuSign: Multiple Signers | LC Bridge",
+      "description": "Send one DocuSign agreement to multiple signers from GoHighLevel. Configure signer roles, map contact values and review the document before sending.",
+      "about": {
+        "@id": "https://lcbridge.app/#gohighlevel-platform"
+      },
       "isPartOf": {
         "@id": "https://lcbridge.app/#website"
       },
@@ -126,9 +140,9 @@
       "@type": "TechArticle",
       "@id": "https://lcbridge.app/docusign-integration/docs/multiple-signers/#article",
       "headline": "Send one document to multiple signers",
-      "description": "Set up multiple signer roles, map document fields to each selected contact, preview the values, and send one DocuSign document from HighLevel.",
+      "description": "Send one DocuSign agreement to multiple signers from GoHighLevel. Configure signer roles, map contact values and review the document before sending.",
       "datePublished": "2026-10-12",
-      "dateModified": "2026-10-12",
+      "dateModified": "2026-10-15",
       "mainEntityOfPage": {
         "@id": "https://lcbridge.app/docusign-integration/docs/multiple-signers/#webpage"
       },
@@ -157,41 +171,41 @@
 <main class="wrap" id="main">
   <div class="crumb"><a href="/docusign-integration/docs/">Documentation</a><span>/</span>Multiple signers</div><details class="ds-guide-browse"><summary>Browse docs and guides</summary><nav class="ds-section-links" aria-label="DocuSign resource categories"><a href="/docusign-integration/docs/#compare">Compare your options</a><a href="/docusign-integration/docs/#get-started">Get started</a><a href="/docusign-integration/docs/#send-automate">Send and automate</a><a href="/docusign-integration/docs/#use-cases">Use cases and buying guidance</a><a href="/docusign-integration/docs/#go-deeper">Go deeper: integration design</a></nav></details>
   <span class="eyebrow">Template and send guide</span>
-  <h1>Send one document to multiple signers</h1>
-  <p class="lead">With Docusign by LC Bridge, a document can have more than one signer. Select a HighLevel contact for each signer role, then choose which contact supplies each mapped document value.</p>
+  <h1>Send one document to multiple signers</h1><p class="lcb-platform-context">For GoHighLevel (GHL), also known as HighLevel.</p>
+  <p class="lead">With Docusign by LC Bridge, a document can have more than one signer. Select a GoHighLevel contact for each signer role, then choose which contact supplies each mapped document value.</p>
   <p>The screenshots below are edited examples of the product interface. Contact details and the template name have been replaced.</p>
   <div class="summary"><div><strong>Set up roles</strong>Define the signers in the DocuSign template.</div><div><strong>Map each field</strong>Choose the contact role to read from and, if needed, write to.</div><div><strong>Review and send</strong>Select contacts and check the document preview.</div></div>
   <nav class="toc" aria-label="On this page"><strong>On this page</strong><ol><li><a href="#prepare">Prepare the DocuSign template</a></li><li><a href="#map">Map fields to contacts</a></li><li><a href="#send">Select contacts and send</a></li><li><a href="#writeback">Write values back</a></li><li><a href="#troubleshooting">Troubleshooting</a></li></ol></nav>
 
   <h2 id="prepare">1. Prepare the DocuSign template</h2>
   <p>Add a recipient role for each person who must sign. If both contacts need their own values printed in the document, add a separate document field for each value. The role names in your template appear in Docusign by LC Bridge when you configure and send it.</p>
-  <ol class="steps"><li>In DocuSign, create or open the template.</li><li>Add the recipient roles, such as <strong>Signer</strong> and <strong>signer2</strong>, and place the fields they need.</li><li>In HighLevel, open <strong>Docusign → Manage → Templates</strong>, enable the template, and inspect the <strong>Recipients</strong> tab.</li></ol>
+  <ol class="steps"><li>In DocuSign, create or open the template.</li><li>Add the recipient roles, such as <strong>Signer</strong> and <strong>signer2</strong>, and place the fields they need.</li><li>In GoHighLevel, open <strong>Docusign → Manage → Templates</strong>, enable the template, and inspect the <strong>Recipients</strong> tab.</li></ol>
   <figure><a href="images/recipient-roles.png" target="_blank" rel="noopener"><img decoding="async" src="images/recipient-roles-1699.webp" srcset="images/recipient-roles-640.webp 640w, images/recipient-roles-1200.webp 1200w, images/recipient-roles-1699.webp 1699w" sizes="(max-width: 700px) calc(100vw - 48px), 840px" alt="Recipients tab showing Signer and signer2 roles, each resolved from a contact" width="1699" height="926" loading="lazy"></a><figcaption>Recipient roles in the template editor. Open the image to enlarge it.</figcaption></figure>
   <div class="note"><p><strong>Signing order:</strong> The send sheet shows “Sign together” when the template has parallel recipients. Set the actual routing order in the DocuSign template.</p></div>
 
   <h2 id="map">2. Map document fields to the right contacts</h2>
-  <p>Open the template’s <strong>Fields</strong> tab. For each document field, select its HighLevel contact field, then use <strong>Read from</strong> to choose which signer’s selected contact supplies the value. On templates with multiple signers, the extra controls open by default.</p>
+  <p>Open the template’s <strong>Fields</strong> tab. For each document field, select its GoHighLevel contact field, then use <strong>Read from</strong> to choose which signer’s selected contact supplies the value. On templates with multiple signers, the extra controls open by default.</p>
   <p>In this example, the Name field reads the first contact’s First name, while the Title field reads the second contact’s Full name. Each field can use a different source contact:</p>
   <figure><a href="images/field-mapping.png" target="_blank" rel="noopener"><img decoding="async" src="images/field-mapping-1699.webp" srcset="images/field-mapping-640.webp 640w, images/field-mapping-1200.webp 1200w, images/field-mapping-1699.webp 1699w" sizes="(max-width: 700px) calc(100vw - 48px), 840px" alt="Fields tab showing one field reading from Signer contact and another reading from signer2 contact, with both values in the resolved preview" width="1699" height="926" loading="lazy"></a><figcaption>Each document field has its own CRM property and contact source. Open the image to enlarge it.</figcaption></figure>
-  <ol class="steps"><li>On a document field, click <strong>Map field</strong> and choose a HighLevel property such as Full name, Email, or a custom contact field.</li><li>Set <strong>Read from</strong> to the signer role whose contact holds that property.</li><li>Repeat for other fields, use the <strong>Resolved preview</strong> with sample contacts to check values, then click <strong>Save as ready</strong>.</li></ol>
+  <ol class="steps"><li>On a document field, click <strong>Map field</strong> and choose a GoHighLevel property such as Full name, Email, or a custom contact field.</li><li>Set <strong>Read from</strong> to the signer role whose contact holds that property.</li><li>Repeat for other fields, use the <strong>Resolved preview</strong> with sample contacts to check values, then click <strong>Save as ready</strong>.</li></ol>
   <div class="note"><p><strong>One field, one source:</strong> A document field reads from one selected contact. To display both contacts’ names, place two document fields and map each one separately.</p></div>
 
   <h2 id="send">3. Select contacts, preview, and send</h2>
-  <ol class="steps"><li>Open the first contact in HighLevel and choose <strong>Send for signature</strong>.</li><li>Pick the ready template. The send sheet lists every required signer role.</li><li>For each role, click <strong>Select contact</strong> or <strong>Change</strong> and choose the correct HighLevel contact. Name and email come from the selected contact.</li><li>Review the document preview to confirm values from both contacts appear in the intended fields. Then send.</li></ol>
+  <ol class="steps"><li>Open the first contact in GoHighLevel and choose <strong>Send for signature</strong>.</li><li>Pick the ready template. The send sheet lists every required signer role.</li><li>For each role, click <strong>Select contact</strong> or <strong>Change</strong> and choose the correct GoHighLevel contact. Name and email come from the selected contact.</li><li>Review the document preview to confirm values from both contacts appear in the intended fields. Then send.</li></ol>
   <figure><a href="images/send-two-signers.png" target="_blank" rel="noopener"><img decoding="async" src="images/send-two-signers-1699.webp" srcset="images/send-two-signers-640.webp 640w, images/send-two-signers-1200.webp 1200w, images/send-two-signers-1699.webp 1699w" sizes="(max-width: 700px) calc(100vw - 48px), 840px" alt="Send for signature sheet with two selected contacts and a document preview" width="1699" height="926" loading="lazy"></a><figcaption>Choose a contact for each signer role, then review the document before sending. Open the image to enlarge it.</figcaption></figure>
   <figure><a href="images/document-preview.png" target="_blank" rel="noopener"><img decoding="async" src="images/document-preview-1699.webp" srcset="images/document-preview-640.webp 640w, images/document-preview-1200.webp 1200w, images/document-preview-1699.webp 1699w" sizes="(max-width: 700px) calc(100vw - 48px), 840px" alt="Expanded document preview showing values from both selected signer contacts" width="1699" height="926" loading="lazy"></a><figcaption>The expanded preview shows both mapped values in the same document. Open the image to enlarge it.</figcaption></figure>
   <p>If you change a mapping while a send sheet is already open, close and reopen that sheet to load the newly saved template version.</p>
 
   <h2 id="writeback">Write completed values to the right contact</h2>
-  <p>For a field that should update HighLevel after signing, choose <strong>Writeback</strong> or <strong>Both</strong>, map it to a writable contact field, and set <strong>Write to</strong> to the matching signer role. On completion, the mapped value is written to that role’s selected contact. Choose <strong>Both</strong> when the field should prefill from a contact and write its completed value back.</p>
+  <p>For a field that should update GoHighLevel after signing, choose <strong>Writeback</strong> or <strong>Both</strong>, map it to a writable contact field, and set <strong>Write to</strong> to the matching signer role. On completion, the mapped value is written to that role’s selected contact. Choose <strong>Both</strong> when the field should prefill from a contact and write its completed value back.</p>
   <div class="note"><p><strong>Check the target:</strong> “Read from” controls prefill. “Write to” controls which contact receives the completed value. Review both when multiple contacts are involved.</p></div>
 
   <h2 id="troubleshooting">Troubleshooting</h2>
-  <table><thead><tr><th>What you see</th><th>What to check</th></tr></thead><tbody><tr><td>A second role is missing</td><td>Confirm the DocuSign template has a second recipient role, then reopen the template in Docusign by LC Bridge and check its Recipients tab.</td></tr><tr><td>A field is blank in preview</td><td>Check its HighLevel field, its “Read from” role, and that the selected contact has a value for that property. Save the template and reopen the send sheet.</td></tr><tr><td>A value comes from the wrong contact</td><td>Inspect the field’s “Read from” role and the contact selected for that role in the send sheet.</td></tr><tr><td>Completed data updates the wrong contact</td><td>Inspect the field’s “Write to” role and confirm its mapping is set to Writeback or Both.</td></tr><tr><td>Send is disabled</td><td>Choose a valid contact for every required signer role and review any contact email validation shown in HighLevel.</td></tr></tbody></table>
+  <table><thead><tr><th>What you see</th><th>What to check</th></tr></thead><tbody><tr><td>A second role is missing</td><td>Confirm the DocuSign template has a second recipient role, then reopen the template in Docusign by LC Bridge and check its Recipients tab.</td></tr><tr><td>A field is blank in preview</td><td>Check its GoHighLevel field, its “Read from” role, and that the selected contact has a value for that property. Save the template and reopen the send sheet.</td></tr><tr><td>A value comes from the wrong contact</td><td>Inspect the field’s “Read from” role and the contact selected for that role in the send sheet.</td></tr><tr><td>Completed data updates the wrong contact</td><td>Inspect the field’s “Write to” role and confirm its mapping is set to Writeback or Both.</td></tr><tr><td>Send is disabled</td><td>Choose a valid contact for every required signer role and review any contact email validation shown in GoHighLevel.</td></tr></tbody></table>
   <div class="finish"><p><strong>Ready to test:</strong> Use a non-sensitive demo template, select two test contacts, and confirm both values in the preview before sending.</p></div>
   <p>Need help with the first setup? <a href="mailto:support@lcbridge.app">Contact LC Bridge support</a> or return to the <a href="/docusign-integration/docs/">documentation index</a>.</p>
 <section class="ds-next" aria-label="Related DocuSign guides"><h2>Keep going</h2><ul><li><a href="/docusign-integration/docs/field-mapping/">Map fields and sync completed answers</a></li><li><a href="/docusign-integration/docs/workflows/">Configure follow-up and completion workflows</a></li><li><a href="/docusign-integration/docs/">Browse all DocuSign docs &amp; guides</a></li></ul></section></main>
-<footer class="ds-footer"><div class="ds-footer-inner"><p>DocuSign Integration by LC Bridge is an independent third-party integration for HighLevel. LC Bridge is not affiliated with or endorsed by DocuSign or HighLevel. All trademarks belong to their respective owners.</p><div class="ds-footer-links"><a href="/docusign-integration/docs/">Docs &amp; guides</a><a href="/docusign-integration/privacy">Privacy</a><a href="/docusign-integration/terms">Terms</a><a href="/docusign-integration/refund">Refund</a><a href="/">LC Bridge</a></div><p>© 2026 LC Bridge.</p></div></footer>
-<script src="/assets/analytics-config.js?v=cf89bb56" defer></script><script src="/assets/analytics.js?v=82de975e" defer></script>
+<footer class="ds-footer"><div class="ds-footer-inner"><p>DocuSign Integration by LC Bridge is an independent third-party integration for GoHighLevel. LC Bridge is not affiliated with or endorsed by DocuSign or GoHighLevel. All trademarks belong to their respective owners.</p><div class="ds-footer-links"><a href="/docusign-integration/docs/">Docs &amp; guides</a><a href="/docusign-integration/privacy">Privacy</a><a href="/docusign-integration/terms">Terms</a><a href="/docusign-integration/refund">Refund</a><a href="/">LC Bridge</a></div><p>© 2026 LC Bridge.</p></div></footer>
+<script src="/assets/analytics-config.js?v=cf89bb56" defer></script><script src="/assets/analytics.js?v=dcce6169" defer></script>
 </body>
 </html>

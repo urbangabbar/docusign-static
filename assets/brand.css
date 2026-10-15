@@ -339,3 +339,6 @@ body.modal-lock{overflow:hidden}
   .lcb-life.is-armed .lcb-life-dot::after{opacity:1;transform:none}
   .lcb-life.is-armed .lcb-life-step::after{transform:none}
 }
+
+/* Shared platform identity across product, guide and policy pages. */
+.lcb-body .lcb-platform-context{font-family:var(--lcb-font-text);font-size:13px;font-weight:400;line-height:1.65;letter-spacing:0;text-transform:none;opacity:.8;margin:12px 0 18px;max-width:70ch}

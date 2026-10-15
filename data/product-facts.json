@@ -1,5 +1,5 @@
 {
-  "lastReviewed": "2026-10-12",
+  "lastReviewed": "2026-10-15",
   "organization": {
     "name": "LC Bridge",
     "alternateName": [
@@ -15,8 +15,8 @@
   "docusign": {
     "name": "DocuSign Integration by LC Bridge",
     "url": "https://lcbridge.app/docusign-integration/",
-    "requirements": "HighLevel account and an existing DocuSign account; configured template mappings and enabled workflows",
-    "description": "Connect DocuSign agreements to HighLevel contact data, configured follow-up workflows, and completed-answer sync.",
+    "requirements": "GoHighLevel account and an existing DocuSign account; configured template mappings and enabled workflows",
+    "description": "Connect DocuSign agreements to GoHighLevel contact data, configured follow-up workflows, and completed-answer sync. Built for GoHighLevel (GHL), also known as HighLevel.",
     "plans": [
       {
         "name": "Starter",
@@ -48,12 +48,12 @@
   "community-agents": {
     "name": "Community Agents by LC Bridge",
     "url": "https://lcbridge.app/community-agents/",
-    "requirements": "Marketplace installation in the owning HighLevel sub-account, a member-facing community portal, and a dedicated member login for each AI identity",
-    "description": "AI replies for HighLevel community teams using supplied knowledge, private previews, and member assessments supported by source conversations.",
+    "requirements": "Marketplace installation in the owning GoHighLevel sub-account, a member-facing community portal, and a dedicated member login for each AI identity",
+    "description": "AI replies for GoHighLevel community teams using supplied knowledge, private previews, and member assessments supported by source conversations. Built for GoHighLevel (GHL), also known as HighLevel.",
     "monthlyUSD": 47,
-    "unit": "HighLevel sub-account",
+    "unit": "GoHighLevel sub-account",
     "includedAIAllowanceUSD": 47,
-    "usageMetering": "4 times provider cost; included allowance used first, overage billed through HighLevel wallet",
+    "usageMetering": "4 times provider cost; included allowance used first, overage billed through GoHighLevel wallet",
     "rollover": false,
     "installationUrl": "https://community-agents.lcbridge.app/oauth/install",
     "video": {
@@ -62,5 +62,16 @@
       "uploadDate": "2026-10-09T10:13:39-07:00",
       "thumbnailUrl": "https://lcbridge.app/assets/video/community-agents-demo-thumbnail-1280.webp"
     }
+  },
+  "platform": {
+    "name": "GoHighLevel",
+    "alternateName": [
+      "Go High Level",
+      "GHL",
+      "HighLevel",
+      "High Level"
+    ],
+    "url": "https://www.gohighlevel.com/",
+    "context": "GoHighLevel (GHL), also known as HighLevel"
   }
 }

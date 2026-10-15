@@ -128,6 +128,28 @@ class SearchSyncTests(unittest.TestCase):
         manifest['pages'] = []
         self.assertEqual(reconcile.reconcile(state, manifest)['urls'][BASE + '/']['status'], 'retired')
 
+    def test_referenced_images_and_responsive_variants_are_discoverable(self):
+        (self.root / 'assets').mkdir()
+        for name in ['screen.webp', 'screen-large.webp']:
+            (self.root / 'assets' / name).write_bytes(b'image fixture')
+        self.page('index.html', '/', '<picture><source srcset="/assets/screen-large.webp 1200w">'
+                  '<img src="/assets/screen.webp?v=1" alt="Product screen"></picture>')
+        self.assertEqual(sync.run(self.root, True), 0)
+        images = {BASE + '/assets/screen.webp', BASE + '/assets/screen-large.webp'}
+        self.assertEqual(set(self.manifest()['pages'][0]['images']), images)
+        xml = ET.parse(self.root / 'image-sitemap.xml')
+        self.assertEqual({n.text for n in xml.findall('.//{' + sync.IMAGE_NS + '}loc')}, images)
+        self.assertIn('Sitemap: ' + BASE + '/image-sitemap.xml', (self.root / 'robots.txt').read_text())
+        self.assertEqual(sync.run(self.root), 0)
+
+    def test_internal_images_cannot_leak_into_discovery(self):
+        self.policy['internalPaths']['private/*'] = 'Internal media'
+        (self.root / 'data/search-policy.json').write_text(json.dumps(self.policy))
+        (self.root / 'private').mkdir()
+        (self.root / 'private/screen.png').write_bytes(b'image fixture')
+        self.page('index.html', '/', '<img src="/private/screen.png" alt="Internal">')
+        self.assertEqual(sync.run(self.root, True), 1)
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Set up the contract workflows — DocuSign Integration docs | LC Bridge</title>
-<meta name="description" content="How to set up the six pre-built DocuSign workflows in HighLevel: the triggers, actions and stall types, the steps inside each workflow, merge fields, and the order to switch them on.">
+<title>Set Up DocuSign Workflows in GoHighLevel | LC Bridge</title>
+<meta name="description" content="Configure DocuSign contract workflows in GoHighLevel, including sending, delivery follow-up, views, stalls, declines and completion handling.">
 <link rel="canonical" href="https://lcbridge.app/docusign-integration/docs/workflows/">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="stylesheet" href="/assets/brand.css?v=b0980d3f">
+<link rel="stylesheet" href="/assets/brand.css?v=b11dccd9">
 <style>
   :root{
     --ink:#0B1220; --ink-2:#475467; --ink-3:#667085; --line:#E7E9EE; --line-2:#EEF0F4;
@@ -127,7 +127,6 @@
       "@type": "Organization",
       "@id": "https://lcbridge.app/#organization",
       "name": "LC Bridge",
-
       "alternateName": [
         "LCBridge",
         "Lead Connector Bridge"
@@ -158,11 +157,26 @@
       }
     },
     {
+      "@type": "Brand",
+      "@id": "https://lcbridge.app/#gohighlevel-platform",
+      "name": "GoHighLevel",
+      "alternateName": [
+        "Go High Level",
+        "GHL",
+        "HighLevel",
+        "High Level"
+      ],
+      "url": "https://www.gohighlevel.com/"
+    },
+    {
       "@type": "WebPage",
       "@id": "https://lcbridge.app/docusign-integration/docs/workflows/#webpage",
       "url": "https://lcbridge.app/docusign-integration/docs/workflows/",
-      "name": "Set up the contract workflows — DocuSign Integration docs | LC Bridge",
-      "description": "How to set up the six pre-built DocuSign workflows in HighLevel: the triggers, actions and stall types, the steps inside each workflow, merge fields, and the order to switch them on.",
+      "name": "Set Up DocuSign Workflows in GoHighLevel | LC Bridge",
+      "description": "Configure DocuSign contract workflows in GoHighLevel, including sending, delivery follow-up, views, stalls, declines and completion handling.",
+      "about": {
+        "@id": "https://lcbridge.app/#gohighlevel-platform"
+      },
       "isPartOf": {
         "@id": "https://lcbridge.app/#website"
       },
@@ -210,9 +224,9 @@
       "@type": "TechArticle",
       "@id": "https://lcbridge.app/docusign-integration/docs/workflows/#article",
       "headline": "Set up the contract workflows",
-      "description": "How to set up the six pre-built DocuSign workflows in HighLevel: the triggers, actions and stall types, the steps inside each workflow, merge fields, and the order to switch them on.",
+      "description": "Configure DocuSign contract workflows in GoHighLevel, including sending, delivery follow-up, views, stalls, declines and completion handling.",
       "datePublished": "2026-10-12",
-      "dateModified": "2026-10-12",
+      "dateModified": "2026-10-15",
       "mainEntityOfPage": {
         "@id": "https://lcbridge.app/docusign-integration/docs/workflows/#webpage"
       },
@@ -248,7 +262,7 @@
   </nav><details class="ds-guide-browse"><summary>Browse docs and guides</summary><nav class="ds-section-links" aria-label="DocuSign resource categories"><a href="/docusign-integration/docs/#compare">Compare your options</a><a href="/docusign-integration/docs/#get-started">Get started</a><a href="/docusign-integration/docs/#send-automate">Send and automate</a><a href="/docusign-integration/docs/#use-cases">Use cases and buying guidance</a><a href="/docusign-integration/docs/#go-deeper">Go deeper: integration design</a></nav></details>
   <header class="page">
     <span class="eyebrow"><span class="dot"></span>Documentation</span>
-    <h1>Set up the contract workflows</h1>
+    <h1>Set up the contract workflows</h1><p class="lcb-platform-context">For GoHighLevel (GHL), also known as HighLevel.</p>
     <p class="subtitle">Six workflows come with the DocuSign Integration, saved as drafts. This guide covers what starts each one, the steps inside, and the order to switch them on. For the plain-English tour of what they do, see <a class="inline" href="/docusign-integration/workflows">the six workflows</a>.</p>
     <p class="updated">Last updated: September 15, 2026</p>
   </header>
@@ -319,18 +333,18 @@
   </ol>
 
   <h2 id="triggers">Triggers</h2>
-  <p>The integration adds five triggers to the HighLevel workflow builder. Look for these names when you add a trigger.</p>
+  <p>The integration adds five triggers to the GoHighLevel workflow builder. Look for these names when you add a trigger.</p>
   <table>
     <thead><tr><th>Trigger</th><th>Fires when</th><th>Used in</th></tr></thead>
     <tbody>
-      <tr><td>Agreement Sent</td><td>A contract is first sent, whether from HighLevel or straight from DocuSign</td><td>Workflow 2</td></tr>
+      <tr><td>Agreement Sent</td><td>A contract is first sent, whether from GoHighLevel or straight from DocuSign</td><td>Workflow 2</td></tr>
       <tr><td>Envelope Viewed</td><td>A signer opens the contract</td><td>Workflow 3</td></tr>
       <tr><td>Envelope Stalled</td><td>A contract moves into one of the four <a class="inline" href="#stalls">stall types</a></td><td>Workflow 4</td></tr>
       <tr><td>Envelope Declined</td><td>A signer declines</td><td>Workflow 5</td></tr>
       <tr><td>Envelope Completed</td><td>Every signer has signed</td><td>Workflow 6</td></tr>
     </tbody>
   </table>
-  <p>Workflow 1 starts from HighLevel&rsquo;s own <strong>Pipeline Stage Changed</strong> trigger instead.</p>
+  <p>Workflow 1 starts from GoHighLevel&rsquo;s own <strong>Pipeline Stage Changed</strong> trigger instead.</p>
   <div class="callout">
     <p class="ck">Note</p>
     <p><strong>Envelope Stalled fires once each time a contract enters a stall type</strong>, not on a schedule. A contract that sits in the same stall for a week fires it once. That&rsquo;s why the follow-ups in workflow 4 are Wait steps inside a single run.</p>
@@ -364,7 +378,7 @@
   </div>
 
   <h2 id="workflows">The six workflows</h2>
-  <p>Numbered in the order a contract lives. Step names match the actions in the HighLevel workflow builder, and template names match what&rsquo;s in Marketing &rsaquo; Emails.</p>
+  <p>Numbered in the order a contract lives. Step names match the actions in the GoHighLevel workflow builder, and template names match what&rsquo;s in Marketing &rsaquo; Emails.</p>
 
   <h3 id="w1" class="wfh" style="--tone:#4C00FF"><span class="n">1</span>Send when the deal is ready</h3>
   <p class="trig"><span><strong>Trigger:</strong> Pipeline Stage Changed, set to your paperwork stage</span></p>
@@ -444,7 +458,7 @@
   </ol>
 
   <h2 id="merge-fields">Merge fields</h2>
-  <p>The integration&rsquo;s fields use the trigger as a prefix, then the field name exactly as written, capitals included: <code>{{envelope_completed.emailSubject}}</code>. HighLevel&rsquo;s own fields keep their usual format, like <code>{{contact.first_name}}</code>.</p>
+  <p>The integration&rsquo;s fields use the trigger as a prefix, then the field name exactly as written, capitals included: <code>{{envelope_completed.emailSubject}}</code>. GoHighLevel&rsquo;s own fields keep their usual format, like <code>{{contact.first_name}}</code>.</p>
   <table>
     <thead><tr><th>Field</th><th>What it holds</th><th>Where</th></tr></thead>
     <tbody>
@@ -464,8 +478,8 @@
   </div>
   <div class="callout">
     <p class="ck">Note</p>
-    <p><strong>Numbers go in labelled rows, not sentences.</strong> HighLevel can&rsquo;t pluralise, so &ldquo;it&rsquo;s been {{stallDays}} days&rdquo; sends as &ldquo;it&rsquo;s been 1 days&rdquo;. &ldquo;Days stalled: 1&rdquo; reads fine at any value.</p>
-    <p><strong>Dates arrive in US Central time</strong>, like <code>June 18, 2026 4:00 AM CDT</code>, whatever the sub-account&rsquo;s time zone, and HighLevel can&rsquo;t convert them. That&rsquo;s why no customer email names a date.</p>
+    <p><strong>Numbers go in labelled rows, not sentences.</strong> GoHighLevel can&rsquo;t pluralise, so &ldquo;it&rsquo;s been {{stallDays}} days&rdquo; sends as &ldquo;it&rsquo;s been 1 days&rdquo;. &ldquo;Days stalled: 1&rdquo; reads fine at any value.</p>
+    <p><strong>Dates arrive in US Central time</strong>, like <code>June 18, 2026 4:00 AM CDT</code>, whatever the sub-account&rsquo;s time zone, and GoHighLevel can&rsquo;t convert them. That&rsquo;s why no customer email names a date.</p>
     <p>Don&rsquo;t use <code>opportunityValue</code> or <code>sender</code>. They&rsquo;re always 0 and empty.</p>
   </div>
 
@@ -518,7 +532,7 @@
   </ul>
 <section class="ds-next" aria-label="Related DocuSign guides"><h2>Keep going</h2><ul><li><a href="/docusign-integration/workflows">Explore the six workflows and example emails</a></li><li><a href="/blog/four-ways-a-contract-stalls/">Understand the four ways a contract stalls</a></li><li><a href="/docusign-integration/docs/field-mapping/">Check field mapping and completed-answer sync</a></li><li><a href="/docusign-integration/docs/">Browse all DocuSign docs &amp; guides</a></li></ul></section></main>
 
-<footer class="ds-footer"><div class="ds-footer-inner"><p>DocuSign Integration by LC Bridge is an independent third-party integration for HighLevel. LC Bridge is not affiliated with or endorsed by DocuSign or HighLevel. All trademarks belong to their respective owners.</p><div class="ds-footer-links"><a href="/docusign-integration/docs/">Docs &amp; guides</a><a href="/docusign-integration/privacy">Privacy</a><a href="/docusign-integration/terms">Terms</a><a href="/docusign-integration/refund">Refund</a><a href="/">LC Bridge</a></div><p>© 2026 LC Bridge.</p></div></footer>
+<footer class="ds-footer"><div class="ds-footer-inner"><p>DocuSign Integration by LC Bridge is an independent third-party integration for GoHighLevel. LC Bridge is not affiliated with or endorsed by DocuSign or GoHighLevel. All trademarks belong to their respective owners.</p><div class="ds-footer-links"><a href="/docusign-integration/docs/">Docs &amp; guides</a><a href="/docusign-integration/privacy">Privacy</a><a href="/docusign-integration/terms">Terms</a><a href="/docusign-integration/refund">Refund</a><a href="/">LC Bridge</a></div><p>© 2026 LC Bridge.</p></div></footer>
 <script>
 /* Mobile nav — shared behaviour (see .lcb-navtoggle in /assets/brand.css). */
 document.documentElement.classList.add('has-navjs');
@@ -560,6 +574,6 @@ document.querySelectorAll('.lcb-navtoggle').forEach(function(btn){
   document.addEventListener('keydown', function(e){ if(e.key === 'Escape') setOpen(false); });
 });
 </script>
-<script src="/assets/analytics-config.js?v=cf89bb56" defer></script><script src="/assets/analytics.js?v=82de975e" defer></script>
+<script src="/assets/analytics-config.js?v=cf89bb56" defer></script><script src="/assets/analytics.js?v=dcce6169" defer></script>
 </body>
 </html>

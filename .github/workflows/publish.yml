@@ -40,7 +40,7 @@ jobs:
             python3 scripts/sync-search.py --write
             python3 scripts/sync-search.py
             python3 scripts/check-site.py
-            git add sitemap.xml llms.txt robots.txt search-manifest.json _config.yml
+            git add sitemap.xml image-sitemap.xml llms.txt robots.txt search-manifest.json _config.yml
             if git diff --cached --quiet; then break; fi
             git commit -m 'Keep public search discovery in sync'
             if git push origin HEAD:main; then break; fi

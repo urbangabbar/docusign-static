@@ -40,6 +40,9 @@ ORG = {'@type': 'Organization', '@id': BASE + '/#organization', **FACTS['organiz
        'logo': {'@type': 'ImageObject', 'url': BASE + '/assets/lcbridge-lockup-black.png'},
        'contactPoint': {'@type': 'ContactPoint', 'contactType': 'customer support',
                         'email': 'support@lcbridge.app', 'url': BASE + '/about/'}}
+PLATFORM = {'@type': 'Brand', '@id': BASE + '/#gohighlevel-platform',
+            **FACTS['platform']}
+PLATFORM.pop('context', None)
 
 
 def application(product):
@@ -47,7 +50,8 @@ def application(product):
     app = {'@type': 'SoftwareApplication', '@id': data['url'] + '#app',
            'name': data['name'], 'url': data['url'], 'description': data['description'],
            'applicationCategory': 'BusinessApplication',
-           'operatingSystem': 'Web: HighLevel / GoHighLevel',
+           'operatingSystem': 'Web',
+           'about': {'@id': PLATFORM['@id']},
            'softwareRequirements': data['requirements'],
            'publisher': {'@id': BASE + '/#organization'},
            'softwareHelp': {'@type': 'WebPage',
@@ -77,7 +81,8 @@ def video(product):
     data = FACTS[product]
     v = data['video']
     return {'@type': 'VideoObject', '@id': data['url'] + '#video',
-            'name': data['name'] + ' product demo', 'description': data['description'],
+            'name': data['name'] + ' for GoHighLevel (GHL) — product demo',
+            'description': data['description'], 'about': {'@id': PLATFORM['@id']},
             'thumbnailUrl': [v['thumbnailUrl']], 'duration': v['duration'],
             'uploadDate': v['uploadDate'],
             'embedUrl': 'https://www.youtube-nocookie.com/embed/' + v['id'],
@@ -106,10 +111,12 @@ def update_page(path):
     kind = 'AboutPage' if canonical == BASE + '/about/' else 'WebPage'
     webpage = {'@type': kind, '@id': canonical + '#webpage', 'url': canonical,
                'name': title, 'description': description,
+               'about': {'@id': PLATFORM['@id']},
                'isPartOf': {'@id': BASE + '/#website'},
                'publisher': {'@id': BASE + '/#organization'}}
     graph = [ORG, {'@type': 'WebSite', '@id': BASE + '/#website', 'url': BASE + '/',
-                   'name': 'LC Bridge', 'publisher': {'@id': BASE + '/#organization'}}, webpage]
+                   'name': 'LC Bridge', 'publisher': {'@id': BASE + '/#organization'}},
+             PLATFORM, webpage]
     if canonical in [BASE + '/docusign-integration/docs/', BASE + '/community-agents/docs/']:
         # The hub is static HTML: keep schema aligned with its visible catalogue.
         resources = re.findall(r'<li\s+data-docs-resource\b[^>]*>\s*<a\s+href="([^"]+)">(.*?)</a>', source, re.S)
