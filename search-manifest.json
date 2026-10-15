@@ -13,8 +13,8 @@
       "url": "https://lcbridge.app/blog/ai-agents-need-deep-integrations/",
       "title": "AI Agents & CRM Integration: What Data Matters | LC Bridge",
       "description": "An AI agent needs reliable CRM data and configured actions. Learn how integration depth affects HighLevel workflows and DocuSign follow-up.",
-      "contentHash": "0c618f0961cf009a7d153e22e4d6212ea74e248e23e7597a045adc44f91b86f6",
-      "lastmod": "2026-10-14"
+      "contentHash": "38a98756d2184ef28b89fab02ca36af3f6d6d3096d546278ed383b1b3f093454",
+      "lastmod": "2026-10-15"
     },
     {
       "url": "https://lcbridge.app/blog/four-levels-of-integration/",
@@ -41,8 +41,8 @@
       "url": "https://lcbridge.app/blog/gohighlevel-integrations/",
       "title": "HighLevel Integrations: A Practical Guide | LC Bridge",
       "description": "Understand HighLevel integrations, middleware tradeoffs, and LC Bridge products. Explore DocuSign, community AI, setup guides, and account requirements.",
-      "contentHash": "dde7f85a82d1f99b9b4255bbe765b96d3e823d3e2b6a22956bb9ab980a287058",
-      "lastmod": "2026-10-14"
+      "contentHash": "b39cde9d8522a86f859418582983429989ac53b57e3f66efde332aaffc43e32c",
+      "lastmod": "2026-10-15"
     },
     {
       "url": "https://lcbridge.app/blog/",
@@ -242,9 +242,9 @@
     },
     {
       "url": "https://lcbridge.app/highlevel-development/",
-      "title": "GoHighLevel Custom Development & API Integrations | LC Bridge",
-      "description": "Custom GoHighLevel integrations, marketplace apps, AI agents and frontend extensions for software brands. Built by former HighLevel team members.",
-      "contentHash": "596324356ffc7e47e76b2f62104c55b0124bb620ae65ab317341f0a6c8c5b996",
+      "title": "GoHighLevel Developers & API Integration Services | LC Bridge",
+      "description": "GoHighLevel developers for custom API integrations, workflow automation and marketplace apps. Former HighLevel team members building for software brands.",
+      "contentHash": "f475483c578ad2a6049a17d2bb577884d63727a9cfc93b5b99836e617460b6ae",
       "lastmod": "2026-10-15"
     },
     {

@@ -6,7 +6,7 @@ LC Bridge (Lead Connector Bridge) builds products and provides custom developmen
 
 ## Custom development
 
-- [GoHighLevel Custom Development & API Integrations](https://lcbridge.app/highlevel-development/): Custom HighLevel (GoHighLevel) development for software brands: API integrations and middleware, marketplace apps, SaaS and backend extensions, AI agents, and custom JavaScript frontend experiences. The team behind DocuSign Integration and Community Agents. Explore the documented mapping and send flow, and Member Insights. Scope, handover, and support are agreed per engagement. Send a short project brief through the inquiry form; email arun@lcbridge.app is also available.
+- [GoHighLevel Developers & API Integration Services](https://lcbridge.app/highlevel-development/): GoHighLevel developers for software brands: custom API integrations and middleware, marketplace apps, workflow automation, SaaS and backend extensions, AI agents, and custom JavaScript frontend experiences. The team behind DocuSign Integration and Community Agents. Explore the documented mapping and send flow, and Member Insights. Scope, handover, and support are agreed per engagement. Send a short project brief through the inquiry form; email arun@lcbridge.app is also available.
 
 ## Products
 
@@ -100,6 +100,6 @@ LC Bridge (Lead Connector Bridge) builds products and provides custom developmen
 - [DocuSign vs HighLevel Documents & Contracts | LC Bridge](https://lcbridge.app/docusign-integration/vs-native-signature): Compare HighLevel native signing with DocuSign and LC Bridge. Review recipients, audit records, CRM workflows, costs, and when each approach fits.
 - [DocuSign Workflows for HighLevel: Contracts That Follow Themselves Up | LC Bridge](https://lcbridge.app/docusign-integration/workflows): Six pre-built HighLevel workflows for DocuSign contracts. They send it when the deal is ready, make sure it lands, follow up when it goes quiet, and stop the moment it's signed.
 - [HighLevel Google Sheets Integration — Two-Way Sync | LC Bridge](https://lcbridge.app/google-sheets-integration/): Sync HighLevel (GoHighLevel) contacts and records with Google Sheets — two-way, in real time. LC Bridge keeps your CRM and your spreadsheets in step, no code required.
-- [GoHighLevel Custom Development & API Integrations | LC Bridge](https://lcbridge.app/highlevel-development/): Custom GoHighLevel integrations, marketplace apps, AI agents and frontend extensions for software brands. Built by former HighLevel team members.
+- [GoHighLevel Developers & API Integration Services | LC Bridge](https://lcbridge.app/highlevel-development/): GoHighLevel developers for custom API integrations, workflow automation and marketplace apps. Former HighLevel team members building for software brands.
 - [HighLevel Products & Custom Development | LC Bridge](https://lcbridge.app/): Build more on HighLevel with LC Bridge. Explore DocuSign Integration, Community Agents, and custom software from a team that helped build HighLevel’s APIs.
 - [HighLevel Integration Products | LC Bridge](https://lcbridge.app/products/): Explore DocuSign Integration and Community Agents for HighLevel. Compare product capabilities, setup requirements, and pricing from LC Bridge.
