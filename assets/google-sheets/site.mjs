@@ -26,12 +26,3 @@ const frame=document.querySelector('#sheets-waitlist');
 if(frame){let started=false;frame.addEventListener('focus',()=>{if(!started){started=true;event('early_access_form_started');}});}
 // A frame load/click is never reported as an accepted request. Provider-confirmed
 // completion must be wired by its actual trusted success flow, not inferred here.
-
-const consentDialog=document.querySelector('#analytics-dialog');
-if(consentDialog){
- let preference;try{preference=localStorage.getItem('lcbridge-analytics-consent');}catch{}
- if(preference==='granted'||preference==='denied')window.LCBridgeAnalytics?.setConsent(preference);
- if(!window.LCBridgeAnalyticsConfig?.ga4MeasurementId)document.querySelector('#analytics-description').textContent='Optional analytics are not currently enabled. You can save your preference for when a measurement stream is configured. Hosted forms have their own provider controls.';
- document.querySelector('#analytics-settings').addEventListener('click',()=>consentDialog.showModal());
- for(const button of consentDialog.querySelectorAll('[data-analytics-consent]'))button.addEventListener('click',()=>{const choice=button.dataset.analyticsConsent;window.LCBridgeAnalytics?.setConsent(choice);try{localStorage.setItem('lcbridge-analytics-consent',choice);}catch{}consentDialog.close();});
-}

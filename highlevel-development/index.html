@@ -342,12 +342,13 @@
   ]
 }
 </script>
+<link rel="stylesheet" href="/assets/site-chrome.css?v=8d578318">
 </head>
 <body class="lcb-body dev-page">
   <a class="dev-skip" href="#main">Skip to content</a>
   <nav class="dev-nav" aria-label="Main navigation"><div class="lcb-wrap nav-in">
     <a class="dev-brand" href="/" aria-label="LC Bridge home"><img src="/assets/lcbridge-lockup-black.svg" alt="LC Bridge" width="180" height="60"></a>
-    <div class="nav-links" id="navmenu"><a href="/products/">Products</a><a href="/highlevel-development/" aria-current="page">Custom Development</a><a href="/blog/">Guides</a></div>
+    <div class="nav-links" id="navmenu"><details class="lcb-product-switcher" data-product-switcher><summary>Products <span aria-hidden="true">⌄</span></summary><nav class="lcb-product-panel" aria-label="LC Bridge products"><a href="/google-sheets-integration/" data-product="google-sheets"><strong>Google Sheets integration</strong><span>CRM imports, reports, and reviewed updates</span><small>Early access</small></a><a href="/community-agents/" data-product="community-agents"><strong>Community Agents</strong><span>AI replies for your HighLevel communities</span><small>Available now</small></a><a href="/docusign-integration/" data-product="docusign"><strong>DocuSign integration</strong><span>Agreements connected to your CRM</span><small>Available now</small></a><a href="/products/">View all products →</a></nav></details><a href="/highlevel-development/" aria-current="page">Custom Development</a><a href="/blog/">Guides</a></div>
     <a href="#inquiry" data-analytics-action="project_inquiry_cta_clicked" class="lcb-btn lcb-btn--primary">Discuss your project <span aria-hidden="true">→</span></a>
     <button class="lcb-navtoggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navmenu"><span></span><span></span><span></span></button>
   </div></nav>
@@ -355,7 +356,7 @@
     <section class="dev-hero"><div class="lcb-wrap dev-hero-grid">
       <div>
         <span class="dev-kicker">Custom development for software brands</span>
-        <h1>GoHighLevel developers for <span>your product.</span></h1><p class="lcb-platform-context">For GoHighLevel (GHL), also known as HighLevel.</p>
+        <h1>GoHighLevel developers for <span>your product.</span></h1>
         <p class="dev-lede">LC Bridge is a GoHighLevel development team for software brands. We build custom API integrations, marketplace apps, workflow automation, SaaS extensions, AI agents, and JavaScript interfaces. Our former GoHighLevel team members helped design and build its APIs. We connect your product to the data, workflows, and screens your customers use.</p>
         <div class="dev-actions"><a class="lcb-btn lcb-btn--primary lcb-btn--lg" href="#inquiry" data-analytics-action="project_inquiry_cta_clicked">Discuss your project <span aria-hidden="true">→</span></a><a class="dev-textlink" href="#work">See what we’ve built <span aria-hidden="true">↓</span></a></div>
         <p class="dev-hero-proof">The team behind DocuSign Integration and Community Agents.</p>
@@ -467,10 +468,7 @@
       </div>
     </div></section>
   </main>
-  <footer class="dev-footer"><div class="lcb-wrap">
-    <div class="dev-footer-main"><a href="/" aria-label="LC Bridge home"><img src="/assets/lcbridge-lockup-white.svg" alt="LC Bridge" width="180" height="60"></a><div class="dev-footer-links"><a href="/products/">Products</a><a href="/highlevel-development/">Custom Development</a><a href="/blog/">Guides</a><a href="/about/">About LC Bridge</a><a href="mailto:arun@lcbridge.app">Contact</a></div></div>
-    <small>LC Bridge is an independent company. Our products work with GoHighLevel® and DocuSign®; we are not affiliated with, endorsed by, or sponsored by either. All trademarks belong to their respective owners. © 2026 LC Bridge.</small>
-  </div></footer>
+  <footer class="lcb-site-footer" data-shared-footer><div class="lcb-chrome-wrap"><div class="lcb-footer-top"><a href="/" aria-label="LC Bridge home"><img src="/assets/lcbridge-lockup-black.svg" alt="LC Bridge" width="180" height="60" loading="lazy"></a><p>Products and custom software.<br>Built for GoHighLevel.</p><a class="lcb-footer-home" href="/">Back to LC Bridge <span aria-hidden="true">↗</span></a></div><div class="lcb-footer-columns"><nav aria-label="Footer products"><h2>Products</h2><a href="/google-sheets-integration/">Google Sheets integration</a><a href="/community-agents/">Community Agents</a><a href="/docusign-integration/">DocuSign integration</a><a href="/products/">All products</a></nav><nav aria-label="Footer resources"><h2>Learn</h2><a href="/google-sheets-integration/templates/">25 Google Sheets report templates</a><a href="/google-sheets-integration/docs/">Google Sheets docs</a><a href="/community-agents/docs/">Community Agents docs</a><a href="/docusign-integration/docs/">DocuSign docs</a><a href="/blog/">Guides &amp; articles</a></nav><nav aria-label="Footer company"><h2>Company</h2><a href="/about/">About LC Bridge</a><a href="/highlevel-development/">Custom development</a><a href="/book-a-call/">Talk to our team</a><a href="mailto:support@lcbridge.app">support@lcbridge.app</a></nav><nav aria-label="Product notices"><h2>Product notices</h2><a href="/google-sheets-integration/privacy/">Google Sheets privacy</a><a href="/google-sheets-integration/terms/">Google Sheets early-access terms</a><a href="/docusign-integration/privacy">DocuSign privacy</a><a href="/docusign-integration/terms">DocuSign terms</a></nav></div><div class="lcb-footer-bottom"><p class="lcb-platform-context">For GoHighLevel (GHL), also known as HighLevel.</p><p>LC Bridge is an independent company. GoHighLevel, Google Sheets, and DocuSign are trademarks of their respective owners and do not sponsor or endorse LC Bridge.</p><div><span>© 2026 LC Bridge</span><button type="button" class="lcb-consent-link" id="analytics-settings">Analytics preferences</button></div></div></div></footer>
   <script>
     // Existing site navigation behavior, with keyboard focus restored on Escape.
     const toggle = document.querySelector('.lcb-navtoggle');
@@ -500,6 +498,6 @@
 
   </script>
 <script src="/assets/analytics-config.js?v=cf89bb56" defer></script><script src="/assets/analytics.js?v=dcce6169" defer></script>
-<script src="/assets/video-player.js?v=16e5d9ef" defer></script>
+<script src="/assets/video-player.js?v=16e5d9ef" defer></script><dialog class="lcb-consent-dialog" id="analytics-dialog" aria-labelledby="analytics-title"><h2 id="analytics-title">Analytics preferences</h2><p id="analytics-description">Optional analytics require your consent before any analytics requests are sent. Hosted forms have their own provider controls.</p><div><button type="button" data-analytics-consent="granted">Allow analytics</button><button type="button" data-analytics-consent="denied">Keep analytics off</button></div></dialog><script src="/assets/site-chrome.js?v=445f2d73" defer></script>
 </body>
 </html>

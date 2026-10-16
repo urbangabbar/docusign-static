@@ -42,6 +42,8 @@ jobs:
             git reset --hard origin/main
             node scripts/render-sheets-samples.mjs
             python3 scripts/build-sheets-site.py
+            python3 scripts/sync-site-chrome.py --write
+            python3 scripts/sync-site-chrome.py
             node --test scripts/test-sheets-site.mjs
             node scripts/check-analytics.cjs
             python3 scripts/sync-search.py --write

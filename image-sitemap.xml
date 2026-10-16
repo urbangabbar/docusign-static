@@ -9,13 +9,16 @@
       <image:loc>https://lcbridge.app/assets/lcbridge-icon-512.png</image:loc>
     </image:image>
     <image:image>
+      <image:loc>https://lcbridge.app/assets/lcbridge-lockup-black.svg</image:loc>
+    </image:image>
+    <image:image>
       <image:loc>https://lcbridge.app/assets/og-highlevel-development.png</image:loc>
     </image:image>
   </url>
   <url>
     <loc>https://lcbridge.app/blog/ai-agents-need-deep-integrations/</loc>
     <image:image>
-      <image:loc>https://lcbridge.app/assets/lcbridge-lockup-white.svg</image:loc>
+      <image:loc>https://lcbridge.app/assets/lcbridge-lockup-black.svg</image:loc>
     </image:image>
   </url>
   <url>
@@ -57,13 +60,13 @@
   <url>
     <loc>https://lcbridge.app/blog/four-levels-of-integration/</loc>
     <image:image>
-      <image:loc>https://lcbridge.app/assets/lcbridge-lockup-white.svg</image:loc>
+      <image:loc>https://lcbridge.app/assets/lcbridge-lockup-black.svg</image:loc>
     </image:image>
   </url>
   <url>
     <loc>https://lcbridge.app/blog/four-ways-a-contract-stalls/</loc>
     <image:image>
-      <image:loc>https://lcbridge.app/assets/lcbridge-lockup-white.svg</image:loc>
+      <image:loc>https://lcbridge.app/assets/lcbridge-lockup-black.svg</image:loc>
     </image:image>
   </url>
   <url>
@@ -78,7 +81,7 @@
   <url>
     <loc>https://lcbridge.app/blog/gohighlevel-esignature-legally-binding/</loc>
     <image:image>
-      <image:loc>https://lcbridge.app/assets/lcbridge-lockup-white.svg</image:loc>
+      <image:loc>https://lcbridge.app/assets/lcbridge-lockup-black.svg</image:loc>
     </image:image>
   </url>
   <url>
@@ -93,7 +96,7 @@
   <url>
     <loc>https://lcbridge.app/blog/gohighlevel-integrations/</loc>
     <image:image>
-      <image:loc>https://lcbridge.app/assets/lcbridge-lockup-white.svg</image:loc>
+      <image:loc>https://lcbridge.app/assets/lcbridge-lockup-black.svg</image:loc>
     </image:image>
   </url>
   <url>
@@ -135,7 +138,7 @@
   <url>
     <loc>https://lcbridge.app/blog/</loc>
     <image:image>
-      <image:loc>https://lcbridge.app/assets/lcbridge-lockup-white.svg</image:loc>
+      <image:loc>https://lcbridge.app/assets/lcbridge-lockup-black.svg</image:loc>
     </image:image>
   </url>
   <url>
@@ -159,7 +162,7 @@
   <url>
     <loc>https://lcbridge.app/blog/why-clients-keep-docusign/</loc>
     <image:image>
-      <image:loc>https://lcbridge.app/assets/lcbridge-lockup-white.svg</image:loc>
+      <image:loc>https://lcbridge.app/assets/lcbridge-lockup-black.svg</image:loc>
     </image:image>
   </url>
   <url>
@@ -168,13 +171,16 @@
       <image:loc>https://lcbridge.app/assets/arun-headshot.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://lcbridge.app/assets/lcbridge-lockup-white.svg</image:loc>
+      <image:loc>https://lcbridge.app/assets/lcbridge-lockup-black.svg</image:loc>
     </image:image>
   </url>
   <url>
     <loc>https://lcbridge.app/community-agents/docs/</loc>
     <image:image>
       <image:loc>https://lcbridge.app/assets/community-agents-logo-64.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://lcbridge.app/assets/lcbridge-lockup-black.svg</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://lcbridge.app/assets/video/community-agents-demo-thumbnail-1280.webp</image:loc>
@@ -188,6 +194,9 @@
     <image:image>
       <image:loc>https://lcbridge.app/assets/community-agents-logo-64.png</image:loc>
     </image:image>
+    <image:image>
+      <image:loc>https://lcbridge.app/assets/lcbridge-lockup-black.svg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://lcbridge.app/community-agents/how-to-add-ai-agent-highlevel-community/</loc>
@@ -197,6 +206,9 @@
     <image:image>
       <image:loc>https://lcbridge.app/assets/community-agents-logo-64.png</image:loc>
     </image:image>
+    <image:image>
+      <image:loc>https://lcbridge.app/assets/lcbridge-lockup-black.svg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://lcbridge.app/community-agents/</loc>
@@ -204,7 +216,7 @@
       <image:loc>https://lcbridge.app/assets/community-agents-logo-128.png</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://lcbridge.app/assets/lcbridge-lockup-white.svg</image:loc>
+      <image:loc>https://lcbridge.app/assets/lcbridge-lockup-black.svg</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://lcbridge.app/assets/video/community-agents-demo-thumbnail-1280.webp</image:loc>
@@ -224,6 +236,9 @@
     <image:image>
       <image:loc>https://lcbridge.app/assets/community-agents-logo-64.png</image:loc>
     </image:image>
+    <image:image>
+      <image:loc>https://lcbridge.app/assets/lcbridge-lockup-black.svg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://lcbridge.app/community-agents/member-insights/</loc>
@@ -233,6 +248,9 @@
     <image:image>
       <image:loc>https://lcbridge.app/assets/community-agents-logo-64.png</image:loc>
     </image:image>
+    <image:image>
+      <image:loc>https://lcbridge.app/assets/lcbridge-lockup-black.svg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://lcbridge.app/community-agents/pricing/</loc>
@@ -240,7 +258,7 @@
       <image:loc>https://lcbridge.app/assets/community-agents-logo-128.png</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://lcbridge.app/assets/lcbridge-lockup-white.svg</image:loc>
+      <image:loc>https://lcbridge.app/assets/lcbridge-lockup-black.svg</image:loc>
     </image:image>
   </url>
   <url>
@@ -255,9 +273,6 @@
       <image:loc>https://lcbridge.app/assets/lcbridge-lockup-black.svg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://lcbridge.app/assets/lcbridge-lockup-white.svg</image:loc>
-    </image:image>
-    <image:image>
       <image:loc>https://lcbridge.app/assets/og-docusign.png</image:loc>
     </image:image>
   </url>
@@ -265,6 +280,9 @@
     <loc>https://lcbridge.app/docusign-integration/docs/features/</loc>
     <image:image>
       <image:loc>https://lcbridge.app/assets/docusign-logo.svg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://lcbridge.app/assets/lcbridge-lockup-black.svg</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://lcbridge.app/assets/og-docusign.png</image:loc>
@@ -276,6 +294,9 @@
       <image:loc>https://lcbridge.app/assets/docusign-logo.svg</image:loc>
     </image:image>
     <image:image>
+      <image:loc>https://lcbridge.app/assets/lcbridge-lockup-black.svg</image:loc>
+    </image:image>
+    <image:image>
       <image:loc>https://lcbridge.app/assets/og-docusign.png</image:loc>
     </image:image>
   </url>
@@ -283,6 +304,9 @@
     <loc>https://lcbridge.app/docusign-integration/docs/getting-started/</loc>
     <image:image>
       <image:loc>https://lcbridge.app/assets/docusign-logo.svg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://lcbridge.app/assets/lcbridge-lockup-black.svg</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://lcbridge.app/assets/video/docusign-demo-thumbnail-1280.webp</image:loc>
@@ -359,11 +383,17 @@
     <image:image>
       <image:loc>https://lcbridge.app/assets/docusign-logo.svg</image:loc>
     </image:image>
+    <image:image>
+      <image:loc>https://lcbridge.app/assets/lcbridge-lockup-black.svg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://lcbridge.app/docusign-integration/docs/multiple-signers/</loc>
     <image:image>
       <image:loc>https://lcbridge.app/assets/docusign-logo.svg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://lcbridge.app/assets/lcbridge-lockup-black.svg</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://lcbridge.app/docusign-integration/docs/multiple-signers/images/document-preview-1200.webp</image:loc>
@@ -407,6 +437,9 @@
     <image:image>
       <image:loc>https://lcbridge.app/assets/docusign-logo.svg</image:loc>
     </image:image>
+    <image:image>
+      <image:loc>https://lcbridge.app/assets/lcbridge-lockup-black.svg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://lcbridge.app/docusign-integration/how-to-integrate</loc>
@@ -415,9 +448,6 @@
     </image:image>
     <image:image>
       <image:loc>https://lcbridge.app/assets/lcbridge-lockup-black.svg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://lcbridge.app/assets/lcbridge-lockup-white.svg</image:loc>
     </image:image>
   </url>
   <url>
@@ -430,9 +460,6 @@
     </image:image>
     <image:image>
       <image:loc>https://lcbridge.app/assets/lcbridge-lockup-black.svg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://lcbridge.app/assets/lcbridge-lockup-white.svg</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://lcbridge.app/assets/video/docusign-demo-thumbnail-1280.webp</image:loc>
@@ -455,9 +482,6 @@
     <image:image>
       <image:loc>https://lcbridge.app/assets/lcbridge-lockup-black.svg</image:loc>
     </image:image>
-    <image:image>
-      <image:loc>https://lcbridge.app/assets/lcbridge-lockup-white.svg</image:loc>
-    </image:image>
   </url>
   <url>
     <loc>https://lcbridge.app/docusign-integration/pricing</loc>
@@ -466,9 +490,6 @@
     </image:image>
     <image:image>
       <image:loc>https://lcbridge.app/assets/lcbridge-lockup-black.svg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://lcbridge.app/assets/lcbridge-lockup-white.svg</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://lcbridge.app/assets/og-docusign.png</image:loc>
@@ -493,9 +514,6 @@
     </image:image>
     <image:image>
       <image:loc>https://lcbridge.app/assets/lcbridge-lockup-black.svg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://lcbridge.app/assets/lcbridge-lockup-white.svg</image:loc>
     </image:image>
   </url>
   <url>
@@ -524,9 +542,6 @@
     <image:image>
       <image:loc>https://lcbridge.app/assets/lcbridge-lockup-black.svg</image:loc>
     </image:image>
-    <image:image>
-      <image:loc>https://lcbridge.app/assets/lcbridge-lockup-white.svg</image:loc>
-    </image:image>
   </url>
   <url>
     <loc>https://lcbridge.app/docusign-integration/workflows</loc>
@@ -535,9 +550,6 @@
     </image:image>
     <image:image>
       <image:loc>https://lcbridge.app/assets/lcbridge-lockup-black.svg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://lcbridge.app/assets/lcbridge-lockup-white.svg</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://lcbridge.app/assets/og-docusign.png</image:loc>
@@ -906,9 +918,6 @@
       <image:loc>https://lcbridge.app/assets/lcbridge-lockup-black.svg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://lcbridge.app/assets/lcbridge-lockup-white.svg</image:loc>
-    </image:image>
-    <image:image>
       <image:loc>https://lcbridge.app/assets/og-highlevel-development.png</image:loc>
     </image:image>
     <image:image>
@@ -945,9 +954,6 @@
       <image:loc>https://lcbridge.app/assets/lcbridge-lockup-black.svg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://lcbridge.app/assets/lcbridge-lockup-white.svg</image:loc>
-    </image:image>
-    <image:image>
       <image:loc>https://lcbridge.app/assets/lcbridge-logo.svg</image:loc>
     </image:image>
     <image:image>
@@ -972,7 +978,7 @@
       <image:loc>https://lcbridge.app/assets/docusign-mark.svg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://lcbridge.app/assets/lcbridge-lockup-white.svg</image:loc>
+      <image:loc>https://lcbridge.app/assets/lcbridge-lockup-black.svg</image:loc>
     </image:image>
   </url>
 </urlset>

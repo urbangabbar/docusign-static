@@ -67,6 +67,12 @@ class SearchSyncTests(unittest.TestCase):
         self.assertEqual(sync.run(self.root, True), 0)
         self.assertNotEqual(self.manifest()['pages'][0]['lastmod'], '2020-01-01')
 
+    def test_svg_accessible_titles_do_not_pollute_document_title(self):
+        file=self.root/'index.html'
+        file.write_text(file.read_text()+'<svg><title>Accessible chart caption</title><g><svg><title>Nested chart</title></svg></g></svg>')
+        self.assertEqual(sync.run(self.root, True), 0)
+        self.assertEqual(self.manifest()['pages'][0]['title'], '/')
+
     def test_public_noindex_and_wrong_canonical_fail(self):
         self.page('index.html', '/', robots='<meta name="googlebot" content="noindex">')
         self.assertEqual(sync.run(self.root, True), 1)

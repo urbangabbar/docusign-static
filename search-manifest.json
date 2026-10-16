@@ -6,11 +6,12 @@
       "url": "https://lcbridge.app/about/",
       "title": "About LC Bridge | GoHighLevel Products & Development",
       "description": "Meet LC Bridge, the team building GoHighLevel integrations, Community Agents and custom software. Explore product documentation and speak with the founder.",
-      "contentHash": "65b5ecad517c42ccbe416413075fe4b407997d5cc8d6446a4e8e1955dfb7eb7a",
-      "lastmod": "2026-10-15",
+      "contentHash": "d91560e9a06bf9ade356d213d680ae473e2962fa87654ce3be4f147c7bed6207",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/arun-headshot.jpg",
         "https://lcbridge.app/assets/lcbridge-icon-512.png",
+        "https://lcbridge.app/assets/lcbridge-lockup-black.svg",
         "https://lcbridge.app/assets/og-highlevel-development.png"
       ]
     },
@@ -18,18 +19,18 @@
       "url": "https://lcbridge.app/blog/ai-agents-need-deep-integrations/",
       "title": "GoHighLevel AI Agents & API Integration | LC Bridge",
       "description": "Explore how CRM data, workflow actions and context affect AI agents, with GoHighLevel and DocuSign examples from LC Bridge.",
-      "contentHash": "fb1308d66cc51ec8d4137d59746a5ed41f99471bf4de19b5215d0ed918969610",
-      "lastmod": "2026-10-15",
+      "contentHash": "1cbbcba2f91342a261b6502cca7e753d8fc49c2917b0d03a31da30a3a16a83c3",
+      "lastmod": "2026-10-16",
       "images": [
-        "https://lcbridge.app/assets/lcbridge-lockup-white.svg"
+        "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
       ]
     },
     {
       "url": "https://lcbridge.app/blog/bulk-update-gohighlevel-contacts-google-sheets/",
-      "title": "Bulk update GoHighLevel contacts from Google Sheets | LC BridgeNew leads over time2026-10-01: 12026-10-02: 12026-10-03: 12026-10-04: 12026-10-05: 12026-10-06: 12026-10-07: 12026-10-08: 02026-10-09: 12026-10-10: 02026-10-11: 02026-10-12: 02026-10-13: 0Open deal value by businessOak Street Studio: $3,050.00Riverfront Clinic: $6,900.00Westside Services: $0.00",
+      "title": "Bulk update GoHighLevel contacts from Google Sheets | LC Bridge",
       "description": "Review a controlled workflow for editing existing GoHighLevel contacts from a spreadsheet, with record IDs, field mapping, and change previews.",
-      "contentHash": "3ba89c81d9ebcf3fe322fcc1666e2387aa7da92ccf5792f536f1180081f11f0e",
-      "lastmod": "2026-10-15",
+      "contentHash": "75a4e111a36f004add7cd6815daccddb284ac4e794ff46aac085d38f02e15ee8",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -37,10 +38,10 @@
     },
     {
       "url": "https://lcbridge.app/blog/connect-gohighlevel-google-sheets/",
-      "title": "How to connect GoHighLevel to Google Sheets: methods and tradeoffs | LC BridgeOpen deals by stageDiscovery: $4,800.00Qualified: $6,900.00Proposal: $0.00Negotiation: $10,350.00New leads over time2026-10-01: 12026-10-02: 12026-10-03: 12026-10-04: 12026-10-05: 12026-10-06: 12026-10-07: 12026-10-08: 02026-10-09: 12026-10-10: 02026-10-11: 02026-10-12: 02026-10-13: 0",
+      "title": "How to connect GoHighLevel to Google Sheets: methods and tradeoffs | LC Bridge",
       "description": "Choose a GoHighLevel Google Sheets connection for a one-time export, workflow rows, recurring reports, or reviewed updates.",
-      "contentHash": "4238612fe66be2be52bda819afa270307d466c9169fc88584672395d5b87c0f5",
-      "lastmod": "2026-10-15",
+      "contentHash": "67bae880034a4323bde593a53c0b40ecaa598c20acfea41db7481e70d0b72c18",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -48,10 +49,10 @@
     },
     {
       "url": "https://lcbridge.app/blog/export-gohighlevel-contacts-google-sheets/",
-      "title": "Export GoHighLevel contacts to Google Sheets | LC BridgeNew leads over time2026-10-01: 12026-10-02: 12026-10-03: 12026-10-04: 12026-10-05: 12026-10-06: 12026-10-07: 12026-10-08: 02026-10-09: 12026-10-10: 02026-10-11: 02026-10-12: 02026-10-13: 0Sales won over time2026-10-01: $0.002026-10-02: $0.002026-10-03: $0.002026-10-04: $1,700.002026-10-05: $0.002026-10-06: $0.002026-10-07: $2,750.002026-10-08: $0.002026-10-09: $0.002026-10-10: $0.002026-10-11: $0.002026-10-12: $0.002026-10-13: $0.002026-10-01: $0.002026-10-02: $0.002026-10-03: $0.002026-10-04: $0.002026-10-05: $0.002026-10-06: $0.002026-10-07: $0.002026-10-08: $0.002026-10-09: $0.002026-10-10: $4,150.002026-10-11: $0.002026-10-12: $0.002026-10-13: $0.00Open deal value by businessOak Street Studio: $3,050.00Riverfront Clinic: $6,900.00Westside Services: $0.00",
+      "title": "Export GoHighLevel contacts to Google Sheets | LC Bridge",
       "description": "Move GoHighLevel contacts into Google Sheets with a native CSV export, then plan fields, identity, cleanup, and recurring reporting.",
-      "contentHash": "c30676d9930a82fc5a4ba92c115699858f88d2f8cba22771fcb54e4c776f1a29",
-      "lastmod": "2026-10-15",
+      "contentHash": "214f29dc29e7761e64ad553b574ec98ca65541fc61c488ac17385915ca47aec1",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -59,10 +60,10 @@
     },
     {
       "url": "https://lcbridge.app/blog/export-gohighlevel-opportunities-google-sheets/",
-      "title": "Export GoHighLevel opportunities to Google Sheets | LC BridgeOpen deals by stageDiscovery: $4,800.00Qualified: $6,900.00Proposal: $0.00Negotiation: $10,350.00Sales won vs target2026-10 · Actual: $4,450.002026-10 · Target: $10,000.00Sales won by ownerSam Rivera: $4,450.00Alex Morgan: $0.00Jamie Chen: $0.00Observed stage conversionDiscovery: 100%Qualified: 0%Proposal: Not enough dataNegotiation: Not enough data",
+      "title": "Export GoHighLevel opportunities to Google Sheets | LC Bridge",
       "description": "Plan a GoHighLevel opportunity export with stable IDs, pipeline fields, status dates, currency, and honest dashboard definitions.",
-      "contentHash": "ab78adc3d82deb8f0ee349a2b7eccc6e31207c3299bf74c8dc27d69e28fa4006",
-      "lastmod": "2026-10-15",
+      "contentHash": "c38833ffd98997d19477eca4a7a2529d1bb72eb34c710eb04361c08911aeba79",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -72,28 +73,28 @@
       "url": "https://lcbridge.app/blog/four-levels-of-integration/",
       "title": "GoHighLevel Integration Depth: Data & Actions | LC Bridge",
       "description": "Compare four levels of CRM integration through GoHighLevel and DocuSign examples: link-outs, data sync, shared context and actions inside the platform.",
-      "contentHash": "c6b6b920d8d9eac2617c7fac16c6316441e5a26d88113b151b6b34cf8d22f6a8",
-      "lastmod": "2026-10-15",
+      "contentHash": "6988088e81e8fdc8da2c2c701e894c84d70a1f4d4e7daad00cd4eb4ba2320391",
+      "lastmod": "2026-10-16",
       "images": [
-        "https://lcbridge.app/assets/lcbridge-lockup-white.svg"
+        "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
       ]
     },
     {
       "url": "https://lcbridge.app/blog/four-ways-a-contract-stalls/",
       "title": "GoHighLevel Contracts: 4 Reasons Signing Stalls | LC Bridge",
       "description": "See four reasons contracts stall and how configured DocuSign workflows in GoHighLevel can handle delivery, views, stalls and declines.",
-      "contentHash": "3f92a40ccfb1e769f1f31e85fdd227160b8cbbdd7e829d75d3ea78a28fa2e0f3",
-      "lastmod": "2026-10-15",
+      "contentHash": "3a47c7726f1ab90d09182ff34596dece43cc5b6407af57c5ef3f3d6fa6acbcbe",
+      "lastmod": "2026-10-16",
       "images": [
-        "https://lcbridge.app/assets/lcbridge-lockup-white.svg"
+        "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
       ]
     },
     {
       "url": "https://lcbridge.app/blog/gohighlevel-custom-fields-google-sheets/",
-      "title": "Map GoHighLevel custom fields to Google Sheets columns | LC BridgeRecords by mapped statusScheduled: 2Completed: 1New leads over time2026-10-01: 12026-10-02: 12026-10-03: 12026-10-04: 12026-10-05: 12026-10-06: 12026-10-07: 12026-10-08: 02026-10-09: 12026-10-10: 02026-10-11: 02026-10-12: 02026-10-13: 0Open deal value by businessOak Street Studio: $3,050.00Riverfront Clinic: $6,900.00Westside Services: $0.00",
+      "title": "Map GoHighLevel custom fields to Google Sheets columns | LC Bridge",
       "description": "Plan stable custom-field mappings for GoHighLevel spreadsheet reporting, including types, blanks, renamed fields, and update boundaries.",
-      "contentHash": "d5320d6098c6ac2172cd994f092a4f2868616c8200f2fc264d6f10cab81b99ff",
-      "lastmod": "2026-10-15",
+      "contentHash": "d8ed9f25ca0a745f44483da85a9aa6f8f06cc7b3e79f5d983706764360e4dce0",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -103,17 +104,17 @@
       "url": "https://lcbridge.app/blog/gohighlevel-esignature-legally-binding/",
       "title": "Is a GoHighLevel E-Signature Legally Binding? | LC Bridge",
       "description": "Understand GoHighLevel e-signatures, consent and audit trails through cited legal sources. Compare the questions to consider when choosing DocuSign.",
-      "contentHash": "1576ac163d28fad6b2a16867c1144e5de4dc7e365f9d6c8cb69ad8f86caaf574",
-      "lastmod": "2026-10-15",
+      "contentHash": "54054d4b0b8d610d7670664a799159edfa3d20e821cca7eff6aabfe0089204c6",
+      "lastmod": "2026-10-16",
       "images": [
-        "https://lcbridge.app/assets/lcbridge-lockup-white.svg"
+        "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
       ]
     },
     {
       "url": "https://lcbridge.app/blog/gohighlevel-google-sheets-record-transfer-pricing/",
-      "title": "How record-transfer pricing works for GoHighLevel Google Sheets integrations | LC BridgeSales won over time2026-10-01: $0.002026-10-02: $0.002026-10-03: $0.002026-10-04: $1,700.002026-10-05: $0.002026-10-06: $0.002026-10-07: $2,750.002026-10-08: $0.002026-10-09: $0.002026-10-10: $0.002026-10-11: $0.002026-10-12: $0.002026-10-13: $0.002026-10-01: $0.002026-10-02: $0.002026-10-03: $0.002026-10-04: $0.002026-10-05: $0.002026-10-06: $0.002026-10-07: $0.002026-10-08: $0.002026-10-09: $0.002026-10-10: $4,150.002026-10-11: $0.002026-10-12: $0.002026-10-13: $0.00Invoice line amounts by itemService package: $2,000.00Consultation: $200.00Support agreement: $3,650.00",
+      "title": "How record-transfer pricing works for GoHighLevel Google Sheets integrations | LC Bridge",
       "description": "For GoHighLevel: Understand per-record-transfer usage, repeat executions, monthly allowances, volume discounts, retries, and custom subscriptions.",
-      "contentHash": "efa1d54e7015425552673d51972991174ce916c91f080ab2426503157950b0a0",
+      "contentHash": "b52a3dc0965c845460443500281560f9399ea4f8f5731f3e5ff03105cc6eadae",
       "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -124,18 +125,18 @@
       "url": "https://lcbridge.app/blog/gohighlevel-integrations/",
       "title": "GoHighLevel Integrations: A Practical Guide | LC Bridge",
       "description": "Compare GoHighLevel integration options, from native tools and automation platforms to custom API apps. Explore practical examples and engineering tradeoffs.",
-      "contentHash": "72cc286ea2b44dc3598e5bfbfd424b8349da159a735da5714fdc8f8f422423cf",
-      "lastmod": "2026-10-15",
+      "contentHash": "d54fa489c96a6745fcca32811effaca146ed873552bd2dc519912753441604e4",
+      "lastmod": "2026-10-16",
       "images": [
-        "https://lcbridge.app/assets/lcbridge-lockup-white.svg"
+        "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
       ]
     },
     {
       "url": "https://lcbridge.app/blog/gohighlevel-native-google-sheets-vs-crm-imports/",
-      "title": "GoHighLevel’s native Google Sheets actions versus recurring CRM imports | LC BridgeOpen deals by stageDiscovery: $4,800.00Qualified: $6,900.00Proposal: $0.00Negotiation: $10,350.00New leads over time2026-10-01: 12026-10-02: 12026-10-03: 12026-10-04: 12026-10-05: 12026-10-06: 12026-10-07: 12026-10-08: 02026-10-09: 12026-10-10: 02026-10-11: 02026-10-12: 02026-10-13: 0Outstanding tasks by assigneeAlex Morgan: 3Jamie Chen: 3Sam Rivera: 1Unassigned: 0",
+      "title": "GoHighLevel’s native Google Sheets actions versus recurring CRM imports | LC Bridge",
       "description": "For GoHighLevel: Compare native spreadsheet workflow actions with dataset imports and report templates, based on the direction and shape of your workflow.",
-      "contentHash": "66b35b569e5c675f2239d0b4867dc18bf116fc4c55772871c5349bc8f2425819",
-      "lastmod": "2026-10-15",
+      "contentHash": "b293f8a1b53f4848f9072581d15091ad6a9cea9158b2f35c4790f83918f601c1",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -143,10 +144,10 @@
     },
     {
       "url": "https://lcbridge.app/blog/gohighlevel-pipeline-dashboard-google-sheets/",
-      "title": "Build a GoHighLevel sales pipeline dashboard in Google Sheets | LC BridgeOpen deals by stageDiscovery: $4,800.00Qualified: $6,900.00Proposal: $0.00Negotiation: $10,350.00Sales won vs target2026-10 · Actual: $4,450.002026-10 · Target: $10,000.00Observed stage conversionDiscovery: 100%Qualified: 0%Proposal: Not enough dataNegotiation: Not enough dataSales won by ownerSam Rivera: $4,450.00Alex Morgan: $0.00Jamie Chen: $0.00",
+      "title": "Build a GoHighLevel sales pipeline dashboard in Google Sheets | LC Bridge",
       "description": "For GoHighLevel: Use a pipeline dashboard with current-stage value, target progress, owner filters, and deal-level follow-up records.",
-      "contentHash": "8d9ba0d6c38f315b5eb1c2a6026722752746613711dee4239d10f89b2734d9d4",
-      "lastmod": "2026-10-15",
+      "contentHash": "c9ebdd324779547187dbd4c48db83855b5ee99c20cd44023c37e234879e5365d",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -154,10 +155,10 @@
     },
     {
       "url": "https://lcbridge.app/blog/gohighlevel-sales-payments-invoice-totals/",
-      "title": "Why GoHighLevel sales, payments, and invoice totals differ | LC BridgeSales won vs target2026-10 · Actual: $4,450.002026-10 · Target: $10,000.00Collections over time2026-10-01: $0.002026-10-02: $0.002026-10-03: $0.002026-10-04: $1,000.002026-10-05: $0.002026-10-06: $700.002026-10-07: $0.002026-10-08: $2,750.002026-10-09: $0.002026-10-10: $0.002026-10-11: $0.002026-10-12: $0.002026-10-13: $0.00Collections by customerEthan Brooks: $2,750.00Ava Wilson: $1,700.00Recorded product line amount over time2026-10-01: $0.002026-10-02: $0.002026-10-03: $0.002026-10-04: $2,200.002026-10-05: $0.002026-10-06: $0.002026-10-07: $0.002026-10-08: $600.002026-10-09: $0.002026-10-10: $0.002026-10-11: $0.002026-10-12: $0.002026-10-13: $0.00",
+      "title": "Why GoHighLevel sales, payments, and invoice totals differ | LC Bridge",
       "description": "For GoHighLevel: Understand why won opportunities, successful payments, outstanding invoices, and order-line totals should not match automatically.",
-      "contentHash": "d80e51d35d07bcba7a8f95a82885dd21a7abc579bf94ff7a1860b77570b9522c",
-      "lastmod": "2026-10-15",
+      "contentHash": "7501599aa4756b64df150a128c6a5d016c85e202adb5ca1ebf0c7ad43df5ebde",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -165,10 +166,10 @@
     },
     {
       "url": "https://lcbridge.app/blog/import-google-sheets-contacts-gohighlevel/",
-      "title": "Import contacts from Google Sheets into GoHighLevel | LC BridgeNew leads over time2026-10-01: 12026-10-02: 12026-10-03: 12026-10-04: 12026-10-05: 12026-10-06: 12026-10-07: 12026-10-08: 02026-10-09: 12026-10-10: 02026-10-11: 02026-10-12: 02026-10-13: 0Open deal value by businessOak Street Studio: $3,050.00Riverfront Clinic: $6,900.00Westside Services: $0.00",
+      "title": "Import contacts from Google Sheets into GoHighLevel | LC Bridge",
       "description": "Prepare a Google Sheets contact list for native CSV import into GoHighLevel, including mapping, identity, duplicates, and verification.",
-      "contentHash": "777823d97805a1daa5c36ffa470eedd829f0cde9e26173f71cac985bfa22ba91",
-      "lastmod": "2026-10-15",
+      "contentHash": "3c5d5322a6ef6fb02cf71fc51b2552fd45cf4ff96deca77784cd747cfe26983d",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -178,18 +179,18 @@
       "url": "https://lcbridge.app/blog/",
       "title": "GoHighLevel Integration Guides & Playbooks | LC Bridge",
       "description": "Practical GoHighLevel guides from LC Bridge: API integrations, DocuSign workflows, e-signatures and AI agents, with product examples and setup documentation.",
-      "contentHash": "9c004f909e6ed4c12ac6d556168004061ac42a313f09c748f47e57845d056ff0",
-      "lastmod": "2026-10-15",
+      "contentHash": "e7e4141ba498cb93305af72a82ad3fe6e6d0b71fb08bcaad3bb4fe8fd78bb04e",
+      "lastmod": "2026-10-16",
       "images": [
-        "https://lcbridge.app/assets/lcbridge-lockup-white.svg"
+        "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
       ]
     },
     {
       "url": "https://lcbridge.app/blog/schedule-gohighlevel-exports-google-sheets/",
-      "title": "Schedule GoHighLevel data exports to Google Sheets | LC BridgeSales won over time2026-10-01: $0.002026-10-02: $0.002026-10-03: $0.002026-10-04: $1,700.002026-10-05: $0.002026-10-06: $0.002026-10-07: $2,750.002026-10-08: $0.002026-10-09: $0.002026-10-10: $0.002026-10-11: $0.002026-10-12: $0.002026-10-13: $0.002026-10-01: $0.002026-10-02: $0.002026-10-03: $0.002026-10-04: $0.002026-10-05: $0.002026-10-06: $0.002026-10-07: $0.002026-10-08: $0.002026-10-09: $0.002026-10-10: $4,150.002026-10-11: $0.002026-10-12: $0.002026-10-13: $0.00Outstanding tasks by assigneeAlex Morgan: 3Jamie Chen: 3Sam Rivera: 1Unassigned: 0Open deals by stageDiscovery: $4,800.00Qualified: $6,900.00Proposal: $0.00Negotiation: $10,350.00",
+      "title": "Schedule GoHighLevel data exports to Google Sheets | LC Bridge",
       "description": "Choose a useful refresh cadence for GoHighLevel reporting, scope the transferred records, and understand per-execution usage.",
-      "contentHash": "caf171b4b474089366fab6999c0eb23b9eefb1d2122647636dcf9153443bb0a1",
-      "lastmod": "2026-10-15",
+      "contentHash": "80c2a69ae5ccc5963bd4196d68581aadaa438871fb47120a675f4a0760fde6e6",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -197,10 +198,10 @@
     },
     {
       "url": "https://lcbridge.app/blog/update-gohighlevel-opportunity-stages-google-sheets/",
-      "title": "Update GoHighLevel opportunity stages from Google Sheets | LC BridgeOpen deals by stageDiscovery: $4,800.00Qualified: $6,900.00Proposal: $0.00Negotiation: $10,350.00Observed stage conversionDiscovery: 100%Qualified: 0%Proposal: Not enough dataNegotiation: Not enough dataSales won by ownerSam Rivera: $4,450.00Alex Morgan: $0.00Jamie Chen: $0.00",
+      "title": "Update GoHighLevel opportunity stages from Google Sheets | LC Bridge",
       "description": "For GoHighLevel: Understand reviewed opportunity-stage edits from a spreadsheet, including pipeline compatibility, CRM IDs, permissions, and stale previews.",
-      "contentHash": "6be175e7fcdfcebb05241c339964d35628f8d245e2b24c54b04c71c65ef5c847",
-      "lastmod": "2026-10-15",
+      "contentHash": "3be4080b692dd1125e4baeedabefb0de2ead84cab3d73803290cb9847129a685",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -210,31 +211,32 @@
       "url": "https://lcbridge.app/blog/why-clients-keep-docusign/",
       "title": "Why GoHighLevel Agencies Still Use DocuSign | LC Bridge",
       "description": "Explore why clients may keep DocuSign alongside GoHighLevel, and how an integration brings agreements, signing status and follow-up into their CRM workflow.",
-      "contentHash": "54781b3d95b536858c10db0b528f5f7ccffe7d40e89dcc4deb6ae7fdffe4c64f",
-      "lastmod": "2026-10-15",
+      "contentHash": "b00d4a5223aa68ff67074c34c46a56c40e1f5f24a4c464790bd09fe110a5c012",
+      "lastmod": "2026-10-16",
       "images": [
-        "https://lcbridge.app/assets/lcbridge-lockup-white.svg"
+        "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
       ]
     },
     {
       "url": "https://lcbridge.app/book-a-call/",
       "title": "Book a GoHighLevel Integration Call | LC Bridge",
       "description": "Discuss GoHighLevel integrations, Community Agents or custom development with Arun, founder of LC Bridge. Bring your setup and project questions.",
-      "contentHash": "404989643463bdb22d00ddca5fb8fe64b22c1c234b48183551a023a471e9bca3",
-      "lastmod": "2026-10-15",
+      "contentHash": "7128cd2aa432c8da1c20d85944aeb2b455000c3263fa9e8cff17e713947b8a5f",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/arun-headshot.jpg",
-        "https://lcbridge.app/assets/lcbridge-lockup-white.svg"
+        "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
       ]
     },
     {
       "url": "https://lcbridge.app/community-agents/docs/",
       "title": "Community Agents for GoHighLevel: Docs | LC Bridge",
       "description": "Browse Community Agents documentation for GoHighLevel: installation, portal compatibility, knowledge, response controls, Member Insights and billing.",
-      "contentHash": "4e5fdd89cf0b8dbe3dcbb89e5b7f66b27384e74c2d0bc1a34eaa83347e948509",
-      "lastmod": "2026-10-15",
+      "contentHash": "98fa6b87fef623ffd28f2fb2325c9dda25a00c8f69242cc0a5c0df5850ae10f4",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/community-agents-logo-64.png",
+        "https://lcbridge.app/assets/lcbridge-lockup-black.svg",
         "https://lcbridge.app/assets/video/community-agents-demo-thumbnail-1280.webp"
       ]
     },
@@ -242,33 +244,35 @@
       "url": "https://lcbridge.app/community-agents/gokollab-ai-agents/",
       "title": "GoHighLevel Community AI: Portals & GoKollab | LC Bridge",
       "description": "Check Community Agents portal requirements for GoHighLevel and GoKollab. Learn why a public discovery link alone does not establish member access.",
-      "contentHash": "adc8fe42ecefada097bab12c919a3ec3eaeca5af7d870fb1f127a63ed4b16af6",
-      "lastmod": "2026-10-15",
+      "contentHash": "460d3010d7f5a8d0e8d4a25ab97f7514d3d876a7707dddd49fba9ef7e46aa007",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/community-agents-demo.webp",
-        "https://lcbridge.app/assets/community-agents-logo-64.png"
+        "https://lcbridge.app/assets/community-agents-logo-64.png",
+        "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
       ]
     },
     {
       "url": "https://lcbridge.app/community-agents/how-to-add-ai-agent-highlevel-community/",
       "title": "Set Up AI Agents in GoHighLevel Communities | LC Bridge",
       "description": "Install Community Agents in GoHighLevel, connect the member portal, prepare knowledge and preview responses before enabling agent participation.",
-      "contentHash": "df0e516b3eb9c976081b5b705e49f581b818719c5dafc248b9c767da67fb2df5",
-      "lastmod": "2026-10-15",
+      "contentHash": "db418aebc3c8811a31704573681c642830b7085c6af65e21e847c348838ca9de",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/community-agents-demo.webp",
-        "https://lcbridge.app/assets/community-agents-logo-64.png"
+        "https://lcbridge.app/assets/community-agents-logo-64.png",
+        "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
       ]
     },
     {
       "url": "https://lcbridge.app/community-agents/",
       "title": "Community Agents for GoHighLevel (GHL) | LC Bridge",
       "description": "AI agents for GoHighLevel communities: knowledge-based replies, private previews, participation controls and Member Insights with source conversation evidence.",
-      "contentHash": "4b3e76206d631c8f62779717ef1b0820fd0f05b2bc5a1208338fede942742437",
-      "lastmod": "2026-10-15",
+      "contentHash": "74d7e3b46c27c5cea34eacb9d74ce9a9d0b1328c639adab864a7ae03414cbfcf",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/community-agents-logo-128.png",
-        "https://lcbridge.app/assets/lcbridge-lockup-white.svg",
+        "https://lcbridge.app/assets/lcbridge-lockup-black.svg",
         "https://lcbridge.app/assets/video/community-agents-demo-thumbnail-1280.webp",
         "https://lcbridge.app/assets/video/community-agents-demo-thumbnail-640.webp",
         "https://lcbridge.app/assets/video/community-agents-demo-thumbnail.jpg"
@@ -278,46 +282,47 @@
       "url": "https://lcbridge.app/community-agents/knowledge-and-controls/",
       "title": "GoHighLevel Community AI: Knowledge & Controls | LC Bridge",
       "description": "Prepare Community Agents knowledge for GoHighLevel, preview replies privately and choose allowed actions. Keep people in control of community participation.",
-      "contentHash": "53d1ad8bb22e44b0840a0580dac1685022e8e3c2e3d8908c38634f7d280ff0c0",
-      "lastmod": "2026-10-15",
+      "contentHash": "79571a68e2df670602d8790b5e783886fd0146b249833e4625190f3bd4457d59",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/community-agents-demo.webp",
-        "https://lcbridge.app/assets/community-agents-logo-64.png"
+        "https://lcbridge.app/assets/community-agents-logo-64.png",
+        "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
       ]
     },
     {
       "url": "https://lcbridge.app/community-agents/member-insights/",
       "title": "GoHighLevel Community Agents: Member Insights | LC Bridge",
       "description": "Review community needs and possible buying interest in GoHighLevel with Community Agents. Check source conversations before deciding how to follow up.",
-      "contentHash": "958c9c5d00a64f0a12cf28232e08667dcaa4ef4c8f3d7ec565e80e0be7260112",
-      "lastmod": "2026-10-15",
+      "contentHash": "a87d2380e5c9de4d0d8347fac6783810bc78cc4097bb880ff454477dcc5b1fde",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/community-agents-demo.webp",
-        "https://lcbridge.app/assets/community-agents-logo-64.png"
+        "https://lcbridge.app/assets/community-agents-logo-64.png",
+        "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
       ]
     },
     {
       "url": "https://lcbridge.app/community-agents/pricing/",
       "title": "Community Agents for GoHighLevel: Pricing | LC Bridge",
       "description": "Community Agents costs $47 monthly per GoHighLevel sub-account, including $47 of AI usage. Review metering, allowance expiry and additional usage billing.",
-      "contentHash": "7048e2e215b0931d35c5e92237287515b99ca746171fb88213a4564e640f3b0f",
-      "lastmod": "2026-10-15",
+      "contentHash": "dba73f99979f14625897661060d5ec90b9a5f5f1821fdda28948b645c9d585a5",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/community-agents-logo-128.png",
-        "https://lcbridge.app/assets/lcbridge-lockup-white.svg"
+        "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
       ]
     },
     {
       "url": "https://lcbridge.app/docusign-integration/book-a-call",
       "title": "Discuss DocuSign for GoHighLevel | LC Bridge",
       "description": "Talk with Arun, founder of LC Bridge, about connecting DocuSign to GoHighLevel. Bring your templates, account setup and workflow questions.",
-      "contentHash": "f0c6fedc6c27e6ee0604913871a52304f25a7f02cecd08f402a70ad53f0de3fa",
-      "lastmod": "2026-10-15",
+      "contentHash": "a916c6f072de9fbdf3e0a7a70e752f4bcfa48df02aa6a3d799b2d35ef7674f4d",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/arun-headshot.jpg",
         "https://lcbridge.app/assets/docusign-logo.svg",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg",
-        "https://lcbridge.app/assets/lcbridge-lockup-white.svg",
         "https://lcbridge.app/assets/og-docusign.png"
       ]
     },
@@ -325,10 +330,11 @@
       "url": "https://lcbridge.app/docusign-integration/docs/features/",
       "title": "DocuSign for GoHighLevel: Features & Requirements | LC Bridge",
       "description": "Review DocuSign Integration capabilities, account requirements and setup boundaries for GoHighLevel before choosing a plan or enabling workflows.",
-      "contentHash": "3014b753aa53e3698195ef73a397fe040c2052fafe82fbf5d8df07b77da45e55",
-      "lastmod": "2026-10-15",
+      "contentHash": "03057e5883f6abee8ba4612c8efdb068f4050af105c266e1bc251e127a600ed0",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/docusign-logo.svg",
+        "https://lcbridge.app/assets/lcbridge-lockup-black.svg",
         "https://lcbridge.app/assets/og-docusign.png"
       ]
     },
@@ -336,10 +342,11 @@
       "url": "https://lcbridge.app/docusign-integration/docs/field-mapping/",
       "title": "GoHighLevel DocuSign Field Mapping & Answer Sync | LC Bridge",
       "description": "Map GoHighLevel contact fields to DocuSign templates and sync mapped signer-entered answers after completion. Review configuration and field behavior.",
-      "contentHash": "252a8f53fadb0049df7e6fccd455341617b2893431c874435713e7dae2965057",
-      "lastmod": "2026-10-15",
+      "contentHash": "79942ef4f3f7c13afeba053b36dd601d85154e8724d0bde8dd992f35e26bd56d",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/docusign-logo.svg",
+        "https://lcbridge.app/assets/lcbridge-lockup-black.svg",
         "https://lcbridge.app/assets/og-docusign.png"
       ]
     },
@@ -347,10 +354,11 @@
       "url": "https://lcbridge.app/docusign-integration/docs/getting-started/",
       "title": "Set Up DocuSign in GoHighLevel | LC Bridge",
       "description": "Get started with DocuSign Integration for GoHighLevel: install, connect your accounts, configure templates and mappings, then prepare your first agreement.",
-      "contentHash": "eb681de70c9c1939bc3026fa040e9584bf95a9fe2e7fa27f0006817c4ecb1610",
-      "lastmod": "2026-10-15",
+      "contentHash": "ca257b57bdf158facb6d9eca8e349c2fdc3b9f8beb985762c7badcfb52a95380",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/docusign-logo.svg",
+        "https://lcbridge.app/assets/lcbridge-lockup-black.svg",
         "https://lcbridge.app/assets/video/docusign-demo-thumbnail-1280.webp",
         "https://lcbridge.app/assets/video/docusign-demo-thumbnail-640.webp",
         "https://lcbridge.app/assets/video/docusign-demo-thumbnail.jpg",
@@ -380,20 +388,22 @@
       "url": "https://lcbridge.app/docusign-integration/docs/",
       "title": "DocuSign for GoHighLevel: Docs & Guides | LC Bridge",
       "description": "Set up DocuSign in GoHighLevel with LC Bridge documentation. Explore requirements, field mapping, multiple signers and configured contract workflows.",
-      "contentHash": "a42a63fa8e83e72ce4f4e3583340ccdbe06bb18cc5efaa33fda04028467fef00",
-      "lastmod": "2026-10-15",
+      "contentHash": "5e25e399a076b007353a5fc71a197f6e1cec7b14f4830d90d19cb30a0f922069",
+      "lastmod": "2026-10-16",
       "images": [
-        "https://lcbridge.app/assets/docusign-logo.svg"
+        "https://lcbridge.app/assets/docusign-logo.svg",
+        "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
       ]
     },
     {
       "url": "https://lcbridge.app/docusign-integration/docs/multiple-signers/",
       "title": "GoHighLevel DocuSign: Multiple Signers | LC Bridge",
       "description": "Send one DocuSign agreement to multiple signers from GoHighLevel. Configure signer roles, map contact values and review the document before sending.",
-      "contentHash": "93f8a774d6f33a863f7662869399fb8d92b2b89fa41a2c4141a655a3dd042852",
-      "lastmod": "2026-10-15",
+      "contentHash": "2b3400540a049d1ec447f43e6d8937ca6180db357518b5657b625670cf74d07a",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/docusign-logo.svg",
+        "https://lcbridge.app/assets/lcbridge-lockup-black.svg",
         "https://lcbridge.app/docusign-integration/docs/multiple-signers/images/document-preview-1200.webp",
         "https://lcbridge.app/docusign-integration/docs/multiple-signers/images/document-preview-1699.webp",
         "https://lcbridge.app/docusign-integration/docs/multiple-signers/images/document-preview-640.webp",
@@ -412,35 +422,34 @@
       "url": "https://lcbridge.app/docusign-integration/docs/workflows/",
       "title": "Set Up DocuSign Workflows in GoHighLevel | LC Bridge",
       "description": "Configure DocuSign contract workflows in GoHighLevel, including sending, delivery follow-up, views, stalls, declines and completion handling.",
-      "contentHash": "48328a4187066864ddb9d7b112edf346b92efb3847b4d7456f9cb14ceca06bdc",
-      "lastmod": "2026-10-15",
+      "contentHash": "180103cd1fa786982133f66b577b63b75b8455fe843cf74e6def809f124c98a3",
+      "lastmod": "2026-10-16",
       "images": [
-        "https://lcbridge.app/assets/docusign-logo.svg"
+        "https://lcbridge.app/assets/docusign-logo.svg",
+        "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
       ]
     },
     {
       "url": "https://lcbridge.app/docusign-integration/how-to-integrate",
       "title": "How to Connect DocuSign to GoHighLevel | LC Bridge",
       "description": "Compare three ways to connect DocuSign with GoHighLevel. Understand workflow connections, field mapping and where LC Bridge’s integration fits.",
-      "contentHash": "a0607b39895bb1dc1f8f4c0e37a59fdb38d654ffea73d4852ed84d9358cb41f9",
-      "lastmod": "2026-10-15",
+      "contentHash": "1859e9c15fd63a29addf2b62482d381a9f884b5764fcb9bbc839d7afac40dfe9",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/docusign-logo.svg",
-        "https://lcbridge.app/assets/lcbridge-lockup-black.svg",
-        "https://lcbridge.app/assets/lcbridge-lockup-white.svg"
+        "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
       ]
     },
     {
       "url": "https://lcbridge.app/docusign-integration/",
       "title": "DocuSign Integration for GoHighLevel (GHL) | LC Bridge",
       "description": "Send, track and sync DocuSign agreements inside GoHighLevel. Map contact fields, connect configured workflows and sync completed signer answers.",
-      "contentHash": "22c5b31e3c492a9e00ca84c9c0b29020071e44d7a4dd3be676e0ae84158b490d",
-      "lastmod": "2026-10-15",
+      "contentHash": "8f7ae83258b77fcec4651b92338edc5db53d371b4cee23a456f9e2c9f0b8f322",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/arun-headshot.jpg",
         "https://lcbridge.app/assets/docusign-logo.svg",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg",
-        "https://lcbridge.app/assets/lcbridge-lockup-white.svg",
         "https://lcbridge.app/assets/video/docusign-demo-thumbnail-1280.webp",
         "https://lcbridge.app/assets/video/docusign-demo-thumbnail-640.webp",
         "https://lcbridge.app/assets/video/docusign-demo-thumbnail.jpg"
@@ -450,25 +459,23 @@
       "url": "https://lcbridge.app/docusign-integration/insurance",
       "title": "GoHighLevel DocuSign Integration for Insurance | LC Bridge",
       "description": "Bring DocuSign agreements into an insurance team’s GoHighLevel workflow, with contact field mapping, signing status and configured follow-up.",
-      "contentHash": "8f27f678251baa9a1dd8bc2b8003c4af994a7b6bcb1e5d7d79942853cf3b564f",
-      "lastmod": "2026-10-15",
+      "contentHash": "1de61a0ab0b83d559c06da7603c756cdcf209aa7198d1c706a00b82af1658835",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/docusign-logo.svg",
         "https://lcbridge.app/assets/docusign-mark.svg",
-        "https://lcbridge.app/assets/lcbridge-lockup-black.svg",
-        "https://lcbridge.app/assets/lcbridge-lockup-white.svg"
+        "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
       ]
     },
     {
       "url": "https://lcbridge.app/docusign-integration/pricing",
       "title": "DocuSign for GoHighLevel: Pricing | LC Bridge",
       "description": "Compare LC Bridge’s DocuSign Integration plans for GoHighLevel: Starter, Agency and Scale. Review billing, the trial and the separate DocuSign requirement.",
-      "contentHash": "d323cf4b012ab5e2952245e828c7d4f7e5053e71d553b50055291efb4725cec5",
-      "lastmod": "2026-10-15",
+      "contentHash": "907071b3855faabb8cda9dea2b4510e220c5a4e6f7a2f7601bca7c889aa3d2de",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/docusign-logo.svg",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg",
-        "https://lcbridge.app/assets/lcbridge-lockup-white.svg",
         "https://lcbridge.app/assets/og-docusign.png"
       ]
     },
@@ -476,8 +483,8 @@
       "url": "https://lcbridge.app/docusign-integration/privacy",
       "title": "Privacy Policy | DocuSign for GoHighLevel | LC Bridge",
       "description": "Read how LC Bridge handles information for its DocuSign Integration for GoHighLevel, including service data, support requests and privacy questions.",
-      "contentHash": "b9e84f90066ec75aa23026bc815b7fd2e412fa535ea8c0a918ec242a0660018e",
-      "lastmod": "2026-10-15",
+      "contentHash": "8caaac5f65888fad1d7212ac5d89e921310b3b137f696212a848a4429b7fe4b5",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/docusign-logo.svg",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -487,21 +494,20 @@
       "url": "https://lcbridge.app/docusign-integration/real-estate",
       "title": "GoHighLevel DocuSign Integration for Real Estate | LC Bridge",
       "description": "Connect DocuSign to a real estate team’s GoHighLevel workflow. Send agreements from contact records and connect signing events to configured follow-up.",
-      "contentHash": "40f4ebfba66825511d003fcfb98facfdaf78a9f39bd5724c44c9a491ff8b9d88",
-      "lastmod": "2026-10-15",
+      "contentHash": "b9a994e872fe0553cd8163dc535b93945c8ca27b2c529977678adb2b944c6b49",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/docusign-logo.svg",
         "https://lcbridge.app/assets/docusign-mark.svg",
-        "https://lcbridge.app/assets/lcbridge-lockup-black.svg",
-        "https://lcbridge.app/assets/lcbridge-lockup-white.svg"
+        "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
       ]
     },
     {
       "url": "https://lcbridge.app/docusign-integration/refund",
       "title": "Refund Policy | DocuSign for GoHighLevel | LC Bridge",
       "description": "Review LC Bridge’s refund policy for DocuSign Integration for GoHighLevel, including how to contact support with a billing or refund question.",
-      "contentHash": "c65cbc3f637eb4725ae7e2976f9c6c6db0062a3644e47eb781bb062d36050ed9",
-      "lastmod": "2026-10-15",
+      "contentHash": "694858a6d3c7b00b5b55a38ab76fddd2abe76e6b9a1386a19e8ad80f2597f840",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/docusign-logo.svg",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -511,8 +517,8 @@
       "url": "https://lcbridge.app/docusign-integration/terms",
       "title": "Terms of Service | DocuSign for GoHighLevel | LC Bridge",
       "description": "Read the terms for LC Bridge’s DocuSign Integration for GoHighLevel, including service use, account responsibilities, billing and support.",
-      "contentHash": "bd9f8e19c22b8d1d9e78b0158887a40aaf6ae7e834d945fbc8ff33225be08f20",
-      "lastmod": "2026-10-15",
+      "contentHash": "88bcae5c640d7921a99537e2007ce4639fad67394af72d7d12edd27b1c0764bf",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/docusign-logo.svg",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -522,24 +528,22 @@
       "url": "https://lcbridge.app/docusign-integration/vs-native-signature",
       "title": "DocuSign vs GoHighLevel Documents & Contracts | LC Bridge",
       "description": "Compare DocuSign with GoHighLevel Documents & Contracts. Consider existing client accounts, agreement workflows and integration needs before choosing.",
-      "contentHash": "36261f59e9c62a142c4be97f8564a228e1fde0eedd4b40372a569d710967d8b8",
-      "lastmod": "2026-10-15",
+      "contentHash": "41ac31587c5fc7b5b961b6b03e522258d7d24ed3717e1601fb22106eb3c797ad",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/docusign-logo.svg",
-        "https://lcbridge.app/assets/lcbridge-lockup-black.svg",
-        "https://lcbridge.app/assets/lcbridge-lockup-white.svg"
+        "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
       ]
     },
     {
       "url": "https://lcbridge.app/docusign-integration/workflows",
       "title": "GoHighLevel DocuSign Workflows & Follow-Up | LC Bridge",
       "description": "Explore six DocuSign workflows for GoHighLevel contracts, with illustrative emails and follow-up for sending, delivery, views, stalls, declines and completion.",
-      "contentHash": "f268eee430ba14c757de136e7d8fb5cfe0e8a58178a1d3277739912ba8d5200c",
-      "lastmod": "2026-10-15",
+      "contentHash": "196b58813834889fc32c04f4738d54a661a5f1ba6e54921cc3c04bfc57ac8939",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/docusign-logo.svg",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg",
-        "https://lcbridge.app/assets/lcbridge-lockup-white.svg",
         "https://lcbridge.app/assets/og-docusign.png"
       ]
     },
@@ -547,8 +551,8 @@
       "url": "https://lcbridge.app/google-sheets-integration/data/",
       "title": "GoHighLevel Data & Sync Support | Google Sheets | LC Bridge",
       "description": "Explore GoHighLevel record families, fields, import and update boundaries, source-history requirements, and early-access availability for Google Sheets.",
-      "contentHash": "ecabca25910a14bc361e143f5378986a62734ca933dc670721dc646ff960e045",
-      "lastmod": "2026-10-15",
+      "contentHash": "1eb64d4f8e80f96758c678f9af686a81684d6d44af2e0e0fafd08ea970f0d43a",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -558,8 +562,8 @@
       "url": "https://lcbridge.app/google-sheets-integration/docs/creating-reports/",
       "title": "Create and customize a report for GoHighLevel | LC Bridge",
       "description": "For GoHighLevel: Choose a template, supply its relevant inputs in one form, inspect the sample, and create the report worksheet. A report can reuse compatible.",
-      "contentHash": "fabec64dc19334604947970be6245d743f7885d68fcf20b89406faee11cb899e",
-      "lastmod": "2026-10-15",
+      "contentHash": "8ba6cb96a0d53e626320169bae9c69c8bee0c5800d0289b1326f5d65f4c023d4",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -569,8 +573,8 @@
       "url": "https://lcbridge.app/google-sheets-integration/docs/fields-and-filters/",
       "title": "Fields, custom fields, and filters for GoHighLevel | LC Bridge",
       "description": "For GoHighLevel: Choose only the columns and rows needed for the worksheet’s purpose, while retaining identity and report-required fields. The import preview is the.",
-      "contentHash": "448b7b0821b53f4ed637d2ca090aed66326ecd227f133ff7b2f6a3570b23dff2",
-      "lastmod": "2026-10-15",
+      "contentHash": "c5eb8acfcfda590a56193930a6bfdef33fa125e924b59bda1482f12c0d81f6b9",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -580,8 +584,8 @@
       "url": "https://lcbridge.app/google-sheets-integration/docs/getting-started/",
       "title": "Getting started with CRM Sync for GoHighLevel | LC Bridge",
       "description": "CRM Sync is the in-app name of the Google Sheets integration for GoHighLevel by LC Bridge. The connected product is in early access. Start with an.",
-      "contentHash": "6629776aede65a83bf1c390dd2346a08980ba031d727653706aa00d48b1d25ef",
-      "lastmod": "2026-10-15",
+      "contentHash": "5537e6bd1702eef408612c746ab7797460588369d99db9e989021e7cae2a991a",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -591,8 +595,8 @@
       "url": "https://lcbridge.app/google-sheets-integration/docs/importing/",
       "title": "Import CRM data into Google Sheets for GoHighLevel | LC Bridge",
       "description": "For GoHighLevel: The planned import journey is Choose data → Import Preview → Settings → Import. Select a source object, choose standard and available custom.",
-      "contentHash": "191c2e35486818b611b6521deae1b40237b0a451c36d5fdb3d3fd2d84a2d9e17",
-      "lastmod": "2026-10-15",
+      "contentHash": "2587b75059e59dccc61cd9b5217842b92d5476959907bcbb3e6c43cc5ff026bb",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -602,8 +606,8 @@
       "url": "https://lcbridge.app/google-sheets-integration/docs/",
       "title": "Google Sheets Integration Docs for GoHighLevel | LC Bridge",
       "description": "For GoHighLevel: Read guides to CRM imports, custom fields, reviewed updates, report setup, refresh schedules, and troubleshooting for LC Bridge Google Sheets early access.",
-      "contentHash": "c2fb9fda6f8cbab3af681d0da491ae54065c8a6d6ab69a42152a0bc0644581f3",
-      "lastmod": "2026-10-15",
+      "contentHash": "c02d46452014a893619198bb1abe9d3a3ea8efd4135da93c6efdf8a0da189904",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -613,8 +617,8 @@
       "url": "https://lcbridge.app/google-sheets-integration/docs/refresh-schedules/",
       "title": "Refresh schedules and record-transfer usage for GoHighLevel | LC Bridge",
       "description": "For GoHighLevel: Choose a refresh cadence based on when your team needs new source data. Manual and scheduled executions that transfer primary records create usage..",
-      "contentHash": "7ce6cd1d168d2c0eb6e27fb2f7ae899f2c77951f982fcbf48e679633d783698c",
-      "lastmod": "2026-10-15",
+      "contentHash": "11568ba1a7adb7873afe2e63a30c5ad0cebab91accbd8f3541e2c76cea51c5eb",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -624,8 +628,8 @@
       "url": "https://lcbridge.app/google-sheets-integration/docs/reviewed-updates/",
       "title": "Review worksheet changes before updating CRM records for GoHighLevel | LC Bridge",
       "description": "For GoHighLevel: Eligible updates to existing Contacts and Opportunities require Preview changes, Export Preview, and explicit confirmation. Editing a cell,.",
-      "contentHash": "bcc0b03551bd2f154ba18d4e4a209bdb3d7d4f77fab2f5a884269b0da9f43682",
-      "lastmod": "2026-10-15",
+      "contentHash": "ad3c9d4d547e532f7c638299b2139f4b327ceceaeb98b1304dd01a91f1336dc8",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -635,8 +639,8 @@
       "url": "https://lcbridge.app/google-sheets-integration/docs/troubleshooting/",
       "title": "Troubleshoot imports, reports, and reviewed updates for GoHighLevel | LC Bridge",
       "description": "For GoHighLevel: Start with the exact failing step: connection, source access, import preview, delivery, report calculation, or outgoing update. Preserve the last.",
-      "contentHash": "c6e62fc5df66089c385a1b381f5452a6dda204417c2d7e4ad40e3f5525a48ec9",
-      "lastmod": "2026-10-15",
+      "contentHash": "a7133f97cba3e25f43915433f8b25b00184c7e41b383c6cc27548383c8d6dfae",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -644,10 +648,10 @@
     },
     {
       "url": "https://lcbridge.app/google-sheets-integration/",
-      "title": "GoHighLevel Google Sheets Integration | LC BridgeOpen deals by stageDiscovery: $4,800.00Qualified: $6,900.00Proposal: $0.00Negotiation: $10,350.00New leads over time2026-10-01: 12026-10-02: 12026-10-03: 12026-10-04: 12026-10-05: 12026-10-06: 12026-10-07: 12026-10-08: 02026-10-09: 12026-10-10: 02026-10-11: 02026-10-12: 02026-10-13: 0Sales won vs target2026-10 · Actual: $4,450.002026-10 · Target: $10,000.00Sales won by ownerSam Rivera: $4,450.00Alex Morgan: $0.00Jamie Chen: $0.00Attendance outcomes over time2026-10-01 · Attended: 02026-10-01 · No-show: 02026-10-01 · Unresolved: 02026-10-02 · Attended: 12026-10-02 · No-show: 02026-10-02 · Unresolved: 02026-10-03 · Attended: 02026-10-03 · No-show: 12026-10-03 · Unresolved: 02026-10-04 · Attended: 02026-10-04 · No-show: 02026-10-04 · Unresolved: 12026-10-05 · Attended: 02026-10-05 · No-show: 02026-10-05 · Unresolved: 02026-10-06 · Attended: 12026-10-06 · No-show: 02026-10-06 · Unresolved: 02026-10-07 · Attended: 02026-10-07 · No-show: 12026-10-07 · Unresolved: 02026-10-08 · Attended: 02026-10-08 · No-show: 02026-10-08 · Unresolved: 12026-10-09 · Attended: 02026-10-09 · No-show: 02026-10-09 · Unresolved: 02026-10-10 · Attended: 02026-10-10 · No-show: 02026-10-10 · Unresolved: 02026-10-11 · Attended: 02026-10-11 · No-show: 02026-10-11 · Unresolved: 02026-10-12 · Attended: 02026-10-12 · No-show: 02026-10-12 · Unresolved: 02026-10-13 · Attended: 12026-10-13 · No-show: 02026-10-13 · Unresolved: 0",
+      "title": "GoHighLevel Google Sheets Integration | LC Bridge",
       "description": "Bring GoHighLevel data into Google Sheets. Explore 25 report previews, usage pricing, and reviewed CRM updates. Request LC Bridge early access.",
-      "contentHash": "a11948582a6430b3d86c673ba970e02b8b3c02fce8baecdc74fc8bd6b6707a7c",
-      "lastmod": "2026-10-15",
+      "contentHash": "3323a7cd543f57a0d9111c5e54bce6f42246cda76b0e81f4792561e709dc5654",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -657,8 +661,8 @@
       "url": "https://lcbridge.app/google-sheets-integration/pricing/",
       "title": "GoHighLevel Google Sheets Pricing | LC Bridge",
       "description": "For GoHighLevel: Pay per record synced. 250 transfers included monthly, then graduated rates from the first 1.5¢ band. Discuss a predictable high-volume subscription.",
-      "contentHash": "7af25c95e2ad425fbef73b10d8f94fa49f56fbe7107eed90ce5512e89de71d4d",
-      "lastmod": "2026-10-15",
+      "contentHash": "72105e929cd3ec5e131d7efaa0ddc3a466160e13190bbb9a1f8900e385ab0c89",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -668,8 +672,8 @@
       "url": "https://lcbridge.app/google-sheets-integration/privacy/",
       "title": "Google Sheets early-access privacy notice for GoHighLevel | LC Bridge",
       "description": "For GoHighLevel: How the public LC Bridge Google Sheets website, sample previews, and existing waitlist handle your information.",
-      "contentHash": "28f794fe4f4c5e26df1fdbb1b487347233d1b0bb9ea0accd7332a521bb9009f4",
-      "lastmod": "2026-10-15",
+      "contentHash": "9ed16c059da641e902cd03f4f39a9bc6d2d808bf2e5cc5783a2456869ab43a3f",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -677,10 +681,10 @@
     },
     {
       "url": "https://lcbridge.app/google-sheets-integration/templates/bookings-attendance/",
-      "title": "GoHighLevel Bookings & Attendance Template | LC BridgeAttendance outcomes over time2026-10-01 · Attended: 02026-10-01 · No-show: 02026-10-01 · Unresolved: 02026-10-02 · Attended: 12026-10-02 · No-show: 02026-10-02 · Unresolved: 02026-10-03 · Attended: 02026-10-03 · No-show: 12026-10-03 · Unresolved: 02026-10-04 · Attended: 02026-10-04 · No-show: 02026-10-04 · Unresolved: 12026-10-05 · Attended: 02026-10-05 · No-show: 02026-10-05 · Unresolved: 02026-10-06 · Attended: 12026-10-06 · No-show: 02026-10-06 · Unresolved: 02026-10-07 · Attended: 02026-10-07 · No-show: 12026-10-07 · Unresolved: 02026-10-08 · Attended: 02026-10-08 · No-show: 02026-10-08 · Unresolved: 12026-10-09 · Attended: 02026-10-09 · No-show: 02026-10-09 · Unresolved: 02026-10-10 · Attended: 02026-10-10 · No-show: 02026-10-10 · Unresolved: 02026-10-11 · Attended: 02026-10-11 · No-show: 02026-10-11 · Unresolved: 02026-10-12 · Attended: 02026-10-12 · No-show: 02026-10-12 · Unresolved: 02026-10-13 · Attended: 12026-10-13 · No-show: 02026-10-13 · Unresolved: 0Show rate by calendarEstimates: 100%Consultations: 0%Outstanding tasks by assigneeAlex Morgan: 3Jamie Chen: 3Sam Rivera: 1Unassigned: 0Sales won over time2026-10-01: $0.002026-10-02: $0.002026-10-03: $0.002026-10-04: $1,700.002026-10-05: $0.002026-10-06: $0.002026-10-07: $2,750.002026-10-08: $0.002026-10-09: $0.002026-10-10: $0.002026-10-11: $0.002026-10-12: $0.002026-10-13: $0.002026-10-01: $0.002026-10-02: $0.002026-10-03: $0.002026-10-04: $0.002026-10-05: $0.002026-10-06: $0.002026-10-07: $0.002026-10-08: $0.002026-10-09: $0.002026-10-10: $4,150.002026-10-11: $0.002026-10-12: $0.002026-10-13: $0.00New leads over time2026-10-01: 12026-10-02: 12026-10-03: 12026-10-04: 12026-10-05: 12026-10-06: 12026-10-07: 12026-10-08: 02026-10-09: 12026-10-10: 02026-10-11: 02026-10-12: 02026-10-13: 0",
+      "title": "GoHighLevel Bookings & Attendance Template | LC Bridge",
       "description": "Appointment outcomes and attendance by calendar. Explore the GoHighLevel Bookings & Attendance sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "9f6745b61e8bf54e92ef42da8be2c4b6f57bb012ea1d37c3a1f136fa724fbed5",
-      "lastmod": "2026-10-15",
+      "contentHash": "7443cf4b4103fc26313737fe468ab693641e40087ed95ac79154c9d5218c1789",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -688,10 +692,10 @@
     },
     {
       "url": "https://lcbridge.app/google-sheets-integration/templates/business-accounts/",
-      "title": "GoHighLevel Business Accounts Template | LC BridgeOpen deal value by businessOak Street Studio: $3,050.00Riverfront Clinic: $6,900.00Westside Services: $0.00Contacts by businessOak Street Studio: 2Riverfront Clinic: 2Westside Services: 2New leads over time2026-10-01: 12026-10-02: 12026-10-03: 12026-10-04: 12026-10-05: 12026-10-06: 12026-10-07: 12026-10-08: 02026-10-09: 12026-10-10: 02026-10-11: 02026-10-12: 02026-10-13: 0Collections by customerEthan Brooks: $2,750.00Ava Wilson: $1,700.00Records by mapped statusScheduled: 2Completed: 1",
+      "title": "GoHighLevel Business Accounts Template | LC Bridge",
       "description": "Business-linked contacts and their current opportunities. Explore the GoHighLevel Business Accounts sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "e43111ef9271d2ee5ae8a0796c6a87dad1dde649ba3d55f8f4aac518f3ad4484",
-      "lastmod": "2026-10-15",
+      "contentHash": "65bd905780d170f33b57ad58e29ce6ce317bc35465fb19a04c85a7188e1b9a24",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -699,10 +703,10 @@
     },
     {
       "url": "https://lcbridge.app/google-sheets-integration/templates/business-overview/",
-      "title": "GoHighLevel Business Overview Template | LC BridgeSales won over time2026-10-01: $0.002026-10-02: $0.002026-10-03: $0.002026-10-04: $1,700.002026-10-05: $0.002026-10-06: $0.002026-10-07: $2,750.002026-10-08: $0.002026-10-09: $0.002026-10-10: $0.002026-10-11: $0.002026-10-12: $0.002026-10-13: $0.002026-10-01: $0.002026-10-02: $0.002026-10-03: $0.002026-10-04: $0.002026-10-05: $0.002026-10-06: $0.002026-10-07: $0.002026-10-08: $0.002026-10-09: $0.002026-10-10: $4,150.002026-10-11: $0.002026-10-12: $0.002026-10-13: $0.00Top 5 customers by sales wonEthan Brooks: $2,750.00Ava Wilson: $1,700.00New leads over time2026-10-01: 12026-10-02: 12026-10-03: 12026-10-04: 12026-10-05: 12026-10-06: 12026-10-07: 12026-10-08: 02026-10-09: 12026-10-10: 02026-10-11: 02026-10-12: 02026-10-13: 0Open deals by stageDiscovery: $4,800.00Qualified: $6,900.00Proposal: $0.00Negotiation: $10,350.00Collections over time2026-10-01: $0.002026-10-02: $0.002026-10-03: $0.002026-10-04: $1,000.002026-10-05: $0.002026-10-06: $700.002026-10-07: $0.002026-10-08: $2,750.002026-10-09: $0.002026-10-10: $0.002026-10-11: $0.002026-10-12: $0.002026-10-13: $0.00",
+      "title": "GoHighLevel Business Overview Template | LC Bridge",
       "description": "Sales won, lead totals and customer results. Explore the GoHighLevel Business Overview sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "2b7b5bafc2ad2a2ec48bcc51987919d7bf22fa580da6ce8fe7873cc844f9d386",
-      "lastmod": "2026-10-15",
+      "contentHash": "498f72245f471b35eae2cb447c01745e44e684a2b9919532d82852a2e32b4b53",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -710,10 +714,10 @@
     },
     {
       "url": "https://lcbridge.app/google-sheets-integration/templates/cash-invoices/",
-      "title": "GoHighLevel Cash & Invoices Template | LC BridgeCollections over time2026-10-01: $0.002026-10-02: $0.002026-10-03: $0.002026-10-04: $1,000.002026-10-05: $0.002026-10-06: $700.002026-10-07: $0.002026-10-08: $2,750.002026-10-09: $0.002026-10-10: $0.002026-10-11: $0.002026-10-12: $0.002026-10-13: $0.00Overdue balances by age1–30 days: $500.0031–60 days: $900.0061+ days: $0.00Collections over time2026-10-01: $0.002026-10-02: $0.002026-10-03: $0.002026-10-04: $1,000.002026-10-05: $0.002026-10-06: $700.002026-10-07: $0.002026-10-08: $2,750.002026-10-09: $0.002026-10-10: $0.002026-10-11: $0.002026-10-12: $0.002026-10-13: $0.00Collections by customerEthan Brooks: $2,750.00Ava Wilson: $1,700.00",
+      "title": "GoHighLevel Cash & Invoices Template | LC Bridge",
       "description": "Collections and overdue invoices. Explore the GoHighLevel Cash & Invoices sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "1626d1e0513818e56bdd9bc87863802b38024635dd461a431c7412d3d408f7d2",
-      "lastmod": "2026-10-15",
+      "contentHash": "eb472427dcc1564fd720bcd59d046e6e763bcdc171e4499f0f5e3128cb5ce55c",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -721,10 +725,10 @@
     },
     {
       "url": "https://lcbridge.app/google-sheets-integration/templates/conversation-volume/",
-      "title": "GoHighLevel Conversation Volume Template | LC BridgeNew conversations over time2026-10-01: 12026-10-02: 02026-10-03: 12026-10-04: 12026-10-05: 02026-10-06: 02026-10-07: 02026-10-08: 02026-10-09: 02026-10-10: 02026-10-11: 02026-10-12: 02026-10-13: 0New conversations by assigneeAlex Morgan: 1Unassigned: 1Sam Rivera: 1Message volume over time2026-10-01: 12026-10-02: 12026-10-03: 12026-10-04: 12026-10-05: 12026-10-06: 12026-10-07: 12026-10-08: 12026-10-09: 12026-10-10: 12026-10-11: 02026-10-12: 02026-10-13: 0First-response distribution≤ 15 min: 115–60 min: 0> 60 min: 1Current tasks by completionIncomplete: 7Completed: 1",
+      "title": "GoHighLevel Conversation Volume Template | LC Bridge",
       "description": "New conversations, assignment and current unread workload. Explore the GoHighLevel Conversation Volume sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "de70ce2150326fed27f9f0235dde91e5651e4d583ab3ee53821b55c28a0d5618",
-      "lastmod": "2026-10-15",
+      "contentHash": "fedc3b6085f8e054e2140de83680cf2517f652741adfc5bbbbe07c507114a90b",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -732,10 +736,10 @@
     },
     {
       "url": "https://lcbridge.app/google-sheets-integration/templates/custom-records/",
-      "title": "GoHighLevel Custom Records Template | LC BridgeRecords by mapped statusScheduled: 2Completed: 1Customer association coverageMatched: 2Unmatched: 1Open deal value by businessOak Street Studio: $3,050.00Riverfront Clinic: $6,900.00Westside Services: $0.00Current tasks by completionIncomplete: 7Completed: 1Sales won over time2026-10-01: $0.002026-10-02: $0.002026-10-03: $0.002026-10-04: $1,700.002026-10-05: $0.002026-10-06: $0.002026-10-07: $2,750.002026-10-08: $0.002026-10-09: $0.002026-10-10: $0.002026-10-11: $0.002026-10-12: $0.002026-10-13: $0.002026-10-01: $0.002026-10-02: $0.002026-10-03: $0.002026-10-04: $0.002026-10-05: $0.002026-10-06: $0.002026-10-07: $0.002026-10-08: $0.002026-10-09: $0.002026-10-10: $4,150.002026-10-11: $0.002026-10-12: $0.002026-10-13: $0.00",
+      "title": "GoHighLevel Custom Records Template | LC Bridge",
       "description": "Mapped custom records by status and related customer coverage. Explore the GoHighLevel Custom Records sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "608865456b4448442c5aa263c83daf85c5e1c053836cc61cff043ee80ce3d34b",
-      "lastmod": "2026-10-15",
+      "contentHash": "c0ebe3530dbaf5c2baab0612478b9f13997404802f78078981b2ab25f9707a59",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -743,10 +747,10 @@
     },
     {
       "url": "https://lcbridge.app/google-sheets-integration/templates/customer-payments/",
-      "title": "GoHighLevel Customer Payments Template | LC BridgeCollections by customerEthan Brooks: $2,750.00Ava Wilson: $1,700.00Current balance by customerAva Wilson: $500.00Ethan Brooks: $900.00Collections over time2026-10-01: $0.002026-10-02: $0.002026-10-03: $0.002026-10-04: $1,000.002026-10-05: $0.002026-10-06: $700.002026-10-07: $0.002026-10-08: $2,750.002026-10-09: $0.002026-10-10: $0.002026-10-11: $0.002026-10-12: $0.002026-10-13: $0.00Collections over time2026-10-01: $0.002026-10-02: $0.002026-10-03: $0.002026-10-04: $1,000.002026-10-05: $0.002026-10-06: $700.002026-10-07: $0.002026-10-08: $2,750.002026-10-09: $0.002026-10-10: $0.002026-10-11: $0.002026-10-12: $0.002026-10-13: $0.00",
+      "title": "GoHighLevel Customer Payments Template | LC Bridge",
       "description": "Customer collections, current balances and linked payment records. Explore the GoHighLevel Customer Payments sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "562534e69c21a83f8457a9df5a363ccc07eace6049c5a40593b72c6d31563b7b",
-      "lastmod": "2026-10-15",
+      "contentHash": "890e106608f5db421befee4494f2928b3a91ac98aa9c6004943935f9ff6e2e58",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -754,10 +758,10 @@
     },
     {
       "url": "https://lcbridge.app/google-sheets-integration/templates/daily-follow-up/",
-      "title": "GoHighLevel Daily Follow-up Template | LC BridgeOutstanding tasks by assigneeAlex Morgan: 3Jamie Chen: 3Sam Rivera: 1Unassigned: 0Upcoming appointments2026-10-13: 12026-10-14: 12026-10-15: 02026-10-16: 02026-10-17: 02026-10-18: 02026-10-19: 0Current tasks by completionIncomplete: 7Completed: 1Attendance outcomes over time2026-10-01 · Attended: 02026-10-01 · No-show: 02026-10-01 · Unresolved: 02026-10-02 · Attended: 12026-10-02 · No-show: 02026-10-02 · Unresolved: 02026-10-03 · Attended: 02026-10-03 · No-show: 12026-10-03 · Unresolved: 02026-10-04 · Attended: 02026-10-04 · No-show: 02026-10-04 · Unresolved: 12026-10-05 · Attended: 02026-10-05 · No-show: 02026-10-05 · Unresolved: 02026-10-06 · Attended: 12026-10-06 · No-show: 02026-10-06 · Unresolved: 02026-10-07 · Attended: 02026-10-07 · No-show: 12026-10-07 · Unresolved: 02026-10-08 · Attended: 02026-10-08 · No-show: 02026-10-08 · Unresolved: 12026-10-09 · Attended: 02026-10-09 · No-show: 02026-10-09 · Unresolved: 02026-10-10 · Attended: 02026-10-10 · No-show: 02026-10-10 · Unresolved: 02026-10-11 · Attended: 02026-10-11 · No-show: 02026-10-11 · Unresolved: 02026-10-12 · Attended: 02026-10-12 · No-show: 02026-10-12 · Unresolved: 02026-10-13 · Attended: 12026-10-13 · No-show: 02026-10-13 · Unresolved: 0Open deals by stageDiscovery: $4,800.00Qualified: $6,900.00Proposal: $0.00Negotiation: $10,350.00",
+      "title": "GoHighLevel Daily Follow-up Template | LC Bridge",
       "description": "Overdue tasks, appointments and stalled deals. Explore the GoHighLevel Daily Follow-up sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "472a8b406e06e2f59a4fbb71670edb234f152c7b8770e393e2b8dfc58f3d93bf",
-      "lastmod": "2026-10-15",
+      "contentHash": "a520b5c3bbb452d1102141d817d12f1dfa360d2e7da9c3a8eed38873b5aba8da",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -765,10 +769,10 @@
     },
     {
       "url": "https://lcbridge.app/google-sheets-integration/templates/forecast-changes/",
-      "title": "GoHighLevel Forecast & Changes Template | LC BridgeWeighted pipeline by ownerAlex Morgan: $1,830.00Jamie Chen: $0.00Sam Rivera: $0.00Unassigned: $0.00Forecast changesSaved: $1,830.00Olivia Bennett · Service quote: $0.00Liam Carter · Service quote: $0.00Current: $1,830.00Open deals by stageDiscovery: $4,800.00Qualified: $6,900.00Proposal: $0.00Negotiation: $10,350.00Sales won vs target2026-10 · Actual: $4,450.002026-10 · Target: $10,000.00Observed stage conversionDiscovery: 100%Qualified: 0%Proposal: Not enough dataNegotiation: Not enough data",
+      "title": "GoHighLevel Forecast & Changes Template | LC Bridge",
       "description": "Weighted pipeline and changes since the saved cutoff. Explore the GoHighLevel Forecast & Changes sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "845aed2dfdc21891ea0e37f44716d30bc738059be2bc4b3ab981282f8f96d956",
-      "lastmod": "2026-10-15",
+      "contentHash": "f39e319a40da9e31db2dbe078185fd624af4fb61ca67e045b4cd38297a6a2f88",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -776,10 +780,10 @@
     },
     {
       "url": "https://lcbridge.app/google-sheets-integration/templates/forms-surveys/",
-      "title": "GoHighLevel Forms & Surveys Template | LC BridgeSubmissions over time2026-10-01: 12026-10-02: 12026-10-03: 12026-10-04: 12026-10-05: 02026-10-06: 12026-10-07: 02026-10-08: 02026-10-09: 02026-10-10: 02026-10-11: 02026-10-12: 02026-10-13: 0Submissions by form or surveyForm · Quote request: 3Form · Consultation: 1Survey · Service feedback: 1New leads over time2026-10-01: 12026-10-02: 12026-10-03: 12026-10-04: 12026-10-05: 12026-10-06: 12026-10-07: 12026-10-08: 02026-10-09: 12026-10-10: 02026-10-11: 02026-10-12: 02026-10-13: 0New conversations over time2026-10-01: 12026-10-02: 02026-10-03: 12026-10-04: 12026-10-05: 02026-10-06: 02026-10-07: 02026-10-08: 02026-10-09: 02026-10-10: 02026-10-11: 02026-10-12: 02026-10-13: 0Sales won over time2026-10-01: $0.002026-10-02: $0.002026-10-03: $0.002026-10-04: $1,700.002026-10-05: $0.002026-10-06: $0.002026-10-07: $2,750.002026-10-08: $0.002026-10-09: $0.002026-10-10: $0.002026-10-11: $0.002026-10-12: $0.002026-10-13: $0.002026-10-01: $0.002026-10-02: $0.002026-10-03: $0.002026-10-04: $0.002026-10-05: $0.002026-10-06: $0.002026-10-07: $0.002026-10-08: $0.002026-10-09: $0.002026-10-10: $4,150.002026-10-11: $0.002026-10-12: $0.002026-10-13: $0.00",
+      "title": "GoHighLevel Forms & Surveys Template | LC Bridge",
       "description": "Submissions, unique contacts and linked opportunity coverage. Explore the GoHighLevel Forms & Surveys sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "5336a8b2886ee32de9f4b9e6ed92fcb27f22234c109c847ab3f9858387671097",
-      "lastmod": "2026-10-15",
+      "contentHash": "2994f0f90020ab8a771d070aa64cce0e0ae9929f55a2108d6f32085c1af82c1d",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -787,10 +791,10 @@
     },
     {
       "url": "https://lcbridge.app/google-sheets-integration/templates/",
-      "title": "GoHighLevel Dashboard Templates for Google Sheets | LC BridgeSales won over time2026-10-01: $0.002026-10-02: $0.002026-10-03: $0.002026-10-04: $1,700.002026-10-05: $0.002026-10-06: $0.002026-10-07: $2,750.002026-10-08: $0.002026-10-09: $0.002026-10-10: $0.002026-10-11: $0.002026-10-12: $0.002026-10-13: $0.002026-10-01: $0.002026-10-02: $0.002026-10-03: $0.002026-10-04: $0.002026-10-05: $0.002026-10-06: $0.002026-10-07: $0.002026-10-08: $0.002026-10-09: $0.002026-10-10: $4,150.002026-10-11: $0.002026-10-12: $0.002026-10-13: $0.00New leads over time2026-10-01: 12026-10-02: 12026-10-03: 12026-10-04: 12026-10-05: 12026-10-06: 12026-10-07: 12026-10-08: 02026-10-09: 12026-10-10: 02026-10-11: 02026-10-12: 02026-10-13: 0Open deals by stageDiscovery: $4,800.00Qualified: $6,900.00Proposal: $0.00Negotiation: $10,350.00Attendance outcomes over time2026-10-01 · Attended: 02026-10-01 · No-show: 02026-10-01 · Unresolved: 02026-10-02 · Attended: 12026-10-02 · No-show: 02026-10-02 · Unresolved: 02026-10-03 · Attended: 02026-10-03 · No-show: 12026-10-03 · Unresolved: 02026-10-04 · Attended: 02026-10-04 · No-show: 02026-10-04 · Unresolved: 12026-10-05 · Attended: 02026-10-05 · No-show: 02026-10-05 · Unresolved: 02026-10-06 · Attended: 12026-10-06 · No-show: 02026-10-06 · Unresolved: 02026-10-07 · Attended: 02026-10-07 · No-show: 12026-10-07 · Unresolved: 02026-10-08 · Attended: 02026-10-08 · No-show: 02026-10-08 · Unresolved: 12026-10-09 · Attended: 02026-10-09 · No-show: 02026-10-09 · Unresolved: 02026-10-10 · Attended: 02026-10-10 · No-show: 02026-10-10 · Unresolved: 02026-10-11 · Attended: 02026-10-11 · No-show: 02026-10-11 · Unresolved: 02026-10-12 · Attended: 02026-10-12 · No-show: 02026-10-12 · Unresolved: 02026-10-13 · Attended: 12026-10-13 · No-show: 02026-10-13 · Unresolved: 0Sales won vs target2026-10 · Actual: $4,450.002026-10 · Target: $10,000.00Outstanding tasks by assigneeAlex Morgan: 3Jamie Chen: 3Sam Rivera: 1Unassigned: 0Sales won by ownerSam Rivera: $4,450.00Alex Morgan: $0.00Jamie Chen: $0.00First-response distribution≤ 15 min: 115–60 min: 0> 60 min: 1Collections over time2026-10-01: $0.002026-10-02: $0.002026-10-03: $0.002026-10-04: $1,000.002026-10-05: $0.002026-10-06: $700.002026-10-07: $0.002026-10-08: $2,750.002026-10-09: $0.002026-10-10: $0.002026-10-11: $0.002026-10-12: $0.002026-10-13: $0.00Observed stage conversionDiscovery: 100%Qualified: 0%Proposal: Not enough dataNegotiation: Not enough dataWeighted pipeline by ownerAlex Morgan: $1,830.00Jamie Chen: $0.00Sam Rivera: $0.00Unassigned: $0.00Collections over time2026-10-01: $0.002026-10-02: $0.002026-10-03: $0.002026-10-04: $1,000.002026-10-05: $0.002026-10-06: $700.002026-10-07: $0.002026-10-08: $2,750.002026-10-09: $0.002026-10-10: $0.002026-10-11: $0.002026-10-12: $0.002026-10-13: $0.00Invoice line amounts by itemService package: $2,000.00Consultation: $200.00Support agreement: $3,650.00Subscriptions by current statusActive: 3Past due: 1Cancelled: 1Recorded recurring revenue changesNew: $300.00Expansion: $20.00Contraction: $0.00Churn: -$80.00Net change: $240.00Completed order value over time2026-10-01: $0.002026-10-02: $0.002026-10-03: $0.002026-10-04: $2,200.002026-10-05: $0.002026-10-06: $0.002026-10-07: $0.002026-10-08: $600.002026-10-09: $0.002026-10-10: $0.002026-10-11: $0.002026-10-12: $0.002026-10-13: $0.00Recorded product line amount over time2026-10-01: $0.002026-10-02: $0.002026-10-03: $0.002026-10-04: $2,200.002026-10-05: $0.002026-10-06: $0.002026-10-07: $0.002026-10-08: $600.002026-10-09: $0.002026-10-10: $0.002026-10-11: $0.002026-10-12: $0.002026-10-13: $0.00New conversations over time2026-10-01: 12026-10-02: 02026-10-03: 12026-10-04: 12026-10-05: 02026-10-06: 02026-10-07: 02026-10-08: 02026-10-09: 02026-10-10: 02026-10-11: 02026-10-12: 02026-10-13: 0Message volume over time2026-10-01: 12026-10-02: 12026-10-03: 12026-10-04: 12026-10-05: 12026-10-06: 12026-10-07: 12026-10-08: 12026-10-09: 12026-10-10: 12026-10-11: 02026-10-12: 02026-10-13: 0Submissions over time2026-10-01: 12026-10-02: 12026-10-03: 12026-10-04: 12026-10-05: 02026-10-06: 12026-10-07: 02026-10-08: 02026-10-09: 02026-10-10: 02026-10-11: 02026-10-12: 02026-10-13: 0Collections by customerEthan Brooks: $2,750.00Ava Wilson: $1,700.00Open deal value by businessOak Street Studio: $3,050.00Riverfront Clinic: $6,900.00Westside Services: $0.00Current tasks by completionIncomplete: 7Completed: 1Records by mapped statusScheduled: 2Completed: 1",
+      "title": "GoHighLevel Dashboard Templates for Google Sheets | LC Bridge",
       "description": "Explore 25 GoHighLevel report templates with interactive synthetic previews, metric definitions, source requirements, and Google Sheets early access.",
-      "contentHash": "5c8afb05002fad09dade6a6a1cb74535118a5f5476c62d49883bc2e07d2b05a8",
-      "lastmod": "2026-10-15",
+      "contentHash": "eb18eef04fa297792b1aeb90835bbbed6c60084eda6222e952507035fd0d5602",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -798,10 +802,10 @@
     },
     {
       "url": "https://lcbridge.app/google-sheets-integration/templates/invoice-aging/",
-      "title": "GoHighLevel Invoice Aging Template | LC BridgeCollections over time2026-10-01: $0.002026-10-02: $0.002026-10-03: $0.002026-10-04: $1,000.002026-10-05: $0.002026-10-06: $700.002026-10-07: $0.002026-10-08: $2,750.002026-10-09: $0.002026-10-10: $0.002026-10-11: $0.002026-10-12: $0.002026-10-13: $0.00Invoice line amounts by itemService package: $2,000.00Consultation: $200.00Support agreement: $3,650.00Collections by customerEthan Brooks: $2,750.00Ava Wilson: $1,700.00",
+      "title": "GoHighLevel Invoice Aging Template | LC Bridge",
       "description": "Open balances, overdue invoices and aging buckets. Explore the GoHighLevel Invoice Aging sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "09bc170df181ecaf2f77a272da6b5eac083f7c94200b7f6b8f2c8d45667ec430",
-      "lastmod": "2026-10-15",
+      "contentHash": "f1c5fec0d5d77140a852231b75025266821e994f4ae9f2248e203492a8ebd32d",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -809,10 +813,10 @@
     },
     {
       "url": "https://lcbridge.app/google-sheets-integration/templates/invoice-line-items/",
-      "title": "GoHighLevel Invoice Line Items Template | LC BridgeInvoice line amounts by itemService package: $2,000.00Consultation: $200.00Support agreement: $3,650.00Invoiced units by itemService package: 2Consultation: 1Support agreement: 1Collections over time2026-10-01: $0.002026-10-02: $0.002026-10-03: $0.002026-10-04: $1,000.002026-10-05: $0.002026-10-06: $700.002026-10-07: $0.002026-10-08: $2,750.002026-10-09: $0.002026-10-10: $0.002026-10-11: $0.002026-10-12: $0.002026-10-13: $0.00Recorded product line amount over time2026-10-01: $0.002026-10-02: $0.002026-10-03: $0.002026-10-04: $2,200.002026-10-05: $0.002026-10-06: $0.002026-10-07: $0.002026-10-08: $600.002026-10-09: $0.002026-10-10: $0.002026-10-11: $0.002026-10-12: $0.002026-10-13: $0.00",
+      "title": "GoHighLevel Invoice Line Items Template | LC Bridge",
       "description": "Invoice line amounts, quantities and customer detail. Explore the GoHighLevel Invoice Line Items sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "362713e91036b074ea78949fcbb23f16bfe360b4eba70c62ec53b65540124cda",
-      "lastmod": "2026-10-15",
+      "contentHash": "43c597f11782ca6a460fd4e6f965d73ad28aebe8f783f689d953f3c7a56fce5d",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -820,10 +824,10 @@
     },
     {
       "url": "https://lcbridge.app/google-sheets-integration/templates/leads-sources/",
-      "title": "GoHighLevel Leads & Sources Template | LC BridgeNew leads over time2026-10-01: 12026-10-02: 12026-10-03: 12026-10-04: 12026-10-05: 12026-10-06: 12026-10-07: 12026-10-08: 02026-10-09: 12026-10-10: 02026-10-11: 02026-10-12: 02026-10-13: 0Leads by sourceGoogle Ads: 4Website: 2Referral: 1Unknown: 1Sales won over time2026-10-01: $0.002026-10-02: $0.002026-10-03: $0.002026-10-04: $1,700.002026-10-05: $0.002026-10-06: $0.002026-10-07: $2,750.002026-10-08: $0.002026-10-09: $0.002026-10-10: $0.002026-10-11: $0.002026-10-12: $0.002026-10-13: $0.002026-10-01: $0.002026-10-02: $0.002026-10-03: $0.002026-10-04: $0.002026-10-05: $0.002026-10-06: $0.002026-10-07: $0.002026-10-08: $0.002026-10-09: $0.002026-10-10: $4,150.002026-10-11: $0.002026-10-12: $0.002026-10-13: $0.00Submissions over time2026-10-01: 12026-10-02: 12026-10-03: 12026-10-04: 12026-10-05: 02026-10-06: 12026-10-07: 02026-10-08: 02026-10-09: 02026-10-10: 02026-10-11: 02026-10-12: 02026-10-13: 0Open deals by stageDiscovery: $4,800.00Qualified: $6,900.00Proposal: $0.00Negotiation: $10,350.00",
+      "title": "GoHighLevel Leads & Sources Template | LC Bridge",
       "description": "Lead volume, recorded sources and linked opportunities. Explore the GoHighLevel Leads & Sources sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "9c998b7e435caa2e4f49d0f28652cf06cf7216d552d3437d8ce04691ce5b92a6",
-      "lastmod": "2026-10-15",
+      "contentHash": "e23ed3f36aa567ed984246c8b8ec46a60fd07b72fd59466190f69b8a5889af91",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -831,10 +835,10 @@
     },
     {
       "url": "https://lcbridge.app/google-sheets-integration/templates/message-activity/",
-      "title": "GoHighLevel Message Activity Template | LC BridgeMessage volume over time2026-10-01: 12026-10-02: 12026-10-03: 12026-10-04: 12026-10-05: 12026-10-06: 12026-10-07: 12026-10-08: 12026-10-09: 12026-10-10: 12026-10-11: 02026-10-12: 02026-10-13: 0Messages by channelSMS: 5Email: 5New conversations over time2026-10-01: 12026-10-02: 02026-10-03: 12026-10-04: 12026-10-05: 02026-10-06: 02026-10-07: 02026-10-08: 02026-10-09: 02026-10-10: 02026-10-11: 02026-10-12: 02026-10-13: 0First-response distribution≤ 15 min: 115–60 min: 0> 60 min: 1Submissions over time2026-10-01: 12026-10-02: 12026-10-03: 12026-10-04: 12026-10-05: 02026-10-06: 12026-10-07: 02026-10-08: 02026-10-09: 02026-10-10: 02026-10-11: 02026-10-12: 02026-10-13: 0",
+      "title": "GoHighLevel Message Activity Template | LC Bridge",
       "description": "Inbound/outbound message volume by date and channel. Explore the GoHighLevel Message Activity sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "0b80b519d60179f08b81b156ac165daaad1745f6914f472b33fad10d393b64ca",
-      "lastmod": "2026-10-15",
+      "contentHash": "9c1040b886884cea1bb9bad5cf864bacdd9f981ae6109393f7ebd863d89200b9",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -842,10 +846,10 @@
     },
     {
       "url": "https://lcbridge.app/google-sheets-integration/templates/order-performance/",
-      "title": "GoHighLevel Order Performance Template | LC BridgeCompleted order value over time2026-10-01: $0.002026-10-02: $0.002026-10-03: $0.002026-10-04: $2,200.002026-10-05: $0.002026-10-06: $0.002026-10-07: $0.002026-10-08: $600.002026-10-09: $0.002026-10-10: $0.002026-10-11: $0.002026-10-12: $0.002026-10-13: $0.00Orders by current statusCompleted: 2Pending: 1Cancelled: 1Recorded product line amount over time2026-10-01: $0.002026-10-02: $0.002026-10-03: $0.002026-10-04: $2,200.002026-10-05: $0.002026-10-06: $0.002026-10-07: $0.002026-10-08: $600.002026-10-09: $0.002026-10-10: $0.002026-10-11: $0.002026-10-12: $0.002026-10-13: $0.00Collections over time2026-10-01: $0.002026-10-02: $0.002026-10-03: $0.002026-10-04: $1,000.002026-10-05: $0.002026-10-06: $700.002026-10-07: $0.002026-10-08: $2,750.002026-10-09: $0.002026-10-10: $0.002026-10-11: $0.002026-10-12: $0.002026-10-13: $0.00Collections by customerEthan Brooks: $2,750.00Ava Wilson: $1,700.00",
+      "title": "GoHighLevel Order Performance Template | LC Bridge",
       "description": "Completed order totals, order counts and status breakdown. Explore the GoHighLevel Order Performance sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "98fd342b3e1b721f2aa7f36d34c49fa50b0c9ace1ab0345adbdb8a3cec914b31",
-      "lastmod": "2026-10-15",
+      "contentHash": "6a4ce5ce97bcdcaf3e3628a94a89da45c4323cfcd74c7f468af54938aed627f8",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -853,10 +857,10 @@
     },
     {
       "url": "https://lcbridge.app/google-sheets-integration/templates/payment-collections/",
-      "title": "GoHighLevel Payment Collections Template | LC BridgeCollections over time2026-10-01: $0.002026-10-02: $0.002026-10-03: $0.002026-10-04: $1,000.002026-10-05: $0.002026-10-06: $700.002026-10-07: $0.002026-10-08: $2,750.002026-10-09: $0.002026-10-10: $0.002026-10-11: $0.002026-10-12: $0.002026-10-13: $0.00Collections by payment typeOne-time: $1,700.00Recurring: $2,750.00Collections over time2026-10-01: $0.002026-10-02: $0.002026-10-03: $0.002026-10-04: $1,000.002026-10-05: $0.002026-10-06: $700.002026-10-07: $0.002026-10-08: $2,750.002026-10-09: $0.002026-10-10: $0.002026-10-11: $0.002026-10-12: $0.002026-10-13: $0.00Collections by customerEthan Brooks: $2,750.00Ava Wilson: $1,700.00",
+      "title": "GoHighLevel Payment Collections Template | LC Bridge",
       "description": "Successful collections, transaction counts and payment types. Explore the GoHighLevel Payment Collections sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "f7a14003b3cf824704ba573af8b07b0d38fe0bdba95bd972e97f6bf90a795f9f",
-      "lastmod": "2026-10-15",
+      "contentHash": "5a7bbb15aacbdcae979c35b5cd013f09662f60dacb8c09fc7b42b5a60637fa11",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -864,10 +868,10 @@
     },
     {
       "url": "https://lcbridge.app/google-sheets-integration/templates/pipeline-follow-up/",
-      "title": "GoHighLevel Pipeline & Follow-up Template | LC BridgeOpen deals by stageDiscovery: $4,800.00Qualified: $6,900.00Proposal: $0.00Negotiation: $10,350.00Sales won vs target2026-10-01: $0.002026-10-02: $0.002026-10-03: $0.002026-10-04: $1,700.002026-10-05: $1,700.002026-10-06: $1,700.002026-10-07: $4,450.002026-10-08: $4,450.002026-10-09: $4,450.002026-10-10: $4,450.002026-10-11: $4,450.002026-10-12: $4,450.002026-10-13: $4,450.002026-10-01: $10,000.002026-10-02: $10,000.002026-10-03: $10,000.002026-10-04: $10,000.002026-10-05: $10,000.002026-10-06: $10,000.002026-10-07: $10,000.002026-10-08: $10,000.002026-10-09: $10,000.002026-10-10: $10,000.002026-10-11: $10,000.002026-10-12: $10,000.002026-10-13: $10,000.00Sales won vs target2026-10 · Actual: $4,450.002026-10 · Target: $10,000.00Observed stage conversionDiscovery: 100%Qualified: 0%Proposal: Not enough dataNegotiation: Not enough dataSales won by ownerSam Rivera: $4,450.00Alex Morgan: $0.00Jamie Chen: $0.00",
+      "title": "GoHighLevel Pipeline & Follow-up Template | LC Bridge",
       "description": "Open pipeline, sales targets and deal details. Explore the GoHighLevel Pipeline & Follow-up sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "bab0b56f520f7fed397b34b413a2ec94be3c46eac3198514cd39f2050d0aa41a",
-      "lastmod": "2026-10-15",
+      "contentHash": "4bbb5989e5f8e6c82ba92777efaf65a494a03de59b43d24cea5605cb97dd7bc8",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -875,10 +879,10 @@
     },
     {
       "url": "https://lcbridge.app/google-sheets-integration/templates/product-sales/",
-      "title": "GoHighLevel Product Sales Template | LC BridgeRecorded product line amount over time2026-10-01: $0.002026-10-02: $0.002026-10-03: $0.002026-10-04: $2,200.002026-10-05: $0.002026-10-06: $0.002026-10-07: $0.002026-10-08: $600.002026-10-09: $0.002026-10-10: $0.002026-10-11: $0.002026-10-12: $0.002026-10-13: $0.00Units sold by productRetired service · sale-time label (catalog missing): 3Service package: 2Consultation: 1Completed order value over time2026-10-01: $0.002026-10-02: $0.002026-10-03: $0.002026-10-04: $2,200.002026-10-05: $0.002026-10-06: $0.002026-10-07: $0.002026-10-08: $600.002026-10-09: $0.002026-10-10: $0.002026-10-11: $0.002026-10-12: $0.002026-10-13: $0.00Invoice line amounts by itemService package: $2,000.00Consultation: $200.00Support agreement: $3,650.00Collections over time2026-10-01: $0.002026-10-02: $0.002026-10-03: $0.002026-10-04: $1,000.002026-10-05: $0.002026-10-06: $700.002026-10-07: $0.002026-10-08: $2,750.002026-10-09: $0.002026-10-10: $0.002026-10-11: $0.002026-10-12: $0.002026-10-13: $0.00",
+      "title": "GoHighLevel Product Sales Template | LC Bridge",
       "description": "Sold quantities and line amounts by sale-time product. Explore the GoHighLevel Product Sales sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "8985a256014ed312888c963a416457bd4e3568dfebd48b6526f1a3d88524a098",
-      "lastmod": "2026-10-15",
+      "contentHash": "40d466c2d1661fec9cfe32c35e2f58552841798ba90f379ef2f792eebb18a0a2",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -886,10 +890,10 @@
     },
     {
       "url": "https://lcbridge.app/google-sheets-integration/templates/recurring-revenue-changes/",
-      "title": "GoHighLevel Recurring Revenue Changes Template | LC BridgeRecorded recurring revenue changesNew: $300.00Expansion: $20.00Contraction: $0.00Churn: -$80.00Net change: $240.00Recorded lifecycle eventsNew: 2Expansion: 1Contraction: 0Churn: 1Subscriptions by current statusActive: 3Past due: 1Cancelled: 1Weighted pipeline by ownerAlex Morgan: $1,830.00Jamie Chen: $0.00Sam Rivera: $0.00Unassigned: $0.00Collections over time2026-10-01: $0.002026-10-02: $0.002026-10-03: $0.002026-10-04: $1,000.002026-10-05: $0.002026-10-06: $700.002026-10-07: $0.002026-10-08: $2,750.002026-10-09: $0.002026-10-10: $0.002026-10-11: $0.002026-10-12: $0.002026-10-13: $0.00",
+      "title": "GoHighLevel Recurring Revenue Changes Template | LC Bridge",
       "description": "Recorded new, expansion, contraction and churn events. Explore the GoHighLevel Recurring Revenue Changes sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "ee8ae859e4a783688f9a3451ff2786763007a40707560d0c4671ef215c08130d",
-      "lastmod": "2026-10-15",
+      "contentHash": "8cd291f8720bba70ec8caeed13112794ed847184718e737bf66ee1cd2f65d25f",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -897,10 +901,10 @@
     },
     {
       "url": "https://lcbridge.app/google-sheets-integration/templates/response-coverage/",
-      "title": "GoHighLevel Response & Coverage Template | LC BridgeFirst-response distribution≤ 15 min: 115–60 min: 0> 60 min: 1Unanswered inquiries by age< 1 hour: 01–24 hours: 0> 24 hours: 2New conversations over time2026-10-01: 12026-10-02: 02026-10-03: 12026-10-04: 12026-10-05: 02026-10-06: 02026-10-07: 02026-10-08: 02026-10-09: 02026-10-10: 02026-10-11: 02026-10-12: 02026-10-13: 0Message volume over time2026-10-01: 12026-10-02: 12026-10-03: 12026-10-04: 12026-10-05: 12026-10-06: 12026-10-07: 12026-10-08: 12026-10-09: 12026-10-10: 12026-10-11: 02026-10-12: 02026-10-13: 0Outstanding tasks by assigneeAlex Morgan: 3Jamie Chen: 3Sam Rivera: 1Unassigned: 0",
+      "title": "GoHighLevel Response & Coverage Template | LC Bridge",
       "description": "Response time and unanswered inquiries. Explore the GoHighLevel Response & Coverage sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "e5d64f5b51474ce64e88976186a858d87b197f2cab8d73b4eb28ee0ca14dd848",
-      "lastmod": "2026-10-15",
+      "contentHash": "f2b67a1a10e6bd2af5f70bc257eff96e21cf64add54179dde9db078c559027ab",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -908,10 +912,10 @@
     },
     {
       "url": "https://lcbridge.app/google-sheets-integration/templates/sales-goals/",
-      "title": "GoHighLevel Sales & Goals Template | LC BridgeSales won vs target2026-10 · Actual: $4,450.002026-10 · Target: $10,000.00Open pipeline by stageDiscovery: $4,800.00Qualified: $6,900.00Proposal: $0.00Negotiation: $10,350.00Sales won by ownerSam Rivera: $4,450.00Alex Morgan: $0.00Jamie Chen: $0.00Open deals by stageDiscovery: $4,800.00Qualified: $6,900.00Proposal: $0.00Negotiation: $10,350.00Collections over time2026-10-01: $0.002026-10-02: $0.002026-10-03: $0.002026-10-04: $1,000.002026-10-05: $0.002026-10-06: $700.002026-10-07: $0.002026-10-08: $2,750.002026-10-09: $0.002026-10-10: $0.002026-10-11: $0.002026-10-12: $0.002026-10-13: $0.00",
+      "title": "GoHighLevel Sales & Goals Template | LC Bridge",
       "description": "Actual sales, targets and open pipeline. Explore the GoHighLevel Sales & Goals sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "ec867ada68571cf68fe73f5f8a2b03df7d5b85bfb7cd629b0491e8aa03844f7f",
-      "lastmod": "2026-10-15",
+      "contentHash": "8c8521b16d07af357586270898efe45d9d7696b85515035d5c57ebda15940601",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -919,10 +923,10 @@
     },
     {
       "url": "https://lcbridge.app/google-sheets-integration/templates/stage-conversion-bottlenecks/",
-      "title": "GoHighLevel Stage Conversion & Bottlenecks Template | LC BridgeObserved stage conversionDiscovery: 100%Qualified: 0%Proposal: Not enough dataNegotiation: Not enough dataCompleted stage dwellDiscovery: 3.5 daysQualified: 2 daysProposal: Not enough dataNegotiation: Not enough dataOpen deals by stageDiscovery: $4,800.00Qualified: $6,900.00Proposal: $0.00Negotiation: $10,350.00Weighted pipeline by ownerAlex Morgan: $1,830.00Jamie Chen: $0.00Sam Rivera: $0.00Unassigned: $0.00Sales won by ownerSam Rivera: $4,450.00Alex Morgan: $0.00Jamie Chen: $0.00",
+      "title": "GoHighLevel Stage Conversion & Bottlenecks Template | LC Bridge",
       "description": "Stage conversion and completed time in stage. Explore the GoHighLevel Stage Conversion & Bottlenecks sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "7f4ed5205c5a80cf8db77023f266f5d15b6d1fb30933995ec343e407ac4fb79a",
-      "lastmod": "2026-10-15",
+      "contentHash": "1024bb4ae0681ad58122659172e0e7e9c8e31c461ce22aecb81f6987536d7745",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -930,10 +934,10 @@
     },
     {
       "url": "https://lcbridge.app/google-sheets-integration/templates/subscription-overview/",
-      "title": "GoHighLevel Subscription Overview Template | LC BridgeSubscriptions by current statusActive: 3Past due: 1Cancelled: 1Normalized active MRR by planMonthly support: $100.00Annual service: $200.00Recorded recurring revenue changesNew: $300.00Expansion: $20.00Contraction: $0.00Churn: -$80.00Net change: $240.00Collections by customerEthan Brooks: $2,750.00Ava Wilson: $1,700.00Collections over time2026-10-01: $0.002026-10-02: $0.002026-10-03: $0.002026-10-04: $1,000.002026-10-05: $0.002026-10-06: $700.002026-10-07: $0.002026-10-08: $2,750.002026-10-09: $0.002026-10-10: $0.002026-10-11: $0.002026-10-12: $0.002026-10-13: $0.00",
+      "title": "GoHighLevel Subscription Overview Template | LC Bridge",
       "description": "Active subscriptions, normalized recurring amounts and interval coverage. Explore the GoHighLevel Subscription Overview sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "84fb5dd9fa5fadef8296284e844f99b293ec4a6158de41c56ede1a64b07dfec6",
-      "lastmod": "2026-10-15",
+      "contentHash": "7b8b942479eff106945381fc70cd510ea41011d0d29ccd2cdf747d1a22331cd4",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -941,10 +945,10 @@
     },
     {
       "url": "https://lcbridge.app/google-sheets-integration/templates/tasks-notes/",
-      "title": "GoHighLevel Tasks & Notes Template | LC BridgeCurrent tasks by completionIncomplete: 7Completed: 1Notes added over time2026-10-01: 02026-10-02: 12026-10-03: 02026-10-04: 12026-10-05: 02026-10-06: 02026-10-07: 02026-10-08: 02026-10-09: 02026-10-10: 02026-10-11: 02026-10-12: 02026-10-13: 0Outstanding tasks by assigneeAlex Morgan: 3Jamie Chen: 3Sam Rivera: 1Unassigned: 0Sales won by ownerSam Rivera: $4,450.00Alex Morgan: $0.00Jamie Chen: $0.00New conversations over time2026-10-01: 12026-10-02: 02026-10-03: 12026-10-04: 12026-10-05: 02026-10-06: 02026-10-07: 02026-10-08: 02026-10-09: 02026-10-10: 02026-10-11: 02026-10-12: 02026-10-13: 0",
+      "title": "GoHighLevel Tasks & Notes Template | LC Bridge",
       "description": "Current task completion, overdue work and dated note counts. Explore the GoHighLevel Tasks & Notes sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "b42abf31d37c6e6e7a72d6b62db340d4d78be6bfbb53e8635ee17442f04bb598",
-      "lastmod": "2026-10-15",
+      "contentHash": "600d2519edd6ece34c625cd47be2eae4f43760ede92426e8901cd2ad071c556d",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -952,10 +956,10 @@
     },
     {
       "url": "https://lcbridge.app/google-sheets-integration/templates/team-performance/",
-      "title": "GoHighLevel Team Performance Template | LC BridgeSales won by ownerSam Rivera: $4,450.00Alex Morgan: $0.00Jamie Chen: $0.00Sales won by owner over time2026-10-01: $0.002026-10-02: $0.002026-10-03: $0.002026-10-04: $0.002026-10-05: $0.002026-10-06: $0.002026-10-07: $0.002026-10-08: $0.002026-10-09: $0.002026-10-10: $0.002026-10-11: $0.002026-10-12: $0.002026-10-13: $0.002026-10-01: $0.002026-10-02: $0.002026-10-03: $0.002026-10-04: $0.002026-10-05: $0.002026-10-06: $0.002026-10-07: $0.002026-10-08: $0.002026-10-09: $0.002026-10-10: $0.002026-10-11: $0.002026-10-12: $0.002026-10-13: $0.002026-10-01: $0.002026-10-02: $0.002026-10-03: $0.002026-10-04: $1,700.002026-10-05: $0.002026-10-06: $0.002026-10-07: $2,750.002026-10-08: $0.002026-10-09: $0.002026-10-10: $0.002026-10-11: $0.002026-10-12: $0.002026-10-13: $0.00Closed-deal win rate by ownerSam Rivera: 100%Alex Morgan: 0%Jamie Chen: 0%Win rate by owner over time2026-10-08: 0%2026-10-12: 0%2026-10-04: 100%2026-10-07: 100%Sales won vs target2026-10 · Actual: $4,450.002026-10 · Target: $10,000.00Open deals by stageDiscovery: $4,800.00Qualified: $6,900.00Proposal: $0.00Negotiation: $10,350.00New leads over time2026-10-01: 12026-10-02: 12026-10-03: 12026-10-04: 12026-10-05: 12026-10-06: 12026-10-07: 12026-10-08: 02026-10-09: 12026-10-10: 02026-10-11: 02026-10-12: 02026-10-13: 0",
+      "title": "GoHighLevel Team Performance Template | LC Bridge",
       "description": "Sales and win-rate rankings by owner. Explore the GoHighLevel Team Performance sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "02743efcc72b654587f088139420e82c48eb1555140fb767da2e60f0c2d13997",
-      "lastmod": "2026-10-15",
+      "contentHash": "5bc337ca9876c70e889bf2317faa7ee350b16b8e1d7f93196fd8864e93c382fc",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -965,8 +969,8 @@
       "url": "https://lcbridge.app/google-sheets-integration/terms/",
       "title": "Google Sheets early-access terms for GoHighLevel | LC Bridge",
       "description": "For GoHighLevel: What the public samples, waitlist request, planned prices, and production access process mean.",
-      "contentHash": "4ade0debef78760dd27dfd0beb6bf41205ed0698ac722b753f819aeaa75469ab",
-      "lastmod": "2026-10-15",
+      "contentHash": "6ba101143ff071ea98c61b4898f11c6fc53c0b06030ee8fc663db8a730afe069",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -976,13 +980,12 @@
       "url": "https://lcbridge.app/highlevel-development/",
       "title": "GoHighLevel Developers & API Integration Services | LC Bridge",
       "description": "GoHighLevel developers for custom API integrations, workflow automation and marketplace apps. Former HighLevel team members building for software brands.",
-      "contentHash": "337182c1977a29a082c2ed191ecb5785a20ac9b4f5280b757b7e277182b84dca",
-      "lastmod": "2026-10-15",
+      "contentHash": "fbf9525262e295db466da94d6e1be6cb1917971dec9b161a5ef28a779f4da6e3",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/community-agents-logo-128.png",
         "https://lcbridge.app/assets/docusign-logo.svg",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg",
-        "https://lcbridge.app/assets/lcbridge-lockup-white.svg",
         "https://lcbridge.app/assets/og-highlevel-development.png",
         "https://lcbridge.app/docusign-integration/docs/multiple-signers/images/field-mapping-1200.webp",
         "https://lcbridge.app/docusign-integration/docs/multiple-signers/images/field-mapping-640.webp",
@@ -993,17 +996,16 @@
     },
     {
       "url": "https://lcbridge.app/",
-      "title": "GoHighLevel Integrations & Custom Development | LC Bridge",
-      "description": "GoHighLevel products and custom development by LC Bridge. Connect DocuSign, add community AI agents, or build an integration with our former HighLevel team.",
-      "contentHash": "ccbaf05e969e2e29ab39b0c2bf45c9e1d0de9750e11458297384e28752ef043b",
-      "lastmod": "2026-10-15",
+      "title": "GoHighLevel Integrations: Google Sheets & More | LC Bridge",
+      "description": "Google Sheets reporting for GoHighLevel, community AI, and connected DocuSign agreements. Explore LC Bridge products, pricing, guides, and custom development.",
+      "contentHash": "5780c30a040210464da0659c033c0b7a81d701441fb478901c32413af06f0a57",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/arun-headshot.jpg",
         "https://lcbridge.app/assets/community-agents-logo-64.png",
         "https://lcbridge.app/assets/docusign-logo.svg",
         "https://lcbridge.app/assets/docusign-mark.svg",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg",
-        "https://lcbridge.app/assets/lcbridge-lockup-white.svg",
         "https://lcbridge.app/assets/lcbridge-logo.svg",
         "https://lcbridge.app/assets/og-lcbridge.png",
         "https://lcbridge.app/assets/video/community-agents-demo-thumbnail-1280.webp",
@@ -1015,12 +1017,12 @@
     {
       "url": "https://lcbridge.app/products/",
       "title": "GoHighLevel Integrations & Apps | LC Bridge",
-      "description": "Explore LC Bridge products for GoHighLevel: DocuSign agreements, Community Agents and upcoming Google Sheets sync, with documentation and product demos.",
-      "contentHash": "62d9c1c40d9cc3dface20cad243e5d2667e498a86d68a4469955372dde2b377b",
-      "lastmod": "2026-10-15",
+      "description": "Explore LC Bridge products for GoHighLevel: Google Sheets reporting, Community Agents, and DocuSign integration. Find templates, pricing, and docs.",
+      "contentHash": "010332ea8b4bdd51edf7ec33c5c984369301044cbc1f7c84f31c593ea6a826ce",
+      "lastmod": "2026-10-16",
       "images": [
         "https://lcbridge.app/assets/docusign-mark.svg",
-        "https://lcbridge.app/assets/lcbridge-lockup-white.svg"
+        "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
       ]
     }
   ],

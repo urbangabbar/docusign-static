@@ -1,0 +1,7 @@
+{
+  "products": [
+    {"id":"google-sheets","name":"Google Sheets integration","url":"/google-sheets-integration/","description":"CRM imports, reports, and reviewed updates","status":"Early access","docs":"/google-sheets-integration/docs/","pricing":"/google-sheets-integration/pricing/"},
+    {"id":"community-agents","name":"Community Agents","url":"/community-agents/","description":"AI replies for your HighLevel communities","status":"Available now","docs":"/community-agents/docs/","pricing":"/community-agents/pricing/"},
+    {"id":"docusign","name":"DocuSign integration","url":"/docusign-integration/","description":"Agreements connected to your CRM","status":"Available now","docs":"/docusign-integration/docs/","pricing":"/docusign-integration/pricing"}
+  ]
+}

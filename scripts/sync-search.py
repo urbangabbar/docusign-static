@@ -25,6 +25,7 @@ class Page(HTMLParser):
         super().__init__()
         self.title = ''
         self.in_title = False
+        self.svg_depth = 0
         self.description = ''
         self.canonicals = []
         self.robots = []
@@ -35,7 +36,9 @@ class Page(HTMLParser):
 
     def handle_starttag(self, tag, attrs):
         a = dict(attrs)
-        if tag == 'title':
+        if tag == 'svg':
+            self.svg_depth += 1
+        if tag == 'title' and not self.svg_depth:
             self.in_title = True
         if tag == 'link' and 'canonical' in a.get('rel', '').lower().split():
             self.canonicals.append(a.get('href', ''))
@@ -61,6 +64,8 @@ class Page(HTMLParser):
             self.images.append(a.get('content', ''))
 
     def handle_endtag(self, tag):
+        if tag == 'svg':
+            self.svg_depth = max(0, self.svg_depth - 1)
         if tag == 'title':
             self.in_title = False
 
