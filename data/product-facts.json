@@ -73,5 +73,64 @@
     ],
     "url": "https://www.gohighlevel.com/",
     "context": "GoHighLevel (GHL), also known as HighLevel"
+  },
+  "google-sheets": {
+    "name": "Google Sheets integration for GoHighLevel by LC Bridge",
+    "marketplaceName": "Google Sheets integration by LC Bridge",
+    "inAppName": "CRM Sync",
+    "url": "https://lcbridge.app/google-sheets-integration/",
+    "status": "Early access",
+    "reviewedOn": "2026-10-16",
+    "description": "Bring GoHighLevel data into Google Sheets, explore 25 report templates, and review spreadsheet edits before updating matching contacts and opportunities.",
+    "requirements": "An authorized GoHighLevel account, a Google account with access to the chosen spreadsheet, and appropriate record permissions. Production access is offered through early access.",
+    "waitlistUrl": "https://lcbridge.app/google-sheets-integration/#apply",
+    "waitlistFormUrl": "https://api.leadconnectorhq.com/widget/form/na1YK5kycU0nLOzNtWMf",
+    "salesUrl": "https://lcbridge.app/book-a-call/?product=google-sheets",
+    "pricing": {
+      "status": "Planned early-access base rates",
+      "currency": "USD",
+      "unit": "Successfully transferred primary record per execution",
+      "includedTransfers": 250,
+      "allowancePeriod": "calendar month, UTC",
+      "volumeScope": "connected account per calendar month",
+      "bands": [
+        {
+          "transfers": 1000,
+          "rateMicrousd": 15000
+        },
+        {
+          "transfers": 1000,
+          "rateMicrousd": 12000
+        },
+        {
+          "transfers": 3000,
+          "rateMicrousd": 9000
+        },
+        {
+          "transfers": 25000,
+          "rateMicrousd": 7500
+        },
+        {
+          "transfers": null,
+          "rateMicrousd": 4500
+        }
+      ],
+      "countingRules": [
+        "Each execution counts its successfully transferred primary records. Transferring the same record in another execution adds usage again.",
+        "Retries of the same delivery operation must not create duplicate charges.",
+        "Supporting lookups and embedded invoice or order line items are bundled with their primary records.",
+        "Refreshing a report from already delivered worksheet data is not another provider record transfer. A source refresh that transfers records adds usage.",
+        "Applicable account markup and tax can change the final charge.",
+        "High-volume teams can discuss a custom subscription with more predictable costs."
+      ],
+      "billingStatus": "The website explains planned rates and estimates; it does not activate billing."
+    },
+    "capabilityEvidence": {
+      "reportTemplates": 25,
+      "outgoingUpdates": "Reviewed updates to eligible fields on matching Contacts and Opportunities; no automatic outgoing writes.",
+      "importMode": "Manual or scheduled imports; production source acceptance varies by object.",
+      "excluded": "Workflow run reporting is unavailable. No claim of universal object writeback, email body availability, unlimited scale, or measured production performance.",
+      "sampleData": "Invented relational records, frozen to October 2026. Public previews never connect a live account."
+    }
   }
 }

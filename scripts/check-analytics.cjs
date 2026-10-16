@@ -55,3 +55,32 @@ run('');
 run('G-TEST123');
 run('G-TEST123', '/highlevel-development/');
 console.log('Analytics boundaries passed: no pre-consent requests, no PII/query strings, clicks are not conversions.');
+
+for (const pathname of ['/google-sheets-integration/templates/pipeline-follow-up/', '/blog/connect-gohighlevel-google-sheets/']) {
+  const events = [], requests = [];
+  const context = { window: { dataLayer: events }, document: {
+    referrer: '', documentElement: { hasAttribute: name => name === 'data-sheets-generated' },
+    addEventListener() {}, dispatchEvent() {}, createElement() { return {}; },
+    head: { appendChild(script) { requests.push(script.src); } }
+  }, location: { pathname, origin: 'https://lcbridge.app', href: 'https://lcbridge.app' + pathname },
+  URL, CustomEvent: function () {} };
+  vm.runInNewContext(source, context);
+  const api = context.window.LCBridgeAnalytics;
+  api.recordSheetsEvent('template_preview_opened', { template_id: 'pipeline', email: 'person@example.com' });
+  api.recordSheetsEvent('template_filter_changed', { template_id: 'person@example.com' });
+  api.recordSheetsEvent('early_access_form_started');
+  api.recordSheetsEvent('pricing_calculator_used');
+  api.recordSheetsEvent('arbitrary_person@example.com');
+  assert.equal(events.length, 4);
+  assert.equal(events[0].template_id, 'pipeline');
+  assert.equal(events[1].template_id, undefined);
+  assert.equal(events.every(event => event.product === 'google_sheets'), true);
+  assert.equal(events.some(event => /accepted|completed/.test(event.event)), false);
+  api.confirmConversion('iframe_loaded', 'google_sheets');
+  assert.equal(events.length, 4);
+  api.confirmConversion('early_access_request_accepted', 'google_sheets');
+  assert.equal(events.at(-1).event, 'early_access_request_accepted');
+  assert.equal(JSON.stringify(events).includes('person@example.com'), false);
+  assert.equal(requests.length, 0);
+}
+console.log('Google Sheets analytics passed: allowlisted events, no private fields, and explicit acceptance only.');

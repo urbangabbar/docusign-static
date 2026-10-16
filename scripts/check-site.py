@@ -36,12 +36,15 @@ class Page(HTMLParser):
         self.schemas = []
         self.images = []
         self.in_title = False
+        self.in_head = False
         self.in_schema = False
         self.redirect = False
         self.feed(path.read_text())
 
     def handle_starttag(self, tag, attrs):
         a = dict(attrs)
+        if tag == 'head':
+            self.in_head = True
         if a.get('id'):
             self.ids.append(a['id'])
         if tag == 'meta':
@@ -56,7 +59,7 @@ class Page(HTMLParser):
                 self.canonical.append(a.get('href'))
             if a.get('href') and a.get('rel') in ['stylesheet', 'icon', 'apple-touch-icon', 'preload']:
                 self.assets.append(a['href'])
-        if tag == 'title':
+        if tag == 'title' and self.in_head:
             self.in_title = True
             self.title_count += 1
         if tag == 'h1':
@@ -84,6 +87,8 @@ class Page(HTMLParser):
                 self.schemas.append('')
 
     def handle_endtag(self, tag):
+        if tag == 'head':
+            self.in_head = False
         if tag == 'title':
             self.in_title = False
         if tag == 'script':

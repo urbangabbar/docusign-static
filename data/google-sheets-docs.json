@@ -1,0 +1,163 @@
+[
+  {
+    "slug": "getting-started",
+    "title": "Getting started with CRM Sync",
+    "answer": "CRM Sync is the in-app name of the Google Sheets integration for GoHighLevel by LC Bridge. The connected product is in early access. Start with an open sample report, then use the existing waitlist to request access. Joining the waitlist does not install the app or authorize account access.",
+    "sections": [
+      {
+        "title": "Explore before connecting",
+        "body": "<p>Open the template library and choose the report closest to your job. Each preview uses invented data and a fixed October 2026 sample period. Owner and period filters work locally. No sample connects to a Google account, a CRM account, or a billing service.</p><p>Read the required sources and metric definitions. Some reports need more than current records: stage conversion needs observed transitions, forecast movement needs a compatible saved cutoff, and recurring revenue changes need an event ledger.</p>"
+      },
+      {
+        "title": "Prepare the account and destination",
+        "body": "<p>When access is enabled for your team, use a CRM account you are authorized to connect and a Google account with access to the intended spreadsheet. Choose a destination whose sharing settings match the sensitivity of the records. A hidden tab is not an access boundary.</p><p>The app uses neutral CRM wording. Its public acquisition name and in-app name refer to the same integration. Actual installation links and account permissions are supplied with access; this guide does not ask you to authorize an unavailable installation.</p>"
+      },
+      {
+        "title": "Choose your first job",
+        "body": "<p>For data movement, choose Sync CRM data and create an import. For reporting, choose Create or view reports and select a template. The first import should use a bounded dataset that you can compare with its source.</p><p>New imports default to import-only. Eligible outgoing updates require explicit preview and confirmation. Enabling update permission does not send changes by itself.</p>"
+      },
+      {
+        "title": "Know the usage model",
+        "body": "<p>The planned monthly allowance covers 250 successful primary record transfers. Each later execution transferring records creates additional usage, including repeat transfers of the same records. Supporting lookups are bundled. Review the exact rates and optional calculator before choosing a recurring schedule.</p><p>For high-volume work, use Talk to Sales to discuss a custom subscription. Live provider delivery and billing are enabled through the actual production access process, not through the public samples.</p>"
+      }
+    ]
+  },
+  {
+    "slug": "importing",
+    "title": "Import CRM data into Google Sheets",
+    "answer": "The planned import journey is Choose data → Import Preview → Settings → Import. Select a source object, choose standard and available custom fields, inspect the sample rows, then choose the destination and refresh settings. A new import reads from the CRM; it does not automatically send worksheet changes back.",
+    "sections": [
+      {
+        "title": "Select the record family and scope",
+        "body": "<p>Choose the record type that represents your primary dataset. Contacts and opportunities are different objects. Appointment imports also need a calendar and valid date window before field selection. Use filters to keep the export relevant to the reporting decision.</p><p>Source availability depends on enabled access and account permissions. Seeing an object in a sample does not establish live access to it. Read the data catalog for current acceptance boundaries.</p>"
+      },
+      {
+        "title": "Preview fields and rows",
+        "body": "<p>Keep the record ID when you need stable matching. Select readable names and the dates, ownership, currency, and relationship fields the report requires. Standard and discovered custom fields share one Fields chooser.</p><p>Inspect blank values, unassigned records, and custom field types. Reorder columns before running the import. A field or filter change requires a fresh preview before Save &amp; Run.</p>"
+      },
+      {
+        "title": "Save settings and deliver",
+        "body": "<p>Choose a clear import name and an unambiguous worksheet destination. Configure a suitable refresh cadence. Import performs the data job; saving a name or schedule on an existing import is a settings operation and does not itself refresh worksheet data.</p><p>After delivery, compare a few rows with their source records. Check the last-run result and data scope. Do not read an empty or failed delivery as proof that the source contains no records.</p>"
+      },
+      {
+        "title": "Manage an existing import",
+        "body": "<p>Use Open worksheet, Refresh, Edit, and the lifecycle actions in More. Pause stops scheduled activity while preserving previously delivered worksheet data and already accrued usage. Removal and disconnection have separate operational meanings.</p><p>Repeated source transfers add usage. Run a refresh when fresh source data is useful, rather than treating it as a harmless display refresh. Ask about a subscription when your recurring volume makes predictable costs preferable.</p>"
+      }
+    ]
+  },
+  {
+    "slug": "fields-and-filters",
+    "title": "Fields, custom fields, and filters",
+    "answer": "Choose only the columns and rows needed for the worksheet’s purpose, while retaining identity and report-required fields. The import preview is the place to check standard fields, available custom fields, ordering, and filter behavior before a data run.",
+    "sections": [
+      {
+        "title": "Keep source identity with the worksheet",
+        "body": "<p>A display name helps people read a report. A source record ID identifies what the row represents. Keep source IDs when updates or future reconciliation are required. Do not replace a known record identity with a convenient name match.</p><p>Preserve object and account context too. A contact ID is not an opportunity ID, and a relationship field is not a substitute for the primary record’s own identity.</p>"
+      },
+      {
+        "title": "Use types rather than guessing",
+        "body": "<p>Numeric custom fields should retain numeric meaning; dates need a clear timezone and range; selection fields need their supported options. Treat a blank as missing information unless the source explicitly defines another meaning.</p><p>The field list distinguishes an empty catalog from missing access and load failures. A failed catalog request should not silently become “no custom fields.” Reconnect or retry while preserving the import draft.</p>"
+      },
+      {
+        "title": "Match filter scope to the question",
+        "body": "<p>Apply record filters before delivery when you need a limited dataset. Within a report, use the supported owner, period, pipeline, or calendar controls. Record-table filters affect the table in their stated scope and should not be mistaken for account-level permissions.</p><p>For date windows, review both the timezone and the metric’s date basis. A payment date and an opportunity-created date describe different events even when both appear in the same monthly dashboard.</p>"
+      },
+      {
+        "title": "Review changes before a new run",
+        "body": "<p>Column order can be changed using the available ordering controls. When fields or filters change, refresh the preview before Save &amp; Run. A stale preview cannot validate the new dataset.</p><p>Import eligibility and outgoing-update eligibility are separate. A field that can be displayed in a worksheet is not automatically writable. Use the reviewed-update guide before planning any edits back to the CRM.</p>"
+      }
+    ]
+  },
+  {
+    "slug": "reviewed-updates",
+    "title": "Review worksheet changes before updating CRM records",
+    "answer": "Eligible updates to existing Contacts and Opportunities require Preview changes, Export Preview, and explicit confirmation. Editing a cell, changing update permission, or reconnecting an account does not automatically send outgoing updates.",
+    "sections": [
+      {
+        "title": "Preserve a valid match",
+        "body": "<p>Use the imported worksheet’s CRM IDs and account context. Keep analysis-only formulas separate from mapped update fields. The service must verify the object, field definition, matching record, and current authorization before an update can be applied.</p><p>The reviewed-update flow does not promise arbitrary record creation, financial actions, message sending, or universal custom-object writeback. Use only the currently documented eligible fields.</p>"
+      },
+      {
+        "title": "Inspect the proposed operation",
+        "body": "<ol><li>Edit the intended supported worksheet values.</li><li>Choose Preview changes.</li><li>Review the matched records and old/new values in Export Preview.</li><li>Resolve invalid cells, mapping issues, conflicts, and missing permissions.</li><li>Confirm Update N rows in CRM for the displayed valid set.</li></ol><p>A zero-change result should return you to the worksheet. It is not a reason to invent an update or bypass validation.</p>"
+      },
+      {
+        "title": "Recover without resending blindly",
+        "body": "<p>A stale review needs a fresh source check. A conflict requires a decision about the actual values. A disconnected account needs reconnection while preserving your draft. None of those conditions authorizes automatic outgoing writes after recovery.</p><p>For partial or uncertain outcomes, reconcile the original operation before another attempt. A retry of the same delivery must retain its operation identity to prevent duplicate effects and duplicate charges.</p>"
+      },
+      {
+        "title": "Confirm actual outcomes",
+        "body": "<p>Inspect the returned per-record results and, where appropriate, verify the changed values in the source. A completed preview is not a completed update. Keep unresolved failures visible rather than reporting the whole batch as successful.</p><p>Public samples cannot perform these operations. Production acceptance must establish provider behavior, current permissions, stale-review checks, and durable results before live use.</p>"
+      }
+    ]
+  },
+  {
+    "slug": "creating-reports",
+    "title": "Create and customize a report",
+    "answer": "Choose a template, supply its relevant inputs in one form, inspect the sample, and create the report worksheet. A report can reuse compatible source imports. Its metrics still depend on the source grain, relationships, date basis, and available history.",
+    "sections": [
+      {
+        "title": "Choose the report for the business question",
+        "body": "<p>Use Leads &amp; Sources for recorded contact origins, Pipeline &amp; Follow-up for current open deals and attention, Sales &amp; Goals for configured targets, and Invoice Aging for current unpaid balances. A report’s name should match the question it answers.</p><p>Explore the public preview before requesting access. The full library contains 25 supported synthetic templates. Workflow Performance is excluded because current workflow definitions do not establish execution history.</p>"
+      },
+      {
+        "title": "Provide only relevant setup inputs",
+        "body": "<p>Period-based reports need an intentional reporting period. Appointment reports need calendar and attendance meanings; stage conversion needs an observation window; forecast movement needs a compatible saved cutoff. Custom Records requires a selected schema and verified association mapping.</p><p>Goals are configured inputs, not assumed benchmarks. A sales total can remain useful without a target, but target attainment must remain unavailable until an appropriate goal exists.</p>"
+      },
+      {
+        "title": "Keep the worksheet relationship stable",
+        "body": "<p>The reviewed prototype delivers reports as workbook worksheets. Edit uses the same report form and saves one draft. Duplicate report creates an independent report worksheet. Rebuilding should preserve worksheet identities and customer formula areas.</p><p>Native Google Sheets delivery remains subject to production acceptance. The public HTML sample demonstrates calculations and arrangements rather than claiming that a workbook has been installed.</p>"
+      },
+      {
+        "title": "Read limitations with the result",
+        "body": "<p>Current open pipeline is a snapshot. Historical conversion needs stage events. Collected cash differs from won opportunity value. A payment sharing a contact with a deal does not prove a direct allocation. Keep these distinctions in the report labels.</p><p>Report calculations using already delivered worksheet data do not create another provider transfer by themselves. A source refresh that delivers records is separately metered by actual successful primary record transfers.</p>"
+      }
+    ]
+  },
+  {
+    "slug": "refresh-schedules",
+    "title": "Refresh schedules and record-transfer usage",
+    "answer": "Choose a refresh cadence based on when your team needs new source data. Manual and scheduled executions that transfer primary records create usage. Updating a chart from data already in the worksheet is a different operation.",
+    "sections": [
+      {
+        "title": "Set a useful cadence",
+        "body": "<p>Start with the decision that needs the report. A weekly planning session and a daily follow-up queue have different freshness requirements. Avoid choosing the fastest cadence simply because it appears in a menu.</p><p>Daily, hourly, and shorter refresh capabilities require their actual production entitlements and acceptance. The sample’s controls illustrate the reporting experience; they do not establish a live scheduling service or an SLA.</p>"
+      },
+      {
+        "title": "Understand what is counted",
+        "body": "<p>Every execution counts its successfully transferred primary records. Repeated transfer of the same contact in a new execution adds another unit. The 250-transfer monthly allowance and volume bands apply to accumulated account usage.</p><p>Supporting lookups and embedded invoice/order line items are bundled with their parent records. A retry of the same delivery operation must not create a duplicate charge. Do not treat a job retry and a fresh scheduled execution as equivalent.</p>"
+      },
+      {
+        "title": "Separate saving from running",
+        "body": "<p>Changing an import’s name, schedule, or update permission uses a settings save. Field and filter edits need a current preview before Save &amp; Run. The interface should show which action actually runs the source data job.</p><p>Pause stops scheduled transfers while retaining existing worksheet values and already accrued usage. A frozen sheet can remain useful, but it should not claim to be current after its schedule is paused.</p>"
+      },
+      {
+        "title": "Plan for higher volumes",
+        "body": "<p>The pricing calculator uses records per execution and executions per month to estimate base usage. The exact rate ladder remains readable outside the calculator. Applicable markup and taxes can change the final amount.</p><p>For frequent large transfers, Talk to Sales about a subscription with more predictable costs. Bring the approximate records per run, frequency, and number of accounts so the discussion reflects the real workload.</p>"
+      }
+    ]
+  },
+  {
+    "slug": "troubleshooting",
+    "title": "Troubleshoot imports, reports, and reviewed updates",
+    "answer": "Start with the exact failing step: connection, source access, import preview, delivery, report calculation, or outgoing update. Preserve the last valid data and unfinished draft. Missing permissions, empty source data, stale reviews, and uncertain writes need different recovery paths.",
+    "sections": [
+      {
+        "title": "Connection or source access is unavailable",
+        "body": "<p>Reconnect the account from the relevant task. Confirm access to both the CRM data and the target spreadsheet. Preserve selected fields, reporting dates, and destination while recovering. A reconnection is not permission to run pending outgoing updates automatically.</p><p>An empty field catalog can mean no available fields, missing access, or a load failure. Keep the distinction visible. The same applies to a zero-row import: first check scope, filters, dates, calendar selection, and the job result.</p>"
+      },
+      {
+        "title": "A report shows unavailable data",
+        "body": "<p>Read the required sources and coverage. Stage conversion needs observed stage entries and exits. Forecast movement needs a saved cutoff with compatible records. Response metrics need sufficiently complete actor and message sequencing. Current records cannot stand in for those histories.</p><p>A missing period should remain unavailable rather than appearing as a zero trend. A partial comparison should not pretend to cover a full prior period. If the report uses a current balance snapshot, changing a period filter does not recreate past balances.</p>"
+      },
+      {
+        "title": "A number differs from another report",
+        "body": "<p>Check the grain, date basis, status exclusions, currency, and source relationships. Won opportunity value is not collected cash. An order line is not a second copy of its header total. One contact can contribute several opportunities.</p><p>Use the public sample’s chart-data disclosure and metric definitions to see what contributes to a result. In a live workbook, verify the actual source rows before changing formulas simply to make two different measures agree.</p>"
+      },
+      {
+        "title": "An outgoing update fails or is uncertain",
+        "body": "<p>Invalid mappings and field types need correction. A stale review needs a new preview. A current-value conflict needs inspection of the source value. A partial result should identify which records succeeded and which did not.</p><p>Do not blindly resend an uncertain operation. Reconcile the original receipt so a retry does not duplicate its effects or charges. Contact support with the operation reference and a redacted description; never send access tokens or unrelated customer data.</p>"
+      }
+    ]
+  }
+]

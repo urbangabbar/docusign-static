@@ -1,0 +1,227 @@
+{
+  "overview": {
+    "purpose": "A working overview for an agency owner reviewing sales outcomes, lead intake, attended appointments, and overdue work together. Use it to decide which underlying report deserves attention next.",
+    "limitation": "The sample combines a sales trend with top-customer ranking. Its operational counters remain separate facts; it does not label won deals as accounting revenue.",
+    "related": [
+      "leads",
+      "pipeline",
+      "cash"
+    ]
+  },
+  "leads": {
+    "purpose": "Understand where recorded leads came from and how many have linked opportunities. This view helps a team inspect attribution coverage before making decisions from a source ranking.",
+    "limitation": "Source labels describe recorded CRM information. Unknown sources remain visible, and linked-opportunity outcomes do not establish advertising ROI.",
+    "related": [
+      "overview",
+      "capture",
+      "pipeline"
+    ]
+  },
+  "pipeline": {
+    "purpose": "Review current open deals, sales progress, and follow-up exceptions in one worksheet. The chart arrangement is intended for a practical pipeline meeting rather than a decorative funnel.",
+    "limitation": "Stage bars are current-state snapshots. Historical stage conversion belongs in a separate history-based report; missing values and missing owners remain inspectable.",
+    "related": [
+      "sales",
+      "stages",
+      "team"
+    ]
+  },
+  "bookings": {
+    "purpose": "Compare appointment outcomes and attendance by calendar. Use the resolved attendance definitions to distinguish a recorded no-show from an appointment whose outcome has not been entered.",
+    "limitation": "Show rate uses resolved attendance outcomes. Confirmed or unresolved appointments do not silently become attended appointments, and recurring occurrences retain their identities.",
+    "related": [
+      "daily",
+      "overview",
+      "leads"
+    ]
+  },
+  "sales": {
+    "purpose": "Compare recorded won sales with goals you actually configured. Use the monthly actual-versus-target columns and current open-pipeline bars for a grounded performance review.",
+    "limitation": "Goals have a period, unit, and currency. A missing or incompatible goal is not a zero target; collected cash is measured by payment reports.",
+    "related": [
+      "team",
+      "pipeline",
+      "payments"
+    ]
+  },
+  "daily": {
+    "purpose": "Start the day with a queue of overdue tasks, upcoming appointments, and deals needing follow-up. The record table is the primary working surface.",
+    "limitation": "This is an as-of operational queue. Generic update timestamps are not task deadlines, and a completed flag is not proof of completion during a historical period.",
+    "related": [
+      "activities",
+      "bookings",
+      "pipeline"
+    ]
+  },
+  "team": {
+    "purpose": "Inspect sales and win-rate rankings by owner alongside owner trends. Four chart panels help explain the difference between who won value and who converted closed deals.",
+    "limitation": "Win rate uses won divided by won plus lost in the qualifying cohort. Abandoned deals remain separate, and unknown ownership is not quietly dropped.",
+    "related": [
+      "sales",
+      "pipeline",
+      "leads"
+    ]
+  },
+  "response": {
+    "purpose": "Inspect first verified human response, unanswered inquiries, and actor-classification coverage. This report helps teams see when a response metric is not sufficiently supported.",
+    "limitation": "Bot and unknown outbound actors are not silently counted as human replies. Complete episode sequencing and validated actor classification are required for real results.",
+    "related": [
+      "conversations",
+      "messages",
+      "daily"
+    ]
+  },
+  "cash": {
+    "purpose": "Bring successful collections and current overdue invoices into the same operating view while keeping their meanings separate. Use the invoice register for collection follow-up.",
+    "limitation": "Gross live collections are not recognized revenue. Current overdue balances are snapshots, and a shared contact does not allocate a payment to a deal.",
+    "related": [
+      "payments",
+      "receivables",
+      "customer-payments"
+    ]
+  },
+  "stages": {
+    "purpose": "Inspect observed conversion and completed time in stage to find supported bottlenecks. Compare median dwell with its P90 marker instead of relying on current stage counts.",
+    "limitation": "Only observed stage history can support this report. Pending observation windows, skipped stages, and repeat visits need explicit rules; current status alone is insufficient.",
+    "related": [
+      "pipeline",
+      "forecast",
+      "team"
+    ]
+  },
+  "forecast": {
+    "purpose": "Review weighted opportunities and movement since a selected saved cutoff. This report makes configured probabilities and snapshot availability visible.",
+    "limitation": "Weighted pipeline needs explicit probabilities and eligible close dates. Snapshot movement requires compatible saved coverage and is not a promise of forecast accuracy.",
+    "related": [
+      "pipeline",
+      "sales",
+      "stages"
+    ]
+  },
+  "payments": {
+    "purpose": "Analyze successful payment collections, transaction counts, and payment types. Use this view when the decision concerns money collected rather than deals marked won.",
+    "limitation": "Test, failed, and other-currency transactions are separated from the displayed sum. Gross collections and current refunded totals must not be confused with accounting revenue.",
+    "related": [
+      "cash",
+      "customer-payments",
+      "receivables"
+    ]
+  },
+  "receivables": {
+    "purpose": "Work an invoice-aging register of outstanding balances, from not-yet-due invoices to the oldest overdue bucket. This is a table-first report for collection work.",
+    "limitation": "Balances describe the latest snapshot. Historical balance trends require actual snapshots; the sample does not invent a line chart from today’s balances.",
+    "related": [
+      "cash",
+      "invoice-items",
+      "customer-payments"
+    ]
+  },
+  "invoice-items": {
+    "purpose": "Inspect invoice line amounts, quantities, and customer detail at invoice-line grain. Use this when header totals are too coarse for the question.",
+    "limitation": "Do not repeat the invoice header total on every line when calculating a sum. Embedded lines are bundled with the parent invoice under the planned transfer-counting rules.",
+    "related": [
+      "receivables",
+      "payments",
+      "products"
+    ]
+  },
+  "subscriptions": {
+    "purpose": "Review the current subscription mix, normalized recurring amounts, and billing-interval coverage. Use it to see which interval assumptions are supported.",
+    "limitation": "A current cancelled status does not reveal the date of churn. Unknown billing intervals are excluded from normalization rather than guessed.",
+    "related": [
+      "subscription-changes",
+      "customer-payments",
+      "payments"
+    ]
+  },
+  "subscription-changes": {
+    "purpose": "Inspect recorded new, expansion, contraction, and churn events in a recurring-revenue waterfall. Each movement needs a real effective-dated event.",
+    "limitation": "The sample includes an invented event ledger. Live reporting requires accepted lifecycle history; current subscription flags cannot substitute for it.",
+    "related": [
+      "subscriptions",
+      "forecast",
+      "payments"
+    ]
+  },
+  "orders": {
+    "purpose": "Review completed order value, order count, average order value, and pending orders. Keep the order header as the primary counting grain.",
+    "limitation": "Order value is not collected cash. Status and currency matter, and this report does not claim traffic conversion or gross margin without additional sources.",
+    "related": [
+      "products",
+      "payments",
+      "customer-payments"
+    ]
+  },
+  "products": {
+    "purpose": "Inspect sold quantities and recorded sale-time product-line amounts. Missing catalog entries retain the labels recorded with the sale so historical lines remain readable.",
+    "limitation": "Product-line amounts are distinct from order-header totals. No store visits, advertising return, or profit is inferred from the current product and order sources.",
+    "related": [
+      "orders",
+      "invoice-items",
+      "payments"
+    ]
+  },
+  "conversations": {
+    "purpose": "Review new conversations, assignment, and currently unread workload. Use the assignee breakdown to see how the sampled conversation volume is distributed.",
+    "limitation": "Unread is a current flag, not an open/closed lifecycle. Conversation totals differ from the number of individual messages within those conversations.",
+    "related": [
+      "messages",
+      "response",
+      "activities"
+    ]
+  },
+  "messages": {
+    "purpose": "Inspect inbound and outbound message activity by date and channel. Keep verified human, automated, and unknown actors distinguishable.",
+    "limitation": "The preview uses message metadata. It does not establish live email-body export, call recordings, transcripts, or complete response-time sequencing.",
+    "related": [
+      "conversations",
+      "response",
+      "capture"
+    ]
+  },
+  "capture": {
+    "purpose": "Review form and survey submissions, unique known contacts, and linked-opportunity coverage. Repeated responses remain separate submissions without becoming new contacts.",
+    "limitation": "Submission volume does not establish visitor-to-lead conversion. Form and survey identities stay distinct, and missing contact matches remain visible.",
+    "related": [
+      "leads",
+      "conversations",
+      "overview"
+    ]
+  },
+  "customer-payments": {
+    "purpose": "Inspect customer collections beside current balances after aggregating each financial source at its own grain. Use the customer table to explain contributing records.",
+    "limitation": "A contact can have multiple payments and invoices. Joining first can multiply amounts; a customer match alone cannot allocate a payment to an opportunity.",
+    "related": [
+      "payments",
+      "receivables",
+      "cash"
+    ]
+  },
+  "businesses": {
+    "purpose": "Review business-linked contacts and the opportunities connected through those contacts. This account view highlights the difference between a known relationship and a familiar company name.",
+    "limitation": "Business links use explicit source relationships. Company-name similarity is not treated as a validated association, and unlinked records remain disclosed.",
+    "related": [
+      "leads",
+      "customer-payments",
+      "custom-records"
+    ]
+  },
+  "activities": {
+    "purpose": "Inspect current task completion, overdue work, and dated note counts. This view helps a team understand workload without inventing a productivity score.",
+    "limitation": "A current completed flag is not a dated completion event. Notes are counted by their recorded dates; no note bodies or unsupported employee rankings are exposed.",
+    "related": [
+      "daily",
+      "team",
+      "conversations"
+    ]
+  },
+  "custom-records": {
+    "purpose": "Explore a mapped Jobs example with status and customer-association coverage. The sample shows how a custom-schema report should make its required mapping explicit.",
+    "limitation": "The invented Jobs schema is not universal custom-object support. Production needs a selected schema, accepted source fields, and verified customer associations.",
+    "related": [
+      "businesses",
+      "activities",
+      "overview"
+    ]
+  }
+}

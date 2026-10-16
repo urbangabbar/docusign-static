@@ -1,0 +1,39 @@
+{
+  "status": "Planned early-access base rates",
+  "currency": "USD",
+  "unit": "Successfully transferred primary record per execution",
+  "includedTransfers": 250,
+  "allowancePeriod": "calendar month, UTC",
+  "volumeScope": "connected account per calendar month",
+  "bands": [
+    {
+      "transfers": 1000,
+      "rateMicrousd": 15000
+    },
+    {
+      "transfers": 1000,
+      "rateMicrousd": 12000
+    },
+    {
+      "transfers": 3000,
+      "rateMicrousd": 9000
+    },
+    {
+      "transfers": 25000,
+      "rateMicrousd": 7500
+    },
+    {
+      "transfers": null,
+      "rateMicrousd": 4500
+    }
+  ],
+  "countingRules": [
+    "Each execution counts its successfully transferred primary records. Transferring the same record in another execution adds usage again.",
+    "Retries of the same delivery operation must not create duplicate charges.",
+    "Supporting lookups and embedded invoice or order line items are bundled with their primary records.",
+    "Refreshing a report from already delivered worksheet data is not another provider record transfer. A source refresh that transfers records adds usage.",
+    "Applicable account markup and tax can change the final charge.",
+    "High-volume teams can discuss a custom subscription with more predictable costs."
+  ],
+  "billingStatus": "The website explains planned rates and estimates; it does not activate billing."
+}

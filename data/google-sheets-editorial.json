@@ -1,0 +1,532 @@
+[
+  {
+    "slug": "connect-gohighlevel-google-sheets",
+    "title": "How to connect GoHighLevel to Google Sheets: methods and tradeoffs",
+    "description": "Choose a GoHighLevel Google Sheets connection for a one-time export, workflow rows, recurring reports, or reviewed updates.",
+    "intent": "Commercial investigation",
+    "keyword": "how to connect GoHighLevel to Google Sheets",
+    "answer": "You can connect GoHighLevel and Google Sheets through a CSV file, native workflow actions, or a dedicated spreadsheet integration. Choose according to the job: moving a list once, reacting to an event, or maintaining a reporting dataset. LC Bridge is preparing an early-access integration for scheduled imports, report templates, and reviewed CRM updates.",
+    "sections": [
+      {
+        "title": "Choose the direction before the tool",
+        "body": "<p>“Connect” can mean three different things. You might want CRM records in a sheet, new spreadsheet rows in the CRM, or edits to existing CRM records. Write that direction down first. A tool that appends a row after a form submission does not automatically provide an existing customer list or a clean update path back to the original record.</p><p>Also decide whether you need the current state or an event history. Today’s opportunity stage cannot reveal every stage a deal passed through last month. A connector cannot recover history that its source never supplied.</p>"
+      },
+      {
+        "title": "Match the method to the actual job",
+        "body": "<div class=\"table-scroll\"><table><caption>Three connection approaches</caption><thead><tr><th>Approach</th><th>Useful for</th><th>Work you still own</th></tr></thead><tbody><tr><td>CSV</td><td>A one-time list or migration</td><td>Repeat exports, cleanup, and matching</td></tr><tr><td>Native workflow actions</td><td>Spreadsheet changes triggered by an event</td><td>Workflow design and row lookup rules</td></tr><tr><td>Dedicated spreadsheet integration</td><td>Repeatable datasets and reporting</td><td>Scope, field mapping, refreshes, and permissions</td></tr></tbody></table></div><p>HighLevel’s native Sheets actions can create, find, update, and clear spreadsheet rows. That is a useful option for event-driven workflows. Compare those capabilities against your requirements before adding another tool.</p>"
+      },
+      {
+        "title": "Start with a small, identifiable dataset",
+        "body": "<p>Use a representative selection of contacts or opportunities. Keep the CRM record ID, owner, source fields, and a relevant date. A recognizable name is useful to a human; a stable ID is what makes a future refresh or update unambiguous.</p><p>Check a few records against the source. Include an unassigned record, an empty custom field, and a record outside your main pipeline. Those cases expose assumptions that a tidy demonstration can hide.</p>"
+      },
+      {
+        "title": "Decide how refreshes should behave",
+        "body": "<p>A recurring import should have an intentional schedule and a clear destination. Choose a frequency based on how often somebody makes a decision from the report. A weekly meeting does not necessarily need a refresh every few minutes.</p><p>With LC Bridge’s planned usage model, each execution counts the primary records it transfers. Frequent transfers of the same records create additional usage. Use the pricing calculator to explore frequency, and discuss a subscription if your team needs predictable high-volume costs.</p>"
+      },
+      {
+        "title": "A concrete agency example",
+        "body": "<p>Imagine an agency that needs a Monday pipeline review, a new-lead notification, and a one-time list migration. Those are three jobs, even if all three involve a spreadsheet. Use the same test records when evaluating methods so you compare outcomes rather than screenshots.</p><div class=\"table-scroll\"><table><caption>Illustrative agency workflow decisions</caption><thead><tr><th>Job</th><th>Reasonable starting method</th><th>Acceptance check</th></tr></thead><tbody><tr><td>Monday pipeline meeting</td><td>Saved CRM import and report</td><td>The right deals, owner and date scope</td></tr><tr><td>Append a newly captured lead</td><td>Native workflow row action</td><td>One intended row for one event</td></tr><tr><td>Move a historical list once</td><td>Native CSV workflow</td><td>Accepted rows and reliable matching</td></tr></tbody></table></div><p>These are examples of fit, not a universal ranking. A narrow native workflow can be the right choice even when a reporting integration is useful elsewhere.</p>"
+      },
+      {
+        "title": "Explore the reporting result before requesting access",
+        "body": "<p>The LC Bridge sample library lets you inspect 25 report designs without connecting an account. Try Pipeline &amp; Follow-up for open deals, Invoice Aging for outstanding balances, or Leads &amp; Sources for recorded lead origins. The samples use invented data and are not connected to your CRM.</p><p>The early-access product is designed to bring selected data into Sheets and require an explicit preview before eligible contact or opportunity changes go back to the CRM. Join the existing waitlist when that approach fits the job you have identified.</p>"
+      }
+    ],
+    "related": [
+      "pipeline",
+      "leads",
+      "receivables"
+    ],
+    "sources": [
+      {
+        "title": "HighLevel: Google Sheets workflow actions",
+        "url": "https://help.gohighlevel.com/support/solutions/articles/48001238162"
+      }
+    ]
+  },
+  {
+    "slug": "export-gohighlevel-contacts-google-sheets",
+    "title": "Export GoHighLevel contacts to Google Sheets",
+    "description": "Move GoHighLevel contacts into Google Sheets with a native CSV export, then plan fields, identity, cleanup, and recurring reporting.",
+    "intent": "Informational",
+    "keyword": "export GoHighLevel contacts to Google Sheets",
+    "answer": "For a one-time contact export, use GoHighLevel’s native CSV export and open the resulting file in Google Sheets. Keep contact IDs and check column types before analysis. If you need the same filtered dataset repeatedly, use a scheduled connection rather than rebuilding a manual export each time.",
+    "sections": [
+      {
+        "title": "Export the list you actually need",
+        "body": "<p>In Contacts, narrow the list to the audience you intend to analyze, select the export action, and follow the export job through Bulk Actions. Download the completed CSV and import it into a new Google Sheet. Current HighLevel exports run as background jobs, so the download may not appear immediately.</p><p>Keep the initial file as a dated reference. Make your reporting edits in a separate tab. That gives you a way to check whether a surprising value came from the source, the import, or a spreadsheet formula.</p>"
+      },
+      {
+        "title": "Keep identity and meaning in separate columns",
+        "body": "<p>Retain Contact ID even if you hide it during a presentation. Names, email addresses, and company names can change; two customers can also share a name. A source ID gives your rows a stable relationship with CRM records.</p><p>Keep the original source, owner, created date, and selected custom fields alongside the ID. Use separate columns for calculated segments. Replacing a source value with your own shorthand can make the next export much harder to reconcile.</p>"
+      },
+      {
+        "title": "Check how Sheets interprets values",
+        "body": "<p>Phone numbers are identifiers, not quantities. Preserve international prefixes and leading zeros. Inspect dates using the intended timezone, and check whether an empty field stayed empty. Avoid replacing every blank with zero: an absent score and a measured score of zero mean different things.</p><p>Before applying a formula to thousands of rows, test it on a few cases. Include a blank owner and a contact with an unfamiliar source label. Keep the source export available while you inspect the result.</p>"
+      },
+      {
+        "title": "Build a source report without inventing attribution",
+        "body": "<p>The Leads &amp; Sources sample counts the selected contact cohort, recorded sources, and linked opportunities. It also keeps unknown source values visible. This is more useful than quietly removing the contacts that do not fit your expected attribution categories.</p><p>A contact’s recorded source does not establish advertising return. You would also need compatible spend data and an explicit attribution method. Treat downstream won opportunity totals as opportunity facts, not as proof that every contact from that source converted.</p>"
+      },
+      {
+        "title": "Example: preserve a contact’s identity through cleanup",
+        "body": "<p>Use a small inspection tab before changing the reporting format. The following invented rows illustrate why normalization belongs beside the source value.</p><div class=\"table-scroll\"><table><caption>Synthetic contact inspection tab</caption><thead><tr><th>Contact ID</th><th>Source phone</th><th>Source owner</th><th>Reporting segment</th></tr></thead><tbody><tr><td>contact-example-01</td><td>+1 202 555 0101</td><td>Alex Morgan</td><td>Assigned</td></tr><tr><td>contact-example-02</td><td>Blank</td><td>Unassigned</td><td>Needs review</td></tr></tbody></table></div><p>The segment is your calculation. The ID, phone and owner remain recognizable source facts. If you later receive a fresh export, reconcile by ID before interpreting a new row as a new customer. A changed owner should update your analysis, not create a second contact row.</p>"
+      },
+      {
+        "title": "Replace repeated file work with an intentional import",
+        "body": "<p>A CSV is often enough for one meeting. It becomes maintenance work when the same report needs another export every day. LC Bridge’s early-access workflow is designed around selecting fields, previewing rows, and saving the import to a worksheet with a refresh schedule.</p><p>Every source transfer adds usage under the planned pricing model. Narrow the source to useful records and choose the refresh frequency deliberately. Explore the sample report first, then use the waitlist to request access to the connected workflow.</p>"
+      }
+    ],
+    "related": [
+      "leads",
+      "overview",
+      "businesses"
+    ],
+    "sources": [
+      {
+        "title": "HighLevel: export contacts as CSV",
+        "url": "https://help.gohighlevel.com/support/solutions/articles/48001238482-how-to-export-contacts-to-a-csv-in-highlevel"
+      }
+    ]
+  },
+  {
+    "slug": "import-google-sheets-contacts-gohighlevel",
+    "title": "Import contacts from Google Sheets into GoHighLevel",
+    "description": "Prepare a Google Sheets contact list for native CSV import into GoHighLevel, including mapping, identity, duplicates, and verification.",
+    "intent": "Informational",
+    "keyword": "import Google Sheets contacts into GoHighLevel",
+    "answer": "To create contacts from a Google Sheet, prepare the worksheet, download that tab as CSV, and use GoHighLevel’s native contact import. Decide whether the import should create records, update records, or do both. LC Bridge’s reviewed-update preview is a separate workflow for matching existing CRM records.",
+    "sections": [
+      {
+        "title": "Decide whether you are creating or updating",
+        "body": "<p>A list of new leads and a list of corrections to existing customers should not be treated as the same operation. Mark which outcome you intend before uploading anything. For an existing-record update, keep the CRM record ID wherever you already have it.</p><p>If your spreadsheet has no reliable relationship to the target account, resolve that first. A name that looks familiar is not sufficient evidence that two rows refer to the same person. Keep an untouched copy of the original sheet while preparing the import.</p>"
+      },
+      {
+        "title": "Prepare one clean import tab",
+        "body": "<p>Use one row of column headers and one row per intended contact. Remove presentation totals, merged headings, commentary rows, and duplicate copies. Give each selected custom field its own column. Review phone formatting, email spelling, date interpretation, and empty values before exporting the tab.</p><p>Google Sheets workbooks can contain several tabs, but the native contact import accepts a CSV file. Export only the intended tab. Check that your chosen account has the custom fields you want to populate before mapping the file.</p>"
+      },
+      {
+        "title": "Run the native CSV workflow",
+        "body": "<ol><li>Download the prepared tab as a CSV file.</li><li>Open GoHighLevel’s contact import and select the intended record types and create/update behavior.</li><li>Upload the file and map its columns.</li><li>Review matching and empty-value settings.</li><li>Confirm the import and inspect the job’s results and errors.</li></ol><p>Use the provider’s current import guide for account permissions and file limits. Do not assume a successful file upload means that every row was accepted.</p>"
+      },
+      {
+        "title": "Inspect outcomes at record level",
+        "body": "<p>Check a small set of accepted records in the CRM, not just the job’s summary count. Confirm that values landed on the intended fields and that blank cells did not erase values you meant to preserve. Keep any error output and resolve the cause before trying the same rows again.</p><p>Re-running an import is another operation. Know which rows were already created or updated before retrying. This matters especially when a spreadsheet mixes new contacts with corrections to existing records.</p>"
+      },
+      {
+        "title": "Example: split a mixed preparation sheet",
+        "body": "<p>Suppose a tab contains 40 new leads and 10 corrections to existing customers. Treat them as two intentional groups while preparing the file. New leads need the agreed matching strategy; corrections should retain the target account’s existing IDs whenever available.</p><p>For a correction, write a small expected-outcome checklist: contact-example-01 should keep its current email, receive the intended owner change, and retain an untouched custom field. After the job, inspect that exact record and compare those outcomes. An aggregate count of 50 processed rows cannot establish that every field changed correctly.</p><p>These IDs are invented. Do not paste them into a real import. The useful artifact is the checklist: target record, proposed fields, expected unchanged fields, and the result that the provider actually accepted.</p>"
+      },
+      {
+        "title": "Use reviewed updates for an established worksheet relationship",
+        "body": "<p>LC Bridge’s sample journey starts with records already associated with their CRM IDs. You edit eligible worksheet fields, open Preview changes, inspect Export Preview, and explicitly confirm the proposed updates. The website does not promise general new-contact creation through that reviewed-update journey.</p><p>For new contacts, the native CSV workflow remains a useful method. For recurring analysis and controlled edits to an existing dataset, inspect the LC Bridge previews and request early access. Keeping the two jobs distinct makes both workflows easier to verify.</p>"
+      }
+    ],
+    "related": [
+      "leads",
+      "businesses"
+    ],
+    "sources": [
+      {
+        "title": "HighLevel: importing contacts using CSV",
+        "url": "https://help.gohighlevel.com/support/solutions/articles/155000004432"
+      }
+    ]
+  },
+  {
+    "slug": "export-gohighlevel-opportunities-google-sheets",
+    "title": "Export GoHighLevel opportunities to Google Sheets",
+    "description": "Plan a GoHighLevel opportunity export with stable IDs, pipeline fields, status dates, currency, and honest dashboard definitions.",
+    "intent": "Informational",
+    "keyword": "export GoHighLevel opportunities to Google Sheets",
+    "answer": "For a one-time export, open the relevant GoHighLevel Opportunity Smart List, use its menu to export a CSV, and open that file in Google Sheets. Preserve one row per deal and its CRM ID. For recurring reporting, LC Bridge’s early-access import is designed to save the dataset, fields, filters, and refresh schedule.",
+    "sections": [
+      {
+        "title": "Export a native opportunity list as CSV",
+        "body": "<p>Open the Opportunity Smart List that contains the deals you want to analyze. Review its current scope, then use the top-right menu beside Add Opportunity and choose Export. HighLevel documents this as a CSV export of the records returned by that list’s current setup. Import the completed file into a new Google Sheet.</p><p>Before calculating totals, inspect the file’s actual columns and a few source records. Keep an untouched copy and note which account, list, filters, and date produced it. A saved list can standardize the view, while each manually downloaded file remains a separate reporting snapshot.</p>"
+      },
+      {
+        "title": "An opportunity is not a contact",
+        "body": "<p>One customer can have several opportunities. If a spreadsheet collapses deals to one row per contact, it can discard genuine sales activity. If it joins every opportunity to every payment for the same contact, it can instead repeat amounts and inflate totals.</p><p>Choose opportunity ID as the primary grain for a pipeline export. Carry contact ID as a relationship field. Keep an opportunity title for readability, but do not use the title as the matching key for future updates.</p>"
+      },
+      {
+        "title": "Bring enough fields to explain a deal",
+        "body": "<p>A useful working set includes the opportunity ID, title, pipeline, stage, status, owner, value, currency, created date, and qualifying status date. Add selected custom fields when your team uses them to make a decision. Preserve missing owners and missing values explicitly.</p><p>Separate fields that describe the current record from fields that describe an observed event. The current stage says where a deal is now. A stage-entry timestamp describes a particular transition only when the source provides that meaning.</p>"
+      },
+      {
+        "title": "Use the pipeline sample to inspect the result",
+        "body": "<p>Pipeline &amp; Follow-up combines current open-stage bars, sales-versus-target progress, monthly sales metrics, and deal details. Current open pipeline is an as-of view. The chart should not pretend that today’s open-stage mix was the stage distribution on every earlier day.</p><p>Switch the sample owner filter and compare the summary with its supporting records. This is a quick way to see why a useful export needs identity, ownership, dates, and currency rather than a list of deal amounts alone.</p>"
+      },
+      {
+        "title": "Handle different currencies deliberately",
+        "body": "<p>A USD pipeline total should not silently add EUR opportunities. Keep the currency on each deal and explain exclusions from the displayed sum. Convert amounts only when you have a chosen conversion method, exchange-rate source, and date basis.</p><p>Also keep a missing value different from a zero-value deal. A zero can be a valid recorded amount. A missing amount is a data-quality issue that a dashboard should surface rather than hide.</p>"
+      },
+      {
+        "title": "Example: one contact, two opportunities",
+        "body": "<p>An invented customer has a $1,200 service opportunity and a $300 renewal opportunity. A contact-level export can show one customer while a deal-level export correctly contains two rows. Grouping by contact before checking the deal grain can hide the renewal or combine two different pipeline stages.</p><div class=\"table-scroll\"><table><caption>Synthetic deal-grain example</caption><thead><tr><th>Opportunity ID</th><th>Contact ID</th><th>Current stage</th><th>Value</th></tr></thead><tbody><tr><td>opp-example-service</td><td>contact-example-01</td><td>Proposal</td><td>$1,200</td></tr><tr><td>opp-example-renewal</td><td>contact-example-01</td><td>Qualified</td><td>$300</td></tr></tbody></table></div><p>The combined open value is $1,500 only if both records meet your status, currency and scope rules. Neither row establishes when a prior stage transition occurred.</p>"
+      },
+      {
+        "title": "Separate reporting from CRM changes",
+        "body": "<p>Reading opportunity data into a worksheet does not authorize changes back to the CRM. LC Bridge’s reviewed-update design requires a matching existing record, eligible fields, a fresh preview, and explicit confirmation.</p><p>The public sample does not connect to an account or write anything. Use it to evaluate the report arrangement. For the planned connected workflow, request early access and choose refresh frequency with per-transfer usage in mind.</p>"
+      }
+    ],
+    "related": [
+      "pipeline",
+      "sales",
+      "team",
+      "stages"
+    ],
+    "sources": [
+      {
+        "title": "HighLevel: update an opportunity",
+        "url": "https://marketplace.gohighlevel.com/docs/ghl/opportunities/update-opportunity/index.html"
+      },
+      {
+        "title": "HighLevel: Opportunity Smart Lists and CSV export",
+        "url": "https://help.gohighlevel.com/support/solutions/articles/155000007734-smart-lists-in-opportunities"
+      }
+    ]
+  },
+  {
+    "slug": "bulk-update-gohighlevel-contacts-google-sheets",
+    "title": "Bulk update GoHighLevel contacts from Google Sheets",
+    "description": "Review a controlled workflow for editing existing GoHighLevel contacts from a spreadsheet, with record IDs, field mapping, and change previews.",
+    "intent": "Informational",
+    "keyword": "bulk update GoHighLevel contacts from Google Sheets",
+    "answer": "Bulk contact edits need a reliable match to existing records and an explicit review of what will change. LC Bridge’s early-access design keeps CRM IDs with the imported worksheet, previews eligible edits, and requires confirmation before applying them. Editing a cell alone does not trigger an outgoing update.",
+    "sections": [
+      {
+        "title": "Keep the imported record identity intact",
+        "body": "<p>The most important column in an update worksheet may be the one nobody reads in a meeting: Contact ID. It tells the update process which source record the row represents. A contact name or email can help you inspect a row, but it should not silently replace a known CRM ID.</p><p>Do not paste a different account’s rows into the same mapped worksheet. An ID is meaningful within its authorized source context. Keep your account, object type, and record relationship together throughout the workflow.</p>"
+      },
+      {
+        "title": "Change a small, supported set of fields",
+        "body": "<p>Start with a specific operational task, such as correcting phone numbers or assigning an eligible owner field. Keep calculated analysis in separate columns. An arbitrary formula result should not become a CRM update simply because it appears beside imported data.</p><p>Field support depends on the object and current mapping. Check the documented eligible fields, field types, and permissions. Custom-field reporting support does not automatically mean every custom field is writable through the reviewed-update journey.</p>"
+      },
+      {
+        "title": "Read the change preview as a proposed operation",
+        "body": "<ol><li>Open the imported worksheet and edit the intended cells.</li><li>Choose Preview changes.</li><li>Inspect the matching records, fields, old values, and proposed values in Export Preview.</li><li>Resolve invalid mappings, stale records, or permission issues.</li><li>Explicitly confirm the displayed update count.</li></ol><p>If there are no valid changes, return to the worksheet. A preview should explain what is ready and what needs attention before you commit anything.</p>"
+      },
+      {
+        "title": "Treat conflicts and uncertain outcomes differently",
+        "body": "<p>A conflict means the source no longer matches the state used for review. Inspect the new source value before deciding which version should win. Reconnecting an account does not make an old preview safe to apply automatically.</p><p>An uncertain result needs reconciliation. Repeating an operation because its response was lost can create another effect if the service does not identify the original operation. Production delivery must distinguish a new execution from a retry of the same execution.</p>"
+      },
+      {
+        "title": "Example: a blank cell is a decision",
+        "body": "<p>Consider an invented contact whose CRM owner is Alex Morgan. The worksheet owner cell is blank after somebody clears a range. That could mean “remove the owner,” “leave the source unchanged,” or simply “the editor made a mistake.” A bulk update needs an explicit interpretation before it can be considered safe.</p><p>In a review, inspect the target record, field, original value and proposed replacement. Exclude the row if the meaning is unclear. If another teammate changed the CRM owner after the import, resolve the fresh source state before confirming an old worksheet proposal.</p><p>This is why a larger selected-row count is not automatically a better operation. A smaller batch with verified intent makes its result easier to inspect and recover.</p>"
+      },
+      {
+        "title": "Know which action creates usage",
+        "body": "<p>Opening a sample or inspecting a proposed change is not a record transfer. Under the planned LC Bridge rates, the successfully transferred primary records in an execution create usage. A later execution transferring the same contacts creates usage again.</p><p>Review the data catalog and product documentation before requesting early access. If regular large updates are part of your operations, Talk to Sales about a subscription shaped around your expected usage.</p>"
+      }
+    ],
+    "related": [
+      "leads",
+      "businesses"
+    ],
+    "sources": [
+      {
+        "title": "HighLevel: update a contact",
+        "url": "https://marketplace.gohighlevel.com/docs/ghl/contacts/update-contact/index.html"
+      }
+    ]
+  },
+  {
+    "slug": "update-gohighlevel-opportunity-stages-google-sheets",
+    "title": "Update GoHighLevel opportunity stages from Google Sheets",
+    "description": "Understand reviewed opportunity-stage edits from a spreadsheet, including pipeline compatibility, CRM IDs, permissions, and stale previews.",
+    "intent": "Informational",
+    "keyword": "update GoHighLevel opportunity stages Google Sheets",
+    "answer": "Opportunity-stage updates should target an existing deal by CRM ID and use a stage that belongs to the correct pipeline. LC Bridge’s early-access design previews eligible worksheet edits before an explicit update action. A spreadsheet stage label by itself is not enough to authorize or identify the change.",
+    "sections": [
+      {
+        "title": "Keep pipeline and stage together",
+        "body": "<p>Two pipelines can have stages with the same display label. A row that says “Qualified” is therefore not a complete mapping. Keep the source pipeline context and verified stage identity with the opportunity.</p><p>Make sure you are editing an opportunity rather than a contact record. One contact may have several deals. Moving the wrong deal can make a clean-looking worksheet produce the wrong operational result.</p>"
+      },
+      {
+        "title": "Start with an explicit business operation",
+        "body": "<p>Choose a bounded task: move a reviewed set of existing deals into the next supported stage, correct ownership, or update recorded value. Avoid making broad edits simply because the spreadsheet makes thousands of cells easy to select.</p><p>In the worksheet, retain the original opportunity IDs and keep analysis-only columns separate. If a mapping needs attention, resolve it in the update preview instead of assuming that text labels will be accepted as provider IDs.</p>"
+      },
+      {
+        "title": "Preview the exact affected deals",
+        "body": "<p>The planned journey is Worksheet → Preview changes → Export Preview → Update the displayed number of rows in CRM. Check the opportunity title, matching ID, field, old value, and proposed value. An invalid stage, inaccessible record, or changed permission should be resolved before confirmation.</p><p>A preview describes the proposed updates at a point in time. If the source has changed, refresh the review. Merely enabling update permission or reconnecting the account must not send pending edits.</p>"
+      },
+      {
+        "title": "Check the reporting consequences",
+        "body": "<p>Changing a current stage changes the open pipeline view. It does not manufacture a historical stage-entry event. Stage conversion and completed time in stage need observed transitions and an explicit observation window.</p><p>Similarly, changing a deal’s status or value can affect sales reporting according to the report’s chosen date basis. Read the metric definition before assuming that a revised total represents collected revenue or a historical audit log.</p>"
+      },
+      {
+        "title": "Example: the same stage name in two pipelines",
+        "body": "<p>Suppose both “Services” and “Renewals” contain a stage called “Proposal.” An opportunity in Services must reference the eligible stage for Services. Reusing a display label from another pipeline does not establish the correct destination.</p><div class=\"table-scroll\"><table><caption>Synthetic stage review</caption><thead><tr><th>Target</th><th>Current</th><th>Proposed</th><th>Review</th></tr></thead><tbody><tr><td>opp-example-service</td><td>Services / Qualified</td><td>Services / Proposal</td><td>Verify stage identity and current source</td></tr><tr><td>opp-example-renewal</td><td>Renewals / Qualified</td><td>Services / Proposal</td><td>Stop and resolve the pipeline mismatch</td></tr></tbody></table></div><p>A confirmed stage change is a business action. Record which operation was accepted before trying the affected rows again.</p>"
+      },
+      {
+        "title": "Inspect results before running another batch",
+        "body": "<p>After an actual update, review the outcome for each affected record. Handle a validation failure separately from a request whose result is uncertain. The latter needs a check against the source or original operation receipt before another attempt.</p><p>The open sample dashboards let you evaluate pipeline and team views without making CRM changes. The connected update flow remains an early-access capability with provider acceptance required before live use.</p>"
+      }
+    ],
+    "related": [
+      "pipeline",
+      "stages",
+      "team"
+    ],
+    "sources": [
+      {
+        "title": "HighLevel: update an opportunity",
+        "url": "https://marketplace.gohighlevel.com/docs/ghl/opportunities/update-opportunity/index.html"
+      }
+    ]
+  },
+  {
+    "slug": "schedule-gohighlevel-exports-google-sheets",
+    "title": "Schedule GoHighLevel data exports to Google Sheets",
+    "description": "Choose a useful refresh cadence for GoHighLevel reporting, scope the transferred records, and understand per-execution usage.",
+    "intent": "Informational",
+    "keyword": "schedule GoHighLevel exports to Google Sheets",
+    "answer": "A scheduled export should refresh the records your team needs at the frequency its decisions require. LC Bridge’s early-access workflow is designed to save an import’s fields, filters, destination, and schedule. Each execution that transfers primary CRM records adds usage, including repeat transfers of the same records.",
+    "sections": [
+      {
+        "title": "Choose freshness from the reporting decision",
+        "body": "<p>A daily operating review, a weekly client meeting, and a live sales handoff have different freshness needs. Start by writing down who reads the sheet and when. Then choose the least frequent schedule that still supports that work.</p><p>“Always current” is not a precise requirement. Specify the expected refresh interval and make the last successful transfer visible. A report viewed at noon should not look like a noon snapshot if its source last refreshed the previous evening.</p>"
+      },
+      {
+        "title": "Scope the data before scheduling it",
+        "body": "<p>A smaller relevant dataset is usually easier to inspect than an account-wide export. Select the objects, fields, and filters that answer the question. For appointments, use an intentional calendar and date window. For opportunities, preserve pipeline and owner context.</p><p>A filtered import is not an access-control boundary once data is in a shared workbook. Check who can open the destination sheet and whether the selected records belong there. Share the report with the same care you would share its underlying rows.</p>"
+      },
+      {
+        "title": "Understand execution-based usage",
+        "body": "<p>Repeated delivery of an existing record is still a transfer. If a job transfers 100 contacts on three executions, it produces 300 record transfers. This is a counting example, not a subscription price or a promise that every import uses full refreshes.</p><p>Refreshing a chart from data already in the worksheet is different from fetching source records again. The pricing page separates those actions and lets you explore records per execution and execution frequency. High-volume recurring work can be discussed as a custom subscription.</p>"
+      },
+      {
+        "title": "Keep configuration changes separate from data jobs",
+        "body": "<p>Renaming an import or saving a schedule should not be confused with running a source transfer. In the reviewed prototype, settings-only saves are separate from a run; field or filter edits require a current preview before Save &amp; Run.</p><p>That distinction makes maintenance more predictable. It also prevents a harmless settings change from looking like a data refresh. Check the import’s actual last-run result rather than assuming that every Save button means fresh worksheet values.</p>"
+      },
+      {
+        "title": "Example: choose the refresh that answers the question",
+        "body": "<p>A team reviews 400 relevant opportunities on four weekly reporting runs. If each execution successfully transfers all 400 records, that workload creates 1,600 record transfers. Running the same 400-record import every day for 30 days creates 12,000 transfers. Reusing the same source IDs does not make those later executions free.</p><p>The right schedule depends on the decision. A weekly management meeting and a daily follow-up queue can need different freshness. Scope the import to the records that support that question, then review the expected transfer count in the calculator.</p><p>These are workload examples, not featured subscription prices. For a continuously refreshed dataset, discuss a custom subscription and agree its scope with LC Bridge.</p>"
+      },
+      {
+        "title": "Plan a visible recovery path",
+        "body": "<p>Connections expire, permissions change, and data can be unavailable. Keep the unfinished setup when asking somebody to reconnect. Preserve the previous successful delivery and show the error without inventing new zero totals.</p><p>After reconnecting, require an intentional retry. Do not automatically send outgoing CRM changes. Use the sample library and schedule documentation to evaluate the intended workflow while production access is being prepared.</p>"
+      }
+    ],
+    "related": [
+      "overview",
+      "daily",
+      "pipeline"
+    ],
+    "sources": []
+  },
+  {
+    "slug": "gohighlevel-custom-fields-google-sheets",
+    "title": "Map GoHighLevel custom fields to Google Sheets columns",
+    "description": "Plan stable custom-field mappings for GoHighLevel spreadsheet reporting, including types, blanks, renamed fields, and update boundaries.",
+    "intent": "Informational",
+    "keyword": "GoHighLevel custom fields Google Sheets",
+    "answer": "A useful custom-field mapping keeps the CRM field’s identity and type alongside its readable column label. LC Bridge’s early-access import preview combines standard and discovered custom fields in one chooser. Check the sample values and source access before relying on a field in a report or outgoing update.",
+    "sections": [
+      {
+        "title": "A column heading is a label, not a field identity",
+        "body": "<p>Teams rename custom fields as their processes change. They also reuse familiar names such as Priority or Renewal date. A connection should retain the source field ID and object context so a renamed label does not silently point a column at another field.</p><p>Give the worksheet a readable heading, but keep its relationship with the selected CRM definition. A contact’s custom field and an opportunity’s custom field are separate fields even when their display names match.</p>"
+      },
+      {
+        "title": "Preserve the meaning of the field type",
+        "body": "<p>Text, numbers, dates, and selection values need different treatment. A numeric score should be usable in a calculation. A date should not depend on guessing whether 04/05 means April 5 or May 4. A selection should retain the accepted source options.</p><p>Keep null and empty values visible while testing. Replacing them with zeros or default text can make a report look complete while changing its meaning. Record any transformation in a separate calculated column.</p>"
+      },
+      {
+        "title": "Inspect fields in the import preview",
+        "body": "<p>Choose the record type, open the Fields chooser, search for the field, and select it alongside the standard columns. Preview a few values and adjust column order before running the import. After changing fields or filters, use a fresh preview before Save &amp; Run.</p><p>If the catalog is empty, distinguish an account with no matching custom fields from missing access or a load error. Those outcomes need different recovery. Reconnecting should preserve the rest of the unfinished import.</p>"
+      },
+      {
+        "title": "Use one field definition consistently in reporting",
+        "body": "<p>A category chart needs a deliberate rule for empty and unfamiliar values. A date filter needs a timezone and boundary. A score-based segment needs a documented comparison. These choices are part of the report definition, not decorative spreadsheet formatting.</p><p>The Custom Records sample demonstrates another boundary: reporting on a custom object requires its schema and customer associations. Seeing a contact custom field does not establish support for every custom-object schema.</p>"
+      },
+      {
+        "title": "Example: keep labels readable and mappings stable",
+        "body": "<div class=\"table-scroll\"><table><caption>Synthetic custom-field mapping worksheet</caption><thead><tr><th>Field identity</th><th>Sheet heading</th><th>Type</th><th>Check</th></tr></thead><tbody><tr><td>field-example-renewal</td><td>Renewal date</td><td>Date</td><td>Correct local date; blank stays absent</td></tr><tr><td>field-example-score</td><td>Lead score</td><td>Number</td><td>Measured zero differs from blank</td></tr><tr><td>field-example-services</td><td>Services requested</td><td>Multiple choice</td><td>Preserve the supported collection format</td></tr></tbody></table></div><p>These invented identities illustrate a mapping ledger, not provider API field IDs. If someone renames “Renewal date” to “Next renewal,” the readable heading changes; it should not silently bind the column to an unrelated field with a similar name.</p>"
+      },
+      {
+        "title": "Check write eligibility separately",
+        "body": "<p>Reading a custom field does not guarantee that the same field can be edited through the integration. Outgoing updates need an eligible field, valid type, matching record, permission, and explicit change review.</p><p>Use the data catalog to understand current boundaries. The public samples are synthetic, and broad custom-field or custom-object writeback is not promised. Request early access with the fields your team needs so their actual source support can be reviewed.</p>"
+      }
+    ],
+    "related": [
+      "custom-records",
+      "leads",
+      "businesses"
+    ],
+    "sources": [
+      {
+        "title": "HighLevel: update a contact",
+        "url": "https://marketplace.gohighlevel.com/docs/ghl/contacts/update-contact/index.html"
+      }
+    ]
+  },
+  {
+    "slug": "gohighlevel-pipeline-dashboard-google-sheets",
+    "title": "Build a GoHighLevel sales pipeline dashboard in Google Sheets",
+    "description": "Use a pipeline dashboard with current-stage value, target progress, owner filters, and deal-level follow-up records.",
+    "intent": "Informational",
+    "keyword": "GoHighLevel sales pipeline dashboard Google Sheets",
+    "answer": "A useful GoHighLevel pipeline dashboard combines the current open pipeline with sales progress and a record-level follow-up table. Keep current-stage value separate from historical conversion. LC Bridge’s Pipeline & Follow-up sample shows that arrangement with owner filters and invented opportunity data.",
+    "sections": [
+      {
+        "title": "Start with the questions for the next sales meeting",
+        "body": "<p>How much open value is in each stage? Which deals need attention? How much has been won against the chosen target? Those questions need different views of the data. A single funnel picture cannot answer all three well.</p><p>Use a current-stage chart for today’s open opportunities. Use qualifying won outcomes and a configured target for progress. Keep the underlying deal table close enough that a manager can inspect a surprising number.</p>"
+      },
+      {
+        "title": "Keep one row per opportunity",
+        "body": "<p>Preserve Opportunity ID, contact relationship, pipeline, stage, status, owner, amount, currency, and relevant dates. A contact can have more than one opportunity. Aggregate at deal grain before joining other information into the report.</p><p>When a value or stage-entry date is missing, surface the limitation. A missing amount should not become a valid zero. A missing stage-entry date cannot support a reliable “days in stage” figure.</p>"
+      },
+      {
+        "title": "Use the right chart for each comparison",
+        "body": "<p>The sample places open-stage bars beside sales-versus-target progress. Stage bars use a shared zero baseline so their lengths are comparable. The progress view identifies actual outcomes and the target instead of presenting an unsupported forecast band.</p><p>Use Sales &amp; Goals for an actual-versus-target monthly comparison. Use Stage Conversion &amp; Bottlenecks only when observed stage history exists. Separating these purposes keeps the pipeline page readable and the labels honest.</p>"
+      },
+      {
+        "title": "Use filters to explain a result",
+        "body": "<p>Try the sample owner filter. Compare the KPI change with the chart and the underlying rows. The same source facts should drive each part of the report. A filter that changes a chart but leaves its total unchanged creates avoidable confusion.</p><p>Keep the date basis visible. Open pipeline is a current snapshot, while sales outcomes use the report’s qualifying status date. A date selector does not turn every metric into a historical snapshot.</p>"
+      },
+      {
+        "title": "Read the sample’s numbers as a meeting agenda",
+        "body": "<p>The open Pipeline &amp; Follow-up sample starts with nine open deals worth $22,050 in the configured currency. Selecting Alex Morgan reduces that view to two open deals worth $3,050. Both values are valid because the owner scope changes. They are not competing versions of the same total.</p><p>The record table makes the next action concrete: inspect the deal, its current stage, time in stage, next linked task, and any attention reason. A missing owner or missing date should remain visible as a reporting exception. Do not replace it with an invented value merely to make the chart look complete.</p><p>Use this as a rehearsal for your own meeting: state the scope, explain the number, find its supporting records, then decide the follow-up.</p>"
+      },
+      {
+        "title": "Turn attention into a specific follow-up",
+        "body": "<p>A deal table should show which records need action and why. Overdue tasks and stage-age exceptions are useful when supported by actual deadlines and observed dates. They should not be inferred from a generic last-updated timestamp.</p><p>Explore the sample, read its metric definitions, and compare it with your weekly review. The early-access integration is designed to deliver the connected version in Google Sheets. Source refreshes are metered by transferred records; existing worksheet data can be analyzed without another provider transfer.</p>"
+      }
+    ],
+    "related": [
+      "pipeline",
+      "sales",
+      "stages",
+      "team"
+    ],
+    "sources": []
+  },
+  {
+    "slug": "gohighlevel-native-google-sheets-vs-crm-imports",
+    "title": "GoHighLevel’s native Google Sheets actions versus recurring CRM imports",
+    "description": "Compare native spreadsheet workflow actions with dataset imports and report templates, based on the direction and shape of your workflow.",
+    "intent": "Commercial investigation",
+    "keyword": "GoHighLevel native Google Sheets integration",
+    "answer": "Native GoHighLevel Google Sheets actions are useful for event-driven row operations. A recurring CRM import serves a different job: keeping a selected dataset available for spreadsheet reporting. Compare the trigger, data scope, identity rules, refresh frequency, and outgoing-update behavior before choosing either approach.",
+    "sections": [
+      {
+        "title": "Native row actions solve an event-driven job",
+        "body": "<p>HighLevel provides actions to create, find, update, and clear rows in a chosen spreadsheet. These work within a workflow and can pass lookup results to later steps. They are a reasonable fit when a business event should affect a specific spreadsheet row.</p><p>A workflow designed around an event is not automatically a full dataset refresh. Decide how existing records, records changed outside the trigger, and deleted or inaccessible records should be handled.</p>"
+      },
+      {
+        "title": "Recurring imports solve a dataset job",
+        "body": "<p>A saved import starts with an object, selected fields, filters, and a destination. It is intended to make that dataset repeatable. A reporting template can then use the delivered rows with defined metric grain, date rules, and missing-data behavior.</p><p>That does not make a dedicated connector universally better. For a simple event log, a native action may be enough. For several reports sharing an evolving set of contacts and opportunities, repeated manual workflow assembly may require more upkeep.</p>"
+      },
+      {
+        "title": "Compare the jobs in concrete terms",
+        "body": "<div class=\"table-scroll\"><table><caption>Choose based on the workflow</caption><thead><tr><th>Question</th><th>Native row actions</th><th>LC Bridge early-access design</th></tr></thead><tbody><tr><td>Starting point</td><td>A workflow execution</td><td>A configured record dataset</td></tr><tr><td>Spreadsheet behavior</td><td>Chosen row operation</td><td>Previewed import and reporting worksheets</td></tr><tr><td>CRM edits</td><td>Depend on the complete workflow</td><td>Explicit review of eligible existing-record updates</td></tr><tr><td>Cost evaluation</td><td>Applicable workflow execution rules</td><td>Primary records transferred per execution</td></tr></tbody></table></div>"
+      },
+      {
+        "title": "Keep cost units comparable",
+        "body": "<p>A workflow execution and a record transfer are different units. Do not compare their headline prices as though they purchase the same amount of work. Map the actual steps and records in your planned operation first.</p><p>For LC Bridge, repeated executions transferring the same primary records create additional usage. High-volume teams can discuss a custom subscription. The calculator provides an estimate using the published planned base rates and your execution frequency.</p>"
+      },
+      {
+        "title": "Example: do you need an event or an existing dataset?",
+        "body": "<p>“Add a row when an appointment is booked” starts from one event. “Show all this month’s appointments and their current attendance outcomes” starts from a scoped dataset. Appending the first event alone does not establish that the later attendance outcome will be reconciled into the reporting table.</p><p>Write an acceptance example with a rescheduled appointment and one unresolved outcome. Ask what identifies the occurrence, what changes after a refresh, and which outcomes belong in the show-rate denominator. Compare the methods on those exact requirements.</p><p>A native workflow can be a good event route. A recurring import can be a good dataset route. In either case, the report remains accountable for the meaning of the records it presents.</p>"
+      },
+      {
+        "title": "Try the smallest complete workflow",
+        "body": "<p>Evaluate one ordinary record, one missing value, and one record with a changed field. Check the resulting sheet, not just whether a button or action succeeded. Include the recovery path when permissions or a connection are unavailable.</p><p>For reporting, inspect a LC Bridge sample without entering customer data. Use the native product documentation to validate the workflow-action alternative in your own authorized account. Choose the approach that completes the job with a clear maintenance burden.</p>"
+      }
+    ],
+    "related": [
+      "pipeline",
+      "leads",
+      "daily"
+    ],
+    "sources": [
+      {
+        "title": "HighLevel: Google Sheets workflow actions",
+        "url": "https://help.gohighlevel.com/support/solutions/articles/48001238162"
+      }
+    ]
+  },
+  {
+    "slug": "gohighlevel-google-sheets-record-transfer-pricing",
+    "title": "How record-transfer pricing works for GoHighLevel Google Sheets integrations",
+    "description": "Understand per-record-transfer usage, repeat executions, monthly allowances, volume discounts, retries, and custom subscriptions.",
+    "intent": "Commercial investigation",
+    "keyword": "GoHighLevel Google Sheets record transfer pricing",
+    "answer": "A record-transfer model charges for successfully moving a primary CRM record during an execution. Moving the same record during another execution creates usage again. LC Bridge’s planned base rates include 250 transfers each month, then graduated per-transfer pricing, with custom subscriptions available for high-volume teams.",
+    "sections": [
+      {
+        "title": "A transferred record is the unit",
+        "body": "<p>A contact, opportunity, or invoice is a primary business record when it is the selected output of a data operation. Its selected fields do not become separate commercial units. A contact with ten selected fields is one transferred contact, not ten transfers.</p><p>The identity of that record still matters for reliable delivery, but it does not exempt later executions from usage. Delivering a contact again is another transfer. This model is different from a monthly subscription that counts each distinct stored record once.</p>"
+      },
+      {
+        "title": "Repeated executions create repeated usage",
+        "body": "<p>If one execution successfully transfers 100 opportunities and another transfers the same 100, the two executions produce 200 record transfers. If only a different, smaller set is actually transferred, count that successfully transferred set. Do not infer the amount from a physical worksheet’s row count alone.</p><p>A chart recalculated from already delivered worksheet data does not fetch CRM records by itself. A source refresh that transfers records does. The distinction lets teams use their spreadsheet for analysis while choosing source refreshes intentionally.</p>"
+      },
+      {
+        "title": "Supporting rows do not multiply the parent charge",
+        "body": "<p>Invoices can contain multiple line items. The planned rule bundles those items with their parent invoice. An invoice-line report therefore counts the underlying transferred primary invoices rather than every rendered line.</p><p>Similarly, a label fetched only to describe another record is a supporting lookup. Selecting contacts as their own primary dataset is different from using a contact name to label a task. The data catalog and eventual production receipts need to preserve that distinction.</p>"
+      },
+      {
+        "title": "Discounts and retry protection answer different questions",
+        "body": "<p>The monthly allowance and graduated bands determine the price of accumulated transfers in an account. Retry protection identifies whether a delivery is the same operation being reconciled or a new execution.</p><p>A retry of the same operation must not create a duplicate charge. A new execution legitimately transferring the same records is new usage. Production billing must keep durable operation identities; the public calculator is an estimate, not a charging service.</p>"
+      },
+      {
+        "title": "Example: two executions are two transfers of the dataset",
+        "body": "<p>An invented account successfully transfers 100 primary contacts on an initial execution and the same 100 contacts on a later execution. That is 200 transfers. A third successful execution brings the account to 300 transfers. The 250-transfer allowance covers part of that total; 50 transfers enter the first paid band.</p><p>Retrying delivery from the same accepted operation must reuse its receipt and avoid a second charge for that operation. Starting a new transfer execution is different. The website’s estimate tests model this distinction, while the production service must implement the corresponding accepted-delivery receipts.</p><p>Fields and bundled child rows do not change the primary-contact count in this example. Final charges use the agreed rates, applicable markup and tax.</p>"
+      },
+      {
+        "title": "Make high-volume costs predictable",
+        "body": "<p>The pricing page leads with 1.5¢ per additional record transferred, then shows the complete volume ladder. Rates decrease through the graduated bands. Base estimates exclude applicable account markup and tax.</p><p>If your team transfers large datasets frequently, Talk to Sales about a custom subscription. Bring your expected records per execution, frequency, and account count. We can discuss a predictable commercial arrangement without pretending that one generic subscription fits every workload.</p>"
+      }
+    ],
+    "related": [
+      "overview",
+      "receivables",
+      "invoice-items"
+    ],
+    "sources": []
+  },
+  {
+    "slug": "gohighlevel-sales-payments-invoice-totals",
+    "title": "Why GoHighLevel sales, payments, and invoice totals differ",
+    "description": "Understand why won opportunities, successful payments, outstanding invoices, and order-line totals should not match automatically.",
+    "intent": "Informational",
+    "keyword": "GoHighLevel sales payments invoice reporting",
+    "answer": "Won sales, collected payments, and outstanding invoices measure different business facts. A won opportunity is a sales outcome, a payment is a transaction, and an invoice balance is an amount still due. Their dates, currencies, statuses, and relationships can differ, so a useful dashboard defines each total separately.",
+    "sections": [
+      {
+        "title": "One customer can produce several different facts",
+        "body": "<p>Consider a service deal marked won, an invoice issued for the work, and two partial payments received later. Those are separate records with separate dates. Adding all their amounts together would not produce a useful measure of revenue.</p><p>Start by naming the decision. Sales management might need won opportunity value. Collections work needs successful payments and overdue balances. An accountant may need a recognition method that a CRM dashboard does not establish.</p>"
+      },
+      {
+        "title": "Join after respecting the grain",
+        "body": "<p>A contact may have several deals, several invoices, and several payments. Joining them all directly by Contact ID can repeat each amount across multiple rows. A spreadsheet can look plausible while its totals multiply.</p><p>Aggregate each fact at its own primary record grain before building a customer summary. Use explicit invoice, order, or opportunity references where available. A shared contact alone does not establish which deal a payment belongs to.</p>"
+      },
+      {
+        "title": "Choose the date that belongs to the measure",
+        "body": "<p>Opportunity-created date, qualifying won-status date, payment date, invoice-issued date, and invoice-due date answer different questions. A monthly filter is incomplete unless the report defines which date it applies to.</p><p>An outstanding invoice balance is usually a current snapshot. Do not label today’s balance as the balance that existed at the end of every previous month without historical snapshots. Missing history should be shown as unavailable.</p>"
+      },
+      {
+        "title": "Keep statuses and currencies explicit",
+        "body": "<p>Successful live payments should be distinguished from test, failed, or refunded records. A report of gross collections is not automatically net revenue. State whether refunds are separate and which currency the displayed amount uses.</p><p>Invoice Aging groups current eligible unpaid balances by due date. Product Sales uses sale-time order lines. The Subscription Overview sample normalizes supported recurring intervals but does not infer churn history from a current cancelled flag.</p>"
+      },
+      {
+        "title": "Example: why three correct totals differ",
+        "body": "<div class=\"table-scroll\"><table><caption>Synthetic customer reconciliation</caption><thead><tr><th>Business fact</th><th>Example</th><th>Meaning</th></tr></thead><tbody><tr><td>Won opportunity</td><td>$1,200 won October 3</td><td>A recorded sales outcome</td></tr><tr><td>Successful payment</td><td>$300 collected October 5</td><td>Cash collected in that transaction</td></tr><tr><td>Current invoice balance</td><td>$900 still due</td><td>Outstanding balance at the snapshot</td></tr></tbody></table></div><p>In this simplified invented case, payment plus outstanding balance equals the invoice amount. Real records may also include tax, adjustments, credits, multiple currencies, or unmatched relationships. Define those rules before expecting a reconciliation to balance. Do not treat an invoice line joined to several payments as several independent sales.</p>"
+      },
+      {
+        "title": "Pick the report that matches the decision",
+        "body": "<p>Use Sales &amp; Goals for recorded won outcomes against targets. Use Payment Collections for successful transaction volume. Use Invoice Aging for balances requiring collection work, and Customer Payments for a customer-level summary built from separately aggregated facts.</p><p>All are available as open synthetic previews. Compare their definitions before connecting real data. A good reporting system should explain why two totals differ, rather than forcing them to agree by changing the underlying meaning.</p>"
+      }
+    ],
+    "related": [
+      "sales",
+      "payments",
+      "receivables",
+      "customer-payments",
+      "products"
+    ],
+    "sources": []
+  }
+]

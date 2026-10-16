@@ -91,6 +91,9 @@ def video(product):
 
 def update_page(path):
     source = path.read_text()
+    # Product facts, authorship and schema are maintained by the Sheets generator.
+    if 'data-sheets-generated="true"' in source:
+        return False
     if re.search(r'http-equiv=["\']refresh', source, re.I):
         return False
     canonical_match = re.search(r'<link\b[^>]*rel="canonical"[^>]*href="([^"]+)"', source)

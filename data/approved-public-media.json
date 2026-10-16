@@ -89,6 +89,16 @@
     "docusign-integration/img/worklist.png": "8290f527291eab18a67fede3923b9e586b8be376c4d652420f41a24c0a3e26f0",
     "favicon.ico": "4807d98f6e5ce74d9c3a7d00e5c9240e0cb5a32e95c20e116ee72fefa3559487",
     "favicon.svg": "146f43932133c7db0274f841323232f10b7b0c68f735cc4b0898e5b66433f402",
-    "hero-01.png": "85ce72d3d5729befa626e2c6c6646289ec6714f89dcdcf549175a5c160ee4739"
-  }
+    "hero-01.png": "85ce72d3d5729befa626e2c6c6646289ec6714f89dcdcf549175a5c160ee4739",
+    "assets/google-sheets/social.png": "cca020609d968c0bf705638028f1daf174ecc82435d705fe37e6ccffe89ff753"
+  },
+  "reviews": [
+    {
+      "date": "2026-10-16",
+      "paths": [
+        "assets/google-sheets/social.png"
+      ],
+      "method": "Original static SVG source and rendered 1200x630 PNG visually reviewed; only LC Bridge, Google Sheets, GoHighLevel, product capabilities and LC Bridge URL; no embedded media, external images or metadata."
+    }
+  ]
 }

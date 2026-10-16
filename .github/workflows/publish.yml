@@ -26,6 +26,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
       - name: Test publishing invariants
         run: python3 -m unittest discover -s scripts -p 'test_*.py'
       - name: Generate and save public discovery files
@@ -37,6 +40,10 @@ jobs:
           for attempt in 1 2 3; do
             git fetch origin main
             git reset --hard origin/main
+            node scripts/render-sheets-samples.mjs
+            python3 scripts/build-sheets-site.py
+            node --test scripts/test-sheets-site.mjs
+            node scripts/check-analytics.cjs
             python3 scripts/sync-search.py --write
             python3 scripts/sync-search.py
             python3 scripts/check-site.py

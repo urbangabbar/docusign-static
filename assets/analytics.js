@@ -6,7 +6,10 @@
   var loaded = false;
   var pageViewed = false;
   var measurementId = /^G-[A-Z0-9]+$/.test(config.ga4MeasurementId || '') ? config.ga4MeasurementId : '';
-  var product = location.pathname.indexOf('/community-agents/') === 0 ? 'community_agents' :
+  var sheetsPage = location.pathname.indexOf('/google-sheets-integration/') === 0 ||
+    Boolean(document.documentElement && document.documentElement.hasAttribute('data-sheets-generated')) ||
+    (location.pathname === '/book-a-call/' && new URL(location.href).searchParams.get('product') === 'google-sheets');
+  var product = sheetsPage ? 'google_sheets' : location.pathname.indexOf('/community-agents/') === 0 ? 'community_agents' :
     location.pathname.indexOf('/docusign-integration/') === 0 ? 'docusign' :
     location.pathname.indexOf('/highlevel-development/') === 0 ? 'custom_development' : 'company';
 
@@ -58,16 +61,27 @@
     try { target = new URL(link.href, location.href); } catch (_) { return; }
     var action = link.dataset.analyticsAction;
     if (!action && target.hostname === 'community-agents.lcbridge.app' && target.pathname === '/oauth/install') action = 'install_cta_clicked';
+    if (!action && target.pathname === '/google-sheets-integration/' && target.hash === '#apply') action = 'early_access_cta_clicked';
     if (!action && target.hash === '#apply' && target.pathname.indexOf('/docusign-integration/') === 0) action = 'trial_cta_clicked';
     if (!action && target.pathname.indexOf('book-a-call') !== -1) action = 'booking_cta_clicked';
     if (!action && /(?:youtube\.com|youtu\.be)$/.test(target.hostname)) action = 'demo_play_clicked';
     if (!action) return;
     var section = link.closest('section,nav,footer,header');
     send(action, { cta_location: section ? section.id || section.tagName.toLowerCase() : 'page',
-      destination_host: target.hostname, destination_path: target.pathname });
+      destination_host: target.hostname, destination_path: target.pathname,
+      product: target.pathname.indexOf('/google-sheets-integration/') === 0 || target.searchParams.get('product') === 'google-sheets' ? 'google_sheets' : product });
   });
 
   window.LCBridgeAnalytics = { setConsent: setConsent,
+    recordSheetsEvent: function (name, properties) {
+      if (!sheetsPage) return;
+      if (['template_preview_opened', 'template_filter_changed', 'pricing_calculator_used',
+           'early_access_form_started', 'early_access_form_error', 'sales_interest'].indexOf(name) === -1) return;
+      var safe = {};
+      var ids = ["overview", "leads", "pipeline", "bookings", "sales", "daily", "team", "response", "cash", "stages", "forecast", "payments", "receivables", "invoice-items", "subscriptions", "subscription-changes", "orders", "products", "conversations", "messages", "capture", "customer-payments", "businesses", "activities", "custom-records"];
+      if (properties && ids.indexOf(properties.template_id) !== -1) safe.template_id = properties.template_id;
+      send(name, safe);
+    },
     recordProjectInquiryEvent: function (name) {
       if (product !== 'custom_development') return;
       if (['project_form_started', 'project_form_error', 'project_form_accepted'].indexOf(name) === -1) return;
@@ -76,6 +90,7 @@
     // Conversion confirmation must come from a trusted success page or backend.
     // A click or an iframe load is never a completed trial, installation or sale.
     confirmConversion: function (name, productName) {
+      if (name === 'early_access_request_accepted' && productName === 'google_sheets') { send(name, { product: productName }); return; }
       if (['trial_request_completed', 'installation_completed', 'subscription_completed'].indexOf(name) === -1) return;
       if (['docusign', 'community_agents'].indexOf(productName) === -1) return;
       send(name, { product: productName });

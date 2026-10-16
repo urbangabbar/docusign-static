@@ -14,7 +14,18 @@
     "_site/*": "Generated build output",
     "node_modules/*": "Build dependencies",
     "vendor/*": "Build dependencies",
-    ".*": "Repository and local tooling metadata"
+    ".*": "Repository and local tooling metadata",
+    "AGENTS.md": "Private repository instructions"
   },
-  "aiCrawlers": ["GPTBot", "OAI-SearchBot", "ChatGPT-User", "ClaudeBot", "Claude-SearchBot", "Claude-User", "PerplexityBot", "Perplexity-User", "Google-Extended"]
+  "aiCrawlers": [
+    "GPTBot",
+    "OAI-SearchBot",
+    "ChatGPT-User",
+    "ClaudeBot",
+    "Claude-SearchBot",
+    "Claude-User",
+    "PerplexityBot",
+    "Perplexity-User",
+    "Google-Extended"
+  ]
 }
