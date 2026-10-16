@@ -1,6 +1,6 @@
-# LC Bridge — Brand Guidelines (v1 · "Refined Cobalt")
+# LC Bridge — Brand Guidelines (v2 · "Refined Cobalt")
 
-LC Bridge (legal: **Lead Connector Bridge**) builds white-label integrations that run inside the HighLevel (GoHighLevel) CRM. The **product** is a white-label chameleon — it inherits each agency's HighLevel branding at runtime. This guide governs the **LC Bridge marketing identity only**; it never needs to match the product UI.
+LC Bridge builds products and custom software for GoHighLevel (also called HighLevel or GHL). The **product** is a white-label chameleon — it inherits each agency's HighLevel branding at runtime. This guide governs the **LC Bridge marketing identity only**; it never needs to match the product UI.
 
 - **Source of truth:** `/assets/brand.css` (tokens + components). Build pages from it; don't hardcode hex/px.
 - **Visual reference:** `/brand/` (rendered guidelines page).
@@ -8,11 +8,11 @@ LC Bridge (legal: **Lead Connector Bridge**) builds white-label integrations tha
 ---
 
 ## 1. Logo
-- Bridge glyph in a gradient tile + **"LC Bridge"** wordmark (Inter Tight 700).
+- Bridge glyph in a gradient tile + **"LC Bridge"** wordmark. Use the approved artwork rather than recreating its lettering.
 - **DocuSign product icon (the document + signature glyph):** `/assets/docusign-icon.svg` (+ raster `/assets/docusign-icon-180.png`, 180×180, transparent). Synced from the product repo (`~/dev/docusign-product`, the "DocuSign Integration by LCBridge" mark), this glyph marks the DocuSign CTA **inside the product** — it is not the corporate brand logo.
 - **LC Bridge brand logo (the bridge mark):** `/assets/lcbridge-logo.svg` (+ social-ready raster `/assets/lcbridge-logo.png`, 1024×1024, transparent). The bridge glyph on the cobalt→violet gradient tile, exactly as shown on the lcbridge.app home page. Use this for the corporate identity and social profiles; do not redraw the glyph.
-- **Per-product pages re-brand:** product landing pages (`/docusign/*`, `/google-sheets/`) lead with that product's own colors + logo (DocuSign = Cobalt `#4C00FF` / Inkwell `#130032` / Poppy Red `#FF5252`; Google Sheets = green `#0F9D58`) so the page instantly maps to the integration. LC Bridge's cobalt identity is reserved for the home/corporate page and the "by LC Bridge" byline.
-- Always two words: **LC Bridge**. Use the full legal name **Lead Connector Bridge** only at first mention, in footers, and in schema.
+- **Company and product hierarchy:** keep the shared LC Bridge navigation above each product’s local navigation, and the shared company footer below the product content. Google Sheets, Community Agents and DocuSign retain their approved product logos and palettes. Product discovery follows that order; the company homepage introduces the full portfolio.
+- Always two words: **LC Bridge**. Do not invent a registered legal name or an ownership relationship. Use LC Bridge’s own identity and contact details in copy, footers and schema.
 - The gradient `linear-gradient(135deg,#2A41D8,#6938EF)` is the **only** sanctioned gradient and lives on the **mark only** — never on text, buttons, or backgrounds.
 - Clear space ≥ the mark's height. Minimum mark size 24px (favicon/UI); minimum full lockup ~120px wide. Never stretch, rotate, or recolor the wordmark.
 
@@ -44,13 +44,32 @@ LC Bridge (legal: **Lead Connector Bridge**) builds white-label integrations tha
 | Draft | `#344054` | `#F2F4F7` | `#98A2B3` | `#EAECF0` |
 
 ## 3. Typography
-- **Display:** Inter Tight (700), tracking `-0.03em` → `-0.025em`.
-- **Text:** Inter (400/500/600), line-height ~1.55.
-- **Eyebrows / labels / figures:** JetBrains Mono (600), `.14em`, UPPERCASE for kickers; tabular nums for prices/counts.
-- Hierarchy comes from **weight + scale**, never from color.
+
+| Role | Face and weight | Size / leading | Spacing and case |
+|---|---|---|---|
+| Company display headings | Poppins 700 | Responsive; see `lcb-display` and `lcb-h2` | Tracking `-0.03em` to `-0.025em`; sentence case |
+| Body and navigation | Inter 400/500/600 | Body 16px / 1.55; longer paragraphs up to 1.75 | Normal spacing; sentence case |
+| Eyebrows, section labels and short captions | Inter 600 | **13px / 1.5**, including mobile | **`.01em`**, sentence case |
+| Supporting captions and badges | Inter 400/500/600 | 12–13px / 1.5 or more | Normal spacing; sentence case |
+| Prices, metrics and counts | Inter with tabular numerals | Match the surrounding hierarchy | Use `lcb-num`; numbers do not require a monospace face |
+| Code, record IDs and aligned technical data | JetBrains Mono 400/500/600 | At least 12px in readable content | Preserve exact code/identifier casing |
+
+**Reusable label role:** `--lcb-font-label`, `--lcb-label-size`, `--lcb-label-weight`, `--lcb-label-leading` and `--lcb-label-tracking` in `/assets/brand.css`. Use `.lcb-eyebrow` for section introductions and `.lcb-label` for other short labels. Page-specific components should consume these tokens rather than introduce another label font.
+
+**Permanent rules:**
+
+- No decorative monospace for marketing eyebrows, badges, navigation, captions or footer headings. Do not style these like terminal output.
+- No widely spaced all-caps kickers. Write sentence case in HTML; keep proper names and acronyms such as **LC Bridge**, **GoHighLevel**, **AI**, **CRM** and **API** intact. Do not force capitalization through CSS.
+- Keep labels at 13px by default and **never reduce them below 12px at a mobile breakpoint**. Allow wrapping instead of shrinking text to fit.
+- Build hierarchy with weight, size and spacing. Use color as supporting emphasis with readable contrast.
+- Keep approved product typography inside each product container; shared LC Bridge chrome uses the company system. Do not override code blocks, data tables or actual product UI just to change marketing labels.
+- Use the existing self-hosted WOFF2 faces in `/assets/fonts.css` and preload the critical text/display faces. This label role uses the already loaded Inter face and adds no font download.
+- Before shipping, inspect desktop and mobile screenshots, check the actual computed font/size/spacing, and confirm that labels wrap without clipping or horizontal page overflow.
+
+Examples: **“LC Bridge / Built for GoHighLevel”**, **“LC Bridge products”**, **“01 / Our products”**. Avoid their all-caps, tracked monospace equivalents.
 
 ## 4. Components (in `/assets/brand.css`)
-`lcb-wrap` · `lcb-eyebrow` · `lcb-btn` (`--primary` / `--ghost` / `--lg`) · `lcb-badge` (`is-completed|ontrack|attention|declined|draft`) · `lcb-ai` · `lcb-card` (`--hover`) · `lcb-logo` · `lcb-section` (`--soft` / `--dark`) · type helpers `lcb-display` / `lcb-h2` / `lcb-lede` / `lcb-num`.
+`lcb-wrap` · `lcb-label` · `lcb-eyebrow` · `lcb-btn` (`--primary` / `--ghost` / `--lg`) · `lcb-badge` (`is-completed|ontrack|attention|declined|draft`) · `lcb-ai` · `lcb-card` (`--hover`) · `lcb-logo` · `lcb-section` (`--soft` / `--dark`) · type helpers `lcb-display` / `lcb-h2` / `lcb-lede` / `lcb-num`.
 Radii: sm 7 · md 11 · lg 14 · xl 18 · pill. Motion: 180ms `cubic-bezier(.4,0,.2,1)`; honor `prefers-reduced-motion`.
 
 ## 5. Voice & tone
@@ -62,4 +81,4 @@ Calm, plain, operator-to-operator. **Sentence case. No emoji.** Concrete over ab
 **Don't:** blue→violet gradients on heroes/headings/buttons (the #1 AI tell) · a thick colored border down one side of a card (a top AI-UI tell) · generic indigo `#6366F1` or rainbow accents · the Space Grotesk + Inter default combo · emoji / Title Case / hype adjectives · glassmorphism + neon glow.
 
 ---
-*v1 · Refined Cobalt · chosen 2026-06-22. Supersedes the prior blue→violet-gradient marketing look.*
+*v2 · Typography revised 2026-10-16: readable Inter labels replace decorative monospace. Refined Cobalt chosen 2026-06-22.*

@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LC Bridge — Brand guidelines</title>
 <meta name="robots" content="noindex">
-<link rel="stylesheet" href="/assets/brand.css?v=b0980d3f">
+<link rel="stylesheet" href="/assets/brand.css?v=268337ea">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <style>
   .dochead{border-bottom:1px solid var(--lcb-line);background:var(--lcb-canvas);position:sticky;top:0;z-index:10}
-  .dochead .in{display:flex;align-items:center;justify-content:space-between;height:70px}
-  .dochead .meta{font-family:var(--lcb-font-mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--lcb-ink-3)}
+  .dochead .in{display:flex;align-items:center;justify-content:space-between;min-height:70px;padding-block:14px;gap:16px;flex-wrap:wrap}
+  .dochead .meta{font-family:var(--lcb-font-label);font-size:var(--lcb-label-size);font-weight:600;letter-spacing:var(--lcb-label-tracking);color:var(--lcb-ink-3)}
   .lead{padding:56px 0 8px}
   .lead h1{font-size:clamp(2.2rem,5vw,3.2rem);letter-spacing:-.03em}
   .lead p{margin-top:16px;max-width:60ch}
@@ -26,13 +26,13 @@
   .sw .role{font-weight:600;font-size:13.5px;margin-top:10px}
   .sw .hex{font-family:var(--lcb-font-mono);font-size:11.5px;color:var(--lcb-ink-3);margin-top:2px}
   .sw .use{font-size:12px;color:var(--lcb-ink-3);margin-top:4px;line-height:1.45}
-  .subh{font-family:var(--lcb-font-mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--lcb-ink-3);margin:26px 0 12px}
+  .subh{font-family:var(--lcb-font-label);font-size:var(--lcb-label-size);font-weight:600;letter-spacing:var(--lcb-label-tracking);color:var(--lcb-ink-3);margin:26px 0 12px}
   .scale{width:100%;border-collapse:collapse}
   .scale td{padding:14px 0;border-top:1px solid var(--lcb-line);vertical-align:baseline}
   .scale td:last-child{text-align:right;font-family:var(--lcb-font-mono);font-size:12px;color:var(--lcb-ink-3);white-space:nowrap;padding-left:20px}
   .row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
   .dd{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-  @media(max-width:760px){.dd{grid-template-columns:1fr}}
+  @media(max-width:760px){.dd{grid-template-columns:1fr}.scale td{display:block}.scale td:last-child{text-align:left;padding:0 0 14px;border-top:0;white-space:normal}}
   .dd .col{border:1px solid var(--lcb-line);border-radius:var(--lcb-r-lg);padding:22px;background:var(--lcb-canvas)}
   .dd h3{font-size:1rem;display:flex;align-items:center;gap:8px;margin-bottom:14px}
   .dd .do{color:var(--lcb-ok-fg)} .dd .dont{color:var(--lcb-decl-fg)}
@@ -50,14 +50,14 @@
   .specimen{border:1px solid var(--lcb-line);border-radius:var(--lcb-r-lg);padding:28px;background:var(--lcb-canvas)}
 </style>
 <link rel="stylesheet" href="/assets/fonts.css?v=2ee1d9f1">
-<link rel="stylesheet" href="/assets/seo-content.css?v=c3046b9c">
+<link rel="stylesheet" href="/assets/seo-content.css?v=5fe951dd">
 </head>
 <body class="lcb-body">
 <main id="main">
 
 <div class="dochead"><div class="lcb-wrap in">
   <span class="lcb-logo"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16v-4"/><path d="M21 16v-4"/><path d="M3 12c0-4 4-6 9-6s9 2 9 6"/><path d="M7 12v4"/><path d="M12 10v6"/><path d="M17 12v4"/></svg></span><span class="wm">LC Bridge</span></span>
-  <span class="meta">Brand guidelines · v1 · Refined Cobalt</span>
+  <span class="meta">Brand guidelines · v2 · Refined Cobalt</span>
 </div></div>
 
 <header class="lcb-wrap lead">
@@ -70,13 +70,13 @@
 <section class="lcb-wrap block">
   <span class="lcb-eyebrow"><span class="dot"></span>Logo</span>
   <h2>The mark</h2>
-  <p class="desc">The bridge mark — LC Bridge's namesake glyph — in the one sanctioned gradient, paired with the wordmark in Inter Tight. The gradient lives here and nowhere else.</p>
+  <p class="desc">The bridge mark — LC Bridge's namesake glyph — in the one sanctioned gradient, paired with the approved LC Bridge wordmark. The gradient lives here and nowhere else.</p>
   <div class="row" style="gap:40px">
     <span class="lcb-logo" style="transform:scale(1.4);transform-origin:left center"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16v-4"/><path d="M21 16v-4"/><path d="M3 12c0-4 4-6 9-6s9 2 9 6"/><path d="M7 12v4"/><path d="M12 10v6"/><path d="M17 12v4"/></svg></span><span class="wm">LC Bridge</span></span>
   </div>
   <div class="subh">Rules</div>
   <div class="row" style="gap:32px;align-items:flex-start">
-    <p style="font-size:14px;color:var(--lcb-ink-2);max-width:30ch">Always "LC Bridge" (two words). Full legal name "Lead Connector Bridge" only in footers, schema, and first mention.</p>
+    <p style="font-size:14px;color:var(--lcb-ink-2);max-width:30ch">Always "LC Bridge" (two words). Use our own identity and contact details. Do not invent a registered legal name or an ownership relationship.</p>
     <p style="font-size:14px;color:var(--lcb-ink-2);max-width:30ch">Keep clear space ≥ the height of the mark. Never stretch, recolor the wordmark, or apply the gradient to anything but the mark.</p>
   </div>
 </section>
@@ -127,19 +127,19 @@
 <section class="lcb-wrap block">
   <span class="lcb-eyebrow"><span class="dot"></span>Typography</span>
   <h2>Type</h2>
-  <p class="desc">Inter Tight for display (tight, decisive), Inter for text, JetBrains Mono for eyebrows, labels, and figures. Hierarchy comes from weight and scale — not color.</p>
+  <p class="desc">Poppins for company display headings. Inter for text, navigation and readable labels. Reserve JetBrains Mono for code, IDs and aligned technical data. Keep marketing labels in sentence case at 13px, with normal spacing; never shrink them below 12px on mobile.</p>
   <div class="specimen">
-    <div class="lcb-display">Send, sign, and track agreements inside HighLevel.</div>
-    <p class="lcb-lede" style="margin-top:16px">The integration that lives where your team already works — no tabbing out to chase a signature, no third tab for your customers to learn.</p>
-    <div class="lcb-eyebrow" style="margin-top:18px"><span class="dot"></span>Built natively on HighLevel's own API and UI</div>
-    <p style="margin-top:18px;font-family:var(--lcb-font-mono);font-size:13px;color:var(--lcb-ink-2)">$29<span class="lcb-num"> / active sub-account</span> · 47 imported · 38 matched</p>
+    <div class="lcb-display">Your GoHighLevel. More possible.</div>
+    <p class="lcb-lede" style="margin-top:16px">Products and custom software that bring more of your business into GoHighLevel.</p>
+    <div class="lcb-eyebrow" style="margin-top:18px"><span class="dot"></span>LC Bridge / Built for GoHighLevel</div>
+    <p class="lcb-num" style="margin-top:18px;font-size:14px;color:var(--lcb-ink-2)">47 imported · 38 matched <span style="font-family:var(--lcb-font-mono);font-size:13px">record_1042</span></p>
   </div>
   <table class="scale">
-    <tr><td><span class="lcb-display" style="font-size:2.4rem">Display</span></td><td>Inter Tight 700 · -0.03em</td></tr>
-    <tr><td><span class="lcb-h2">Heading</span></td><td>Inter Tight 700 · -0.025em</td></tr>
+    <tr><td><span class="lcb-display" style="font-size:2.4rem">Display</span></td><td>Poppins 700 · -0.03em</td></tr>
+    <tr><td><span class="lcb-h2">Heading</span></td><td>Poppins 700 · -0.025em</td></tr>
     <tr><td><span class="lcb-lede">Lede paragraph</span></td><td>Inter 400 · 1.6</td></tr>
     <tr><td><span style="font-size:16px">Body copy</span></td><td>Inter 400/500 · 1.55</td></tr>
-    <tr><td><span class="lcb-eyebrow"><span class="dot"></span>Eyebrow / label</span></td><td>JetBrains Mono 600 · .14em · UPPER</td></tr>
+    <tr><td><span class="lcb-eyebrow"><span class="dot"></span>Eyebrow / label</span></td><td>Inter 600 · 13px / 1.5 · .01em · sentence case</td></tr>
   </table>
 </section>
 
@@ -185,7 +185,7 @@
   <h2>How we sound</h2>
   <p class="desc">Calm, plain, operator-to-operator — like one HighLevel pro explaining something to another.</p>
   <div class="voice">
-    <div class="v"><b>Sentence case</b><span>Headlines and buttons in sentence case. No Title Case, no ALL CAPS except mono labels.</span></div>
+    <div class="v"><b>Sentence case</b><span>Headlines and buttons in sentence case. Preserve proper names and acronyms. No decorative all-caps or monospace labels.</span></div>
     <div class="v"><b>No emoji</b><span>Ever. Warmth comes from clarity, not decoration.</span></div>
     <div class="v"><b>Plain &amp; concrete</b><span>"Send a contract without leaving HighLevel" beats "streamline your agreement lifecycle."</span></div>
     <div class="v"><b>Tabular numbers</b><span>Figures use mono / tabular nums so prices and counts line up.</span></div>
@@ -205,6 +205,7 @@
       <ul>
         <li>Flat, decisive cobalt on generous white</li>
         <li>Build hierarchy with weight &amp; scale</li>
+        <li>Use readable Inter labels in sentence case, including on mobile</li>
         <li>Reserve violet strictly for labelled AI</li>
         <li>Use the shared status hues for anything stateful</li>
         <li>Real product visuals and honest numbers</li>
@@ -218,6 +219,7 @@
         <li>A thick colored border down one side of a card</li>
         <li>Generic indigo (#6366F1) or rainbow accents</li>
         <li>Space Grotesk + Inter default combo</li>
+        <li>Decorative monospace, widely spaced all-caps labels, or tiny mobile text</li>
         <li>Emoji, Title Case, or hype adjectives</li>
         <li>Glassmorphism / neon glow stacks</li>
       </ul>
@@ -229,7 +231,7 @@
 <footer class="lcb-section--dark" style="padding:36px 0">
   <div class="lcb-wrap" style="display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap">
     <span class="lcb-logo"><img src="/assets/lcbridge-lockup-white.svg" alt="LC Bridge" width="180" height="60" style="height:42px;width:auto;display:block"></span>
-    <span style="font-family:var(--lcb-font-mono);font-size:11.5px;letter-spacing:.08em;color:var(--lcb-on-dark-mut)">Internal brand reference · tokens in /assets/brand.css · spec in /brand/brand-guidelines.md</span>
+    <span style="font-family:var(--lcb-font-text);font-size:13px;line-height:1.5;color:var(--lcb-on-dark-mut)">Internal brand reference · tokens in /assets/brand.css · spec in /brand/brand-guidelines.md</span>
   </div>
 </footer>
 

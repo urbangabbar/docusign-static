@@ -19,7 +19,7 @@
 .seo-nav .seo-brand{display:flex;gap:10px;align-items:center;min-width:0;text-decoration:none}.seo-brand img{width:32px;height:32px}.seo-brand span{font-weight:700;font-size:16px}
 .seo-footer{background:#0b1120;padding:30px 0;color:#d7d9e4;font-size:13px}.seo-footer .lcb-wrap{display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between}.seo-footer a{color:#fff;text-decoration:underline;text-underline-offset:3px}
 .seo-transcript{max-width:900px;margin:30px auto;padding:0 24px}.seo-transcript summary{padding:16px 0;min-height:48px;font-weight:600;cursor:pointer}.seo-transcript p{margin:12px 0;line-height:1.75}.seo-transcript ol{padding-left:24px}.seo-transcript li{margin-bottom:10px}
-.footer-heading{font-family:var(--lcb-font-mono,ui-monospace,monospace);font-size:11px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:inherit;margin:0 0 13px!important}
+.footer-heading{font-family:var(--lcb-font-label,Inter,system-ui,sans-serif);font-size:var(--lcb-label-size,13px);font-weight:600;line-height:1.5;letter-spacing:var(--lcb-label-tracking,.01em);text-transform:none;color:inherit;margin:0 0 13px!important}
 @media(max-width:500px){.seo-nav .lcb-btn{font-size:11px;padding:10px 12px;white-space:nowrap}.seo-brand span{font-size:13px}.seo-nav .lcb-wrap{gap:10px}.seo-wrap{padding:28px 20px 60px}}
 .seo-skip{position:absolute;left:12px;top:8px;z-index:100;padding:12px;background:#fff;border:2px solid #2a41d8;transform:translateY(-200%)}
 .seo-skip:focus{transform:none}

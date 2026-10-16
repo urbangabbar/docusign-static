@@ -18,6 +18,10 @@ This is a Community Agents-related repository. Use `karthik-sheetstack` for auth
 
 Use GoHighLevel as the primary platform name in public editorial copy, titles, descriptions and media context. Introduce GHL and HighLevel naturally as names for the same platform. The shared platform entity also records the spaced spellings Go High Level and High Level. Never assign these names to LC Bridge's organization identity or imply platform ownership. Preserve actual UI labels, quotations, transcript wording, legal trademark notices, URLs and code identifiers. Run `python3 scripts/check-platform-names.py`; `check-site.py` enforces page and media-discovery coverage.
 
+## Website typography
+
+Follow [LC Bridge's brand guidelines](brand/brand-guidelines.md) and the tokens in `assets/brand.css`. Marketing labels, eyebrows, badges and captions use Inter, sentence case and normal spacing. Use the shared label role (13px, weight 600, line-height 1.5, tracking .01em); do not shrink labels below 12px on mobile. Never use decorative monospace or widely spaced all-caps kickers. Reserve JetBrains Mono for code, IDs and aligned technical data. Keep Poppins for company display headings and preserve each product's established identity. Review desktop and mobile rendering before publishing typography changes.
+
 ## Every public content or URL change
 
 Apply [lcbridge-search-sync](skills/lcbridge-search-sync/SKILL.md) whenever adding, changing, moving, or deleting public content. Run `python3 scripts/sync-search.py --write`, `python3 scripts/sync-search.py`, and `python3 scripts/check-site.py` before publishing. The publishing workflow repeats generation and validation automatically on every main push.
