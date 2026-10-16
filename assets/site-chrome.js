@@ -23,3 +23,10 @@
     });
   });
 })();
+
+// A company menu encloses the product picker on small screens.
+document.querySelectorAll('[data-company-menu], .lcb-product-header details').forEach(function (menu) {
+  menu.addEventListener('click', function (event) { if (event.target.closest('a')) menu.open = false; });
+  document.addEventListener('click', function (event) { if (!menu.contains(event.target)) menu.open = false; });
+  menu.addEventListener('keydown', function (event) { if (event.key === 'Escape') { menu.open = false; menu.querySelector('summary').focus(); } });
+});

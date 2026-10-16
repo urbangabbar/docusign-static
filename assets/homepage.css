@@ -69,3 +69,7 @@ html{scroll-behavior:smooth;scroll-padding-top:92px}
 @media(max-width:520px){.home-hero h1{font-size:42px}.home-sheet-body{padding:17px}.home-sheet-kpis strong{font-size:21px}.home-sheet-kpis>div{padding:12px 9px}.home-sheet-bar{grid-template-columns:65px minmax(0,1fr) 60px;font-size:10px;gap:6px}.home-sheet-record{font-size:9px}.home-sheet-body>p{font-size:18px}.home-bridge{padding:20px}}
 
 .home-bridge>.home-preview{align-self:stretch}
+
+/* The company hero introduces the portfolio; product order does not set company positioning. */
+.home-hero h1{font-size:clamp(42px,5.6vw,76px)}.home-hero h1 span{color:var(--lcb-primary)}.home-bridge{background:var(--lcb-primary);align-items:stretch}.home-preview-sheets{border:0}.home-preview-status{display:block;margin:-5px 18px 15px;color:var(--lcb-ink-3);font-size:10px;line-height:1.5}.home-product-sheets{border-top:1px solid var(--lcb-line-2)}
+@media(max-width:560px){.home-hero h1{font-size:42px}}

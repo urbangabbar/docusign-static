@@ -173,6 +173,16 @@ def inventory(root, policy):
     return manifest, errors
 
 
+def product_overview(root, text):
+    """Keep the answer-engine product summary on the same facts and order as the site."""
+    facts_file=root/'data/product-facts.json';navigation_file=root/'data/site-navigation.json'
+    if not facts_file.exists() or not navigation_file.exists():return text
+    facts=json.loads(facts_file.read_text());products=json.loads(navigation_file.read_text())['products']
+    summary='## Products\n\n'+'\n'.join('- ['+facts[p['id']]['name']+']('+facts[p['id']]['url']+'): '+facts[p['id']]['description']+' '+p['status']+'.' for p in products)+'\n'
+    result,count=re.subn(r'## Products\n.*?(?=\n## |\Z)',lambda _:summary,text,count=1,flags=re.S)
+    return result if count else text+'\n\n'+summary
+
+
 def generated(root, policy, manifest):
     base = policy['baseUrl']
     ET.register_namespace('', NS)
@@ -201,7 +211,7 @@ def generated(root, policy, manifest):
     robots += f'\nSitemap: {base}/sitemap.xml\n'
     robots += f'Sitemap: {base}/image-sitemap.xml\n'
     # Retain reviewed product facts; replace old generated directory and prune obsolete local links.
-    llms = (root / 'llms.txt').read_text().split(MARKER)[0].rstrip()
+    llms = product_overview(root, (root / 'llms.txt').read_text().split(MARKER)[0].rstrip())
     valid = {p['url'] for p in manifest['pages']}
     redirects = {p['from']: p['to'] for p in manifest['redirects']}
     lines = []

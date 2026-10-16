@@ -1,5 +1,7 @@
 # Site integration release — October 16, 2026
 
+Positioning correction later the same day: the company homepage returns to its portfolio message. Product order remains Sheets, Community Agents, DocuSign. The full company header now contains product headers; see COMPANY-CONTAINER.md and .agents/product-marketing.md for current direction.
+
 Google Sheets leads the homepage hero, the complete product sections, the Products hub, and every shared product switcher. Community Agents follows, then DocuSign. Existing product destinations, install flows and homepage #next and #depth anchors remain intact.
 
 `data/site-navigation.json` defines the product order and destinations. `scripts/site_chrome.py` renders a single static footer, a company return bar for product families, and shared preferences. The Google Sheets generator uses the same renderer. Run `python3 scripts/sync-site-chrome.py --write` after page or navigation changes and its check without `--write` before publishing. CI repeats both. All 87 public canonical pages share the exact footer, product links, docs, company contact and clearly scoped product notices. Product pages have an explicit link back to `/`. No new public media was added.

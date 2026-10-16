@@ -73,6 +73,16 @@ class SearchSyncTests(unittest.TestCase):
         self.assertEqual(sync.run(self.root, True), 0)
         self.assertEqual(self.manifest()['pages'][0]['title'], '/')
 
+    def test_reviewed_facts_replace_stale_product_claims_in_llms(self):
+        (self.root/'data/product-facts.json').write_text(json.dumps({'sheets':{'name':'Sheets','url':BASE+'/','description':'Scheduled imports and reviewed updates.'},'agents':{'name':'Agents','url':BASE+'/','description':'Supplied knowledge.'}}))
+        (self.root/'data/site-navigation.json').write_text(json.dumps({'products':[{'id':'sheets','status':'Early access'},{'id':'agents','status':'Available now'}]}))
+        old='# Company\n\n## Products\n\n- Old two-way real-time sync\n\n## Other\n\nUseful reviewed content.'
+        text=sync.product_overview(self.root,old)
+        self.assertNotIn('two-way real-time',text)
+        self.assertLess(text.index('[Sheets]'),text.index('[Agents]'))
+        self.assertIn('Useful reviewed content.',text)
+        self.assertEqual(sync.product_overview(self.root,text),text)
+
     def test_public_noindex_and_wrong_canonical_fail(self):
         self.page('index.html', '/', robots='<meta name="googlebot" content="noindex">')
         self.assertEqual(sync.run(self.root, True), 1)

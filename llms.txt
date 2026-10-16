@@ -14,10 +14,9 @@ GoHighLevel is the primary platform name used here. GHL and HighLevel refer to t
 
 ## Products
 
-- [DocuSign Integration for GoHighLevel](https://lcbridge.app/docusign-integration/): Send, track, and sync DocuSign e-signature envelopes from inside GoHighLevel/LeadConnector workflows. Auto-fills documents from contact fields; signed status triggers workflows. White-label, no code.
-- [DocuSign workflows for GoHighLevel](https://lcbridge.app/docusign-integration/workflows): Six pre-built GoHighLevel workflows for DocuSign contracts, one per moment: send when the deal is ready, make sure it lands, catch them while it's open, chase what stalled, save the declined deal, close the loop when signed. They ship switched off, and every email carries the client sub-account's own branding.
-- [Google Sheets Integration for GoHighLevel](https://lcbridge.app/google-sheets-integration/): Two-way real-time sync between GoHighLevel contacts/records and Google Sheets. Launching soon; early access open.
-- [Community Agents](https://lcbridge.app/community-agents/): Released and available now. AI agents for GoHighLevel communities that answer questions, respond to introductions and wins, and surface possible buying interest with conversation evidence. Configure knowledge and roles, preview responses privately, and choose where agents participate. Keep the default AI disclosure enabled; your team reviews Member Insights and decides how to follow up. Install from GoHighLevel Marketplace in the owning sub-account, launch through GoHighLevel authentication, then connect the member portal.
+- [Google Sheets integration for GoHighLevel by LC Bridge](https://lcbridge.app/google-sheets-integration/): Bring GoHighLevel data into Google Sheets, explore 25 report templates, and review spreadsheet edits before updating matching contacts and opportunities. Early access.
+- [Community Agents by LC Bridge](https://lcbridge.app/community-agents/): AI replies for GoHighLevel community teams using supplied knowledge, private previews, and member assessments supported by source conversations. Built for GoHighLevel (GHL), also known as HighLevel. Available now.
+- [DocuSign Integration by LC Bridge](https://lcbridge.app/docusign-integration/): Connect DocuSign agreements to GoHighLevel contact data, configured follow-up workflows, and completed-answer sync. Built for GoHighLevel (GHL), also known as HighLevel. Available now.
 
 ## Community Agents — installation, pricing and guides
 
@@ -155,5 +154,5 @@ GoHighLevel is the primary platform name used here. GHL and HighLevel refer to t
 - [GoHighLevel Team Performance Template | LC Bridge](https://lcbridge.app/google-sheets-integration/templates/team-performance/): Sales and win-rate rankings by owner. Explore the GoHighLevel Team Performance sample, metric definitions, and required data for Google Sheets.
 - [Google Sheets early-access terms for GoHighLevel | LC Bridge](https://lcbridge.app/google-sheets-integration/terms/): For GoHighLevel: What the public samples, waitlist request, planned prices, and production access process mean.
 - [GoHighLevel Developers & API Integration Services | LC Bridge](https://lcbridge.app/highlevel-development/): GoHighLevel developers for custom API integrations, workflow automation and marketplace apps. Former HighLevel team members building for software brands.
-- [GoHighLevel Integrations: Google Sheets & More | LC Bridge](https://lcbridge.app/): Google Sheets reporting for GoHighLevel, community AI, and connected DocuSign agreements. Explore LC Bridge products, pricing, guides, and custom development.
+- [GoHighLevel Integrations & Custom Development | LC Bridge](https://lcbridge.app/): Products and custom software for GoHighLevel by LC Bridge. Explore Google Sheets reporting, Community Agents, DocuSign integration, and custom development.
 - [GoHighLevel Integrations & Apps | LC Bridge](https://lcbridge.app/products/): Explore LC Bridge products for GoHighLevel: Google Sheets reporting, Community Agents, and DocuSign integration. Find templates, pricing, and docs.
