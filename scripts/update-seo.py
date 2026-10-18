@@ -9,16 +9,11 @@ from html.parser import HTMLParser
 import html
 import json
 import re
-import hashlib
+from schema_content import align_graph, dumps
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'https://lcbridge.app'
 FACTS = json.loads((ROOT / 'data/product-facts.json').read_text())
-DATE = FACTS['lastReviewed']
-ASSET_VERSIONS = {
-    '/assets/' + name: hashlib.sha256((ROOT / 'assets' / name).read_bytes()).hexdigest()[:8]
-    for name in ['brand.css', 'fonts.css', 'seo-content.css', 'analytics.js', 'analytics-config.js', 'video-player.js', 'docusign-landing.css', 'docusign-landing.js', 'docusign-docs.css', 'docusign-docs.js', 'community-docs.css', 'homepage.css', 'product-menu.js']
-}
 
 
 class Text(HTMLParser):
@@ -68,9 +63,9 @@ def application(product):
         app['offers'] = offers
     else:
         app['offers'] = {'@type': 'Offer', 'name': 'Standard monthly',
-                         'price': '47', 'priceCurrency': 'USD',
+                         'price': str(data['monthlyUSD']), 'priceCurrency': 'USD',
                          'url': data['url'] + 'pricing/',
-                         'description': '$47/month per HighLevel sub-account includes $47 of AI usage. '
+                         'description': f"${data['monthlyUSD']}/month per GoHighLevel sub-account includes ${data['includedAIAllowanceUSD']} of AI usage. "
                                         'Unused allowance expires at renewal. Additional usage is metered '
                                         'at 4 times provider cost and billed through HighLevel. Taxes and '
                                         'agency resale pricing may change the final charge.'}
@@ -165,7 +160,7 @@ def update_page(path):
         old = next((n for n in prior if n.get('@type') in ['BlogPosting', 'Article', 'TechArticle']), {})
         article = {'@type': 'BlogPosting' if '/blog/' in canonical else 'TechArticle',
                    '@id': canonical + '#article', 'headline': heading, 'description': description,
-                   'datePublished': old.get('datePublished', DATE), 'dateModified': DATE,
+                   **({k: old[k] for k in ['datePublished', 'dateModified'] if k in old}),
                    'mainEntityOfPage': {'@id': canonical + '#webpage'},
                    'author': {'@type': 'Organization', '@id': BASE + '/#organization',
                               'name': 'LC Bridge', 'url': BASE + '/about/#editorial-team'},
@@ -207,11 +202,9 @@ def update_page(path):
     for node in prior:
         if node.get('@type') == 'DefinedTermSet':
             graph.append(node)
-    markup = json.dumps({'@context': 'https://schema.org', '@graph': graph}, ensure_ascii=False, indent=2)
+    graph = align_graph(graph, source, canonical)
+    markup = dumps(graph, indent=2)
     source = source.replace('</head>', '<script id="lcbridge-structured-data" type="application/ld+json">\n' + markup + '\n</script>\n</head>', 1)
-    for asset, version in ASSET_VERSIONS.items():
-        source = re.sub(re.escape(asset) + r'(?:\?v=[A-Za-z0-9_-]+)?(?=["\'])',
-                        asset + '?v=' + version, source)
     path.write_text(source)
     return True
 

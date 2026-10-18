@@ -9,6 +9,7 @@ import re
 import sys
 import xml.etree.ElementTree as ET
 from check_brand_separation import scan as scan_brand_separation
+from schema_validation import check as check_schema
 import importlib.util
 
 platform_spec = importlib.util.spec_from_file_location('platform_names', Path(__file__).with_name('check-platform-names.py'))
@@ -157,6 +158,7 @@ def main():
                 errors.append(f'Invalid JSON-LD: {url}: {exc}')
         if not page.schemas:
             errors.append(f'Missing static schema: {url}')
+        errors.extend(f'Schema: {url}: {issue}' for issue in check_schema(path.read_text(), url)['errors'])
         for link in page.links:
             full = urljoin(url, link)
             parts = urlsplit(full)
