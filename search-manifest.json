@@ -649,11 +649,32 @@
       "url": "https://lcbridge.app/google-sheets-integration/",
       "title": "GoHighLevel Google Sheets Integration | LC Bridge",
       "description": "Bring GoHighLevel data into Google Sheets. Explore 25 report previews, usage pricing, and reviewed CRM updates. Request LC Bridge early access.",
-      "contentHash": "dc6a694c9bdf012c7ef72b2834cff79ee11050e3eb2a08b274323e31680be80e",
-      "lastmod": "2026-10-18",
+      "contentHash": "b246d8e8905907ef4119de28d2c8f82f62060a46d395fa28d642c75956a3f4ea",
+      "lastmod": "2026-10-24",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
+      ]
+    },
+    {
+      "url": "https://lcbridge.app/google-sheets-integration/levelup/",
+      "title": "GoHighLevel Google Sheets Integration: Join the First Group | LC Bridge",
+      "description": "For GoHighLevel: reports, ad results and bulk follow-ups, all inside Google Sheets. Launching in the coming weeks. Join the first group to get access.",
+      "contentHash": "0e23f3c9013edf32dee3550f76f3e5daee0c1b47dcf9d71d70849bde4faa8dbe",
+      "lastmod": "2026-10-24",
+      "images": [
+        "https://lcbridge.app/assets/google-sheets/levelup/ev-ads.jpg",
+        "https://lcbridge.app/assets/google-sheets/levelup/ev-bulk.jpg",
+        "https://lcbridge.app/assets/google-sheets/levelup/ev-import.jpg",
+        "https://lcbridge.app/assets/google-sheets/levelup/ev-reports.jpg",
+        "https://lcbridge.app/assets/google-sheets/levelup/in-sheets.jpg",
+        "https://lcbridge.app/assets/google-sheets/levelup/logos/callrail.png",
+        "https://lcbridge.app/assets/google-sheets/levelup/logos/facebook.png",
+        "https://lcbridge.app/assets/google-sheets/levelup/logos/google-ads.svg",
+        "https://lcbridge.app/assets/google-sheets/levelup/logos/linkedin.png",
+        "https://lcbridge.app/assets/google-sheets/levelup/logos/quickbooks.svg",
+        "https://lcbridge.app/assets/google-sheets/levelup/logos/stripe.svg",
+        "https://lcbridge.app/assets/google-sheets/levelup/video-poster.jpg"
       ]
     },
     {
