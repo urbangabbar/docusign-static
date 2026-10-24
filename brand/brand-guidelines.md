@@ -80,5 +80,30 @@ Calm, plain, operator-to-operator. **Sentence case. No emoji.** Concrete over ab
 
 **Don't:** blue→violet gradients on heroes/headings/buttons (the #1 AI tell) · a thick colored border down one side of a card (a top AI-UI tell) · generic indigo `#6366F1` or rainbow accents · the Space Grotesk + Inter default combo · emoji / Title Case / hype adjectives · glassmorphism + neon glow.
 
+
+## 7. Google Sheets integration: the highlighter look
+The approved marketing look for the Google Sheets integration, first used in the LevelUp 2026 v2 ads, landing page and report carousel (approved by Karthik on 2026-10-24). It applies to ads, social posts, carousels, landing pages and product marketing pages. It does **not** apply inside the product UI.
+
+**The highlighter**
+- `#FFE14D` behind the 2–5 words that carry the point: the pain or the payoff. Text inside stays near-black (`#111111`, or Forest Ink `#17392B` on web), in light and dark mode.
+- At most once per headline and once per section. Never on body copy, buttons, links, numbers in tables or legal text.
+- Web: `<mark class="hl">` (`background:#ffe14d; padding:0 .12em; border-radius:2px; box-decoration-break:clone`) so it wraps cleanly across lines.
+
+**High contrast, native feel**
+- White ground, near-black heavy type (Roboto or Inter 800–900, tight tracking), green only on actions (Action Green `#106F43`) and good-news cells.
+- Product frames in ads use a 4px black border and a soft neutral shadow, so the sheet reads at phone size. Errors show as red `#N/A` / `#REF!` cells, results as green cells.
+- Label anything illustrative as **Sample data**.
+
+**Ad structure (shorts and carousels)**
+- Frame 0 already shows the pain: a headline plus the broken sheet. No logo intro, no blank or dark first frame.
+- The same object is fixed by about 3 seconds ("Same sheet. Matched for you.").
+- The objection line ("Two-way with HighLevel. No Zapier. No CSVs.") comes before the offer card.
+- Offer card in Action Green: **See 25 free report templates · No signup · lcbridge.app**. Do not say "Get early access" in ads or hero films.
+- 9:16: keep all text above the bottom 20% (y < 1536 px of 1920). Carousels: 1:1, one question per card, one readable mini dashboard.
+
+**Do not:** add a second highlight colour, highlight whole sentences, put the highlighter on green, or use it as decoration without a point.
+
+Reference files: `sheets-sync-prototype/marketing/levelup/ads/review/v2-mock.html`, `ads/build_v2.py`, `ads/carousel/carousel.html`; live on `/google-sheets-integration/` and `/google-sheets-integration/levelup/`.
+
 ---
-*v2 · Typography revised 2026-10-16: readable Inter labels replace decorative monospace. Refined Cobalt chosen 2026-06-22.*
+*v2 · Google Sheets highlighter look added 2026-10-24. Typography revised 2026-10-16: readable Inter labels replace decorative monospace. Refined Cobalt chosen 2026-06-22.*

@@ -30,9 +30,10 @@ header{position:relative;z-index:3}
 .kicker{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 14px}
 .kicker b{color:var(--ink)}
 h1{font-size:clamp(34px,5.2vw,58px);line-height:1.02;letter-spacing:-.035em;color:var(--ink);margin:0 0 18px;font-weight:800}
-h1 span{color:var(--green)}
+h1 span{background:#ffe14d;color:#111;padding:0 .1em;border-radius:2px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
 .sub{font-size:19px;line-height:1.55;margin:0 0 26px;max-width:520px;color:var(--text)}
 .capture{max-width:520px}
+.hl-form{display:block;width:100%;min-height:190px;border:0;overflow:hidden;border-radius:12px}
 .open{margin:0 0 22px}.btn.big{min-height:58px;padding:0 30px;font-size:18px}
 .gallery{padding-top:8px}.tpl{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.tpl a{display:block;border-radius:12px;overflow:hidden;border:1px solid var(--line)}.tpl img{display:block;width:100%;height:auto}
 @media (max-width:720px){.tpl{grid-template-columns:repeat(2,1fr);gap:10px}}
@@ -275,15 +276,16 @@ footer{padding:30px 0 48px;font-size:13px;color:var(--muted)}
   ]
 }
 </script>
+<link rel="stylesheet" href="/assets/site-chrome.css?v=2ea872d8">
 </head>
-<body>
-<header><div class="wrap bar">
+<body data-product-family="google-sheets"><a class="lcb-site-skip" href="#main">Skip to content</a><header class="lcb-company-header" aria-label="LC Bridge" data-company-header><div class="lcb-chrome-wrap lcb-company-row"><a class="lcb-company-logo" href="/" aria-label="LC Bridge home"><img src="/assets/lcbridge-lockup-black.svg" alt="LC Bridge" width="168" height="56"></a><nav class="lcb-company-desktop" aria-label="LC Bridge main navigation"><details class="lcb-product-switcher" data-product-switcher><summary>Products <span aria-hidden="true">⌄</span></summary><nav class="lcb-product-panel" aria-label="LC Bridge products"><a href="/google-sheets-integration/" data-product="google-sheets"><strong>Google Sheets integration</strong><span>CRM imports, reports, and reviewed updates</span><small>Early access</small></a><a href="/community-agents/" data-product="community-agents"><strong>Community Agents</strong><span>AI replies for your HighLevel communities</span><small>Available now</small></a><a href="/docusign-integration/" data-product="docusign"><strong>DocuSign integration</strong><span>Agreements connected to your CRM</span><small>Available now</small></a><a href="/products/">View all products →</a></nav></details><a href="/highlevel-development/">Custom development</a><a href="/about/">About LC Bridge</a><a href="/blog/">Guides</a><a class="lcb-company-cta" href="/book-a-call/">Talk to us <span aria-hidden="true">↗</span></a></nav><details class="lcb-company-menu" data-company-menu><summary aria-label="LC Bridge menu">Menu <span aria-hidden="true">+</span></summary><nav class="lcb-company-mobile" aria-label="LC Bridge mobile navigation"><details class="lcb-product-switcher" data-product-switcher><summary>Products <span aria-hidden="true">⌄</span></summary><nav class="lcb-product-panel" aria-label="LC Bridge products"><a href="/google-sheets-integration/" data-product="google-sheets"><strong>Google Sheets integration</strong><span>CRM imports, reports, and reviewed updates</span><small>Early access</small></a><a href="/community-agents/" data-product="community-agents"><strong>Community Agents</strong><span>AI replies for your HighLevel communities</span><small>Available now</small></a><a href="/docusign-integration/" data-product="docusign"><strong>DocuSign integration</strong><span>Agreements connected to your CRM</span><small>Available now</small></a><a href="/products/">View all products →</a></nav></details><a href="/highlevel-development/">Custom development</a><a href="/about/">About LC Bridge</a><a href="/blog/">Guides</a><a class="lcb-company-cta" href="/book-a-call/">Talk to us <span aria-hidden="true">↗</span></a></nav></details></div></header>
+<header class="lcb-product-header" aria-label="Google Sheets integration product navigation"><div class="wrap bar">
  <span class="logo"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="15" fill="#168A53"/><rect x="14" y="14" width="36" height="36" rx="2" fill="none" stroke="#fff" stroke-width="3"/><path d="M26 14V50M38 14V50M14 26H50M14 38H50" stroke="#fff" stroke-width="3"/></svg><b>Google Sheets integration</b><small>by LC Bridge</small></span>
  <span class="status">Launching soon</span>
  <span class="event">Seen at LevelUp 2026 · Dallas</span>
 </div></header>
 
-<main id="top">
+<main id="main">
 <div class="hero"><div class="wrap">
  <div>
   <p class="kicker">Free for <b>HighLevel</b> agencies and businesses</p>
@@ -292,11 +294,8 @@ footer{padding:30px 0 48px;font-size:13px;color:var(--muted)}
   <p class="open"><a class="btn big" id="openTpl" href="/google-sheets-integration/templates/?utm_source=levelup&amp;utm_medium=landing">See the 25 templates</a></p>
 
   <div class="capture" id="step1">
-   <form class="emailForm" novalidate>
-    <label for="email" class="kicker" style="display:block;margin:0 0 8px"><b>Want them on your own HighLevel data? Join the first group.</b></label>
-    <div class="row"><input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="Work email" required aria-describedby="hint"><button class="btn" type="submit">Join the first group</button></div>
-    <p class="hint" id="hint" aria-live="polite"></p>
-   </form>
+   <p class="kicker" style="margin:0 0 8px"><b>Want them on your own HighLevel data? Join the first group.</b></p>
+   <iframe class="hl-form" data-activation-type="alwaysActivated" data-deactivation-type="neverDeactivate" data-form-id="na1YK5kycU0nLOzNtWMf" data-form-name="Google Sheets first group" data-layout="{'id':'INLINE'}" data-layout-iframe-id="inline-na1YK5kycU0nLOzNtWMf" data-trigger-type="alwaysShow" id="inline-na1YK5kycU0nLOzNtWMf" scrolling="no" loading="lazy" src="https://api.leadconnectorhq.com/widget/form/na1YK5kycU0nLOzNtWMf" title="Join the first group"></iframe>
    <div class="reassure">
     <span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3.5 8.5l3 3 6-7" stroke="#168A53" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Two-way with HighLevel</span>
     <span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3.5 8.5l3 3 6-7" stroke="#168A53" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>No Zapier, no CSVs</span>
@@ -304,24 +303,10 @@ footer{padding:30px 0 48px;font-size:13px;color:var(--muted)}
    </div>
   </div>
 
-  <div class="panel" id="step2">
-   <h2>You're in. One quick question.</h2>
-   <p class="m">So the first email we send you is about the reports you need. Optional.</p>
-   <form class="q" id="qForm">
-    <label for="name">Your name</label><input id="name" name="name" autocomplete="name">
-    <label for="crm">Which CRM do you use?</label>
-    <select id="crm" name="crm"><option value="">Choose one</option><option>HighLevel</option><option>HighLevel, white-labelled by an agency</option><option>Another CRM</option></select>
-    <label for="job">What do you most want to report on?</label>
-    <select id="job" name="job"><option value="">Choose one</option><option>Pipeline and sales</option><option>Lead sources and ad results</option><option>Appointments</option><option>Payments and invoices</option><option>Client reporting for my agency</option></select>
-    <button class="btn full" type="submit" style="margin-top:18px">Finish</button>
-   </form>
-   <button class="skip" type="button" id="skip">Skip for now</button>
-  </div>
-
   <div class="panel" id="done" aria-live="polite">
    <div class="done-mark"><svg width="28" height="28" viewBox="0 0 64 64" fill="none"><rect x="14" y="14" width="36" height="36" rx="2" stroke="#fff" stroke-width="4"/><path d="M26 14V50M38 14V50M14 26H50M14 38H50" stroke="#fff" stroke-width="4"/></svg></div>
    <h2>You're on the first list.</h2>
-   <p class="m">We'll email <b id="who"></b> as soon as access opens, before we open to everyone.</p>
+   <p class="m">We'll email you as soon as access opens, before we open to everyone.</p>
    <ol class="next">
     <li><b class="n">1</b><span><b>When we open:</b> your access link arrives by email.</span></li>
     <li><b class="n">2</b><span><b>Setup:</b> connect HighLevel and Google, then pick your first reports.</span></li>
@@ -418,76 +403,50 @@ footer{padding:30px 0 48px;font-size:13px;color:var(--muted)}
   <h2 class="h2">Your CRM and your spreadsheet, in sync.</h2>
   <p class="lead">Join the first group. Launching in the coming weeks.</p>
   <div class="capture" id="step1b">
-   <form class="emailForm" novalidate>
-    <div class="row"><input type="email" name="email" inputmode="email" autocomplete="email" placeholder="Work email" required aria-label="Work email"><button class="btn" type="submit">Join the first group</button></div>
-    <p class="hint" aria-live="polite"></p>
-   </form>
+   <iframe class="hl-form" data-activation-type="alwaysActivated" data-deactivation-type="neverDeactivate" data-form-id="na1YK5kycU0nLOzNtWMf" data-form-name="Google Sheets first group" data-layout="{'id':'INLINE'}" data-layout-iframe-id="inline-na1YK5kycU0nLOzNtWMf-final" data-trigger-type="alwaysShow" id="inline-na1YK5kycU0nLOzNtWMf-final" scrolling="no" loading="lazy" src="https://api.leadconnectorhq.com/widget/form/na1YK5kycU0nLOzNtWMf" title="Join the first group"></iframe>
   </div>
  </div>
 </div></section>
 </main>
 
-<footer><div class="wrap"><p class="lcb-platform-context" style="margin:0 0 8px">For GoHighLevel (GHL), also known as HighLevel.</p>Google Sheets integration by LC Bridge, makers of the DocuSign and Community Agents apps for HighLevel. An independent product: Google Sheets and HighLevel are trademarks of their respective owners, and LC Bridge is not affiliated with or endorsed by Google or HighLevel. Product previews use sample data. <a href="https://lcbridge.app/google-sheets-integration/privacy/">Privacy</a> · <a href="https://lcbridge.app/google-sheets-integration/terms/">Terms</a></div></footer>
+<footer class="lcb-site-footer" data-shared-footer><div class="lcb-chrome-wrap"><div class="lcb-footer-top"><a href="/" aria-label="LC Bridge home"><img src="/assets/lcbridge-lockup-black.svg" alt="LC Bridge" width="180" height="60" loading="lazy"></a><p>Products and custom software.<br>Built for GoHighLevel.</p><a class="lcb-footer-home" href="/">Back to LC Bridge <span aria-hidden="true">↗</span></a></div><div class="lcb-footer-columns"><nav aria-label="Footer products"><h2>Products</h2><a href="/google-sheets-integration/">Google Sheets integration</a><a href="/community-agents/">Community Agents</a><a href="/docusign-integration/">DocuSign integration</a><a href="/products/">All products</a></nav><nav aria-label="Footer resources"><h2>Learn</h2><a href="/google-sheets-integration/templates/">25 Google Sheets report templates</a><a href="/google-sheets-integration/docs/">Google Sheets docs</a><a href="/community-agents/docs/">Community Agents docs</a><a href="/docusign-integration/docs/">DocuSign docs</a><a href="/blog/">Guides &amp; articles</a></nav><nav aria-label="Footer company"><h2>Company</h2><a href="/about/">About LC Bridge</a><a href="/highlevel-development/">Custom development</a><a href="/book-a-call/">Talk to our team</a><a href="mailto:support@lcbridge.app">support@lcbridge.app</a></nav><nav aria-label="Product notices"><h2>Product notices</h2><a href="/google-sheets-integration/privacy/">Google Sheets privacy</a><a href="/google-sheets-integration/terms/">Google Sheets early-access terms</a><a href="/docusign-integration/privacy">DocuSign privacy</a><a href="/docusign-integration/terms">DocuSign terms</a></nav></div><div class="lcb-footer-bottom"><p class="lcb-platform-context">For GoHighLevel (GHL), also known as HighLevel.</p><p>LC Bridge is an independent company. GoHighLevel, Google Sheets, and DocuSign are trademarks of their respective owners and do not sponsor or endorse LC Bridge.</p><div><span>© 2026 LC Bridge</span><button type="button" class="lcb-consent-link" id="analytics-settings">Analytics preferences</button></div></div></div></footer>
 
-<div class="sticky" id="sticky"><a class="btn" href="#top" id="stickyBtn">Join the first group</a></div>
+<div class="sticky" id="sticky"><a class="btn" href="/google-sheets-integration/templates/?utm_source=levelup&amp;utm_medium=landing&amp;utm_content=sticky" id="stickyBtn">See the 25 templates</a></div>
 
+<script src="https://link.msgsndr.com/js/form_embed.js" defer></script>
 <script>
 (function(){
-  // Production wiring: set before publishing (HighLevel inbound-webhook URL).
-  var CONFIG = { webhook: '', source: 'levelup-2026' };
-
-  // Headline mirrors the ad that brought the visitor (?a=reports|csv|ads|leads).
+  // Headline mirrors the ad that brought the visitor (?a=ads|leads|csv|reports).
   var A = {
-    reports:['Stop rebuilding the same report. <span>25 HighLevel reports, ready in Sheets.</span>','Pipeline, lead sources, bookings, goals, team and invoices. Refreshed on schedule, without exports.'],
-    csv:['Done exporting CSVs from HighLevel? <span>Keep your data live in Sheets.</span>','Pick records, fields and filters once. Your sheet stays current on its own.'],
-    ads:['See which ads <span>actually booked appointments.</span>','Facebook, Google and LinkedIn Ads, CallRail, Stripe and QuickBooks, joined to your HighLevel contacts.'],
-    leads:['Follow up with the right leads <span>before they go cold.</span>','Build the list in Sheets, then tag contacts or start a HighLevel workflow, all at once.']
+    reports:['Stop rebuilding the same report. <span>25 free templates, ready in Sheets.</span>','Pipeline, lead sources, bookings, goals, team and invoices. Open them now with sample data. No signup.'],
+    csv:['Still exporting CSVs every Monday? <span>These sheets update themselves.</span>','25 free HighLevel report templates in Google Sheets. Open them now with sample data. No signup.'],
+    ads:['Which ads booked calls? <span>See the free Paid Ads template.</span>','Ad spend matched to your HighLevel contacts, in one sheet. One of 25 free report templates. No signup.'],
+    leads:['Leads from your best ad that never booked? <span>Find them in one sheet.</span>','Then start a HighLevel follow-up for all of them, right from Sheets. See 25 free report templates. No signup.']
   };
-  var params = new URLSearchParams(location.search), a = params.get('a');
+  var a = new URLSearchParams(location.search).get('a');
   if (A[a]) { document.getElementById('headline').innerHTML = A[a][0]; document.getElementById('subline').textContent = A[a][1]; }
 
-  var DOMAINS={'gmial.com':'gmail.com','gmal.com':'gmail.com','gmai.com':'gmail.com','gamil.com':'gmail.com','gmail.co':'gmail.com','hotmial.com':'hotmail.com','yahooo.com':'yahoo.com','outlok.com':'outlook.com','icloud.co':'icloud.com'};
-  var email = '';
-  function send(payload){
-    if (!CONFIG.webhook) return;
-    var body = Object.assign({source:CONFIG.source, angle:a||'', utm_source:params.get('utm_source')||'', utm_content:params.get('utm_content')||''}, payload);
-    fetch(CONFIG.webhook,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)}).catch(function(){});
-  }
-  function show(id){
-    ['step1','step2','done'].forEach(function(s){ document.getElementById(s).style.display = s===id ? 'block' : 'none'; });
-    document.getElementById('sticky').classList.remove('show');
-    document.getElementById(id).scrollIntoView({block:'center'});
-  }
-  document.querySelectorAll('.emailForm').forEach(function(f){
-    var input=f.querySelector('input[type=email]'), hint=f.querySelector('.hint'), row=f.querySelector('.row');
-    f.addEventListener('submit',function(e){
-      e.preventDefault();
-      var v=input.value.trim().toLowerCase(), dom=v.split('@')[1]||'';
-      if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)){
-        hint.className='hint err'; hint.textContent='Enter your work email, like you@agency.com.'; row.classList.add('invalid'); input.setAttribute('aria-invalid','true'); input.focus(); return;
-      }
-      if(DOMAINS[dom] && !f.dataset.ok){
-        var fix=v.split('@')[0]+'@'+DOMAINS[dom];
-        hint.className='hint'; hint.innerHTML='Did you mean <button type="button">'+fix+'</button>?';
-        hint.querySelector('button').onclick=function(){input.value=fix;hint.textContent='';};
-        f.dataset.ok='1'; return;
-      }
-      row.classList.remove('invalid'); input.removeAttribute('aria-invalid'); hint.textContent='';
-      email=v; send({email:v});
-      if (window.fbq) fbq('track','Lead');
-      show('step2');
-    });
+  // Template clicks: Meta ViewContent.
+  document.querySelectorAll('a[href*="/templates/"]').forEach(function(l){ l.addEventListener('click',function(){ if(window.fbq) fbq('track','ViewContent',{content_name:'templates'}); }); });
+
+  // The HighLevel form posts "set-sticky-contacts" to this page when a contact is submitted.
+  // The form's own UTM capture runs through form_embed.js (fetch-query-params).
+  var done=false;
+  window.addEventListener('message',function(e){
+    if (done || !/leadconnectorhq\.com$|msgsndr\.com$/.test(new URL(e.origin).hostname) || !Array.isArray(e.data) || e.data[0]!=='set-sticky-contacts') return;
+    done=true;
+    if (window.fbq) fbq('track','Lead');
+    setTimeout(function(){
+      document.getElementById('step1').style.display='none';
+      var d=document.getElementById('done'); d.style.display='block'; d.scrollIntoView({block:'center'});
+    }, 1200);
   });
-  function finish(extra){ if(extra) send(Object.assign({email:email},extra)); document.getElementById('who').textContent=email; show('done'); }
-  document.getElementById('qForm').addEventListener('submit',function(e){ e.preventDefault(); var f=e.target; finish({name:f.name.value, crm:f.crm.value, report:f.job.value}); });
-  document.getElementById('skip').addEventListener('click',function(){ finish(); });
 
   var sticky=document.getElementById('sticky'), s1=document.getElementById('step1');
   if('IntersectionObserver' in window){
     new IntersectionObserver(function(es){ es.forEach(function(en){ sticky.classList.toggle('show', s1.style.display!=='none' && !en.isIntersecting); }); }).observe(s1);
   }
-  document.getElementById('stickyBtn').addEventListener('click',function(e){ e.preventDefault(); s1.scrollIntoView({block:'center'}); document.getElementById('email').focus({preventScroll:true}); });
 })();
-</script>
+</script><dialog class="lcb-consent-dialog" id="analytics-dialog" aria-labelledby="analytics-title"><h2 id="analytics-title">Analytics preferences</h2><p id="analytics-description">Optional analytics require your consent before any analytics requests are sent. Hosted forms have their own provider controls.</p><div><button type="button" data-analytics-consent="granted">Allow analytics</button><button type="button" data-analytics-consent="denied">Keep analytics off</button></div></dialog><script src="/assets/site-chrome.js?v=3f2e3dc9" defer></script>
 </body>
 </html>
