@@ -21,6 +21,25 @@
     "assets/fonts/poppins-bold-latin.woff2": "197a3cbd7290c242c5c765268cdd69a9a39867fdc80cd13071f243a81c56fb76",
     "assets/fonts/poppins-medium-500.woff2": "289e0afc8be731a86822349e54557296f145926496bd2138db1bac0db77f77a2",
     "assets/fonts/poppins-semibold-latin.woff2": "872e862918591a9e824dc03ed92f05729435ffbb8ebbb10eff7eda26592b1798",
+    "assets/google-sheets/levelup/ev-ads.jpg": "cf2cea7463bdf51a73f996bb5ece5280e87815a6d0523872d9a138acd24e82b5",
+    "assets/google-sheets/levelup/ev-bulk.jpg": "f6a4e9117a669971d08c9caa7e9a7651f72e4d891bba6d4039b3e749414634f5",
+    "assets/google-sheets/levelup/ev-import.jpg": "b157e64c12b0241a39979adca502b849264444cd581fbf744bf00d0256bf7012",
+    "assets/google-sheets/levelup/ev-reports.jpg": "a5e21c2ace4df14ae499d8ae6589dc65ce41c3bdc71a0e4e3e64db4f52b496db",
+    "assets/google-sheets/levelup/in-sheets.jpg": "2a6efeee1f9e96ba30c6157d215c6805bcf2f69c2f114587ee5b6cd9635c6037",
+    "assets/google-sheets/levelup/logos/callrail.png": "e104ff309210b79ae05412537e4d399f78e4f62a384d93ea1fabb82e9ac6ec60",
+    "assets/google-sheets/levelup/logos/facebook.png": "a3c4f14c54929f56a44c8d7a551ad1b40c3f9fa8369da3a7a2b218f9d9831597",
+    "assets/google-sheets/levelup/logos/google-ads.svg": "69b023ff2ac2e7e72777701822b842f66128a41cd2035188c89ce45e940eb7bc",
+    "assets/google-sheets/levelup/logos/linkedin.png": "3c0149f26168b5fe0f43e68664abe40341a6443b3cd435d18a73e12f64f8b600",
+    "assets/google-sheets/levelup/logos/quickbooks.svg": "d5a398a718e8cc41d8c4deaef430ba3db881351bc89b38cefb66046c0f42ded9",
+    "assets/google-sheets/levelup/logos/stripe.svg": "7253e3eb4657773723a696a1f4ad9c8f62794191b9f09c1359db74a51d2d3ae5",
+    "assets/google-sheets/levelup/tpl-1.jpg": "d00c4d4d388718cb1849444a057d24ed4c065eb3e26ec1351d2b152ab95d1117",
+    "assets/google-sheets/levelup/tpl-2.jpg": "44831d70da5d63839d9a388a1aebffcab76ca1c2485b7539b450029c40820591",
+    "assets/google-sheets/levelup/tpl-3.jpg": "6fbaddb1594a2b4671f57e3de69948d939503ea45f409e59a75db346c51754b1",
+    "assets/google-sheets/levelup/tpl-4.jpg": "64051fec93e697ec251c774cd35d91f86b028eb16f7c688ca70fe35fe5f292fc",
+    "assets/google-sheets/levelup/tpl-5.jpg": "6045eab217632bebab8f7202641d3e974728cecfe1c13f6270cb153254390938",
+    "assets/google-sheets/levelup/tpl-6.jpg": "80989589ff28d76fd99b400c66df4fd081bef848acd785e9071c0829dd00f1a0",
+    "assets/google-sheets/levelup/video-poster.jpg": "ce66b52d220fbef447bc0a1b64910b2edb292941a9f0c09d0613a2b679566c74",
+    "assets/google-sheets/social.png": "cca020609d968c0bf705638028f1daf174ecc82435d705fe37e6ccffe89ff753",
     "assets/lcbridge-icon-512.png": "76502af8d3a15bc0782388ea1ee15c172e7ea0ab0a78511284f44e3a7aaa46df",
     "assets/lcbridge-lockup-black.png": "5852089e05f93a57831c553afa5ff72ab1398698211d8407449971a47dac14ef",
     "assets/lcbridge-lockup-black.svg": "b34e46ad1943eed56e8bdb59e7de9b1b2b467443edc3ab5ca7797824c784bcf3",
@@ -40,6 +59,7 @@
     "assets/video/docusign-demo-thumbnail-1280.webp": "0cbd541c452f2a8e8f61b665e207300dbfc1a07e7cf3b7d8a21d21db65c0ddc5",
     "assets/video/docusign-demo-thumbnail-640.webp": "563cb17fb7a02330e9c95ca31406a2a2047c46779af80b2ad12a246bb6f5480b",
     "assets/video/docusign-demo-thumbnail.jpg": "6d47c2198e059abc1cf6eab533c51c4431b75aa053e37e7059a4d2718af08183",
+    "assets/video/gsi-hero-highlevel.mp4": "14768d37ca4509e26c305ab755122f5dc75a970f2d554a006b9d80f8617653b3",
     "assets/video/lcbridge-docusign-highlevel-poster-640.webp": "8f6fdb46ab10c9e2c8b8000756a9015713b9ea03db19e54677ac9de0aec191c6",
     "assets/video/lcbridge-docusign-highlevel-poster.jpg": "955291779562ae0bffa0594dc6f6797dc22428babda0f62cef3e48ab4b7c1c7c",
     "assets/video/lcbridge-docusign-highlevel-poster.webp": "fab283dd7c755d15fbea5833e2115a357b3332f737a83ae8b763d46f21131f09",
@@ -89,8 +109,7 @@
     "docusign-integration/img/worklist.png": "8290f527291eab18a67fede3923b9e586b8be376c4d652420f41a24c0a3e26f0",
     "favicon.ico": "4807d98f6e5ce74d9c3a7d00e5c9240e0cb5a32e95c20e116ee72fefa3559487",
     "favicon.svg": "146f43932133c7db0274f841323232f10b7b0c68f735cc4b0898e5b66433f402",
-    "hero-01.png": "85ce72d3d5729befa626e2c6c6646289ec6714f89dcdcf549175a5c160ee4739",
-    "assets/google-sheets/social.png": "cca020609d968c0bf705638028f1daf174ecc82435d705fe37e6ccffe89ff753"
+    "hero-01.png": "85ce72d3d5729befa626e2c6c6646289ec6714f89dcdcf549175a5c160ee4739"
   },
   "reviews": [
     {
@@ -99,6 +118,31 @@
         "assets/google-sheets/social.png"
       ],
       "method": "Original static SVG source and rendered 1200x630 PNG visually reviewed; only LC Bridge, Google Sheets, GoHighLevel, product capabilities and LC Bridge URL; no embedded media, external images or metadata."
+    },
+    {
+      "date": "2026-10-24",
+      "paths": [
+        "assets/google-sheets/levelup/ev-ads.jpg",
+        "assets/google-sheets/levelup/ev-bulk.jpg",
+        "assets/google-sheets/levelup/ev-import.jpg",
+        "assets/google-sheets/levelup/ev-reports.jpg",
+        "assets/google-sheets/levelup/in-sheets.jpg",
+        "assets/google-sheets/levelup/logos/callrail.png",
+        "assets/google-sheets/levelup/logos/facebook.png",
+        "assets/google-sheets/levelup/logos/google-ads.svg",
+        "assets/google-sheets/levelup/logos/linkedin.png",
+        "assets/google-sheets/levelup/logos/quickbooks.svg",
+        "assets/google-sheets/levelup/logos/stripe.svg",
+        "assets/google-sheets/levelup/tpl-1.jpg",
+        "assets/google-sheets/levelup/tpl-2.jpg",
+        "assets/google-sheets/levelup/tpl-3.jpg",
+        "assets/google-sheets/levelup/tpl-4.jpg",
+        "assets/google-sheets/levelup/tpl-5.jpg",
+        "assets/google-sheets/levelup/tpl-6.jpg",
+        "assets/google-sheets/levelup/video-poster.jpg",
+        "assets/video/gsi-hero-highlevel.mp4"
+      ],
+      "method": "LevelUp page media. Raster OCR (tesseract) on every image; hero film frames at one-second intervals (90 frames) plus captions OCR/text-checked; SVG logo text read. Only LC Bridge, Google Sheets, HighLevel, the six partner integrations and sample data; no cross-brand references. Approved by Karthik on 2026-10-24."
     }
   ]
 }
