@@ -98,7 +98,7 @@ The approved marketing look for the Google Sheets integration, first used in the
 - Frame 0 already shows the pain: a headline plus the broken sheet. No logo intro, no blank or dark first frame.
 - The same object is fixed by about 3 seconds ("Same sheet. Matched for you.").
 - The objection line ("Two-way with HighLevel. No Zapier. No CSVs.") comes before the offer card.
-- Offer card in Action Green: **See 25 free report templates · No signup · lcbridge.app**. Do not say "Get early access" in ads or hero films.
+- Offer card in Action Green: **See 25 free report templates · No signup · lcbridge.app**. The signup button everywhere is **Get early access** (decided 2026-10-24); ads and hero films lead with the templates offer instead of the signup.
 - 9:16: keep all text above the bottom 20% (y < 1536 px of 1920). Carousels: 1:1, one question per card, one readable mini dashboard.
 
 **Do not:** add a second highlight colour, highlight whole sentences, put the highlighter on green, or use it as decoration without a point.
