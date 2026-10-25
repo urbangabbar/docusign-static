@@ -22,7 +22,9 @@ if(calculator){const config=JSON.parse(document.querySelector('#pricing-config')
   }catch(ex){result.hidden=true;error.textContent=ex.message;}
  });
 }
-const frame=document.querySelector('#sheets-waitlist');
+const filmButton=document.querySelector('[data-film-play]');
+if(filmButton){const film=document.getElementById(filmButton.getAttribute('aria-controls'));filmButton.addEventListener('click',()=>film.play());film.addEventListener('play',()=>{filmButton.hidden=true;event('product_film_played');},{once:true});}
+const frame=document.querySelector('#sheets-waitlist, iframe.hl-form');
 if(frame){let started=false;frame.addEventListener('focus',()=>{if(!started){started=true;event('early_access_form_started');}});}
 // A frame load/click is never reported as an accepted request. Provider-confirmed
 // completion must be wired by its actual trusted success flow, not inferred here.
