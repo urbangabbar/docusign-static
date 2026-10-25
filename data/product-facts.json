@@ -131,7 +131,7 @@
       "importMode": "Manual or scheduled imports; production source acceptance varies by object.",
       "excluded": "Workflow run reporting is unavailable. No claim of universal object writeback, email body availability, unlimited scale, or measured production performance.",
       "sampleData": "Invented relational records, frozen to October 2026. Public previews never connect a live account.",
-      "whiteLabel": "Inside the app, the CRM is called \"your CRM\", record buttons say \"Open in CRM\", and HighLevel is never named in the app, its statuses or its errors. Confirmed by Karthik Anand on 2026-10-25.",
+      "whiteLabel": "Brand-neutral inside the app: no agency, LC Bridge or HighLevel branding. The CRM is called \"CRM\", record buttons say \"Open in CRM\", and HighLevel is never named in the app, its statuses or its errors. Confirmed by Karthik Anand on 2026-10-25.",
       "integrations": "Facebook Ads, Google Ads, LinkedIn Ads, CallRail, Stripe and QuickBooks, joined to contacts by recorded IDs; all six included in early access. Confirmed by Karthik Anand on 2026-10-25."
     }
   }
