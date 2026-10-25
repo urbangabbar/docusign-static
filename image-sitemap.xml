@@ -636,6 +636,36 @@
   <url>
     <loc>https://lcbridge.app/google-sheets-integration/</loc>
     <image:image>
+      <image:loc>https://lcbridge.app/assets/google-sheets/levelup/ev-ads.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://lcbridge.app/assets/google-sheets/levelup/ev-bulk.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://lcbridge.app/assets/google-sheets/levelup/ev-import.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://lcbridge.app/assets/google-sheets/levelup/ev-reports.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://lcbridge.app/assets/google-sheets/levelup/logos/callrail.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://lcbridge.app/assets/google-sheets/levelup/logos/facebook.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://lcbridge.app/assets/google-sheets/levelup/logos/google-ads.svg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://lcbridge.app/assets/google-sheets/levelup/logos/linkedin.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://lcbridge.app/assets/google-sheets/levelup/logos/quickbooks.svg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://lcbridge.app/assets/google-sheets/levelup/logos/stripe.svg</image:loc>
+    </image:image>
+    <image:image>
       <image:loc>https://lcbridge.app/assets/google-sheets/levelup/video-poster.jpg</image:loc>
     </image:image>
     <image:image>
