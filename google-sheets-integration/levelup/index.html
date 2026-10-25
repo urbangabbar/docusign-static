@@ -34,7 +34,8 @@ h1{font-size:clamp(34px,5.2vw,58px);line-height:1.02;letter-spacing:-.035em;colo
 h1 span{background:#ffe14d;color:#111;padding:0 .1em;border-radius:2px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
 .sub{font-size:19px;line-height:1.55;margin:0 0 26px;max-width:520px;color:var(--text)}
 .capture{max-width:520px}
-.hl-form{display:block;width:100%;min-height:190px;border:0;overflow:hidden;border-radius:12px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.btn:disabled{opacity:.6;cursor:wait}
 .open{margin:0 0 22px}.btn.big{min-height:58px;padding:0 30px;font-size:18px}
 .gallery{padding-top:8px}.tpl{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.tpl a{display:block;border-radius:12px;overflow:hidden;border:1px solid var(--line)}.tpl img{display:block;width:100%;height:auto}
 @media (max-width:720px){.tpl{grid-template-columns:repeat(2,1fr);gap:10px}}
@@ -295,7 +296,7 @@ footer{padding:30px 0 48px;font-size:13px;color:var(--muted)}
 
   <div class="capture" id="step1">
    <p class="kicker" style="margin:0 0 8px"><b>Want them on your own HighLevel data? Get early access.</b></p>
-   <iframe class="hl-form" data-activation-type="alwaysActivated" data-deactivation-type="neverDeactivate" data-form-id="na1YK5kycU0nLOzNtWMf" data-form-name="Google Sheets early access" data-layout="{'id':'INLINE'}" data-layout-iframe-id="inline-na1YK5kycU0nLOzNtWMf" data-trigger-type="alwaysShow" id="inline-na1YK5kycU0nLOzNtWMf" scrolling="no" src="https://api.leadconnectorhq.com/widget/form/na1YK5kycU0nLOzNtWMf" title="Get early access"></iframe>
+   <form class="emailForm" data-form="hero" novalidate><label for="email1" class="sr-only">Work email</label><div class="row"><input id="email1" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@agency.com" required aria-describedby="hint1"><button class="btn" type="submit">Get early access</button></div><p class="hint" id="hint1" aria-live="polite"></p></form>
    <div class="reassure">
     <span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3.5 8.5l3 3 6-7" stroke="#168A53" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Two-way with HighLevel</span>
     <span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3.5 8.5l3 3 6-7" stroke="#168A53" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>No Zapier, no CSVs</span>
@@ -403,7 +404,7 @@ footer{padding:30px 0 48px;font-size:13px;color:var(--muted)}
   <h2 class="h2">Your CRM and your spreadsheet, in sync.</h2>
   <p class="lead">Get early access. Launching in the coming weeks.</p>
   <div class="capture" id="step1b">
-   <iframe class="hl-form" data-activation-type="alwaysActivated" data-deactivation-type="neverDeactivate" data-form-id="na1YK5kycU0nLOzNtWMf" data-form-name="Google Sheets early access" data-layout="{'id':'INLINE'}" data-layout-iframe-id="inline-na1YK5kycU0nLOzNtWMf-final" data-trigger-type="alwaysShow" id="inline-na1YK5kycU0nLOzNtWMf-final" scrolling="no" src="https://api.leadconnectorhq.com/widget/form/na1YK5kycU0nLOzNtWMf" title="Get early access"></iframe>
+   <form class="emailForm" data-form="final" novalidate><label for="email2" class="sr-only">Work email</label><div class="row"><input id="email2" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@agency.com" required aria-describedby="hint2"><button class="btn" type="submit">Get early access</button></div><p class="hint" id="hint2" aria-live="polite"></p></form>
   </div>
  </div>
 </div></section>
@@ -413,7 +414,6 @@ footer{padding:30px 0 48px;font-size:13px;color:var(--muted)}
 
 <div class="sticky" id="sticky"><a class="btn" href="/google-sheets-integration/templates/?utm_source=levelup&amp;utm_medium=landing&amp;utm_content=sticky" id="stickyBtn">See the 25 templates</a></div>
 
-<script src="https://link.msgsndr.com/js/form_embed.js" defer></script>
 <script>
 (function(){
   // Headline mirrors the ad that brought the visitor (?a=ads|leads|csv|reports).
@@ -429,17 +429,41 @@ footer{padding:30px 0 48px;font-size:13px;color:var(--muted)}
   // Template clicks: Meta ViewContent.
   document.querySelectorAll('a[href*="/templates/"]').forEach(function(l){ l.addEventListener('click',function(){ if(window.fbq) fbq('track','ViewContent',{content_name:'templates'}); }); });
 
-  // The HighLevel form posts "set-sticky-contacts" to this page when a contact is submitted.
-  // The form's own UTM capture runs through form_embed.js (fetch-query-params).
-  var done=false;
-  window.addEventListener('message',function(e){
-    if (done || !/leadconnectorhq\.com$|msgsndr\.com$/.test(new URL(e.origin).hostname) || !Array.isArray(e.data) || e.data[0]!=='set-sticky-contacts') return;
-    done=true;
-    if (window.fbq) fbq('track','Lead');
-    setTimeout(function(){
-      document.getElementById('step1').style.display='none';
-      var d=document.getElementById('done'); d.style.display='block'; d.scrollIntoView({block:'center'});
-    }, 1200);
+  // Signups go to the HighLevel inbound-webhook workflow, which creates the contact and adds the tags.
+  var WEBHOOK = 'https://services.leadconnectorhq.com/hooks/flpYHSWVNQelGFMZvj48/webhook-trigger/f68ce171-6637-4841-8220-1313a00930ee';
+  var params = new URLSearchParams(location.search);
+  var DOMAINS = {'gmial.com':'gmail.com','gmal.com':'gmail.com','gmai.com':'gmail.com','gamil.com':'gmail.com','gmail.co':'gmail.com','hotmial.com':'hotmail.com','yahooo.com':'yahoo.com','outlok.com':'outlook.com','icloud.co':'icloud.com'};
+  function showDone(){
+    document.getElementById('step1').style.display='none';
+    document.querySelectorAll('[data-form="final"]').forEach(function(f){ f.closest('.capture').innerHTML='<p class="lead">You\'re on the early-access list.</p>'; });
+    var d=document.getElementById('done'); d.style.display='block'; d.scrollIntoView({block:'center'});
+  }
+  document.querySelectorAll('.emailForm').forEach(function(f){
+    var input=f.querySelector('input'), hint=f.querySelector('.hint'), row=f.querySelector('.row'), btn=f.querySelector('button');
+    function err(msg){ hint.className='hint err'; hint.textContent=msg; row.classList.add('invalid'); input.setAttribute('aria-invalid','true'); }
+    f.addEventListener('submit',function(e){
+      e.preventDefault();
+      var v=input.value.trim().toLowerCase(), dom=v.split('@')[1]||'';
+      if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)){ err('Enter your work email, like you@agency.com.'); input.focus(); return; }
+      if(DOMAINS[dom] && !f.dataset.ok){
+        var fix=v.split('@')[0]+'@'+DOMAINS[dom];
+        hint.className='hint'; hint.innerHTML='Did you mean <button type="button">'+fix+'</button>?';
+        hint.querySelector('button').onclick=function(){ input.value=fix; hint.textContent=''; };
+        f.dataset.ok='1'; return;
+      }
+      row.classList.remove('invalid'); input.removeAttribute('aria-invalid'); hint.className='hint'; hint.textContent='Sending…'; btn.disabled=true;
+      fetch(WEBHOOK,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({
+        email:v, source:'levelup-2026', angle:a||'', product:'google-sheets', page:location.href,
+        utm_source:params.get('utm_source')||'', utm_medium:params.get('utm_medium')||'', utm_campaign:params.get('utm_campaign')||'', utm_content:params.get('utm_content')||'',
+        submitted_at:new Date().toISOString()
+      })}).then(function(r){
+        if(!r.ok) throw new Error(r.status);
+        if (window.fbq) fbq('track','Lead');
+        showDone();
+      }).catch(function(){
+        btn.disabled=false; err('That didn\'t go through. Try again, or email support@lcbridge.app.');
+      });
+    });
   });
 
   var sticky=document.getElementById('sticky'), s1=document.getElementById('step1');
