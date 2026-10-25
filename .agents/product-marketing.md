@@ -76,6 +76,8 @@ Avoid vague superlatives, real-time automatic two-way claims, monthly distinct-r
 
 Direct, specific, helpful and technically honest. Clear next actions. Company identity uses the LC Bridge cobalt brand; each product can retain its own visual identity inside the company container. LC Bridge's own identity and contacts govern all public material; follow AGENTS.md.
 
+**Confirmed 2026-10-25 (Karthik):** the app is fully white-labelled for client sub-accounts (HighLevel is never named in the app, its statuses or errors), and the six integrations (Facebook Ads, Google Ads, LinkedIn Ads, CallRail, Stripe, QuickBooks) are included in early access. Do not claim LC Bridge itself never appears (Google sign-in may show the developer).
+
 ## Proof points
 
 25 report previews are backed by the prototype's imported calculation engine and clearly labelled synthetic data. Existing product demos and documentation substantiate the described workflows and controls, subject to their captions and availability notices. No customer logos, testimonials, conversion rates, SEO gains, production throughput or field performance scores have been established by this task.
