@@ -216,13 +216,7 @@
       <image:loc>https://lcbridge.app/assets/lcbridge-lockup-black.svg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://lcbridge.app/assets/video/community-agents-demo-thumbnail-1280.webp</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://lcbridge.app/assets/video/community-agents-demo-thumbnail-640.webp</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://lcbridge.app/assets/video/community-agents-demo-thumbnail.jpg</image:loc>
+      <image:loc>https://lcbridge.app/assets/posters/community-agents-poster.webp</image:loc>
     </image:image>
   </url>
   <url>
@@ -306,13 +300,7 @@
       <image:loc>https://lcbridge.app/assets/lcbridge-lockup-black.svg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://lcbridge.app/assets/video/docusign-demo-thumbnail-1280.webp</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://lcbridge.app/assets/video/docusign-demo-thumbnail-640.webp</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://lcbridge.app/assets/video/docusign-demo-thumbnail.jpg</image:loc>
+      <image:loc>https://lcbridge.app/assets/posters/docusign-poster.webp</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://lcbridge.app/docusign-integration/img/agreements-1200.webp</image:loc>
@@ -459,10 +447,7 @@
       <image:loc>https://lcbridge.app/assets/lcbridge-lockup-black.svg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://lcbridge.app/assets/video/docusign-demo-thumbnail-1280.webp</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://lcbridge.app/assets/video/docusign-demo-thumbnail-640.webp</image:loc>
+      <image:loc>https://lcbridge.app/assets/posters/docusign-poster.webp</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://lcbridge.app/assets/video/docusign-demo-thumbnail.jpg</image:loc>
@@ -648,6 +633,9 @@
       <image:loc>https://lcbridge.app/assets/google-sheets/levelup/ev-reports.jpg</image:loc>
     </image:image>
     <image:image>
+      <image:loc>https://lcbridge.app/assets/google-sheets/levelup/in-sheets.jpg</image:loc>
+    </image:image>
+    <image:image>
       <image:loc>https://lcbridge.app/assets/google-sheets/levelup/logos/callrail.png</image:loc>
     </image:image>
     <image:image>
@@ -664,9 +652,6 @@
     </image:image>
     <image:image>
       <image:loc>https://lcbridge.app/assets/google-sheets/levelup/logos/stripe.svg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://lcbridge.app/assets/google-sheets/levelup/video-poster.jpg</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://lcbridge.app/assets/google-sheets/social.png</image:loc>
@@ -1041,7 +1026,7 @@
       <image:loc>https://lcbridge.app/assets/docusign-mark.svg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://lcbridge.app/assets/google-sheets/levelup/video-poster.jpg</image:loc>
+      <image:loc>https://lcbridge.app/assets/google-sheets/levelup/in-sheets.jpg</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://lcbridge.app/assets/lcbridge-lockup-black.svg</image:loc>
@@ -1053,16 +1038,10 @@
       <image:loc>https://lcbridge.app/assets/og-lcbridge.png</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://lcbridge.app/assets/video/community-agents-demo-thumbnail-1280.webp</image:loc>
+      <image:loc>https://lcbridge.app/assets/posters/community-agents-poster.webp</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://lcbridge.app/assets/video/community-agents-demo-thumbnail-640.webp</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://lcbridge.app/assets/video/docusign-demo-thumbnail-1280.webp</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://lcbridge.app/assets/video/docusign-demo-thumbnail-640.webp</image:loc>
+      <image:loc>https://lcbridge.app/assets/posters/docusign-poster.webp</image:loc>
     </image:image>
   </url>
   <url>

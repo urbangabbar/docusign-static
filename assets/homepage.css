@@ -33,8 +33,8 @@ html{scroll-behavior:smooth;scroll-padding-top:92px}
 .home-benefits{list-style:none;padding:0;margin-block:24px 28px;display:grid;gap:10px;font-size:13px;color:var(--lcb-ink-2)}.home-benefits li{position:relative;padding-left:20px}.home-benefits li::before{content:'+';position:absolute;left:0;color:var(--lcb-primary);font-weight:600}
 .home-page .home-product-terms{font-size:11px;line-height:1.7;color:var(--lcb-ink-3);margin-top:16px;max-width:56ch}.home-resource-links{display:flex;flex-wrap:wrap;gap:22px;margin-top:18px}.home-resource-links a{font-size:12px;font-weight:600;display:inline-flex;align-items:center;min-height:44px;text-decoration:underline!important;text-underline-offset:4px}.home-resource-links a:hover{color:var(--lcb-primary)}
 .home-product-media{min-width:0}
-.home-product-video{position:relative;aspect-ratio:16/9;border:1px solid var(--lcb-line-2);border-radius:var(--lcb-r-md);overflow:hidden;background:var(--lcb-dark)}
-.home-product-video a{display:block;position:relative;width:100%;height:100%}.home-product-video img{display:block;width:100%;height:100%;object-fit:contain}
+.home-product-video{position:relative;aspect-ratio:16/9;border:1px solid var(--lcb-line-2);border-radius:var(--lcb-r-md);overflow:hidden;background:#f1f3f7}
+.home-product-video a{display:block;position:relative;width:100%;height:100%}.home-product-video img{display:block;width:100%;height:100%;object-fit:cover}
 .home-video-play{position:absolute;bottom:20px;left:20px;display:inline-flex;align-items:center;gap:12px;background:var(--lcb-canvas);color:var(--lcb-ink);font-size:13px;font-weight:600;min-height:44px;padding:14px 18px;border:1px solid var(--lcb-line-2);border-radius:var(--lcb-r-sm)}
 .home-product-video a:hover .home-video-play{background:var(--lcb-tint)}
 .home-product-video .lcb-video-trigger:focus-visible{outline:3px solid var(--lcb-on-primary);outline-offset:-7px;box-shadow:inset 0 0 0 10px var(--lcb-primary)}
@@ -73,3 +73,6 @@ html{scroll-behavior:smooth;scroll-padding-top:92px}
 /* The company hero introduces the portfolio; product order does not set company positioning. */
 .home-hero h1{font-size:clamp(42px,5.6vw,76px)}.home-hero h1 span{color:var(--lcb-primary)}.home-bridge{background:var(--lcb-primary);align-items:stretch}.home-preview-sheets{border:0}.home-preview-status{display:block;margin:-5px 18px 15px;color:var(--lcb-ink-3);font-size:12px;line-height:1.5}.home-product-sheets{border-top:1px solid var(--lcb-line-2)}
 @media(max-width:560px){.home-hero h1{font-size:42px}}
+
+/* House rule: no mid-page brand-colour bands; the final call to action is the only dark band. */
+.home-build{background:#f5f7fa;color:#0b1220}.home-build .home-kicker{color:var(--lcb-primary)}.home-build-copy>p:not(.home-kicker),.home-build-note{color:#475467}.home-page .home-build-inquiry{border-block-color:#0b122026;color:#0b1220}.home-build :is(a,summary):focus-visible{outline-color:var(--lcb-primary)}

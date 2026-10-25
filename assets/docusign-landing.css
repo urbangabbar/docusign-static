@@ -21,3 +21,7 @@
 
 .workflow-section .proof-label{color:#b5abff}.workflow-section .proof-label b{color:#4d3fe7}.workflow-section .illustration-caption{color:#c2bdd8}
 .contact-mini div>span{font-size:10px;color:var(--muted);display:block;line-height:1.6;overflow-wrap:anywhere}.menu{width:44px;height:44px}.replay{min-height:44px}.billing button{min-height:44px}.faq summary{min-height:44px}
+
+/* House rule: no mid-page dark bands; the signup section stays the one dark band. */
+.workflow-section{background:#f6f7f9;color:#14182e}.workflow-section .eyebrow{color:#4d3fe7}.workflow-section .lede,.workflow-section .proof-cta p{color:#475467}.workflow{border-color:#e5e7eb;background:#fff}.workflow-intro{color:#667085}.workflow .tag{background:#efeefe;color:#4d3fe7}.flow-row{border-top-color:#eef0f3}.flow-node{background:#fff;border-color:#e5e7eb}.flow-arrow{color:#4d3fe7}.workflow-section .button{background:#4d3fe7;border-color:#4d3fe7;color:#fff}.workflow-section .button:hover{background:#3a2fc0}
+.flow-node small{color:#667085}.flow-node strong{color:#14182e}.flow-node.result{background:#ecfdf3;border-color:#abefc6}.flow-node.result small{color:#027a48}.flow-node.result strong{color:#05603a}.flow-footer p{color:#667085}.flow-footer .replay{color:#4d3fe7}.workflow-section .proof-label{color:#4d3fe7}.workflow-section .illustration-caption{color:#667085}.workflow .tag{background:#efeefe;color:#4d3fe7}
