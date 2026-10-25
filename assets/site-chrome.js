@@ -12,7 +12,7 @@
   var preference;
   try { preference = localStorage.getItem('lcbridge-analytics-consent'); } catch (_) {}
   if (preference === 'granted' || preference === 'denied') window.LCBridgeAnalytics?.setConsent(preference);
-  if (!window.LCBridgeAnalyticsConfig?.ga4MeasurementId) document.querySelector('#analytics-description').textContent = 'Optional analytics are not currently enabled. You can save your preference for when a measurement stream is configured. Hosted forms have their own provider controls.';
+  if (!window.LCBridgeAnalyticsConfig?.ga4MeasurementId) document.querySelector('#analytics-description').textContent = 'Optional analytics are not currently enabled, except the Meta pixel on the Google Sheets campaign page, which Keep analytics off stops. You can save your preference for when a measurement stream is configured. Hosted forms have their own provider controls.';
   document.querySelector('#analytics-settings').addEventListener('click', function () { dialog.showModal(); });
   dialog.querySelectorAll('[data-analytics-consent]').forEach(function (button) {
     button.addEventListener('click', function () {
