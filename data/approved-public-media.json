@@ -53,6 +53,8 @@
     "assets/og-highlevel-development.png": "4dec72b9e95ceb1ac0b214b35fb99686fa99af58ed787fdfeaab82a047829c54",
     "assets/og-highlevel-development.svg": "ec9577d9149710b31f80d5c826c1b58541a6cf5858077565f5e25881a98d09e5",
     "assets/og-lcbridge.png": "d10d8b5a0aede2f8b9ab0e5e31fbfe5eb216fc187b58ccdccef74a14e3a41eca",
+    "assets/posters/community-agents-poster.webp": "a8faa68948516d6a123e4b0c6fa485b30d7c2c1ca99ac3d9a249f15b4308c48b",
+    "assets/posters/docusign-poster.webp": "c88e57001979bf44da35481f7eac3711c77a214492a578594589bf86c89ab8f6",
     "assets/video/community-agents-demo-thumbnail-1280.webp": "f584a3a9d6608236aef194a8f7b3ca202d0a9a0b05c848fd9c9274b855a4ce11",
     "assets/video/community-agents-demo-thumbnail-640.webp": "de740e56ff760924f911ec4894caf4934f5d073228cd4c648e17e09a4f3cf9d6",
     "assets/video/community-agents-demo-thumbnail.jpg": "80315f68072cf999b4edfd9ab9cd829d86ad07caf516f741086004eefcc90767",
@@ -143,6 +145,14 @@
         "assets/video/gsi-hero-highlevel.mp4"
       ],
       "method": "LevelUp page media. Raster OCR (tesseract) on every image; hero film frames at one-second intervals (90 frames) plus captions OCR/text-checked; SVG logo text read. Only LC Bridge, Google Sheets, HighLevel, the six partner integrations and sample data; no cross-brand references. Approved by Karthik on 2026-10-24."
+    },
+    {
+      "date": "2026-10-25",
+      "paths": [
+        "assets/posters/community-agents-poster.webp",
+        "assets/posters/docusign-poster.webp"
+      ],
+      "method": "Phase 1 poster frames. Product panels cropped from LC Bridge's own Community Agents and DocuSign Integration demo videos, rendered on a neutral #F1F3F7 canvas; no text added. Raster OCR (tesseract): only product UI labels and the videos' invented example data (e.g. John Henderson, 412 Marina Bay Dr); no cross-brand references. Approved under Karthik's phase 1 approval on 2026-10-25."
     }
   ]
 }

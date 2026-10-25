@@ -6,7 +6,7 @@
       "url": "https://lcbridge.app/about/",
       "title": "About LC Bridge | GoHighLevel Products & Development",
       "description": "Meet LC Bridge, the team building GoHighLevel integrations, Community Agents and custom software. Explore product documentation and speak with the founder.",
-      "contentHash": "dd3027b90a242b987ca907a351f31ef913a9b3fb0a430087d9ec932763814320",
+      "contentHash": "41eb768dd2db82c79889da43d10b9ec181393d4ce182a78d897b2932b5bc9927",
       "lastmod": "2026-10-25",
       "images": [
         "https://lcbridge.app/assets/arun-headshot.jpg",
@@ -18,7 +18,7 @@
       "url": "https://lcbridge.app/blog/ai-agents-need-deep-integrations/",
       "title": "GoHighLevel AI Agents & API Integration | LC Bridge",
       "description": "Explore how CRM data, workflow actions and context affect AI agents, with GoHighLevel and DocuSign examples from LC Bridge.",
-      "contentHash": "40d3f6162ede5454013dcb5b008b37d8fe341fe8644350f9a7d84b663e1362ee",
+      "contentHash": "39e7a3aeecbeacf7dca878e0e8f63dc60f0fb4f4cd607ae7b0cd845d591580d3",
       "lastmod": "2026-10-25",
       "images": [
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -72,7 +72,7 @@
       "url": "https://lcbridge.app/blog/four-levels-of-integration/",
       "title": "GoHighLevel Integration Depth: Data & Actions | LC Bridge",
       "description": "Compare four levels of CRM integration through GoHighLevel and DocuSign examples: link-outs, data sync, shared context and actions inside the platform.",
-      "contentHash": "137c4669742c2caad2f40837ce011199063ca252ec2b37efe722f920345772a3",
+      "contentHash": "5c2d6434afb5dbe0a71609663677a590a90b086185b22e82a899562add00bb76",
       "lastmod": "2026-10-25",
       "images": [
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -82,7 +82,7 @@
       "url": "https://lcbridge.app/blog/four-ways-a-contract-stalls/",
       "title": "GoHighLevel Contracts: 4 Reasons Signing Stalls | LC Bridge",
       "description": "See four reasons contracts stall and how configured DocuSign workflows in GoHighLevel can handle delivery, views, stalls and declines.",
-      "contentHash": "df76840ac1af228a4406bdb6f40f4b4fec9d09020fbdfc0832fa244bd036af6a",
+      "contentHash": "7e3856c4665c1fded8df65303ec441f6e3d6586d63719ce8a6a5a63282fa5a12",
       "lastmod": "2026-10-25",
       "images": [
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -103,7 +103,7 @@
       "url": "https://lcbridge.app/blog/gohighlevel-esignature-legally-binding/",
       "title": "Is a GoHighLevel E-Signature Legally Binding? | LC Bridge",
       "description": "Understand GoHighLevel e-signatures, consent and audit trails through cited legal sources. Compare the questions to consider when choosing DocuSign.",
-      "contentHash": "32a62b4ea0026cf6cf19e5599c34a2cf3e73c1af376a3a7ca71809f7311fdd03",
+      "contentHash": "191f5e13a1676b350ca76e477a58a76472cd346e0651fc61151776323cd9e083",
       "lastmod": "2026-10-25",
       "images": [
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -124,7 +124,7 @@
       "url": "https://lcbridge.app/blog/gohighlevel-integrations/",
       "title": "GoHighLevel Integrations: A Practical Guide | LC Bridge",
       "description": "Compare GoHighLevel integration options, from native tools and automation platforms to custom API apps. Explore practical examples and engineering tradeoffs.",
-      "contentHash": "402596e0d494f8884ed70429e11fb17453cd6ccd7ba769e15a8ca5fdd59191a9",
+      "contentHash": "544d2946016ef0df14379ed47479e8b59579bde461f9a48b7b88a23f3a9e3574",
       "lastmod": "2026-10-25",
       "images": [
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -178,7 +178,7 @@
       "url": "https://lcbridge.app/blog/",
       "title": "GoHighLevel Integration Guides & Playbooks | LC Bridge",
       "description": "Practical GoHighLevel guides from LC Bridge: API integrations, DocuSign workflows, e-signatures and AI agents, with product examples and setup documentation.",
-      "contentHash": "2e1d6d4a454653b3c4a9ce2400b7bc222d0f50bde8126eda45e1b05bcbe6086b",
+      "contentHash": "9a95b95c1a09b1e6a7d5c208d27ad375bff56fb6011d735f3a7bb6e36fdb3da9",
       "lastmod": "2026-10-25",
       "images": [
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -210,7 +210,7 @@
       "url": "https://lcbridge.app/blog/why-clients-keep-docusign/",
       "title": "Why GoHighLevel Agencies Still Use DocuSign | LC Bridge",
       "description": "Explore why clients may keep DocuSign alongside GoHighLevel, and how an integration brings agreements, signing status and follow-up into their CRM workflow.",
-      "contentHash": "5f82109d07f55b652efcbf800164bcb9a8ff52bffaae655ab5d44f9f882b8be5",
+      "contentHash": "0e07de8f3b597d6fae68b1deef6c1706228a73585a4af06e110eb3c743e7d2d7",
       "lastmod": "2026-10-25",
       "images": [
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -220,7 +220,7 @@
       "url": "https://lcbridge.app/book-a-call/",
       "title": "Book a GoHighLevel Integration Call | LC Bridge",
       "description": "Discuss GoHighLevel integrations, Community Agents or custom development with Arun, founder of LC Bridge. Bring your setup and project questions.",
-      "contentHash": "b937f8679b1ec75b830421f6ea5e5c7afe9bd1b4fd5d7e4ec7bf037613efabd0",
+      "contentHash": "6531df6d57a8b0bf5988d29537efd25b56a4761f12dff07518050b8e241a1e25",
       "lastmod": "2026-10-25",
       "images": [
         "https://lcbridge.app/assets/arun-headshot.jpg",
@@ -231,7 +231,7 @@
       "url": "https://lcbridge.app/community-agents/docs/",
       "title": "Community Agents for GoHighLevel: Docs | LC Bridge",
       "description": "Browse Community Agents documentation for GoHighLevel: installation, portal compatibility, knowledge, response controls, Member Insights and billing.",
-      "contentHash": "51e70a9e68901496567fe5d6dc6e7410916b707739c3de5ca0b2439ff17f81a9",
+      "contentHash": "27e0615932f384d040b0d49e53458aa83603be7115bb5880048e3976407d5482",
       "lastmod": "2026-10-25",
       "images": [
         "https://lcbridge.app/assets/community-agents-logo-64.png",
@@ -243,7 +243,7 @@
       "url": "https://lcbridge.app/community-agents/gokollab-ai-agents/",
       "title": "GoHighLevel Community AI: Portals & GoKollab | LC Bridge",
       "description": "Check Community Agents portal requirements for GoHighLevel and GoKollab. Learn why a public discovery link alone does not establish member access.",
-      "contentHash": "26ff18f6f5caf6288e271eef8e2d35600de5854bd38099767a454fd9d08d080a",
+      "contentHash": "b1f53d5e3aca2c45bff5260a75e4b3b9b4292ac08a1e2d148b8627a0fede56b5",
       "lastmod": "2026-10-25",
       "images": [
         "https://lcbridge.app/assets/community-agents-demo.webp",
@@ -255,7 +255,7 @@
       "url": "https://lcbridge.app/community-agents/how-to-add-ai-agent-highlevel-community/",
       "title": "Set Up AI Agents in GoHighLevel Communities | LC Bridge",
       "description": "Install Community Agents in GoHighLevel, connect the member portal, prepare knowledge and preview responses before enabling agent participation.",
-      "contentHash": "e634b5d35da5fcb84863c931455826f3159963ac50af44ef0e1541a79cfa3921",
+      "contentHash": "f0a1a1e0d121d4713d4f2c8c550a3db0890226159c843f8eb0d77dd887e59725",
       "lastmod": "2026-10-25",
       "images": [
         "https://lcbridge.app/assets/community-agents-demo.webp",
@@ -267,21 +267,19 @@
       "url": "https://lcbridge.app/community-agents/",
       "title": "Community Agents for GoHighLevel (GHL) | LC Bridge",
       "description": "AI agents for GoHighLevel communities: knowledge-based replies, private previews, participation controls and Member Insights with source conversation evidence.",
-      "contentHash": "42a4a0ff8a012f701c01280950e5de88cea2c53b73e3028f0fd9c31cd1110296",
+      "contentHash": "9e817f096c7d8a17b4658b7ac8124b990f569c5fec141fb1215448d6886eac69",
       "lastmod": "2026-10-25",
       "images": [
         "https://lcbridge.app/assets/community-agents-logo-128.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg",
-        "https://lcbridge.app/assets/video/community-agents-demo-thumbnail-1280.webp",
-        "https://lcbridge.app/assets/video/community-agents-demo-thumbnail-640.webp",
-        "https://lcbridge.app/assets/video/community-agents-demo-thumbnail.jpg"
+        "https://lcbridge.app/assets/posters/community-agents-poster.webp"
       ]
     },
     {
       "url": "https://lcbridge.app/community-agents/knowledge-and-controls/",
       "title": "GoHighLevel Community AI: Knowledge & Controls | LC Bridge",
       "description": "Prepare Community Agents knowledge for GoHighLevel, preview replies privately and choose allowed actions. Keep people in control of community participation.",
-      "contentHash": "d4a81815c78383607b07c09318e8cc81597bb7ec144f1e1319c9261fc07d674c",
+      "contentHash": "4dc49c95c4b60df7cfde1c4e65328c5c564a9d09625a50c6d28cc82957eb6828",
       "lastmod": "2026-10-25",
       "images": [
         "https://lcbridge.app/assets/community-agents-demo.webp",
@@ -293,7 +291,7 @@
       "url": "https://lcbridge.app/community-agents/member-insights/",
       "title": "GoHighLevel Community Agents: Member Insights | LC Bridge",
       "description": "Review community needs and possible buying interest in GoHighLevel with Community Agents. Check source conversations before deciding how to follow up.",
-      "contentHash": "f22254bc13f7473805c88c292ddb660592bb97f3bb0b8675a8feca5b12608bd6",
+      "contentHash": "61c103b5754a8cfb178e73b652dab1663eeb2b38e1099b2ca3c4d55cc183ab72",
       "lastmod": "2026-10-25",
       "images": [
         "https://lcbridge.app/assets/community-agents-demo.webp",
@@ -305,7 +303,7 @@
       "url": "https://lcbridge.app/community-agents/pricing/",
       "title": "Community Agents for GoHighLevel: Pricing | LC Bridge",
       "description": "Community Agents costs $47 monthly per GoHighLevel sub-account, including $47 of AI usage. Review metering, allowance expiry and additional usage billing.",
-      "contentHash": "50aa492325b7d93849a4eccdb4169ea65f43243ad5e7de7af8f7ce17b57611c7",
+      "contentHash": "20c1aeb69c755d9d2634acd2a11bcbd98a72a709f9a8b436c478acf398ddf7de",
       "lastmod": "2026-10-25",
       "images": [
         "https://lcbridge.app/assets/community-agents-logo-128.png",
@@ -316,7 +314,7 @@
       "url": "https://lcbridge.app/docusign-integration/book-a-call",
       "title": "Discuss DocuSign for GoHighLevel | LC Bridge",
       "description": "Talk with Arun, founder of LC Bridge, about connecting DocuSign to GoHighLevel. Bring your templates, account setup and workflow questions.",
-      "contentHash": "f1a0fc9e8cb221b7ab7d71ecc2c7b3d3876d7b24d81ebd695dc4f9b1ca644d21",
+      "contentHash": "7642651470c6c61d890e1445b77c8f5021cbe2ff4fa80026458856d1258f7cda",
       "lastmod": "2026-10-25",
       "images": [
         "https://lcbridge.app/assets/arun-headshot.jpg",
@@ -329,7 +327,7 @@
       "url": "https://lcbridge.app/docusign-integration/docs/features/",
       "title": "DocuSign for GoHighLevel: Features & Requirements | LC Bridge",
       "description": "Review DocuSign Integration capabilities, account requirements and setup boundaries for GoHighLevel before choosing a plan or enabling workflows.",
-      "contentHash": "275230beeb42e1935a6211db7848db2faaefa9eb0ed71199348a4e66b3e5e622",
+      "contentHash": "6feda5a584af5965cd2887169964f558bd445f2275bc37ba92fec851f0deea77",
       "lastmod": "2026-10-25",
       "images": [
         "https://lcbridge.app/assets/docusign-logo.svg",
@@ -341,7 +339,7 @@
       "url": "https://lcbridge.app/docusign-integration/docs/field-mapping/",
       "title": "GoHighLevel DocuSign Field Mapping & Answer Sync | LC Bridge",
       "description": "Map GoHighLevel contact fields to DocuSign templates and sync mapped signer-entered answers after completion. Review configuration and field behavior.",
-      "contentHash": "85c5b3bc66783b9e0c1cbf41f490371362cfc137cec448a6f01da105d082890a",
+      "contentHash": "191f52f74a62f74176117ba39b472e522856ad2f091727973075091bad154c5b",
       "lastmod": "2026-10-25",
       "images": [
         "https://lcbridge.app/assets/docusign-logo.svg",
@@ -353,14 +351,12 @@
       "url": "https://lcbridge.app/docusign-integration/docs/getting-started/",
       "title": "Set Up DocuSign in GoHighLevel | LC Bridge",
       "description": "Get started with DocuSign Integration for GoHighLevel: install, connect your accounts, configure templates and mappings, then prepare your first agreement.",
-      "contentHash": "c05d3f227fcd347a4af900fdbf84dab3dd1aa287ac22e1fc4edd47acc94e7b15",
+      "contentHash": "9ace50d23b8fa7ea4381bc14a0d8324cbd22d6f0371eda0cd3df4fdb32a9e7e5",
       "lastmod": "2026-10-25",
       "images": [
         "https://lcbridge.app/assets/docusign-logo.svg",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg",
-        "https://lcbridge.app/assets/video/docusign-demo-thumbnail-1280.webp",
-        "https://lcbridge.app/assets/video/docusign-demo-thumbnail-640.webp",
-        "https://lcbridge.app/assets/video/docusign-demo-thumbnail.jpg",
+        "https://lcbridge.app/assets/posters/docusign-poster.webp",
         "https://lcbridge.app/docusign-integration/img/agreements-1200.webp",
         "https://lcbridge.app/docusign-integration/img/agreements-1952.webp",
         "https://lcbridge.app/docusign-integration/img/agreements-640.webp",
@@ -387,7 +383,7 @@
       "url": "https://lcbridge.app/docusign-integration/docs/",
       "title": "DocuSign for GoHighLevel: Docs & Guides | LC Bridge",
       "description": "Set up DocuSign in GoHighLevel with LC Bridge documentation. Explore requirements, field mapping, multiple signers and configured contract workflows.",
-      "contentHash": "17ebbc5893f303537b836ac348fdb7ed22e66a1833239cc63f67c973ccd17d0d",
+      "contentHash": "673ea13352a413a7fe4cb9482375bb69e15123454862dfe3f1230ecd37c27e2d",
       "lastmod": "2026-10-25",
       "images": [
         "https://lcbridge.app/assets/docusign-logo.svg",
@@ -398,7 +394,7 @@
       "url": "https://lcbridge.app/docusign-integration/docs/multiple-signers/",
       "title": "GoHighLevel DocuSign: Multiple Signers | LC Bridge",
       "description": "Send one DocuSign agreement to multiple signers from GoHighLevel. Configure signer roles, map contact values and review the document before sending.",
-      "contentHash": "abae372996485bfd95ed652b4efe0b7814213d858681444b7fdf4ec76d31f9fe",
+      "contentHash": "839fccc15f5fa238a4d44ddfc3e45e9f9ccd331fcec021f723e08096c016fa19",
       "lastmod": "2026-10-25",
       "images": [
         "https://lcbridge.app/assets/docusign-logo.svg",
@@ -421,7 +417,7 @@
       "url": "https://lcbridge.app/docusign-integration/docs/workflows/",
       "title": "Set Up DocuSign Workflows in GoHighLevel | LC Bridge",
       "description": "Configure DocuSign contract workflows in GoHighLevel, including sending, delivery follow-up, views, stalls, declines and completion handling.",
-      "contentHash": "995b7c632cfe9fd22d5a5fd5ffa36a4071a5028b70d8215bb5151e256e207aa8",
+      "contentHash": "bda404d51ab34f34f6db2af2569fd6911140b319c067b054d5d54edaab8c296c",
       "lastmod": "2026-10-25",
       "images": [
         "https://lcbridge.app/assets/docusign-logo.svg",
@@ -432,7 +428,7 @@
       "url": "https://lcbridge.app/docusign-integration/how-to-integrate",
       "title": "How to Connect DocuSign to GoHighLevel | LC Bridge",
       "description": "Compare three ways to connect DocuSign with GoHighLevel. Understand workflow connections, field mapping and where LC Bridge’s integration fits.",
-      "contentHash": "f79ac10a2f1c8c5a325fcf429fe785fcdedfaf5913a13673a7eff7606035654d",
+      "contentHash": "ac7f9018d08fde0486c5278d70f6bde294b51f307ecbdad77a9f185cfdd3ba54",
       "lastmod": "2026-10-25",
       "images": [
         "https://lcbridge.app/assets/docusign-logo.svg",
@@ -443,14 +439,13 @@
       "url": "https://lcbridge.app/docusign-integration/",
       "title": "DocuSign Integration for GoHighLevel (GHL) | LC Bridge",
       "description": "Send, track and sync DocuSign agreements inside GoHighLevel. Map contact fields, connect configured workflows and sync completed signer answers.",
-      "contentHash": "3143eddd26c602f5c715609c12c5227d7e63e51d89426edc2b1d62cdfacd9e33",
+      "contentHash": "e7d5830c475791f90efdedfa667ffe51061787cebb776172af80ef75092413e6",
       "lastmod": "2026-10-25",
       "images": [
         "https://lcbridge.app/assets/arun-headshot.jpg",
         "https://lcbridge.app/assets/docusign-logo.svg",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg",
-        "https://lcbridge.app/assets/video/docusign-demo-thumbnail-1280.webp",
-        "https://lcbridge.app/assets/video/docusign-demo-thumbnail-640.webp",
+        "https://lcbridge.app/assets/posters/docusign-poster.webp",
         "https://lcbridge.app/assets/video/docusign-demo-thumbnail.jpg"
       ]
     },
@@ -458,7 +453,7 @@
       "url": "https://lcbridge.app/docusign-integration/insurance",
       "title": "GoHighLevel DocuSign Integration for Insurance | LC Bridge",
       "description": "Bring DocuSign agreements into an insurance team’s GoHighLevel workflow, with contact field mapping, signing status and configured follow-up.",
-      "contentHash": "2b9d4828038bed4ecb01d6eab256674277c5014ed72954741bd043c34ada7526",
+      "contentHash": "a297a00b1afa4d9ec854e3737e28b248037479333c856fe035699789d6de8972",
       "lastmod": "2026-10-25",
       "images": [
         "https://lcbridge.app/assets/docusign-logo.svg",
@@ -470,7 +465,7 @@
       "url": "https://lcbridge.app/docusign-integration/pricing",
       "title": "DocuSign for GoHighLevel: Pricing | LC Bridge",
       "description": "Compare LC Bridge’s DocuSign Integration plans for GoHighLevel: Starter, Agency and Scale. Review billing, the trial and the separate DocuSign requirement.",
-      "contentHash": "c1a0c5a92fd6e99353a75ea1afc6a3d8a91c7b0b7c480779c2c69ac09c91d2bb",
+      "contentHash": "c577ea8f0e0c1196b4e7d8e91b8e0d07e2cce29baa7ed989ff49e33e988ed8e5",
       "lastmod": "2026-10-25",
       "images": [
         "https://lcbridge.app/assets/docusign-logo.svg",
@@ -482,7 +477,7 @@
       "url": "https://lcbridge.app/docusign-integration/privacy",
       "title": "Privacy Policy | DocuSign for GoHighLevel | LC Bridge",
       "description": "Read how LC Bridge handles information for its DocuSign Integration for GoHighLevel, including service data, support requests and privacy questions.",
-      "contentHash": "ab53656036bf0685397d2305f17517a10f77522ab2710f7d2d27aac8b54146b0",
+      "contentHash": "9be955c864eb4c92da1b7a8caf189c215b2afbe2bd2cc712428bd2978f476f4b",
       "lastmod": "2026-10-25",
       "images": [
         "https://lcbridge.app/assets/docusign-logo.svg",
@@ -493,7 +488,7 @@
       "url": "https://lcbridge.app/docusign-integration/real-estate",
       "title": "GoHighLevel DocuSign Integration for Real Estate | LC Bridge",
       "description": "Connect DocuSign to a real estate team’s GoHighLevel workflow. Send agreements from contact records and connect signing events to configured follow-up.",
-      "contentHash": "37de03c0c2156fcd45474d6185f95fb9508661b8c2277c056738b9103de4b1b5",
+      "contentHash": "d0b7f44a270845048ba478a1a126cf92b035a94655db81f04341487676cbaf94",
       "lastmod": "2026-10-25",
       "images": [
         "https://lcbridge.app/assets/docusign-logo.svg",
@@ -505,7 +500,7 @@
       "url": "https://lcbridge.app/docusign-integration/refund",
       "title": "Refund Policy | DocuSign for GoHighLevel | LC Bridge",
       "description": "Review LC Bridge’s refund policy for DocuSign Integration for GoHighLevel, including how to contact support with a billing or refund question.",
-      "contentHash": "9ef148da61d095340b173f51736311b6601ab774f08d2b0c752338be3d00d3e4",
+      "contentHash": "57c4927768f2ea7fb39c83d530b4aa976faba993a76172cdc0cf693dce3a3307",
       "lastmod": "2026-10-25",
       "images": [
         "https://lcbridge.app/assets/docusign-logo.svg",
@@ -516,7 +511,7 @@
       "url": "https://lcbridge.app/docusign-integration/terms",
       "title": "Terms of Service | DocuSign for GoHighLevel | LC Bridge",
       "description": "Read the terms for LC Bridge’s DocuSign Integration for GoHighLevel, including service use, account responsibilities, billing and support.",
-      "contentHash": "398d40bf6f4f5f8d5b1295bac8817e1eaa887344ed7a7de6a2b4970aedb18c73",
+      "contentHash": "ff3fc392d26012cdddee090425a3699fffba558844d6f2dc94399ea767dc48dd",
       "lastmod": "2026-10-25",
       "images": [
         "https://lcbridge.app/assets/docusign-logo.svg",
@@ -527,7 +522,7 @@
       "url": "https://lcbridge.app/docusign-integration/vs-native-signature",
       "title": "DocuSign vs GoHighLevel Documents & Contracts | LC Bridge",
       "description": "Compare DocuSign with GoHighLevel Documents & Contracts. Consider existing client accounts, agreement workflows and integration needs before choosing.",
-      "contentHash": "167cb3968d5c34788d39c91b49398622c13f194bbf53ecb1755edc184fba4a3e",
+      "contentHash": "5395526f32f9985135ea41bd43298a09d10a5bfae02923dfd3ebaa118fb0ce9c",
       "lastmod": "2026-10-25",
       "images": [
         "https://lcbridge.app/assets/docusign-logo.svg",
@@ -538,7 +533,7 @@
       "url": "https://lcbridge.app/docusign-integration/workflows",
       "title": "GoHighLevel DocuSign Workflows & Follow-Up | LC Bridge",
       "description": "Explore six DocuSign workflows for GoHighLevel contracts, with illustrative emails and follow-up for sending, delivery, views, stalls, declines and completion.",
-      "contentHash": "8f83c55bc1ec14718e2674bd645e55f5aaee3ab48375a6ebbb1a565a297f4f56",
+      "contentHash": "acce47411a6cba076bbcf28d0eaeba2b774ca1bbf8a114459975393bd3a47205",
       "lastmod": "2026-10-25",
       "images": [
         "https://lcbridge.app/assets/docusign-logo.svg",
@@ -649,20 +644,20 @@
       "url": "https://lcbridge.app/google-sheets-integration/",
       "title": "GoHighLevel Google Sheets Integration | LC Bridge",
       "description": "Your GoHighLevel reports, ready in Google Sheets: scheduled imports, 25 report templates, ad and billing integrations, bulk actions and white-label for client sub-accounts. Get early access.",
-      "contentHash": "33d8791fb5b0ae1fa5ef99754ddadc395dc28b4ba81e78857fd718e2312c79f6",
+      "contentHash": "95979f71531d94e3be0eca8107a7cecc4b462d6fcee954328f4f423d8309581a",
       "lastmod": "2026-10-25",
       "images": [
         "https://lcbridge.app/assets/google-sheets/levelup/ev-ads.jpg",
         "https://lcbridge.app/assets/google-sheets/levelup/ev-bulk.jpg",
         "https://lcbridge.app/assets/google-sheets/levelup/ev-import.jpg",
         "https://lcbridge.app/assets/google-sheets/levelup/ev-reports.jpg",
+        "https://lcbridge.app/assets/google-sheets/levelup/in-sheets.jpg",
         "https://lcbridge.app/assets/google-sheets/levelup/logos/callrail.png",
         "https://lcbridge.app/assets/google-sheets/levelup/logos/facebook.png",
         "https://lcbridge.app/assets/google-sheets/levelup/logos/google-ads.svg",
         "https://lcbridge.app/assets/google-sheets/levelup/logos/linkedin.png",
         "https://lcbridge.app/assets/google-sheets/levelup/logos/quickbooks.svg",
         "https://lcbridge.app/assets/google-sheets/levelup/logos/stripe.svg",
-        "https://lcbridge.app/assets/google-sheets/levelup/video-poster.jpg",
         "https://lcbridge.app/assets/google-sheets/social.png",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
       ]
@@ -1018,7 +1013,7 @@
       "url": "https://lcbridge.app/highlevel-development/",
       "title": "GoHighLevel Developers & API Integration Services | LC Bridge",
       "description": "GoHighLevel developers for custom API integrations, workflow automation and marketplace apps. Former HighLevel team members building for software brands.",
-      "contentHash": "a270f38a18438717864eaa9d96e8e36fc1129d47d708b21762ce7a2811e40d8f",
+      "contentHash": "4d56d391a19484210d727e9f981e19370ec26be1f0ecbba295f4a04d1098cc06",
       "lastmod": "2026-10-25",
       "images": [
         "https://lcbridge.app/assets/community-agents-logo-128.png",
@@ -1036,28 +1031,26 @@
       "url": "https://lcbridge.app/",
       "title": "GoHighLevel Integrations & Custom Development | LC Bridge",
       "description": "Products and custom software for GoHighLevel by LC Bridge. Explore Google Sheets reporting, Community Agents, DocuSign integration, and custom development.",
-      "contentHash": "9f3ca16bf6c3a03faf3c67f4fd68567536772cf552b8d4f0f3bd1caebe8315a6",
+      "contentHash": "a1de0df56b9ba45d8155c1d99a46b0c20c4f60b94af73fe8bbe1dec19843cf1f",
       "lastmod": "2026-10-25",
       "images": [
         "https://lcbridge.app/assets/arun-headshot.jpg",
         "https://lcbridge.app/assets/community-agents-logo-64.png",
         "https://lcbridge.app/assets/docusign-logo.svg",
         "https://lcbridge.app/assets/docusign-mark.svg",
-        "https://lcbridge.app/assets/google-sheets/levelup/video-poster.jpg",
+        "https://lcbridge.app/assets/google-sheets/levelup/in-sheets.jpg",
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg",
         "https://lcbridge.app/assets/lcbridge-logo.svg",
         "https://lcbridge.app/assets/og-lcbridge.png",
-        "https://lcbridge.app/assets/video/community-agents-demo-thumbnail-1280.webp",
-        "https://lcbridge.app/assets/video/community-agents-demo-thumbnail-640.webp",
-        "https://lcbridge.app/assets/video/docusign-demo-thumbnail-1280.webp",
-        "https://lcbridge.app/assets/video/docusign-demo-thumbnail-640.webp"
+        "https://lcbridge.app/assets/posters/community-agents-poster.webp",
+        "https://lcbridge.app/assets/posters/docusign-poster.webp"
       ]
     },
     {
       "url": "https://lcbridge.app/products/",
       "title": "GoHighLevel Integrations & Apps | LC Bridge",
       "description": "Explore LC Bridge products for GoHighLevel: Google Sheets reporting, Community Agents, and DocuSign integration. Find templates, pricing, and docs.",
-      "contentHash": "8ac1f9778db673f853eaa07581129cdb7f0feb66f6a77eb7f78537c38ae5b612",
+      "contentHash": "d5d169f60bb970aa5f1c4a80ce4c57700bdadc1bf964065fd0c3cf9f1819bb39",
       "lastmod": "2026-10-25",
       "images": [
         "https://lcbridge.app/assets/docusign-mark.svg",
