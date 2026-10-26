@@ -64,6 +64,16 @@ function run(id, pathname = '/community-agents/') {
   assert.ok(!consents.some(c => c[1] === 'update'), 'A default load never overrides the regional denial');
   assert.ok(consents.every(c => c[2].ad_storage === undefined || c[2].ad_storage === 'denied'));
 }
+{ // page_location keeps plain utm_* values only; emails, click IDs and other parameters are dropped.
+  const href = 'https://lcbridge.app/google-sheets-integration/levelup/?a=ads&email=person@example.com&utm_source=meta&utm_medium=paid-social&utm_campaign=levelup2026&utm_content=person@example.com&fbclid=abc';
+  const ctx = { window: { LCBridgeAnalyticsConfig: { ga4MeasurementId: 'G-TEST123' } },
+    document: { referrer: '', addEventListener() {}, dispatchEvent() {}, createElement() { return {}; }, head: { appendChild() {} } },
+    location: { pathname: '/google-sheets-integration/levelup/', origin: 'https://lcbridge.app', href }, URL, CustomEvent: function () {} };
+  vm.runInNewContext(source, ctx);
+  ctx.window.LCBridgeAnalytics.setConsent('granted', false);
+  const config = ctx.window.dataLayer.find(a => a[0] === 'config');
+  assert.equal(config[2].page_location, 'https://lcbridge.app/google-sheets-integration/levelup/?utm_source=meta&utm_medium=paid-social&utm_campaign=levelup2026');
+}
 run('');
 run('G-TEST123');
 run('G-TEST123', '/highlevel-development/');

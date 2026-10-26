@@ -7,6 +7,16 @@
   var pageViewed = false;
   var CONSENT_REGIONS = ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH'];
   var measurementId = /^G-[A-Z0-9]+$/.test(config.ga4MeasurementId || '') ? config.ga4MeasurementId : '';
+  // GA4 reads campaign source from page_location, so keep plain utm_* values and drop every other parameter.
+  var UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+  function pageLocation() {
+    var params = new URL(location.href).searchParams, kept = [];
+    UTM_KEYS.forEach(function (key) {
+      var value = params.get(key);
+      if (value && /^[A-Za-z0-9_.|+ -]{1,100}$/.test(value)) kept.push(key + '=' + encodeURIComponent(value));
+    });
+    return location.origin + location.pathname + (kept.length ? '?' + kept.join('&') : '');
+  }
   var sheetsPage = location.pathname.indexOf('/google-sheets-integration/') === 0 ||
     Boolean(document.documentElement && document.documentElement.hasAttribute('data-sheets-generated')) ||
     (location.pathname === '/book-a-call/' && new URL(location.href).searchParams.get('product') === 'google-sheets');
@@ -24,7 +34,7 @@
     if (loaded && consent === 'granted') {
       var payload = Object.assign({}, event);
       delete payload.event;
-      payload.page_location = location.origin + location.pathname;
+      payload.page_location = pageLocation();
       payload.page_referrer = document.referrer ? new URL(document.referrer).origin : '';
       window.gtag('event', name, payload);
     }
@@ -48,7 +58,7 @@
     if (explicit !== false) window.gtag('consent', 'update', { analytics_storage: 'granted' });
     window.gtag('js', new Date());
     window.gtag('config', measurementId, { send_page_view: false,
-      page_location: location.origin + location.pathname,
+      page_location: pageLocation(),
       page_referrer: document.referrer ? new URL(document.referrer).origin : '' });
     var script = document.createElement('script');
     script.async = true;
