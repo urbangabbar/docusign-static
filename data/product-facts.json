@@ -55,7 +55,7 @@
     "includedAIAllowanceUSD": 47,
     "usageMetering": "4 times provider cost; included allowance used first, overage billed through GoHighLevel wallet",
     "rollover": false,
-    "installationUrl": "https://marketplace.gohighlevel.com/integration/6a8e91ec6c2a585a18a9c2a8/versions/6abb9731f3d41746886e58e0",
+    "installationUrl": "https://community-agents.lcbridge.app/oauth/install",
     "video": {
       "id": "W-0UEIWMeM4",
       "duration": "PT35S",
