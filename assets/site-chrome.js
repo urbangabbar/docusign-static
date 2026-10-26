@@ -27,7 +27,16 @@
   if (preference === 'granted' || preference === 'denied') window.LCBridgeAnalytics?.setConsent(preference);
   else if (navigator.globalPrivacyControl !== true) window.LCBridgeAnalytics?.setConsent('granted', false);
   if (!window.LCBridgeAnalyticsConfig?.ga4MeasurementId) document.querySelector('#analytics-description').textContent = 'RB2B visitor identification runs on every page, and the Meta pixel runs on the Google Sheets campaign page. Keep analytics off opts you out of both, including any sale or sharing for advertising. Google Analytics is not enabled. See our website privacy policy at lcbridge.app/privacy.';
-  document.querySelector('#analytics-settings').addEventListener('click', function () { dialog.showModal(); });
+  // A docked, non-modal panel: the page stays usable. It also reopens the
+  // Community Agents advertising choice, whose own floating button is hidden.
+  document.querySelector('#analytics-settings').addEventListener('click', function () {
+    dialog.show();
+    var first = dialog.querySelector('button'); if (first) first.focus();
+    var ad = document.querySelector('aside[aria-label="Advertising cookie preferences"]');
+    var reopen = ad && Array.prototype.find.call(ad.querySelectorAll('button'), function (b) { return !b.hidden && b.textContent === 'Ad cookie preferences'; });
+    if (reopen) reopen.click();
+  });
+  dialog.addEventListener('keydown', function (event) { if (event.key === 'Escape') dialog.close(); });
   dialog.querySelectorAll('[data-analytics-consent]').forEach(function (button) {
     button.addEventListener('click', function () {
       var choice = button.dataset.analyticsConsent;
