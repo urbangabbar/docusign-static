@@ -6,7 +6,7 @@
       "url": "https://lcbridge.app/about/",
       "title": "About LC Bridge | GoHighLevel Products & Development",
       "description": "Meet LC Bridge, the team building GoHighLevel integrations, Community Agents and custom software. Explore product documentation and speak with the founder.",
-      "contentHash": "cac2b1878c47da7153e898e66df38357ece8891e8e712e9a40a811d9a7ee2cd7",
+      "contentHash": "05c5035151cc1e7ab8c6177bc06d5af239b2fa486ed50c52920212e4a6dbe965",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/arun-headshot.jpg",
@@ -18,7 +18,7 @@
       "url": "https://lcbridge.app/blog/ai-agents-need-deep-integrations/",
       "title": "GoHighLevel AI Agents & API Integration | LC Bridge",
       "description": "Explore how CRM data, workflow actions and context affect AI agents, with GoHighLevel and DocuSign examples from LC Bridge.",
-      "contentHash": "e8a8663150368aa2c1129787dd4d2a9ffb02dbbf3f0a7d6ac5f88818c2da8850",
+      "contentHash": "42ef8aa4df284a974f9e0541ab9c4a50f2758cd5a1447cd0aba5432a8e9a2993",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -28,7 +28,7 @@
       "url": "https://lcbridge.app/blog/bulk-update-gohighlevel-contacts-google-sheets/",
       "title": "Bulk update GoHighLevel contacts from Google Sheets | LC Bridge",
       "description": "Review a controlled workflow for editing existing GoHighLevel contacts from a spreadsheet, with record IDs, field mapping, and change previews.",
-      "contentHash": "26c63c0e47943792bbd1c1fcd2fe1460e6a0192a149a6082b44369bbb101b7cc",
+      "contentHash": "f2d8fc7f9dd67cf3ad76befefa94d5e35482dce651acbea98cd5fbbfbc286fa1",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -39,7 +39,7 @@
       "url": "https://lcbridge.app/blog/connect-gohighlevel-google-sheets/",
       "title": "How to connect GoHighLevel to Google Sheets: methods and tradeoffs | LC Bridge",
       "description": "Choose a GoHighLevel Google Sheets connection for a one-time export, workflow rows, recurring reports, or reviewed updates.",
-      "contentHash": "43288ed7aa90441c686ab02f6f3b454cb0cbf372fa84160d000e424386e59e88",
+      "contentHash": "8af52856a513ac2f83ff1657024ef6e3c7cf1074cc35acb120942883ee0bd651",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -50,7 +50,7 @@
       "url": "https://lcbridge.app/blog/export-gohighlevel-contacts-google-sheets/",
       "title": "Export GoHighLevel contacts to Google Sheets | LC Bridge",
       "description": "Move GoHighLevel contacts into Google Sheets with a native CSV export, then plan fields, identity, cleanup, and recurring reporting.",
-      "contentHash": "e399b3cfd4fdfac140a346b7678b9eb0147d5038fc26a7f0b3bc36ec0f5d74aa",
+      "contentHash": "e3ae58c926042ee759e8a3863ba2de9ab737d792096aaf5820b4b14265bec8a8",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -61,7 +61,7 @@
       "url": "https://lcbridge.app/blog/export-gohighlevel-opportunities-google-sheets/",
       "title": "Export GoHighLevel opportunities to Google Sheets | LC Bridge",
       "description": "Plan a GoHighLevel opportunity export with stable IDs, pipeline fields, status dates, currency, and honest dashboard definitions.",
-      "contentHash": "e602a0c6bf8392a99d08f3d115d96705fe6be6d2786b715c82a1b4ac87394234",
+      "contentHash": "acea09dbd0f4d5a509fe2706899c2001e7f477a9ad6fb63aae0cf25c045084ca",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -72,7 +72,7 @@
       "url": "https://lcbridge.app/blog/four-levels-of-integration/",
       "title": "GoHighLevel Integration Depth: Data & Actions | LC Bridge",
       "description": "Compare four levels of CRM integration through GoHighLevel and DocuSign examples: link-outs, data sync, shared context and actions inside the platform.",
-      "contentHash": "bf319adac1e047d1ac07eea089d2c40f56600f8ed6fc022bed4d4f94fc593caf",
+      "contentHash": "8ffc635f6cc5e51a0697851146ec05553ff68f43b149ce0c54d96b19f19c39e7",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -82,7 +82,7 @@
       "url": "https://lcbridge.app/blog/four-ways-a-contract-stalls/",
       "title": "GoHighLevel Contracts: 4 Reasons Signing Stalls | LC Bridge",
       "description": "See four reasons contracts stall and how configured DocuSign workflows in GoHighLevel can handle delivery, views, stalls and declines.",
-      "contentHash": "d708c0b3a5f3a46b7db9585e6962c0dab9a62e0618ba59247e3e1853c190cd7f",
+      "contentHash": "de76397caf5b82b08048ddec78df058d76c1ffdba22ce862c6ab7b0925767847",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -92,7 +92,7 @@
       "url": "https://lcbridge.app/blog/gohighlevel-custom-fields-google-sheets/",
       "title": "Map GoHighLevel custom fields to Google Sheets columns | LC Bridge",
       "description": "Plan stable custom-field mappings for GoHighLevel spreadsheet reporting, including types, blanks, renamed fields, and update boundaries.",
-      "contentHash": "8376ed4088dec1c4657e1bea0cf6b51a4d64c80251fe28792ba68cc31e36f2f3",
+      "contentHash": "592ed0a0f6f10ce65b856d0b429c81ea77ae3cc3d128008634408636350dc910",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -103,7 +103,7 @@
       "url": "https://lcbridge.app/blog/gohighlevel-esignature-legally-binding/",
       "title": "Is a GoHighLevel E-Signature Legally Binding? | LC Bridge",
       "description": "Understand GoHighLevel e-signatures, consent and audit trails through cited legal sources. Compare the questions to consider when choosing DocuSign.",
-      "contentHash": "ea73fc2bec80b18c83b63c71656f7d1cd68791cf4ead8a05abf2d763aad83fad",
+      "contentHash": "480751af4f91c957e407dd86f2c31abddcae44ec410c901709ebe9beecdd1274",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -113,7 +113,7 @@
       "url": "https://lcbridge.app/blog/gohighlevel-google-sheets-record-transfer-pricing/",
       "title": "How record-transfer pricing works for GoHighLevel Google Sheets integrations | LC Bridge",
       "description": "For GoHighLevel: Understand per-record-transfer usage, repeat executions, monthly allowances, volume discounts, retries, and custom subscriptions.",
-      "contentHash": "982a7c8f5a79ccd5d2558229afc731a3f5f79af0cb44c585c38781055d4b9b0b",
+      "contentHash": "a828b0fc6c3124975eeaf12fa76ffb0ebf02d0cf431e421498519410db2878ee",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -124,7 +124,7 @@
       "url": "https://lcbridge.app/blog/gohighlevel-integrations/",
       "title": "GoHighLevel Integrations: A Practical Guide | LC Bridge",
       "description": "Compare GoHighLevel integration options, from native tools and automation platforms to custom API apps. Explore practical examples and engineering tradeoffs.",
-      "contentHash": "de14b51f0a2bde501d49f1d1a62be99e5c61398c4d7bb141679fac481d8d0122",
+      "contentHash": "5b3928a75f8317d32ccb0d49739bde978a5b2be6cb25e08e3267659bcb04df55",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -134,7 +134,7 @@
       "url": "https://lcbridge.app/blog/gohighlevel-native-google-sheets-vs-crm-imports/",
       "title": "GoHighLevel’s native Google Sheets actions versus recurring CRM imports | LC Bridge",
       "description": "For GoHighLevel: Compare native spreadsheet workflow actions with dataset imports and report templates, based on the direction and shape of your workflow.",
-      "contentHash": "d26504f3ea019ac615174aa22fcadd3d131ffdcdf0fcbf6f53740903556b4f35",
+      "contentHash": "40ad383165445741b6b98089063084d0f904e5cb4149ebbab200aef864d29f30",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -145,7 +145,7 @@
       "url": "https://lcbridge.app/blog/gohighlevel-pipeline-dashboard-google-sheets/",
       "title": "Build a GoHighLevel sales pipeline dashboard in Google Sheets | LC Bridge",
       "description": "For GoHighLevel: Use a pipeline dashboard with current-stage value, target progress, owner filters, and deal-level follow-up records.",
-      "contentHash": "1071232120be5ffb169a64c6a6c843fa62b92c40ee80b0b2248d71745dfabfd1",
+      "contentHash": "8deb0f66072239e30bb62c7c36484b1d8a8e8a7ec41282eab2d987a3c9942b56",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -156,7 +156,7 @@
       "url": "https://lcbridge.app/blog/gohighlevel-sales-payments-invoice-totals/",
       "title": "Why GoHighLevel sales, payments, and invoice totals differ | LC Bridge",
       "description": "For GoHighLevel: Understand why won opportunities, successful payments, outstanding invoices, and order-line totals should not match automatically.",
-      "contentHash": "32c3310cb08ec5169f46c4082dc05bac1dafafbbdad31e33697371883a78ea2e",
+      "contentHash": "7a7f970502720483c8b9b80ae8d91ba2c607c5f6e1ae0ec5112427b62d02c498",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -167,7 +167,7 @@
       "url": "https://lcbridge.app/blog/import-google-sheets-contacts-gohighlevel/",
       "title": "Import contacts from Google Sheets into GoHighLevel | LC Bridge",
       "description": "Prepare a Google Sheets contact list for native CSV import into GoHighLevel, including mapping, identity, duplicates, and verification.",
-      "contentHash": "6a609e60b9842e3db6bc24525e91391bdceec4beb23630b52906a87a6c16ccd5",
+      "contentHash": "bba5fdc5e6863cb777a5c2ce9b400e4a438ce3e1ed209af9b0b2091723df2bb5",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -178,7 +178,7 @@
       "url": "https://lcbridge.app/blog/",
       "title": "GoHighLevel Integration Guides & Playbooks | LC Bridge",
       "description": "Practical GoHighLevel guides from LC Bridge: API integrations, DocuSign workflows, e-signatures and AI agents, with product examples and setup documentation.",
-      "contentHash": "afae24622c2b208ba7ba1d9440f9774cd2d2aa8a011668d60686bfbebbfc6f7c",
+      "contentHash": "e28742b1b7530e6b60c9f1bbbeeefcf8cabb5cd4c2b72f60462b7bec1837ce97",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -188,7 +188,7 @@
       "url": "https://lcbridge.app/blog/schedule-gohighlevel-exports-google-sheets/",
       "title": "Schedule GoHighLevel data exports to Google Sheets | LC Bridge",
       "description": "Choose a useful refresh cadence for GoHighLevel reporting, scope the transferred records, and understand per-execution usage.",
-      "contentHash": "13d051635b16d54b9e96fd70782693558ba0be44f20cd0b66025a869c7295569",
+      "contentHash": "52acd0b588c77e20a29ad76ca8a703088305c123335e82ca662c8c43d76fa36b",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -199,7 +199,7 @@
       "url": "https://lcbridge.app/blog/update-gohighlevel-opportunity-stages-google-sheets/",
       "title": "Update GoHighLevel opportunity stages from Google Sheets | LC Bridge",
       "description": "For GoHighLevel: Understand reviewed opportunity-stage edits from a spreadsheet, including pipeline compatibility, CRM IDs, permissions, and stale previews.",
-      "contentHash": "802fe590af865d898d4ce4dcab0705ab5088ac60316c4c72fb23fa854acc0774",
+      "contentHash": "62e06a30905be6435bfbad3dd2d33ee2d625c2355ffce3fd53df4ed92aa7d25e",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -210,7 +210,7 @@
       "url": "https://lcbridge.app/blog/why-clients-keep-docusign/",
       "title": "Why GoHighLevel Agencies Still Use DocuSign | LC Bridge",
       "description": "Explore why clients may keep DocuSign alongside GoHighLevel, and how an integration brings agreements, signing status and follow-up into their CRM workflow.",
-      "contentHash": "9a82295b132921c6e20d002d822ee2fe7993f5f7c82cd3c57d6ebda7e933b64d",
+      "contentHash": "dd64f6d50ae0265fb9109e021ab4a683b39e5e4082855d9a9f8ec19565e4a45d",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg"
@@ -220,7 +220,7 @@
       "url": "https://lcbridge.app/book-a-call/",
       "title": "Book a GoHighLevel Integration Call | LC Bridge",
       "description": "Discuss GoHighLevel integrations, Community Agents or custom development with Arun, founder of LC Bridge. Bring your setup and project questions.",
-      "contentHash": "a0941fa989ce3bacbc0f7f7ae46ccc39e4c3e0d8d2a8ecbb1e1bb95a48b1fe47",
+      "contentHash": "f25e61efe96a748dcb4f2151db2e3bcecb0659f283d7a704a0b9577e022c85c1",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/arun-headshot.jpg",
@@ -231,7 +231,7 @@
       "url": "https://lcbridge.app/community-agents/docs/",
       "title": "Community Agents for GoHighLevel: Docs | LC Bridge",
       "description": "Browse Community Agents documentation for GoHighLevel: installation, portal compatibility, knowledge, response controls, Member Insights and billing.",
-      "contentHash": "2a9b6b3cf478bc3934ea2e7b5a21cae533b14518ff62e6251baf282332269c04",
+      "contentHash": "bce86b8a2e155aed1ec0dae9af35f81086e79202b58a6cc82a557a572fc73b5d",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/community-agents-logo-64.png",
@@ -243,7 +243,7 @@
       "url": "https://lcbridge.app/community-agents/gokollab-ai-agents/",
       "title": "GoHighLevel Community AI: Portals & GoKollab | LC Bridge",
       "description": "Check Community Agents portal requirements for GoHighLevel and GoKollab. Learn why a public discovery link alone does not establish member access.",
-      "contentHash": "06a84e27f01022571ce0c5c9e0a43be7d626f3d8c9513102a3586eff46753b4e",
+      "contentHash": "c86e221a4a91d8697d067240e7c6315c690489ce25d2ee58ef9aaa2ae0d9cc43",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/community-agents-demo.webp",
@@ -255,7 +255,7 @@
       "url": "https://lcbridge.app/community-agents/how-to-add-ai-agent-highlevel-community/",
       "title": "Set Up AI Agents in GoHighLevel Communities | LC Bridge",
       "description": "Install Community Agents in GoHighLevel, connect the member portal, prepare knowledge and preview responses before enabling agent participation.",
-      "contentHash": "624267721e5ed7aa6f7a500d1651921e21a951911469f442229cf4a5e4349fdc",
+      "contentHash": "b62dd71112ebe6b9352a1d09eb43a5b219edf834fd693df6531cf1bef0271076",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/community-agents-demo.webp",
@@ -265,9 +265,9 @@
     },
     {
       "url": "https://lcbridge.app/community-agents/",
-      "title": "Community Agents for GoHighLevel (GHL) | LC Bridge",
-      "description": "See which GoHighLevel community members are asking about upgrades or paid help, with the source conversation, while AI agents answer repeat questions from your own material.",
-      "contentHash": "c75a9f3b7f85fdee50d5ea529312f1b5176e5b27350686339a41d0b23b791619",
+      "title": "Community Agents for GoHighLevel (GHL): 7-Day Free Trial | LC Bridge",
+      "description": "AI agents for your GoHighLevel community: answer repeat member questions from your own material and spot members asking about your paid offers. Start a 7-day free trial.",
+      "contentHash": "373318677460c60ee4a9edd8102d4c6292e8a7670343855b592ade7942cefd52",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/community-agents-logo-128.png",
@@ -279,7 +279,7 @@
       "url": "https://lcbridge.app/community-agents/knowledge-and-controls/",
       "title": "GoHighLevel Community AI: Knowledge & Controls | LC Bridge",
       "description": "Prepare Community Agents knowledge for GoHighLevel, preview replies privately and choose allowed actions. Keep people in control of community participation.",
-      "contentHash": "f8373e1f283735b27e2d7abc9eca41152214180f1e78d2f0f8f09607765324d4",
+      "contentHash": "d30676c72f9148481b91d48df02ee12fba5728f073fc8cbc2afb52c5eb2300d5",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/community-agents-demo.webp",
@@ -291,7 +291,7 @@
       "url": "https://lcbridge.app/community-agents/member-insights/",
       "title": "GoHighLevel Community Agents: Member Insights | LC Bridge",
       "description": "Review community needs and possible buying interest in GoHighLevel with Community Agents. Check source conversations before deciding how to follow up.",
-      "contentHash": "b46bcc6c97f30aaa3609a4b3e8e7c0f1c472281f476db3144e9710ea8284fa3e",
+      "contentHash": "e4fe93cdee9f61fb7d3eda5da94c14519dd8dc6afa442c8e330593d8f1b903a9",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/community-agents-demo.webp",
@@ -303,7 +303,7 @@
       "url": "https://lcbridge.app/community-agents/pricing/",
       "title": "Community Agents for GoHighLevel: Pricing | LC Bridge",
       "description": "Community Agents costs $47 monthly per GoHighLevel sub-account, including $47 of AI usage. Review metering, allowance expiry and additional usage billing.",
-      "contentHash": "cbdb8d784a1541dc7f5fafa739a2601995e32e1f8ec4f90640fddee26f7fcb76",
+      "contentHash": "ad4d179110265ee68d8271010895726ac348af83566ce94327d247d4c3df5d3d",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/community-agents-logo-128.png",
@@ -314,7 +314,7 @@
       "url": "https://lcbridge.app/community-agents/privacy/",
       "title": "Community Agents for GoHighLevel: Privacy Notice | LC Bridge",
       "description": "What Community Agents by LC Bridge collects from GoHighLevel and your community, how AI processing works, who we share data with, and your choices.",
-      "contentHash": "4976be45ea836c3a12e3e392756a42aa4c259793b503f869d607b7281ca5e54f",
+      "contentHash": "0014a83edac84de2b65390a9709c6a5969744f5d3f7443ee68b80fa86e6618ca",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/community-agents-demo.webp",
@@ -326,7 +326,7 @@
       "url": "https://lcbridge.app/community-agents/terms/",
       "title": "Community Agents for GoHighLevel: Terms of Service | LC Bridge",
       "description": "The terms for using Community Agents by LC Bridge: the service, your responsibilities, AI output, fees through GoHighLevel, cancelling and liability for GoHighLevel sub-accounts.",
-      "contentHash": "2474bf927c8a336e14e50fb219f7f27f2a87603000e2bfe8c501a417983dbcdb",
+      "contentHash": "8239f6979c9c7edb7fc219104b250a242113a8a93b3281e021c33fefd96cecaf",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/community-agents-demo.webp",
@@ -338,7 +338,7 @@
       "url": "https://lcbridge.app/docusign-integration/book-a-call",
       "title": "Discuss DocuSign for GoHighLevel | LC Bridge",
       "description": "Talk with Arun, founder of LC Bridge, about connecting DocuSign to GoHighLevel. Bring your templates, account setup and workflow questions.",
-      "contentHash": "58d7ec45dcc93a3d43968c3b51796de2fbcba04b5762709d4b41a3b3cacb8c5e",
+      "contentHash": "d80daeca06f48dabab4c61382ad4031e5e50a4607e4a6e3005b09dc1c42bfe32",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/arun-headshot.jpg",
@@ -351,7 +351,7 @@
       "url": "https://lcbridge.app/docusign-integration/docs/features/",
       "title": "DocuSign for GoHighLevel: Features & Requirements | LC Bridge",
       "description": "Review DocuSign Integration capabilities, account requirements and setup boundaries for GoHighLevel before choosing a plan or enabling workflows.",
-      "contentHash": "1e85412285d0b35afea172a480186a125a264faba1d1b1ff83616f21a429fb5b",
+      "contentHash": "89e3cd5f4b0e5d3b261662d02a26f598a2fdfb11affe872f3842a5bd2da12cd2",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/docusign-logo.svg",
@@ -363,7 +363,7 @@
       "url": "https://lcbridge.app/docusign-integration/docs/field-mapping/",
       "title": "GoHighLevel DocuSign Field Mapping & Answer Sync | LC Bridge",
       "description": "Map GoHighLevel contact fields to DocuSign templates and sync mapped signer-entered answers after completion. Review configuration and field behavior.",
-      "contentHash": "47d8cc99c42f9375bd1ddb15ff8258f80b374f01c503f1ebbd012815a5a7acbb",
+      "contentHash": "01dc4deeee33b5f478feebd2f65d33d8e9aea32b0b5cb4746da6a4075dde8b23",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/docusign-logo.svg",
@@ -375,7 +375,7 @@
       "url": "https://lcbridge.app/docusign-integration/docs/getting-started/",
       "title": "Set Up DocuSign in GoHighLevel | LC Bridge",
       "description": "Get started with DocuSign Integration for GoHighLevel: install, connect your accounts, configure templates and mappings, then prepare your first agreement.",
-      "contentHash": "605682467a81a79c51e143850c58c94405c28c89bd7986cf7cc9a922cfe9e1fe",
+      "contentHash": "e45f22fd1e3bb7e6c5b25ec78b8a0d8dc2867ec103a26ad8079a54fe7103aea2",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/docusign-logo.svg",
@@ -407,7 +407,7 @@
       "url": "https://lcbridge.app/docusign-integration/docs/",
       "title": "DocuSign for GoHighLevel: Docs & Guides | LC Bridge",
       "description": "Set up DocuSign in GoHighLevel with LC Bridge documentation. Explore requirements, field mapping, multiple signers and configured contract workflows.",
-      "contentHash": "ec0a0305e7bd43a3904bd41651a0b4e0724276ad20ecba2e92c731f5c125b92f",
+      "contentHash": "d14d41da5735c221c8779ca7fc3aa5e02ccb90528038a2b06245e3dabf54985b",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/docusign-logo.svg",
@@ -418,7 +418,7 @@
       "url": "https://lcbridge.app/docusign-integration/docs/multiple-signers/",
       "title": "GoHighLevel DocuSign: Multiple Signers | LC Bridge",
       "description": "Send one DocuSign agreement to multiple signers from GoHighLevel. Configure signer roles, map contact values and review the document before sending.",
-      "contentHash": "81d5ea31f21527ee843ae1feb623e57c47a1a80afca2196c002be88c23d97ba0",
+      "contentHash": "7b0751c65d7d3c11022ad38750fb56899d2d00156f16d9c9370ec98c5242caf9",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/docusign-logo.svg",
@@ -441,7 +441,7 @@
       "url": "https://lcbridge.app/docusign-integration/docs/workflows/",
       "title": "Set Up DocuSign Workflows in GoHighLevel | LC Bridge",
       "description": "Configure DocuSign contract workflows in GoHighLevel, including sending, delivery follow-up, views, stalls, declines and completion handling.",
-      "contentHash": "4d21c687ed3d9a94cbe565d60e8f5829d53070dac2a22b961bb10c38c6119940",
+      "contentHash": "22b469aa8888bda208b0052c5ea7006ccb57120deafe6cb2b81c64bbe8aa655d",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/docusign-logo.svg",
@@ -452,7 +452,7 @@
       "url": "https://lcbridge.app/docusign-integration/how-to-integrate",
       "title": "How to Connect DocuSign to GoHighLevel | LC Bridge",
       "description": "Compare three ways to connect DocuSign with GoHighLevel. Understand workflow connections, field mapping and where LC Bridge’s integration fits.",
-      "contentHash": "d59c247922f0dd13da715ddbe654b6d33e730b86c64420e9934f158522a267fe",
+      "contentHash": "3afa30623cfa719e55fd71bc1b6675240865add7b7eec87790cfab7ea228474a",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/docusign-logo.svg",
@@ -463,7 +463,7 @@
       "url": "https://lcbridge.app/docusign-integration/",
       "title": "DocuSign Integration for GoHighLevel (GHL) | LC Bridge",
       "description": "Send, track and sync DocuSign agreements inside GoHighLevel. Map contact fields, connect configured workflows and sync completed signer answers.",
-      "contentHash": "5a0dd68414ad47d80f16a91496a4d6e8c9eab285652936e2e33cfd8846c51d44",
+      "contentHash": "a1b15d925190acd7fc106155de4006373cc46b4486b15829905134e28172e657",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/arun-headshot.jpg",
@@ -477,7 +477,7 @@
       "url": "https://lcbridge.app/docusign-integration/insurance",
       "title": "GoHighLevel DocuSign Integration for Insurance | LC Bridge",
       "description": "Bring DocuSign agreements into an insurance team’s GoHighLevel workflow, with contact field mapping, signing status and configured follow-up.",
-      "contentHash": "1044cf82b7bc25aa04b3590d6edcf6543bcaacefc69db1679998396e23932b3b",
+      "contentHash": "707a1c556aaa84686ff716e856eee7f5e078ad551af8a607ee79f4d4fd1c4cbe",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/docusign-logo.svg",
@@ -489,7 +489,7 @@
       "url": "https://lcbridge.app/docusign-integration/pricing",
       "title": "DocuSign for GoHighLevel: Pricing | LC Bridge",
       "description": "Compare LC Bridge’s DocuSign Integration plans for GoHighLevel: Starter, Agency and Scale. Review billing, the trial and the separate DocuSign requirement.",
-      "contentHash": "e6ecd4fb680e3a7b284ade130303280ceca7d45257835e9d9e38278e9981ce38",
+      "contentHash": "bd9e83551af025b7e88a3a16294c24b544c41a9aed7665c823acd58d84584049",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/docusign-logo.svg",
@@ -501,7 +501,7 @@
       "url": "https://lcbridge.app/docusign-integration/privacy",
       "title": "Privacy Policy | DocuSign for GoHighLevel | LC Bridge",
       "description": "Read how LC Bridge handles information for its DocuSign Integration for GoHighLevel, including service data, support requests and privacy questions.",
-      "contentHash": "a8352364017d9f5e7fa11fb2bcce97787592e29e0a515da8a06b1f6b9ab546cd",
+      "contentHash": "2acf560df94c930444e217faf88de3b15aa709b85f70e55d1cdcc14517063054",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/docusign-logo.svg",
@@ -512,7 +512,7 @@
       "url": "https://lcbridge.app/docusign-integration/real-estate",
       "title": "GoHighLevel DocuSign Integration for Real Estate | LC Bridge",
       "description": "Connect DocuSign to a real estate team’s GoHighLevel workflow. Send agreements from contact records and connect signing events to configured follow-up.",
-      "contentHash": "404e0c1154a732ecc091cb893d22d21d5a96288a391d75a81087b9bf93118eee",
+      "contentHash": "f7666be60df14246ce1bfe4c83309c7b0f4c0cc798f8a441a5dcdba6727a1f2c",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/docusign-logo.svg",
@@ -524,7 +524,7 @@
       "url": "https://lcbridge.app/docusign-integration/refund",
       "title": "Refund Policy | DocuSign for GoHighLevel | LC Bridge",
       "description": "Review LC Bridge’s refund policy for DocuSign Integration for GoHighLevel, including how to contact support with a billing or refund question.",
-      "contentHash": "218c953d187d37b7e8dd8cadb1f897681251453d465f2c2838c4de17d449283e",
+      "contentHash": "695a9496ac0f7cb0f6b6c76c4a8d26731bb70f62d693b2fa7f6fb3e9daf9433a",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/docusign-logo.svg",
@@ -535,7 +535,7 @@
       "url": "https://lcbridge.app/docusign-integration/terms",
       "title": "Terms of Service | DocuSign for GoHighLevel | LC Bridge",
       "description": "Read the terms for LC Bridge’s DocuSign Integration for GoHighLevel, including service use, account responsibilities, billing and support.",
-      "contentHash": "0976c346d0467ee461b11f200f586a84f34fbbc017e9414bd3a5e61cd32ae70e",
+      "contentHash": "b3bf5f149cd37fada171151685e6cab8816e8c29f930dba47b4e82bfffcd406c",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/docusign-logo.svg",
@@ -546,7 +546,7 @@
       "url": "https://lcbridge.app/docusign-integration/vs-native-signature",
       "title": "DocuSign vs GoHighLevel Documents & Contracts | LC Bridge",
       "description": "Compare DocuSign with GoHighLevel Documents & Contracts. Consider existing client accounts, agreement workflows and integration needs before choosing.",
-      "contentHash": "6f3cc2e47eb5c163b018f44e99db7a6f2520e8747ecf01e9194cf419ad6c7c88",
+      "contentHash": "41227f5405a127331ecc6a1065fa616923afa766be813a9c2d506b0d363c5ed0",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/docusign-logo.svg",
@@ -557,7 +557,7 @@
       "url": "https://lcbridge.app/docusign-integration/workflows",
       "title": "GoHighLevel DocuSign Workflows & Follow-Up | LC Bridge",
       "description": "Explore six DocuSign workflows for GoHighLevel contracts, with illustrative emails and follow-up for sending, delivery, views, stalls, declines and completion.",
-      "contentHash": "bb97d1939b565fc02ffc2433e9ecbac2d2a10642cd8d242b335cd4723d3ab740",
+      "contentHash": "e73619b7a1a21aaf2b32477d75346b32fe66ae1de82a6c7ac52247064bb2decc",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/docusign-logo.svg",
@@ -569,7 +569,7 @@
       "url": "https://lcbridge.app/google-sheets-integration/data/",
       "title": "GoHighLevel Data & Sync Support | Google Sheets | LC Bridge",
       "description": "Explore GoHighLevel record families, fields, import and update boundaries, source-history requirements, and early-access availability for Google Sheets.",
-      "contentHash": "d723fb80769b145a8aff00b6750ae95c0338b218284f8040d155a5473d03e876",
+      "contentHash": "dc8ea9029fcd64dbc40df907ef52bde5ac22aceef58c4f22ce04c7ea88d60980",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -580,7 +580,7 @@
       "url": "https://lcbridge.app/google-sheets-integration/docs/creating-reports/",
       "title": "Create and customize a report for GoHighLevel | LC Bridge",
       "description": "For GoHighLevel: Choose a template, supply its relevant inputs in one form, inspect the sample, and create the report worksheet. A report can reuse compatible.",
-      "contentHash": "18607c51c0130417b59de09d412def088825d7a63b60f3627f08145dc9241c00",
+      "contentHash": "7084385a9d5e7ad49096c3691ab9379a901197b088bb80531b93862aa3ec05d4",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -591,7 +591,7 @@
       "url": "https://lcbridge.app/google-sheets-integration/docs/fields-and-filters/",
       "title": "Fields, custom fields, and filters for GoHighLevel | LC Bridge",
       "description": "For GoHighLevel: Choose only the columns and rows needed for the worksheet’s purpose, while retaining identity and report-required fields. The import preview is the.",
-      "contentHash": "f0cc19f84c850771cfb2462ee40d8cb96c413aedf176b05985a52f097e241dfd",
+      "contentHash": "9ebcbdfb465899cdfb18568bf10f4d7283f93633f8691fc32a87e3b6ea8b0b40",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -602,7 +602,7 @@
       "url": "https://lcbridge.app/google-sheets-integration/docs/getting-started/",
       "title": "Getting started with CRM Sync for GoHighLevel | LC Bridge",
       "description": "CRM Sync is the in-app name of the Google Sheets integration for GoHighLevel by LC Bridge. The connected product is in early access. Start with an.",
-      "contentHash": "8ec3db7d614f543c3b63cbb8c5b0f1673ae040662e5f1add00f03e6d9ba8b019",
+      "contentHash": "84c48fcb84c541c5b10a18fcd25580b7711b59287dfd406c24e1f5844371c04e",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -613,7 +613,7 @@
       "url": "https://lcbridge.app/google-sheets-integration/docs/importing/",
       "title": "Import CRM data into Google Sheets for GoHighLevel | LC Bridge",
       "description": "For GoHighLevel: The planned import journey is Choose data → Import Preview → Settings → Import. Select a source object, choose standard and available custom.",
-      "contentHash": "c5d1e538ab395111166ab274d0d6faee3d6313dca20424b06ab274e283cb15e4",
+      "contentHash": "ac6fc41330f91fe677e9c876b2bb31246b110994f240538fd9b5a7c19a5db443",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -624,7 +624,7 @@
       "url": "https://lcbridge.app/google-sheets-integration/docs/",
       "title": "Google Sheets Integration Docs for GoHighLevel | LC Bridge",
       "description": "For GoHighLevel: Read guides to CRM imports, custom fields, reviewed updates, report setup, refresh schedules, and troubleshooting for LC Bridge Google Sheets early access.",
-      "contentHash": "0e2661339daf0cd4e3c1a4d28ebd96745eb5bacc4f6168a01696b15598c3f263",
+      "contentHash": "1e0dee6f7788388fcd1e46541623eb9b3da2825b7330e81627c6227e8979e871",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -635,7 +635,7 @@
       "url": "https://lcbridge.app/google-sheets-integration/docs/refresh-schedules/",
       "title": "Refresh schedules and record-transfer usage for GoHighLevel | LC Bridge",
       "description": "For GoHighLevel: Choose a refresh cadence based on when your team needs new source data. Manual and scheduled executions that transfer primary records create usage..",
-      "contentHash": "2c115a6d0391a06cc99793271cb10c92493b56e09acd48f4cd2807552904fb96",
+      "contentHash": "a0135d3b7ae20fdc38c155e1a5ae1c9b9f2e2d616a347875110239229f7a5dba",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -646,7 +646,7 @@
       "url": "https://lcbridge.app/google-sheets-integration/docs/reviewed-updates/",
       "title": "Review worksheet changes before updating CRM records for GoHighLevel | LC Bridge",
       "description": "For GoHighLevel: Eligible updates to existing Contacts and Opportunities require Preview changes, Export Preview, and explicit confirmation. Editing a cell,.",
-      "contentHash": "aff7da3e7fee017160028e1268727a8822ca0d07abab944daf82bfb7ac22206b",
+      "contentHash": "b3a14e1681223c886cc3b69a5489c59705dd0b6f3c7be34587ec27edb07cf925",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -657,7 +657,7 @@
       "url": "https://lcbridge.app/google-sheets-integration/docs/troubleshooting/",
       "title": "Troubleshoot imports, reports, and reviewed updates for GoHighLevel | LC Bridge",
       "description": "For GoHighLevel: Start with the exact failing step: connection, source access, import preview, delivery, report calculation, or outgoing update. Preserve the last.",
-      "contentHash": "6db2a2c27e4f21e2deae764e9f86e6c3507c11490168a6f8322f4b598f8a0fe3",
+      "contentHash": "a81580f46c5612b6f729784ab081b9f109e858e6d6a83632c18daa7da87c48a3",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -668,7 +668,7 @@
       "url": "https://lcbridge.app/google-sheets-integration/",
       "title": "GoHighLevel Google Sheets Integration | LC Bridge",
       "description": "Your GoHighLevel reports, ready in Google Sheets: scheduled imports, 25 report templates, ad and billing integrations, bulk actions and white-label for client sub-accounts. Get early access.",
-      "contentHash": "0fa815f869a73d861f502f0dbcc4e0b5e2338ddcd9f68a791bf5df4bf05fade2",
+      "contentHash": "dcbd80cf8860e91cf2e925a9d41f3d5a9b193dd7759ff38fdf59c9dbf8398300",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/levelup/ev-ads.jpg",
@@ -690,7 +690,7 @@
       "url": "https://lcbridge.app/google-sheets-integration/levelup/",
       "title": "25 Free GoHighLevel Report Templates for Google Sheets | LC Bridge",
       "description": "25 free GoHighLevel report templates in Google Sheets: pipeline, lead sources, bookings, goals, team and invoices. Open them with sample data, no signup.",
-      "contentHash": "b1b2dfb6653ad4b1d4524436258499335b82301cb6a91e5301b94b4f64ba35e3",
+      "contentHash": "b2086286e447832efdc0953703e0d82319a53161f281fca1f191a67d2c350b22",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/levelup/ev-ads.jpg",
@@ -717,7 +717,7 @@
       "url": "https://lcbridge.app/google-sheets-integration/pricing/",
       "title": "GoHighLevel Google Sheets Pricing | LC Bridge",
       "description": "For GoHighLevel: Pay per record synced. 250 transfers included monthly, then graduated rates from the first 1.5¢ band. Or choose Unlimited at $59 a month.",
-      "contentHash": "53de15001499496b2d9d65e5ec26be61b26a71e2f98b0dda0ac2da3c4ca6ee0e",
+      "contentHash": "80189b5b8d0a183dc723fe52987c0bc6a6b369a19b83f22ae128ef51045410b9",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -728,7 +728,7 @@
       "url": "https://lcbridge.app/google-sheets-integration/privacy/",
       "title": "Google Sheets early-access privacy notice for GoHighLevel | LC Bridge",
       "description": "For GoHighLevel: How the public LC Bridge Google Sheets website, sample previews, and existing waitlist handle your information.",
-      "contentHash": "05ba4de59a63f666df02a885fa86150b9139a6099a8214672c06a4ca4321589c",
+      "contentHash": "37a957d4b110a7b0c04bb5f8b9f44626e559477b44844bc9cf2edadb705fb6fd",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -739,7 +739,7 @@
       "url": "https://lcbridge.app/google-sheets-integration/templates/bookings-attendance/",
       "title": "GoHighLevel Bookings & Attendance Template | LC Bridge",
       "description": "Appointment outcomes and attendance by calendar. Explore the GoHighLevel Bookings & Attendance sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "e53ca675d298837126a1147984f28b1c539c54ab1cb7e729a0d388cc020987c5",
+      "contentHash": "fbd0d073b3e08cf5b4753de5cf53572e00548ff10f0e394bb00764843559aa85",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -750,7 +750,7 @@
       "url": "https://lcbridge.app/google-sheets-integration/templates/business-accounts/",
       "title": "GoHighLevel Business Accounts Template | LC Bridge",
       "description": "Business-linked contacts and their current opportunities. Explore the GoHighLevel Business Accounts sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "86c687dc441a709a0830ee96a5d4580b3a7ff05f1ff25ea3904cefd07a11b761",
+      "contentHash": "2d876f37ab334c02aa3dfb0fec2091cd38c40f66f7ed70ad3293796b1b98076f",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -761,7 +761,7 @@
       "url": "https://lcbridge.app/google-sheets-integration/templates/business-overview/",
       "title": "GoHighLevel Business Overview Template | LC Bridge",
       "description": "Sales won, lead totals and customer results. Explore the GoHighLevel Business Overview sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "484cf9d0bbd2cb883308070d61483658096b9d904edfcf7474680fe7fe6514c3",
+      "contentHash": "dda7d82df4e78cb7c53e0a063ed528667f3eb580240a7faefc11bc6c150aff37",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -772,7 +772,7 @@
       "url": "https://lcbridge.app/google-sheets-integration/templates/cash-invoices/",
       "title": "GoHighLevel Cash & Invoices Template | LC Bridge",
       "description": "Collections and overdue invoices. Explore the GoHighLevel Cash & Invoices sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "1bf83ac96e3b6695d1b4c0b7db1360ff5a875e16585afcc8e3d0838ae5f18581",
+      "contentHash": "dbdc2d3ad69d8cf2870c5c0a4947fffcae02d9dc270bcaf480a21e949968f81e",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -783,7 +783,7 @@
       "url": "https://lcbridge.app/google-sheets-integration/templates/conversation-volume/",
       "title": "GoHighLevel Conversation Volume Template | LC Bridge",
       "description": "New conversations, assignment and current unread workload. Explore the GoHighLevel Conversation Volume sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "9b9d3f3efff4bd569dfc12edf04ff3506e7c39b50ccce4c71deac2823f2f501a",
+      "contentHash": "682c7e348c6a536f7248bccdb5029bb9e20ab14b5b85dfd4096ffed0e3ef9df4",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -794,7 +794,7 @@
       "url": "https://lcbridge.app/google-sheets-integration/templates/custom-records/",
       "title": "GoHighLevel Custom Records Template | LC Bridge",
       "description": "Mapped custom records by status and related customer coverage. Explore the GoHighLevel Custom Records sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "c76294844ef554ae2301cb8d1fb8536c7b54d56b57ee7a6ccf43d62dbc0bfa11",
+      "contentHash": "42954b3ad56280b2f2e0af33c64648f9d1620ad09fd954640231d651d743f2bb",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -805,7 +805,7 @@
       "url": "https://lcbridge.app/google-sheets-integration/templates/customer-payments/",
       "title": "GoHighLevel Customer Payments Template | LC Bridge",
       "description": "Customer collections, current balances and linked payment records. Explore the GoHighLevel Customer Payments sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "c1af8b5111c5eabaf460025c88bd3c026963a0acfd01c3e280ebac7ab48ac081",
+      "contentHash": "6d9207b9a8c3d5d5d4b41e2bb8bf06a95f9273f07b79663c1a730bda7403f2c6",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -816,7 +816,7 @@
       "url": "https://lcbridge.app/google-sheets-integration/templates/daily-follow-up/",
       "title": "GoHighLevel Daily Follow-up Template | LC Bridge",
       "description": "Overdue tasks, appointments and stalled deals. Explore the GoHighLevel Daily Follow-up sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "d5a31d1ddb18fbad6de0a7aa60924abed9869f2e46dbe89d545f27efda903dd4",
+      "contentHash": "fae64f98ff6a752e41a4dca638d4742a1c46b2d7106cdfa696520c1d232cebd1",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -827,7 +827,7 @@
       "url": "https://lcbridge.app/google-sheets-integration/templates/forecast-changes/",
       "title": "GoHighLevel Forecast & Changes Template | LC Bridge",
       "description": "Weighted pipeline and changes since the saved cutoff. Explore the GoHighLevel Forecast & Changes sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "53b303212a7d15156b70de46cc99e26d7ac854f869fc0dc27c4d0be36f3fc105",
+      "contentHash": "e2a6db486719bc70c63f5cdb65b4044429144a581cf7ca6816504ce9192285ef",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -838,7 +838,7 @@
       "url": "https://lcbridge.app/google-sheets-integration/templates/forms-surveys/",
       "title": "GoHighLevel Forms & Surveys Template | LC Bridge",
       "description": "Submissions, unique contacts and linked opportunity coverage. Explore the GoHighLevel Forms & Surveys sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "06ef2896410a63f45797d68f0e07938224fabaa3ee093f79097c10a0dc889143",
+      "contentHash": "b99d4666208280e094973f848068e2cf021ec44c1973a68ee37f9f36bdff9e08",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -849,7 +849,7 @@
       "url": "https://lcbridge.app/google-sheets-integration/templates/",
       "title": "GoHighLevel Dashboard Templates for Google Sheets | LC Bridge",
       "description": "Explore 25 GoHighLevel report templates with interactive synthetic previews, metric definitions, source requirements, and Google Sheets early access.",
-      "contentHash": "5dd9487bf28120795ecc0c0ba89ae0d826403ea9b216634faede59f1a6b626a7",
+      "contentHash": "d0a55dc392b651947e2a2ef5ec8622bf57b72d29e4d983486a24635b82b4a998",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -860,7 +860,7 @@
       "url": "https://lcbridge.app/google-sheets-integration/templates/invoice-aging/",
       "title": "GoHighLevel Invoice Aging Template | LC Bridge",
       "description": "Open balances, overdue invoices and aging buckets. Explore the GoHighLevel Invoice Aging sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "ea53a871fd47f756ba433d1fef9fe66da92eda71dc15ab20090707ea14519ca1",
+      "contentHash": "379dc6e27a63d8bea81c5ae7a62bd6d530f3965db8e038b7b92427b3e5d1e837",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -871,7 +871,7 @@
       "url": "https://lcbridge.app/google-sheets-integration/templates/invoice-line-items/",
       "title": "GoHighLevel Invoice Line Items Template | LC Bridge",
       "description": "Invoice line amounts, quantities and customer detail. Explore the GoHighLevel Invoice Line Items sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "aee0fc6ba90d0cbc0b25ad6a90ae75bfcf093d7efc04f4e571d85cb3065f00b9",
+      "contentHash": "4f2bfc44894fbcb950b4b2d1b0e58d6bf9cff45ba413ed29de50f4718adf5415",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -882,7 +882,7 @@
       "url": "https://lcbridge.app/google-sheets-integration/templates/leads-sources/",
       "title": "GoHighLevel Leads & Sources Template | LC Bridge",
       "description": "Lead volume, recorded sources and linked opportunities. Explore the GoHighLevel Leads & Sources sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "bfc972763197a6b47b32220ec94856bbbb810c4f09b217ebbeb63aa0079ab237",
+      "contentHash": "1d6c9af77d9e703d5ba0af9e089b44ddec4ed967498e1f3a45510e7893cfe34c",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -893,7 +893,7 @@
       "url": "https://lcbridge.app/google-sheets-integration/templates/message-activity/",
       "title": "GoHighLevel Message Activity Template | LC Bridge",
       "description": "Inbound/outbound message volume by date and channel. Explore the GoHighLevel Message Activity sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "0d950cec48cc785a2598adf56b0372772b9e51be15f0f87b4ee0e9faebc81dd6",
+      "contentHash": "43dda1261ed8e72e2f3737b9e9d01673e03b7eb336f1070e588e5121498d4355",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -904,7 +904,7 @@
       "url": "https://lcbridge.app/google-sheets-integration/templates/order-performance/",
       "title": "GoHighLevel Order Performance Template | LC Bridge",
       "description": "Completed order totals, order counts and status breakdown. Explore the GoHighLevel Order Performance sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "50b8ebde2bf636c10d4814cdffd64b0e009e7aa3e370fe6fd8049bd48d51ee6e",
+      "contentHash": "c06bfd979729ec427d98cbe86ba45bba5ba01f107ef6cc6c659002988abd1ff0",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -915,7 +915,7 @@
       "url": "https://lcbridge.app/google-sheets-integration/templates/payment-collections/",
       "title": "GoHighLevel Payment Collections Template | LC Bridge",
       "description": "Successful collections, transaction counts and payment types. Explore the GoHighLevel Payment Collections sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "88b638bf2076ccd99eb8575b39552ad41ddebf7704e8bd3dd91fed196c11702b",
+      "contentHash": "7bf994080c58b06df0f9f1399b5709980968986ea372537aced655024797809f",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -926,7 +926,7 @@
       "url": "https://lcbridge.app/google-sheets-integration/templates/pipeline-follow-up/",
       "title": "GoHighLevel Pipeline & Follow-up Template | LC Bridge",
       "description": "Open pipeline, sales targets and deal details. Explore the GoHighLevel Pipeline & Follow-up sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "741988fee3131cd607ac653fab53d9f8b60d31e46993a32a53885b0f73025fad",
+      "contentHash": "008e6d47488bd7c6a98950123474d51303606aed008cb751f35bf7a9eadbbf17",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -937,7 +937,7 @@
       "url": "https://lcbridge.app/google-sheets-integration/templates/product-sales/",
       "title": "GoHighLevel Product Sales Template | LC Bridge",
       "description": "Sold quantities and line amounts by sale-time product. Explore the GoHighLevel Product Sales sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "7715558e215a6fce45994f9201ed331c3094195b6800237f765b5afa1a268811",
+      "contentHash": "4e3fae85f93cd99eef1882a4b3cacef688f23c8dbc787007018dff459435d6a8",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -948,7 +948,7 @@
       "url": "https://lcbridge.app/google-sheets-integration/templates/recurring-revenue-changes/",
       "title": "GoHighLevel Recurring Revenue Changes Template | LC Bridge",
       "description": "Recorded new, expansion, contraction and churn events. Explore the GoHighLevel Recurring Revenue Changes sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "5c18852537eb3c82508ea5c6d994d36c5344d17e7162924c3f3f9044dca7e97e",
+      "contentHash": "bde31b8b39b6d80659fbece2143175a4a2b5fd0479bfe2e6a52f2185937433ea",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -959,7 +959,7 @@
       "url": "https://lcbridge.app/google-sheets-integration/templates/response-coverage/",
       "title": "GoHighLevel Response & Coverage Template | LC Bridge",
       "description": "Response time and unanswered inquiries. Explore the GoHighLevel Response & Coverage sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "52144653b180d1d64bfa38bd67a7418a9336c5d360d50bf8a502bc064dd5ec60",
+      "contentHash": "89b80082fa0de23f2bdd4d5aa8f569deea05d6b259207aa42b7810bd91b64e70",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -970,7 +970,7 @@
       "url": "https://lcbridge.app/google-sheets-integration/templates/sales-goals/",
       "title": "GoHighLevel Sales & Goals Template | LC Bridge",
       "description": "Actual sales, targets and open pipeline. Explore the GoHighLevel Sales & Goals sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "cb8c78c379461ea7ed5b404ae70d634bc1237e9714c22e0d81917dcdcccf7f31",
+      "contentHash": "28ea046bd4d12b7acf87b0ff19f8aaf2e0ee212420c43d0d3d30c3c820502325",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -981,7 +981,7 @@
       "url": "https://lcbridge.app/google-sheets-integration/templates/stage-conversion-bottlenecks/",
       "title": "GoHighLevel Stage Conversion & Bottlenecks Template | LC Bridge",
       "description": "Stage conversion and completed time in stage. Explore the GoHighLevel Stage Conversion & Bottlenecks sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "ed9171a63a2324d426f87ae99851da1f3c45a5aa5477087ee3229437a1b0d3ff",
+      "contentHash": "85a63d8ac0619ae862ec4f4aebf272cf1a07cd115137e87bb4706b3b84bc488a",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -992,7 +992,7 @@
       "url": "https://lcbridge.app/google-sheets-integration/templates/subscription-overview/",
       "title": "GoHighLevel Subscription Overview Template | LC Bridge",
       "description": "Active subscriptions, normalized recurring amounts and interval coverage. Explore the GoHighLevel Subscription Overview sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "cf54565016dd0badc8226e206a7d35d64cb14a6dbc601127b3cb41c7a8a63aa8",
+      "contentHash": "418d5194dd4f413263ec19ff0fbe93321fa4540d68350c0e3d321cd3a0dfeb64",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -1003,7 +1003,7 @@
       "url": "https://lcbridge.app/google-sheets-integration/templates/tasks-notes/",
       "title": "GoHighLevel Tasks & Notes Template | LC Bridge",
       "description": "Current task completion, overdue work and dated note counts. Explore the GoHighLevel Tasks & Notes sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "0530e5fab81ef91d046de2eae334008af90763cee8988e26372221cea9fb4625",
+      "contentHash": "df87ec2d2f90e8f121dfbcd231bd9e08a11f90268581733072d9a77718ef6fd1",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -1014,7 +1014,7 @@
       "url": "https://lcbridge.app/google-sheets-integration/templates/team-performance/",
       "title": "GoHighLevel Team Performance Template | LC Bridge",
       "description": "Sales and win-rate rankings by owner. Explore the GoHighLevel Team Performance sample, metric definitions, and required data for Google Sheets.",
-      "contentHash": "db43cc3e8cda36516978256e92d50a4e260821b190ad3977e7bec049563f45a0",
+      "contentHash": "ddc78b3272876a21768352a1496741b0b46aa94baa338ca1a9f3208958daf0a2",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -1025,7 +1025,7 @@
       "url": "https://lcbridge.app/google-sheets-integration/terms/",
       "title": "Google Sheets early-access terms for GoHighLevel | LC Bridge",
       "description": "For GoHighLevel: What the public samples, waitlist request, planned prices, and production access process mean.",
-      "contentHash": "b104dc2e681b3a3ee9e8b56c9a13b14825bbe7111bd9ca949e3f792c63f3178c",
+      "contentHash": "3f1d219326667dca21406063135565a8682ee7353319123a493bd0b3f44e127e",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/google-sheets/social.png",
@@ -1036,7 +1036,7 @@
       "url": "https://lcbridge.app/highlevel-development/",
       "title": "GoHighLevel Developers & API Integration Services | LC Bridge",
       "description": "GoHighLevel developers for custom API integrations, workflow automation and marketplace apps. Former HighLevel team members building for software brands.",
-      "contentHash": "cdaa01f325cdad362baa7ef27c487d675a67e942f05fd20982920dfb0c1073d3",
+      "contentHash": "03a998b5598f59bde6742176e1fcd12073a69ab517861d488ad83d06f949fafb",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/community-agents-logo-128.png",
@@ -1054,7 +1054,7 @@
       "url": "https://lcbridge.app/",
       "title": "GoHighLevel Integrations & Custom Development | LC Bridge",
       "description": "Products and custom software for GoHighLevel by LC Bridge. Explore Google Sheets reporting, Community Agents, DocuSign integration, and custom development.",
-      "contentHash": "8155d4ff1aab02a50fe5abc2e62a55d1e277de3e6d47290539ba6eb9baf812d5",
+      "contentHash": "1a2122590e768299162b33b264c2ebf66ac2fce9fe25cc2a6562fedc996215dc",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/arun-headshot.jpg",
@@ -1073,7 +1073,7 @@
       "url": "https://lcbridge.app/privacy/",
       "title": "Website Privacy Policy | LC Bridge GoHighLevel Products",
       "description": "How lcbridge.app, home of LC Bridge’s GoHighLevel products, uses RB2B visitor identification, the Meta pixel, HighLevel forms and other services, and how to opt out or request your data.",
-      "contentHash": "950586e15a522d72e2c0815165582d59f503018423126a22c39cddf47878e89d",
+      "contentHash": "02eead4a27c8acb693b014812e4c6fe31ff3572fe0233b3764dc364023cdafb6",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/lcbridge-lockup-black.svg",
@@ -1084,7 +1084,7 @@
       "url": "https://lcbridge.app/products/",
       "title": "GoHighLevel Integrations & Apps | LC Bridge",
       "description": "Explore LC Bridge products for GoHighLevel: Google Sheets reporting, Community Agents, and DocuSign integration. Find templates, pricing, and docs.",
-      "contentHash": "56266d3cd08eeeb66a33c9da754fdd47130cb6f4ca2205983a9a9955ac889a4a",
+      "contentHash": "3375cbaa8db45fae83c214f94032b0a2ffbb00b377da56aecbe74dd1d7328e27",
       "lastmod": "2026-10-26",
       "images": [
         "https://lcbridge.app/assets/docusign-mark.svg",

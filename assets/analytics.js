@@ -76,6 +76,7 @@
     try { target = new URL(link.href, location.href); } catch (_) { return; }
     var action = link.dataset.analyticsAction;
     if (!action && target.hostname === 'community-agents.lcbridge.app' && target.pathname === '/oauth/install') action = 'install_cta_clicked';
+    if (!action && target.hostname === 'marketplace.gohighlevel.com' && target.pathname.indexOf('/integration/6a8e91ec6c2a585a18a9c2a8') === 0) action = 'install_cta_clicked';
     if (!action && target.pathname === '/google-sheets-integration/' && target.hash === '#apply') action = 'early_access_cta_clicked';
     if (!action && target.hash === '#apply' && target.pathname.indexOf('/docusign-integration/') === 0) action = 'trial_cta_clicked';
     if (!action && target.pathname.indexOf('book-a-call') !== -1) action = 'booking_cta_clicked';
