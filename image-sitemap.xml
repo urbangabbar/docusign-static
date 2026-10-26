@@ -708,6 +708,9 @@
       <image:loc>https://lcbridge.app/assets/google-sheets/levelup/logos/google-ads.svg</image:loc>
     </image:image>
     <image:image>
+      <image:loc>https://lcbridge.app/assets/google-sheets/levelup/logos/highlevel.png</image:loc>
+    </image:image>
+    <image:image>
       <image:loc>https://lcbridge.app/assets/google-sheets/levelup/logos/linkedin.png</image:loc>
     </image:image>
     <image:image>
@@ -715,24 +718,6 @@
     </image:image>
     <image:image>
       <image:loc>https://lcbridge.app/assets/google-sheets/levelup/logos/stripe.svg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://lcbridge.app/assets/google-sheets/levelup/tpl-1.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://lcbridge.app/assets/google-sheets/levelup/tpl-2.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://lcbridge.app/assets/google-sheets/levelup/tpl-3.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://lcbridge.app/assets/google-sheets/levelup/tpl-4.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://lcbridge.app/assets/google-sheets/levelup/tpl-5.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://lcbridge.app/assets/google-sheets/levelup/tpl-6.jpg</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://lcbridge.app/assets/google-sheets/levelup/video-poster.jpg</image:loc>
