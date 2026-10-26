@@ -74,7 +74,7 @@
   }
   function playDemo(event) {
     event.preventDefault();
-    mountDemo(false, currentTime);
+    mountDemo(false, 0);
   }
   all('[data-play-demo]').forEach((button) => button.addEventListener('click', playDemo));
   soundButton.addEventListener('click', playDemo);
