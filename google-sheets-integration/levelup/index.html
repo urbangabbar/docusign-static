@@ -37,7 +37,7 @@ h1 span{background:#ffe14d;color:#111;padding:0 .1em;border-radius:2px;-webkit-b
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .btn:disabled{opacity:.6;cursor:wait}
 .open{margin:12px 4px 4px;font-size:15px;font-weight:600}.open a{text-decoration:none}.open a:hover{text-decoration:underline}
-.hero-video{aspect-ratio:16/9;background:#168A53}.hero-video video{display:block;width:100%;height:100%;object-fit:cover}
+.hero-video{aspect-ratio:16/9;background:#168A53}.hero-video{position:relative;overflow:hidden}.hero-video .lcb-video-poster{position:absolute;inset:0}.hero-video .lcb-video-poster img{display:block;width:100%;height:100%;object-fit:cover}.hero-video .lcb-video-trigger{position:absolute;inset:0;display:flex;align-items:flex-end;justify-content:center;padding:18px;text-decoration:none}.hero-video .lcb-video-label{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:10px 18px;border-radius:999px;background:#fff;color:#0b1f14;font-weight:700;box-shadow:0 10px 28px #0000004d}.hero-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .gallery{padding-top:8px}.tpl{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.tpl a{display:block;border-radius:12px;overflow:hidden;border:1px solid var(--line)}.tpl img{display:block;width:100%;height:auto}
 @media (max-width:720px){.tpl{grid-template-columns:repeat(2,1fr);gap:10px}}
 .row{display:flex;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:6px;box-shadow:var(--shadow)}
@@ -332,7 +332,7 @@ footer{padding:30px 0 48px;font-size:13px;color:var(--muted)}
  </div>
 
  <div class="stage">
-  <div class="window"><div class="chrome"><i></i><i></i><i></i><span>90-second tour · Google Sheets integration</span></div><div class="hero-video"><video controls playsinline preload="none" poster="/assets/google-sheets/levelup/video-poster.jpg" src="/assets/video/gsi-hero-highlevel.mp4" aria-label="90-second tour of the Google Sheets integration for HighLevel"><track kind="captions" srclang="en" label="English" src="/assets/video/gsi-hero-highlevel.vtt" default></video></div></div>
+  <div class="window"><div class="chrome"><i></i><i></i><i></i><span>90-second tour · Google Sheets integration</span></div><div class="hero-video" data-youtube-video="Qcta0FPfUpE" data-video-title="Google Sheets integration for GoHighLevel, 90-second tour" data-autoplay><picture class="lcb-video-poster"><img src="/assets/google-sheets/levelup/video-poster.jpg" width="1280" height="720" alt="Google Sheets integration by LC Bridge, built for HighLevel" decoding="async"></picture><a class="lcb-video-trigger" href="https://www.youtube.com/watch?v=Qcta0FPfUpE" aria-label="Watch the 90-second tour"><span class="lcb-video-label">&#9654; Watch the 90-second tour</span></a></div><script src="/assets/video-player.js?v=ae625683" defer></script></div>
   <p class="caption">Press play for the 90-second tour. Product previews use sample data.</p>
  </div>
 </div></div>
