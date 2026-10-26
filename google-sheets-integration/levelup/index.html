@@ -152,6 +152,15 @@ header.lcb-company-header{display:none!important}
 .q-card h3{margin:0;font-size:21px;line-height:1.25;letter-spacing:-.015em;color:var(--ink)}
 .kp{display:flex;gap:22px;margin-top:4px;padding-top:12px;border-top:1px solid var(--line)}
 .kp span{font-size:12px;color:var(--muted)}.kp b{display:block;font-size:20px;color:var(--ink);letter-spacing:-.01em}
+.bars{display:grid;gap:7px;font-size:12.5px}
+.bars div{display:grid;grid-template-columns:minmax(0,7.5em) 1fr auto;align-items:center;gap:10px}
+.bars span{color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bars b,.goal b{font-variant-numeric:tabular-nums;color:var(--ink);font-weight:600}
+.bars i,.goal i{display:block;height:10px;border-radius:3px;background:#EEF2EF;overflow:hidden}
+.bars em,.goal em{display:block;height:100%;background:var(--green);border-radius:3px}
+.bars em.w{background:#D98A1E}
+.goal{display:grid;gap:8px;font-size:12.5px}.goal i{height:14px}
+.goal div{display:flex;justify-content:space-between;color:var(--muted)}
 .go{margin-top:auto;font-size:14px;font-weight:600;color:var(--accent)}
 .all{margin:22px 0 0;font-weight:600}
 .feature-note{margin:48px 0 0;font-size:13px;color:var(--muted)}
@@ -278,7 +287,7 @@ header.lcb-company-header{display:none!important}
           "name": "When can I start using it?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "We're opening in the coming weeks. Everyone with early access gets their access link first, by email."
+            "text": "We're opening in November. Everyone with early access gets their access link first, by email."
           }
         },
         {
@@ -338,7 +347,7 @@ header.lcb-company-header{display:none!important}
 <main id="main">
 <div class="hero"><div class="wrap">
  <div>
-  <p class="kicker">Google Sheets add-on for <b>HighLevel</b> agencies</p>
+  <p class="kicker">Google Sheets add-on for <b>HighLevel</b> agencies · Opening in November</p>
   <h1 id="headline">Your HighLevel reports, <span>live in Google Sheets.</span></h1>
   <p class="sub" id="subline">Connect HighLevel once. Pipeline, lead sources, bookings and ad results land in a Google Sheet that refreshes itself. Start from 25 ready-made report templates.</p>
 
@@ -370,7 +379,7 @@ header.lcb-company-header{display:none!important}
 <div class="works"><div class="wrap">
  <p>Works with</p>
  <div class="logos">
-  <span><i class="crm">CRM</i>HighLevel</span>
+  <span><img src="/assets/google-sheets/levelup/logos/highlevel.png" alt="">HighLevel</span>
   <span><img src="/assets/google-sheets/levelup/logos/facebook.png" alt="">Facebook Ads</span>
   <span><img src="/assets/google-sheets/levelup/logos/google-ads.svg" alt="">Google Ads</span>
   <span><img src="/assets/google-sheets/levelup/logos/linkedin.png" alt="">LinkedIn Ads</span>
@@ -385,12 +394,12 @@ header.lcb-company-header{display:none!important}
  <h2 class="h2">The numbers your clients ask for, already built</h2>
  <p class="lead">Each template is a Google Sheet made for HighLevel, with the records behind every number. Open any sample now, no signup.</p>
  <div class="qgrid">
-  <a class="q-card" href="/google-sheets-integration/templates/pipeline-follow-up/?utm_source=levelup&amp;utm_medium=landing&amp;utm_content=pipeline-follow-up"><small>Pipeline &amp; Follow-up</small><h3>Where is every deal right now?</h3><div class="kp"><span><b>9</b>open deals</span><span><b>$22,050</b>open value</span></div><span class="go">Open the sample <span aria-hidden="true">→</span></span></a>
-  <a class="q-card" href="/google-sheets-integration/templates/leads-sources/?utm_source=levelup&amp;utm_medium=landing&amp;utm_content=leads-sources"><small>Leads &amp; Sources</small><h3>Which source actually sends leads?</h3><div class="kp"><span><b>8</b>new leads</span><span><b>Facebook</b>top source</span></div><span class="go">Open the sample <span aria-hidden="true">→</span></span></a>
-  <a class="q-card" href="/google-sheets-integration/templates/sales-goals/?utm_source=levelup&amp;utm_medium=landing&amp;utm_content=sales-goals"><small>Sales &amp; Goals</small><h3>Are we going to hit the target?</h3><div class="kp"><span><b>$4,450</b>won</span><span><b>44.5%</b>of the $10,000 goal</span></div><span class="go">Open the sample <span aria-hidden="true">→</span></span></a>
-  <a class="q-card" href="/google-sheets-integration/templates/team-performance/?utm_source=levelup&amp;utm_medium=landing&amp;utm_content=team-performance"><small>Team Performance</small><h3>Who closed what this month?</h3><div class="kp"><span><b>Sam Rivera</b>top rep</span><span><b>$4,450</b>won</span></div><span class="go">Open the sample <span aria-hidden="true">→</span></span></a>
-  <a class="q-card" href="/google-sheets-integration/templates/bookings-attendance/?utm_source=levelup&amp;utm_medium=landing&amp;utm_content=bookings-attendance"><small>Bookings &amp; Attendance</small><h3>Who showed up, and who didn't?</h3><div class="kp"><span><b>3 of 5</b>attended</span><span><b>4</b>upcoming</span></div><span class="go">Open the sample <span aria-hidden="true">→</span></span></a>
-  <a class="q-card" href="/google-sheets-integration/templates/cash-invoices/?utm_source=levelup&amp;utm_medium=landing&amp;utm_content=cash-invoices"><small>Cash &amp; Invoices</small><h3>How much are we still owed?</h3><div class="kp"><span><b>$1,400</b>outstanding</span><span><b>3</b>open invoices</span></div><span class="go">Open the sample <span aria-hidden="true">→</span></span></a>
+  <a class="q-card" href="/google-sheets-integration/templates/pipeline-follow-up/?utm_source=levelup&amp;utm_medium=landing&amp;utm_content=pipeline-follow-up"><small>Pipeline &amp; Follow-up</small><h3>Where is every deal right now?</h3><div class="kp"><span><b>9</b>open deals</span><span><b>$22,050</b>open value</span></div><div class="bars"><div><span>New lead</span><i><em style="width:97%"></em></i><b>$6,300</b></div><div><span>Qualified</span><i><em style="width:88%"></em></i><b>$5,750</b></div><div><span>Proposal sent</span><i><em style="width:100%"></em></i><b>$6,500</b></div><div><span>Negotiation</span><i><em style="width:54%"></em></i><b>$3,500</b></div></div><span class="go">Open the sample <span aria-hidden="true">→</span></span></a>
+  <a class="q-card" href="/google-sheets-integration/templates/leads-sources/?utm_source=levelup&amp;utm_medium=landing&amp;utm_content=leads-sources"><small>Leads &amp; Sources</small><h3>Which source actually sends leads?</h3><div class="kp"><span><b>8</b>new leads</span><span><b>Facebook</b>top source</span></div><div class="bars"><div><span>Facebook ads</span><i><em style="width:100%"></em></i><b>4</b></div><div><span>Google ads</span><i><em style="width:50%"></em></i><b>2</b></div><div><span>Website form</span><i><em style="width:25%"></em></i><b>1</b></div><div><span>Referral</span><i><em style="width:25%"></em></i><b>1</b></div></div><span class="go">Open the sample <span aria-hidden="true">→</span></span></a>
+  <a class="q-card" href="/google-sheets-integration/templates/sales-goals/?utm_source=levelup&amp;utm_medium=landing&amp;utm_content=sales-goals"><small>Sales &amp; Goals</small><h3>Are we going to hit the target?</h3><div class="kp"><span><b>$4,450</b>won</span><span><b>44.5%</b>of the $10,000 goal</span></div><div class="goal"><i><em style="width:44.5%"></em></i><div><span>$4,450 won</span><span>Goal $10,000</span></div></div><span class="go">Open the sample <span aria-hidden="true">→</span></span></a>
+  <a class="q-card" href="/google-sheets-integration/templates/team-performance/?utm_source=levelup&amp;utm_medium=landing&amp;utm_content=team-performance"><small>Team Performance</small><h3>Who closed what this month?</h3><div class="kp"><span><b>Sam Rivera</b>top rep</span><span><b>$4,450</b>won</span></div><div class="bars"><div><span>Won</span><i><em style="width:20%"></em></i><b>$4,450</b></div><div><span>Open pipeline</span><i><em style="width:100%"></em></i><b>$22,050</b></div></div><span class="go">Open the sample <span aria-hidden="true">→</span></span></a>
+  <a class="q-card" href="/google-sheets-integration/templates/bookings-attendance/?utm_source=levelup&amp;utm_medium=landing&amp;utm_content=bookings-attendance"><small>Bookings &amp; Attendance</small><h3>Who showed up, and who didn't?</h3><div class="kp"><span><b>3 of 5</b>attended</span><span><b>4</b>upcoming</span></div><div class="bars"><div><span>Attended</span><i><em style="width:75%"></em></i><b>3</b></div><div><span>No-show</span><i><em style="width:50%" class=w></em></i><b>2</b></div><div><span>Upcoming</span><i><em style="width:100%"></em></i><b>4</b></div></div><span class="go">Open the sample <span aria-hidden="true">→</span></span></a>
+  <a class="q-card" href="/google-sheets-integration/templates/cash-invoices/?utm_source=levelup&amp;utm_medium=landing&amp;utm_content=cash-invoices"><small>Cash &amp; Invoices</small><h3>How much are we still owed?</h3><div class="kp"><span><b>$1,400</b>outstanding</span><span><b>3</b>open invoices</span></div><div class="bars"><div><span>Due this week</span><i><em style="width:100%"></em></i><b>$600</b></div><div><span>1–30 days late</span><i><em style="width:83%" class=w></em></i><b>$500</b></div><div><span>30+ days late</span><i><em style="width:50%" class=w></em></i><b>$300</b></div></div><span class="go">Open the sample <span aria-hidden="true">→</span></span></a>
  </div>
  <p class="all"><a href="/google-sheets-integration/templates/?utm_source=levelup&amp;utm_medium=landing&amp;utm_content=all">See all 25 templates <span aria-hidden="true">→</span></a></p>
 </div></section>
@@ -445,7 +454,7 @@ header.lcb-company-header{display:none!important}
 <section style="padding-top:0"><div class="wrap faq">
  <p class="eyebrow">Questions</p>
  <h2 class="h2">Good to know</h2>
- <details><summary>When can I start using it?</summary><p>We're opening in the coming weeks. Everyone with early access gets their access link first, by email.</p></details>
+ <details><summary>When can I start using it?</summary><p>We're opening in November. Everyone with early access gets their access link first, by email.</p></details>
  <details><summary>What will it cost?</summary><p>Early access is free and needs no credit card. After launch, 250 record transfers a month are included free, then from $0.015 per record, cheaper at volume. Or choose Unlimited at $59 a month.</p></details>
  <details><summary>Is my CRM data safe?</summary><p>Nothing changes in your CRM without your review. Every update shows the old and new values before you confirm it.</p></details>
  <details><summary>Does it work with a white-labelled HighLevel account?</summary><p>Yes. It's built for HighLevel, including agency white-label setups.</p></details>
@@ -456,7 +465,7 @@ header.lcb-company-header{display:none!important}
 <section style="padding-top:0"><div class="wrap">
  <div class="final">
   <h2 class="h2">Get your reports into Sheets the day we open.</h2>
-  <p class="lead">Free early access, no credit card. We email you the moment your access is ready.</p>
+  <p class="lead">Opening in November. Free early access, no credit card. We email you the moment your access is ready.</p>
   <div class="capture" id="step1b">
    <form class="emailForm" data-form="final" novalidate><label for="email2" class="sr-only">Work email</label><div class="row"><input id="email2" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@agency.com" required aria-describedby="hint2"><button class="btn" type="submit">Get free early access</button></div><p class="hint" id="hint2" aria-live="polite"></p></form>
   </div>

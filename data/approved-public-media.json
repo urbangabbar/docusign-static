@@ -29,6 +29,7 @@
     "assets/google-sheets/levelup/logos/callrail.png": "e104ff309210b79ae05412537e4d399f78e4f62a384d93ea1fabb82e9ac6ec60",
     "assets/google-sheets/levelup/logos/facebook.png": "a3c4f14c54929f56a44c8d7a551ad1b40c3f9fa8369da3a7a2b218f9d9831597",
     "assets/google-sheets/levelup/logos/google-ads.svg": "69b023ff2ac2e7e72777701822b842f66128a41cd2035188c89ce45e940eb7bc",
+    "assets/google-sheets/levelup/logos/highlevel.png": "5c521496f5be2272b52c3975788b8a0d5cf3365fa2e99a33b11ec442fc069b95",
     "assets/google-sheets/levelup/logos/linkedin.png": "3c0149f26168b5fe0f43e68664abe40341a6443b3cd435d18a73e12f64f8b600",
     "assets/google-sheets/levelup/logos/quickbooks.svg": "d5a398a718e8cc41d8c4deaef430ba3db881351bc89b38cefb66046c0f42ded9",
     "assets/google-sheets/levelup/logos/stripe.svg": "7253e3eb4657773723a696a1f4ad9c8f62794191b9f09c1359db74a51d2d3ae5",
@@ -153,6 +154,13 @@
         "assets/posters/docusign-poster.webp"
       ],
       "method": "Phase 1 poster frames. Product panels cropped from LC Bridge's own Community Agents and DocuSign Integration demo videos, rendered on a neutral #F1F3F7 canvas; no text added. Raster OCR (tesseract): only product UI labels and the videos' invented example data (e.g. John Henderson, 412 Marina Bay Dr); no cross-brand references. Approved under Karthik's phase 1 approval on 2026-10-25."
+    },
+    {
+      "date": "2026-10-26",
+      "paths": [
+        "assets/google-sheets/levelup/logos/highlevel.png"
+      ],
+      "method": "HighLevel arrow mark cropped from the official HighLevel logo for the LevelUp 'Works with' row, at Karthik's request; visually reviewed, undistorted, no metadata."
     }
   ]
 }
