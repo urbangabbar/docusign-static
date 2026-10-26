@@ -1045,6 +1045,15 @@
     </image:image>
   </url>
   <url>
+    <loc>https://lcbridge.app/privacy/</loc>
+    <image:image>
+      <image:loc>https://lcbridge.app/assets/lcbridge-lockup-black.svg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://lcbridge.app/assets/og-highlevel-development.png</image:loc>
+    </image:image>
+  </url>
+  <url>
     <loc>https://lcbridge.app/products/</loc>
     <image:image>
       <image:loc>https://lcbridge.app/assets/docusign-mark.svg</image:loc>
