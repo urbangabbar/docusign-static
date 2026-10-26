@@ -1,8 +1,8 @@
 // RB2B visitor identification on every page that loads this file. Loads by default
-// (disclosed in the analytics dialog); skipped once the visitor chose "Keep analytics off".
+// (see /privacy/); skipped once the visitor chose "Keep analytics off" or sends Global Privacy Control.
 (function () {
-  var off = false;
-  try { off = localStorage.getItem('lcbridge-analytics-consent') === 'denied'; } catch (_) {}
+  var off = navigator.globalPrivacyControl === true;
+  try { off = off || localStorage.getItem('lcbridge-analytics-consent') === 'denied'; } catch (_) {}
   if (off || window.reb2b) return;
   window.reb2b = { loaded: true };
   var s = document.createElement('script');
@@ -25,7 +25,7 @@
   var preference;
   try { preference = localStorage.getItem('lcbridge-analytics-consent'); } catch (_) {}
   if (preference === 'granted' || preference === 'denied') window.LCBridgeAnalytics?.setConsent(preference);
-  if (!window.LCBridgeAnalyticsConfig?.ga4MeasurementId) document.querySelector('#analytics-description').textContent = 'Optional analytics are not currently enabled, except RB2B visitor identification on every page and the Meta pixel on the Google Sheets campaign page, which Keep analytics off stops. You can save your preference for when a measurement stream is configured. Hosted forms have their own provider controls.';
+  if (!window.LCBridgeAnalyticsConfig?.ga4MeasurementId) document.querySelector('#analytics-description').textContent = 'RB2B visitor identification runs on every page, and the Meta pixel runs on the Google Sheets campaign page. Keep analytics off opts you out of both, including any sale or sharing for advertising. Google Analytics is not enabled. See our website privacy policy at lcbridge.app/privacy.';
   document.querySelector('#analytics-settings').addEventListener('click', function () { dialog.showModal(); });
   dialog.querySelectorAll('[data-analytics-consent]').forEach(function (button) {
     button.addEventListener('click', function () {
