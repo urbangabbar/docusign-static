@@ -21,9 +21,9 @@ Volume discounts accumulate per connected account in that month.
 - Applicable account markup and tax can change the final charge.
 - High-volume teams can discuss a custom subscription with more predictable costs.
 
-## High-volume subscriptions
-Talk to Sales: https://lcbridge.app/book-a-call/?product=google-sheets
-Custom subscriptions are available for discussion. No public flat-rate price or unlimited entitlement is promised.
+## Unlimited plan
+USD $59 per month, or USD $597 billed annually.
+Unlimited records and refreshes per month for one connected CRM account, across all supported record types. No per-record charges.
 
 ## Early access
 https://lcbridge.app/google-sheets-integration/#apply

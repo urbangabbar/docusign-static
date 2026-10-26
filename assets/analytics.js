@@ -5,6 +5,7 @@
   var consent = 'denied';
   var loaded = false;
   var pageViewed = false;
+  var CONSENT_REGIONS = ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH'];
   var measurementId = /^G-[A-Z0-9]+$/.test(config.ga4MeasurementId || '') ? config.ga4MeasurementId : '';
   var sheetsPage = location.pathname.indexOf('/google-sheets-integration/') === 0 ||
     Boolean(document.documentElement && document.documentElement.hasAttribute('data-sheets-generated')) ||
@@ -29,7 +30,9 @@
     }
   }
 
-  function setConsent(value) {
+  // explicit === false is the no-choice-yet default: analytics on, except where
+  // Consent Mode's region default keeps EEA/UK/CH visitors cookieless until they opt in.
+  function setConsent(value, explicit) {
     consent = value === 'granted' ? 'granted' : 'denied';
     if (!measurementId) return;
     window.dataLayer = window.dataLayer || [];
@@ -40,7 +43,9 @@
       return;
     }
     if (consent !== 'granted') return;
+    window.gtag('consent', 'default', { analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', region: CONSENT_REGIONS });
     window.gtag('consent', 'default', { analytics_storage: 'granted', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
+    if (explicit !== false) window.gtag('consent', 'update', { analytics_storage: 'granted' });
     window.gtag('js', new Date());
     window.gtag('config', measurementId, { send_page_view: false,
       page_location: location.origin + location.pathname,
