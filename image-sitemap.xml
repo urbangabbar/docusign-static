@@ -253,6 +253,30 @@
     </image:image>
   </url>
   <url>
+    <loc>https://lcbridge.app/community-agents/privacy/</loc>
+    <image:image>
+      <image:loc>https://lcbridge.app/assets/community-agents-demo.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://lcbridge.app/assets/community-agents-logo-64.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://lcbridge.app/assets/lcbridge-lockup-black.svg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://lcbridge.app/community-agents/terms/</loc>
+    <image:image>
+      <image:loc>https://lcbridge.app/assets/community-agents-demo.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://lcbridge.app/assets/community-agents-logo-64.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://lcbridge.app/assets/lcbridge-lockup-black.svg</image:loc>
+    </image:image>
+  </url>
+  <url>
     <loc>https://lcbridge.app/docusign-integration/book-a-call</loc>
     <image:image>
       <image:loc>https://lcbridge.app/assets/arun-headshot.jpg</image:loc>

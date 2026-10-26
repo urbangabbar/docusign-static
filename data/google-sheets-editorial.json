@@ -217,7 +217,7 @@
       },
       {
         "title": "Know which action creates usage",
-        "body": "<p>Opening a sample or inspecting a proposed change is not a record transfer. Under the planned LC Bridge rates, the successfully transferred primary records in an execution create usage. A later execution transferring the same contacts creates usage again.</p><p>Review the data catalog and product documentation before requesting early access. If regular large updates are part of your operations, Talk to Sales about a subscription shaped around your expected usage.</p>"
+        "body": "<p>Opening a sample or inspecting a proposed change is not a record transfer. Under the planned LC Bridge rates, the successfully transferred primary records in an execution create usage. A later execution transferring the same contacts creates usage again.</p><p>For frequent, high-volume transfers, the Unlimited plan is $59 a month (or $597 billed annually) for one connected CRM account, with unlimited records and refreshes and no per-record charges.</p>"
       }
     ],
     "related": [
@@ -477,7 +477,7 @@
       },
       {
         "title": "Make high-volume costs predictable",
-        "body": "<p>The pricing page leads with 1.5¢ per additional record transferred, then shows the complete volume ladder. Rates decrease through the graduated bands. Base estimates exclude applicable account markup and tax.</p><p>If your team transfers large datasets frequently, Talk to Sales about a custom subscription. Bring your expected records per execution, frequency, and account count. We can discuss a predictable commercial arrangement without pretending that one generic subscription fits every workload.</p>"
+        "body": "<p>The pricing page leads with 1.5¢ per additional record transferred, then shows the complete volume ladder. Rates decrease through the graduated bands. Base estimates exclude applicable account markup and tax.</p><p>For frequent, high-volume transfers, the Unlimited plan is $59 a month (or $597 billed annually) for one connected CRM account, with unlimited records and refreshes and no per-record charges.</p>"
       }
     ],
     "related": [

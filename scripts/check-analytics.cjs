@@ -51,6 +51,19 @@ function run(id, pathname = '/community-agents/') {
   assert.equal(events.some(event => event.event === 'installation_completed'), true);
   assert.equal(JSON.stringify(events).includes('person@example.com'), false);
 }
+{ // No choice yet: GA4 loads by default, with EEA/UK/CH denied through Consent Mode's region default.
+  const requests = [];
+  const ctx = { window: { LCBridgeAnalyticsConfig: { ga4MeasurementId: 'G-TEST123' } },
+    document: { referrer: '', addEventListener() {}, dispatchEvent() {}, createElement() { return {}; }, head: { appendChild(s) { requests.push(s.src); } } },
+    location: { pathname: '/', origin: 'https://lcbridge.app', href: 'https://lcbridge.app/' }, URL, CustomEvent: function () {} };
+  vm.runInNewContext(source, ctx);
+  ctx.window.LCBridgeAnalytics.setConsent('granted', false);
+  const consents = ctx.window.dataLayer.filter(a => a[0] === 'consent').map(a => Array.from(a));
+  assert.equal(requests.length, 1);
+  assert.ok(consents.some(c => c[1] === 'default' && c[2].analytics_storage === 'denied' && c[2].region.includes('GB') && c[2].region.includes('DE')));
+  assert.ok(!consents.some(c => c[1] === 'update'), 'A default load never overrides the regional denial');
+  assert.ok(consents.every(c => c[2].ad_storage === undefined || c[2].ad_storage === 'denied'));
+}
 run('');
 run('G-TEST123');
 run('G-TEST123', '/highlevel-development/');

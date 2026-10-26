@@ -18,7 +18,7 @@
       },
       {
         "title": "Know the usage model",
-        "body": "<p>The planned monthly allowance covers 250 successful primary record transfers. Each later execution transferring records creates additional usage, including repeat transfers of the same records. Supporting lookups are bundled. Review the exact rates and optional calculator before choosing a recurring schedule.</p><p>For high-volume work, use Talk to Sales to discuss a custom subscription. Live provider delivery and billing are enabled through the actual production access process, not through the public samples.</p>"
+        "body": "<p>The planned monthly allowance covers 250 successful primary record transfers. Each later execution transferring records creates additional usage, including repeat transfers of the same records. Supporting lookups are bundled. Review the exact rates and optional calculator before choosing a recurring schedule.</p><p>For frequent, high-volume transfers, the Unlimited plan is $59 a month (or $597 billed annually) for one connected CRM account, with unlimited records and refreshes and no per-record charges.</p>"
       }
     ]
   },
@@ -133,7 +133,7 @@
       },
       {
         "title": "Plan for higher volumes",
-        "body": "<p>The pricing calculator uses records per execution and executions per month to estimate base usage. The exact rate ladder remains readable outside the calculator. Applicable markup and taxes can change the final amount.</p><p>For frequent large transfers, Talk to Sales about a subscription with more predictable costs. Bring the approximate records per run, frequency, and number of accounts so the discussion reflects the real workload.</p>"
+        "body": "<p>The pricing calculator uses records per execution and executions per month to estimate base usage. The exact rate ladder remains readable outside the calculator. Applicable markup and taxes can change the final amount.</p><p>For frequent, high-volume transfers, the Unlimited plan is $59 a month (or $597 billed annually) for one connected CRM account, with unlimited records and refreshes and no per-record charges.</p>"
       }
     ]
   },

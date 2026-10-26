@@ -1,7 +1,7 @@
 /* DocuSign learning hub and shared documentation wayfinding. */
 .ds-docs{--ds-link:var(--lcb-primary);--ds-visited:var(--lcb-primary-press);--ds-ink:var(--lcb-ink);--ds-muted:var(--lcb-ink-2);--ds-line:var(--lcb-line);--ds-soft:var(--lcb-soft);margin:0;background:var(--lcb-canvas);color:var(--ds-ink);font-family:var(--lcb-font-text);font-size:16px;line-height:1.65}
 .ds-docs *{box-sizing:border-box}
-.ds-docs a{color:var(--ds-link);text-underline-offset:3px}
+.ds-docs a:not(.lcb-btn){color:var(--ds-link);text-underline-offset:3px}
 .ds-docs a:visited{color:var(--ds-visited)}
 .ds-docs :focus-visible{outline:3px solid var(--ds-link);outline-offset:4px}
 .ds-docs [hidden]{display:none!important}

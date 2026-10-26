@@ -16,7 +16,7 @@
     strong.textContent = points[index][0] + ' ';
     span.append(strong, points[index][1]);
   });
-  root.querySelector('.cal-h').textContent = 'Talk to Sales';
+  root.querySelector('.cal-h').textContent = 'Talk to our team';
   root.querySelector('.cal-p').textContent = 'Choose a time with LC Bridge. Mention Google Sheets and your expected record transfers in the booking notes.';
   var frame = root.querySelector('iframe');
   frame.title = 'Talk to LC Bridge Sales about Google Sheets integration';

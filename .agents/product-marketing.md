@@ -54,7 +54,7 @@ These are likely buyer questions inferred from the pages, not a report of record
 |---|---|
 | Is Sheets ready to connect? | Public samples are available; connected access is early access. Joining is a request, not activation. |
 | Will frequent refreshes cost more? | Each successful primary-record transfer on each execution counts; same-operation retries are deduplicated. Point to pricing. |
-| What if usage becomes expensive? | Talk to Sales about a negotiated predictable subscription; no invented unlimited entitlement. |
+| What if usage becomes expensive? | Unlimited plan: $59/month or $597/year for one connected CRM account, unlimited records and refreshes, no per-record charges. |
 | Can I trust a dashboard total? | Show source records, definitions, missing-history limitations, and sales versus cash distinctions. |
 | Where do I go next? | Each product keeps its own docs/pricing/action beneath the company navigation. |
 
@@ -86,7 +86,7 @@ Direct, specific, helpful and technically honest. Clear next actions. Company id
 
 **Company homepage:** Explore our products; secondary action Build with us.
 
-**Sheets:** Get early access; samples for evaluation and Talk to Sales for high volume.
+**Sheets:** Get early access; samples for evaluation; Unlimited ($59/month) for high volume.
 
 **Community Agents:** Install via the established Marketplace flow; docs/pricing support evaluation.
 

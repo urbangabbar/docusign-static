@@ -25,6 +25,7 @@
   var preference;
   try { preference = localStorage.getItem('lcbridge-analytics-consent'); } catch (_) {}
   if (preference === 'granted' || preference === 'denied') window.LCBridgeAnalytics?.setConsent(preference);
+  else window.LCBridgeAnalytics?.setConsent('granted', false);
   if (!window.LCBridgeAnalyticsConfig?.ga4MeasurementId) document.querySelector('#analytics-description').textContent = 'RB2B visitor identification runs on every page, and the Meta pixel runs on the Google Sheets campaign page. Keep analytics off opts you out of both, including any sale or sharing for advertising. Google Analytics is not enabled. See our website privacy policy at lcbridge.app/privacy.';
   document.querySelector('#analytics-settings').addEventListener('click', function () { dialog.showModal(); });
   dialog.querySelectorAll('[data-analytics-consent]').forEach(function (button) {
