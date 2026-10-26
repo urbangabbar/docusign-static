@@ -104,7 +104,18 @@
       }
     }
   });
-  // Keep the supplied thumbnail until a deliberate user play action.
+  // Start muted once half the demo is on screen; "Tap to unmute" restarts from 0:00 with sound.
+  // Opt-outs (Keep analytics off, GPC), reduced motion and Save-Data keep the click-to-play thumbnail.
+  let optedOut = navigator.globalPrivacyControl === true;
+  try { optedOut = optedOut || localStorage.getItem('lcbridge-analytics-consent') === 'denied'; } catch (_) {}
+  if (!optedOut && !reduced.matches && !(navigator.connection && navigator.connection.saveData) && 'IntersectionObserver' in window) {
+    const demoObserver = new IntersectionObserver((entries) => {
+      if (!entries[0].isIntersecting || demo.dataset.state === 'on') return;
+      demoObserver.disconnect();
+      mountDemo(true);
+    }, { threshold: 0.5 });
+    demoObserver.observe(demo);
+  }
   one('a[href="#transcript"]').addEventListener('click', () => {
     one('#transcript details').open = true;
   });
